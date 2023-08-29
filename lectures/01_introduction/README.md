@@ -228,7 +228,7 @@ the order and types of the parameters in the function prototype.
 ```
   – expr1 is the initial expression executed at the start before the loop iterations begin;  
   – expr2 is the test applied before the beginning of each loop iteration, the loop ends when this expression evaluates to false or 0;  
-  – expr3 is evaluated at the very end of each iteration;  
+  – expr3 is executed at the very end of each iteration, it is typically used to increment or decrement the loop counter;
   – statement is the “loop body”.  
 
 - Here is the basic form of a while loop:
@@ -244,7 +244,7 @@ the order and types of the parameters in the function prototype.
 ```cpp
 	double a[15];
 ```
-- The values are accessed through subscripting operations. The following code assigns the value 3.14159 to location i=5 of the array. Here i is the subscript or index.
+- The values are accessed through subscripting operations. The following code assigns the value 3.14159 to location i=5 of the array. Here *i* is the subscript or index.
 ```cpp
 	int i = 5;
 	a[i] = 3.14159;
@@ -255,18 +255,18 @@ the order and types of the parameters in the function prototype.
 ## 1.14 Python Strings vs. C chars vs. C-style Strings vs. C++ STL Strings
 
 - Strings in Python are immutable, and there is no difference between a string and a char in Python. Thus, ’a’ and "a" are both strings in Python, not individual characters. In C++ & Java, single quotes create a character type (exactly one character) and double quotes create a string of 0, 1, 2, or more characters.
-- A “C-style” string is an array of chars that ends with the special char ’\0’. C-style strings (char* or char[]) can be edited, and there are a number of helper functions to help with common operations. However...
+- A “C-style” string is an array of chars that ends with the special char ’\0’. C-style strings (char* or char[]) can be edited, and there are a number of helper functions to help with common operations.
 - The “C++-style” STL string type has a wider array of operations and functions, which are more convenient and more powerful.
 
 ## 1.15	About STL String Objects
 
 - A string is an object type defined in the standard library to contain a sequence of characters.
-- The string type, like all types (including int, double, char, float), defines an interface, which includes construction (initialization), operations, functions (methods), and even other types(!).
-- When an object is created, a special function is run called a “constructor”, whose job it is to initialize the
-object. There are several ways of constructing string objects:
-  – By default to create an empty string: std::string my_string_var;
-  – With a specified number of instances of a single char: std::string my_string_var2(10, ' ');
-  – From another string: std::string my_string_var3(my_string_var2);
+- The string type, like all types (including int, double, char, float), defines an interface, which includes construction (initialization), operations, functions (methods).
+- When an object is created, a special function is run called a “constructor”, whose job is to initialize the
+object. There are several ways of constructing string objects:  
+  – By default to create an empty string: std::string my_string_var;  
+  – With a specified number of instances of a single char: std::string my_string_var2(10, ' ');  
+  – From another string: std::string my_string_var3(my_string_var2);  
 - The notation my_string_var.size() is a call to a function size that is defined as a member function of the string class. There is an equivalent member function called length.
 -  Input to string objects through streams (e.g. reading from the keyboard or a file) includes the following steps:
   1. The computer inputs and discards white-space characters, one at a time, until a non-white-space character is found.

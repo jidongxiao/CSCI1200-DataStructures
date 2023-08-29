@@ -100,10 +100,9 @@ Show one of the TAs the compiler errors that you obtained in the g++/clang++ dev
 
 Now let's write a brand new C++ program to learn about command line
 arguments.  First open up a brand new file named `silly.cpp`.
-Include <iostream> at the top of the file.
+Include &lt;iostream&gt; at the top of the file.
 
-Read the reference sections of the course webpage explaining command line arguments in C++: [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php).
-You may also want to refer to 1.12 and 1.13 for array syntax.
+Read this [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php) explaining command line arguments in C++. You may also want to refer to 1.12 and 1.13 for array syntax.
 
 - To start, let's write a program that expects only integers on the
 command line, and it will print the product (multiplication) of those

@@ -48,13 +48,51 @@ individual tutoring, and debugging help.
 ## Checkpoint 1 *estimate: 30 minutes + installation delays??*
 
 - The course website includes instructions to install and setup the necessary software for Windows, MacOSX, and GNU/Linux.  Windows users will need Windows Subsystem for Linux (WSL) to follow the instructions below.  Ask your TAs and mentors for advice and help if you get stuck.
-[development_environment](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/development\_environment.php)
-[installation_test](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/installation\_test.php)
+   - [development_environment](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/development\_environment.php)
+   - [installation_test](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/installation\_test.php)
 - Create a directory (a.k.a. "folder")} on your laptop to hold Data Structures files.  Create a sub-directory to hold the labs.  And finally, create a sub-directory named `lab1`. Please make sure to save your work frequently and periodically back-up all of your data.
 - Using a web browser, copy the following files to your `lab1` directory: 
    - [quadratic.cpp](https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/labs/01_getting_started/quadratic.cpp)
    - [README.txt](https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/labs/01_getting_started/README.txt)
 - **Open a shell/terminal/command prompt window**. *Please ask for help if you have problems installing WSL or finding your `bash` shell.*
+- Within the terminal, navigate to your Data Structures Lab 1 directory and inspect the contents of your file system as you go using the “ls”, “cd”, and “pwd” commands. In doing so, remember that directory names are separated by a forward slash “/” and when you have a space in the name of the directory, you precede the blank with a backslash “\”. Thus, you may type something like this:
+
+```console
+cd /Users/username/My\ Documents/Data\ Structures/labs/lab1
+```
+
+- Confirm that the files quadratic.cpp and README.txt are in the current directory (use ls).
+
+- First, let’s confirm that gcc is installed on your machine and check the version by typing:
+
+```console
+g++ -v
+```
+
+If you are not using Ubuntu 18.04 and gcc/g++ 7.3, you may notice slight differences between your compiler and the version on the homework submission server when we get to advanced topics. But don’t worry if you have a different version! We will primarily be using parts of C++ that have been stable and unchanged for many years. You may also try to compile using clang++ instead of g++. The LLVM/clang++ compiler has earned much praise for having clear and concise compiler error messages that are especially helpful for new C++ programmers.
+
+- Now you are ready to attempt to compile/build the program for this lab by typing:
+
+```console
+g++ quadratic.cpp -o quadratic.exe -Wall
+```
+
+We have intentionally left a number of errors in this program so that it will not compile correctly to produce an executable program. Don’t fix them yet!
+
+### "Submit" the buggy version of the lab code to Submitty:
+
+Upload the quadratic.cpp and README.txt files to the Lab 1 practice gradeable on Submitty. After submitting the buggy code you should receive confirmation of your submission and be notified of the compile-time errors in the program. Note that all homeworks will require submission of both your code and README.txt file to receive full credit.
+
+The compiler errors we have introduced are pretty simple to fix. Please do so, and then re-compile the program. Once you have removed all of the errors, you are ready to execute the program by typing:
+
+```console
+./quadratic.exe
+```
+
+After testing the program on your own machine with a variety of inputs and convincing yourself that everything looks good, then you can “Re-submit” the fixed version of the lab code to the homework server: Assuming your fixes are cross-platform compatible, the re-submission should successfully compile and run without error. Note that Submitty allows you to review the autograding results of all prior submissions.
+
+### To complete Checkpoint 1: 
+Show one of the TAs the compiler errors that you obtained in the g++/clang++ development environment on your machine and the response from the homework submission server indicating the same compiler errors. Also show the edits you made to the code to fix these problems both on your machine and on Submitty.
 
 ## Important Notes
 

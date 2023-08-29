@@ -135,7 +135,7 @@ We will use the standard template library to such a great extent that it will fe
 std is a namespace that contains the standard template library.
 
 - I/O streams are the first component of the standard template library that we see. std::cout (“console output”) and
-std::endl (“end line”) are defined in the standard template library header file, iostream.
+std::endl (“end line”) are defined in the standard template library header file *iostream*.
 
 ## 1.6	A few notes on C++ vs. Java
 
@@ -152,7 +152,7 @@ main function in a separate file on its own or with a few helper functions.
 - An object is computer memory that has a type. A type (e.g., int, float, and bool) is a structure to memory
 and a set of operations.
 - For example, a float is an object and each float variable is assigned to 4 bytes of memory, and this memory
-is formatted according IEEE floating point standards for what represents the exponent and mantissa. There
+is formatted according to the IEEE floating point standards for what represents the exponent and mantissa. There
 are many operations defined on floats, including addition, subtraction, printing to the screen, etc.
 - In C++ and Java the programmer must specify the data type when a new variable is declared. The C++
 compiler enforces type checking (a.k.a. static typing). In contrast, the programmer does not specify the type
@@ -167,7 +167,7 @@ Consider the statement: root_pos = (-b + sqrt_radical) / float(2*a);
 arithmetic expressions and operator precedence from any reference textbook. The rules are pretty much the
 same in C++ and Java and Python.
 - The value of this expression is assigned to the memory location of the float variable root_pos. Note also that
-if all expression values are type int we need a cast from int to float to prevent the truncation of integer
+if all expression values are type *int* we need a cast from *int* to *float* to prevent the truncation of integer
 division.
 
 ## 1.9	Conditionals and IF statements
@@ -182,7 +182,7 @@ division.
 ```
 
 - Each statement may be a single statement, such as the continue statement above, or multiple statements
-delimited by {. . .}.
+contained by {. . .}.
 
 ## 1.10	Functions and Arguments
 
@@ -201,15 +201,15 @@ the order and types of the parameters in the function prototype.
 
 ## 1.11 Value Parameters and Reference Parameters
 
-- What’s with the & symbol on the 4th and 5th parameters in the find_roots function prototype?
+- What’s the & symbol on the 4th and 5th parameters in the find_roots function prototype?
 - Note that when we call this function, we haven’t yet stored anything in those two root variables.
 ```cpp
 	float root_1, root_2;
 	bool success = find_roots(my_a,my_b,my_c, root_1,root_2);
 ```
-- The first first three parameters to this function are value parameters.
+- The first three parameters to this function are value parameters.
   – These are essentially local variables (in the function) whose initial values are copies of the values of the corresponding argument in the function call.
-  – Thus, the value of my_a from the main function is used to initialize a in function find_roots.
+  – Thus, the value of *my_a* from the main function is used to initialize *a* in function *find_roots*.
   – Changes to value parameters within the called function do NOT change the corresponding argument in the calling function.
 - The final two parameters are reference parameters, as indicated by the &.
   - Reference parameters are just aliases for their corresponding arguments. No new objects are created.
@@ -226,11 +226,12 @@ the order and types of the parameters in the function prototype.
 	for (expr1; expr2; expr3)
 		statement;
 ```
-  – expr1 is the initial expression executed at the start before the loop iterations begin;
-  – expr2 is the test applied before the beginning of each loop iteration, the loop ends when this expression evaluates to false or 0;
-  – expr3 is evaluated at the very end of each iteration;
-  – statement is the “loop body”
- Here is the basic form of a while loop:
+  – expr1 is the initial expression executed at the start before the loop iterations begin;  
+  – expr2 is the test applied before the beginning of each loop iteration, the loop ends when this expression evaluates to false or 0;  
+  – expr3 is evaluated at the very end of each iteration;  
+  – statement is the “loop body”.  
+
+- Here is the basic form of a while loop:
 ```cpp
 	while (expr)
 		statement;

@@ -9,7 +9,7 @@ yourself to the other students in your lab section.  You may ask your
 fellow students questions about the lab.  This will help reduce the
 burden on the TAs and will reduce your waiting time in lab. **Note: Each student must produce his/her own exercise solutions.**
 
-There will be three graded ``checkpoints'' associated with each lab.
+There will be three graded "checkpoints" associated with each lab.
 If you have a question or when you have completed each checkpoint,
 raise your hand or put your name in the appropriate queue and your
 graduate TA or one of the programming mentors will check your work.
@@ -25,7 +25,7 @@ off for one checkpoint at a time and ask you to add your name to the
 end of the queue for the next checkpoint.  Class ends 10 minutes
 before the hour and no checkpoints may be earned after this time.
 
-{\em IMPORTANT NOTE: No phones, no email, no texting, no social media,
+*IMPORTANT NOTE: No phones, no email, no texting, no social media,
   no web surfing, no game-playing, no distraction!  With the exception
   of downloading lab files provided by the instructor at the start of
   lab, and occasional use of online C++ reference material (e.g., to
@@ -34,7 +34,16 @@ before the hour and no checkpoints may be earned after this time.
   wireless connection if necessary to remove the temptation.  Anyone
   caught using their cell phones, the internet, or programs not
   directly relevant to this course will be given an immediate 0 for
-  that lab and asked to leave.  }
+  that lab and asked to leave.*
+
+**Today we focus on using the terminal command line and g++ to
+compile, run, and inspect the results of your program.**  After today's
+lab you are welcome to explore other options for your C++ development
+environment.  However, for the homework assignments, your code must
+compile and run correctly under gcc/g++ 9.4 and/or llvm/clang++ 10.0 on
+Ubuntu 20.04.  This streamlined grading process allows the TAs to
+spend more time giving you constructive feedback on programming style,
+individual tutoring, and debugging help.
 
 ## Learning Objectives
 

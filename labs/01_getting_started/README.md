@@ -45,7 +45,7 @@ Ubuntu 20.04.  This streamlined grading process allows the TAs to
 spend more time giving you constructive feedback on programming style,
 individual tutoring, and debugging help.
 
-## Checkpoint 1 *estimate: 30 minutes + installation delays??*
+## Checkpoint 1			*estimate: 30 minutes + installation delays??*
 
 - The course website includes instructions to install and setup the necessary software for Windows, MacOSX, and GNU/Linux.  Windows users will need Windows Subsystem for Linux (WSL) to follow the instructions below.  Ask your TAs and mentors for advice and help if you get stuck.
    - [development_environment](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/development\_environment.php)
@@ -94,7 +94,7 @@ After testing the program on your own machine with a variety of inputs and convi
 ### To complete Checkpoint 1: 
 Show one of the TAs the compiler errors that you obtained in the g++/clang++ development environment on your machine and the response from the homework submission server indicating the same compiler errors. Also show the edits you made to the code to fix these problems both on your machine and on Submitty.
 
-## Checkpoint 2: *estimate: 30 minutes*
+## Checkpoint 2:			*estimate: 30 minutes*
 
 Now let's write a brand new C++ program to learn about command line
 arguments.  First open up a brand new file named {\tt silly.cpp}.
@@ -107,27 +107,27 @@ You may also want to refer to 1.12 and 1.13 for array syntax.
 command line, and it will print the product (multiplication) of those
 numbers to the console (`std::cout`).
 
-Compile and test your program:\\
+Compile and test your program:
 ```console
 g++ -Wall -g -o silly.out silly.cpp
 ```
 
-If we run:\\
+If we run:
 ```console
 ./silly.out 2 3 4
 ```
 
-Then program will print:\\
+Then program will print:
 ```console
 product of integers: 24
 ```
 
-And if we run:\\
+And if we run:
 ```console
 ./silly.out 3 -1 2 20 5
 ```
 
-Then program will print:\\
+Then program will print:
 ```console
 product of integers: -600
 ```
@@ -136,3 +136,22 @@ product of integers: -600
 
 ### To complete Checkpoint 2:
 Show a TA or mentor your program. Be ready to demonstrate that your program works with other input requested by the TA or mentor.  
+
+## Checkpoint 3				*estimate: 45 minutes*
+
+For the remainder of the lab time, work on the Crash Course in C++
+Exercises. Discuss the exercises with your lab study group classmates and ask
+your TA and mentors lots of questions!
+
+### To complete Checkpoint 3 (and the entire lab):
+About 10 minutes before the end of lab the TA and mentors will make a final visit to each study group and check you off. Please be ready to quickly update them
+on your progress.
+
+## SPECIAL NOTE FOR FIRST WEEK OF CLASSES
+
+Normally, all lab checkpoints must be earned during your mandatory study group time block.
+
+However, these lab exercises involved installing new software (which
+can cause unexpected delays and problems) and some students may have encountered scheduling problems.
+
+Therefore, for the first lab only, we will allow students to *makeup* the lab checkpoints during office hours.  You may attend any office hour time block and be *checked off* by any TA or mentor. 

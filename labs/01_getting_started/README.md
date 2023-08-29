@@ -45,7 +45,8 @@ Ubuntu 20.04.  This streamlined grading process allows the TAs to
 spend more time giving you constructive feedback on programming style,
 individual tutoring, and debugging help.
 
-## Checkpoint 1			*estimate: 30 minutes + installation delays??*
+## Checkpoint 1
+*estimate: 30 minutes + installation delays??*
 
 - The course website includes instructions to install and setup the necessary software for Windows, MacOSX, and GNU/Linux.  Windows users will need Windows Subsystem for Linux (WSL) to follow the instructions below.  Ask your TAs and mentors for advice and help if you get stuck.
    - [development_environment](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/development\_environment.php)
@@ -94,13 +95,14 @@ After testing the program on your own machine with a variety of inputs and convi
 ### To complete Checkpoint 1: 
 Show one of the TAs the compiler errors that you obtained in the g++/clang++ development environment on your machine and the response from the homework submission server indicating the same compiler errors. Also show the edits you made to the code to fix these problems both on your machine and on Submitty.
 
-## Checkpoint 2:			*estimate: 30 minutes*
+## Checkpoint 2:
+*estimate: 30 minutes*
 
 Now let's write a brand new C++ program to learn about command line
-arguments.  First open up a brand new file named {\tt silly.cpp}.
-Include \verb+<iostream>+ at the top of the file.
+arguments.  First open up a brand new file named `silly.cpp`.
+Include <iostream> at the top of the file.
 
-Read the reference sections of the course webpage explaining command line arguments in C++:\\ \url{\semesterurl programming_information.php} 
+Read the reference sections of the course webpage explaining command line arguments in C++: [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php).
 You may also want to refer to 1.12 and 1.13 for array syntax.
 
 - To start, let's write a program that expects only integers on the
@@ -137,7 +139,8 @@ product of integers: -600
 ### To complete Checkpoint 2:
 Show a TA or mentor your program. Be ready to demonstrate that your program works with other input requested by the TA or mentor.  
 
-## Checkpoint 3				*estimate: 45 minutes*
+## Checkpoint 3
+*estimate: 45 minutes*
 
 For the remainder of the lab time, work on the Crash Course in C++
 Exercises. Discuss the exercises with your lab study group classmates and ask

@@ -267,7 +267,7 @@ object. There are several ways of constructing string objects:
   – By default to create an empty string: std::string my_string_var;  
   – With a specified number of instances of a single char: std::string my_string_var2(10, ' ');  
   – From another string: std::string my_string_var3(my_string_var2);  
-- The notation my_string_var.size() is a call to a function size that is defined as a member function of the string class. There is an equivalent member function called length.
+- The notation my_string_var.size() is a call to a function *size* that is defined as a member function of the string class. There is an equivalent member function called *length*.
 -  Input to string objects through streams (e.g. reading from the keyboard or a file) includes the following steps:
   1. The computer inputs and discards white-space characters, one at a time, until a non-white-space character is found.
   2. A sequence of non-white-space characters is input and stored in the string. This overwrites anything that was already in the string.
@@ -278,10 +278,10 @@ object. There are several ways of constructing string objects:
   – Subscript 0 corresponds to the first character.
   – For example, given std::string a = "Susan"; Then a[0] == 'S' and a[1] == 'u' and a[4] == 'n'.
 - Strings define a special type string::size_type, which is the type returned by the string function size()
-(and length()).
-  – The :: notation means that size type is defined within the scope of the string type.
-  – string::size_type is generally equivalent to unsigned int.
-  – You may see have compiler warnings and potential compatibility problems if you compare an int variable to a.size().
+(and length()).  
+  – The :: notation means that size type is defined within the scope of the string type.  
+  – string::size_type is generally equivalent to unsigned int.  
+  – You may see compiler warnings and potential compatibility problems if you compare an int variable to a.size().  
 
 ## 1.16	C++ vs. Java
 

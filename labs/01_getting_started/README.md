@@ -7,8 +7,7 @@ any questions about the course materials and work with you one-on-one
 to master strong programming and debugging skills.  Also, introduce
 yourself to the other students in your lab section.  You may ask your
 fellow students questions about the lab.  This will help reduce the
-burden on the TAs and will reduce your waiting time in lab. {\bf
-Note: Each student must produce his/her own exercise solutions.}
+burden on the TAs and will reduce your waiting time in lab. **Note: Each student must produce his/her own exercise solutions.**
 
 There will be three graded ``checkpoints'' associated with each lab.
 If you have a question or when you have completed each checkpoint,
@@ -20,8 +19,8 @@ and understood it, you should have no trouble earning this credit.  If
 you have relied on help from other students too much, you may find the
 questions hard to answer.
 
-{\bf Do not wait until the end of lab to be checked off for multiple
-checkpoints.}  If there is a queue the TA/mentor will only check you
+**Do not wait until the end of lab to be checked off for multiple
+checkpoints.**  If there is a queue the TA/mentor will only check you
 off for one checkpoint at a time and ask you to add your name to the
 end of the queue for the next checkpoint.  Class ends 10 minutes
 before the hour and no checkpoints may be earned after this time.

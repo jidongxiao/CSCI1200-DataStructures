@@ -42,7 +42,7 @@ interpreted languages are somewhat blurry.
 - You will practice the cycle of coding & compilation & testing during
 Lab 1.  You are encouraged to try out different development
 environments (code editor & compiler) and quickly settle on one that
-allows you to be most productive.  Ask the your lab TAs & mentors
+allows you to be most productive.  Ask your lab TAs & mentors
 about their favorite programming environments!  The course website
 includes many helpful links as well.
 

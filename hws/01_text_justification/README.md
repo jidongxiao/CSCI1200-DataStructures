@@ -24,11 +24,29 @@ Let’s look at a simple example. Here is a sample input file, named example.txt
 And here’s the output produced for that input file for the three different justification modes, for the specified
 text width of 16:
 
-flush left
+**flush left**
 ```txt
 --------------------
 | Here is an       |
 | example of text  |
+| justification.   |
+--------------------
+```
+
+**flush right**
+```txt
+--------------------
+|       Here is an |
+|  example of text |
+|   justification. |
+--------------------
+```
+
+**full justify**
+```txt
+--------------------
+| Here    is    an |
+| example  of text |
 | justification.   |
 --------------------
 ```

@@ -24,6 +24,15 @@ Let’s look at a simple example. Here is a sample input file, named example.txt
 And here’s the output produced for that input file for the three different justification modes, for the specified
 text width of 16:
 
+flush left
+```txt
+--------------------
+| Here is an       |
+| example of text  |
+| justification.   |
+--------------------
+```
+
 First note that the output includes a simple ascii art line box drawn around the text, but those characters
 do not count towards the specified line width of the text. In other words, each line of final output is actually
 4 characters longer, in this example, 20 total characters. Notice that the same words appear on each line

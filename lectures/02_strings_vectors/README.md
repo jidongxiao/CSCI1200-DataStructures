@@ -41,14 +41,15 @@ where h is as defined above.
 ## 2.3	STL Vectors: a.k.a. “C++-Style”, “Smart” Arrays
 
 - Standard library “container class” to hold sequences.
-- A vector acts like a dynamically-sized, one-dimensional array.
+- A vector acts like a dynamically-sized, one-dimensional array.  
  Capabilities:
-– Holds objects of any type.
-– Starts empty unless otherwise specified.
-– Any number of objects may be added to the end — there is no limit on size.
-– It can be treated like an ordinary array using the subscripting operator.
-– A vector knows how many elements it stores! (unlike C arrays)
-– There is NO automatic checking of subscript bounds.
+  – Holds objects of any type.  
+  – Starts empty unless otherwise specified.  
+  – Any number of objects may be added to the end — there is no limit on size.  
+  – It can be treated like an ordinary array using the subscripting operator.  
+  – A vector knows how many elements it stores! (unlike C arrays)  
+  – There is NO automatic checking of subscript bounds.  
+
  Here’s how we create an empty vector of integers:
 ```cpp
 std::vector<int> scores;

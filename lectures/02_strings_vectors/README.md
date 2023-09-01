@@ -103,7 +103,6 @@ std::vector<int> e( b );
 The following outlines rules for passing vectors as parameters. The same rules apply to passing strings.
 - If you are passing a vector as a parameter to a function and you want to make a (permanent) change to the
 vector, then you should pass it by reference.
-  – This is very different from the behavior of arrays as parameters.
 - What if you don’t want to make changes to the vector or don’t want these changes to be permanent?
   – The answer we’ve learned so far is to pass by value.
   – The problem is that the entire vector is copied when this happens! Depending on the size of the vector,

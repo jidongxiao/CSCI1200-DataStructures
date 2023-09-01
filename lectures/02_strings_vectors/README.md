@@ -42,7 +42,7 @@ where h is as defined above.
 
 - Standard library “container class” to hold sequences.
 - A vector acts like a dynamically-sized, one-dimensional array.  
- Capabilities:
+ Capabilities:  
   – Holds objects of any type.  
   – Starts empty unless otherwise specified.  
   – Any number of objects may be added to the end — there is no limit on size.  

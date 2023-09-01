@@ -50,7 +50,7 @@ where h is as defined above.
   – A vector knows how many elements it stores! (unlike C arrays)  
   – There is NO automatic checking of subscript bounds.  
 
- Here’s how we create an empty vector of integers:
+ Here’s how we create an empty vector of integers (let's say we create a vector called *scores* which will be used to store students' scores):
 ```cpp
 std::vector<int> scores;
 ```
@@ -103,7 +103,6 @@ std::vector<int> e( b );
 The following outlines rules for passing vectors as parameters. The same rules apply to passing strings.
 - If you are passing a vector as a parameter to a function and you want to make a (permanent) change to the
 vector, then you should pass it by reference.
-  – This is illustrated by the function read scores in the program median grade.
   – This is very different from the behavior of arrays as parameters.
 - What if you don’t want to make changes to the vector or don’t want these changes to be permanent?
   – The answer we’ve learned so far is to pass by value.
@@ -111,7 +110,6 @@ vector, then you should pass it by reference.
 this can be a considerable waste of memory.
 - The solution is to pass by constant reference: pass it by reference, but make it a constant so that it can not
 be changed.
-  – This is illustrated by the functions compute avg and std dev and compute median in the program
 median grade.
 - As a general rule, you should not pass a container object, such as a vector or a string, by value because of the
 cost of copying.

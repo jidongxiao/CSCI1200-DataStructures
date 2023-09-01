@@ -113,8 +113,8 @@ median grade.
 - As a general rule, you should not pass a container object, such as a vector or a string, by value because of the
 cost of copying.
 
-## Exercises
+## 2.6 Exercises
 
-[Leetcode problem 8: String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
-[Leetcode problem 211: Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
-[Leetcode problem 1662: Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
+- [Leetcode problem 8: String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
+- [Leetcode problem 211: Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [Leetcode problem 1662: Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)

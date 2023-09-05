@@ -1,6 +1,10 @@
 # Overview
 
-In this lab, you will be writing your own C++ classes. We have not covered C++ classes in the lecture, but according to last Friday's poll, everyone is this class has either experience in Java or experience in Python, so the concept of class is not new to you.
+In this lab, you will be writing your own C++ classes. We have not covered C++ classes in the lecture, but according to last Friday's poll, everyone is this class has either experience in Java or experience in Python, so the concept of class is not new to you. To get familiar with the C++ syntax on classes, you are recommended to quickly review the following 3 files:
+
+[date.h](../../lectures/03_classes_I/date.h)
+[date.cpp](../../lectures/03_classes_I/date.cpp)
+[date_main.cpp](../../lectures/03_classes_I/date_main.cpp)
 
 ## Checkpoint 1
 *estimate: 15-25 minutes*
@@ -110,7 +114,7 @@ program. Yes, please show us you can compile from the terminal with g++, even if
 use Visual Studio or another IDE for the rest of the semester.
 
 ## Checkpoint 3
-*estimate: 30-45 minutes*
+*estimate: 20-30 minutes*
 
 Create and test a few more member functions. This will require modifications to all three of the files. You should uncomment the provided tests in main.cpp as you work, and add your own tests.
 - *setHour, setMinute, setSecond*. Each should take a single integer argument and change the appropriate

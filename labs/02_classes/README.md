@@ -2,8 +2,8 @@
 
 In this lab, you will be writing your own C++ classes. We have not covered C++ classes in the lecture, but according to last Friday's poll, everyone is this class has either experience in Java or experience in Python, so the concept of class is not new to you. To get familiar with the C++ syntax on classes, you are recommended to quickly review the following 3 files:
 
-[date.h](../../lectures/03_classes_I/date.h)
-[date.cpp](../../lectures/03_classes_I/date.cpp)
+[date.h](../../lectures/03_classes_I/date.h)  
+[date.cpp](../../lectures/03_classes_I/date.cpp)  
 [date_main.cpp](../../lectures/03_classes_I/date_main.cpp)
 
 ## Checkpoint 1

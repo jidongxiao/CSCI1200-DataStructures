@@ -34,7 +34,41 @@ bool Date::isLeapYear() const {
 
 pay attention to the "Date::" right in front of the function name *isLeapYear*. The "Date::" defines the scope of this function, meaning that this function is a member function of the *Date* class.
 - typically in C++, we declare member variables as *private*, and declare member functions as "public". Member functions allows user to operate on these member variables, which can not be accessed directly from outside the class, and that is the meaning of *private*.
-- constructor: 
+- constructor: In C++ classes, there is a special member function called the *constructor*. When an object of the class is created, the constructor will be automatically called. In the constructor function, we usually initialize the member variables of the object (that is being created). Constructors in C++ have the following characteristics:
+  - Constructors have the same name as the class they belong to.
+  - They do not have a return type, not even *void*.
+  - A class can have multiple constructors, and this is known as constructor overloading. Take the *Date* class as an example, it has the following two constructors:
+```cpp
+Date();
+Date(int aMonth, int aDay, int aYear);
+```
+
+and their definitions are:
+```cpp
+Date::Date() {	//default constructor
+  day = 1;
+  month = 1;
+  year = 1900;
+}
+
+Date::Date(int aMonth, int aDay, int aYear) { // construct from month, day, & year
+  month = aMonth;
+  day = aDay;
+  year = aYear;
+}
+```
+
+typically, the constructor which does not take any arguments, is called the **default constructor**. When a user creates a Date object like this:
+```cpp
+Date a;
+```
+
+the default constructor will be called; but if a user creates a Date object like this:
+```cpp
+Date Sallys_Birthday(9,29,1995);
+```
+
+then the second constructor will be called. Therefore you can see, when multiple constructors are defined, which constructor will be called depends on how the object is created - if no arguments are provided, then the default constructor will be called.
 
 ## Checkpoint 1
 *estimate: 15-25 minutes*

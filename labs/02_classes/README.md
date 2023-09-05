@@ -6,6 +6,35 @@ In this lab, you will be writing your own C++ classes. We have not covered C++ c
 [date.cpp](../../lectures/03_classes_I/date.cpp)  
 [date_main.cpp](../../lectures/03_classes_I/date_main.cpp)
 
+Some notes about these 3 files:
+
+- date.h and date.cpp are the implementation of a class called *date*.
+- date_main.cpp is program to test the *date* class, and therefore, only this file contains the *main* function.
+- the file with the .h file name extension is called the header file.
+- in this lab, you're not required to use the keyword **const**, as we will cover more about it in lecture. For the same reason, for now, you can also ignore the keyword **const** that is used in the date class.
+- typically in C++, we declare a class in the header file, and then define/implement this class in a .cpp file. The declaration of a class includes the prototype of its member functions, and it also includes the member variables of this class. As can be seen from *date.h* and *date.cpp*, the date class has 3 member variables:
+```cpp
+  int day;
+  int month;
+  int year;
+```
+ and it has several member functions. Take the *isLeapYear* function for example, we write its prototype in the header file as below:
+
+```cpp
+bool isLeapYear() const;  
+```
+
+ and we define it in the .cpp file as following:
+
+```cpp
+bool Date::isLeapYear() const {
+  return (year%4 ==0 && year % 100 != 0) || year%400 == 0;
+}
+```
+
+pay attention to the "Date::" right in front of the function name *isLeapYear*. The "Date::" defines the scope of this function, meaning that this function is a member function of the *Date* class.
+- typically in C++, we declare member variables as *private*, and declare member functions as "public". Member functions allows user to operate on these member variables, which can not be accessed directly from outside the class, and that is the meaning of *private*.
+
 ## Checkpoint 1
 *estimate: 15-25 minutes*
 

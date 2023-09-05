@@ -60,7 +60,6 @@ int main() {
 
 
   /*
-  std::cout << "testing sort" << std::endl;
   std::vector<Time> times;
 
   times.push_back(Time(0,0,1));
@@ -79,11 +78,6 @@ int main() {
   times.push_back(Time(14,14,14));
   times.push_back(Time(3,3,3));
   
-  // also try some duplicates
-  // times.push_back(Time(2,2,2));
-  // times.push_back(Time(23,23,23));
-
-  sort(times.begin(),times.end(),IsEarlierThan);
   for (int i = 0; i < times.size(); i++) {
     times[i].PrintAMPM();
   }

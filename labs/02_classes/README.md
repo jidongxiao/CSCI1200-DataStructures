@@ -9,10 +9,10 @@ In this lab, you will be writing your own C++ classes. We have not covered C++ c
 Some notes about these 3 files:
 
 - date.h and date.cpp are the implementation of a class called *date*.
-- date_main.cpp is program to test the *date* class, and therefore, only this file contains the *main* function.
-- the file with the .h file name extension is called the header file.
-- in this lab, you're not required to use the keyword **const**, as we will cover more about it in lecture. For the same reason, for now, you can also ignore the keyword **const** that is used in the date class.
-- typically in C++, we declare a class in the header file, and then define/implement this class in a .cpp file. The declaration of a class includes the prototype of its member functions, and it also includes the member variables of this class. As can be seen from *date.h* and *date.cpp*, the date class has 3 member variables:
+- date_main.cpp is the program to test the *date* class, and therefore, only this file contains the *main* function.
+- the file with the .h file name extension is called the header file, and the .cpp file is callled the implementation file. Note that in C++ the name of the header and implementation files are not required to exactly match the name of the class, but it is good coding style to do so.
+- in this lab, you're not required to use the keyword **const**, as we will cover more about it in lecture. For the same reason, for now, you can also ignore the keyword **const** that is used in the *date* class.
+- typically in C++, we declare a class in the header file, and then define/implement this class in a .cpp file. The declaration of a class includes the prototype of its member functions, and it also includes the member variables of this class. As can be seen from *date.h* and *date.cpp*, the *date* class has 3 member variables:
 ```cpp
   int day;
   int month;
@@ -34,6 +34,7 @@ bool Date::isLeapYear() const {
 
 pay attention to the "Date::" right in front of the function name *isLeapYear*. The "Date::" defines the scope of this function, meaning that this function is a member function of the *Date* class.
 - typically in C++, we declare member variables as *private*, and declare member functions as "public". Member functions allows user to operate on these member variables, which can not be accessed directly from outside the class, and that is the meaning of *private*.
+- constructor: 
 
 ## Checkpoint 1
 *estimate: 15-25 minutes*
@@ -72,19 +73,18 @@ hours in military time. This means that the hours of the day are numbered from 0
 In the second checkpoint you will get started by implementing the initial class design, several member
 functions, and a simple main program to test your class.
 
-The instructions below describe how to build your executable using from the command line using g++ or
+The instructions below describe how to build your executable from the command line using g++ or
 clang++ using the WSL or UNIX terminal. Even if you plan to use Visual Studio or another IDE for the
 bulk of your work this semester, you are required to also show that you can successfully build and run this
 lab using g++ from a terminal on your own machine.
 
-- We provide basic testing code in main.cpp. You’ll need to create Create 2 new empty code files named time.h and time.cpp. Note that in C++ the name of the header and implementation file are not required to exactly match the name of the class, but it is good coding style to do so.
+- We provide basic testing code in [main.cpp](./main.cpp). You’ll need to create 2 new empty code files named time.h and time.cpp.
 
-- Begin work on time.h. Within the file, declare a class called Time. Follow the form and syntax of the Date class from Lecture 3. Read the syntax carefully (such as the semi-colon at the end of the class declaration). Add private member variables for the hour, minute and second. In the public area of the class, declare two constructors: one, the default constructor, should initialize each of the member variables to 0; the other, having three arguments, accepts initial values for the hour, minute and second as function call arguments. Declare member functions to access the values of the hour, the minute and the second (three different member functions). It will be crucial for Checkpoint 3 to make these const.  (Recall: a const member function can not change the member variables.) Don’t write the body of any of the functions in the time.h file. Save all the implementation for the time.cpp file.
+- Begin work on time.h. Within the file, declare a class called Time. Follow the form and syntax of the Date class. Read the syntax carefully (such as the semi-colon at the end of the class declaration). Add private member variables for the hour, minute and second. In the public area of the class, declare two constructors: one, the default constructor, should initialize each of the member variables to 0; the other, having three arguments, accepts initial values for the hour, minute and second as function call arguments. Declare member functions to access the values of the hour, the minute and the second (three different member functions). Don’t write the body of any of the functions in the time.h file. Save all the implementation for the time.cpp file.
+<!-- It will be crucial for Checkpoint 3 to make these const. (Recall: a const member function can not change the member variables.) -->
 
-- Review the provided main.cpp. Note that we must #include "time.h" in addition to including #include <iostream>. (Note: We use angle brackets for standard library includes and double quotes
-for our custom header files in the working directory.) The main program creates multiple Time objects,
-using the two different constructors and uses the functions that access the values of hour, minute and
-second by printing the two times.
+- Review the provided main.cpp. Note that we must #include "time.h" in addition to including #include &lt;iostream&gt;. (Note: We use angle brackets for standard library includes and double quotes for our custom header files in the working directory.) The main program creates multiple Time objects, using the two different constructors and uses the functions that access the values of hour, minute and second by printing the two times.
+
 Note: There is a common confusion when creating a new variable using the default constructor:
 
 ```cpp
@@ -109,7 +109,7 @@ g++ -c time.cpp -Wall -Wextra
 
 compile the source code to create two object code files called main.o and time.o separately. The -c
 means “compile only”. Compiler errors will appear at this point. If there are errors in main.cpp (or
-time.cpp), then the files main.o (or time.o) will not be created. Use the ls command to check.
+time.cpp), then the files main.o (or time.o) will not be created. Use the *ls* command to check.
 
 **Important Note**: We only compile .cpp files. We do not directly compile header files. Header files are
 compiled only indirectly when included in a .cpp file.

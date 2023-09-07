@@ -1,0 +1,11 @@
+Dept ECSE
+Coursenum  Class Title                  Day       Start Time  End Time
+---------  ---------------------------  --------  ----------  --------
+2010-02    ELECTRIC_CIRCUITS            Monday    12:00PM     01:50PM 
+2010-02    ELECTRIC_CIRCUITS            Thursday  12:00PM     01:50PM 
+2050-03    INTRODUCTION_TO_ELECTRONICS  Monday    02:00PM     03:50PM 
+2050-03    INTRODUCTION_TO_ELECTRONICS  Thursday  02:00PM     03:50PM 
+2500-01    ENGINEERING_PROBABILITY      Monday    04:00PM     05:20PM 
+2500-01    ENGINEERING_PROBABILITY      Thursday  04:00PM     05:20PM 
+6 entries
+

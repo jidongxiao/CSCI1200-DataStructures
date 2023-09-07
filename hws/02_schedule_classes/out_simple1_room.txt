@@ -1,0 +1,7 @@
+Room DARRIN_239
+Dept  Coursenum  Class Title            Day       Start Time  End Time
+----  ---------  ---------------------  --------  ----------  --------
+CSCI  4030-01    RANDOMIZED_ALGORITHMS  Monday    10:00AM     11:50AM 
+CSCI  4030-01    RANDOMIZED_ALGORITHMS  Thursday  10:00AM     11:50AM 
+2 entries
+

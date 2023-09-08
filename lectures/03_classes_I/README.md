@@ -6,7 +6,7 @@
   - [date_main.cpp](./date_main.cpp)
 
 - Class declaration: member variables and member functions; Using the class member functions;
-- Member function implementation; Class scope; Classes vs. structs; Designing classes;
+- Member function implementation; Class scope; Designing classes;
 - Defining a custom sort of class instances.
 
 ## 3.1 Types and Defining New Types	
@@ -133,7 +133,9 @@ sort(dates.begin(), dates.end(), earlier_date);
 Where earlier_date is a helper function we define in date.h and date.cpp that takes two const references to Date objects and returns true if and only if the first argument should be considered “less” than the second in the sorted order.
 ```cpp
 bool earlier_date (const Date& a, const Date& b) {
-    if (a.getYear() < b.getYear() || (a.getYear() == b.getYear() && a.getMonth() < b.getMonth()) || (a.getYear() == b.getYear() && a.getMonth() == b.getMonth() && a.getDay() < b.getDay()))
+    if (a.getYear() < b.getYear() || 
+         (a.getYear() == b.getYear() && a.getMonth() < b.getMonth()) || 
+         (a.getYear() == b.getYear() && a.getMonth() == b.getMonth() && a.getDay() < b.getDay()))
         return true;
     else
         return false;

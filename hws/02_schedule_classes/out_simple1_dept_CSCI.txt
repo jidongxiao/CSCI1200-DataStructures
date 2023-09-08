@@ -1,0 +1,7 @@
+Dept CSCI
+Coursenum  Class Title            Day       Start Time  End Time
+---------  ---------------------  --------  ----------  --------
+4030-01    RANDOMIZED_ALGORITHMS  Monday    10:00AM     11:50AM 
+4030-01    RANDOMIZED_ALGORITHMS  Thursday  10:00AM     11:50AM 
+2 entries
+

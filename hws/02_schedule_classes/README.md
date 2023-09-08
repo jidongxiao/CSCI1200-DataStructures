@@ -118,18 +118,19 @@ and at the very bottom of your .h file, add this line:
 #endif
 ```
 
-If you want to make a vector of vectors of a type (let’s use int in this example) called vectorname, you can do
-so by writing std::vector&lt;std::vector&lt;int&gt; &gt; vectorname and then indexing as usual. vectorname[0]
-will return a vector&lt;int&gt; in this example. The most important detail is to remember to put a space
+If you want to make a vector of vectors of a type (let’s use int in this example) called vectorname, you can do so by writing 
+
+```cpp
+std::vector&lt;std::vector&lt;int&gt; &gt; vectorname
+```
+
+and then indexing as usual. *vectorname[0]* will return a vector&lt;int&gt; in this example. The most important detail is to remember to put a space
 between the two closing angle brackets. Some compilers will interpret &gt;&gt; as the input operator, even though
 it’s obvious to a human reader that this was not the intent.
 
 ## Program Requirements & Submission Details
 
-Your program should involve the definition of at least one class that has its own .h and .cpp files, named
-appropriately. We have provided a series of datasets to aid in your program development and
-debugging. The majority of points for this homework assignment will be awarded for programs that work
-correctly for the simple examples.
+**For this assignment, your program must involve the definition of at least one class that has its own .h and .cpp files, named appropriately**. We have provided a series of datasets to aid in your program development and debugging. The majority of points for this homework assignment will be awarded for programs that work correctly for the simple examples.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

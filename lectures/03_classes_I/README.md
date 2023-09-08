@@ -144,6 +144,6 @@ bool earlier_date (const Date& a, const Date& b) {
 
 ## 3.11 Exercises
 
-- [Leetcode problem 1051: Height Checker](https://leetcode.com/problems/height-checker/) [Solution](../../leetcode/p1051_heightchecker.cpp)
+- [Leetcode problem 1051: Height Checker](https://leetcode.com/problems/height-checker/) Solution: [p1051_heightchecker.cpp](../../leetcode/p1051_heightchecker.cpp)
 - [Leetcode problem 211: Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
 - [Leetcode problem 1662: Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)

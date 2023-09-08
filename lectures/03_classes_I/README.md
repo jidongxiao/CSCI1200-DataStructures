@@ -1,4 +1,4 @@
-# Lecture 3 --- Claases
+# Lecture 3 --- Classes
 
 - Classes in C++; Types and defining new types; Example: A Date class;
 - Class declaration: member variables and member functions; Using the class member functions;

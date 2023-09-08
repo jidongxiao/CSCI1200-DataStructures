@@ -121,7 +121,7 @@ and at the very bottom of your .h file, add this line:
 If you want to make a vector of vectors of a type (let’s use int in this example) called vectorname, you can do so by writing 
 
 ```cpp
-std::vector&lt;std::vector&lt;int&gt; &gt; vectorname
+std::vector<std::vector<int> > vectorname;
 ```
 
 and then indexing as usual. *vectorname[0]* will return a vector&lt;int&gt; in this example. The most important detail is to remember to put a space

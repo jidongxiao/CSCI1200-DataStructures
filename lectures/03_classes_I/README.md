@@ -7,7 +7,20 @@
 
 ## 3.1 Types and Defining New Types	
 
+- Every C++ object has a type (e.g., integers, doubles, strings, and vectors, etc., including custom types); and a class is a custom data type, also known as a user-defined data type.
+– The type tells us what the data means and what operations can be performed on the data.
+
 ## 3.2 C++ Classes
+
+- A C++ class group together variables and functions that operate on those variables. We call these variables *member variables*, and we call these functions *member functions*.
+
+- A C++ class consists of
+
+  – a collection of member variables, usually private, and
+  – a collection of member functions, usually public, which operate on these variables.
+
+- public member functions can be accessed directly from outside the class,
+- private member functions and member variables can only be accessed indirectly from outside the class, through public member functions.
 
 ## 3.3 Class scope notation
 

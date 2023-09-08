@@ -15,8 +15,7 @@
 - A C++ class group together variables and functions that operate on those variables. We call these variables *member variables*, and we call these functions *member functions*.
 
 - A C++ class consists of
-
-  – a collection of member variables, usually private, and
+  – a collection of member variables, usually private, and  
   – a collection of member functions, usually public, which operate on these variables.
 
 - public member functions can be accessed directly from outside the class,
@@ -24,7 +23,18 @@
 
 ## 3.3 Class scope notation
 
+In the Date class example as you saw in lab 2,
+
+- **Date::** indicates that what follows is within the scope of the class.
+- Within class scope, the member functions and member variables are accessible without the name of the object.
+
 ## 3.4 Constructors
+
+These are special functions that initialize the values of the member variables. The constructor automatically get called when an object of the class is created. You have already used constructors for string and vector objects. As you have seen in the lab, constructors in C++ have the following characteristics:
+
+- Constructors have the same name as the class they belong to.
+- They do not have a return type, not even void.
+- A class can have multiple constructors, and this is known as constructor overloading.
 
 ## 3.5 Member Functions
 

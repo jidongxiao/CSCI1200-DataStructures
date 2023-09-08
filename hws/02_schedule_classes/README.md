@@ -94,12 +94,14 @@ output. Feel free to create your own dataset and include it with your submission
 ## Useful Code
 
 To control the formatting of your tables, you’ll want to read up on the various I/O manipulators:
-std::setw(int), std::setprecision(int), std::fixed, std::left, etc. You’ll need to #include <iomanip>
+std::setw(int), std::setprecision(int), std::fixed, std::left, etc. You’ll need to #include &lt;iomanip&gt;
 to access these tools. And don’t forget about the sort function that can be used to order the contents of a
 vector.
+
 If you add -std=c++11 to your compile line, you can use C++11 features. Submitty will use this flag, if
 you do not want any C++11 features this will not affect you. However, students on Homework 2 often find
 std::stoi to be useful, and this requires C++11.
+
 We will not formally cover the concept of “include guards” until Tuesday’s lecture. If you are writing more
 than one class, you may run into strange compiler errors when you compile everything. This may be due to
 a problem with including your class files, which can be solved as follows: for a header file called myclass.h

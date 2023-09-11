@@ -170,11 +170,11 @@ break line.cpp:31
 ```
 Set a breakpoint at some point in your code just before (in order of execution!) you think the first error
 might occur. Finally, in order to actually start running the program under control of the debugger,
-you will need to type *run* at the gdb command line.
+you will need to type *run* at the gdb command line.  
 4. Stepping through the program:
 You can step through the code using the commands *next* (move to the next line of code), *step* (enter
 the function), and *finish* (leave the function). The command *continue* allows you to move to the
-next breakpoint.
+next breakpoint. 
 5. Examining the content of variables:
   - You can use *print* to see the values of variables and expressions.  
   - You can use the command *display* to see the contents of a particular variable or expression when the

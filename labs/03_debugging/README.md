@@ -185,9 +185,9 @@ important if your program crashes. Unfortunately, the crash often occurs inside 
 Therefore, when you look at the call stack the first few functions listed may not be your code.
 This does not mean that the C++ library has an error! Instead it likely means that your code has
 called the library incorrectly or passed the library bad data. Find the function on the stack that is the
-nearest to the top of the stack that is actually your code. By typing frame N, where N is the index of
+nearest to the top of the stack that is actually your code. By typing *frame N*, where *N* is the index of
 the function on the stack, you can examine your code and variables and you can see the line number
-in your code that caused the crash. Type info locals and info args to examine the data in the
+in your code that caused the crash. Type *info locals* and *info args* to examine the data in the
 function. Type list to see the source code.
 7. Breakpoint on Variable Change: The last powerful debugger feature we will try today is variable
 monitoring.

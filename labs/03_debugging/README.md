@@ -19,7 +19,7 @@ Checkpoints 2 and 3 are an introduction to using a command line debugger: **gdb*
 Testing and debugging are important steps in programming. Loosely, you can think of testing as verifying
 that your program works and debugging as finding and fixing errors once you’ve discovered it does not.
 Writing test code is an important (and sometimes tedious) step. Many software libraries have “regression
-tests” that run automatically to verify that code is behaving the way it should.
+tests” which run automatically to verify that code is behaving the way it should.
 
 Here are four strategies for testing and debugging:
 
@@ -50,7 +50,11 @@ connecting two Points.
 
 Please download the following source code files needed for this lab:
 
+[point.h](./point.h)
+
 As well as the following data files:
+
+[input_a.txt](./input_a.txt)
 
 ## Checkpoint 2
 *estimate: 20-30 minutes*

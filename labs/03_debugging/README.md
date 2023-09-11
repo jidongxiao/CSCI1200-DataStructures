@@ -112,23 +112,27 @@ Now, we will practice using the debugger to find and fix errors. Today we’ll l
 command line debugger, gdb from the GNU/Linux/Ubuntu or MacOSX terminal. NOTE: On Mac OSX, you
 are probably actually using the llvm/clang++ compiler, so you’ll use lldb instead of gdb in the instructions
 below. If you didn’t already install gdb/lldb, review the installation instructions on the course webpage.
-Many introductory gdb/lldb debugging tutorials can be found on-line; just type e.g., gdb tutorial into
+Many introductory gdb/lldb debugging tutorials can be found on-line; just type e.g., *gdb tutorial* into
 your favorite search engine. Here are a couple:
-http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html
-http://www.cs.cmu.edu/~gilpin/tutorial/
+http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html 
+http://www.cs.cmu.edu/~gilpin/tutorial/ 
+
 And here’s a handy table mapping gdb commands to lldb commands:
-https://lldb.llvm.org/use/map.html
+
+https://lldb.llvm.org/use/map.html 
+
 After you learn and demonstrate to your TA the basics of debugging with gdb/lldb you are encouraged
 to explore other debuggers, for example, the debugger built into your IDE, but we do not provide those
-instructions. You may also want to try a graphical front end for gdb: http://www.gnu.org/software/ddd/
+instructions. You may also want to try a graphical front end for gdb:
+
+http://www.gnu.org/software/ddd/ 
+
 After today’s lab you can use your favorite search engine to find basic instructions for other debuggers and
 figure out how to do each of the steps below in your debugger of choice.
 Note that in addition to a standard step-by-step program debugger like gdb/lldb, we also recommend the use
-of a memory debugger (drmemory or valgrind) for programs with dynamically-allocated memory (we’ll talk
-about this in Lecture 5 on Friday!), or anytime you have a segmentation fault or other confusing program
-behavior. We’ll work the memory debugger in lab next week! Information about memory debuggers is
+of a memory debugger (drmemory or valgrind) for programs with dynamically-allocated memory (we’ll soon talk about this in Lectures), or anytime you have a segmentation fault or other confusing program behavior. We’ll work the memory debugger in lab next week! Information about memory debuggers is
 available here:
-http://www.cs.rpi.edu/academics/courses/spring23/csci1200/memory_debugging.php
+http://www.cs.rpi.edu/academics/courses/fall23/csci1200/memory_debugging.php
 
 After today’s lab, you should be comfortable with the basics of command line debugging within your preferred
 development environment. Keep practicing with the debugger on your future homeworks, and be prepared
@@ -190,7 +194,13 @@ Continue to experiment with these different debugger operations. You can now sta
 the program that were hinted at by the compilation warnings. Remember to recompile the program and
 re-launch the debugger after each change to the source code. Continue to take detailed notes on what edits
 you make to the provided source code.
-When when you feel comfortable showing off all these debugger features, put your name in the
-queue for checkoff for this checkpoint. The TA/mentor will be asking you to demonstrate these features
+**When you feel comfortable showing off all these debugger features, put your name in the
+queue for checkoff for this checkpoint.** The TA/mentor will be asking you to demonstrate these features
 and discuss the compilation warnings and bugs in the provided code. You will also be asked questions about
 the other steps in debugging.
+
+Please note that this lab has only given you a brief introduction to debugging. You will learn much more
+through extensive practice. In fact, when you go to see one of us — the TAs, the mentors, or instructor —
+to ask for help in debugging your assignments, we will constantly be asking you to show us how you have
+attempted to find the problem on your own. This will include combinations of the four steps listed at the
+start of the lab.

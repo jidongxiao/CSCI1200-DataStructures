@@ -118,7 +118,15 @@ a[i] = sqrt( double(i) );
 - Remember: the size of array a is fixed at compile time. STL vectors act like arrays, but they can grow and
 shrink dynamically in response to the demands of the application.
 
-## 4.7 Exercises
+## 4.7 Sorting an Array
+
+- Arrays may be sorted using std::sort, just like vectors. Pointers are used in place of iterators. For example, if a is an array of doubles and there are n values in the array, then here’s how to sort the values in the array into increasing order:
+
+```cpp
+std::sort( a, a+n );
+```
+
+## 4.8 Exercises
 
 - [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)
 - [Leetcode problem 977: Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/). Solution: [p977_sortedsquare.cpp](../../leetcode/p977_sortedsquare.cpp)

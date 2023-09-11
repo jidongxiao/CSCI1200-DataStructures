@@ -188,7 +188,7 @@ called the library incorrectly or passed the library bad data. Find the function
 nearest to the top of the stack that is actually your code. By typing *frame N*, where *N* is the index of
 the function on the stack, you can examine your code and variables and you can see the line number
 in your code that caused the crash. Type *info locals* and *info args* to examine the data in the
-function. Type list to see the source code.
+function. Type *list* to see the source code.
 7. Breakpoint on Variable Change: The last powerful debugger feature we will try today is variable
 monitoring.
 Add a new modifier member function to the *Point* class named *set_elevation* that changes the *y* coordinate of a *Point* instance. Create an instance of a *Point* object in the *main* function called *pt*.  

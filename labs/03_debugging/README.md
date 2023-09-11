@@ -79,29 +79,21 @@ and run the program. Take careful step-by-step notes about every command you run
 of the program you add or edit (and why you make that edit). Create a new README.txt file to
 organize your notes. You’ll need to show these to your TA/mentor to get checked off for today’s lab.
 3. What command line(s) are necessary to compile these files into an executable? Be sure to enable all
-recommended warnings for the Data Structures course by using the -Wall -Wextra flags. Also use the
--g flag which will include source code line numbers and other useful information for the debugger.
-4. The program as provided may not compile without error. Perform the minimal edits to the source code
-files necessary to remove the compilation ERROR and produce an executable. IMPORTANT: Do
-not fix any of the compilation WARNINGs yet.
-5. Run the program with each of the provided input data files. Take notes on what appears to be working
-correctly and if anything looks buggy.
-6. Now let’s examine those compilation warnings a little more closely. Oftentimes programmers can get
-lazy and ignore compilation warnings because these warnings aren’t necessarily showstoppers that
-prevent us from testing and running our program on initial datasets. But some compilation warnings
-are actually very dangerous and can prevent the program from successfully handling all possible input
+recommended warnings for the Data Structures course by using the **-Wall -Wextra** flags. Also use the **-g** flag which will include source code line numbers and other useful information for the debugger.
+4. The program as provided may not compile without error. Perform the minimal edits to the source code files necessary to remove the compilation ERROR and produce an executable. IMPORTANT: Do not fix any of the compilation WARNINGs yet.
+5. Run the program with each of the provided input data files. Take notes on what appears to be working correctly and if anything looks buggy.
+6. Now let’s examine those compilation warnings a little more closely. Oftentimes programmers can get lazy and ignore compilation warnings because these warnings aren’t necessarily showstoppers that prevent us from testing and running our program on initial datasets. But some compilation warnings are actually very dangerous and can prevent the program from successfully handling all possible input
 datasets or even from running at all!
 
-Here’s a list of the categories for some of the more common compilation warnings we see in the Data
-Structures course. You should see all or most of these when you compile the provided code.
+Here’s a list of the categories for some of the more common compilation warnings we see in the Data Structures course. You should see all or most of these when you compile the provided code.
 
-warning: expression result unused / expression has no effect
- warning: control reaches / may reach end of non-void function
- warning: variable is uninitialized when used here / in this function
- warning: comparison of integers of different signs: 'int' and 'unsigned int'
- warning: returning reference to local temporary object /
-reference to stack memory associated with a local variable returned
- warning: unused variable
+  - warning: expression result unused / expression has no effect 
+  - warning: control reaches / may reach end of non-void function 
+  - warning: variable is uninitialized when used here / in this function 
+  - warning: comparison of integers of different signs: 'int' and 'unsigned int'
+  - warning: returning reference to local temporary object /
+reference to stack memory associated with a local variable returned 
+  - warning: unused variable
 
 7. Study the source code referenced by each specific compilation warning. Do you see the cause of the
 warning? Some or all of these warnings might be actual logic or math bugs that will cause the problem

@@ -51,17 +51,28 @@ connecting two Points.
 Please download the following source code files needed for this lab:
 
 [point.h](./point.h)
+[point.cpp](./point.cpp)
+[line.h](./line.h)
+[line.cpp](./line.cpp)
+[roads.cpp](./roads.cpp)
 
 As well as the following data files:
 
 [input_a.txt](./input_a.txt)
+[input_b.txt](./input_b.txt)
+[input_c.txt](./input_c.txt)
+[input_d.txt](./input_d.txt)
 
 ## Checkpoint 2
 *estimate: 20-30 minutes*
 
-1. Examine the provided files briefly. How are the files related or dependent upon each other? Hint: Look
-at the #include statements. Read through the comments from the developer about the purpose of
-each class and function.
+1. Examine the provided files briefly. How are the files related or dependent upon each other? Hint: Look at the #include statements. Read through the comments from the developer about the purpose of each class and function.
+<div style="border: 1px solid black; padding: 10px;">
+We have intentionally placed a number of bugs in the program that will
+cause problems when you attempt to compile and then run these programs.
+Even if you spot the problems, don’t fix them yet!
+</div>
+
 2. When you’re confident you understand what the original programmer was aiming to do, let’s compile
 and run the program. Take careful step-by-step notes about every command you run, and every line
 of the program you add or edit (and why you make that edit). Create a new README.txt file to

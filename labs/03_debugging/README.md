@@ -80,7 +80,7 @@ of the program you add or edit (and why you make that edit). Create a new README
 organize your notes. You’ll need to show these to your TA/mentor to get checked off for today’s lab.
 3. What command line(s) are necessary to compile these files into an executable? Be sure to enable all
 recommended warnings for the Data Structures course by using the **-Wall -Wextra** flags. Also use the **-g** flag which will include source code line numbers and other useful information for the debugger.
-4. The program as provided may not compile without error. Perform the minimal edits to the source code files necessary to remove the compilation ERROR and produce an executable. IMPORTANT: Do not fix any of the compilation WARNINGs yet.
+4. The program as provided may not compile without error. Perform the minimal edits to the source code files necessary to remove the compilation ERROR and produce an executable. **IMPORTANT: Do not fix any of the compilation WARNINGs yet.**
 5. Run the program with each of the provided input data files. Take notes on what appears to be working correctly and if anything looks buggy.
 6. Now let’s examine those compilation warnings a little more closely. Oftentimes programmers can get lazy and ignore compilation warnings because these warnings aren’t necessarily showstoppers that prevent us from testing and running our program on initial datasets. But some compilation warnings are actually very dangerous and can prevent the program from successfully handling all possible input
 datasets or even from running at all!
@@ -97,7 +97,7 @@ reference to stack memory associated with a local variable returned
 
 7. Study the source code referenced by each specific compilation warning. Do you see the cause of the
 warning? Some or all of these warnings might be actual logic or math bugs that will cause the problem
-to crash or return bad data for some or all inputs. Do you see the problem? Do you know how to fix it? IMPORTANT: Don’t fix the problems yet. And don’t worry if you don’t see the error – just
+to crash or return bad data for some or all inputs. Do you see the problem? Do you know how to fix it? **IMPORTANT: Don’t fix the problems yet**. And don’t worry if you don’t see the error – just
 staring at the code is not the only debugging technique nor is it the most effective debugging technique
 for large programs!
 
@@ -114,7 +114,7 @@ are probably actually using the llvm/clang++ compiler, so you’ll use lldb inst
 below. If you didn’t already install gdb/lldb, review the installation instructions on the course webpage.
 Many introductory gdb/lldb debugging tutorials can be found on-line; just type e.g., *gdb tutorial* into
 your favorite search engine. Here are a couple:
-http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html 
+http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html  
 http://www.cs.cmu.edu/~gilpin/tutorial/ 
 
 And here’s a handy table mapping gdb commands to lldb commands:
@@ -142,35 +142,45 @@ to demonstrate debugger skills when you ask for help in office hours.
 need to make sure you have linked the code with the -g option to add debug information (including,
 source code line numbers!) to the executable.
 For example (replacing file1.cpp file2.cpp with your source code):
+```console
 g++ -g -Wall -Wextra file1.cpp file2.cpp -o executable.exe
+```
 In order to start gdb, type (replacing executable.exe with your program):
+```console
 gdb executable.exe
+```
 NOTE: You can specify command line arguments to your executable on the gdb/lldb command line
 OR you can specify those command line arguments a little bit later, when you run your executable
 inside the debugger. Refer to documentation, e.g.: https://lldb.llvm.org/use/map.html
 
-3. Now we’re inside the command-line debugger. Type help in order to see the list of commands.
+3. Now we’re inside the command-line debugger. Type *help* in order to see the list of commands.
 There are several commands for setting breakpoints. You can set a breakpoint by specifying a function
 name or a line number within a file. For example:
+```console
 break main
+```
 sets a breakpoint at the start of the main function. You can also set a breakpoint at the start of a
 member function, as in:
+```console
 break Point::get_x
+```
 Finally, to set a breakpoint at a specific line number in a file, you may type:
+```console
 break line.cpp:31
+```
 Set a breakpoint at some point in your code just before (in order of execution!) you think the first error
 might occur. Finally, in order to actually start running the program under control of the debugger,
-you will need to type run at the gdb command line.
+you will need to type *run* at the gdb command line.
 4. Stepping through the program:
-You can step through the code using the commands next (move to the next line of code), step (enter
-the function), and finish (leave the function). The command continue allows you to move to the
+You can step through the code using the commands *next* (move to the next line of code), *step* (enter
+the function), and *finish* (leave the function). The command *continue* allows you to move to the
 next breakpoint.
 5. Examining the content of variables:
-You can use print to see the values of variables and expressions.
-You can use the command display to see the contents of a particular variable or expression when the
+  - You can use *print* to see the values of variables and expressions.  
+  - You can use the command *display* to see the contents of a particular variable or expression when the
 program is stopped.
 6. Program flow:
-The command backtrace can be used to show the contents of the call stack. This is particularly
+The command *backtrace* can be used to show the contents of the call stack. This is particularly
 important if your program crashes. Unfortunately, the crash often occurs inside C++ library code.
 Therefore, when you look at the call stack the first few functions listed may not be your code.
 This does not mean that the C++ library has an error! Instead it likely means that your code has
@@ -181,12 +191,10 @@ in your code that caused the crash. Type info locals and info args to examine th
 function. Type list to see the source code.
 7. Breakpoint on Variable Change: The last powerful debugger feature we will try today is variable
 monitoring.
-Add a new modifier member function to the Point class named set_elevation that changes the y
-coordinate of a Point instance. Create an instance of a Point object in the main function called pt.
-Use the set_elevation function on that instance.
-You can use the command watch to halt the program when a variable or expression changes.
-For example, type watch pt.y. You can try the the rwatch command which allows you to break on a
-read of the value (not just a change).
+Add a new modifier member function to the *Point* class named *set_elevation* that changes the *y* coordinate of a *Point* instance. Create an instance of a *Point* object in the *main* function called *pt*.  
+Use the *set_elevation* function on that instance.  
+You can use the command *watch* to halt the program when a variable or expression changes.  
+For example, type *watch pt.y*. You can try the the *rwatch* command which allows you to break on a read of the value (not just a change).  
 NOTE: Students have recently (in the past term or two) reported difficulty getting watch points to work
 inside their command line debuggers. So don’t worry if you also cannot get this feature to work today.
 

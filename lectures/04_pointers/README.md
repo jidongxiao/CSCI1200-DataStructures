@@ -172,11 +172,11 @@ slot). We could equivalently have used the test p != a+n
 *p = sqrt( p-a )
 ```
 *p-a* is the number of array locations (not number of types, although each slot is 8 bytes) between p and the start. **This is an integer**. The
-square root of this value is assigned to *p.
+square root of this value is assigned to \*p.
 
 - Note that there may or may not be unused memory between your array and the other local variables. Similarly, the order that your local variables appear on the stack is not guaranteed (the compiler may rearrange things a bit in an attempt to optimize performance or memory usage). A buffer overflow (attempting to access an illegal array index) may or may not cause an immediate failure – depending on the layout of other critical program memory.
 
-- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_1/index.html).
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_2/index.html).
 
 ## 4.9 Sorting an Array
 

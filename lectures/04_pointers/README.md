@@ -141,6 +141,7 @@ int i;
 for ( i=0; i<n; ++i )
 a[i] = sqrt( double(i) );
 ```
+<!--both double(i) and (double)i would work, they are the same.-->
 - Remember: the size of array a is fixed at compile time. STL vectors act like arrays, but they can grow and
 shrink dynamically in response to the demands of the application.
 
@@ -172,7 +173,7 @@ the start of the array. In this example, a+n is the memory location 80 bytes aft
 slot). We could equivalently have used the test p != a+n
 - In the assignment:
 ```cpp
-*p = sqrt( p-a )
+*p = sqrt( p-a );
 ```
 *p-a* is the number of array locations (not number of types, although each slot is 8 bytes) between p and the start. **This is an integer**. The
 square root of this value is assigned to \*p.
@@ -192,11 +193,11 @@ double *p;
 p = a;
 int i;
 for ( i=0; i<n; ++i ){
-    *(p+i) = sqrt( (double(i) )
+    *(p+i) = sqrt( double(i) );
 };
 ```
 
-This second approach also "nicely mimics the subscript notation used in the for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by our mentor Eleanor Olson, :smile:.
+This second approach also "nicely mimics the subscript notation used in the (original) for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by our mentor Eleanor Olson, :smile:.
 
 ## 4.9 Sorting an Array
 

@@ -25,7 +25,7 @@ cout << "Smaller\n";
 The output is Bigger
 because x == 72.0. What’s going on?
 
-![alt text](pointer_init.pdf "pointer_init")
+![alt text](pointer_init.png "pointer_init")
 
 ## 4.2 Pointer Variables and Memory Access
 

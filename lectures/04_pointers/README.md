@@ -146,7 +146,39 @@ shrink dynamically in response to the demands of the application.
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_1/index.html).
 
-## 4.8 Sorting an Array
+## 4.8 Stepping through Arrays with Pointers (Array Iterators)
+
+- The array code above that uses [] subscripting, can be equivalently rewritten to use pointers:
+```cpp
+const int n = 10;
+double a[n];
+double *p;
+for ( p=a; p<a+n; ++p )
+*p = sqrt( p-a );
+```
+- The assignment: p = a; takes the address of the start of the array and assigns it to p.
+- This illustrates the important fact that the name of an array is in fact a pointer to the start of a block of
+memory. We will come back to this several times! We could also write this line as: p = &a[0]; which means “find the location of a[0] and take its address”.
+- By incrementing, ++p, we make p point to the next location in the array.
+  – When we increment a pointer we don’t just add one byte to the address, we add the number of bytes (sizeof) used to store one object of the specific type of that pointer. Similarly, basic addition/subtraction of pointer variables is done in multiples of the sizeof the type of the pointer.
+  – Since the type of p is double, and the size of double is 8 bytes, we are actually adding 8 bytes to the
+address when we execute ++p.
+
+- The test p&lt;a+n checks to see if the value of the pointer (the address) is less than n array locations beyond
+the start of the array. In this example, a+n is the memory location 80 bytes after the start of the array (n = 10 slots * 8 bytes per
+slot). We could equivalently have used the test p != a+n
+- In the assignment:
+```cpp
+*p = sqrt( p-a )
+```
+*p-a* is the number of array locations (not number of types, although each slot is 8 bytes) between p and the start. **This is an integer**. The
+square root of this value is assigned to *p.
+
+- Note that there may or may not be unused memory between your array and the other local variables. Similarly, the order that your local variables appear on the stack is not guaranteed (the compiler may rearrange things a bit in an attempt to optimize performance or memory usage). A buffer overflow (attempting to access an illegal array index) may or may not cause an immediate failure – depending on the layout of other critical program memory.
+
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_1/index.html).
+
+## 4.9 Sorting an Array
 
 - Arrays may be sorted using std::sort, just like vectors. Pointers are used in place of iterators. For example, if a is an array of doubles and there are n values in the array, then here’s how to sort the values in the array into increasing order:
 
@@ -154,7 +186,7 @@ shrink dynamically in response to the demands of the application.
 std::sort( a, a+n );
 ```
 
-## 4.9 Exercises
+## 4.10 Exercises
 
 - [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)
 - [Leetcode problem 977: Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/). Solution: [p977_sortedsquare.cpp](../../leetcode/p977_sortedsquare.cpp)

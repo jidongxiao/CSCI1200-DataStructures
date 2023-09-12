@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List vs Vector: erase operation, using iterators</title>
+    <script src="../../konva.js"></script>
+</head>
+<body>
+
+<h1>List vs Vector: erase operation, using iterators</h1>
+<p>This animation shows why erasing an element in a vector is more expensive than in a list. Click the "next step" button to run the animation. <b>Note:</b> in this animation, we assume we are going to erase the element which has the value 5.</p>
+
+<div id="container"></div>
+<script src="iterator.js"></script>
+
+<!-- we must include the javascript first, and then have this button definition which calls a function defined in the javascript -->
+<button onclick="vec_erase_nextstep()" style="position: absolute; top: 500px; left: 100px;">next step</button>
+<button onclick="list_erase_nextstep()" style="position: absolute; top: 500px; left: 900px;">next step</button>
+
+</body>
+</html>

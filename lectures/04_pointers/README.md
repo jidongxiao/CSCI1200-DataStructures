@@ -148,13 +148,16 @@ shrink dynamically in response to the demands of the application.
 
 ## 4.8 Stepping through Arrays with Pointers (Array Iterators)
 
-- The array code above that uses [] subscripting, can be equivalently rewritten to use pointers:
+- The array code above that uses [] subscripting, can be equivalently rewritten to use pointers. We can re-write it in two ways:
+
+### 4.8.1 First Approach
+
 ```cpp
 const int n = 10;
 double a[n];
 double *p;
 for ( p=a; p<a+n; ++p )
-*p = sqrt( p-a );
+    *p = sqrt( p-a );
 ```
 - The assignment: p = a; takes the address of the start of the array and assigns it to p.
 - This illustrates the important fact that the name of an array is in fact a pointer to the start of a block of
@@ -177,6 +180,23 @@ square root of this value is assigned to \*p.
 - Note that there may or may not be unused memory between your array and the other local variables. Similarly, the order that your local variables appear on the stack is not guaranteed (the compiler may rearrange things a bit in an attempt to optimize performance or memory usage). A buffer overflow (attempting to access an illegal array index) may or may not cause an immediate failure – depending on the layout of other critical program memory.
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_2/index.html).
+
+### 4.8.2 Second Approach
+
+The first approach uses pointer arithmetic in several places - just to demonstrate the usage of pointer arithmetic; but many students find it confusing and hard to understand. In contrast, the following approach is easier to understand, and **is the recommended way for you to use in tomorrow's lab**; use approach one only if you truly understand all the pointer arithmetics involved in approach one.
+
+```cpp
+const int n = 10;
+double a[n];
+double *p;
+p = a;
+int i;
+for ( i=0; i<n; ++i ){
+    *(p+i) = sqrt( (double(i) )
+};
+```
+
+This second approach also "nicely mimics the subscript notation used in the for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by our mentor Eleanor Olson, :smile:.
 
 ## 4.9 Sorting an Array
 

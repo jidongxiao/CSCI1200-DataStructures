@@ -25,6 +25,8 @@ cout << "Smaller\n";
 The output is Bigger
 because x == 72.0. What’s going on?
 
+![alt text](pointer_init.pdf "pointer_init")
+
 ## 4.2 Pointer Variables and Memory Access
 
 - x is an ordinary float, but p is a pointer that can hold the memory address of a float variable. The difference

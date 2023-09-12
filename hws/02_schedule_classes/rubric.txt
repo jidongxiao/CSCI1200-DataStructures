@@ -1,3 +1,5 @@
+This is just from one of the previous semesters, made by the instructor who was teaching this course as well as the graders who did the grading work. We do not guarantee the rubric we use this semester will be 100% equivalent to this one, and you should just use this as a reference.
+
 25 pts
  - README.txt Completed (2 pts)
    - Missing student name (-1)

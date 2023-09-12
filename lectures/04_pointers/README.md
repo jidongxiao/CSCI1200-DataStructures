@@ -117,7 +117,7 @@ the previous user of that memory.
   – But NULL is not a valid memory location you are allowed to read or write. If you try to dereference or
 follow a NULL pointer, your program will immediately crash. You may see a segmentation fault, a bus
 error, or something about a null pointer dereference.
-  – NOTE: In C++11, we are encouraged to switch to use nullptr instead of NULL or 0, to avoid some
+  – NOTE: In C++11, we are encouraged to switch to use **nullptr** instead of NULL or 0, to avoid some
 subtle situations where NULL is incorrectly seen as an int type instead of a pointer. For this course we
 will assume NULL and nullptr are equivalent.
   – We indicate a NULL or nullptr value in diagrams with a slash through the memory location box.
@@ -129,7 +129,7 @@ cout << *p << endl.
 ```
 tests to see if p is pointing somewhere that appears to be useful before accessing and printing the value stored
 at that location.
-- But don’t make the mistake of assuming pointers are automatically initialized to NULL
+- But don’t make the mistake of assuming pointers are automatically initialized to NULL.
 
 ## 4.7 Arrays
 

@@ -44,7 +44,7 @@ memory location, and store 72 there. This writes the 72 in x’s location.
 
 Note: *p is an l-value in the above expression.
 
-- play this [animation](https//jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example1/index.html).
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example1/index.html).
 
 ## 4.3 Defining Pointer Variables
 

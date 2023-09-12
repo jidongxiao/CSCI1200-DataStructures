@@ -65,7 +65,7 @@ and may cause your program to crash! (It won’t crash if the uninitialized valu
 ## 4.4 Operations on Pointers
 
 - The unary (single argument/operand) operator * in the expression *p is the “dereferencing operator”. It means
-“follow the pointer” *p can be either an l-value or an r-value, depending on which side of the = it appears on.
+“follow the pointer”. *p can be either an l-value or an r-value, depending on which side of the = it appears on.
 - The unary operator & in the expression &x means “take the memory address of.”
 - Pointers can be assigned. This just copies memory addresses as though they were values (which they are).
 Let’s work through the example below (and draw a picture!). What are the values of x and y at the end?

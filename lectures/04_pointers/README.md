@@ -138,8 +138,9 @@ at that location.
 const int n = 10;
 double a[n];
 int i;
-for ( i=0; i<n; ++i )
-a[i] = sqrt( double(i) );
+for ( i=0; i<n; ++i ){
+    a[i] = sqrt( double(i) );
+}
 ```
 <!--both double(i) and (double)i would work, they are the same.-->
 - Remember: the size of array a is fixed at compile time. STL vectors act like arrays, but they can grow and
@@ -157,8 +158,9 @@ shrink dynamically in response to the demands of the application.
 const int n = 10;
 double a[n];
 double *p;
-for ( p=a; p<a+n; ++p )
+for ( p=a; p<a+n; ++p ){
     *p = sqrt( p-a );
+}
 ```
 - The assignment: *p = a*; takes the address of the start of the array and assigns it to *p*.
 - This illustrates the important fact that the name of an array is in fact a pointer to the start of a block of memory. We will come back to this several times! We could also write this line as: *p = &a[0]*; which means “find the location of a[0] and take its address”.

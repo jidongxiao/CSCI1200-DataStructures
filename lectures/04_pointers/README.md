@@ -60,6 +60,8 @@ and may cause your program to crash! (It won’t crash if the uninitialized valu
 *p = 15;
 ```
 
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example2/index.html).
+
 ## 4.4 Operations on Pointers
 
 - The unary (single argument/operand) operator * in the expression *p is the “dereferencing operator”. It means
@@ -75,6 +77,8 @@ float *p = &x, *q = &y;
 q = p;
 *q = 13.0;
 ```
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example3/index.html).
+
 - Assignments of integers or floats to pointers and assignments mixing pointers of different types are illegal.
 Continuing with the above example:
 ```cpp
@@ -86,7 +90,25 @@ p = 35.1; // Illegal: float assigned to a pointer
 useful! Less than and greater than comparisons are also allowed. These are useful only when the pointers are
 to locations within an array.
 
-## 4.5 Null Pointers
+## 4.5 Exercise
+
+- Draw a picture for the following code sequence. What is the output to the screen?
+
+```cpp
+int x = 10, y = 15;
+int *a = &x;
+cout << x << " " << y << endl;
+int *b = &y;
+*a = x * *b;
+cout << x << " " << y << endl;
+int *c = b;
+*c = 25;
+cout << x << " " << y << endl;
+```
+
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example4/index.html).
+
+## 4.6 Null Pointers
 
 - Like the int type, pointers are not default initialized. We should assume it’s a garbage value, leftover from
 the previous user of that memory.
@@ -109,7 +131,7 @@ tests to see if p is pointing somewhere that appears to be useful before accessi
 at that location.
 - But don’t make the mistake of assuming pointers are automatically initialized to NULL
 
-## 4.6 Arrays
+## 4.7 Arrays
 
 - Here’s a quick example to remind you about how to use an array:
 ```cpp
@@ -122,7 +144,9 @@ a[i] = sqrt( double(i) );
 - Remember: the size of array a is fixed at compile time. STL vectors act like arrays, but they can grow and
 shrink dynamically in response to the demands of the application.
 
-## 4.7 Sorting an Array
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_1/index.html).
+
+## 4.8 Sorting an Array
 
 - Arrays may be sorted using std::sort, just like vectors. Pointers are used in place of iterators. For example, if a is an array of doubles and there are n values in the array, then here’s how to sort the values in the array into increasing order:
 
@@ -130,7 +154,7 @@ shrink dynamically in response to the demands of the application.
 std::sort( a, a+n );
 ```
 
-## 4.8 Exercises
+## 4.9 Exercises
 
 - [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)
 - [Leetcode problem 977: Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/). Solution: [p977_sortedsquare.cpp](../../leetcode/p977_sortedsquare.cpp)

@@ -44,6 +44,8 @@ memory location, and store 72 there. This writes the 72 in x’s location.
 
 Note: *p is an l-value in the above expression.
 
+- play this [animation](../../animations/pointers/example1/index.html)
+
 ## 4.3 Defining Pointer Variables
 
 - In the example below, p, s and t are all pointer variables (pointers, for short), but q is NOT. You need the *

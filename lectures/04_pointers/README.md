@@ -113,14 +113,14 @@ cout << x << " " << y << endl;
 - Like the int type, pointers are not default initialized. We should assume it’s a garbage value, leftover from
 the previous user of that memory.
 - Pointers that don’t (yet) point anywhere useful are often explicitly assigned to NULL.
-  – NULL is equal to the integer 0, which is a legal pointer value (you can store NULL in a pointer variable).
+  – NULL is equal to the integer 0, which is a legal pointer value (you can store NULL in a pointer variable).  
   – But NULL is not a valid memory location you are allowed to read or write. If you try to dereference or
 follow a NULL pointer, your program will immediately crash. You may see a segmentation fault, a bus
-error, or something about a null pointer dereference.
+error, or something about a null pointer dereference.  
   – NOTE: In C++11, we are encouraged to switch to use **nullptr** instead of NULL or 0, to avoid some
 subtle situations where NULL is incorrectly seen as an int type instead of a pointer. For this course we
-will assume NULL and nullptr are equivalent.
-  – We indicate a NULL or nullptr value in diagrams with a slash through the memory location box.
+will assume NULL and nullptr are equivalent.  
+  – We indicate a NULL or nullptr value in diagrams with a slash through the memory location box.  
   - Comparing a pointer to NULL is very useful. It can be used to indicate whether or not a pointer variable is
 pointing at a useable memory location. For example,
 ```cpp

@@ -160,22 +160,20 @@ double *p;
 for ( p=a; p<a+n; ++p )
     *p = sqrt( p-a );
 ```
-- The assignment: p = a; takes the address of the start of the array and assigns it to p.
-- This illustrates the important fact that the name of an array is in fact a pointer to the start of a block of
-memory. We will come back to this several times! We could also write this line as: p = &a[0]; which means “find the location of a[0] and take its address”.
-- By incrementing, ++p, we make p point to the next location in the array.
+- The assignment: *p = a*; takes the address of the start of the array and assigns it to *p*.
+- This illustrates the important fact that the name of an array is in fact a pointer to the start of a block of memory. We will come back to this several times! We could also write this line as: *p = &a[0]*; which means “find the location of a[0] and take its address”.
+- By incrementing, *++p*, we make *p* point to the next location in the array.
   – When we increment a pointer we don’t just add one byte to the address, we add the number of bytes (sizeof) used to store one object of the specific type of that pointer. Similarly, basic addition/subtraction of pointer variables is done in multiples of the sizeof the type of the pointer.
-  – Since the type of p is double, and the size of double is 8 bytes, we are actually adding 8 bytes to the
-address when we execute ++p.
+  – Since the type of *p* is double, and the size of double is 8 bytes, we are actually adding 8 bytes to the address when we execute *++p*.
 
-- The test p&lt;a+n checks to see if the value of the pointer (the address) is less than n array locations beyond
-the start of the array. In this example, a+n is the memory location 80 bytes after the start of the array (n = 10 slots * 8 bytes per
-slot). We could equivalently have used the test p != a+n
+- The test *p&lt;a+n* checks to see if the value of the pointer (the address) is less than n array locations beyond
+the start of the array. In this example, *a+n* is the memory location 80 bytes after the start of the array (n = 10 slots * 8 bytes per
+slot). We could equivalently have used the test *p != a+n*.
 - In the assignment:
 ```cpp
 *p = sqrt( p-a );
 ```
-*p-a* is the number of array locations (not number of types, although each slot is 8 bytes) between p and the start. **This is an integer**. The
+*p-a* is the number of array locations (not number of byte, although each slot is 8 bytes) between *p* and the start. **This is an integer**. The
 square root of this value is assigned to \*p.
 
 - Note that there may or may not be unused memory between your array and the other local variables. Similarly, the order that your local variables appear on the stack is not guaranteed (the compiler may rearrange things a bit in an attempt to optimize performance or memory usage). A buffer overflow (attempting to access an illegal array index) may or may not cause an immediate failure – depending on the layout of other critical program memory.

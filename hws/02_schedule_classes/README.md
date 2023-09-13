@@ -138,4 +138,4 @@ to comment your code! Use the provided template [README.txt](./README.txt) file 
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your
 README.txt file. 
 
-**Due Date**: 09/14/2023, Thursday, 23:59pm.
+**Due Date**: 09/14/2023, Thursday, 23:59pm. - **extended to 09/15/2023, Friday, 23:59pm, due to the network outage on Tuesday.**

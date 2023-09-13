@@ -16,7 +16,6 @@ This is just from one of the previous semesters, made by the instructor who was 
    - Poor file organization: The .h and .cpp files should approximately match the class name (ignoring capitalization, underscores, etc) (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes, maybe) (-1)
    - Poor file organization: Main should probably not be in a class implementation file (-1)
-   - A private variable in class is vector, which makes the program more complicated. (-1)
    - Uses friend functions to access private fields (-1)
    - No constructor (default or otherwise) (0)
  - 3rd STATISTIC DESCRIPTION (3 pts) (The README.txt file contains a clear and concise description of an interesting statistic different from the first two tables of data.)

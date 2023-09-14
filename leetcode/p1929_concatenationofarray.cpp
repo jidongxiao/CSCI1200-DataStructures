@@ -25,7 +25,7 @@ class Solution {
 public:
     vector<int> getConcatenation(vector<int>& nums) {
         // use the copy constructor
-        vector<int> ans(nums);
+        vector<int> ans = nums;
         int size = nums.size();
         // copy the second half
         for(int i=0;i<size;i++){

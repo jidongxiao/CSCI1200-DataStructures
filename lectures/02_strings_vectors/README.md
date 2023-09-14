@@ -77,6 +77,19 @@ Here are several different ways to initialize a vector:
 ```cpp
 std::vector<int> a;
 ```
+
+or, 
+
+```cpp
+std::vector<int> a{};
+```
+
+Here, in C++, a pair of curly braces is used to initialize an empty container. Vector is a type of container, and we will learn other containers later this semester. Interesting trick: if you have a function which has a return type of vector, and in your function body, you want to return an empty vector without specifying a vector name, you can do:
+
+```cpp
+return {};
+```
+
 - This constructs a vector of 100 doubles, each entry storing the value 3.14. New entries can be created using
 push_back, but these will create entries 100, 101, 102, etc.
 ```cpp

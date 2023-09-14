@@ -41,6 +41,5 @@ will sort Date objects into chronological order.
 
 ## 5.4 Exercises
 
+- [Leetcode problem 56: Merge Intervals](https://leetcode.com/problems/merge-intervals/). Solution: [p56_mergeintervals.cpp](../../leetcode/p56_mergeintervals.cpp)
 - [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)
-- [Leetcode problem 977: Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/). Solution: [p977_sortedsquare.cpp](../../leetcode/p977_sortedsquare.cpp)
-- [Leetcode problem 1051: Height Checker](https://leetcode.com/problems/height-checker/). Solution: [p1051_heightchecker.cpp](../../leetcode/p1051_heightchecker.cpp)

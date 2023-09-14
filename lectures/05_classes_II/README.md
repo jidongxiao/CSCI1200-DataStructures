@@ -15,7 +15,7 @@ access to the private member variables of that object is allowed (using the ’.
 ## 5.2 Operator Overloading
 
 - When sorting objects of a custom class, we can provide a third argument to the sort function, and this third argument is a comparison function.
-- What if we do not want to provide this third argument? The answer is: define a function that creates a < operator for Date objects! At first, this seems a bit weird, but it is extremely useful.
+- What if we do not want to provide this third argument? The answer is: define a function that creates a < operator for objects of that class! At first, this seems a bit weird, but it is extremely useful.
 - Let’s start with syntax. The expressions a < b and x + y are really function calls!
 Syntactically, they are equivalent to operator< (a, b) and operator+ (x, y) respectively.
 - When we want to write our own operators, we write them as functions with these weird names.

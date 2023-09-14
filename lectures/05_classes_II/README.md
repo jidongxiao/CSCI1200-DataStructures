@@ -39,7 +39,7 @@ will sort Date objects into chronological order.
 
 ## 5.3 Questions
 
-- Can you solve leetcode problem 905 with an overloaded operator &lt;?
+- Can you solve leetcode problem 905 with an overloaded operator &lt;, and make this overloaded operator &lt; a non-member function?
 - Can you solve leetcode problem 905 with an overloaded operator &lt;, and make this overloaded operator &lt; a member function?
 - Can you solve leetcode problem 905 with an overloaded operator &lt;, and make this overloaded operator &lt; a member function, plus make the definition of this member function outside of the class definition?
 

@@ -37,7 +37,11 @@ will sort Date objects into chronological order.
 - Really, the only weird thing about operators is their syntax.
 - We will have many opportunities to write operators throughout this course. Sometimes these will be made class member functions, but more on this in a later lecture.
 
-## 5.3 Non-member Operators
+## 5.3 Questions
+
+- Can you solve leetcode problem 905 with a overloaded operator &lt;?
+- Can you solve leetcode problem 905 with a overloaded operator &lt;, and make this overloaded operator &lt; a member function?
+- Can you solve leetcode problem 905 with a overloaded operator &lt;, and make this overloaded operator &lt; a member function, plus make the definition of this member function outside of the class definition?
 
 ## 5.4 Exercises
 

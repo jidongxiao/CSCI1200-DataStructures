@@ -1,3 +1,36 @@
+# Test 1 Information
+- Test 1 will be held **Thursday, 09/21/2023 from 6-7:50pm**
+  – Students will be randomly assigned to a test room and seating zone – will be on Submitty Wednesday
+morning.
+  – If you haven’t filled out the “Left or Right Handed” gradeable by Tuesday night, we will assume you are
+right handed. This is used for seating assignments.
+  – No make-ups will be given except for pre-approved absence or illness, and a written excuse from the Dean
+of Students or the Student Experience office or the RPI Health Center will be required.
+  – If you have a letter from Disability Services for Students and you have not already emailed it to
+ds_instructors@cs.rpi.edu, please do so ASAP. Shianne Hulbert will be in contact with you about
+your accommodations for the test.
+- Coverage: Lectures 1-6, Labs 1-3, and Homeworks 1-2.
+  – Practice problems from previous exams are available on the course website (Friday morning). Solutions
+to the problems will be posted Monday morning. The best way to prepare is to completely work through
+and write out your solution to each problem, before looking at the answers.
+- OPTIONAL: Prepare a 2 page, black & white, 8.5x11”, portrait orientation .pdf of notes you would like to
+have during the exam. This may be digitally prepared or handwritten and scanned or photographed. The file
+may be no bigger than 2MB. You will upload this file to Submitty (“Test 1 Notes Upload”) before Wednesday
+night @11:59pm. We will print this and attach it to your exam. Make sure you get credit for test case 2 and
+that you view the details to verify your sheet looks correct. You cannot bring your own cribsheet, you must
+submit one electronically.
+IMPORTANT: Using third party websites to make a PDF may generate an invalid PDFs that prints weird. Your
+word processor’s -> save as/export to PDF, or Google Docs -> Download -> PDF should be safe.
+- Bring to the exam room:
+  – Your Rensselaer photo ID card.
+  – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper
+(and other short answer problem solving). Neat legible handwriting is appreciated. We will be somewhat
+forgiving to minor syntax errors – it will be graded by humans not computers :)
+  – Do not bring your own scratch paper. We will provide scratch paper.
+  – Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not
+bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless
+you are coming directly from another class or sports/club meeting.
+
 # Lecture 5 ---  Classes II: Sort, Non-member Operators
 
 - Classes in C++;

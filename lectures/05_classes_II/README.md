@@ -24,9 +24,7 @@ IMPORTANT: Using third party websites to make a PDF may generate an invalid PDFs
 word processor’s -> save as/export to PDF, or Google Docs -> Download -> PDF should be safe.-->
 - Bring to the exam room:  
   – Your Rensselaer photo ID card.  
-  – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper
-(and other short answer problem solving). Neat legible handwriting is appreciated. We will be somewhat
-forgiving to minor syntax errors – it will be graded by humans not computers.
+  – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated. We will be somewhat forgiving to minor syntax errors – it will be graded by humans not computers.  
   – Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.
 <!--  – Do not bring your own scratch paper. We will provide scratch paper. -->
 

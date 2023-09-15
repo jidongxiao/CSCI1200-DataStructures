@@ -1,9 +1,9 @@
 # Test 1 Information
-- Test 1 will be held **Thursday, 09/21/2023 from 6-7:50pm**
 <!--  – Students will be randomly assigned to a test room and seating zone – will be on Submitty Wednesday
 morning.
   – If you haven’t filled out the “Left or Right Handed” gradeable by Tuesday night, we will assume you are
 right handed. This is used for seating assignments.-->
+- Test 1 will be held **Thursday, 09/21/2023 from 6-7:50pm**.  
   – No make-ups will be given except for pre-approved absence or illness, and a written excuse from the Dean
 of Students or the Student Experience office or the RPI Health Center will be required.  
   – If you have a letter from Disability Services for Students and you have not already emailed it to
@@ -22,7 +22,7 @@ that you view the details to verify your sheet looks correct. You cannot bring y
 submit one electronically.
 IMPORTANT: Using third party websites to make a PDF may generate an invalid PDFs that prints weird. Your
 word processor’s -> save as/export to PDF, or Google Docs -> Download -> PDF should be safe.-->
-- Bring to the exam room:
+- Bring to the exam room:  
   – Your Rensselaer photo ID card.  
   – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper
 (and other short answer problem solving). Neat legible handwriting is appreciated. We will be somewhat

@@ -5,7 +5,7 @@
 
 - Form a group of 2 members. If the number of students in the room is not divisible by 2, the graduate TA will approve a single team with 3 members.
 
-- Introduce yourself to your teammate. Ask them to share something about themselves (e.g. hobbies, sports, favorite music, etc.) Learn something new about each of your teammates (even if you already know them).
+- Introduce yourself to your teammate. Share to your teammate something about yourself (e.g. hobbies, sports, favorite music, etc). Learn something new about your teammate (even if you already know the teammate).
 
 - Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the statements below. Use a ‘?’ to represent uninitialized values.
 
@@ -41,13 +41,18 @@ fault”, or it works on your machine but not on Submitty, try running a memory 
 
 Please download the following 4 files needed for this lab:
 
+[buggy_lab4.cpp](./buggy_lab4.cpp)
+[first.txt](./first.txt)
+[middle.txt](./middle.txt)
+[last.txt](./last.txt)
+
 ## Checkpoint 2
 *estimate: 20-40 minutes*
 
 For Checkpoint 2 of this lab, we will revisit the final checkpoint of the first lab of this course; only this time,
 we will heavily rely on dynamic memory to find the average and smallest number for a set of data from an
 input file. You will use a memory debugging tool such as DrMemory or Valgrind to fix memory errors and
-leaks in buggy lab4.cpp. Make sure to download the provided .txt files as well.
+leaks in buggy_lab4.cpp. Make sure to download the provided .txt files as well.
 First take a look at the code inside the identifyMeanAndMin() function. You will notice that the syntax used
 throughout the program may be a little different than what youre used to. Try and familiarize yourself with
 this syntax before you start working on the assignment. What does the code *(intArray + *numElements)

@@ -96,6 +96,7 @@ mentor or TA both results. Also explain to a mentor TA what you added or modifie
 resolve all memory errors.
 
 ## Checkpoint 3
+*estimate: 15-25 minutes*
 
 As you work through Checkpoint 2, try and pay close attention the analysis given by DrMemory or Valgrind
 and think about the following:

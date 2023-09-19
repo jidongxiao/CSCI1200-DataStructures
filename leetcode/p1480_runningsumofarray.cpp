@@ -1,3 +1,6 @@
+// this is a very bad solution, in this problem we do not need to use dynamic memory, because std::vector automatically uses dynamic memory internally.
+// the solution below therefore is just a demonstration of how to use the new and delete operator.
+
 class Solution {
 public:
     vector<int> runningSum(vector<int>& nums) {

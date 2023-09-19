@@ -94,8 +94,8 @@ int main() {
     int n,i;
     std::cin >> n;
     double *a = new double[n];
-    for (i=0; i<n; ++i) { a[i] = sqrt(i); }
-    for (i=0; i<n; ++i) {
+    for (i=0; i &lt; n; ++i) { a[i] = sqrt(i); }
+    for (i=0; i &lt; n; ++i) {
         if ( double(int(a[i])) == a[i] )
             std::cout << i << " is a perfect square " << std::endl;
     }

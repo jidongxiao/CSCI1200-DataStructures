@@ -29,7 +29,7 @@ Dynamic memory is:
 <table>
  <tr>
   <td>
-```cpp
+<pre>
 int * p = new int;
 *p = 17;
 cout << *p << endl;
@@ -44,7 +44,7 @@ p = temp;
 cout << *p << " " << *q << endl;
 delete p;
 delete q;
-```
+</pre>
 </td>
 <td><img src="heap.png" alt="heap"</td>
 </tr>

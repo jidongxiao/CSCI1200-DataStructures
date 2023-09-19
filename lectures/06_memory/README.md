@@ -130,6 +130,24 @@ run out of memory and crash.
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example2/index.html) to see what exactly the above code snippet does.
 
-## 6.4 Exercises
+## 6.4 Dynamic Allocation of Two-Dimensional Arrays
+
+To store a grid of data, we will need to allocate a top level array of pointers to arrays of the data. For example:
+
+```cpp
+double** a = new double*[rows];
+for (int i = 0; i < rows; i++) {
+    a[i] = new double[cols];
+    for (int j = 0; j < cols; j++) {
+        a[i][j] = double(i+1) / double (j+1);
+    }
+}
+```
+- Draw a picture of the resulting data structure.
+- Then, write code to correctly delete all of this memory.
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/two_d_array/index.html) to see what exactly the above code snippet does.
+
+## 6.5 Exercises
 
 - [Leetcode problem 1480: Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/). Solution: [p1480_runningsumofarray.cpp](../../leetcode/p1480_runningsumofarray.cpp)

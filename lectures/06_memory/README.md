@@ -404,7 +404,7 @@ c->y[1] = 7;
 b = NULL;
 ```
 
-See [solution](memory_exercise1_solution.png)
+See [solution](memory_exercise1_solution.png).
 
 ```cpp
 int a[5] = { 10, 11, 12, 13, 14 };
@@ -416,8 +416,10 @@ c[1] = b[1];
 c = &(a[3]);
 ```
 
-See [solution](memory_exercise2_solution.png)
+See [solution](memory_exercise2_solution.png).
 
 - Write code to produce this diagram:
 
 ![alt text](memory_exercise.png "memory exercise")
+
+See [solution](memory_exercise3_solution.cpp).

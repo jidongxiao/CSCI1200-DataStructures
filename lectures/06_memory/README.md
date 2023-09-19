@@ -78,7 +78,7 @@ similar to the examples covered in the pointers lecture except that there is no 
 other than the pointer variable.
 - Dynamic allocation of primitives like ints and doubles is not very interesting or significant. What’s more important is dynamic allocation of arrays and class objects.
 
-- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html) to see what exactly the above code snippet does.
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html) to see what exactly the above code snippet does.
 
 ## 6.3 Dynamic Allocation of Arrays
 - How do we allocate an array on the stack? What is the code? What memory diagram is produced by the code?
@@ -128,11 +128,8 @@ memory in this course, even if the program is terminating.
 the program can be said to have a memory leak. Long-running programs with memory leaks will eventually
 run out of memory and crash.
 
-- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example2/index.html) to see what exactly the above code snippet does.
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example2/index.html) to see what exactly the above code snippet does.
 
-## 6.3 Exercises
+## 6.4 Exercises
 
-- [Leetcode problem 56: Merge Intervals](https://leetcode.com/problems/merge-intervals/). Solution: [p56_mergeintervals.cpp](../../leetcode/p56_mergeintervals.cpp)
-- [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)
-- [Leetcode problem 1929: Concatenation of Array
-](https://leetcode.com/problems/concatenation-of-array/). Solution: [p1929_concatenationofarray.cpp](../../leetcode/p1929_concatenationofarray.cpp)
+- [Leetcode problem 1480: Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/). Solution: [p1480_runningsumofarray.cpp](../../leetcode/p1480_runningsumofarray.cpp)

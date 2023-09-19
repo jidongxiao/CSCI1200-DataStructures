@@ -78,6 +78,8 @@ similar to the examples covered in the pointers lecture except that there is no 
 other than the pointer variable.
 - Dynamic allocation of primitives like ints and doubles is not very interesting or significant. What’s more important is dynamic allocation of arrays and class objects.
 
+- play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html).
+
 ## 6.3 Exercises
 
 - [Leetcode problem 56: Merge Intervals](https://leetcode.com/problems/merge-intervals/). Solution: [p56_mergeintervals.cpp](../../leetcode/p56_mergeintervals.cpp)

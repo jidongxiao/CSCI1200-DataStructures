@@ -416,7 +416,7 @@ c[1] = b[1];
 c = &(a[3]);
 ```
 
-See [solution](memory_exercise2_solution.png). Note that there is a memory leak of 3 *int*s in this program.
+See [solution](memory_exercise2_solution.png). Note that there is a memory leak of 3 *int*s in this program. Do you see why?
 
 - Write code to produce this diagram:
 

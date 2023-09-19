@@ -52,7 +52,7 @@ delete q;
 </tr>
 </table>
 
-<!--[alt text](heap.png "heap")-->
+<!--![alt text](heap.png "heap")-->
 
 - The expression *new int* asks the system for a new chunk of memory that is large enough to hold an integer
 and returns the address of that memory. Therefore, the statement
@@ -416,4 +416,4 @@ c = &(a[3]);
 
 Write code to produce this diagram:
 
-[alt text](memory_exercise.png "memory exercise")
+![alt text](memory_exercise.png "memory exercise")

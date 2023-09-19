@@ -21,11 +21,14 @@ static int counter;
 ## 6.2 Dynamic Memory
 
 Dynamic memory is:
-- created using the new operator,
+- created using the **new** operator,
 - accessed through pointers, and
-- removed through the delete operator.
+- removed through the **delete** operator.
  Here’s a simple example involving dynamic allocation of integers:
 
+<table>
+ <tr>
+  <td>
 ```cpp
 int * p = new int;
 *p = 17;
@@ -42,6 +45,11 @@ cout << *p << " " << *q << endl;
 delete p;
 delete q;
 ```
+</td>
+<td><img src="heap.png" alt="heap"</td>
+</tr>
+</table>
+<!--[alt text](heap.png "heap")-->
 
 - The expression new int asks the system for a new chunk of memory that is large enough to hold an integer
 and returns the address of that memory. Therefore, the statement int * p = new int; allocates memory

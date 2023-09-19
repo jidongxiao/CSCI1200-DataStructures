@@ -414,6 +414,6 @@ c[1] = b[1];
 c = &(a[3]);
 ```
 
-Write code to produce this diagram:
+- Write code to produce this diagram:
 
 ![alt text](memory_exercise.png "memory exercise")

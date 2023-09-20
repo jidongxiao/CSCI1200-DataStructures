@@ -24,7 +24,7 @@ operations, and then multiply this count by the average cost of an operation.
 ```cpp
 double sum = 0;
 for (int i=0; i<n; ++i)
-sum += arr[i];
+    sum += arr[i];
 ```
 - What is the total number of operations performed in executing this fragment? Come up with a function describing the number of operations in terms of n.
 

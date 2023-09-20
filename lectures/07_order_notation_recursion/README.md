@@ -70,7 +70,7 @@ quadratic root.
 - O(log n), a.k.a. LOGARITHMIC. e.g., dictionary lookup, binary search.
 - O(n), a.k.a. LINEAR. e.g., sum up a list.
 - O(n log n), e.g., sorting.
-- O(n2), O(n3), O(nk), a.k.a. POLYNOMIAL. e.g., find closest pair of points.
+- O(n<sup>2</sup>), O(n<sup>3</sup>), O(n<sup>k</sup>), a.k.a. POLYNOMIAL. e.g., find closest pair of points.
 - O(2n), O(kn), a.k.a. EXPONENTIAL. e.g., Fibonacci, playing chess.
 
 ## 7.6 Exercise: A Slightly Harder Example

@@ -47,7 +47,7 @@ Which company has the “best” algorithm?
 
 In this course we will focus on the intuition of order notation. This topic will be covered again, in more depth, in
 later computer science courses.
-- Definition: Algorithm A is order f(n) — denoted O(f(n)) — if constants k and n<sup>0</sup> exist such that A requires no more than k * f(n) time units (operations) to solve a problem of size n ≥ n<sup>0</sup>.
+- Definition: Algorithm A is order f(n) — denoted O(f(n)) — if constants k and n<sub>0</sub> exist such that A requires no more than k * f(n) time units (operations) to solve a problem of size n ≥ n<sub>0</sub>.
 - For example, algorithms requiring 3n + 2, 5n − 3, and 14 + 17n operations are all O(n).
 This is because we can select values for k and n0 such that the definition above holds. (What values?)
 Likewise, algorithms requiring n<sup>2</sup>/10 + 15n − 3 and 10000 + 35n<sup>2</sup> are all O(n<sup>2</sup>).

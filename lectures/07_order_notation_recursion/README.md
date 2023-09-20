@@ -141,18 +141,18 @@ for (int j=i; j<n; ++j)
 
 ## 7.10 Recursive Definitions of Factorials and Integer Exponentiation
 
-Factorial is defined for non-negative integers as:
-n! = (
-n · (n − 1)! n > 0
-1 n == 0
- Computing integer powers is defined as:
+- Factorial is defined for non-negative integers as:
+![alt text](factorial_equation.png "factorial equation")
+
+- Computing integer powers is defined as:
 n
 p =
 (
 n · n
 p−1 p > 0
 1 p == 0
- These are both examples of recursive definitions
+
+These are both examples of recursive definitions
 
 ## 7.11 Recursive C++ Functions
 

@@ -74,8 +74,6 @@ quadratic root.
 - O(n2), O(n3), O(nk), a.k.a. POLYNOMIAL. e.g., find closest pair of points.
 - O(2n), O(kn), a.k.a. EXPONENTIAL. e.g., Fibonacci, playing chess.
 
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/two_d_array/index.html) to see what exactly the above code snippet does.
-
 ## 7.6 Exercise: A Slightly Harder Example
 
  Here’s an algorithm to determine if the value stored in variable x is also in an array called foo. Can you analyze
@@ -86,8 +84,8 @@ in the array (if at all)?
 int loc=0;
 bool found = false;
 while (!found && loc < n) {
-if (x == foo[loc]) found = true;
-else loc++;
+    if (x == foo[loc]) found = true;
+    else loc++;
 }
 if (found) cout << "It is there!\n";
 ```

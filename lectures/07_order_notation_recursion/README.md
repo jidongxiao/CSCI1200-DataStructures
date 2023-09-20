@@ -145,9 +145,11 @@ for (int j=i; j<n; ++j)
 ![alt text](factorial_equation.png "factorial equation")
 
 - Computing integer powers is defined as:
+<div style="margin-top: 10px;">
 ![alt text](power_equation.png "power equation")
+</div>
 
-These are both examples of recursive definitions
+These are both examples of recursive definitions.
 
 ## 7.11 Recursive C++ Functions
 

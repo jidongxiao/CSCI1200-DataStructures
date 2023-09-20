@@ -33,14 +33,13 @@ sum += arr[i];
 A venture capitalist is trying to decide which of 3 startup companies to invest in and has asked for your help. Here’s
 the timing data for their prototype software on some different size test cases:
 
-```console
-n foo-a foo-b foo-c
-10 10 u-sec 5 u-sec 1 u-sec
-20 13 u-sec 10 u-sec 8 u-sec
-30 15 u-sec 15 u-sec 27 u-sec
-100 20 u-sec 50 u-sec 1000 u-sec
-1000 ? ? ?
-```
+|   n   |  foo-a   |  foo-b   |  foo-c   |
+|-------|----------|----------|----------|
+|  10   |  10 u-sec|  5 u-sec |  1 u-sec |
+|  20   |  13 u-sec| 10 u-sec |  8 u-sec |
+|  30   |  15 u-sec| 15 u-sec | 27 u-sec |
+| 100   |  20 u-sec| 50 u-sec | 1000 u-sec|
+| 1000  |     ?    |    ?     |    ?     |
 
 Which company has the “best” algorithm?
 

@@ -145,12 +145,7 @@ for (int j=i; j<n; ++j)
 ![alt text](factorial_equation.png "factorial equation")
 
 - Computing integer powers is defined as:
-n
-p =
-(
-n · n
-p−1 p > 0
-1 p == 0
+![alt text](power_equation.png "power equation")
 
 These are both examples of recursive definitions
 

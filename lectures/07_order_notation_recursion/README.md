@@ -47,14 +47,10 @@ Which company has the “best” algorithm?
 
 In this course we will focus on the intuition of order notation. This topic will be covered again, in more depth, in
 later computer science courses.
-- Definition: Algorithm A is order f(n) — denoted O(f(n)) — if constants k and n0 exist such that A requires
-no more than k ∗ f(n) time units (operations) to solve a problem of size n ≥ n0.
+- Definition: Algorithm A is order f(n) — denoted O(f(n)) — if constants k and n<sup>0</sup> exist such that A requires no more than k * f(n) time units (operations) to solve a problem of size n ≥ n<sup>0</sup>.
 - For example, algorithms requiring 3n + 2, 5n − 3, and 14 + 17n operations are all O(n).
 This is because we can select values for k and n0 such that the definition above holds. (What values?)
-Likewise, algorithms requiring n 2/10 + 15n − 3 and 10000 + 35n
-2 are all O(n
-2
-).
+Likewise, algorithms requiring n<sup>2</sup>/10 + 15n − 3 and 10000 + 35n<sup>2</sup> are all O(n<sup>2</sup>).
 - Intuitively, we determine the order by finding the asymptotically dominant term (function of n) and throwing
 out the leading constant. This term could involve logarithmic or exponential functions of n. Implications for
 analysis:
@@ -71,7 +67,7 @@ quadratic root.
 - O(n), a.k.a. LINEAR. e.g., sum up a list.
 - O(n log n), e.g., sorting.
 - O(n<sup>2</sup>), O(n<sup>3</sup>), O(n<sup>k</sup>), a.k.a. POLYNOMIAL. e.g., find closest pair of points.
-- O(2n), O(kn), a.k.a. EXPONENTIAL. e.g., Fibonacci, playing chess.
+- O(2<sup>n</sup>), O(k<sup>n</sup>), a.k.a. EXPONENTIAL. e.g., Fibonacci, playing chess.
 
 ## 7.6 Exercise: A Slightly Harder Example
 

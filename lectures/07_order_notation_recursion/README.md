@@ -145,9 +145,7 @@ for (int j=i; j<n; ++j)
 ![alt text](factorial_equation.png "factorial equation")
 
 - Computing integer powers is defined as:
-<div style="margin-top: 10px;">
 ![alt text](power_equation.png "power equation")
-</div>
 
 These are both examples of recursive definitions.
 
@@ -188,6 +186,7 @@ confusing since there are multiple activation records waiting for an answer from
 - This is illustrated in the following diagram of the call fact(4). Each box is an activation record, the solid lines
 indicate the function calls, and the dashed lines indicate the returns. Inside of each box we list the parameters
 and local variables and make notes about the computation.
+![alt_text](activation_records.png "chain of activation records")
 - This chain of activation records is stored in a special part of program memory called the stack
 
 ## 7.13 Iteration vs. Recursion
@@ -197,10 +196,10 @@ version of factorial:
 
 ```cpp
 int ifact(int n) {
-int result = 1;
-for (int i=1; i<=n; ++i)
-result = result * i;
-return result;
+    int result = 1;
+    for (int i=1; i<=n; ++i)
+        result = result * i;
+    return result;
 }
 ```
 
@@ -242,25 +241,25 @@ recursive function. It is common to have a driver function that just initializes
 
 ```cpp
 void print_vec(std::vector<int>& v, unsigned int i) {
-if (i < v.size()) {
-cout << i << ": " << v[i] << endl;
-print_vec(v, i+1);
-}
+    if (i < v.size()) {
+        cout << i << ": " << v[i] << endl;
+        print_vec(v, i+1);
+    }
 }
 ```
 
 ```cpp
 void print_vec(std::vector<int>& v) {
-print_vec(v, 0);
+    print_vec(v, 0);
 }
 ```
 
  What will this print when called in the following code?
 ```cpp
 int main() {
-std::vector<int> a;
-a.push_back(3); a.push_back(5); a.push_back(11); a.push_back(17);
-print_vec(a);
+    std::vector<int> a;
+    a.push_back(3); a.push_back(5); a.push_back(11); a.push_back(17);
+    print_vec(a);
 }
 ```
  How can you change the second print vec function as little as possible so that this code prints the contents

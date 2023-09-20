@@ -7,13 +7,13 @@
 
 - Introduce yourself to your teammate. Share to your teammate something about yourself (e.g. hobbies, sports, favorite music, etc). Learn something new about your teammate (even if you already know the teammate).
 
-- Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the statements below. Use a ‘?’ to represent uninitialized values.
+- Our TA/mentor will pick a code snippet for each student, from the following 5 code snippets. Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the code snippet. Use a ‘?’ to represent uninitialized values.
 
-[Program 1](fruits.cpp)  
-[Program 2](grains.cpp)  
-[Program 3](desserts.cpp)  
-[Program 4](veggies.cpp)  
-[Program 5](protein.cpp)  
+[Code Snippet 1](fruits.cpp)  
+[Code Snippet 2](grains.cpp)  
+[Code Snippet 3](desserts.cpp)  
+[Code Snippet 4](veggies.cpp)  
+[Code Snippet 5](protein.cpp)  
 
 Show your diagram to your teammate, and ask the teammate to reverse engineer code for your diagram; at the same time, you reverse engineer code for your teammate's diagram.
 

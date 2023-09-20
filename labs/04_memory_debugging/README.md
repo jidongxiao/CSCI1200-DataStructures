@@ -9,18 +9,11 @@
 
 - Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the statements below. Use a ‘?’ to represent uninitialized values.
 
-```cpp
-char*** carrot;
-char** broccoli;
-char* tomato;
-char radish = 'q';
-tomato = new char;
-*tomato = 'z';
-broccoli = new char*;
-*broccoli = tomato;
-carrot = new char**;
-*carrot = broccoli;
-```
+[Program 1](fruits.cpp)  
+[Program 2](grains.cpp)  
+[Program 3](desserts.cpp)  
+[Program 4](veggies.cpp)  
+[Program 5](protein.cpp)  
 
 Show your diagram to your teammate, and ask the teammate to reverse engineer code for your diagram; at the same time, you reverse engineer code for your teammate's diagram.
 

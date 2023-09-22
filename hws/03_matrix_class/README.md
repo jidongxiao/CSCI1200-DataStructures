@@ -1,12 +1,21 @@
 # Homework 3 — Dynamic Matrices
 
-In this assignment you will build a custom class named Matrix, which will mimic traditional matrices (the plural of matrix). You will not be expected to have intimate knowledge of matrices, but if you are curious you can read more about them online: https://en.wikipedia.org/wiki/Matrix_(mathematics) Matrices are used in many different applications, and over the years many optimizations, tricks, and numerical methods have been developed to quickly handle matrix operations and solve more complicated problems. Building this data structure will give you practice with pointers, dynamic array allocation and deallocation, 2D pointers, and class design. The implementation of this data structure will involve writing one new class. You are not allowed to use any of the STL container classes in your implementation or use any additional classes or structs besides Matrix. You will need to make use of the new and delete keywords. You can use array indexing ([]). Please read the entire handout (there are 6 pages) before beginning your implementation.
+In this assignment you will build a custom class named Matrix, which will mimic traditional matrices (the plural of matrix). You will not be expected to have intimate knowledge of matrices, but if you are curious you can read more about them online: https://en.wikipedia.org/wiki/Matrix_(mathematics).
+
+Matrices are used in many different applications, and over the years many optimizations, tricks, and numerical methods have been developed to quickly handle matrix operations and solve more complicated problems.
+
+Building this data structure will give you practice with pointers, dynamic array allocation and deallocation, 2D pointers, and class design. The implementation of this data structure will involve writing one new class. You are not allowed to use any of the STL container classes in your implementation or use any additional classes or structs besides Matrix. You will need to make use of the new and delete keywords. You can use array indexing ([]). Please read the entire handout (there are 6 pages) before beginning your implementation.
 
 ## The Data Structure
 
 A matrix is a two-dimensional arrangement of numbers. In this assignment we will assume every matrix
 contains doubles. We refer to the size of a matrix with m rows and n columns as an m×n matrix. For
 example, shown below is a 4×3 matrix:
+
+|  -6  10   1  |
+|   3  -8  22  |
+| -17   4   7  |
+|   2   5   0  |
 
 We will represent the data inside our Matrix class by using a two-dimensional array. Because a matrix may
 be any size, you will need to use dynamic memory for this task. The same matrix shown above can be

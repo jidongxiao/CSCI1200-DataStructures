@@ -55,13 +55,6 @@ What tools did you use (gdb/lldb/Visual Studio debugger,
 Valgrind/Dr. Memory, std::cout & print, etc.)?  How did you test the
 "corner cases" of your Matrix class design & implementation?
 
-
-EXTRA CREDIT: 
-Indicate here if you implemented resize() for extra credit.  
-Also document the order notation for your resize() function.
-
-
-
 MISC. COMMENTS TO GRADER:  
 (optional, please be concise!)
 

@@ -163,6 +163,8 @@ takes no arguments and returns a Matrix* containing four new Matrix elements in 
 local variables go out of scope and are destroyed, so you will need to be particularly careful about how you
 construct and return the quadrants. On the next page are two examples of the quarter operation:
 
+![alt text](images/matrix_quarter.png "matrix quarter operation")
+
 ## Testing and Debugging
 
 We provide a matrix main.cpp file with a wide variety of tests of the Matrix class. Some of these tests

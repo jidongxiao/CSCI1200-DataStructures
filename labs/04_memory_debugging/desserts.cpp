@@ -1,0 +1,10 @@
+bool** cake;
+bool pie;
+bool fudge;
+pie = true;
+cake = new bool*[5];
+cake[1] = &pie;
+bool* donut = new bool;
+*donut = false;
+cake[2] = donut;
+cake[4] = &fudge;

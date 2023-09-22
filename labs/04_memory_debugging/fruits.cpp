@@ -1,0 +1,10 @@
+int pear = 3;
+int* apple;
+int banana[pear];
+int* orange;
+apple = new int[pear];
+orange = &banana[1];
+apple[0] = 6;
+apple[1] = 7;
+apple[2] = 8;
+*orange = 5;

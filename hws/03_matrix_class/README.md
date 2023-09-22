@@ -141,8 +141,9 @@ methods (not operators) that are inside the class definition, so the current Mat
 just one argument, a second Matrix which we will refer to as B, and modify A if the dimensions of A and B
 match. If the dimensions match, the functions should return true, otherwise they should return false.
 Addition of two matrices, C = A + B, and subtraction of two matrices, D = A − B are formally defined as:
-(∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) Ci,j = ai,j + bi,j
-(∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) Di,j = ai,j − bi,j
+
+![alt text](images/matrix_addition_formula.png "matrix addition formula")
+
 Consider these two matrices:
 
 ![alt text](images/matrix_addition.png "matrix addition")

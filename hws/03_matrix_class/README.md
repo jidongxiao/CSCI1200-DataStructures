@@ -199,7 +199,7 @@ the Matrix class we should not be writing template class<T> anywhere. -->
 
 As you implement your classes, be careful with return types, the const keyword, and passing by reference.
 If you have correctly implemented the Matrix class, then running the provided [matrix_main.cpp](matrix_main.cpp) file with
-your class, should produce the output provided in sample output.txt. We are not going to be particularly
+your class, should produce the output provided in [sample_output.txt](sample_output.txt). We are not going to be particularly
 picky about differences in whitespace, but you should be making an effort to try and match both spacing
 and newlines between our output and your output.
 

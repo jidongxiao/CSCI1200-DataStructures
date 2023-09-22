@@ -167,46 +167,46 @@ construct and return the quadrants. On the next page are two examples of the qua
 
 ## Testing and Debugging
 
-We provide a matrix main.cpp file with a wide variety of tests of the Matrix class. Some of these tests
+We provide a [matrix_main.cpp](matrix_main.cpp) file with a wide variety of tests of the Matrix class. Some of these tests
 are initially commented out. We recommend that you get your class working on the basic tests, and then
 uncomment the additional tests as you implement and debug the remaining functionality. Study the provided
 test cases to understand the arguments and return values.
-Note: Do not edit the provided matrix main.cpp file, except to uncomment the provided test cases as you
-work through your implementation and to add your own test cases where specified.
+
+Note: Do not edit the provided [matrix_main.cpp](matrix_main.cpp) file, except to uncomment the provided test cases as you work through your implementation and to add your own test cases where specified.
+
 The assert() function is used throughout the test code. This is a function available in both C and C++
 that will do nothing if the condition is true, and will cause an immediate crash if the condition is false. If
 the condition is false, your command line should show the assertion that failed immediate prior to the crash.
+
 We recommend using a memory debugging tool to find memory errors and memory leaks. Information on
 installation and use of the memory debuggers “Dr. Memory” (available for Linux/MacOSX/Windows) and
 “Valgrind” (available for Linux/OSX) is presented on the course webpage:
-http://www.cs.rpi.edu/academics/courses/spring23/csci1200/memory_debugging.php
+http://www.cs.rpi.edu/academics/courses/fall23/csci1200/memory_debugging.php
+
 The homework submission server will also run your code with Dr. Memory to search for memory problems.
 Your program must be memory error free and memory leak free to receive full credit.
 
 ## Your Task & Provided Code
 
 You must implement the Matrix class as described in this handout. Your class should be split between a .cpp
-and a .h file. You should also include some extra tests in the StudentTest() function in matrix main.cpp.
+and a .h file. You should also include some extra tests in the StudentTest() function in [matrix_main.cpp](matrix_main.cpp).
 When implementing the class, pay particular attention to correctly implementing the copy constructor,
-assignment operator, and destructor. The Vec<T> class we looked at in lecture is templated, while the
+assignment operator, and destructor. 
+
+<!--The Vec<T> class we looked at in lecture is templated, while the
 Matrix class is not. You may still find the lecture notes to be a useful starting point, but remember that in
-the Matrix class we should not be writing template class<T> anywhere. As you implement your classes,
-be careful with return types, the const keyword, and passing by reference.
-If you have correctly implemented the Matrix class, then running the provided matrix main.cpp file with
+the Matrix class we should not be writing template class<T> anywhere. -->
+
+As you implement your classes, be careful with return types, the const keyword, and passing by reference.
+If you have correctly implemented the Matrix class, then running the provided [matrix_main.cpp](matrix_main.cpp) file with
 your class, should produce the output provided in sample output.txt. We are not going to be particularly
 picky about differences in whitespace, but you should be making an effort to try and match both spacing
 and newlines between our output and your output.
 
 ## Submission
 
-You will need to submit your matrix main.cpp, Matrix.cpp, Matrix.h, and README.txt file. Be aware
-that Submitty will be using an instructor copy of matrix main.cpp for most of the tests, so you must make
-sure your Matrix implementation can compile given the provided file. Also make sure to name your class
-implementation files with a capital letter since Linux is case sensitive.
-Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template
-README.txt file for notes you want the grader to read. Fill out the order notation section as well in the
-README.txt file. You must do this assignment on your own, as described in the “Collaboration Policy
-& Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error
-messages, etc. with anyone, please list their names in your README.txt file.
+You will need to submit your [matrix_main.cpp](matrix_main.cpp), Matrix.cpp, Matrix.h, and README.txt file. Be aware that Submitty will be using an instructor copy of [matrix_main.cpp](matrix_main.cpp) for most of the tests, so you must make sure your Matrix implementation can compile given the provided file. Also make sure to name your class implementation files with a capital letter since Linux is case sensitive.
+
+Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template README.txt file for notes you want the grader to read. Fill out the order notation section as well in the README.txt file. You must do this assignment on your own, as described in the “Collaboration Policy & Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error messages, etc. with anyone, please list their names in your README.txt file.
 
 **Due Date**: 09/28/2023, Thursday, 23:59pm. 

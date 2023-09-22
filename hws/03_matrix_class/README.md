@@ -23,6 +23,8 @@ represented like so:
 We will denote ai,j as the value in matrix A that is in row i and column j. So a general matrix can be
 described as:
 
+![alt text](images/matrix_general.png "matrix representation in general")
+
 ## Basic Functionality
 
 The private section of your class will be fairly small, and the main challenge will be working with the

@@ -4,7 +4,7 @@ In this assignment you will build a custom class named Matrix, which will mimic 
 
 Matrices are used in many different applications, and over the years many optimizations, tricks, and numerical methods have been developed to quickly handle matrix operations and solve more complicated problems.
 
-Building this data structure will give you practice with pointers, dynamic array allocation and deallocation, 2D pointers, and class design. The implementation of this data structure will involve writing one new class. You are not allowed to use any of the STL container classes in your implementation or use any additional classes or structs besides Matrix. You will need to make use of the new and delete keywords. You can use array indexing ([]). Please read the entire handout (there are 6 pages) before beginning your implementation.
+Building this data structure will give you practice with pointers, dynamic array allocation and deallocation, 2D pointers, and class design. The implementation of this data structure will involve writing one new class. You are not allowed to use any of the STL container classes in your implementation or use any additional classes or structs besides Matrix. You will need to make use of the new and delete keywords. You can use array indexing ([]). Please read the entire handout before beginning your implementation.
 
 ## The Data Structure
 
@@ -37,7 +37,7 @@ with every value initialized to fill. If either dimension is 0, the resulting ma
 
 Your class must support the equality operator == and the inequality operator !=. Two matrices are considered
 to be equal if they have the same value in every position. In other words, matrices A and B are equal if and
-only if (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) ai,j = bi,j . ∀ is a common shorthand for
+only if (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) a<sub>i</sub>,<sub>j</sub> = b<sub>i</sub>,<sub>j</sub> . ∀ is a common shorthand for
 “for all,” so ∀i,j means “for every value of i and j.” ∈ is a common shorthand for “in”.
 
 Since a matrix has two dimensions, you will need to implement num rows() and num cols() which return the
@@ -128,9 +128,8 @@ It is common to need to “flip” a matrix, a process called transposition. You
 method, which has a return type of void. Formally, transposition of m×n matrix A into n×m matrix AT
 is
 defined as:
-(∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) a
-T
-i,j = aj,i
+
+![alt text](images/matrix_transpose_formula.png "matrix transpose formula")
 
 ![alt text](images/matrix_transpose.png "matrix transpose")
 

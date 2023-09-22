@@ -131,17 +131,8 @@ defined as:
 (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) a
 T
 i,j = aj,i
-m1 = 
-1 2 3
-4 5 6
-, m1.transpose() =⇒
-
-
-1 4
-2 5
-3 6
-
-
+
+![alt text](images/matrix_transpose.png "matrix transpose")
 
 ## Binary Matrix Operations
 
@@ -154,26 +145,8 @@ Addition of two matrices, C = A + B, and subtraction of two matrices, D = A − 
 (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) Ci,j = ai,j + bi,j
 (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) Di,j = ai,j − bi,j
 Consider these two matrices:
-m1 = 
-1 2 3
-4 5 6
-m2 = 
-4 16 25
-14 3.4 3.64159
-m1 + m2 = 
-1 + 4 2 + 16 3 + 25
-4 + 14 5 + 3.4 6 + 3.64159
-=
 
-5 18 28
-18 8.4 9.64159
-m1 − m2 = 
-1 − 4 2 − 16 3 − 25
-4 − 14 5 − 3.4 6 − 3.64159
-=
-
-−3 −14 −22
-−10 1.6 2.35841
+![alt text](images/matrix_addition.png "matrix addition")
 
 ## Harder Matrix Operations
 

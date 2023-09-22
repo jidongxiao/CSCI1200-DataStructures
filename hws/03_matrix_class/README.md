@@ -12,9 +12,9 @@ A matrix is a two-dimensional arrangement of numbers. In this assignment we will
 contains doubles. We refer to the size of a matrix with m rows and n columns as an m×n matrix. For
 example, shown below is a 4×3 matrix:
 
-|  -6  10   1  |
-|   3  -8  22  |
-| -17   4   7  |
+|  -6  10   1  |  
+|   3  -8  22  |  
+| -17   4   7  |  
 |   2   5   0  |
 
 We will represent the data inside our Matrix class by using a two-dimensional array. Because a matrix may

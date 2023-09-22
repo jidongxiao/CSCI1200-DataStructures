@@ -12,7 +12,7 @@ A matrix is a two-dimensional arrangement of numbers. In this assignment we will
 contains doubles. We refer to the size of a matrix with m rows and n columns as an m×n matrix. For
 example, shown below is a 4×3 matrix:
 
-![alt text](matrix1.png "4*3 matrix")
+![alt text](images/matrix1.png "4*3 matrix")
 
 We will represent the data inside our Matrix class by using a two-dimensional array. Because a matrix may
 be any size, you will need to use dynamic memory for this task. The same matrix shown above can be

@@ -18,6 +18,8 @@ We will represent the data inside our Matrix class by using a two-dimensional ar
 be any size, you will need to use dynamic memory for this task. The same matrix shown above can be
 represented like so:
 
+![alt text](images/matrix1_array.png "4*3 matrix array representation")
+
 We will denote ai,j as the value in matrix A that is in row i and column j. So a general matrix can be
 described as:
 

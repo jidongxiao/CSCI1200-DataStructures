@@ -106,33 +106,17 @@ instead of focusing on making the output pretty.
 To start with, we introduce some basic matrix operations. The first is the method multiply by coefficient(),
 which takes a double called a coefficient. The method should multiply every element in the matrix by the
 coefficient. For example:
-m1 = 
-1 2
-3 4
-, m1.multiply by coeff icient(5) =⇒
 
-5 10
-15 20
+![alt text](images/matrix_multiply.png "matrix multiply")
+
 Another common operation is to swap two rows of a matrix. This will be accomplished by the method
 swap row(), which takes two arguments of type unsigned int: a source row number and a target row
 number. If both rows are inside the bounds of the matrix, then the function should switch the values in the
 two rows and return true. Otherwise the function should return false.
 For example:
-m1 =
-
-
-1 2 3
-4 5 6
-7 8 9
-
- , m1.swap row(1, 2) =⇒
-
-
-1 2 3
-7 8 9
-4 5 6
-
-
+
+![alt text](images/matrix_swaprow.png "matrix swap row")
+
 NOTE: With the basic functions and swap row() done, the tests related to the provided rref() function in
 matrix main.cpp can be called. We do not explain the function in detail here, and you don’t need to know
 how it works, but computing the Reduced Row Echelon Form (RREF) can be used to find an inverse matrix,

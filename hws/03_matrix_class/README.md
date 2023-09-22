@@ -30,22 +30,27 @@ described as:
 The private section of your class will be fairly small, and the main challenge will be working with the
 dynamic memory as you implement features to make the class functional. You can implement these methods
 in any order; we start by mentioning a few that will make debugging easier.
+
 The first thing we suggest is writing a constructor that takes two unsigned ints: a rows count and a columns
 count, and a double fill value. The constructor should create a data representation of a rows×columns matrix
 with every value initialized to fill. If either dimension is 0, the resulting matrix should be of size 0×0.
+
 Your class must support the equality operator == and the inequality operator !=. Two matrices are considered
 to be equal if they have the same value in every position. In other words, matrices A and B are equal if and
 only if (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) ai,j = bi,j . ∀ is a common shorthand for
 “for all,” so ∀i,j means “for every value of i and j.” ∈ is a common shorthand for “in”.
+
 Since a matrix has two dimensions, you will need to implement num rows() and num cols() which return the
 number of rows and the number of columns in the matrix respectively.
 We may want to change a previously filled matrix to an empty one, so you must write a clear() method as
 well. This method should reset the number of rows and columns to 0, and deallocate any memory currently
 held by the Matrix.
+
 Naturally we want to be able to access data stored in the Matrix class. To do so we will implement a “safe”
 accessor called get(), which takes in a row, a column, and a double. If the row and column are within the
 bounds of the matrix, then the value at arow,col should be stored in the double, and the function should
 return true. Otherwise the function should return false.
+
 A complementary, but similar task to accessing data is to be able to set a value at a particular position in
 the matrix. This is done through a safe modifier called set(). This function also takes in a row, column, and
 a double value. set() returns false if the position is out of bounds, and true if the position is valid. If the
@@ -75,20 +80,26 @@ outfile << m2 << std::endl;
 std::cout << "Done printing." << std::endl;
 ```
 
-At some point, it is probably a good idea to write a method to do output for us. Unlike previous classes where
-we wrote a method to do the printing, we will instead rely on a non-member overload of the operator<<. We
-have practiced overloading other operators for calls to std::sort() before, and this will be similar. Outside
-of the Matrix class definition, but still in your .cpp and .h files, you should write the following operator:
-std::ostream& operator<< (std::ostream& out, const Matrix& m)
-This will allow us to print one or more outputs sequentially. All of the following code should work if your
-operator<< is implemented correctly:
-Matrix m1;
-Matrix m2;
-std::ofstream outfile(output_filename); //Assuming we already had the filename
-std::cout << m1 << m2 << std::endl;
-outfile << m1;
-outfile << m2 << std::endl;
-std::cout << "Done printing." << std::endl;
+Let us assume in the above example that:
+
+![alt text](images/matrix_m1_m2.png "matrix m1 and m2")
+
+Then the output should look something like this:
+```console
+0 x 0 matrix:
+[ ]
+3 x 2 matrix:
+[ 3 5.21
+-2 4
+-18 1 ]
+Done printing.
+```
+
+We will ignore whitespace, but we do expect that your operator outputs the elements of the matrix in the
+right order, that the size output comes before the matrix and follows the format shown below - one row per
+line, and spacing between elements. Note that even in these examples, the alignment is not ideal. We would
+rather you focus on the task of implementing the Matrix class correctly and handling memory properly
+instead of focusing on making the output pretty.
 
 ### Simple Matrix Operations
 

@@ -160,6 +160,8 @@ int fact(int n) {
 }
 ```
 
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/recursion/factorial/index.html) to see how this fact() function works.
+
 ```cpp
 int intpow(int n, int p) {
     if (p == 0) {
@@ -269,6 +271,6 @@ The Fibonacci sequence is defined:
 Fibonacci sequence.  
 2. Write an iterative version of Fibonacci that uses a vector to improve the running time of the function.  
 3. What is the order notation of the running time for each version?  
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html), which illustrates the time complexity of the recursvie version.
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/recursion/fibonacci/index.html), which illustrates the time complexity of the recursvie version.
 
 4. What is the order notation of the memory usage for each version?

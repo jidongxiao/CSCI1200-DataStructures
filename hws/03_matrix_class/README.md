@@ -37,8 +37,11 @@ with every value initialized to fill. If either dimension is 0, the resulting ma
 
 Your class must support the equality operator == and the inequality operator !=. Two matrices are considered
 to be equal if they have the same value in every position. In other words, matrices A and B are equal if and
-only if (∀i,j |i ∈ {0, 1, . . . , m − 2, m − 1}, j ∈ {0, 1, . . . , n − 2, n − 1}) a<sub>i</sub>,<sub>j</sub> = b<sub>i</sub>,<sub>j</sub> . ∀ is a common shorthand for
-“for all,” so ∀i,j means “for every value of i and j.” ∈ is a common shorthand for “in”.
+only if
+
+![alt text](images/matrix_equal_definition.png "matrix equal definition")
+
+∀ is a common shorthand for “for all,” so ∀i,j means “for every value of i and j.” ∈ is a common shorthand for “in”.
 
 Since a matrix has two dimensions, you will need to implement num rows() and num cols() which return the
 number of rows and the number of columns in the matrix respectively.

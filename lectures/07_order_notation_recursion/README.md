@@ -3,6 +3,17 @@
 - Algorithm Analysis, Formal Definition of Order Notation
 - Simple recursion, Visualization of recursion, Iteration vs. Recursion
 - “Rules” for writing recursive functions, Lots of examples
+- Lots of Examples!
+
+  #Test 1
+  - We are grading today and this weekend
+  - We hope to release the Test 1 grades by Monday
+ 
+    HW3 is now available
+
+    Use office hours next week!
+
+    Please use the discussion forum to ask questions rather than email to prof or TA -- there is a chance other students have the same question & you'll get a faster reply!
 
 ## 7.1 Algorithm Analysis
 

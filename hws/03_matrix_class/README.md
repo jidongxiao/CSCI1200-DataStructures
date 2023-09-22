@@ -20,7 +20,7 @@ represented like so:
 
 ![alt text](images/matrix1_array.png "4*3 matrix array representation")
 
-We will denote ai,j as the value in matrix A that is in row i and column j. So a general matrix can be
+We will denote a<sub>i</sub>,<sub>j</sub> as the value in matrix A that is in row i and column j. So a general matrix can be
 described as:
 
 ![alt text](images/matrix_general.png "matrix representation in general")
@@ -57,9 +57,15 @@ At some point, it is probably a good idea to write a method to do output for us.
 we wrote a method to do the printing, we will instead rely on a non-member overload of the operator<<. We
 have practiced overloading other operators for calls to std::sort() before, and this will be similar. Outside
 of the Matrix class definition, but still in your .cpp and .h files, you should write the following operator:
+
+```cpp
 std::ostream& operator<< (std::ostream& out, const Matrix& m)
+```
+
 This will allow us to print one or more outputs sequentially. All of the following code should work if your
 operator<< is implemented correctly:
+
+```cpp
 Matrix m1;
 Matrix m2;
 std::ofstream outfile(output_filename); //Assuming we already had the filename
@@ -67,6 +73,7 @@ std::cout << m1 << m2 << std::endl;
 outfile << m1;
 outfile << m2 << std::endl;
 std::cout << "Done printing." << std::endl;
+```
 
 At some point, it is probably a good idea to write a method to do output for us. Unlike previous classes where
 we wrote a method to do the printing, we will instead rely on a non-member overload of the operator<<. We

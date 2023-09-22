@@ -259,3 +259,20 @@ int main() {
 ```
  How can you change the second print vec function as little as possible so that this code prints the contents
 of the vector in reverse order?
+
+## 7.17 Fibonacci Optimization: Order Notation of Time vs. Space
+
+The Fibonacci sequence is defined:
+$$
+F(n) = \begin{cases}
+0 & \text{if } n = 0 \\
+1 & \text{if } n = 1 \\
+F(n-1) + F(n-2) & \text{otherwise}
+\end{cases}
+$$
+
+1. Write a simple recursive version of Fibonacci that is a direct translation of the mathematical definition of the
+Fibonacci sequence.  
+2. Write an iterative version of Fibonacci that uses a vector to improve the running time of the function.  
+3. What is the order notation of the running time for each version?  
+4. What is the order notation of the memory usage for each version?

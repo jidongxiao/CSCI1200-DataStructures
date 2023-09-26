@@ -29,7 +29,7 @@ manipulate the underlying representation, and discuss memory management.
 
 ## 8.2 Templated Class Declarations and Member Function Definitions
 
-- In terms of the layout of the code in vec.h (pages 5 & 6 of the handout), the biggest difference is that this is a
+- In terms of the layout of the code in [vec.h](vec.h), the biggest difference is that this is a
 templated class. The keyword template and the template type name must appear before the class declaration:
 
 ```cpp

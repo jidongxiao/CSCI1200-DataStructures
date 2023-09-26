@@ -41,7 +41,7 @@ T”. In the actual text of the code files, templated member functions are often
 declaration.
 
 - The templated functions defined outside the template class declaration must be preceded by the phrase:
-template <class T> and then when Vec is referred to it must be as Vec<T> . For example, for member
+template &lt;class T&gt; and then when Vec is referred to it must be as Vec&lt;T&gt;. For example, for member
 function create (two versions), we write:
 
 ```cpp

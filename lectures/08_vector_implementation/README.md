@@ -75,8 +75,7 @@ pointers and arrays.
 - m_size indicates the number of locations currently in use in the vector. This is exactly what the size()
 member function should return,
 - m_alloc is the total number of slots in the dynamically allocated block of memory.
-Drawing pictures, which we will do in class, will help clarify this, especially the distinction between m size and
-m alloc.
+Drawing pictures, which we will do in class, will help clarify this, especially the distinction between m_size and m_alloc.
 
 ## 8.5 Typedefs
 

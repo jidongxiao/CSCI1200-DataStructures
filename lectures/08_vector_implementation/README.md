@@ -163,10 +163,22 @@ private member function copy.
 
 ## 8.12 Assignment Operator
 
-Assignment operators of the form: v1 = v2;
-are translated by the compiler as: v1.operator=(v2);
-- Cascaded assignment operators of the form: v1 = v2 = v3;
-are translated by the compiler as: v1.operator=(v2.operator=(v3));
+Assignment operators of the form:
+```cpp
+v1 = v2;
+```
+are translated by the compiler as:
+```cpp
+v1.operator=(v2);
+```
+- Cascaded assignment operators of the form:
+```cpp
+v1 = v2 = v3;
+```
+are translated by the compiler as:
+```cpp
+v1.operator=(v2.operator=(v3));
+```
 - Therefore, the value of the assignment operator (v2 = v3) must be suitable for input to a second assignment
 operator. This in turn means the result of an assignment operator ought to be a reference to an object.
 - The implementation of an assignment operator usually takes on the same form for every class:
@@ -175,6 +187,21 @@ operator. This in turn means the result of an assignment operator ought to be a 
 copy constructor. In fact, it often makes sense to write a private helper function used by both the copy
 constructor and the assignment operator.
   – Return a reference to the (copied) current object, using the this pointer.
+
+**Note**: In C++, the assignment operator is used for assignment after an object has already been created. And because of that, the following two code snippets behave differently.
+
+```cpp
+myClass A = B;
+```
+
+This one line will invoke the copy constructor, rather than the assignment operator. And this behavior is called copy initialization.
+
+```cpp
+myClass A;
+A = B;
+```
+
+These two lines will: the first line creates the object A, and the second line invokes the assignment operator.
 
 ## 8.13 Destructor (the “constructor with a tilde/twiddle”)
 

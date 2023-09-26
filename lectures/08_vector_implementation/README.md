@@ -223,3 +223,8 @@ The destructor is called implicitly when an automatically-allocated object goes 
 
 - Finish the definition of Vec::push_back.
 - Write the Vec::resize function.
+
+## 8.16 Leetcode Exercises
+
+- [Leetcode problem 27: Remove Element](https://leetcode.com/problems/remove-element/). Solution: [p27_removeelement.cpp](../../leetcode/p27_removeelement.cpp)
+- [Leetcode problem 263: Ugly Number](https://leetcode.com/problems/ugly-number/). Solution: [p263_uglynumber.cpp](../../leetcode/p263_uglynumber.cpp)

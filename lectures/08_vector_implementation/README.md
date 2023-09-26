@@ -95,16 +95,14 @@ translates into:
 ```cpp
 v.operator[](i) = 5;
 ```
-� In most classes there are two versions of operator[]:
-– A non-const version returns a reference to m data[i]. This is applied to non-const Vec objects.
-– A const version is the one called for const Vec objects. This also returns m data[i], but as a const
-reference, so it can not be modified.
+In most classes there are two versions of operator[]:
+– A non-const version returns a reference to m_data[i]. This is applied to non-const Vec objects.
+– A const version is the one called for const Vec objects. This also returns m_data[i], but as a const reference, so it can not be modified.
 
 ## 8.7 Default Versions of Assignment Operator and Copy Constructor Are Dangerous!
 
-Before we write the copy constructor and the assignment operator, we consider what would happen if we didn’t
-write them.
-� C++ compilers provide default versions of these if they are not provided. These defaults just copy the values
+Before we write the copy constructor and the assignment operator, we consider what would happen if we didn’t write them.
+- C++ compilers provide default versions of these if they are not provided. These defaults just copy the values
 of the member variables, one-by-one. For example, the default copy constructor would look like this:
 ```cpp
 template <class T>
@@ -138,12 +136,12 @@ of the memory of both u and v.
 For Vec (and other classes with dynamically-allocated memory) to work correctly, each object must do its own
 dynamic memory allocation and deallocation. We must be careful to keep the memory of each object instance
 separate from all others.
-� All dynamically-allocated memory for an object should be released when the object is finished with it or when
+- All dynamically-allocated memory for an object should be released when the object is finished with it or when
 the object itself goes out of scope (through what’s called a destructor).
-� To prevent the creation and use of default versions of these operations, we must write our own:
-– Copy constructor
-– Assignment operator
-– Destructor
+- To prevent the creation and use of default versions of these operations, we must write our own:
+  – Copy constructor
+  – Assignment operator
+  – Destructor
 
 ## 8.10 The “this” pointer
 
@@ -180,25 +178,21 @@ constructor and the assignment operator.
 
 ## 8.13 Destructor (the “constructor with a tilde/twiddle”)
 
-The destructor is called implicitly when an automatically-allocated object goes out of scope or a dynamicallyallocated object is deleted. It can never be called explicitly!
+The destructor is called implicitly when an automatically-allocated object goes out of scope or a dynamically allocated object is deleted. It can never be called explicitly!
 - The destructor is responsible for deleting the dynamic memory “owned” by the class.
-- The syntax of the function definition is a bit weird. The ~ has been used as a bit-wise inverse or logic negation
-in other contexts.
+- The syntax of the function definition is a bit weird. The ~ has been used as a bit-wise inverse or logic negation in other contexts.
 
 ## 8.14 Increasing the Size of the Vec
 
-- push_back(T const& x) adds to the end of the array, increasing m size by one T location. But what if the
-allocated array is full (m size == m alloc)?
+- push_back(T const& x) adds to the end of the array, increasing m_size by one T location. But what if the allocated array is full (m_size == m_alloc)?
 1. Allocate a new, larger array. The best strategy is generally to double the size of the current array. Why?
-2. If the array size was originally 0, doubling does nothing. We must be sure that the resulting size is at
-least 1.
+2. If the array size was originally 0, doubling does nothing. We must be sure that the resulting size is at least 1.
 3. Then we need to copy the contents of the current array.
-4. Finally, we must delete current array, make the m data pointer point to the start of the new array, and
-adjust the m size and m alloc variables appropriately.
-- Only when we are sure there is enough room in the array should we actually add the new object to the back
-of the array
+4. Finally, we must delete current array, make the m_data pointer point to the start of the new array, and adjust the m_size and m_alloc variables appropriately.
+
+- Only when we are sure there is enough room in the array should we actually add the new object to the back of the array.
 
 ## 8.15 Exercises
 
-Finish the definition of Vec::push_back.
+- Finish the definition of Vec::push_back.
 - Write the Vec::resize function.

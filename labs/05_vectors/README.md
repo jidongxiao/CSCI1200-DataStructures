@@ -10,10 +10,13 @@ members.
 - Introduce yourself to your teammate. Ask them to share something about themselves (e.g. hobbies,
 sports, favorite music, etc.) Learn something new about your teammate (even if you already know
 them).
+- There are two sets of functions below. Each student in your team takes one set and working on it.
 
 For each function below, assign different letters to each of the data sizes that at first glance might have impact
 on the running time of the function. Be sure to consider integer value, size of vector, and length of string.
 Then give the big O notation of the function in terms of those variables.
+
+### Student 1
 
 ```cpp
 int foobar (const std::vector<std::string> &a, int b) {
@@ -78,6 +81,69 @@ std::vector<int> foo5 (const std::vector<int> &a, int b) {
 }
 ```
 
+### Student 2
+
+```cpp
+int foobar (const std::vector<std::string> &a, int b) {
+    int answer = 0;
+    for (int i = 0; i < a.size(); i+=b) {
+        answer++;
+    }
+    return answer;
+}
+```
+
+```cpp
+std::vector<int> bar2 (const std::vector<std::string> &a) {
+    std::vector<int> answer;
+    for (int i = 0; i < a.size(); i++) {
+        answer.push_back(a[i].size());
+    }
+    return answer;
+}
+```
+
+```cpp
+std::vector<std::string> bar3 (const std::vector<int> &a) {
+    std::vector<std::string> answer;
+    for (int i = 0; i < a.size(); i++) {
+        answer.push_back(std::string(a[i],'+'));
+    }
+    return answer;
+}
+```
+
+```cpp
+void bar3 (std::vector<std::string> &a, const std::string &b) {
+    for (int i = 0; i < a.size(); i++) {
+        a[i] = b;
+    }
+}
+```
+
+```cpp
+std::vector<int> bar4 (const std::vector<std::string> &a) {
+    std::vector<int> answer;
+    if(!a.empty()){
+        for (int i = 0; i < std::min(a[0].size(), a.size()); i++) {
+            answer.insert(answer.begin(),a[i].size());
+        }
+    }
+    return answer;
+}
+```
+
+```cpp
+void bar5 (std::vector<int> &a) {
+    for (int i = 0; i < a.size(); i++){
+        if (a[i] > 0){
+            a.erase(a.begin() + i);
+            i--;
+        }
+    }
+}
+```
+
 When you finish, discuss these problems with your teammate. If your teammate hasn’t finished, please help
 them (but without just doing the problems for them).
 
@@ -86,7 +152,7 @@ your answers are correct. What print statements will be most helpful? In your te
 just ./a.out try running time ./a.out and reading the real time, which is how long your program took to
 run. How does this change as you increase or decrease each of the data size variables you identified above?
 
-**To complete this checkpoint**, present your work to a TA/mentor.
+**To complete this checkpoint**, as a team, present your work to a TA/mentor.
 
 ## Checkpoint 2
 *estimate: TBD*

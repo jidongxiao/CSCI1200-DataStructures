@@ -181,11 +181,11 @@ v1.operator=(v2.operator=(v3));
 ```
 - Therefore, the value of the assignment operator (v2 = v3) must be suitable for input to a second assignment
 operator. This in turn means the result of an assignment operator ought to be a reference to an object.
-- The implementation of an assignment operator usually takes on the same form for every class:
-  – Do no real work if there is a self-assignment.
+- The implementation of an assignment operator usually takes on the same form for every class:  
+  – Do no real work if there is a self-assignment.  
   – Otherwise, destroy the contents of the current object then copy the passed object, just as done by the
 copy constructor. In fact, it often makes sense to write a private helper function used by both the copy
-constructor and the assignment operator.
+constructor and the assignment operator.  
   – Return a reference to the (copied) current object, using the this pointer.
 
 **Note**: In C++, the assignment operator is used for assignment after an object has already been created. And because of that, the following two code snippets behave differently.

@@ -2,11 +2,13 @@ template<class T>
 class Vec{
 public:
     typedef unsigned int size_type;
+    // default constructor
     Vec(){
         m_data = new T[2];
 	m_size = 0;
 	capacity = 2;
     }
+    // other constructor
     Vec(int size, const T& val){
         m_data = new T[size];
 	m_size = size;
@@ -15,6 +17,7 @@ public:
 	    m_data[i] = val;
 	}
     }
+    // copy constructor
     Vec(const Vec& other){
         capacity = other.capacity;
 	m_size = other.m_size;
@@ -23,9 +26,11 @@ public:
             m_data[i] = other.m_data[i];
 	}
     }
+    // destructor
     ~Vec(){
         delete [] m_data;
     }
+    // assignment operator
     Vec<T>& operator=(const Vec& other){
         if(this != &other){
             capacity = other.capacity;
@@ -37,9 +42,11 @@ public:
 	}
 	return *this;
     }
+    // [] operator
     T& operator[](int i){
 	return m_data[i];
     }
+    // the const version of [] operator
     const T& operator[](int i) const {
 	return m_data[i];
     }
@@ -49,6 +56,7 @@ public:
     void push_back(const T& val){
 	    if(m_size >= capacity){
                 capacity = capacity * 2;
+		// allocate memory for the new array and move content of m_data to the new array.
                 T* temp = new T[capacity];
 		for(unsigned int i=0;i<m_size;i++){
                     temp[i] = m_data[i];

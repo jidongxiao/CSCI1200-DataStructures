@@ -63,7 +63,7 @@ regardless of whether or not they are needed.
 are used. As a result, member functions definitions are often included within the class declaration or defined
 outside of the class declaration but still in the .h file. If member function definitions are placed in a separate
 .cpp file, this file must be #include-d, just like the .h file, because the compiler needs to see it in order to
-generate code. (Normally we don’t #include .cpp files!) See also diagram on page 7 of this handout.
+generate code. (Normally we don’t #include .cpp files!).
 Note: Including function definitions in the .h for ordinary non-templated classes may lead to compilation errors
 about functions being “multiply defined”. Some of you have already seen these errors.
 

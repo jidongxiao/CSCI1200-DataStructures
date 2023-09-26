@@ -2,7 +2,7 @@
 
 - Designing our own container classes:  
   – Mimic the interface of standard library (STL) containers  
-  – Study the design of memory management. 
+  – Study the design of memory management.  
   – Move toward eventually designing our own, more sophisticated classes.
 - Vector implementation
 - Templated classes (including compilation and instantiation of templated classes)

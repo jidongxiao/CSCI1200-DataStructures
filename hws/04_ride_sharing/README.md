@@ -5,7 +5,7 @@ In this assignment you will develop a simple ride sharing application called New
 ## Learning Objectives
 
 - Get familiar with a commonly used data structure - linked lists.
-- Practice using std:list.
+- Practice using std::list.
 - Practice overloading operator<<, and understand why it is a bad idea to make it a member function.
 
 ## Specification

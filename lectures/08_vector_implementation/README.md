@@ -51,10 +51,10 @@ template <class T> void Vec<T>::create(...
 ## 8.3 Syntax and Compilation
 
 - Templated classes and templated member functions are not created/compiled/instantiated until they are
-needed. Compilation of the class declaration is triggered by a line of the form: Vec<int> v1; with int
-replacing T. This also compiles the default constructor for Vec<int> because it is used here. Other member
+needed. Compilation of the class declaration is triggered by a line of the form: Vec&lt;int&gt; v1; with int
+replacing T. This also compiles the default constructor for Vec&lt;int&gt; because it is used here. Other member
 functions are not compiled unless they are used.
-- When a different type is used with Vec, for example in the declaration: Vec<double> z; the template class
+- When a different type is used with Vec, for example in the declaration: Vec&lt;double&gt; z; the template class
 declaration is compiled again, this time with double replacing T instead of int. Again, however, only the
 member functions used are compiled.
 - This is very different from ordinary classes, which are usually compiled separately and all functions are compiled
@@ -69,7 +69,7 @@ about functions being “multiply defined”. Some of you have already seen thes
 
 ## 8.4 Member Variables
 
-Now, looking inside the Vec<T> class at the member variables:
+Now, looking inside the Vec&lt;T&gt; class at the member variables:
 - m_data is a pointer to the start of the array (after it has been allocated). Recall the close relationship between
 pointers and arrays.
 - m_size indicates the number of locations currently in use in the vector. This is exactly what the size()
@@ -81,13 +81,13 @@ m alloc.
 ## 8.5 Typedefs
 
 - Several types are created through typedef statements in the first public area of Vec. Once created the names
-are used as ordinary type names. For example Vec<int>::size type is the return type of the size() function,
+are used as ordinary type names. For example Vec&lt;int&gt;::size type is the return type of the size() function,
 defined here as an unsigned int.
 
 ## 8.6 operator[]
 
 Access to the individual locations of a Vec is provided through operator[]. Syntactically, use of this operator
-is translated by the compiler into a call to a function called operator[]. For example, if v is a Vec<int>,
+is translated by the compiler into a call to a function called operator[]. For example, if v is a Vec&lt;int&gt;,
 then:
 ```cpp
 v[i] = 5;
@@ -119,9 +119,9 @@ want to create a copy of the entire array! Let’s look at this more closely...
 
 ## 8.8 Exercise
 
-Suppose we used the default version of the assignment operator and copy constructor in our Vec<T> class. What
+Suppose we used the default version of the assignment operator and copy constructor in our Vec&lt;T&gt; class. What
 would be the output of the following program? Assume all of the operations except the copy constructor behave as
-they would with a std::vector<double>.
+they would with a std::vector&lt;double&gt;.
 ```cpp
 Vec<double> v(4, 0.0);
 v[0] = 13.1; v[2] = 3.14;

@@ -1,12 +1,12 @@
 # Lecture 8 --- Templated Classes & Vector Implementation
 
-Designing our own container classes:
-– Mimic the interface of standard library (STL) containers
-– Study the design of memory management.
-– Move toward eventually designing our own, more sophisticated classes.
-  - Vector implementation
-  - Templated classes (including compilation and instantiation of templated classes)
-  - Copy constructors, assignment operators, and destructors
+- Designing our own container classes:
+  – Mimic the interface of standard library (STL) containers  
+  – Study the design of memory management.  
+  – Move toward eventually designing our own, more sophisticated classes.
+- Vector implementation
+- Templated classes (including compilation and instantiation of templated classes)
+- Copy constructors, assignment operators, and destructors
 
 ## 8.1 Vector Public Interface
 

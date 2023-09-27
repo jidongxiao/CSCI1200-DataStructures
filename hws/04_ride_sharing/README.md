@@ -19,7 +19,7 @@ Drivers can perform one task:
 
 - Cancel a ride request
 
-*Note*: A commercial ride sharing product like Uber or Lyft of course allows users and drivers to perform more tasks, but let's be honest, either Uber or Lyft has thousands of software engineers, but you only have one week to work on this assignment, so let's simplify the tasks.
+*Note*: A commercial ride sharing product like Uber or Lyft of course allows users and drivers to perform more tasks, but let's be honest, Uber/Lyft has thousands of software engineers, but you only have one person and only have one week to work on this assignment, so let's simplify the tasks.
 
 ## Input Files
 
@@ -112,8 +112,8 @@ nyride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber
 
 Here
 
-- drivers.txt is the input file which contains all drivers' information.
-- users.txt is the input file which contains all users' information.
+- drivers.txt is the input file which contains all drivers' information. Your program should never change this file.
+- users.txt is the input file which contains all users' information. Your program should never change this file.
 - output0.txt is the output file where you print messages to user or driver.
 - output1.txt is the output file where you print the updated drivers information.
 - output2.txt is the output file where you print the updated users information.
@@ -123,7 +123,7 @@ Here
 When this command is run, and
 
 - If a driver is found, your program should
-  - print the following information into the output1.txt file:
+  - print the following information into the output0.txt file:
 ```console
 We have found the closest driver for you.
 ```
@@ -146,7 +146,7 @@ The second command allows a user or a driver to cancel the request. Keep in mind
 ride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber cancel
 ```
 
-The only difference between this command and the first command is the last argument here is cancel, whereas in the first command, the last argument is request.
+The only difference between this command and the first command is the last argument here is *cancel*, whereas in the first command, the last argument is *request*.
 
 When a user cancels a request, you should just cancel the request; when a driver cancels a request, you should cancel the request, but at the same time, find another closest driver for this user.
 
@@ -157,17 +157,21 @@ When a user cancels a request, the following information should be printed into 
 ```console
 Your request has been canceled.
 ```
-  - an updated version of drivers.txt: driver's state should be changed from on the way to available.
+  - an updated version of drivers.txt: driver's state should be changed from On_the_way_to_pickup to Available.
   - an updated version of users.txt, the user should be removed.
 
-When a driver cancels a request, the following information should be printed into the output.txt file:
+When a driver cancels a request, the following information should be printed into the output0.txt file:
   - a message confirming the request is canceled:
 ```console
 User xxx's (user's first name) request has been canceled.
 
 ```
-  - an updated version of drivers.txt: driver's state should be changed from on the way to available. A new driver should be assigned and that new driver's state should be updated accordingly.
-  - an updated version of users.txt, the user should now be assigned to the new driver.
+  - an updated version of drivers.txt: driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly.
+  - an updated version of users.txt, the user should now be associated with the new driver.
+
+## Finding the Driver
+
+When finding the driver, you must always find the closest driver. And in this section, we describe how to achieve this goal. To be added here.
 
 <!--### Driver Removal
 

@@ -30,16 +30,16 @@ Companies like Uber and Lyft maintains all drivers and uers information in their
 The [drivers.txt](drivers.txt) has a format like this:
 
 ```console
-Sandra Huang Female 25 853-977-5304 40.4269 -73.0753 3.1 Standard On_the_way_to_pickup Michael Richard 445-915-1645
-Susan Li Female 51 997-217-1025 40.5863 -73.8684 3.7 Premium On_the_way_to_pickup Lucia Kenneth 829-477-7963
-Mary Zhang Female 47 765-620-6297 40.6988 -73.3988 4.5 Economy On_the_way_to_pickup Amy Lee 545-639-2924
-William David Male 37 324-571-7028 40.2445 -73.5073 3.8 Premium Available null null null
-Christopher Javier Male 25 218-980-8846 40.5784 -73.5479 4.5 Economy During_the_trip Daniel Chen 820-327-7312
-Dorothy Daniel Female 21 332-586-7858 40.6672 -73.2472 4 Premium During_the_trip Juan Carlos 204-752-4660
-Mateo Andres Male 55 201-564-6348 40.8771 -73.6288 3.8 Standard During_the_trip Karen Michael 534-197-2988
-Dorothy Liu Female 41 507-944-8147 40.4938 -73.9905 4.5 Economy On_the_way_to_pickup Amy Christopher 601-148-3144
-Mateo Robert Male 49 592-397-3458 40.4106 -73.3736 3.5 Economy On_the_way_to_pickup William David 693-200-8952
-Valentina Andres Female 40 299-602-1498 40.3159 -73.8891 3.3 Standard On_the_way_to_pickup Susan Edward 809-345-5043
+Sandra Huang Female 25 853-977-5304 3.1 40.4269 -73.0753 Standard On_the_way_to_pickup Michael Richard 445-915-1645
+Susan Li Female 51 997-217-1025 3.7 40.5863 -73.8684 Premium On_the_way_to_pickup Lucia Kenneth 829-477-7963
+Mary Zhang Female 47 765-620-6297 4.5 40.6988 -73.3988 Economy On_the_way_to_pickup Amy Lee 545-639-2924
+William David Male 37 324-571-7028 3.8 40.2445 -73.5073 Premium Available null null null
+Christopher Javier Male 25 218-980-8846 4.5 40.5784 -73.5479 Economy During_the_trip Daniel Chen 820-327-7312
+Dorothy Daniel Female 21 332-586-7858 4 40.6672 -73.2472 Premium During_the_trip Juan Carlos 204-752-4660
+Mateo Andres Male 55 201-564-6348 3.8 40.8771 -73.6288 Standard During_the_trip Karen Michael 534-197-2988
+Dorothy Liu Female 41 507-944-8147 4.5 40.4938 -73.9905 Economy On_the_way_to_pickup Amy Christopher 601-148-3144
+Mateo Robert Male 49 592-397-3458 3.5 40.4106 -73.3736 Economy On_the_way_to_pickup William David 693-200-8952
+Valentina Andres Female 40 299-602-1498 3.3 40.3159 -73.8891 Standard On_the_way_to_pickup Susan Edward 809-345-5043
 ```
 
 The above is the first 10 lines of the [drivers.txt](drivers.txt) file. It has 13 fields, separated by a space. And these 13 fields are:
@@ -49,9 +49,9 @@ The above is the first 10 lines of the [drivers.txt](drivers.txt) file. It has 1
 - Driver's gender
 - Driver's age
 - Driver's phone number
+- Driver's rating
 - Driver's current latitude
 - Driver's current longitude
-- Driver's rating
 - Driver's vehicle type
 - Driver's current state
 - Rider's first name
@@ -73,7 +73,7 @@ null null null
 
 ### Rider Information
 
-The [user.txt](users.txt) has a format like this:
+The [users.txt](users.txt) has a format like this:
 
 ```console
 Isabella Richard Female 39 301-144-6533 3.2 Top_of_the_Rock 40.7593 -73.979 Gowanus 40.6733 -73.99 Economy Ready_to_request null null null
@@ -88,6 +88,26 @@ Linda Chen Female 60 320-807-7264 4.6 Bushwick 40.6944 -73.9213 Columbia_Univers
 Brenda Thomas Female 45 470-325-3275 3.2 Bay_Ridge 40.635 -74.019 High_Line_Park 40.748 -74.0048 Premium Driver_on_the_way John Javier 446-656-6614
 ```
 
+The above is the first 10 lines of the [users.txt](users.txt) file. It has 17 fields, separated by a space. And these 13 fields are:
+
+- User's first name
+- User's last name
+- User's gender
+- User's age
+- User's phone number
+- User's rating
+- The name of the user's pickup location
+- The latitude of the user's pickup location
+- The longitude of the user's pickup location
+- The name of the user's dropoff location
+- The latitude of the user's dropoff location
+- The longitude of the user's dropoff location
+- User's vehicle type
+- User's current state
+- Driver's first name
+- Driver's last name
+- Driver's phone number
+
 A rider can be in one of the following states:
 
 - Ready to request
@@ -95,6 +115,12 @@ A rider can be in one of the following states:
 - During a trip
 
 Ideally, there should be four states, and this other state would be: Ride requested but not yet accepted by any driver. However, as we mentioned, in this assignment, we assume that when a user issues a request, it will be accepted by a driver, and thus we can exclude this state from our consideration.
+
+When the user is in Ready_to_request state, it means no driver is now assigned to this ride request, and therefore, the last 3 fields of this user will just be 
+
+```console
+null null null
+```
 
 ## Commands to Support
 

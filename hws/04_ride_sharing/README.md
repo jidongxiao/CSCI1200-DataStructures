@@ -169,7 +169,7 @@ Replace *Isabella* with the user's first name, replace *Luxury* with the user's 
 The second command allows a user or a driver to cancel the request. Keep in mind that both the user and the driver has the right to cancel the request.
 
 ```console
-ride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber cancel
+nyride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber cancel
 ```
 
 The only difference between this command and the first command is the last argument here is *cancel*, whereas in the first command, the last argument is *request*.
@@ -204,12 +204,12 @@ When finding the driver, you must always find the closest driver. And in this se
 Your program should allow the ride sharing company to remove drivers whose rating is below a certain threshold. For example, if they want to remove drivers whose rating is lower than 3.5, they should be able to run this command to do so:
 
 ```console
-ride.exe drivers.txt out_drivers.txt remove 3.5
+nyride.exe drivers.txt out_drivers.txt remove 3.5
 ```
 
 And if they want to remove drivers whose rating is lower than 3.2, they can run:
 ```console
-ride.exe drivers.txt out_drivers.txt remove 3.2
+nyride.exe drivers.txt out_drivers.txt remove 3.2
 ```
 
 When the above commands are executed, the input file should remain unchanged, and you just need to write all drivers whose rating is equal to or higher than the threshold into the output file.
@@ -221,9 +221,9 @@ Once they run the removal command, drivers whose rating is lower than the thresh
 Your program should allow the ride sharing company to track all requests, and search
 
 ```console
-ride.exe drivers.txt users.txt search all
-ride.exe drivers.txt users.txt search user_id
-ride.exe drivers.txt users.txt search driver_id
+nyride.exe drivers.txt users.txt search all
+nyride.exe drivers.txt users.txt search user_id
+nyride.exe drivers.txt users.txt search driver_id
 ```
 -->
 

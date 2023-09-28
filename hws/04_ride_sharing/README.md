@@ -256,7 +256,7 @@ When finding the driver, you must always find the closest driver. And when the c
 
 ```cpp
 // calculate the distance between two coordinates using Haversine formula
-double Rider::calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     const double radiusOfEarth = 6371.0; // Earth's radius in kilometers
 
     // convert latitude and longitude from degrees to radians

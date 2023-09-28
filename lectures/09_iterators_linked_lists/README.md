@@ -5,7 +5,6 @@
 - Iterators and iterator operations
 - STL lists are a different sequential container class.
 - Returning references to member variables from member functions
-- Vec iterator implementation
 
 ## 9.1 Another STL vector operation: pop_back
 

@@ -1,16 +1,16 @@
 # Lecture 9 --- Iterators & STL Lists
 
-- Another vector operation: pop back
+- Another vector operation: pop_back
 - Erasing items from vectors is inefficient!
 - Iterators and iterator operations
 - STL lists are a different sequential container class.
 - Returning references to member variables from member functions
 - Vec iterator implementation
 
-## 9.1 Another STL vector operation: pop back
+## 9.1 Another STL vector operation: pop_back
 
-- We have seen how push back adds a value to the end of a vector, increasing the size of the vector by 1. There
-is a corresponding function called pop back, which removes the last item in a vector, reducing the size by 1.
+- We have seen how push_back adds a value to the end of a vector, increasing the size of the vector by 1. There
+is a corresponding function called pop_back, which removes the last item in a vector, reducing the size by 1.
 - There are also vector functions called front and back which denote (and thereby provide access to) the first
 and last item in the vector, allowing them to be changed. For example:
 
@@ -109,7 +109,7 @@ such as:
 an arbitrary location within the vector / array.
 - STL lists have no subscripting operation (we can’t use [] to access data). The only way to get to the
 middle of a list is to follow pointers one link at a time.
-- Lists have push front and pop front functions in addition to the push back and pop back functions of
+- Lists have push_front and pop_front functions in addition to the push_back and pop_back functions of
 vectors.
 - erase and insert in the middle of the STL list is very efficient, independent of the size of the list. Both
 are implemented by rearranging pointers between the small blocks of memory. (We’ll see this when we
@@ -127,7 +127,7 @@ Note: STL list sort member function is just as efficient, O(n log n), and will a
 compare function as STL vector.
 - Several operations invalidate the values of vector iterators, but not list iterators:
   - erase invalidates all iterators after the point of erasure in vectors;
-  - push back and resize invalidate ALL iterators in a vector
+  - push_back and resize invalidate ALL iterators in a vector
 The value of any associated vector iterator must be re-assigned / re-initialized after these operations.
 
 ## 9.7 Leetcode Exercises

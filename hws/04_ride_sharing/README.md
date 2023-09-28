@@ -155,7 +155,7 @@ When this command is run, and
 Ride requested for user Rebecca, looking for an Economy vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
 We have found the closest driver Elena(4.7) for you.
-Elena is now 12.8 miles away from you.
+Elena is now 7.9 miles away from you.
 ```
 Replace *Rebecca* with the user's first name, replace *Economy* with the user's preferred vehicle type, replace *Williamsburg* with the user's pickup location, and replace *Statue_of_Liberty* with the user's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *12.8* with the driver's distance from the user.  
 
@@ -241,7 +241,7 @@ Your driver Edward has cancelled the ride request. We will now find a new driver
 Ride requested for user Angela, looking for a Standard vehicle.
 Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
 We have found the closest driver Robert(3.2) for you.
-Robert is now 3.5 miles away from you.
+Robert is now 2.1 miles away from you.
 ```
 
 Replace *Edward* with the driver's first name. Replace *Angela* with the user's first name, replace *Standard* with the user's preferred vehicle type. Replace *The_Met_Cloisters* with the user's pickup location, and replace *Brooklyn_Navy_Yard* with the user's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *3.5* with the new driver's distance to the user.

@@ -162,6 +162,7 @@ Replace *Rebecca* with the user's first name, replace *Economy* with the user's 
 1.2 print an updated version of drivers.txt into output1.txt.  
 
 1.3 print an updated version of users.txt into output2.txt.
+
 2. if a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
 Ride requested for user Isabella, looking for a Luxury vehicle.

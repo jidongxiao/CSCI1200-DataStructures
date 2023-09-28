@@ -157,8 +157,8 @@ We have found the closest driver Elena(4.7) for you.
 Elena is now 12.8 miles away from you.
 ```
 Replace *Rebecca* with the user's first name, replace *Economy* with the user's preferred vehicle type, replace *Williamsburg* with the user's pickup location, and replace *Statue_of_Liberty* with the user's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *12.8* with the driver's distance from the user.  
-  2. print an updated version of drivers.txt into output1.txt.  
-  3. print an updated version of users.txt into output2.txt.
+  2\. print an updated version of drivers.txt into output1.txt.  
+  3\. print an updated version of users.txt into output2.txt.
 - If a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
 Ride requested for user Isabella, looking for a Luxury vehicle.

@@ -10,7 +10,7 @@ In this assignment you will develop a simple ride sharing application called New
 
 ## Specification
 
-The New York Ride application should support 2 different roles: drivers, users (also known as riders). Users can perform two tasks:
+The New York Ride application should support 2 different roles: drivers, riders (also known as riders). Riders can perform two tasks:
 
 - Request a ride
 - Cancel a ride request 
@@ -19,11 +19,11 @@ Drivers can perform one task:
 
 - Cancel a ride request
 
-*Note*: A commercial ride sharing product like Uber or Lyft of course allows users and drivers to perform more tasks, but let's be honest, Uber/Lyft has thousands of software engineers, but you only have one person and only have one week to work on this assignment, so let's simplify the tasks.
+*Note*: A commercial ride sharing product like Uber or Lyft of course allows riders and drivers to perform more tasks, but let's be honest, Uber/Lyft has thousands of software engineers, but you only have one person and only have one week to work on this assignment, so let's simplify the tasks.
 
 ## Input Files
 
-Companies like Uber and Lyft maintains all drivers and uers information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and users information in two simple text files, [drivers.txt](drivers.txt) and [users.txt](users.txt). Like previous assignments, in this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or users information, and store them in your own data structures. In this assignment, you are not allowed to use *std::vector*, or any data structures we have not discussed in this class. Instead, you must use *std::list* to store drivers and users. You are recommended to use one *std::list* instance to store all drivers, use another *std::list* instance to store all users.
+Companies like Uber and Lyft maintains all drivers and uers information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and riders information in two simple text files, [drivers.txt](drivers.txt) and [riders.txt](riders.txt). Like previous assignments, in this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or riders information, and store them in your own data structures. In this assignment, you are not allowed to use *std::vector*, or any data structures we have not discussed in this class. Instead, you must use *std::list* to store drivers and riders. You are recommended to use one *std::list* instance to store all drivers, use another *std::list* instance to store all riders.
 
 ### Driver Information
 
@@ -73,7 +73,7 @@ null null null
 
 ### Rider Information
 
-The [users.txt](users.txt) has a format like this:
+The [riders.txt](riders.txt) has a format like this:
 
 ```console
 Isabella Richard Female 39 301-144-6533 3.2 Top_of_the_Rock 40.7593 -73.979 Gowanus 40.6733 -73.99 Economy Ready_to_request null null null
@@ -88,22 +88,22 @@ Linda Chen Female 60 320-807-7264 4.6 Bushwick 40.6944 -73.9213 Columbia_Univers
 Brenda Thomas Female 45 470-325-3275 3.2 Bay_Ridge 40.635 -74.019 High_Line_Park 40.748 -74.0048 Premium Driver_on_the_way John Javier 446-656-6614
 ```
 
-The above is the first 10 lines of the [users.txt](users.txt) file. It has 17 fields, separated by a space. And these 13 fields are:
+The above is the first 10 lines of the [riders.txt](riders.txt) file. It has 17 fields, separated by a space. And these 17 fields are:
 
-- User's first name
-- User's last name
-- User's gender
-- User's age
-- User's phone number
-- User's rating
-- The name of the user's pickup location
-- The latitude of the user's pickup location
-- The longitude of the user's pickup location
-- The name of the user's dropoff location
-- The latitude of the user's dropoff location
-- The longitude of the user's dropoff location
-- User's vehicle type
-- User's current state
+- Rider's first name
+- Rider's last name
+- Rider's gender
+- Rider's age
+- Rider's phone number
+- Rider's rating
+- The name of the rider's pickup location
+- The latitude of the rider's pickup location
+- The longitude of the rider's pickup location
+- The name of the rider's dropoff location
+- The latitude of the rider's dropoff location
+- The longitude of the rider's dropoff location
+- Rider's vehicle type
+- Rider's current state
 - Driver's first name
 - Driver's last name
 - Driver's phone number
@@ -114,9 +114,9 @@ A rider can be in one of the following states:
 - Driver on the way (to pickup)
 - During a trip
 
-Ideally, there should be four states, and this other state would be: Ride requested but not yet accepted by any driver. However, as we mentioned, in this assignment, we assume that when a user issues a request, it will be accepted by a driver, and thus we can exclude this state from our consideration.
+Ideally, there should be four states, and this other state would be: Ride requested but not yet accepted by any driver. However, as we mentioned, in this assignment, we assume that when a rider issues a request, it will be accepted by a driver, and thus we can exclude this state from our consideration.
 
-When the user is in Ready_to_request state, it means no driver is now assigned to this ride request, and therefore, the last 3 fields of this user will just be 
+When the rider is in Ready_to_request state, it means no driver is now assigned to this ride request, and therefore, the last 3 fields of this rider will just be 
 
 ```console
 null null null
@@ -130,20 +130,20 @@ Your program only needs to support two commands:
 
 ### Ride Request
 
-The first command allows the user can to send a ride request.
+The first command allows the rider can to send a ride request.
 
 ```console
-nyride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber request
+nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumber request
 ```
 
 Here
 
 - drivers.txt is the input file which contains all drivers' information. Your program should never change this file.
-- users.txt is the input file which contains all users' information. Your program should never change this file.
-- output0.txt is the output file where you print messages to user or driver.
+- riders.txt is the input file which contains all riders' information. Your program should never change this file.
+- output0.txt is the output file where you print messages to rider or driver.
 - output1.txt is the output file where you print the updated drivers information.
-- output2.txt is the output file where you print the updated users information.
-- phoneNumber. Ideally this should be a phone number which corresponds to one of the users in the users.txt whose state is "Ready_to_request"; but life is not always ideal, and how your program should cope with various phone number cases will be described in this section.
+- output2.txt is the output file where you print the updated riders information.
+- phoneNumber. Ideally this should be a phone number which corresponds to one of the riders in the riders.txt whose state is "Ready_to_request"; but life is not always ideal, and how your program should cope with various phone number cases will be described in this section.
 - request indicates this is a ride request.
 
 When this command is run, and
@@ -152,68 +152,68 @@ When this command is run, and
 
 1.1 print the following information into the output0.txt file:
 ```console
-Ride requested for user Rebecca, looking for an Economy vehicle.
+Ride requested for rider Rebecca, looking for an Economy vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
 We have found the closest driver Elena(4.7) for you.
 Elena is now 7.9 miles away from you.
 ```
-Replace *Rebecca* with the user's first name, replace *Economy* with the user's preferred vehicle type, replace *Williamsburg* with the user's pickup location, and replace *Statue_of_Liberty* with the user's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *12.8* with the driver's distance from the user.  
+Replace *Rebecca* with the rider's first name, replace *Economy* with the rider's preferred vehicle type, replace *Williamsburg* with the rider's pickup location, and replace *Statue_of_Liberty* with the rider's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *12.8* with the driver's distance from the rider.  
 
 1.2 print an updated version of drivers.txt into output1.txt.  
 
-1.3 print an updated version of users.txt into output2.txt.
+1.3 print an updated version of riders.txt into output2.txt.
 
 2. if a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
-Ride requested for user Isabella, looking for a Luxury vehicle.
+Ride requested for rider Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
 Sorry we can not find a driver for you at this moment.
 ```
 
-Replace *Isabella* with the user's first name, replace *Luxury* with the user's preferred vehicle type, replace Williamsburg with the user's pickup location, and replace Boerum_Hill with the user's drop off location.
+Replace *Isabella* with the rider's first name, replace *Luxury* with the rider's preferred vehicle type, replace Williamsburg with the rider's pickup location, and replace Boerum_Hill with the rider's drop off location.
 
 3. if the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
 ```console
 Phone number is invalid.
 ```
 
-4. if the phone number provided from the command line does not match with any of the users' phone numbers, your program should print the following message to the output0.txt file:
+4. if the phone number provided from the command line does not match with any of the riders' phone numbers, your program should print the following message to the output0.txt file:
 ```console
 Account does not exist.
 ```
 
-5. if the user who is issuing this request is in a state of "Driver_on_the_way", your program should print the following message to the output0.txt file:
+5. if the rider who is issuing this request is in a state of "Driver_on_the_way", your program should print the following message to the output0.txt file:
 ```console
 You have already requested a ride and your driver is on the way to the pickup location.
 ```
 
-6. if the user who is issuing this request is in a state of "During_the_trip", your program should print the following message to the output0.txt file:
+6. if the rider who is issuing this request is in a state of "During_the_trip", your program should print the following message to the output0.txt file:
 ```console
 You can not request a ride at this moment as you are already on a trip.
 ```
 
 ### Canceling a Request
 
-The second command allows a user or a driver to cancel the request. Keep in mind that both the user and the driver has the right to cancel the request.
+The second command allows a rider or a driver to cancel the request. Keep in mind that both the rider and the driver has the right to cancel the request.
 
 ```console
-nyride.exe drivers.txt users.txt output0.txt output1.txt output2.txt phoneNumber cancel
+nyride.exe drivers.txt riders.txt output0.txt output1.txt output2.txt phoneNumber cancel
 ```
 
 The only difference between this command and the first command is the last argument here is *cancel*, whereas in the first command, the last argument is *request*.
 
-When a user cancels a request, you should just cancel the request; when a driver cancels a request, you should cancel the request, but at the same time, find another closest driver for this user.
+When a rider cancels a request, you should just cancel the request; when a driver cancels a request, you should cancel the request, but at the same time, find another closest driver for this rider.
 
-Only drivers who are on the way to a pickup location, or users whose driver is on the way, should be allowed to cancel a request. 
+Only drivers who are on the way to a pickup location, or riders whose driver is on the way, should be allowed to cancel a request. 
 
 When this second command is run, and
 
-1. if the phone number provided from the command line does not match with any of the users' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the output0.txt file:
+1. if the phone number provided from the command line does not match with any of the riders' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the output0.txt file:
 ```console
 Account does not exist.
 ```
 
-2. if the canceling request is issued by a user whose state is NOT Driver_on_the_way, your program should print the following message to the output0.txt file:
+2. if the canceling request is issued by a rider whose state is NOT Driver_on_the_way, your program should print the following message to the output0.txt file:
 ```console
 You can only cancel a ride request if your driver is currently on the way to the pickup location.
 ```
@@ -223,40 +223,40 @@ You can only cancel a ride request if your driver is currently on the way to the
 You can only cancel a ride request if you are currently on the way to the pickup location.
 ```
 
-4. if the canceling request is issued by a user whose state is Driver_on_the_way, your program should:
+4. if the canceling request is issued by a rider whose state is Driver_on_the_way, your program should:
 
 4.1 print the following message to the output0.txt file:
 ```console
-Ride request for user Brenda is now canceled by the user.
+Ride request for rider Brenda is now canceled by the rider.
 ```
 4.2 print an updated version of drivers.txt into output1.txt: driver's state should be changed from On_the_way_to_pickup to Available.
 
-4.3 print an updated version of users.txt into output2.txt: the user should be removed.
+4.3 print an updated version of riders.txt into output2.txt: the rider should be removed.
 
 5. if the canceling request is issued by a driver whose state is On_the_way_to_pickup, your program should:
 
 5.1 print the following message to the output0.txt file:
 ```console
 Your driver Edward has cancelled the ride request. We will now find a new driver for you.
-Ride requested for user Angela, looking for a Standard vehicle.
+Ride requested for rider Angela, looking for a Standard vehicle.
 Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
 We have found the closest driver Robert(3.2) for you.
 Robert is now 2.1 miles away from you.
 ```
 
-Replace *Edward* with the driver's first name. Replace *Angela* with the user's first name, replace *Standard* with the user's preferred vehicle type. Replace *The_Met_Cloisters* with the user's pickup location, and replace *Brooklyn_Navy_Yard* with the user's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *3.5* with the new driver's distance to the user.
+Replace *Edward* with the driver's first name. Replace *Angela* with the rider's first name, replace *Standard* with the rider's preferred vehicle type. Replace *The_Met_Cloisters* with the rider's pickup location, and replace *Brooklyn_Navy_Yard* with the rider's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *3.5* with the new driver's distance to the rider.
 
-5.2 print an updated version of drivers.txt into output1.txt: the old driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this user, and the new driver should now be associated with this user.
+5.2 print an updated version of drivers.txt into output1.txt: the old driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this rider, and the new driver should now be associated with this rider.
 
-5.3 print an updated version of users.txt into output2.txt: the user should now be associated with the new driver.
+5.3 print an updated version of riders.txt into output2.txt: the rider should now be associated with the new driver.
 
 ## Calculate Distance Based on Haversine Formula
 
-When finding the driver, you must always find the closest driver. And when the closest driver is found, you also need to print the distance between this driver and the user. Thus, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will use the Haversine Formula, and the code of using the Haversine formula is given below:
+When finding the driver, you must always find the closest driver. And when the closest driver is found, you also need to print the distance between this driver and the rider. Thus, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will use the Haversine Formula, and the code of using the Haversine formula is given below:
 
 ```cpp
 // calculate the distance between two coordinates using Haversine formula
-double User::calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+double Rider::calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     const double radiusOfEarth = 6371.0; // Earth's radius in kilometers
 
     // convert latitude and longitude from degrees to radians
@@ -307,9 +307,9 @@ Once they run the removal command, drivers whose rating is lower than the thresh
 Your program should allow the ride sharing company to track all requests, and search
 
 ```console
-nyride.exe drivers.txt users.txt search all
-nyride.exe drivers.txt users.txt search user_id
-nyride.exe drivers.txt users.txt search driver_id
+nyride.exe drivers.txt riders.txt search all
+nyride.exe drivers.txt riders.txt search rider_id
+nyride.exe drivers.txt riders.txt search driver_id
 ```
 -->
 

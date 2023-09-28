@@ -174,12 +174,22 @@ Replace *Isabella* with the user's first name, replace *Luxury* with the user's 
 
 3. if the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
 ```console
-phone number is invalid.
+Phone number is invalid.
 ```
 
 4. if the phone number provided from the command line does not match with any of the users' phone numbers, your program should print the following message to the output0.txt file:
 ```console
-account does not exist.
+Account does not exist.
+```
+
+5. if the user who is issuing this request is in a state of "Driver_on_the_way", your program should print the following message to the output0.txt file:
+```console
+You have already requested a ride and your driver is on the way to the pickup location.
+```
+
+6. if the user who is issuing this request is in a state of "During_the_trip", your program should print the following message to the output0.txt file:
+```console
+You can not request a ride at this moment as you are already on a trip.
 ```
 
 ### Canceling a Request
@@ -200,7 +210,7 @@ When this second command is run, and
 
 1. if the phone number provided from the command line does not match with any of the users' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the output0.txt file:
 ```console
-account does not exist.
+Account does not exist.
 ```
 
 2. if the canceling request is issued by a user whose state is NOT Driver_on_the_way, your program should print the following message to the output0.txt file:

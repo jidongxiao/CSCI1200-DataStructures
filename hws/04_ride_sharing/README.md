@@ -259,7 +259,7 @@ When finding the driver, you must always find the closest driver. And when the c
 double User::calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     const double radiusOfEarth = 6371.0; // Earth's radius in kilometers
 
-    // Convert latitude and longitude from degrees to radians
+    // convert latitude and longitude from degrees to radians
     lat1 *= M_PI / 180.0;
     lon1 *= M_PI / 180.0;
     lat2 *= M_PI / 180.0;
@@ -279,7 +279,11 @@ double User::calculateDistance(double lat1, double lon1, double lat2, double lon
 }
 ```
 
-This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations.
+This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations. This function calls several math library functions, and therefore you need to include the *cmath* library:
+
+```cpp
+#include <cmath>
+```
 
 <!--### Driver Removal
 

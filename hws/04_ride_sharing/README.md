@@ -250,9 +250,36 @@ Replace *Edward* with the driver's first name. Replace *Angela* with the user's 
 
 5.3 print an updated version of users.txt into output2.txt: the user should now be associated with the new driver.
 
-## Finding the Driver
+## Calculate Distance Based on Haversine Formula
 
-When finding the driver, you must always find the closest driver. And in this section, we describe how to achieve this goal. To be added here.
+When finding the driver, you must always find the closest driver. And when the closest driver is found, you also need to print the distance between this driver and the user. Thus, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will use the Haversine Formula, and the code of using the Haversine formula is given below:
+
+```cpp
+// calculate the distance between two coordinates using Haversine formula
+double User::calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+    const double radiusOfEarth = 6371.0; // Earth's radius in kilometers
+
+    // Convert latitude and longitude from degrees to radians
+    lat1 *= M_PI / 180.0;
+    lon1 *= M_PI / 180.0;
+    lat2 *= M_PI / 180.0;
+    lon2 *= M_PI / 180.0;
+
+    // Haversine formula
+    double dLat = lat2 - lat1;
+    double dLon = lon2 - lon1;
+    double a = sin(dLat / 2.0) * sin(dLat / 2.0) + cos(lat1) * cos(lat2) * sin(dLon / 2.0) * sin(dLon / 2.0);
+    double c = 2.0 * atan2(sqrt(a), sqrt(1.0 - a));
+    // distance in kilometers
+    double distanceKM = radiusOfEarth * c;
+    // convert it to distance in miles
+    double distanceMiles = distanceKM * 0.621371;
+
+    return distanceMiles;
+}
+```
+
+This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations.
 
 <!--### Driver Removal
 

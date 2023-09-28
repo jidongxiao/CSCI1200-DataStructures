@@ -148,7 +148,7 @@ Here
 
 When this command is run, and
 
-- If a driver is found, your program should
+- If a driver is found, your program should  
   1\. print the following information into the output0.txt file:
 ```console
 Ride requested for user Rebecca, looking for an Economy vehicle.

@@ -148,7 +148,7 @@ Here
 
 When this command is run, and
 
-1. If a driver is found, your program should  
+1. if a driver is found, your program should  
 
 1.1 print the following information into the output0.txt file:
 ```console
@@ -162,7 +162,7 @@ Replace *Rebecca* with the user's first name, replace *Economy* with the user's 
 1.2 print an updated version of drivers.txt into output1.txt.  
 
 1.3 print an updated version of users.txt into output2.txt.
-2. If a driver can not be found, your program should print the following message into the output0.txt file:
+2. if a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
 Ride requested for user Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
@@ -171,12 +171,12 @@ Sorry we can not find a driver for you at this moment.
 
 Replace *Isabella* with the user's first name, replace *Luxury* with the user's preferred vehicle type, replace Williamsburg with the user's pickup location, and replace Boerum_Hill with the user's drop off location.
 
-3. If the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
+3. if the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
 ```console
 phone number is invalid.
 ```
 
-4. If the phone number provided from the command line does not match with any of the users' phone numbers, your program should print the following message to the output0.txt file:
+4. if the phone number provided from the command line does not match with any of the users' phone numbers, your program should print the following message to the output0.txt file:
 ```console
 account does not exist.
 ```
@@ -195,22 +195,49 @@ When a user cancels a request, you should just cancel the request; when a driver
 
 Only drivers who are on the way to a pickup location, or users whose driver is on the way, should be allowed to cancel a request. 
 
-When a user cancels a request, the following information should be printed into the output0.txt file:
-  - a message confirming the request is canceled:
-```console
-Your request has been canceled.
-```
-  - an updated version of drivers.txt: driver's state should be changed from On_the_way_to_pickup to Available.
-  - an updated version of users.txt, the user should be removed.
+When this second command is run, and
 
-When a driver cancels a request, the following information should be printed into the output0.txt file:
-  - a message confirming the request is canceled:
+1. if the phone number provided from the command line does not match with any of the users' phone numbers, and does not match with any of the drivers' phone numbers, your program should print the following message to the output0.txt file:
 ```console
-User xxx's (user's first name) request has been canceled.
-
+account does not exist.
 ```
-  - an updated version of drivers.txt: driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly.
-  - an updated version of users.txt, the user should now be associated with the new driver.
+
+2. if the canceling request is issued by a user whose state is NOT Driver_on_the_way, your program should print the following message to the output0.txt file:
+```console
+You can only cancel a ride request if your driver is currently on the way to the pickup location.
+```
+
+3. if the canceling request is issued by a driver whose state is NOT On_the_way_to_pickup, your program should print the following message to the output0.txt file:
+```console
+You can only cancel a ride request if you are currently on the way to the pickup location.
+```
+
+4. if the canceling request is issued by a user whose state is Driver_on_the_way, your program should:
+
+4.1 print the following message to the output0.txt file:
+```console
+Ride request for user Brenda is now canceled by the user.
+```
+4.2 print an updated version of drivers.txt into output1.txt: driver's state should be changed from On_the_way_to_pickup to Available.
+
+4.3 print an updated version of users.txt into output2.txt: the user should be removed.
+
+5. if the canceling request is issued by a driver whose state is On_the_way_to_pickup, your program should:
+
+5.1 print the following message to the output0.txt file:
+```console
+Your driver Edward has cancelled the ride request. We will now find a new driver for you.
+Ride requested for user Angela, looking for a Standard vehicle.
+Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
+We have found the closest driver Robert(3.2) for you.
+Robert is now 3.5 miles away from you.
+```
+
+Replace *Edward* with the driver's first name. Replace *Angela* with the user's first name, replace *Standard* with the user's preferred vehicle type. Replace *The_Met_Cloisters* with the user's pickup location, and replace *Brooklyn_Navy_Yard* with the user's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *3.5* with the new driver's distance to the user.
+
+5.2 print an updated version of drivers.txt into output1.txt: the old driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this user, and the new driver should now be associated with this user.
+
+5.3 print an updated version of users.txt into output2.txt: the user should now be associated with the new driver.
 
 ## Finding the Driver
 

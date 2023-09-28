@@ -162,7 +162,7 @@ Replace *Rebecca* with the user's first name, replace *Economy* with the user's 
 1.2 print an updated version of drivers.txt into output1.txt.  
 
 1.3 print an updated version of users.txt into output2.txt.
-- If a driver can not be found, your program should print the following message into the output0.txt file:
+2. If a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
 Ride requested for user Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
@@ -170,6 +170,16 @@ Sorry we can not find a driver for you at this moment.
 ```
 
 Replace *Isabella* with the user's first name, replace *Luxury* with the user's preferred vehicle type, replace Williamsburg with the user's pickup location, and replace Boerum_Hill with the user's drop off location.
+
+3. If the phone number provided from the command line is not in the format of xxx-xxx-xxxx, your program should print the following message to the output0.txt file:
+```console
+phone number is invalid.
+```
+
+4. If the phone number provided from the command line does not match with any of the users' phone numbers, your program should print the following message to the output0.txt file:
+```console
+account does not exist.
+```
 
 ### Canceling a Request
 

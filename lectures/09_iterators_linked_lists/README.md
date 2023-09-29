@@ -49,7 +49,7 @@ When items are continually being inserted and removed, vectors are not a good ch
 
 - Here’s the definition (from Koenig & Moo). An iterator:
   - identifies a container and a specific element stored in the container,
-  - lets us examine (and change, except for const iterators) the value stored at that element of the container,
+  - let us examine (and change, except for const iterators) the value stored at that element of the container,
   - provides operations for moving (the iterators) between elements in the container,
   - restricts the available operations in ways that correspond to what the container can handle efficiently.
 - As we will see, iterators for different container classes have many operations in common. This often makes the
@@ -64,27 +64,22 @@ defined for iterators. You should use this to guide your beginning understanding
 vector<string>::iterator p;
 vector<string>::const_iterator q;
 ```
-defines two (uninitialized) iterator variables.
+defines two (uninitialized) iterator variables. An iterator is used to modify the elements of the container. A const_iterator is used when you want to traverse the elements of the container without modifying them.
 - The dereference operator is used to access the value stored at an element of the container. The code:
 ```cpp
 p = enrolled.begin();
 *p = "012312";
 ```
-changes the first entry in the enrolled vector.
+changes the first entry in the *enrolled* vector.
 
-- The dereference operator is combined with dot operator for accessing the member variables and member
-functions of elements stored in containers. 
-Notes:
-  - This operation would be illegal if i had been defined as a const iterator because compute_averages is
-a non-const member function.
-  - The parentheses on the \*i are required (because of operator precedence).
-- There is a “syntactic sugar” for the combination of the dereference operator and the dot operator, which is
-exactly equivalent:
-
+- We can use arrow and the dot operator like this:
 ```cpp
-vector<StudentRec>::iterator i = students.begin();
-i->compute_averages(0.45);
+p->length();
+(*p).length();
 ```
+
+both of these two lines are using this iterator p to access the length() function of the std::string object pointed to by the iterator.
+
 - Just like pointers, iterators can be incremented and decremented using the ++ and -- operators to move to the
 next or previous element of any container.
 - Iterators can be compared using the == and != operators.
@@ -125,10 +120,46 @@ Note: STL list sort member function is just as efficient, O(n log n), and will a
 compare function as STL vector.
 - Several operations invalidate the values of vector iterators, but not list iterators:
   - erase invalidates all iterators after the point of erasure in vectors;
-  - push_back and resize invalidate ALL iterators in a vector
+  - push_back and resize invalidate ALL iterators in a vector.
+
 The value of any associated vector iterator must be re-assigned / re-initialized after these operations.
 
-## 9.7 Leetcode Exercises
+## 9.7 Erase & Iterators
+
+STL lists and vectors each have a special member function called erase. In particular, given list of ints s,
+consider the example:
+
+```cpp
+std::list<int>::iterator p = s.begin();
+++p;
+std::list<int>::iterator q = s.erase(p);
+```
+
+ After the code above is executed:
+– The integer stored in the second entry of the list has been removed.
+– The size of the list has shrunk by one.
+– The iterator p does not refer to a valid entry.
+– The iterator q refers to the item that was the third entry and is now the second.
+
+To reuse the iterator p and make it a valid entry, you will often see the code written:
+
+```cpp
+std::list<int>::iterator p = s.begin();
+++p;
+p = s.erase(p);
+```
+
+Even though the erase function has the same syntax for vectors and for list, the vector version is O(n), whereas
+the list version is O(1). Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/iterator/index.html) to see why.
+
+## 9.8 Insert
+
+- Similarly, there is an insert function for STL lists that takes an iterator and a value and adds a link in the
+chain with the new value immediately before the item pointed to by the iterator.
+- The call returns an iterator that points to the newly added element. Variants on the basic insert function are
+also defined.
+
+## 9.9 Leetcode Exercises
 
 - [Leetcode problem 27: Remove Element](https://leetcode.com/problems/remove-element/). Solution: [p27_removeelement.cpp](../../leetcode/p27_removeelement.cpp)
 - [Leetcode problem 263: Ugly Number](https://leetcode.com/problems/ugly-number/). Solution: [p263_uglynumber.cpp](../../leetcode/p263_uglynumber.cpp)

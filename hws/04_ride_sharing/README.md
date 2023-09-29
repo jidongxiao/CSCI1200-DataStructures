@@ -141,8 +141,8 @@ Here
 - drivers.txt is the input file which contains all drivers' information. Your program should never change this file.
 - riders.txt is the input file which contains all riders' information. Your program should never change this file.
 - output0.txt is the output file where you print messages to rider or driver.
-- output1.txt is the output file where you print the updated drivers information.
-- output2.txt is the output file where you print the updated riders information.
+- output1.txt is the output file where you print the updated drivers information, thus this file should have the same format as drivers.txt.
+- output2.txt is the output file where you print the updated riders information, thus this file should have the same format as riders.txt.
 - phoneNumber. Ideally this should be a phone number which corresponds to one of the riders in the riders.txt whose state is "Ready_to_request"; but life is not always ideal, and how your program should cope with various phone number cases will be described in this section.
 - request indicates this is a ride request.
 

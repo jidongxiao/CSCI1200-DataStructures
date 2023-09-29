@@ -42,9 +42,8 @@ erase_from_vector, pop_back, and push_back.
 When items are continually being inserted and removed, vectors are not a good choice for the container.
 - Instead we need a different sequential container, called a list.
   - This has a “linked” structure that makes the cost of erasing independent of the size.
-- We will move toward a list-based implementation of the program in two steps:
-  - Rewriting our classlist vec.cpp code in terms of iterator operations.
-  - Replacing vectors with lists
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/erase/index.html) to see why list is better than vector in terms of the erase operation.
 
 ## 9.4 Iterators
 

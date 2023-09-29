@@ -162,4 +162,4 @@ also defined.
 ## 9.9 Leetcode Exercises
 
 - [Leetcode problem 27: Remove Element](https://leetcode.com/problems/remove-element/). Solution: [p27_removeelement.cpp](../../leetcode/p27_removeelement.cpp)
-- [Leetcode problem 263: Ugly Number](https://leetcode.com/problems/ugly-number/). Solution: [p263_uglynumber.cpp](../../leetcode/p263_uglynumber.cpp)
+- [Leetcode problem 283: Remove Zeroes](https://leetcode.com/problems/move-zeroes/). Solution: [p283_movezeroes.cpp](../../leetcode/p283_movezeroes.cpp)

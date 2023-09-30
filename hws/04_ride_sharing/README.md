@@ -10,7 +10,7 @@ In this assignment you will develop a simple ride sharing application called New
 
 ## Specification
 
-The New York Ride application should support 2 different roles: drivers, riders (also known as riders). Riders can perform two tasks:
+The New York Ride application should support 2 different roles: drivers, riders. Riders can perform two tasks:
 
 - Request a ride
 - Cancel a ride request 
@@ -102,7 +102,7 @@ The above is the first 10 lines of the [riders.txt](riders.txt) file. It has 17 
 - The name of the rider's dropoff location
 - The latitude of the rider's dropoff location
 - The longitude of the rider's dropoff location
-- Rider's vehicle type
+- Rider's vehicle preference
 - Rider's current state
 - Driver's first name
 - Driver's last name
@@ -252,7 +252,7 @@ Replace *Edward* with the driver's first name. Replace *Angela* with the rider's
 
 ## Calculate Distance Based on Haversine Formula
 
-When finding the driver, you must always find the closest driver. And when the closest driver is found, you also need to print the distance between this driver and the rider. Thus, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will use the Haversine Formula, and the code of using the Haversine formula is given below:
+When finding the driver, you must always find the closest driver whose vehicle type matches with the rider's preference. And when the closest driver is found, you also need to print the distance between this driver and the rider. Thus, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will use the Haversine Formula, and the code of using the Haversine formula is given below:
 
 ```cpp
 // calculate the distance between two coordinates using Haversine formula

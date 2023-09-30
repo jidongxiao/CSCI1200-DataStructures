@@ -9,7 +9,7 @@ In this assignment you will develop a simple online dating application which mim
 
 ## Background
 
-Tinder allows users to view other users' profiles, and users can swipe right or swipe left. Swipe right means like or accept someone, whereas swipe left means reject them.
+Tinder allows users to view other users' profiles, and users can swipe right or swipe left. Swipe right means like or accept someone, whereas swipe left means reject them. When two users both express interest by swiping right, the app establishes a match between them, allowing them to initiate conversations and interact further.
 
 In addition, users will only see nearby users, and they can filter whom they want to see, based on age, height, and distance.
 

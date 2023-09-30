@@ -157,7 +157,7 @@ Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
 We have found the closest driver Elena(4.7) for you.
 Elena is now 7.9 miles away from you.
 ```
-Replace *Rebecca* with the rider's first name, replace *Economy* with the rider's preferred vehicle type, replace *Williamsburg* with the rider's pickup location, and replace *Statue_of_Liberty* with the rider's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *12.8* with the driver's distance from the rider.  
+Replace *Rebecca* with the rider's first name, replace *Economy* with the rider's preferred vehicle type, replace *Williamsburg* with the rider's pickup location, and replace *Statue_of_Liberty* with the rider's drop off location. Replace *Elena* with the driver's first name, replace *4.7* with the driver's rating. Replace *7.9* with the driver's distance from the rider.  
 
 1.2 print an updated version of drivers.txt into output1.txt.  
 
@@ -244,7 +244,7 @@ We have found the closest driver Robert(3.2) for you.
 Robert is now 2.1 miles away from you.
 ```
 
-Replace *Edward* with the driver's first name. Replace *Angela* with the rider's first name, replace *Standard* with the rider's preferred vehicle type. Replace *The_Met_Cloisters* with the rider's pickup location, and replace *Brooklyn_Navy_Yard* with the rider's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *3.5* with the new driver's distance to the rider.
+Replace *Edward* with the driver's first name. Replace *Angela* with the rider's first name, replace *Standard* with the rider's preferred vehicle type. Replace *The_Met_Cloisters* with the rider's pickup location, and replace *Brooklyn_Navy_Yard* with the rider's drop off location. Replace *Robert* with the new driver's first name. Replace *3.2* with the new driver's rating. Replace *2.1* with the new driver's distance to the rider.
 
 5.2 print an updated version of drivers.txt into output1.txt: the old driver's state should be changed from On_the_way_to_pickup to Available. A new driver should be assigned and that new driver's state should be updated accordingly. Also the old driver should no longer be associated with this rider, and the new driver should now be associated with this rider.
 

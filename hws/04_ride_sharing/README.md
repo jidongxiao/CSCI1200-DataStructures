@@ -152,7 +152,7 @@ When this command is run, and
 
 1.1 print the following information into the output0.txt file:
 ```console
-Ride requested for rider Rebecca, looking for an Economy vehicle.
+Ride requested for user Rebecca, looking for an Economy vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
 We have found the closest driver Elena(4.7) for you.
 Elena is now 7.9 miles away from you.
@@ -165,7 +165,7 @@ Replace *Rebecca* with the rider's first name, replace *Economy* with the rider'
 
 2. if a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
-Ride requested for rider Isabella, looking for a Luxury vehicle.
+Ride requested for user Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
 Sorry we can not find a driver for you at this moment.
 ```
@@ -238,7 +238,7 @@ Ride request for rider Brenda is now canceled by the rider.
 5.1 print the following message to the output0.txt file:
 ```console
 Your driver Edward has cancelled the ride request. We will now find a new driver for you.
-Ride requested for rider Angela, looking for a Standard vehicle.
+Ride requested for user Angela, looking for a Standard vehicle.
 Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
 We have found the closest driver Robert(3.2) for you.
 Robert is now 2.1 miles away from you.

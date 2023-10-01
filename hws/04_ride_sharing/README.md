@@ -227,7 +227,7 @@ You can only cancel a ride request if you are currently on the way to the pickup
 
 4.1 print the following message to the output0.txt file:
 ```console
-Ride request for rider Brenda is now canceled by the rider.
+Ride request for user Brenda is now canceled by the user.
 ```
 4.2 print an updated version of drivers.txt into output1.txt: driver's state should be changed from On_the_way_to_pickup to Available.
 

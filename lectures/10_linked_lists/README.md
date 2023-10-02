@@ -161,6 +161,8 @@ cout << "1st value: " << ll->value << "\n"
 }
 ```
 
+![alt text](linking.png "linking")
+
 ## 10.5 Definition: A Linked List
 
 - The definition is recursive: A linked list is either:
@@ -170,6 +172,8 @@ cout << "1st value: " << ll->value << "\n"
 The pointer’s value will be stored in a variable called head.
 
 ## 10.6 Visualizing Linked Lists
+
+![alt text](linked_list.png "linked list")
 
 - The head pointer variable is drawn with its own box. It is an individual variable. It is important to have a
 separate pointer to the first node, since the “first” node may change.

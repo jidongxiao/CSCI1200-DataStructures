@@ -141,26 +141,28 @@ assert (*itr == 100); // might seem ok... but rewrite the code to avoid this!
 template <class T>
 class Node {
 public:
-T value;
-Node* ptr;
+	T value;
+	Node* ptr;
 };
 int main() {
-Node<int>* ll; // ll is a pointer to a (non-existent) Node
-ll = new Node<int>; // Create a Node and assign its memory address to ll
-ll->value = 6; // This is the same as (*ll).value = 6;
-ll->ptr = NULL; // NULL == 0, which indicates a "null" pointer
-Node<int>* q = new Node<int>;
-q->value = 8;
-q->ptr = NULL;
-// set ll's ptr member variable to
-// point to the same thing as variable q
-ll->ptr = q;
-cout << "1st value: " << ll->value << "\n"
-<< "2nd value: " << ll->ptr->value << endl;
+	Node<int>* ll; // ll is a pointer to a (non-existent) Node
+	ll = new Node<int>; // Create a Node and assign its memory address to ll
+	ll->value = 6; // This is the same as (*ll).value = 6;
+	ll->ptr = NULL; // NULL == 0, which indicates a "null" pointer
+	Node<int>* q = new Node<int>;
+	q->value = 8;
+	q->ptr = NULL;
+	// set ll's ptr member variable to
+	// point to the same thing as variable q
+	ll->ptr = q;
+	cout << "1st value: " << ll->value << "\n"
+	<< "2nd value: " << ll->ptr->value << endl;
 }
 ```
 
 ![alt text](linking.png "linking")
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/creation/index.html) to see how this program works.
 
 ## 10.5 Definition: A Linked List
 

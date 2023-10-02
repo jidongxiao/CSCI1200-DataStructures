@@ -37,7 +37,7 @@ The above is the first 4 lines of the [users.txt](users.txt) file. It has 14 fie
 - Is Premium User or not: this field will be either *true* or *false*.
 - User's preference on age: minimum age
 - User's preference on age: maximum age
-- User's preference on max distance (in miles).
+- User's preference on max distance (in miles). **Note**: this is an integer number.
 - User's preference on interested gender: this field can be one of these three: *Male*, *Female*, *Both*.
 - Users whom this user liked (i.e., users whom this user has swiped right on): here users are represented by phone numbers. If this user does not like anyone, then this field will be displayed as *null*. If this user liked multiple users, the phone numbers of these users will be displayed in this field, and these phone numbers are separated by an underscore.
 
@@ -98,7 +98,7 @@ Only premium users can view who liked you.
 When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file.
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create a linked list to store all users, but you are not allowed to use the std::list library. In addition, you are allowed to use std::string and std::vector, but are not allowed to use any data structures we have not learned so far.
+In this assignment, you are required to create linked lists, but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

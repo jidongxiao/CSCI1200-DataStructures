@@ -53,13 +53,13 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support four commands.
+Your program will support three commands.
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
 
-More details about each of these four commands are given below.
+More details about each of these three commands are given below.
 
 ### Show Profiles
 

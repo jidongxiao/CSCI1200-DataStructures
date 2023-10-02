@@ -132,10 +132,10 @@ assert (*itr == 100); // might seem ok... but rewrite the code to avoid this!
 
 ## 10.4 Objects with Pointers, Linking Objects Together
 
-The two fundamental mechanisms of linked lists are:
-– creating objects with pointers as one of the member variables, and
-– making these pointers point to other objects of the same type.
- These mechanisms are illustrated in the following program:
+- The two fundamental mechanisms of linked lists are:  
+  – creating objects with pointers as one of the member variables, and  
+  – making these pointers point to other objects of the same type.  
+- These mechanisms are illustrated in the following program:
 
 ```cpp
 template <class T>

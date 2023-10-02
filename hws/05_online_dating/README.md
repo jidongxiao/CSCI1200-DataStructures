@@ -41,7 +41,7 @@ The above is the first 4 lines of the [users.txt](users.txt) file. It has 14 fie
 - User's preference on age: maximum age
 - User's preference on max distance (in miles).
 - User's preference on interested gender: this field can be one of these three: *Male*, *Female*, *Both*.
-- Users whom this user liked (i.e., users whom this user has swiped right on): here users are represented by phone numbers. If this user does not like anyone, then this field will be displayed as *null*.
+- Users whom this user liked (i.e., users whom this user has swiped right on): here users are represented by phone numbers. If this user does not like anyone, then this field will be displayed as *null*. If this user liked multiple users, the phone numbers of these users will be displayed in this field, and these phone numbers are separated by an underscore.
 
 In case you are not familiar with these dating apps or have not used Tinder, two randomly selected Tinder pictures (downloaded from the Internet, sorry Samantha!) are given below.
 

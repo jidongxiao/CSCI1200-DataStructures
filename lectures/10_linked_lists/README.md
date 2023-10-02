@@ -1,6 +1,6 @@
 # Lecture 10 --- Vector Iterators & Linked Lists
 
-- Implementation of iterators in our homemade Vec class (from Lecture 7)
+- Review of iterators
 - Building our own basic linked lists:
   – Stepping through a list
   – Push back
@@ -191,7 +191,7 @@ of the memory addresses aren’t usually meaningful.
   – We will need a separate, local pointer variable to point to nodes in the list as we access them.
   – We will need a loop to step through the linked list (using the pointer variable) and a check on each value
 
-## 10.8 Exercise: Write is there
+## 10.8 Exercise: Write is_there
 
 ```cpp
 template <class T> bool is_there(Node<T>* head, const T& x) {
@@ -206,7 +206,7 @@ template <class T> bool is_there(Node<T>* head, const T& x) {
 }
 ```
 
-- If the input linked list chain contains n elements, what is the order notation of is there?
+- If the input linked list chain contains n elements, what is the order notation of is_there?
 
 ## 10.9 Basic Mechanisms: Pushing on the Back
 

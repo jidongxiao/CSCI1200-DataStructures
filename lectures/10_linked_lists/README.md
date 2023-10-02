@@ -233,7 +233,9 @@ template <class T> void push_front( Node<T>* & head, T const& value ) {
 }
 ```
 
-- If the input linked list chain contains n elements, what is the order notation of the implementation of push front?
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/push_front/index.html) to see how push_front works.
+
+- If the input linked list chain contains n elements, what is the order notation of the implementation of push_front?
 
 ## 10.11 Exercise: Write push_back
 
@@ -247,8 +249,10 @@ template <class T> void push_back( Node<T>* & head, T const& value ) {
 
 }
 ```
-- If the input linked list chain contains n elements, what is the order notation of this implementation of
-push back?
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/push_back/index.html) to see how push_back works.
+
+- If the input linked list chain contains n elements, what is the order notation of this implementation of push_back?
 
 ## 10.12 Inserting a Node into a Singly-Linked List
 

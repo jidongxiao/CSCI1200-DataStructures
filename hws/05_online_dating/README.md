@@ -1,6 +1,6 @@
 # Homework 5 — Design and Implementation of a Simple Tinder
 
-In this assignment you will develop a simple online dating application which mimics some of the features provided by Tinder. Please read the entire handout before starting to code the assignment.
+In this assignment you will develop a simple online dating application called New York Date. Your program will mimic some of the features provided by Tinder. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
 

@@ -32,8 +32,8 @@ The above is the first 4 lines of the [users.txt](users.txt) file. It has 14 fie
 - User's age
 - User's gender
 - User's phone number
-- User's profession
-- User's school
+- User's profession: A user can choose not to disclose their profession, and if so, this field will be *Undisclosed*.
+- User's school: A user can choose not to disclose his/her school, and if so, this field will be *Undisclosed*.
 - User's current latitude
 - User's current longitude
 - Is Premium User or not: this field will be either *true* or *false*.

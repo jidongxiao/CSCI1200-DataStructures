@@ -51,13 +51,15 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support three commands.
+Your program will support five commands.
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
+4. unmatch someone.
+5. delete account.
 
-More details about each of these three commands are given below.
+More details about each of these five commands are given below.
 
 ### Show Profiles
 
@@ -96,6 +98,28 @@ Only premium users can view who liked you.
 ```
 
 When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file.
+
+## Unmatch Someone
+
+According to [Tinder's guide](https://www.help.tinder.com/hc/en-us/articles/115003360106-Unmatching-and-reporting):"When you unmatch someone, they'll disappear from your match list and you'll disappear from theirs."
+
+When the user (here, *phoneNumber* is this user's phone number) runs this command:
+
+```console
+nydate.exe input.txt output.txt phoneNumber unmatch phoneNumberOther
+```
+
+And *phoneNumberOther* represents the user whom this user wants to unmatch with.
+
+## Delete Account
+
+Users can delete their accounts.
+
+When the user (here, *phoneNumber* is this user's phone number) runs this command:
+
+```console
+nydate.exe input.txt output.txt phoneNumber delete
+```
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to create linked lists, but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.

@@ -36,17 +36,20 @@ The above is the first 4 lines of the [users.txt](users.txt) file. It has 14 fie
 - User's school
 - User's current latitude
 - User's current longitude
-- Is Premium User or not
+- Is Premium User or not: this field will be either *true* or *false*.
 - User's preference on age: minimum age
 - User's preference on age: maximum age
-- User's setting on max distance
-- User's setting on interested gender
+- User's preference on max distance (in miles).
+- User's preference on interested gender: this field can be one of these three: *Male*, *Female*, *Both*.
+- Users whom this user liked (i.e., users whom this user has swiped right on): here users are represented by phone numbers. If this user does not like anyone, then this field will be displayed as *null*.
 
-In case you are not familiar with these dating apps or have not used Tinder, following are two randomly selected Tinder pictures (downloaded from the Internet, sorry Samantha!).
+In case you are not familiar with these dating apps or have not used Tinder, two randomly selected Tinder pictures (downloaded from the Internet, sorry Samantha!) are given below.
+
 ![alt text](profile.png "profile")
+
 ![alt text](preference.png "preference")
 
-The last 3 fields will only be meaningful if a ride request is assigned to this driver. In this assignment, we assume that drivers will accept the request whenever it is assigned to this driver.
+These two images will give you a better understanding on some of the above fields.
 
 ## Specification
 

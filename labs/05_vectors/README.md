@@ -158,9 +158,9 @@ run. How does this change as you increase or decrease each of the data size vari
 *estimate: TBD*
 
 Write a templated non-member function named remove_matching_elements that takes in two arguments,
-a vector of type Vec<T> and an element of type T, and returns the number of elements that matched the
+a vector of type Vec&lt;T&gt; and an element of type T, and returns the number of elements that matched the
 argument and were successfully removed from the vector. The order of the other elements should stay
-the same. For example, if v, a Vec<int> object contains 6 elements: 11 22 33 11 55 22 and you call
+the same. For example, if v, a Vec&lt;int&gt; object contains 6 elements: 11 22 33 11 55 22 and you call
 remove_matching_elements(v,11), that call should return 2, and v should now contain: 22 33 55 22.
 You should not create a new vector in your function.
 Add several test cases to test_vec.cpp to show that the function works as expected. What is the order

@@ -99,7 +99,7 @@ Only premium users can view who liked you.
 
 When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file.
 
-## Unmatch Someone
+### Unmatch Someone
 
 According to [Tinder's guide](https://www.help.tinder.com/hc/en-us/articles/115003360106-Unmatching-and-reporting):"When you unmatch someone, they'll disappear from your match list and you'll disappear from theirs."
 
@@ -111,7 +111,7 @@ nydate.exe input.txt output.txt phoneNumber unmatch phoneNumberOther
 
 And *phoneNumberOther* represents the user whom this user wants to unmatch with.
 
-## Delete Account
+### Delete Account
 
 Users can delete their accounts.
 

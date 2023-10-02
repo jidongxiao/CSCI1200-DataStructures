@@ -96,6 +96,7 @@ Only premium users can view who liked you.
 ```
 
 ## Program Requirements & Submission Details
+In this assignment, you are required to create linked lists (to store all users), but are not allowed to use the std::list library. In addition, you are allowed to use std::string and std::vector, but are not allowed to use any data structures we have not learned so far.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

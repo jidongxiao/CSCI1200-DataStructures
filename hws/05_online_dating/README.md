@@ -69,7 +69,7 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 nydate.exe input.txt output.txt phoneNumber show
 ```
 
-your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file.
+your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [show.txt](show.txt) for the format of this file.
 
 ### Show Matches
 
@@ -80,6 +80,8 @@ nydate.exe input.txt output.txt phoneNumber match
 ```
 
 your program should show profiles of all users who match with this user. All these profiles should be printed into the output file. The definition of match is when two users both express interest by swiping right on each other.
+
+See [match.txt](match.txt) for the format of the output file.
 
 ### Show All Users Who Swiped Right on This User
 
@@ -94,6 +96,8 @@ your program should show profiles of all users who likes this user. All these pr
 ```console
 Only premium users can view who liked you.
 ```
+
+When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file.
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to create a linked list to store all users, but you are not allowed to use the std::list library. In addition, you are allowed to use std::string and std::vector, but are not allowed to use any data structures we have not learned so far.

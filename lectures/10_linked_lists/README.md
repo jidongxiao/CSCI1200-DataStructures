@@ -1,8 +1,8 @@
 # Lecture 10 --- Vector Iterators & Linked Lists
 
 - Review of iterators
-- Building our own basic linked lists:
-  – Stepping through a list
+- Building our own basic linked lists:  
+  – Stepping through a list  
   – Push back
 
 ## 10.1 Review: Iterators and Iterator Operations

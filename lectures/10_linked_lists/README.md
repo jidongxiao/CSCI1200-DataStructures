@@ -54,8 +54,7 @@ v_itr = w.begin() + 2;
 *v_itr = 2.78; // changes 3rd entry in w
 ```
 
-works fine because v_itr is a std::vector<double>::iterator, but if a is a
-std::vector<std::string> then
+works fine because v_itr is a std::vector&lt;double&gt;::iterator, but if *a* is a std::vector&lt;std::string&gt; then
 
 ```cpp
 v_itr = a.begin();

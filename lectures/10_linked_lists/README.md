@@ -1,9 +1,9 @@
 # Lecture 10 --- Vector Iterators & Linked Lists
 
 - Keep an eye for an update on Student Excuse Absence Policy which would go in effect from HW4
-     * Please remember even if one student submits HW late then
+     * Please remember incorporating the new rule may result in
   		+ grading process gets delayed
-    		+ you will receive grades late
+        	+ you will receive grades late
     		+ will affect your grade inquiry time
      		+ may affect when you receive the solutions or see the actual rubric
      		+ if that HW was due before exam then be ready to receive feedback on that after exams

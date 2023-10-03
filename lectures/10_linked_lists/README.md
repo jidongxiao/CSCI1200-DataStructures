@@ -11,7 +11,7 @@
 - Review of iterators
 - Building our own basic linked lists:  
   – Stepping through a list  
-  – Push back
+  – Basic operations
 
 ## 10.1 Review: Iterators and Iterator Operations
 

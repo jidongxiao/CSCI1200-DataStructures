@@ -285,16 +285,12 @@ item.
 Draw a picture to illustrate what is happening.
 
 ```cpp
-Class exercise
-```
-<!--
-```cpp
 Node<T> * q = new Node<T>; // create a new node
 q -> value = x; // store x in this node
 q -> next = p -> next; // make its successor be the current successor of p
 p -> next = q; // make p's successor be this new node
 ```
--->
+
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/lists/insert/index.html) to see how this code snippet works.
 
 - Note: This code will not work if you want to insert x in a new node at the front of the linked list. Why not?

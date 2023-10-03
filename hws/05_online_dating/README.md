@@ -6,12 +6,13 @@ In this assignment you will develop a simple online dating application called Ne
 
 - Get familiar with a commonly used data structure - linked lists.
 - Practice creating and manipulating linked lists without using the std::list library.
+- Practice overloading the output operator (&lt;&lt;).
 
 ## Background
 
-Tinder allows users to view other users' profiles, and users can swipe right or swipe left. Swiping right means like or accept someone, whereas swiping left means reject them. When two users both express interest by swiping right, the app establishes a match between them, allowing them to initiate conversations and interact further.
+Tinder allows users to view other users' profiles, and users can filter whom they want to view, based on age, gender, and distance.
 
-In addition, users can filter whom they want to see, based on age, gender, and distance.
+As users browse another user's profile, users can swipe right or swipe left. Swiping right means like or accept someone, whereas swiping left means reject someone. When two users both express interest by swiping right, the app establishes a match between them, allowing them to initiate conversations and interact further. After the match is established, users have the option to unmatch their match if they are no longer interested or for other reasons.
 
 ## Input File
 
@@ -51,32 +52,32 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support five commands.
+Your program will support four commands.
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
 4. unmatch someone.
-5. delete account.
+<!--5. delete account.-->
 
-More details about each of these five commands are given below.
+More details about each of these four commands are given below.
 
 ### Show Profiles
 
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
 
 ```console
-nydate.exe input.txt output.txt phoneNumber show
+nydate.exe users.txt output.txt phoneNumber default
 ```
 
-your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [show.txt](show.txt) for the format of this file.
+your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [default.txt](default.txt) for the format of this file.
 
 ### Show Matches
 
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
 
 ```console
-nydate.exe input.txt output.txt phoneNumber match
+nydate.exe users.txt output.txt phoneNumber match
 ```
 
 your program should show profiles of all users who match with this user. All these profiles should be printed into the output file. The definition of match is when two users both express interest by swiping right on each other.
@@ -88,10 +89,10 @@ See [match.txt](match.txt) for the format of the output file.
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
 
 ```console
-nydate.exe input.txt output.txt phoneNumber like
+nydate.exe users.txt output.txt phoneNumber like
 ```
 
-your program should show profiles of all users who likes this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly membership fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
+your program should show profiles of all users who likes this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly subscription fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
 
 ```console
 Only premium users can view who liked you.
@@ -106,12 +107,16 @@ According to [Tinder's guide](https://www.help.tinder.com/hc/en-us/articles/1150
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
 
 ```console
-nydate.exe input.txt output.txt phoneNumber unmatch phoneNumberOther
+nydate.exe users.txt output.txt phoneNumber unmatch phoneNumberOther
 ```
 
-And *phoneNumberOther* represents the user whom this user wants to unmatch with.
+And *phoneNumberOther* represents the other user whom this user wants to unmatch with.
 
-### Delete Account
+your program should first show profiles of all users who match with this user; and then show profiles of all users who match with this other user. All these profiles should be printed into the output file. Clearly, these two users should not be considered as a match anymore.
+
+See [unmatch.txt](unmatch.txt) for the format of the output file.
+
+<!--### Delete Account
 
 Users can delete their accounts.
 
@@ -120,6 +125,7 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 ```console
 nydate.exe input.txt output.txt phoneNumber delete
 ```
+-->
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to create linked lists, but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.

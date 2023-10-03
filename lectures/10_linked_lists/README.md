@@ -217,16 +217,12 @@ template <class T> bool is_there(Node<T>* head, const T& x) {
 
 - If the input linked list chain contains n elements, what is the order notation of is_there?
 
-## 10.9 Basic Mechanisms: Pushing on the Back
+## 10.9 Overview: Adding an Element at the Front of the List
 
-- Goal: place a new node at the end of the list.
-- We must step to the end of the linked list, remembering the pointer to the last node.
-  - This is an O(n) operation and is a major drawback to the ordinary linked-list data structure we are
-discussing now. We will correct this drawback by creating a slightly more complicated linking structure
-in our next lecture.
-- We must create a new node and attach it to the end.
-- We must remember to update the head pointer variable’s value if the linked list is initially empty.
-  – Hence, in writing the function, we must pass the pointer variable by reference.
+- Goal: place a new node at the beginning of the list.
+- We must create a new node.
+- We must permanently update the head pointer variable's value.
+  Therefore, we must pass the pointer variable **by reference.**
 
 ## 10.10 Exercise: Write push_front
 
@@ -245,7 +241,18 @@ template <class T> void push_front( Node<T>* & head, T const& value ) {
 
 - If the input linked list chain contains n elements, what is the order notation of the implementation of push_front?
 
-## 10.11 Exercise: Write push_back
+## 10.11 Basic Mechanisms: Pushing on the Back
+
+- Goal: place a new node at the end of the list.
+- We must step to the end of the linked list, remembering the pointer to the last node.
+  - This is an O(n) operation and is a major drawback to the ordinary linked-list data structure we are
+discussing now. We will correct this drawback by creating a slightly more complicated linking structure
+in our next lecture.
+- We must create a new node and attach it to the end.
+- We must remember to update the head pointer variable’s value if the linked list is initially empty.
+  – Hence, in writing the function, we must pass the pointer variable** by reference.**
+  
+## 10.12 Exercise: Write push_back
 
 ```cpp
 template <class T> void push_back( Node<T>* & head, T const& value ) {
@@ -262,7 +269,7 @@ template <class T> void push_back( Node<T>* & head, T const& value ) {
 
 - If the input linked list chain contains n elements, what is the order notation of this implementation of push_back?
 
-## 10.12 Inserting a Node into a Singly-Linked List
+## 10.13 Inserting a Node into a Singly-Linked List
 
 - With a singly-linked list, we’ll need a pointer to the node before the spot where we wish to insert the new
 item.
@@ -280,7 +287,7 @@ p -> next = q; // make p's successor be this new node
 
 - Note: This code will not work if you want to insert x in a new node at the front of the linked list. Why not?
 
-## 10.13 Removing a Node from a Singly-Linked List
+## 10.14 Removing a Node from a Singly-Linked List
 
 - The remove operation itself requires a pointer to the node before the node to be removed.
 - Suppose p points to a node that should be removed from a linked list, q points to the node before p, and head
@@ -288,7 +295,7 @@ points to the first node in the linked list. Note: Removing the first node is an
 - Write code to remove p, making sure that if p points to the first node that head points to what was the second
 node and now is the first after p is removed. Draw a picture of each scenario.
 
-## 10.14 Exercise: Singly-Linked List Copy
+## 10.15 Exercise: Singly-Linked List Copy
 
 Write a recursive function to copy all nodes in a linked list to form an new linked list of nodes with identical structure
 and values. Here’s the function prototype:
@@ -303,7 +310,7 @@ template <class T> void CopyAll(Node<T>* old_head, Node<T>*& new_head) {
 }
 ```
 
-## 10.15 Exercise: Singly-Linked List Remove All
+## 10.16 Exercise: Singly-Linked List Remove All
 
 Write a recursive function to delete all nodes in a linked list. Here’s the function prototype:
 

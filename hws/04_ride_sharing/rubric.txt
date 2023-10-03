@@ -9,6 +9,7 @@
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
+   - Poor file organization: Puts more than one class in a file (okay for very small helper classes, maybe) (-1)
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (Must use std::list for the implementation.) (5 pts)

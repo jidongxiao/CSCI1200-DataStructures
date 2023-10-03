@@ -60,7 +60,7 @@ Your program will support four commands.
 4. unmatch someone.
 <!--5. delete account.-->
 
-More details about each of these four commands are given below.
+More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file.
 
 ### Show Profiles
 
@@ -92,7 +92,7 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 nydate.exe users.txt output.txt phoneNumber like
 ```
 
-your program should show profiles of all users who likes this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly subscription fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
+your program should show profiles of all users who like this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly subscription fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
 
 ```console
 Only premium users can view who liked you.
@@ -104,13 +104,11 @@ When the user is indeed a premium user, see [like.txt](like.txt) for the format 
 
 According to [Tinder's guide](https://www.help.tinder.com/hc/en-us/articles/115003360106-Unmatching-and-reporting):"When you unmatch someone, they'll disappear from your match list and you'll disappear from theirs."
 
-When the user (here, *phoneNumber* is this user's phone number) runs this command:
+When the user (here, *phoneNumber* is this user's phone number and *phoneNumberOther* represents the other user whom this user wants to unmatch with) runs this command:
 
 ```console
 nydate.exe users.txt output.txt phoneNumber unmatch phoneNumberOther
 ```
-
-And *phoneNumberOther* represents the other user whom this user wants to unmatch with.
 
 your program should first show profiles of all users who match with this user; and then show profiles of all users who match with this other user. All these profiles should be printed into the output file. Clearly, these two users should not be considered as a match anymore.
 

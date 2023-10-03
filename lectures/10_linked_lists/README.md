@@ -106,15 +106,23 @@ cout << a[i] << endl;
 ```cpp
 std::list<int> lst; lst.push_back(100); lst.push_back(200);
 lst.push_back(300); lst.push_back(400); lst.push_back(500);
+```
+
+```cpp
 std::list<int>::iterator itr,itr2,itr3;
 itr = lst.begin();// itr is pointing at the 100
 ++itr; // itr is now pointing at 200
 *itr += 1; // 200 becomes 201
 // itr += 1; // does not compile! can't advance list iterator like this
+```
+```cpp
 itr = lst.end(); // itr is pointing "one past the last legal value" of lst
 itr--; // itr is now pointing at 500;
 itr2 = itr--; // itr is now pointing at 400, itr2 is still pointing at 500
 itr3 = --itr; // itr is now pointing at 300, itr3 is also pointing at 300
+```
+
+```cpp
 // dangerous: decrementing the begin iterator is "undefined behavior"
 // (similarly, incrementing the end iterator is also undefined)
 // it may seem to work, but break later on this machine or on another machine!

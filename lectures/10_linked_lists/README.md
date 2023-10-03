@@ -295,7 +295,22 @@ points to the first node in the linked list. Note: Removing the first node is an
 - Write code to remove p, making sure that if p points to the first node that head points to what was the second
 node and now is the first after p is removed. Draw a picture of each scenario.
 
-## 10.15 Exercise: Singly-Linked List Copy
+## 10.15 Exercise: Singly-Linked List Remove All
+
+Write a recursive function to delete all nodes in a linked list. Here’s the function prototype:
+
+```cpp
+template <class T> void RemoveAll(Node<T>*& head) {
+
+
+
+
+
+
+}
+```
+
+## 10.16 Exercise: Singly-Linked List Copy
 
 Write a recursive function to copy all nodes in a linked list to form an new linked list of nodes with identical structure
 and values. Here’s the function prototype:
@@ -310,20 +325,6 @@ template <class T> void CopyAll(Node<T>* old_head, Node<T>*& new_head) {
 }
 ```
 
-## 10.16 Exercise: Singly-Linked List Remove All
-
-Write a recursive function to delete all nodes in a linked list. Here’s the function prototype:
-
-```cpp
-template <class T> void RemoveAll(Node<T>*& head) {
-
-
-
-
-
-
-}
-```
 
 <!-- ## 10.16 Leetcode Exercises
 

@@ -70,7 +70,12 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 nydate.exe users.txt output.txt phoneNumber profile
 ```
 
-your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [profile.txt](profile.txt) for the format of this file.
+your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [profile.txt](profile.txt) for the format of this file. In the case where there are no users match with this user's preference, your program should just print this one message to the output file:
+
+```console
+There are no users matching with your preference at this moment.
+```
+
 
 ### Show Matches
 

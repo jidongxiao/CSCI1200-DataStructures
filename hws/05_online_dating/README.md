@@ -101,7 +101,7 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 nydate.exe users.txt output.txt phoneNumber like
 ```
 
-your program should show profiles of all users who like this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly subscription fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
+your program should show profiles of all users who liked this user. All these profiles should be printed into the output file. The definition of like is when a user swipes right on another user. Just like on Tinder, this feature is only available to premium users who pays a monthly subscription fee. Thus, if this user is not a premium user, your program should just print this message to the output file:
 
 ```console
 Only premium users can view who liked you.

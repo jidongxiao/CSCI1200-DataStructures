@@ -76,7 +76,7 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 nydate.exe users.txt output.txt phoneNumber profile
 ```
 
-your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [profile.txt](profile.txt) for the format of this file. In the case where there are no users match with this user's preference, your program should just print this one message to the output file:
+your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [user_704-736-7388_show_profiles.txt](user_704-736-7388_show_profiles.txt) for the format of this file. In the case where there are no users match with this user's preference, your program should just print this one message to the output file:
 
 ```console
 There are no users matching with your preference at this moment.
@@ -93,7 +93,7 @@ nydate.exe users.txt output.txt phoneNumber match
 
 your program should show profiles of all users who match with this user. All these profiles should be printed into the output file. The definition of match is when two users both express interest by swiping right on each other.
 
-See [match.txt](match.txt) for the format of the output file. In the case where this user has no matches at all, you should just print this one message to the output file:
+See [user_722-686-8362_show_matches.txt](user_722-686-8362_show_matches.txt) for the format of the output file. In the case where this user has no matches at all, you should just print this one message to the output file:
 
 ```console
 You do not have any matches at this moment.
@@ -113,7 +113,7 @@ your program should show profiles of all users who liked this user. All these pr
 Only premium users can view who liked you.
 ```
 
-When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file. In the case where this user has not received any likes at all, which is really sad, your program should just print this one message to the output file:
+When the user is indeed a premium user, see [user_704-736-7388_show_likes.txt](user_704-736-7388_show_likes.txt) for the format of the output file. In the case where this user has not received any likes at all, which is really sad, your program should just print this one message to the output file:
 
 ```console
 You have not received any likes so far.
@@ -131,7 +131,7 @@ nydate.exe users.txt output.txt phoneNumber unmatch phoneNumberOther
 
 your program should first show profiles of all users who match with this user; and then show profiles of all users who match with this other user. All these profiles should be printed into the output file. Clearly, these two users should not be considered as a match anymore.
 
-See [unmatch.txt](unmatch.txt) for the format of the output file.
+See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file.
 
 <!--### Delete Account
 

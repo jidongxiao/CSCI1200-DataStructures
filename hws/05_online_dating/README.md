@@ -67,10 +67,10 @@ More details about each of these four commands are given below. For all four com
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
 
 ```console
-nydate.exe users.txt output.txt phoneNumber default
+nydate.exe users.txt output.txt phoneNumber profile
 ```
 
-your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [default.txt](default.txt) for the format of this file.
+your program should show all profiles which match with this user's preference on age, gender, and distance. All these profiles should be printed into the output file. See [profile.txt](profile.txt) for the format of this file.
 
 ### Show Matches
 
@@ -82,7 +82,11 @@ nydate.exe users.txt output.txt phoneNumber match
 
 your program should show profiles of all users who match with this user. All these profiles should be printed into the output file. The definition of match is when two users both express interest by swiping right on each other.
 
-See [match.txt](match.txt) for the format of the output file.
+See [match.txt](match.txt) for the format of the output file. In the case where this user has no matches at all, you should just print this one message to the output file:
+
+```console
+You do not have any matches at this moment.
+```
 
 ### Show All Users Who Swiped Right on This User
 
@@ -98,7 +102,11 @@ your program should show profiles of all users who like this user. All these pro
 Only premium users can view who liked you.
 ```
 
-When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file.
+When the user is indeed a premium user, see [like.txt](like.txt) for the format of the output file. In the case where this user has not received any likes at all, which is really sad, your program should just print this one message to the output file:
+
+```console
+You have not received any likes so far.
+```
 
 ### Unmatch Someone
 

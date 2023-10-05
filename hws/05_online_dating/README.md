@@ -151,6 +151,41 @@ nydate.exe input.txt output.txt phoneNumber delete
 ```
 -->
 
+## Calculate Distance Based on Haversine Formula
+
+To find the users who are within a preferred distance from a user, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will once again use the Haversine Formula, and the code of using the Haversine formula is once again given below:
+
+```cpp
+// calculate the distance between two coordinates using Haversine formula
+double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+    const double radiusOfEarth = 6371.0; // Earth's radius in kilometers
+
+    // convert latitude and longitude from degrees to radians
+    lat1 *= M_PI / 180.0;
+    lon1 *= M_PI / 180.0;
+    lat2 *= M_PI / 180.0;
+    lon2 *= M_PI / 180.0;
+
+    // Haversine formula
+    double dLat = lat2 - lat1;
+    double dLon = lon2 - lon1;
+    double a = sin(dLat / 2.0) * sin(dLat / 2.0) + cos(lat1) * cos(lat2) * sin(dLon / 2.0) * sin(dLon / 2.0);
+    double c = 2.0 * atan2(sqrt(a), sqrt(1.0 - a));
+    // distance in kilometers
+    double distanceKM = radiusOfEarth * c;
+    // convert it to distance in miles
+    double distanceMiles = distanceKM * 0.621371;
+
+    return distanceMiles;
+}
+```
+
+This function takes four parameters, which are the latitude and longitude of two geographical locations, and this function returns the distance (in miles) between these two locations. This function calls several math library functions, and therefore you need to include the *cmath* library:
+
+```cpp
+#include <cmath>
+```
+
 ## Program Requirements & Submission Details
 In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
 
@@ -183,4 +218,4 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Member variables are public. (-2)
  - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax. (-1)
+   - Incorrect syntax (wrong return type, wrong arguments). (-1)

@@ -68,6 +68,8 @@ Your program will support four commands.
 
 More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines. But this empty line is not displayed if you open the file from Github in the browser, because GitHub automatically trims trailing whitespace and empty lines at the end of files when displaying them in the browser.
 
+**Note**: for all the commands, you can assume the phone numbers (used in the commands) are valid and are corresponding to an existing account.
+
 ### Show Profiles
 
 When the user (here, *phoneNumber* is this user's phone number) runs this command:
@@ -150,7 +152,7 @@ nydate.exe input.txt output.txt phoneNumber delete
 -->
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
+In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

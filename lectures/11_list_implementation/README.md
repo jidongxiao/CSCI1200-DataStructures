@@ -40,7 +40,7 @@ Node<T>* prev_;
 };
 ```
 
-- Note that we now assume that we have both a head pointer, as before and a tail pointer variable, which stores the address of the last node in the linked list.
+- Note that we now assume that we have both a head pointer as before, and a tail pointer variable, which stores the address of the last node in the linked list.
 - The tail pointer is not strictly necessary, but it allows immediate access to the end of the list for efficient
 push-back operations.
 
@@ -52,9 +52,9 @@ picture of the state of affairs:
 
 ![alt text](insert.png "insert")
 
-- What must happen? Editing the diagram above...
-  – The new node must be created, using another temporary pointer variable to hold its address.
-  – Its two pointers must be assigned.
+- What must happen? Editing the diagram above...  
+  – The new node must be created, using another temporary pointer variable to hold its address.  
+  – Its two pointers must be assigned.  
   – Two pointers in the current linked list must be adjusted. Which ones?
 - Assigning the pointers for the new node MUST occur before changing the pointers for the current linked list
 nodes!

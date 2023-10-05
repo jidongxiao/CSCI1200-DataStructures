@@ -131,7 +131,11 @@ nydate.exe users.txt output.txt phoneNumber unmatch phoneNumberOther
 
 your program should first show profiles of all users who match with this user; and then show profiles of all users who match with this other user. All these profiles should be printed into the output file. Clearly, these two users should not be considered as a match anymore.
 
-See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file.
+See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file. In the case where either the user or the other user only has one match, or both the user and the other user have just one match, refer to these three files for the format:
+
+- [user_560-220-1509_unmatch_531-893-6571.txt](user_560-220-1509_unmatch_531-893-6571.txt): when both users only have this one match.
+- [user_741-273-7248_unmatch_621-883-6784.txt](user_741-273-7248_unmatch_621-883-6784.txt): when user has only one match.
+- [user_621-883-6784_unmatch_741-273-7248.txt](user_621-883-6784_unmatch_741-273-7248.txt): when the other user has only one match.
 
 <!--### Delete Account
 

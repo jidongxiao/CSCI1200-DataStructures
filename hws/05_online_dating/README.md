@@ -14,9 +14,9 @@ Tinder allows users to view other users' profiles, and users can filter whom the
 
 As users browse another user's profile, users can swipe right or swipe left. Swiping right means like or accept someone, whereas swiping left means reject someone. When two users both express interest by swiping right, the app establishes a match between them, allowing them to initiate conversations and interact further. After the match is established, users have the option to unmatch their match if they are no longer interested or for other reasons.
 
-## Input File
+## Input Files
 
-The input file [users_medium1.txt](users_medium1.txt) and [users_medium2.txt](users_medium2.txt) have a format like this:
+The input files [users_medium1.txt](users_medium1.txt) and [users_medium2.txt](users_medium2.txt) have a format like this:
 
 ```console
 Lisa 25 Female 318-125-5013 Undisclosed Undisclosed 41.5833 -83.9274 false 37 45 135 Both 663-979-6253_953-451-3708_410-750-5502_750-260-3152_688-574-6330_915-954-4073
@@ -66,7 +66,7 @@ Your program will support four commands.
 4. unmatch someone.
 <!--5. delete account.-->
 
-More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file.
+More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines.
 
 ### Show Profiles
 
@@ -131,7 +131,7 @@ nydate.exe users.txt output.txt phoneNumber unmatch phoneNumberOther
 
 your program should first show profiles of all users who match with this user; and then show profiles of all users who match with this other user. All these profiles should be printed into the output file. Clearly, these two users should not be considered as a match anymore.
 
-See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file. In the case where either the user or the other user only has one match, or both the user and the other user have just one match, refer to these three files for the format:
+See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file. In the case where either the user or the other user only has one match, or both the user and the other user have just one match, your output should follow the format of one of these 3 sample output files.
 
 - [user_560-220-1509_unmatch_531-893-6571.txt](user_560-220-1509_unmatch_531-893-6571.txt): when both users only have this one match.
 - [user_741-273-7248_unmatch_621-883-6784.txt](user_741-273-7248_unmatch_621-883-6784.txt): when user has only one match.

@@ -82,6 +82,7 @@ your program should show all profiles which match with this user's preference on
 There are no users matching with your preference at this moment.
 ```
 
+**Note**: when printing a user's profile information, you should print the user's name, age, profession, school; however, if the user's profession is *Undisclosed*, then you should just skip printing the profession. Do not print the word "Undisclosed". Similarly, if the user's school information is *Undisclosed*, then you should just skip printing the school information. Do not print the word "Undisclosed". 
 
 ### Show Matches
 

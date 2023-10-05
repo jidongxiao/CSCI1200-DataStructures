@@ -66,7 +66,7 @@ Your program will support four commands.
 4. unmatch someone.
 <!--5. delete account.-->
 
-More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines.
+More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines. But this empty line is not displayed if you open the file from Github in the browser, because GitHub automatically trims trailing whitespace and empty lines at the end of files when displaying them in the browser.
 
 ### Show Profiles
 

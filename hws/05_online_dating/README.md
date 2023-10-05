@@ -150,7 +150,7 @@ nydate.exe input.txt output.txt phoneNumber delete
 -->
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.**
+In this assignment, you are required to create linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
@@ -159,3 +159,27 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 README.txt file.
 
 **Due Date**: 10/12/2023, Thursday, 23:59pm.
+
+## Rubric
+
+15 pts
+ - README.txt Completed (2 pts)
+   - One of name, collaborators, or hours not filled in (-1)
+   - Two or more of name, collaborators, or hours not filled in (-2)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (7 pts)
+   - No credit (significantly incomplete implementation) (-7)
+   - Function bodies containing more than one statement are placed in the .h file. (-2)
+   - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
+   - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
+   - Improper uses or omissions of const and reference. (-1)
+   - Overly cramped, excessive whitespace, or poor indentation. (-1)
+   - Poor file organization: Puts more than one class in a file (okay for very small helper classes, maybe) (-1)
+   - Poor variable names. (-1)
+   - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
+ - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
+   - No credit (significantly incomplete implementation). (-5)
+   - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
+   - Member variables are public. (-2)
+ - OUTPUT OPERATOR OVERLOADING (2 pts)
+   - Does not overload the output (&lt;&lt;) operator. (-2)
+   - Incorrect Syntax (-1)

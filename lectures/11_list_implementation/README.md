@@ -79,3 +79,8 @@ variable p.
 variables must be assigned the value NULL.
 - If p==head or p==tail, then the pointer adjustment code we just wrote needs to be specialized to removing
 the first or last node.
+
+## 11.8 Leetcode Exercises
+
+- [Leetcode problem 141: Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/). Solution: [p141_linkedlistcycle.cpp](../../leetcode/p141_linkedlistcycle.cpp)
+

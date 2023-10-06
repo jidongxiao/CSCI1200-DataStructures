@@ -151,6 +151,11 @@ nydate.exe input.txt output.txt phoneNumber delete
 ```
 -->
 
+### Output File Order
+
+- When printing profiles and likes, the users should stay in the original order as they are in the input files.
+- When printing matches, the users should be sorted in an increasing order based on their phone numbers, which should be a std::string type. for example, the user whose number is "765-651-1171" comes after the user whose number is "569-933-6508".
+
 ## Calculate Distance Based on Haversine Formula
 
 To find the users who are within a preferred distance from a user, you need a way to calculate the distance between two coordinates, and for that purpose, in this assignment, you will once again use the Haversine Formula, and the code of using the Haversine formula is once again given below:

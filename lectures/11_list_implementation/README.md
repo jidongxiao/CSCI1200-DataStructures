@@ -83,4 +83,4 @@ the first or last node.
 ## 11.8 Leetcode Exercises
 
 - [Leetcode problem 141: Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/). Solution: [p141_linkedlistcycle.cpp](../../leetcode/p141_linkedlistcycle.cpp)
-
+- [Leetcode problem 1472: Design Browser History](https://leetcode.com/problems/design-browser-history/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)

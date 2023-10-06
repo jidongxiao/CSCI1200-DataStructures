@@ -154,7 +154,7 @@ nydate.exe input.txt output.txt phoneNumber delete
 ### Output File Order
 
 - When printing profiles and likes, the users should stay in the original order as they are in the input files.
-- When printing matches, the users should be sorted in an increasing order based on their phone numbers, which should be a std::string type. for example, the user whose number is "765-651-1171" comes after the user whose number is "569-933-6508".
+- When printing matches, the users should be sorted in an increasing order based on their phone numbers, which should be a std::string type. For example, the user whose number is "765-651-1171" comes after the user whose number is "569-933-6508".
 
 ## Calculate Distance Based on Haversine Formula
 

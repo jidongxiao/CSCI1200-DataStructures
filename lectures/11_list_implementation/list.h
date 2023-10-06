@@ -7,6 +7,7 @@ class Node {
 	private:
 };
 
+// A "forward declaration" of this class is needed
 template <class T> class dslist;
 
 template <class T>
@@ -48,6 +49,7 @@ class list_iterator {
 			return (this->ptr != other.ptr);
 		}
 
+		// the dslist class needs access to the private ptr_ member variable
 		friend class dslist<T>;
 	private:
 		Node<T>* ptr;

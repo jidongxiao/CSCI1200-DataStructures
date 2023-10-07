@@ -192,7 +192,7 @@ This function takes four parameters, which are the latitude and longitude of two
 ```
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
+In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
@@ -220,6 +220,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
  - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)
    - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
+   - Uses iterators anywhere in the code. (-5)
    <!--- Member variables are public. (-2)-->
  - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

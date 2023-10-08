@@ -1,10 +1,11 @@
 # Lecture 12 --- Advanced Recursion
 
 Review Recursion vs. Iteration
-– Binary Search
+
+- Binary Search
 - “Rules” for writing recursive functions
-- Advanced Recursion — problems that cannot be easily solved using iteration (for or while loops):
-  – Merge sort
+- Advanced Recursion — problems that cannot be easily solved using iteration (for or while loops):  
+  – Merge sort  
   – Non-linear maze search
 
 ## 12.1 Review: Iteration vs. Recursion
@@ -38,7 +39,8 @@ bool binsearch(const std::vector<T> &v, int low, int high, const T &x) {
 		return binsearch(v, low, mid, x);
 	else
 		return binsearch(v, mid+1, high, x);
-	}
+}
+
 template <class T>
 bool binsearch(const std::vector<T> &v, const T &x) {
 	return binsearch(v, 0, v.size()-1, x);

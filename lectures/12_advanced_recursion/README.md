@@ -86,9 +86,9 @@ into the scratch vector. Finally, the entire scratch vector is copied back.
 
 ## 12.5 Thinking About Merge Sort
 
-- It exploits the power of recursion! We only need to think about
-  – Base case (intervals of size 1)
-  – Splitting the vector
+- It exploits the power of recursion! We only need to think about  
+  – Base case (intervals of size 1)  
+  – Splitting the vector  
   – Merging the results
 - We can insert cout statements into the algorithm and use this to understand how this is is happening.
 - Can we analyze this algorithm and determine the order notation for the number of operations it will perform?

@@ -94,7 +94,12 @@ into the scratch vector. Finally, the entire scratch vector is copied back.
 - Can we analyze this algorithm and determine the order notation for the number of operations it will perform?
 Count the number of pairwise comparisons that are required.
 
-## 12.6 Example: Word Search
+## 12.6 Merge Sort Exercises
+
+- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)
+- [Leetcode problem 148: Sort List](https://leetcode.com/problems/sort-list/). Solution: [p148_sortlist.cpp](../../leetcode/p148_sortlist.cpp)
+
+## 12.7 Example: Word Search
 
 - Take a look at the following grid of characters.
 ```console
@@ -117,11 +122,11 @@ daldruetryrt
   – At each such location, the occurrences of the second letter are sought in the 4 locations surrounding (r, c).
   - At each location where the second letter is found, a search is initiated in the 4 locations surrouding this second letter.
 
-## 12.7 Exercise: Complete the implementation
+## 12.8 Exercise: Complete the implementation
 
 - [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)
 
-## 12.8 Summary of Nonlinear Word Search Recursion
+## 12.9 Summary of Nonlinear Word Search Recursion
 
 - Recursion starts at each location where the first letter is found.
 - Each recursive call attempts to find the next letter by searching around the current position. When it is found,
@@ -129,8 +134,6 @@ a recursive call is made.
 - The current path is maintained at all steps of the recursion.
 - The “base case” occurs when the path is full or all positions around the current position have been tried.
 
-## 12.9 Leetcode Exercises
+## 12.10 Leetcode Exercises
 
 - [Leetcode problem 704: Binary Search](https://leetcode.com/problems/binary-search/). Solution: [p141_linkedlistcycle.cpp](../../leetcode/p141_linkedlistcycle.cpp)
-- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)
-- [Leetcode problem 148: Sort List](https://leetcode.com/problems/sort-list/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)

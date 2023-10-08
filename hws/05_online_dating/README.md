@@ -220,7 +220,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
  - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)
    - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
-   - Uses iterators anywhere in the code. (-5)
+   - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
    <!--- Member variables are public. (-2)-->
  - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

@@ -36,10 +36,10 @@ Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
 
 **To complete this checkpoint**, show a TA the implementation and the output of your program.
 
-## Checkpoint 3: 
+## Checkpoint 3: Debugging a Merge Sort program. 
 *estimate: 30-40 minutes*
 
-Debugging a Merge Sort program. We expect our program [checkpoint3.cpp](checkpoint3.cpp) to produce the following results when it is compiled and run.
+We expect our program [checkpoint3.cpp](checkpoint3.cpp) to produce the following results when it is compiled and run.
 
 ```console
 $ g++ checkpoint3.cpp

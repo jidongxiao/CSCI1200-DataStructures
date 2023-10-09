@@ -34,7 +34,23 @@ Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
 
 **Note**: Hardcoding the PrintList() function to do nothing but just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room.
 
-## Checkpoint 3: 
-*estimate: TBD*
+**To complete this checkpoint**, show a TA the implementation and the output of your program.
 
-Merge Sort an Array.
+## Checkpoint 3: 
+*estimate: 30-40 minutes*
+
+Debugging a Merge Sort program. We expect our program [checkpoint3.cpp](checkpoint3.cpp) to produce the following results when it is compiled and run.
+
+```console
+$ g++ checkpoint3.cpp
+$ ./a.out
+Test Case 1: Original Array: 5 2 9 1 5 6
+Sorted Array: 1 2 5 5 6 9
+
+Test Case 2: Original Array: 3 8 2 7 4
+Sorted Array: 2 3 4 7 8
+```
+
+But this program currently does not behave as expected. Please use a debugger to troubleshoot this program, find the problems and fix them.
+
+**To complete this checkpoint**, explain to a TA the bugs you found, show a TA your fixes and run the program to show that your fixes are correct and the program now produces the expected results.

@@ -136,4 +136,4 @@ a recursive call is made.
 
 ## 12.10 Leetcode Exercises
 
-- [Leetcode problem 704: Binary Search](https://leetcode.com/problems/binary-search/). Solution: [p704_binarysearch.v1.cpp](../../leetcode/p704_binarysearch.v1.cpp)a or [p704_binarysearch.v2.cpp](../../leetcode/p704_binarysearch.v2.cpp)
+- [Leetcode problem 704: Binary Search](https://leetcode.com/problems/binary-search/). Solution: [p704_binarysearch.v1.cpp](../../leetcode/p704_binarysearch.v1.cpp) or [p704_binarysearch.v2.cpp](../../leetcode/p704_binarysearch.v2.cpp)

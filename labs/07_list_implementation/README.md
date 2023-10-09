@@ -20,6 +20,20 @@ of the push_front, pop_front, and pop_back functions.
 **To complete this checkpoint**, show a TA the implementation and memory debugger output before and
 after writing destroy_list.
 
+## Checkpoint 2: 
+*estimate: 20-30 minutes*
+
+The PushBack() and the PrintList() function are used in [checkpoint2.cpp](checkpoint2.cpp), but their definitions are missing, please complete these two functions and make sure the program runs and produces the following output.
+
+```console
+$ g++ checkpoint2.cpp
+$ ./a.out
+Linked List of NodeA nodes: 1 -> 2 -> 3 -> 4 -> 5 -> nullptr
+Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
+```
+
+**Note**: Hardcoding the PrintList() function to do nothing but just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room.
+
 ## Checkpoint 3: 
 *estimate: TBD*
 

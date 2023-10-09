@@ -44,11 +44,12 @@ Debugging a Merge Sort program. We expect our program [checkpoint3.cpp](checkpoi
 ```console
 $ g++ checkpoint3.cpp
 $ ./a.out
-Test Case 1: Original Array: 5 2 9 1 5 6
-Sorted Array: 1 2 5 5 6 9
+Test Case 1: Original Vector: 5 2 9 1 5 6
+Sorted Vector: 1 2 5 5 6 9
 
-Test Case 2: Original Array: 3 8 2 7 4
-Sorted Array: 2 3 4 7 8
+Test Case 2: Original Vector: 3 8 2 7 4
+Sorted Vector: 2 3 4 7 8
+
 ```
 
 But this program currently does not behave as expected. Please use a debugger to troubleshoot this program, find the problems and fix them.

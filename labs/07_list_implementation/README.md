@@ -3,7 +3,7 @@
 ## Checkpoint 1
 *estimate: 20-30 minutes*
 
-The implementation of the dslist class is incomplete. In particular, the class is missing the destroy_list
+The implementation of the dslist class in [dslist.h](dslist.h) is incomplete. In particular, the class is missing the destroy_list
 private member function that is used by the destructor and the clear member function. The provided test
 case in [checkpoint1.cpp](checkpoint1.cpp) works “fine”, so what’s the problem?
 

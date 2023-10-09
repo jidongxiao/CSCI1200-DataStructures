@@ -124,7 +124,8 @@ daldruetryrt
 
 ## 12.8 Exercise: Complete the implementation
 
-- [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: [p1472_browserhistory.cpp](../../leetcode/p1472_browserhistory.cpp)
+- [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: To be added.
+- [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: To be added.
 
 ## 12.9 Summary of Nonlinear Word Search Recursion
 

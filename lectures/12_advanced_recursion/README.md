@@ -96,7 +96,7 @@ Count the number of pairwise comparisons that are required.
 
 ## 12.6 Merge Sort Exercises
 
-- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_sortarray.cpp](../../leetcode/p912_sortarray.cpp)
+<!--- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_sortarray.cpp](../../leetcode/p912_sortarray.cpp)-->
 - [Leetcode problem 148: Sort List](https://leetcode.com/problems/sort-list/). Solution: [p148_sortlist.cpp](../../leetcode/p148_sortlist.cpp)
 
 ## 12.7 Example: Word Search

@@ -52,6 +52,6 @@ Sorted Vector: 2 3 4 7 8
 
 ```
 
-But this program currently does not behave as expected. Please use a debugger to troubleshoot this program, find the problems and fix them.
+But this program currently does not behave as expected. Troubleshoot this program, find the problems and fix them. You can use a debugger.
 
 **To complete this checkpoint**, explain to a TA the bugs you found, show a TA your fixes and run the program to show that your fixes are correct and the program now produces the expected results.

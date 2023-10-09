@@ -116,15 +116,17 @@ daldruetryrt
 ```
 - If you can start from any location of this grid, and go forward, backward, up and down. Can you find the word **computer** in this grid?  (**Note**: The same letter cell may not be used more than once.)
 - A sketch of the solution is as follows:
-  – The grid of letters is represented as vector&lt;vector&lt;char&gt;&gt; grid; Each vector&lt;char&gt; represents a row. We can treat this as a two-dimensional array.
-  – A word to be sought, such as “computer” is read as a string.
-  – A pair of nested for loops searches the grid for occurrences of the first letter in the string. Call such a location (r, c).
-  – At each such location, the occurrences of the second letter are sought in the 4 locations surrounding (r, c).
-  - At each location where the second letter is found, a search is initiated in the 4 locations surrouding this second letter.
+  – The grid of letters is represented as vector&lt;vector&lt;char&gt;&gt; grid; Each vector&lt;char&gt; represents a row. We can treat this as a two-dimensional array.  
+  – A word to be sought, such as “computer” is read as a string.  
+  – A pair of nested for loops searches the grid for occurrences of the first letter in the string. Call such a location (r, c).  
+  - At each location where the first letter is found, a search of the second letter is initiated in the 4 neighboring locations of location (r, c).  
+  - Make this process recursive: at each location where the *ith* letter is found, a search of the *(i+1)th* letter is initiated in the 4 neighboring locations. 
+  - The search can stop when all letters of the string are found - this is the base case of the recursion.
+  - Question: how to make sure we do not use the same letter more than once on our success path?
 
 ## 12.8 Exercise: Complete the implementation
 
-- [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: To be added.
+- [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: [p79_wordsearch.cpp](p79_wordsearch.cpp).
 - [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: To be added.
 
 ## 12.9 Summary of Nonlinear Word Search Recursion

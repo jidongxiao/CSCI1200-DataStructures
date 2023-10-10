@@ -144,15 +144,11 @@ class dslist {
 
 		/* iterator implementation */
 		void erase(iterator itr){
-                        dslist<T>::iterator itr2 = itr;
-                        itr2++;
-			// Question: is this right?
-                        while (itr2 != this->end()) {
-                                *itr = *itr2;
-                                itr++;
-                                itr2++;
-                        }
-                        this->pop_back();
+                        dslist<T>::iterator itr2(itr.ptr->next);
+			itr.ptr->prev->next = itr2.ptr;
+			itr2.ptr->prev = itr.ptr->prev;
+			delete itr.ptr;
+			size_ = size_ - 1;
                 }
 		
 		void insert(iterator itr, const T& value){

@@ -32,7 +32,7 @@ Linked List of NodeA nodes: 1 -> 2 -> 3 -> 4 -> 5 -> nullptr
 Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
 ```
 
-**Note**: Hardcoding the PrintList() function to do nothing but just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room.
+**Note**: Hardcoding the PrintList() function to just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room. Also, your functions must be templated functions.
 
 **To complete this checkpoint**, show a TA the implementation and the output of your program.
 

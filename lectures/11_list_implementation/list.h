@@ -146,6 +146,7 @@ class dslist {
 		void erase(iterator itr){
                         dslist<T>::iterator itr2 = itr;
                         itr2++;
+			// Question: is this right?
                         while (itr2 != this->end()) {
                                 *itr = *itr2;
                                 itr++;

@@ -127,7 +127,7 @@ daldruetryrt
 ## 12.8 Exercise: Complete the implementation
 
 - [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: [p79_wordsearch.cpp](../../leetcode/p79_wordsearch.cpp).
-- [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: To be added.
+- [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: To be added. (it won't be added until we learn Trie).
 
 ## 12.9 Summary of Nonlinear Word Search Recursion
 

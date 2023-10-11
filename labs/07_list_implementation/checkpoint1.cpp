@@ -7,7 +7,7 @@
 int main() {
 
   // =======================================
-  // CHECKPOINT 2
+  // CHECKPOINT 1
 
   // create a list of the sqrt of the first 10 integers
   dslist<double> a;

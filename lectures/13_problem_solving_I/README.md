@@ -198,7 +198,7 @@ bool search_from_loc(loc position, const vector<string>& board, const string& wo
 }-->
 
 ## 13.6 Exercise: Maximum Subsequence Sum
-- Problem: Given is a sequence of n values, a0, . . . , an−1, find the maximum value of &#931;<sub>i=j</sub><sup>k</sup> over all possible subsequences j . . . k.
+- Problem: Given is a sequence of n values, a<sub>0</sub>, . . . , a<sub>n−1</sub>, find the maximum value of &#931;<sub>i=j</sub><sup>k</sup> over all possible subsequences j . . . k.
 - For example, given the integers: 14, −4, 6, −9, −8, 8, −3, 16, −4, 12, −7, 4
 The maximum subsequence sum is: 8 + (−3) + 16 + (−4) + 12 = 29.
 - Let’s write a first draft of the code, and then talk about how to make it more efficient.

@@ -53,17 +53,48 @@ program that finds all perfect numbers less than some input number n.
 
 ```cpp
 int main() {
-std::cout << "Enter a number: ";
-int n;
-std::cin >> n;
+	std::cout << "Enter a number: ";
+	int n;
+	std::cin >> n;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 ```
 
 - Given a sequence of n floating point numbers, find the two that are closest in value.
 
 ```cpp
 int main() {
-float f;
-while (std::cin >> f) {
+	float f;
+	while (std::cin >> f) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 ```
 
@@ -73,13 +104,26 @@ while (std::cin >> f) {
 int main() {
 int x;
 while (std::cin >> x) {
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 ```
 
 ## 13.5 Example: Merge Sort
 
-- In Lecture 13, we saw the basic framework for the merge sort algorithm and we finished the implementation of
-the merge helper function. How did we Map Ideas Into Code?
+- In Lecture 12, we finished the implementation of the merge sort function on linked lists, now let's re-visit the merge sort problem and sort vectors.
+- How do we Map Ideas Into Code?
 - What invariants can we write down within the merge sort and merge functions? Which invariants can we test
 using assertions? Which ones are too expensive (i.e., will affect the overall performance of the algorithm)?
 
@@ -119,9 +163,9 @@ void merge(int low, int mid, int high, vector<T>& values, vector<T>& scratch) {
 }
 ```
 
-## 13.6 Example: Nonlinear Word Search
+<!--## 13.6 Example: Nonlinear Word Search
 
-What did we need to think about to Get the Details Right when we finished the implementation of the
+What did we need to think about to **Get the Details Right** when we finished the implementation of the
 nonlinear word search program? What did we worry about when writing the first draft code (a.k.a. pseudocode)? When debugging, what test cases should we be sure to try? Let’s try to break the code and write down
 all the “corner cases” we need to test.
 
@@ -151,11 +195,10 @@ bool search_from_loc(loc position, const vector<string>& board, const string& wo
 	// We have failed to find a path from this loc, remove it from the path
 	path.pop_back();
 	return false;
-}
+}-->
 
-## 13.7 Exercise: Maximum Subsequence Sum
-- Problem: Given is a sequence of n values, a0, . . . , an−1, find the maximum value of Pk
-i=j ai over all possible subsequences j . . . k.
+## 13.6 Exercise: Maximum Subsequence Sum
+- Problem: Given is a sequence of n values, a0, . . . , an−1, find the maximum value of &#931;<sub>i=j</sub><sup>k</sup> over all possible subsequences j . . . k.
 - For example, given the integers: 14, −4, 6, −9, −8, 8, −3, 16, −4, 12, −7, 4
 The maximum subsequence sum is: 8 + (−3) + 16 + (−4) + 12 = 29.
 - Let’s write a first draft of the code, and then talk about how to make it more efficient.
@@ -170,7 +213,7 @@ int main() {
 }
 ```
 
-## 13.8 Problem Solving Strategies
+## 13.7 Problem Solving Strategies
 Here is an outline of the major steps to use in solving programming problems:
 1. Before getting started: study the requirements, carefully!
 2. Get started:
@@ -214,7 +257,7 @@ in the classes may be (relatively) trivial.
 using them may be fairly complicated.
 – Many problems require combinations of both.
 
-## 13.9 Design Example: Conway’s Game of Life
+## 13.8 Design Example: Conway’s Game of Life
 
 Let’s design a program to simulate Conway’s Game of Life. Initially, due to time constraints, we will focus on the
 main data structures of needed to solve the problem.

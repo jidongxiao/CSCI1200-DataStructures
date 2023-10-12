@@ -13,6 +13,12 @@ you about your accommodations for the test.
 - Bring pencil(s) & eraser (pens are ok, but not recommended). 
 - Practice problems from previous tests are available on the [course materials](https://submitty.cs.rpi.edu/courses/f23/csci1200/course_materials) page on Submitty.
 
+# Test Taking Skills
+- Look at the point values for each problem, allocate time proportional to the problem points - Roughly 1 minute per point. (Dont spend all your time on one problem and neglect the other big point problems).
+- Look at the size of the answer box. If your solution is going to take a lot more space than the box allows, we are probably looking for the solution to a simpler problem or a simpler solution to the problem.
+- Going in to the test, you should know what big topics will be covered on the test. As you skim through the problems, see if you can match up those big topics to each question. Even if you are atimped about how to solve the whole problem, or some of the details of the problem, make sure you demonstrate your understanding of the big topic that is covered in that question.
+- Re-read the problem statement carefullt. Make sure you didn't miss anything.
+
 # Lecture 13 --- Problem Solving Techniques
 
 Today we will discuss how to design and implement algorithms using three steps or stages:

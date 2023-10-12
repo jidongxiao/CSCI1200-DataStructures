@@ -1,4 +1,8 @@
-# Announcements: Test 2 Information
+# Announcements: 
+
+## Excused Absence Policy Updated https://www.cs.rpi.edu/academics/courses/fall23/csci1200/syllabus.php
+
+## Test 2 Information
 
 - Test 2 will be held Thursday, October 19th, 2023 from 6-7:50pm.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If on Tuesday evening you
@@ -25,6 +29,8 @@ Today we will discuss how to design and implement algorithms using three steps o
 1. Generating and Evaluating Ideas
 2. Mapping Ideas into Code
 3. Getting the Details Right
+4. Problem Solving Strategies
+5. Design Example: Conway's Game of Life
 
 ## 13.1 Generating and Evaluating Ideas
 

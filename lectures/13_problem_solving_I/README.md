@@ -22,46 +22,27 @@ Today we will discuss how to design and implement algorithms using three steps o
 
 ## 13.1 Generating and Evaluating Ideas
 
-- Most importantly, play with examples! Can you develop a strategy for solving the problem? You should try
-any strategy on several examples. Is it possible to map this strategy into an algorithm and then code?
-- Try solving a simpler version of the problem first and either learn from the exercise or generalize the result.
-- Does this problem look like another problem you know how to solve?
-- If someone gave you a partial solution, could you extend this to a complete solution?
-- What if you split the problem in half and solved each half (recursively) separately?
-- Does sorting the data help?
-- Can you split the problem into different cases, and handle each case separately?
-- Can you discover something fundamental about the problem that makes it easier to solve or makes you able to
-solve it more efficiently?
-- Once you have an idea that you think will work, you should evaluate it: will it indeed work? are there other
-ways to approach it that might be better / faster? if it doesn’t work, why not?
-
-## 13.2 Mapping Ideas Into Code
-
-- How are you going to represent the data? What is most efficient and what is easiest?
-- Can you use classes to organize the data? What data should be stored and manipulated as a unit? What
-information needs to be stored for each object? What operations (beyond simple accessors) might be helpful?
-- How can you divide the problem into units of logic that will become functions? Can you reuse any code you’re
-previously written? Will any of the logic you write now be re-usable?
-- Are you going to use recursion or iteration? What information do you need to maintain during the loops or
-recursive calls and how is it being “carried along”?
-- How effective is your solution? Is your solution general? How is the performance? (What is the order notation
-of the number of operations)? Can you now think of better ideas or approaches?
-- Make notes for yourself about the logic of your code as you write it. These will become your invariants; that
-is, what should be true at the beginning and end of each iteration / recursive call.
-
-## 13.3 Getting the Details Right
-
-- Is everything being initialized correctly, including boolean flag variables, accumulation variables, max / min
-variables?
-- Is the logic of your conditionals correct? Check several times and test examples by hand.
-- Do you have the bounds on the loops correct? Should you end at n, n − 1 or n − 2?
-- Tidy up your “notes” to formalize the invariants. Study the code to make sure that your code does in fact have
-it right. When possible use assertions to test your invariants. (Remember, sometimes checking the invariant is
-impossible or too costly to be practical.)
-- Does it work on the corner cases; e.g., when the answer is on the start or end of the data, when there are
-repeated values in the data, or when the data set is very small or very large?
-
-## 13.4 Exercises: Practice using these Techniques on Simple Problems
+- **Ask Questions!** Make notes of your questions as you read the problem.
+  Can you answer them? Do a little research.
+  Ask your lab study group. Ask your peers and colleues.
+  Ask your TA, instructor, interviewer, project manager, supervisor, etc.
+- **Most importantly, play with examples!** Can you develop a strategy for solving the
+  problem?
+  You should try any strategy on several examples.
+  Is it possible to map this strategy into an algorithm and then code?
+- Try solving a **simpler version of the problem** first and either learn from the exercise or generalize the result.
+- Does this problem **look like another problem** you know how to solve?
+- If someone gave you a partial solution, could you **extend this to a complete solution**?
+- What if you **split the problem in half** and solved each half (recursively) separately?
+- Does **sorting the data** help?
+- Can you split the problem into different cases, and **handle each case** separately?
+- Can you discover **something fundamental about the problem** that makes it easier to solve or makes you able to solve it more efficiently?
+- Once you have one or more ideas that you think **will work**, you should **evaluate your ideas**:
+    * Will it indeed work?
+    * Are there other ways to approach it that might be better / faster?
+    * if it doesn’t work, why not?
+ 
+## 13.2 Exercises: Practice using these Techniques on Simple Problems
 
 - A perfect number is a number that is the sum of its factors. The first perfect number is 6. Let’s write a
 program that finds all perfect numbers less than some input number n.
@@ -135,12 +116,29 @@ while (std::cin >> x) {
 }
 ```
 
-## 13.5 Example: Merge Sort
+## 13.3 Mapping Ideas Into Code
+
+- How are you going to **represent the data**?
+- What structures are **most efficient** and what is **easiest**?
+  _Note: Might be different answers!_
+- Can you **use classes (object-oriented programming)** to organize the data?
+   * What data should be stored and manipulated as a unit?
+   * What information needs to be stored for each object?
+   * What public operations (beyond simple accessors) might be helpful?
+- How can you **divide the problem into units of logic** that will become functions?
+- **Can you reuse any code** you’re previously written? Will any of the logic you write now be re-usable?
+- Are you going to use **recursion or iteration?** What information do you need to maintain during the loops or recursive calls and how is it being “carried along”?
+- How effective is your solution? Is your solution general?
+- **How is the performance?**
+    * What is the order notation of the number of operations?
+    * Can you now think of better ideas or approaches?
+- **Make notes for yourself about the logic of your code** as you write it. These will become your _invariants_; that is, what should be true at the beginning and end of each iteration / recursive call.
+
+## 13.4 Example: Merge Sort
 
 - In Lecture 12, we finished the implementation of the merge sort function on linked lists, now let's re-visit the merge sort problem and sort vectors.
-- How do we Map Ideas Into Code?
-- What invariants can we write down within the merge sort and merge functions? Which invariants can we test
-using assertions? Which ones are too expensive (i.e., will affect the overall performance of the algorithm)?
+- How do we **Map Ideas Into Code**?
+- What invariants can we write down within the **merge sort** and **merge** functions? Which invariants can we test using assertions? Which ones are too expensive (i.e., will affect the overall performance of the algorithm)?
 
 ```cpp
 // We split the vector in half, recursively sort each half, and
@@ -177,6 +175,15 @@ void merge(int low, int mid, int high, vector<T>& values, vector<T>& scratch) {
 	for ( i=low; i<=high; ++i ) values[i] = scratch[i];
 }
 ```
+
+## 13.5 Getting the Details Right
+
+- Is everything being **initialized** correctly, including boolean flag variables, accumulation variables, max / min variables?
+- Is the **logic of your conditionals** correct? Check several times and test examples by hand.
+- Do you have the **bounds on the loops** correct? Should you end at _n, n−1 or n−2_?
+- Tidy up your “notes” to **formalize the invariants**. Study the code to make sure that your code does in fact have it right. When possible **use assertions to test your invariants.** (Remember, sometimes checking the invariant is impossible or too costly to be practical.)
+- Does it work on the **corner cases**; e.g., when the answer is on the start or end of the data, when there are repeated values in the data, or when the data set is very small or very large?
+- Did you **combine / format / return / print your final answer? Don't forget to return the correct data from each function.**
 
 <!--## 13.6 Example: Nonlinear Word Search
 

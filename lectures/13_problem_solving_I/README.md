@@ -249,47 +249,47 @@ int main() {
 
 ## 13.7 Problem Solving Strategies
 Here is an outline of the major steps to use in solving programming problems:
-1. Before getting started: study the requirements, carefully!
+1. Before getting started: **study the requirements, carefully**!
 2. Get started:
-(a) What major operations are needed and how do they relate to each other as the program flows?
-(b) What important data / information must be represented? How should it be represented? Consider and
+   - What **major operations** are needed and how do they **relate to each other** as the **program flows**?
+   -  What **important data / information** must be represented? How should it be represented? Consider and
 analyze several alternatives, thinking about the most important operations as you do so.
-(c) Develop a rough sketch of the solution, and write it down. There are advantages to working on paper
+   - Develop a **rough sketch of the solution**, and write it down. There are advantages to working on paper
 first. Don’t start hacking right away!
-3. Review: reread the requirements and examine your design. Are there major pitfalls in your design? Does
+3. **Review**: reread the requirements and examine your design. Are there major pitfalls in your design? Does
 everything make sense? Revise as needed.
-4. Details, level 1:
-(a) What major classes are needed to represent the data / information? What standard library classes can
+4. **Details, level 1**:
+   - What major classes are needed to represent the data / information? What standard library classes can
 be used entirely or in part? Evaluate these based on efficiency, flexibility and ease of programming.
-(b) Draft the main program, defining variables and writing function prototypes as needed.
-(c) Draft the class interfaces — the member function prototypes.
+   - Draft the main program, defining variables and writing function prototypes as needed.
+   - Draft the class interfaces — the member function prototypes.
 These last two steps can be interchanged, depending on whether you feel the classes or the main program flow
 is the more crucial consideration.
-5. Review: reread the requirements and examine your design. Does everything make sense? Revise as needed.
-6. Details, level 2:
-(a) Write the details of the classes, including member functions.
-(b) Write the functions called by the main program. Revise the main program as needed.
-7. Review: reread the requirements and examine your design. Does everything make sense? Revise as needed.
-8. Testing:
-(a) Test your classes and member functions. Do this separately from the rest of your program, if practical.
+5. **Review:** reread the requirements and examine your design. Does everything make sense? Revise as needed.
+6. **Details, level 2**:
+   - Write the details of the classes, including member functions.
+   - Write the functions called by the main program. Revise the main program as needed.
+7. **Review:** reread the requirements and examine your design. Does everything make sense? Revise as needed.
+8. **Testing**:
+    - Test your classes and member functions. Do this separately from the rest of your program, if practical.
 Try to test member functions as you write them.
-(b) Test your major program functions. Write separate “driver programs” for the functions if possible. Use
+    - Test your major program functions. Write separate “driver programs” for the functions if possible. Use
 the debugger and well-placed output statements and output functions (to print entire classes or data
 structures, for example).
-(c) Be sure to test on small examples and boundary conditions.
+    - Be sure to test on small examples and boundary conditions.
 The goal of testing is to incrementally figure out what works — line-by-line, class-by-class, function-by-function.
 When you have incrementally tested everything (and fixed mistakes), the program will work.
 
-Notes
- For larger programs and programs requiring sophisticated classes / functions, these steps may need to be
+**Notes:**
+ - For larger programs and programs requiring sophisticated classes / functions, these steps may need to be
 repeated several times over.
- Depending on the problem, some of these steps may be more important than others.
-– For some problems, the data / information representation may be complicated and require you to write
+ - Depending on the problem, some of these steps may be more important than others.
+ - For some problems, the data / information representation may be complicated and require you to write
 several different classes. Once the construction of these classes is working properly, accessing information
 in the classes may be (relatively) trivial.
-– For other problems, the data / information representation may be straightforward, but what’s computed
+ - For other problems, the data / information representation may be straightforward, but what’s computed
 using them may be fairly complicated.
-– Many problems require combinations of both.
+ - Many problems require combinations of both.
 
 ## 13.8 Design Example: Conway’s Game of Life
 

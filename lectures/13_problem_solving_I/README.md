@@ -36,7 +36,7 @@ Today we will discuss how to design and implement algorithms using three steps o
 
 - **Ask Questions!** Make notes of your questions as you read the problem.
   Can you answer them? Do a little research.
-  Ask your lab study group. Ask your peers and colleues.
+  Ask your lab study group. Ask your peers and collegues.
   Ask your TA, instructor, interviewer, project manager, supervisor, etc.
 - **Most importantly, play with examples!** Can you develop a strategy for solving the
   problem?

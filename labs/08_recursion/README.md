@@ -14,6 +14,7 @@ before you proceed with the checkpoints.
 
 ## Checkpoint 1
 *estimate: 10-30 minutes*
+
 Did you notice that the rules prevent certain moves from occurring? What are they? If you don’t get them
 right you will not be able to do the lab correctly. Confirm your understanding with one of the lab TAs.
 

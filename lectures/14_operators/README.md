@@ -11,7 +11,7 @@
   – w × z = (ac − bd) + (ad + bc)i 
 - The magnitude of a complex number is &radic;a<sup>2</sup> + b<sup>2</sup>;
 
-## 14.2 Complex Class declaration (complex.h)
+## 14.2 Complex Class declaration ([complex.h](complex.h))
 
 ```cpp
 class Complex {
@@ -34,7 +34,7 @@ Complex operator- (Complex const& left, Complex const& right); // non-member fun
 ostream& operator<< (ostream& ostr, Complex const& c); // non-member function
 ```
 
-## 14.3 Implementation of Complex Class (complex.cpp)
+## 14.3 Implementation of Complex Class ([complex.cpp](complex.cpp))
 
 ```cpp
 // Assignment operator

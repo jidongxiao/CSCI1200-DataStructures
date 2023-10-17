@@ -4,8 +4,7 @@ This lab gives you practice in the use of recursion to solve problems. All three
 this lab deal with finding and counting the number of paths between points on a rectilinear grid. A starting
 point (x, y) with non-negative integer coordinates is provided. You are only allowed to move horizontally
 and vertically along the grid. Hence, from (x, y) you may move to (x + 1, y), (x − 1, y), (x, y − 1), (x, y + 1).
-Your goal is to return to the origin (0, 0) in such a way that you never increase the distance to the origin.
-The distance is counted as the minimum number of total vertical and horizontal steps to reach the origin. In
+However, **keep in mind that your goal is to return to the origin (0, 0) in such a way that you never increase the distance to the origin.** The distance is counted as the minimum number of total vertical and horizontal steps to reach the origin. In
 the first checkpoint the grid will be “free”. In the second and third checkpoints, some of the grid locations
 will be “blocked” in the sense that you can not move to that point.
 

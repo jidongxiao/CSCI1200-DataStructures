@@ -72,35 +72,35 @@ ostream& operator<< (ostream & ostr, Complex const& c) {
 
 ## 14.4 Operators as Non-Member Functions and as Member Functions
 
-- We have already written our own operators, especially operator<, to sort objects stored in STL containers.
-- We can write them as non-member functions (e.g., operator-). When implemented as a non-member function,
-the expression: z - w is translated by the compiler into the function call: operator- (z, w)
-- We can also write them as member functions (e.g., operator+). When implemented as a member function, the
-expression: z + w is translated into: z.operator+ (w)
-This shows that operator+ is a member function of z, since z appears on the left-hand side of the operator.
-Observe that the function has only one argument!
-There are several important properties of the implementation of an operator as a member function:  
-  – It is within the scope of class Complex, so private member variables can be accessed directly.  
-  – The member variables of z, whose member function is actually called, are referenced by directly by name.  
-  – The member variables of w are accessed through the parameter rhs.  
-  – The member function is const, which means that z will not (and can not) be changed by the function.
+- We have already written our own operators, especially **operator<**, to sort objects stored in STL containers.
+- We can write them as non-member functions (e.g., **operator-**). When implemented as a non-member function,
+the expression: **z - w** is translated by the compiler into the function call: **operator- (z, w)**
+- We can also write them as member functions (e.g., **operator+**). When implemented as a member function, the
+expression: **z + w is translated into: z.operator+ (w)**
+This shows that **operator+ is a member function of z**, since z appears on the left-hand side of the operator.
+Observe that the function has **only on**e argument!
+- There are several important properties of the implementation of an operator as a member function:  
+  – It is within the scope of class **Complex**, so private member variables can be accessed directly.  
+  – The member variables of **z**, whose member function is actually called, are referenced by directly by name.  
+  – The member variables of **w** are accessed through the parameter **rhs**.  
+  – The member function is **const**, which means that z will not (and can not) be changed by the function.
 - Also, since w will not be changed since the argument is also marked const.
-- Both operator+ and operator- return Complex objects, so both must call Complex constructors to create these
-objects. Calling constructors for Complex objects inside functions, especially member functions that work on
-Complex objects, seems somewhat counter-intuitive at first, but it is common practice!
+- Both **operator+ and operator-** return **Complex** objects, so both must call **Complex constructors** to create these
+objects. Calling constructors for **Complex** objects inside functions, especially member functions that work on
+**Complex** objects, seems somewhat counter-intuitive at first, but it is common practice!
 
 ## 14.5 Assignment Operators
 
-- The assignment operator: z1 = z2; becomes a function call: z1.operator=(z2);
-And cascaded assignments like: z1 = z2 = z3; are really: z1 = (z2 = z3);
-which becomes: z1.operator= (z2.operator= (z3));
+- The assignment operator: **z1 = z2**; becomes a function call: **z1.operator=(z2)**;
+And cascaded assignments like: **z1 = z2 = z3**; are really: **z1 = (z2 = z3)**;
+which becomes: **z1.operator= (z2.operator= (z3))**;
 Studying these helps to explain how to write the assignment operator, which is usually a member function.
 - The argument (the right side of the operator) is passed by constant reference. Its values are used to change
 the contents of the left side of the operator, which is the object whose member function is called. A reference
-to this object is returned, allowing a subsequent call to operator= (z1’s operator= in the example above).
+to this object is returned, allowing a subsequent call to **operator= (z1’s operator=** in the example above).
 The identifier this is reserved as a pointer inside class scope to the object whose member function is called.
-Therefore, *this is a a reference to this object.
-- The fact that operator= returns a reference allows us to write code of the form: (z1 = z2).real();
+Therefore, ***this** is a a reference to this object.
+- The fact that **operator=** returns a reference allows us to write code of the form: **(z1 = z2).real();**
 
 ## 14.6 Exercise
 

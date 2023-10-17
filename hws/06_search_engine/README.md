@@ -76,6 +76,7 @@ When searching *Tom Cruise*, your search engine should not include a page which 
 Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the <body></body> section of the HTML file.
 
 Based on Rule 1 and Rule 2: the third page showed in this image should not be included in your search results, when the search query is *Tom Cruise*. 
+
 ![alt text](images/tom_cruise.png "tom cruise")
 
 ### Rule 3.
@@ -117,11 +118,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
+ - DATA REPRESENTATION (5 pts)
    - No credit (significantly incomplete implementation). (-5)
-   - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
-   - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
+   - Uses data structures which have not been covered in this class. (-5)
+   - Neither std::map nor std::set is used. (-5)
    <!--- Member variables are public. (-2)-->
- - OUTPUT OPERATOR OVERLOADING (2 pts)
-   - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax (wrong return type, wrong arguments). (-1)
+ - RECURSION (2 pts)
+   - Does not use recursion in the web crawler component. (-2)

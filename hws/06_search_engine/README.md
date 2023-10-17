@@ -9,7 +9,7 @@ In this assignment you will develop a simple search engine called New York Searc
 
 ## Background
 
-When talking about Google Search Engine? what words come to your mind? Page Ranking? Inverted Indexing? Web Crawler?
+When talking about Google Search Engine, what words come to your mind? Page Ranking? Inverted Indexing? Web Crawler?
 
 When developing a search engine, the first question we want to ask is, where to start? When you type "Selena Gomez" or "Tom Brady" in the search box in Google, where does Google start? Does Google start searching from one specific website? The answer is Google does not start from one specific website, rather they maintain a list of URLs which are called Seed URLs. These Seed URLs are manually chosen which represent a diverse range of high-quality, reputable websites. Search engines usually have a component called web crawler, which crawls these URLs and then follow links from these web pages to other web pages. As the web crawler crawls these other web pages, it collects links from these other web pages to more web pages, and then follow these links to crawl more web pages. This process continues, ultimately, the goal is to discover as many web pages as possible. Once all pages are visited, the search engine will build a map, which is known as the inverted index, which maps terms (i.e., individual words) to web pages (also known as Documents). Below is an example:
 

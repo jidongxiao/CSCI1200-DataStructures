@@ -83,13 +83,29 @@ Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third pag
 
 More rules will be added here.
 
+## Supported Commands
+
 ## Input Files
 
 To be added.
 
 ### Output File Format and Order
 
-To be added.
+The output of your program should go to the output file. 
+
+- If no matches can be found for a search query, your search engine should print the following message to the output file.
+
+```console
+Your search - dsdwoddjojdjeokdddfjwoewojo - did not match any documents.
+```
+
+Replace *dsdwoddjojdjeokdddfjwoewojo* with the search query.
+
+This behavior matches with what Google does.
+
+![alt text](images/no_match.png "no match")
+
+- If matches are found, to be added here.
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to use std::map, and std::set, you are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.

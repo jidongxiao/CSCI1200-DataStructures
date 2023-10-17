@@ -59,22 +59,34 @@ Once the search engine returns the matching documents, you should rank these doc
 
 ### Useful String Functions
 
-## Features Your Search Engine Does Not Need to Support
+## Assignment Scope
 
-### Case-sensitive Search Engine
+To reduce the scope of the assignment, and hence reduce the amount of work from you, we make the following rules for this search engine.
+
+### Rule 1. Case-sensitive Search Engine
 
 Search engines are usually case-insensitive, but making the search engine case-insensitive will require some extra work and likely need to call some functions we have not learned in this course. Therefore, to simplify your tasks and reduce the amount of your work, in this assignment, the search engine you are going to implement is case-sensitive.
 
-### Words Which are Concatenated
+<!--### Words Which are Concatenated
 
-When searching Tom Cruise, your search engine should not include a page like the third one here:
+When searching *Tom Cruise*, your search engine should not include a page which contains *TomCruise*, but does not include "Tom Cruise". Therefore, a search result like the third one here should not be presented in your search results.-->
+
+### Rule 2. Search HTML Files Only
+
+Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the <body></body> section of the HTML file.
+
+Based on Rule 1 and Rule 2: the third page showed in this image should not be included in your search results, when the search query is *Tom Cruise*. 
 ![alt text](images/tom_cruise.png "tom cruise")
+
+### Rule 3.
+
+More rules will be added here.
 
 ## Input Files
 
 To be added.
 
-### Output File Order
+### Output File Format and Order
 
 To be added.
 

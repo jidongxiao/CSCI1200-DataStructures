@@ -73,7 +73,7 @@ When searching *Tom Cruise*, your search engine should not include a page which 
 
 ### Rule 2. Search HTML Files Only
 
-Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the <body></body> section of the HTML file.
+Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt;&lt;/body&gt; section of the HTML file.
 
 Based on Rule 1 and Rule 2: the third page showed in this image should not be included in your search results, when the search query is *Tom Cruise*. 
 

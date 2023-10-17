@@ -72,18 +72,17 @@ ostream& operator<< (ostream & ostr, Complex const& c) {
 
 ## 14.4 Operators as Non-Member Functions and as Member Functions
 
-- We have already written our own operators, especially operator<, to sort objects stored in STL containers
-and to create our own keys for maps.
+- We have already written our own operators, especially operator<, to sort objects stored in STL containers.
 - We can write them as non-member functions (e.g., operator-). When implemented as a non-member function,
 the expression: z - w is translated by the compiler into the function call: operator- (z, w)
 - We can also write them as member functions (e.g., operator+). When implemented as a member function, the
 expression: z + w is translated into: z.operator+ (w)
 This shows that operator+ is a member function of z, since z appears on the left-hand side of the operator.
 Observe that the function has only one argument!
-There are several important properties of the implementation of an operator as a member function:
-  – It is within the scope of class Complex, so private member variables can be accessed directly.
-  – The member variables of z, whose member function is actually called, are referenced by directly by name.
-  – The member variables of w are accessed through the parameter rhs.
+There are several important properties of the implementation of an operator as a member function:  
+  – It is within the scope of class Complex, so private member variables can be accessed directly.  
+  – The member variables of z, whose member function is actually called, are referenced by directly by name.  
+  – The member variables of w are accessed through the parameter rhs.  
   – The member function is const, which means that z will not (and can not) be changed by the function.
 - Also, since w will not be changed since the argument is also marked const.
 - Both operator+ and operator- return Complex objects, so both must call Complex constructors to create these

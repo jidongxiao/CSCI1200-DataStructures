@@ -105,12 +105,16 @@ Here:
 
 Your search engine should support both regular search and phrase search.  
 1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
-2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. Based on this definition, a document which contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
+2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. 
+
+Based on the above definition, a document which contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
 
 ```console
 Tom and Jerry show
 Have Fun And Save Now With Great Deals When You Cruise With Carnival. Book Online Today.
 ```
+
+But it is not a valid document if the user does a phrase search - "*Tom Cruise*", as no exact match can be found in this document.
 
 ## Input Files
 

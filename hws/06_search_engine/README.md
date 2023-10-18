@@ -53,11 +53,8 @@ Once the search engine returns the matching documents, you should rank these doc
 - Backlinks: The number and quality of links from other reputable websites are assessed.
 - Freshness.
 
-### Period Before the Sentence
+## Basic Features
 
-### Regular Search vs Phrase Search
-
-### Useful String Functions
 
 ## Assignment Scope
 
@@ -79,11 +76,41 @@ Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third pag
 
 ![alt text](images/tom_cruise.png "tom cruise")
 
-### Rule 3.
+### Rule 3. Search Query: No More Than 3 Words
+
+We also limit the user to search no more than 3 words in each query. Based on this rule, we allow users to search *Tom*, *Tom Cruise*, *Tom and Jerry*, but *Tom Hanks Academy Award* is not allowed, as it contains more than 3 words.
+
+### Rule 4.
 
 More rules will be added here.
 
 ## Supported Commands
+
+Your program will be run like this:
+
+```console
+nysearch.exe html_files/index.html output.txt Tom
+nysearch.exe html_files/index.html output.txt Tom Cruise
+nysearch.exe html_files/index.html output.txt Tom and Jerry
+```
+
+Here:
+
+- *nysearch.exe* is the executable file name.
+- html_files/index.html is the SEED URL.
+- output.txt is where to print your output to.
+- *Tom* is an example of a search query which contains one word, *Tom Cruise* is an example of a search query which contains two words, *Tom and Jerry* is an example of a search query which contains three words.
+
+### Regular Search vs Phrase Search
+
+Your search engine should support both regular search and phrase search.  
+1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
+2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. Based on this definition, a document which contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
+
+```console
+Tom and Jerry show
+Have Fun And Save Now With Great Deals When You Cruise With Carnival. Book Online Today.
+```
 
 ## Input Files
 
@@ -106,6 +133,11 @@ This behavior matches with what Google does.
 ![alt text](images/no_match.png "no match")
 
 - If matches are found, to be added here.
+
+### The Snippet
+### Period Before the Sentence
+
+### Useful String Functions
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to use std::map, and std::set, you are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.

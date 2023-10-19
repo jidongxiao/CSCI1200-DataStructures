@@ -179,6 +179,8 @@ This snippet contains an excerpt from the page's content that is directly relate
 1. It should contain exactly 120 characters.
 2. It should start from the beginning of a sentence which contains the query.
 
+more on this snippet to be added.
+
 #### Period Before the Sentence
 
 ## Useful String Functions
@@ -197,7 +199,8 @@ This snippet contains an excerpt from the page's content that is directly relate
 ```
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to use std::map, and std::set, you are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
+
+In this assignment, you are required to use std::map, or std::set. You are recommended to use both. You are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
@@ -208,12 +211,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Rubric
 
-15 pts
+20 pts
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
-   - No credit (significantly incomplete implementation) (-6)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
+   - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
@@ -223,10 +226,9 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
-   - Uses data structures which have not been covered in this class. (-5)
-   - Neither std::map nor std::set is used. (-5)
+ - DATA REPRESENTATION (8 pts)
+   - Uses data structures which have not been covered in this class. (-8)
+   - Neither std::map nor std::set is used. (-8)
    <!--- Member variables are public. (-2)-->
  - RECURSION (2 pts)
    - Does not use recursion in the web crawler component. (-2)

@@ -115,3 +115,41 @@ string s (to 1 if the string wasn’t already it a pair in the map).
 - For the user of the map, operator[] makes the map feel like a vector, except that indexing is based on a
 string (or any other key) instead of an int.
 - Note that the result of using [] is that the key is ALWAYS in the map afterwards.
+
+## 15.6 Map Iterators
+
+- Iterators may be used to access the map contents sequentially. Maps provide begin() and end() functions for
+accessing the bounding iterators. Map iterators have ++ and -- operators.
+- Each iterator refers to a pair stored in the map. Thus, given map iterator it, it-&gt;first is a const string
+and it-&gt;second is an int. Notice the use of it-> , and remember it is just shorthand for (*it).
+
+## 15.7 Map Find
+
+- One of the problems with operator[] is that it always places a key / value pair in the map. Sometimes we
+don’t want this and instead we just want to check if a key is there.
+- The find member function of the map class does this for us. For example:
+m.find(key);
+where m is the map object and key is the search key. It returns a map iterator:
+If the key is in one of the pairs stored in the map, find returns an iterator referring to this pair.
+If the key is not in one of the pairs stored in the map, find returns m.end().
+
+## 15.8 Map Insert
+
+- The prototype for the map insert member function is:
+m.insert(std::make_pair(key, value));
+insert returns a pair, but not the pair we might expect. Instead it is pair of a map iterator and a bool:
+std::pair<map<key_type, value_type>::iterator, bool>
+- The insert function checks to see if the key being inserted is already in the map.
+  – If so, it does not change the value, and returns a (new) pair containing an iterator referring to the existing
+pair in the map and the bool value false.  
+  – If not, it enters the pair in the map, and returns a (new) pair containing an iterator referring to the newly
+added pair in the map and the bool value true.
+
+## 15.9 Map Erase
+
+- Maps provide three different versions of the erase member function:
+  - void erase(iterator p) — erase the pair referred to by iterator p.  
+  - void erase(iterator first, iterator last) — erase all pairs from the map starting at first and going
+up to, but not including, last.  
+  - size_type erase(const key_type& k) — erase the pair containing key k, returning either 0 or 1, depending
+on whether or not the key was in a pair in the map.

@@ -136,12 +136,44 @@ This behavior matches with what Google does.
 
 ![alt text](images/no_match.png "no match")
 
-- If matches are found, to be added here.
+- If matches are found, you should print the ranked results in a format similar to what Google does, as shown in this following image:
+
+![alt text](images/celtics.png "Boston Celtics")
+
+More specifically, for each document, print
+1. the title
+2. the url
+3. the description
+4. a snippet
+
+### The Description
+
+In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a meta description tag which provides a brief description of the page's content. This description is often displayed by search engines in search results give users an idea of what the web page is about. The following is an example:
+
+<meta name="description" content="Boston Celtics Scores, Stats and Highlights">
+
+Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 
 ### The Snippet
-### Period Before the Sentence
 
-### Useful String Functions
+Your search engine should display 120 characters as a snippet.
+
+#### Period Before the Sentence
+
+## Useful String Functions
+
+- find
+- substr
+- find_last_of
+- erase
+- rfind
+- std::isspace
+
+## Provided Functions
+
+```cpp
+// Function to parse an HTML file and extract links to local files
+```
 
 ## Program Requirements & Submission Details
 In this assignment, you are required to use std::map, and std::set, you are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.

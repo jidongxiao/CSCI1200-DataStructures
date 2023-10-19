@@ -70,7 +70,7 @@ When searching *Tom Cruise*, your search engine should not include a page which 
 
 ### Rule 2. Search HTML Files Only
 
-Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt;&lt;/body&gt; section of the HTML file.
+Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt; section of the HTML file. The &lt;body&gt; section, enclosed within the &lt;body&gt;&lt;/body&gt; tags in an HTML document, represents the primary content area of the web page.
 
 Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third page showed in this image should not be included in your search results, unless the words *Tom Cruise* appears in the other part of the &lt;body&gt;&lt;/body&gt; section of this web page, which is not displayed here.
 
@@ -160,7 +160,7 @@ In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a
 
 ### The URL
 
-This portion will be different what Google shows, as our search is limited to the [html_files](html_files) folder, the URL we present will just be a path within this folder.
+This portion will be different from what Google shows, as our search is limited to the [html_files](html_files) folder, the URL we present will just be a path within this folder.
 
 ### The Description
 
@@ -174,7 +174,10 @@ Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 
 ### The Snippet
 
-Your search engine should display 120 characters as a snippet.
+This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirement for this snippet is:
+
+1. It should contain exactly 120 characters.
+2. It should start from the beginning of a sentence which contains the query.
 
 #### Period Before the Sentence
 

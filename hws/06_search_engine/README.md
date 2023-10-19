@@ -80,7 +80,11 @@ Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third pag
 
 We also limit the user to search no more than 3 words in each query. Based on this rule, we allow users to search *Tom*, *Tom Cruise*, *Tom and Jerry*, but *Tom Hanks Academy Award* is not allowed, as it contains more than 3 words.
 
-### Rule 4.
+### Rule 4. Local Searching Only
+
+The search engine you implement will not search anything on the Internet, as that requires extensive knowledge in computer networks and will need to include network libraries, which is way beyond the scope of this course. In this assignment, we limit our searches to a local folder, which is provided as [html_files](html_files).
+
+### Rule 5.
 
 More rules will be added here.
 
@@ -146,11 +150,25 @@ More specifically, for each document, print
 3. the description
 4. a snippet
 
+### The Title
+
+In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a "title" element. It is used to define the title of the web page or document. In the following example, the text "ESPN" within the &lt;title&gt; tags represents the title of the web page, which is typically displayed in the browser's title bar or tab, and it is often used by search engines to display the title of the page in search results.
+
+```html
+<title>ESPN</title>
+```
+
+### The URL
+
+This portion will be different what Google shows, as our search is limited to the [html_files](html_files) folder, the URL we present will just be a path within this folder.
+
 ### The Description
 
 In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a meta description tag which provides a brief description of the page's content. This description is often displayed by search engines in search results give users an idea of what the web page is about. The following is an example:
 
+```html
 <meta name="description" content="Boston Celtics Scores, Stats and Highlights">
+```
 
 Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 

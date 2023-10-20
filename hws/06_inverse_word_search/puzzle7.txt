@@ -1,0 +1,35 @@
+5 3
++ tenet
++ alula
++ tat
++ nun
+- ale
+- an
+- tent
+- tnt
+- aa
+- ee
+- ll
+- au
+- b
+- c
+- d
+- f
+- g
+- h
+- i
+- j
+- k
+- m
+- o
+- p
+- q
+- r
+- s
+- v
+- w
+- x
+- y
+- z
+
+

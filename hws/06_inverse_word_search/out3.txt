@@ -1,0 +1,41 @@
+8 solution(s)
+Board: 
+  east
+  rest
+  arts
+  arid
+Board: 
+  arid
+  arts
+  rest
+  east
+Board: 
+  eraa
+  aerr
+  ssti
+  ttsd
+Board: 
+  ttsd
+  ssti
+  aerr
+  eraa
+Board: 
+  aare
+  rrea
+  itss
+  dstt
+Board: 
+  dstt
+  itss
+  rrea
+  aare
+Board: 
+  tsae
+  tser
+  stra
+  dira
+Board: 
+  dira
+  stra
+  tser
+  tsae

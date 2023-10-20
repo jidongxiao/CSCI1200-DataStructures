@@ -109,11 +109,13 @@ arrays. Arrays and vectors are efficient random access data structures.
 ```
 
 - For maps, the [] operator searches the map for the pair containing the key (string) s.  
+  
   – If such a pair containing the key is not there, the operator:
     1. creates a pair containing the key and a default initialized value,
     2. inserts the pair into the map in the appropriate position, and
     3. returns a reference to the value stored in this new pair (the second component of the pair).  
     This second component may then be changed using operator++.  
+  
   – If a pair containing the key is there, the operator simply returns a reference to the value in that pair.
 - In this particular example, the result in either case is that the ++ operator increments the value associated with
 string s (to 1 if the string wasn’t already it a pair in the map).

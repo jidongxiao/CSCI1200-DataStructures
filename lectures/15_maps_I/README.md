@@ -157,6 +157,6 @@ on whether or not the key was in a pair in the map.
 
 ## 15.10 Leetcode Exercises
 
-- [Leetcode problem 2: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p2_twosum.cpp](../../leetcode/p2_twosum.cpp).
+- [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum.cpp](../../leetcode/p1_twosum.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
 

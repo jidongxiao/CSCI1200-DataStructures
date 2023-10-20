@@ -19,7 +19,7 @@ solutions.
 Your program should expect three command line arguments, the name of the input file, the name of the
 output file, and a string:
 
-```cpp
+```console
 inverse_word_search.exe puzzle2.txt out2.txt one_solution
 inverse_word_search.exe puzzle2.txt out2.txt all_solutions
 ```
@@ -78,12 +78,34 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Rubric
 
-15 pts
+22 pts
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
-   - No credit (significantly incomplete implementation) (-6)
+ - LETTER GRID REPRESENTATION (2 pts)
+   - Grid is not represented via nested structure vector&lt;vector&lt;char&gt;&gt;, vector&lt;vector&lt;string&gt;&gt;, vector&lt;string&gt;, char\*\*, etc. (-1)
+   - Lookup of a position is not O(1), uses something like&lt;list&lt;char&gt;&gt; which has lookup of O(n). (-1)
+   - Incomplete to the point that no grid representation is evident within their code. (-1)
+ - USES RECURSION (4 pts)
+   - Use some non-trivial recursion but doesn’t use recursion in the search process of board creation. (-2)
+   - Uses recursion but only trivially. (-3)
+   - Does not use any recursion. (-4)
+ - ALGORITHM ANALYSIS (In terms of the grid dimensions, the # of words, # of letters per word, the number of solutions etc.  Looking for both an answer in order notation and a well-written justification in the plaintext README.txt file.) (5 pts)
+   - No order notation provided (-5)
+   - Order notation not written in terms of the provided variables w,h,r,f,l,s. Introduces new vars or provides it just in terms of n. (-2)
+   - Incorrect order notation. (-2)
+   - Order notation not simplified. (-1)
+   - No justification provided. (-4)
+   - Insufficient justification (tables alone are not enough). (-1)
+   - Did not finish but provides a reasonable analysis with respect to a theoretical implementation and properly justifies it. (-2)
+   - Did not finish but provides a runtime and some small analysis for a theoretical solution. (-4)
+   - Correct order notation for a largely incomplete implementation. (-4)
+ - TESTING SUMMARY & NEW TEST CASES (Included with submission and discussed in README.txt) (3 pts)
+   - Does not provide an adequate description of what the new testcases were in the README. (-2)
+   - Did not provide running times of the new test cases. (-1)
+   - Provides new test case description but implementation/test was missing from the submission. (-1)
+   - Did not provide new test cases or implementation too incomplete for new test cases. (-3)
+ - PROGRAM STRUCTURE (6 pts)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
@@ -92,12 +114,5 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
+   - Use of global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
-   - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
-   - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
-   <!--- Member variables are public. (-2)-->
- - OUTPUT OPERATOR OVERLOADING (2 pts)
-   - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax (wrong return type, wrong arguments). (-1)

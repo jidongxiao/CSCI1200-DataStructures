@@ -2,7 +2,7 @@
 
 In this homework we will build an inverse word search program using the techniques of recursion. 
 The goal is to construct a grid of letters that one can search to find specific words. Understanding the non-linear word
-search program from Lectures 12 & 13 will be helpful in thinking about how you will solve this problem.
+search program from Lectures 12 will be helpful in thinking about how you will solve this problem.
 We strongly urge you to study and play with that program, including tracing through its behavior using a
 debugger or cout statements or both. Please read the entire handout before beginning your implementation.
 

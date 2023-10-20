@@ -147,8 +147,10 @@ m.insert(std::make_pair(key, value));
 insert returns a pair, but not the pair we might expect. Instead it is pair of a map iterator and a bool:
 std::pair<map<key_type, value_type>::iterator, bool>
 - The insert function checks to see if the key being inserted is already in the map.
+
   – If so, it does not change the value, and returns a (new) pair containing an iterator referring to the existing
-pair in the map and the bool value false.  
+pair in the map and the bool value false.
+
   – If not, it enters the pair in the map, and returns a (new) pair containing an iterator referring to the newly
 added pair in the map and the bool value true.
 

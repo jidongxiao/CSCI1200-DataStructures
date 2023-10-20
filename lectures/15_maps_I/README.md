@@ -23,8 +23,7 @@ text file on which that string occurs (next lecture).
 std::map&lt;key_type, value_type&gt; var_name
 In our first two examples above, key type is a string. In the first example, the value type is an int and in
 the second it is a std::vector&lt;int&gt;.
-- Entries in maps are pairs:
-std::pair&lt;const key_type, value_type&gt;
+- Entries in maps are pairs: std::pair&lt;const key_type, value_type&gt;, or just std::pair&lt;key_type, value_type&gt;.
 - Map iterators refer to pairs.
 - Map search, insert and erase are all very fast: O(log n) time, where n is the number of pairs stored in the map.
  Note: The STL map type has similarities to the Python dictionary, Java HashMap, or a Perl hash, but the

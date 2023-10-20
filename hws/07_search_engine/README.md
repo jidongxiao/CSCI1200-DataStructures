@@ -1,4 +1,4 @@
-# Homework 6 — Design and Implementation of a Simple Google
+# Homework 7 — Design and Implementation of a Simple Google
 
 In this assignment you will develop a simple search engine called New York Search. Your program will mimic some of the features provided by Google. Please read the entire handout before starting to code the assignment.
 

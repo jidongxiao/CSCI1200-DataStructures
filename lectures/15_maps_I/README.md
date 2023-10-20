@@ -12,7 +12,7 @@ Associative Containers (STL Maps)
 ## 15.1 STL Maps: Associative Containers
 
 - STL maps store pairs of “associated” values.
- We will see several examples today, in Lab 9, and in Lecture 15:
+ We will see several examples today, in Lab 9, and in Lecture 16:
 - An association between a string, representing a word, and an int representing the number of times that
 word has been seen in an input file.
 - An association between a string, representing a word, and a vector that stores the line numbers from a
@@ -31,7 +31,7 @@ std::pair&lt;const key_type, value_type&gt;
 data structures are not the same. The organization, implementation, and performance is different. In a couple
 weeks we’ll see an STL data structure that is even more similar to the Python dictionary.
 - Map search, insert and erase are O(log n).
-First, let’s see how this some of this works with a program to count the occurrences of each word in a file. We’ll look
+First, let’s see how some of this works with a program to count the occurrences of each word in a file. We’ll look
 at more details and more examples later.
 
 ## 15.2 Counting Word Occurrences
@@ -43,17 +43,18 @@ Here’s a simple and elegant solution to this problem using a map:
 #include <map>
 #include <string>
 int main() {
-std::string s;
-std::map<std::string, int> counters; // store each word and an associated counter
-// read the input, keeping track of each word and how often we see it
-while (std::cin >> s)
-++counters[s];
-// write the words and associated counts
-std::map<std::string, int>::const_iterator it;
-for (it = counters.begin(); it != counters.end(); ++it) {
-std::cout << it->first << "\t" << it->second << std::endl;
-}
-return 0;
+	std::string s;
+	std::map<std::string, int> counters; // store each word and an associated counter
+	// read the input, keeping track of each word and how often we see it
+	while (std::cin >> s){
+		++counters[s];
+	}
+	// write the words and associated counts
+	std::map<std::string, int>::const_iterator it;
+	for (it = counters.begin(); it != counters.end(); ++it) {
+		std::cout << it->first << "\t" << it->second << std::endl;
+	}
+	return 0;
 }
 ```
 
@@ -153,3 +154,9 @@ added pair in the map and the bool value true.
 up to, but not including, last.  
   - size_type erase(const key_type& k) — erase the pair containing key k, returning either 0 or 1, depending
 on whether or not the key was in a pair in the map.
+
+## 15.10 Leetcode Exercises
+
+- [Leetcode problem 2: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p2_twosum.cpp](../../leetcode/p2_twosum.cpp).
+- [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
+

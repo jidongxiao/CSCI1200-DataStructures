@@ -72,7 +72,7 @@ The mechanics of using std::pairs are relatively straightforward:
 - std::pairs are a templated struct with just two members, called first and second. Reminder: a struct
 is basically a wimpy class and in this course you aren’t allowed to create new structs. You should use classes
 instead.
-- To work with pairs, you must #include <utility>. Note that the header file for maps (#include <map>)
+- To work with pairs, you must #include &lt;utility&gt;. Note that the header file for maps (#include &lt;map&gt;)
 itself includes utility, so you don’t have to include utility explicitly when you use pairs with maps.
 - Here are simple examples of manipulating pairs:
 ```cpp
@@ -103,14 +103,18 @@ std::pair&lt;const key_type, value_type&gt;
 - We’ve used the [] operator on vectors, which is conceptually very simple because vectors are just resizable
 arrays. Arrays and vectors are efficient random access data structures.
 - But operator[] is actually a function call, so it can do things that aren’t so simple too, for example:
+
+```cpp
 ++counters[s];
- For maps, the [] operator searches the map for the pair containing the key (string) s.
-– If such a pair containing the key is not there, the operator:
-1. creates a pair containing the key and a default initialized value,
-2. inserts the pair into the map in the appropriate position, and
-3. returns a reference to the value stored in this new pair (the second component of the pair).
-This second component may then be changed using operator++.
-– If a pair containing the key is there, the operator simply returns a reference to the value in that pair.
+```
+
+- For maps, the [] operator searches the map for the pair containing the key (string) s.
+  – If such a pair containing the key is not there, the operator:
+    1. creates a pair containing the key and a default initialized value,
+    2. inserts the pair into the map in the appropriate position, and
+    3. returns a reference to the value stored in this new pair (the second component of the pair).  
+    This second component may then be changed using operator++.
+  – If a pair containing the key is there, the operator simply returns a reference to the value in that pair.
 - In this particular example, the result in either case is that the ++ operator increments the value associated with
 string s (to 1 if the string wasn’t already it a pair in the map).
 - For the user of the map, operator[] makes the map feel like a vector, except that indexing is based on a

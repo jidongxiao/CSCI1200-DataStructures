@@ -41,7 +41,7 @@ rotations and reflections.
 ![alt text](example2.png "example2")
 
 When asked to find all solutions, your program should first output the number of solutions and then an
-ASCII representation for each solution. See the example output on the course webpage. You should follow
+ASCII representation for each solution. See the example output files provided in this folder. You should follow
 this output closely, however your solutions may be listed in a different order. When asked to find just one
 solution, your program should just output the first legal solution it finds (it does not need to count the
 number of solutions, nor does it need to be the first solution shown in our output). If the puzzle is impossible

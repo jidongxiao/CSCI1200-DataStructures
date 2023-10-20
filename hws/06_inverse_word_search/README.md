@@ -27,6 +27,8 @@ inverse_word_search.exe puzzle2.txt out2.txt all_solutions
 The third argument indicates whether the program should find all solutions, or just one solution. Here’s an
 example of the input file format:
 
+![alt text](example1.png "example1")
+
 The first line specifies the width and height of the grid. Then each line that follows contains a character
 and a word. If the character is ’+’, then the word must appear in the grid. If the character is ’-’, then the
 word must not appear in the grid. For this first example we show an incorrect solution on the left. Though
@@ -35,6 +37,8 @@ fully correct solution. This particular problem has 8 solutions including rotati
 
 Below is a second example that specifies only positive (required) words. This puzzle has 4 solutions including
 rotations and reflections.
+
+![alt text](example2.png "example2")
 
 When asked to find all solutions, your program should first output the number of solutions and then an
 ASCII representation for each solution. See the example output on the course webpage. You should follow

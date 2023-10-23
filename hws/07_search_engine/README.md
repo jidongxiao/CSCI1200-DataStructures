@@ -49,13 +49,75 @@ The Query Search Component's goal is to identify the Matching Document.
 
 ### Page Ranking
 
-Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factor:
+Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factors:
 
-<!-- Keyword Usage. (keyword stuffing)-->
+- Keywords Density. <!--(keyword stuffing)-->
 - Backlinks: The number and quality of links from other reputable websites are assessed.
 <!--- Freshness.-->
 
-re of all pages, present them to the user in descending order, i.e., pages whose final score is higher should be presented first.
+For each page to be presented, we calculate the a page score, and then present these pages in descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlink score*. Once we have these two scores, we can get the page score using this formula:
+
+```console
+page score = (0.8 * keywords density score + 0.2 * backlinks score);
+```
+<a name="formula[1]"></a>
+
+In order to match the results used by the autograder, you should define all scores as *double*. Next we will describe how to calculate the keywords density score and the backlinks score.
+
+#### KeyWords Density Score
+
+A search query may contain one keyword or multiple keywords. Given a set of keywords, we can calculate the keywords density score by doing the following two steps:
+
+1. Calculates a density score for each keyword within the document. 
+2. Accumulates these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
+
+For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its average occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
+
+```console
+Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Average Keyword Density Across All Documents)
+```
+
+Here, we consider the content of each document as a string.
+
+Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword Tom appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the average density across all documents would be:
+
+```console
+2/50 + 3/40 + 4/100 = 0.155
+```
+
+and the keyword density score for this keyword *Tom* in the first document, would be:
+
+```console
+2 / (50 * 0.155) = 0.258
+
+```
+
+and the keyword density score for this keyword *Tom* in the second document, would be:
+
+```console
+3 / (40 * 0.155) = 0.484
+
+```
+
+and the keyword density score for this keyword *Tom* in the third document, would be:
+
+```console
+4 / (100 * 0.155) = 0.258
+
+```
+
+Once we get the density score for the keyword *Tom* in the first document (let's denote this score by denScore1), and we get the density score for the keyword *Cruise* in the first document (let's denote this score by denScore2), then the keywords density score for the search query *Tom Cruise* in the first document would be *(denScore1 + denScore2)*.
+
+#### Backlinks Score
+
+A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc1 to docN, and we use doci->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
+
+
+```console
+backlinks score = ( 1.0 / (1 + doc1->outgoingLinks * doc1->outgoingLinks) + 1.0 / (1 + doc2->outgoingLinks * doc2->outgoingLinks) + ... + 1.0 / (1 + docN->outgoingLinks * docN->outgoingLinks) );
+```
+
+Once you have both the keywords density score and the backlinks score, you can use [the formula we described earlier](#formula[1]), to get the overall score for a page.
 
 ## Assignment Scope
 

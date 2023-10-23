@@ -1,5 +1,7 @@
 # Homework 7 — Design and Implementation of a Simple Google
 
+This README is still not complete.
+
 In this assignment you will develop a simple search engine called New York Search. Your program will mimic some of the features provided by Google. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
@@ -47,7 +49,7 @@ The Query Search Component's goal is to identify the Matching Document.
 
 ### Page Ranking
 
-Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factors:
+Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factor:
 
 <!-- Keyword Usage. (keyword stuffing)-->
 - Backlinks: The number and quality of links from other reputable websites are assessed.

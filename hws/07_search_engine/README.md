@@ -107,11 +107,11 @@ Once we get the density score for the keyword *Tom* in the first document (let's
 
 #### Backlinks Score
 
-A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc1 to docN, and we use doci->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
+A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc_1 to doc_N, and we use doc_i->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
 
 
 ```console
-backlinks score = ( 1.0 / (1 + doc1->outgoingLinks * doc1->outgoingLinks) + 1.0 / (1 + doc2->outgoingLinks * doc2->outgoingLinks) + ... + 1.0 / (1 + docN->outgoingLinks * docN->outgoingLinks) );
+backlinks score = ( 1.0 / (1 + doc_1->outgoingLinks * doc_1->outgoingLinks) + 1.0 / (1 + doc_2->outgoingLinks * doc_2->outgoingLinks) + ... + 1.0 / (1 + doc_N->outgoingLinks * doc_N->outgoingLinks) );
 ```
 
 Once you have both the keywords density score and the backlinks score, you can then use [formula 1](#formula-1) to get the overall score for a page.

@@ -65,7 +65,16 @@ map_vect :: const_iterator p;
 
 The compiler makes the substitution for you.
 
-## 16.3 Leetcode Exercises
+## 16.3 Standard Library Sets
+
+- STL sets are ordered containers storing unique “keys”. An ordering relation on the keys, which defaults to
+operator<, is necessary. Because STL sets are ordered, they are technically not traditional mathematical sets.
+- Sets are like maps except they have only keys, there are no associated values. Like maps, the keys are constant.
+This means you can’t change a key while it is in the set. You must remove it, change it, and then reinsert it.
+- Access to items in sets is extremely fast! O(log n), just like maps, but sets do not have the [] operator, and
+you shouldn’t use [] to access elements in a set.
+
+## 16.4 Leetcode Exercises
 
 - [Leetcode problem 49: Group Anagrams](https://leetcode.com/problems/group-anagrams/). Solution: [p49_group_anagrams.cpp](../../leetcode/p49_group_anagrams.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).

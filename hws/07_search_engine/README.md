@@ -52,10 +52,10 @@ The Query Search Component's goal is to identify the Matching Documents.
 Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factors:
 
 - Keywords Density. <!--(keyword stuffing)-->
-- Backlinks: The number and quality of links from other reputable websites are assessed.
+- Backlinks. <!--: The number and quality of links from other reputable websites are assessed.-->
 <!--- Freshness.-->
 
-For each page to be presented, we calculate the a page score, and then present these pages in descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlink score*. Once we have these two scores, we can get the page score using this formula:
+For each page to be presented, we calculate the a page score, and then present these pages in descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*. Once we have these two scores, we can get the page score using this formula:
 
 page score = (0.8 * keywords density score + 0.2 * backlinks score); [**formula 1**] <a name="formula-1"></a>
 

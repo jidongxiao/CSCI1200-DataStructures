@@ -65,8 +65,9 @@ map_vect :: const_iterator p;
 
 The compiler makes the substitution for you.
 
-## 16.10 Leetcode Exercises
+## 16.3 Leetcode Exercises
 
 - [Leetcode problem 49: Group Anagrams](https://leetcode.com/problems/group-anagrams/). Solution: [p49_group_anagrams.cpp](../../leetcode/p49_group_anagrams.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
+- [Leetcode problem 1207: Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/). Solution: [p1207_unique_number_occurrences.cpp](../../leetcode/p1207_unique_number_occurrences.cpp).
 

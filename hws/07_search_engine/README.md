@@ -60,7 +60,7 @@ For each page to be presented, we calculate the a page score, and then present t
 ```console
 page score = (0.8 * keywords density score + 0.2 * backlinks score);
 ```
-<a name="formula[1]"></a>
+<a name="formula-1"></a>
 
 In order to match the results used by the autograder, you should define all scores as *double*. Next we will describe how to calculate the keywords density score and the backlinks score.
 
@@ -117,7 +117,7 @@ A backlinks score for a webpage is based on the importance of its incoming backl
 backlinks score = ( 1.0 / (1 + doc1->outgoingLinks * doc1->outgoingLinks) + 1.0 / (1 + doc2->outgoingLinks * doc2->outgoingLinks) + ... + 1.0 / (1 + docN->outgoingLinks * docN->outgoingLinks) );
 ```
 
-Once you have both the keywords density score and the backlinks score, you can use [the formula we described earlier](#formula[1]), to get the overall score for a page.
+Once you have both the keywords density score and the backlinks score, you can use [the formula we described earlier](#formula-1), to get the overall score for a page.
 
 ## Assignment Scope
 

@@ -45,7 +45,7 @@ The Web Crawler's goal is to build the inverted index.
 
 ### Query Searching
 
-The Query Search Component's goal is to identify the Matching Document.
+The Query Search Component's goal is to identify the Matching Documents.
 
 ### Page Ranking
 

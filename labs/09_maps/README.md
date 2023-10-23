@@ -46,5 +46,5 @@ Part 2: Rewrite this program to use maps, storing only the numbers that are assi
 creating the map, and of the add and the identify functions. Test it on 7 digit numbers. In what ways is the
 vector version better and in what ways is the map version better?
 
-To complete this checkpoint: Present your analysis from Part 1 to a TA, demonstrate the new version
+**To complete this checkpoint**: Present your analysis from Part 1 to a TA, demonstrate the new version
 of your program, and be prepared to discuss your analysis of Part 2.

@@ -70,13 +70,22 @@ The compiler makes the substitution for you.
 - STL sets are ordered containers storing unique “keys”. An ordering relation on the keys, which defaults to
 operator<, is necessary. Because STL sets are ordered, they are technically not traditional mathematical sets.
 - Sets are like maps except they have only keys, there are no associated values. Like maps, the keys are constant.
-This means you can’t change a key while it is in the set. You must remove it, change it, and then reinsert it.
+This means you can't change a key while it is in the set. You must remove it, change it, and then reinsert it.
 - Access to items in sets is extremely fast! O(log n), just like maps, but sets do not have the [] operator, and
-you shouldn’t use [] to access elements in a set.
+you shouldn't use [] to access elements in a set.
+- To use sets, you need to include the set library:
 
-## 16.4 Leetcode Exercises
+```cpp
+#include <set>
+```
+
+## 16.4 Leetcode Exercises (Maps)
 
 - [Leetcode problem 49: Group Anagrams](https://leetcode.com/problems/group-anagrams/). Solution: [p49_group_anagrams.cpp](../../leetcode/p49_group_anagrams.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
+
+## 16.5 Leetcode Exercises (Sets)
+
+- [Leetcode problem 414: Third Maximum Number](https://leetcode.com/problems/third-maximum-number/). Solution: [p414_third_max_number.cpp](../../leetcode/p414_third_max_number.cpp).
 - [Leetcode problem 1207: Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/). Solution: [p1207_unique_number_occurrences.cpp](../../leetcode/p1207_unique_number_occurrences.cpp).
 

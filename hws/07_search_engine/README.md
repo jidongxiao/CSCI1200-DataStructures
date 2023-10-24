@@ -309,6 +309,19 @@ In order to use this function, you need to include the regex library like this:
 #include <regex>
 ```
 
+## Other Useful Code
+
+Unlike previous assignments where you read input files and parse it, in this assignment, when you open an HTML file, you may want to store the full content of this file into a string. For example, you want to open the file file3.html, whose path is "html_files/subdir1/file3.html", and store the full content of this file into a string, then you can do this:
+
+```cpp
+std::ifstream fileStream(filePath);
+if (fileStream.is_open()) {
+	std::string fileContent((std::istreambuf_iterator<char>(fileStream)), std::istreambuf_iterator<char>());
+	// suppose filePath is the string "html_files/subdir1/file3.html", then at this point, the string fileContent will be the full content of this file file3.html.
+	// do something with fileContent
+}
+```
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.

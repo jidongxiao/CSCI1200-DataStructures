@@ -1,6 +1,6 @@
 # Homework 7 — Design and Implementation of a Simple Google
 
-This README is still not complete.
+This README is not complete, some minor changes may still be made.
 
 In this assignment you will develop a simple search engine called New York Search. Your program will mimic some of the features provided by Google. Please read the entire handout before starting to code the assignment.
 
@@ -13,13 +13,15 @@ In this assignment you will develop a simple search engine called New York Searc
 
 When talking about Google Search Engine, what words come to your mind? Page Ranking? Inverted Indexing? Web Crawler?
 
-When developing a search engine, the first question we want to ask is, where to start? When you type "Selena Gomez" or "Tom Brady" in the search box in Google, where does Google start? Does Google start searching from one specific website? The answer is Google does not start from one specific website, rather they maintain a list of URLs which are called Seed URLs. These Seed URLs are manually chosen which represent a diverse range of high-quality, reputable websites. Search engines usually have a component called web crawler, which crawls these URLs and then follow links from these web pages to other web pages. As the web crawler crawls these other web pages, it collects links from these other web pages to more web pages, and then follow these links to crawl more web pages. This process continues, ultimately, the goal is to discover as many web pages as possible. Once all pages are visited, the search engine will build a map, which is known as the inverted index, which maps terms (i.e., individual words) to web pages (also known as Documents). Below is an example:
+When developing a search engine, the first question we want to ask is, where to start? When you type "Selena Gomez" or "Tom Brady" in the search box in Google, where does Google start? Does Google start searching from one specific website? The answer is Google does not start from one specific website, rather they maintain a list of URLs which are called Seed URLs. These Seed URLs are manually chosen which represent a diverse range of high-quality, reputable websites. Search engines usually have a component called web crawler, which crawls these URLs and then follow links from these web pages to other web pages. As the web crawler crawls these other web pages, it collects links from these other web pages to more web pages, and then follow these links to crawl more web pages. This process continues, ultimately, the goal is to discover as many web pages as possible. Once all pages are visited, the search engine will build a map, which is known as the inverted index, which maps terms (i.e., individual words) to web pages (also known as documents). Below is an example:
 
 | Key (Term) | Value (List of Document References)      |
 |-----------|---------------------------------------|
 | apple     | Document1, Document3, Document5       |
 | banana    | Document2, Document4                   |
 | orange    | Document1, Document2                   |
+
+**Note**: in this README, the term web page, page, document all have the same meaning.
 
 <!--Term Frequency
 
@@ -37,7 +39,7 @@ Based on the above description, you can see there are 3 steps when implementing 
 2. query searching
 3. page ranking
 
-And thus, in this assignment, you should write your search engine following this same order of 3 steps. More details about each of these 3 steps are described below:
+And thus, in this assignment, you are recommended to write your search engine following this same order of 3 steps (the reason this is just a recommendation, rather than a requirement, is because one mentor told us that she can produce all the results in the web crawling stage, and she doesn't need 3 steps. More details about each of these 3 steps are described below:
 
 ### Web Crawling
 
@@ -45,17 +47,17 @@ The Web Crawler's goal is to build the inverted index.
 
 ### Query Searching
 
-The Query Search Component's goal is to identify the Matching Documents.
+The Query Searching component's goal is to identify the matching documents.
 
 ### Page Ranking
 
-Once the search engine returns the matching documents, you should rank these documents and present the most relevant documents to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking are required to consider the following factors:
+Once the matching documents are identified, you should rank these documents and present them to the user. Google uses a variety of factors in its page ranking, but in this assignment, your page ranking is required to consider the following factors:
 
 - Keywords Density. <!--(keyword stuffing)-->
 - Backlinks. <!--: The number and quality of links from other reputable websites are assessed.-->
 <!--- Freshness.-->
 
-For each page to be presented, we calculate the a page score, and then present these pages in descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*. Once we have these two scores, we can get the page score using this formula:
+For each page to be presented, we calculate a page score, and then present these pages in a descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*. Once we have these two scores, we can get the page score using this formula:
 
 page score = (0.8 * keywords density score + 0.2 * backlinks score); [**formula 1**] <a name="formula-1"></a>
 
@@ -65,8 +67,8 @@ In order to match the results used by the autograder, you should define all scor
 
 A search query may contain one keyword or multiple keywords. Given a set of keywords, we can calculate the keywords density score by doing the following two steps:
 
-1. Calculates a density score for each keyword within the document. 
-2. Accumulates these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
+1. Calculate a density score for each keyword within the document. 
+2. Accumulate these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
 
 For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its average occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
 
@@ -76,7 +78,7 @@ Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Lengt
 
 Here, we consider the content of each document as a string.
 
-Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword Tom appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the average density across all documents would be:
+Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword *Tom* appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the average density across all documents would be:
 
 ```console
 2/50 + 3/40 + 4/100 = 0.155
@@ -107,7 +109,7 @@ Once we get the density score for the keyword *Tom* in the first document (let's
 
 #### Backlinks Score
 
-A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc_1 to doc_N, and we use doc_i->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
+A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc_1, doc_2,... to doc_N, and we use doc_i->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
 
 
 ```console
@@ -144,7 +146,7 @@ We also limit the user to search no more than 3 words in each query. Based on th
 
 The search engine you implement will not search anything on the Internet, as that requires extensive knowledge in computer networks and will need to include network libraries, which is way beyond the scope of this course. In this assignment, we limit our searches to a local folder, which is provided as [html_files](html_files).
 
-You are also not allowed to use file system libraries to access the HTML files.
+You are also not allowed to use file system libraries such as &lt;filesystem&gt; to access the HTML files.
 
 ## Supported Commands
 
@@ -163,9 +165,9 @@ Here:
 - output.txt is where to print your output to.
 - *Tom* is an example of a search query which contains one word, *Tom Cruise* is an example of a search query which contains two words, *Tom and Jerry* is an example of a search query which contains three words.
 
-### Regular Search vs Phrase Search
+### Phrase Search vs Regular Search
 
-Your search engine should support both regular search and phrase search.  
+Your search engine should support both phrase search and regular search.  
 1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
 2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. 
 
@@ -222,7 +224,7 @@ This portion will be different from what Google shows, as our search is limited 
 
 ### The Description
 
-In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a meta description tag which provides a brief description of the page's content. This description is often displayed by search engines in search results give users an idea of what the web page is about. The following is an example:
+In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a meta description tag which provides a brief description of the page's content. This description is often displayed by search engines in search results to give users an idea of what the web page is about. The following is an example:
 
 ```html
 <meta name="description" content="Boston Celtics Scores, Stats and Highlights">
@@ -235,22 +237,46 @@ Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirements for this snippet is:
 
 1. It should contain exactly 120 characters.
-2. It should start from the beginning of a sentence which contains the query.
+2.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence.
 
-This means the query itself may not appear in the snippet.
+2.2.1 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query; if an excat match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and the first occurrence of this first keyword within the document is in this sentence.
 
-#### Period Before the Sentence
+**Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. And for this purpose, the string function *rfind*() can be useful, as this function can be used to searches a string for the last occurrence of the period sign. For example, you can use the *rfind*() function like this to get the start of the sentence which contains the query.
+
+```cpp
+size_t sentenceStart = data.rfind(".", queryPos) + 1;
+```
+
+Here *data* is a string which contains the full content of the document, and *queryPos* is the position within this document where the query is found. This function will search backwards in data, starting from the *queryPos*, and find the period sign. As soon as a period sign is found, the *data.rfind*() function will return its position. And incrementing this position by 1 will give you the starting position of the sentence. In this assignment, you can assume that there is always a period sign right before the sentence which contains the snippet you are going to construct.
 
 ## Useful String Functions
 
-You are recommended to use the following string functions.
+Besides the *rfind()* function, you may find the following string functions to be useful:
 
-- find
-- substr
-- find_last_of
-- erase
-- rfind
-- std::isspace
+- find: we use this function to search a string for the first occurrence of some character or some substring.
+- substr: we use this function to get a substring of an existing string.
+- find_last_of: in this assignment, there might be several situations when you need to find the last slash of a URL. And for that purpose, you can use the *find_last_of*() function. An example usage case is, given the URL "html_files/subdir1/subdir2/file7.html" as a string, if you want to get the directory "html_files/subdir1/subdir2/", you can use *find_last_of*() and *substr*() like this.
+```cpp
+std::string directory;
+// suppose URL is "html_files/subdir1/subdir2/file7.html"
+size_t lastSlashPos = URL.find_last_of('/');
+if (lastSlashPos != std::string::npos) {
+	// directory will now be "html_files/subdir1/subdir2/"
+	directory = URL.substr(0, lastSlashPos + 1);
+}
+```
+- erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove this double quotes, and you can do so using code like this:
+
+```cpp
+// here tmpString is a string which might contain one double quote character.
+size_t quotePos;
+// unfortunately, autograder will pass \" to the command line, and thus the double quote will be a part of the string.
+if( (quotePos = tmpString.find('"')) != std::string::npos ){
+	tmpString1.erase(quotePos, 1); // remove the double quote character at the found position
+}
+
+```
+- std::isspace: we use this function to check if a given character is a whitespace character.
 
 ## Provided Functions
 
@@ -285,7 +311,7 @@ In order to use this function, you need to include the regex library like this:
 
 ## Program Requirements & Submission Details
 
-In this assignment, you are required to use std::map, or std::set. You are recommended to use both. You are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
+In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

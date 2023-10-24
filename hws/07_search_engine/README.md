@@ -21,7 +21,7 @@ When developing a search engine, the first question we want to ask is, where to 
 | banana    | Document2, Document4                   |
 | orange    | Document1, Document2                   |
 
-**Note**: in this README, the term web page, page, document all have the same meaning.
+**Note**: in this README, the term web page, page, document, and HTML file, all have the same meaning.
 
 <!--Term Frequency
 

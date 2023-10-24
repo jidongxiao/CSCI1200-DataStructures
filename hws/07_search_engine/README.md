@@ -182,7 +182,7 @@ But it is not a valid document if the user does a phrase search - "*Tom Cruise*"
 
 ## Input Files
 
-To be added.
+All the input files are HTML files, and they are provided under the [html_files](html_files) directory. Among these HTML files, there is only one HTML file which will be provided via the command line, and this file will be considered as the Seed file, and the path of this file (i.e. html_files/index.html) therefore will be used as the Seed URL. Your web crawler should search this HTML file and find links contained in this HTML file, and then follow these links to crawl other HTML files, and repeat this process until you can not reach any more files. Keep in mind that links which take you to an HTML file which you have already crawled, should be skipped, otherwise you will get into an infinite loop situation.
 
 ### Output File Format and Order
 
@@ -326,7 +326,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
+ - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
    - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
@@ -337,9 +337,9 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (8 pts)
-   - Uses data structures which have not been covered in this class. (-8)
-   - Neither std::map nor std::set is used. (-8)
-   <!--- Member variables are public. (-2)-->
- - RECURSION (2 pts)
-   - Does not use recursion in the web crawler component. (-2)
+ - DATA REPRESENTATION (7 pts)
+   - Uses data structures which have not been covered in this class. (-7)
+   - Neither std::map nor std::set is used. (-7)
+   - Member variables are public. (-2)
+ - RECURSION (3 pts)
+   - Does not use recursion in the web crawler component. (-3)

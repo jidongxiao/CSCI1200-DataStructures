@@ -237,9 +237,10 @@ Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirements for this snippet is:
 
 1. It should contain exactly 120 characters.
+
 2.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence.
 
-2.2.1 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query; if an excat match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and the first occurrence of this first keyword within the document is in this sentence.
+2.2 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query; if an excat match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and the first occurrence of this first keyword within the document is in this sentence.
 
 **Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. And for this purpose, the string function *rfind*() can be useful, as this function can be used to searches a string for the last occurrence of the period sign. For example, you can use the *rfind*() function like this to get the start of the sentence which contains the query.
 

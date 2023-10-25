@@ -271,14 +271,14 @@ if (lastSlashPos != std::string::npos) {
 - erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove the double quotes, and you can do so using code like this:
 
 ```cpp
-// here tmpString is a string which might contain one double quote character, for example, tmpString might be "Tom, or it might be Cruise".
 size_t quotePos;
 // unfortunately, autograder will pass \" to the command line, and thus the double quote will be a part of the string.
 if( (quotePos = tmpString.find('"')) != std::string::npos ){
 	tmpString.erase(quotePos, 1); // remove the double quote character at the found position
 }
-
 ```
+
+Here *tmpString* is a string which might contain one double quote character, for example, *tmpString* might be **"Tom**, or it might be **Cruise"**.
 
 ## Provided Functions
 

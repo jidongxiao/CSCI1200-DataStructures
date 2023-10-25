@@ -341,6 +341,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 **Due Date**: 11/02/2023, Thursday, 23:59pm.
 
+## Instructor's Code
+
+You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/search/).
+
 ## Rubric
 
 20 pts

@@ -1,7 +1,5 @@
 # Homework 7 — Design and Implementation of a Simple Google
 
-This README is not complete, some minor changes may still be made.
-
 In this assignment you will develop a simple search engine called New York Search. Your program will mimic some of the features provided by Google. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
@@ -39,7 +37,7 @@ Based on the above description, you can see there are 3 steps when implementing 
 2. query searching
 3. page ranking
 
-And thus, in this assignment, you are recommended to write your search engine following this same order of 3 steps (the reason this is just a recommendation, rather than a requirement, is because one mentor told us that she can produce all the results in the web crawling stage, and she doesn't need 3 steps. More details about each of these 3 steps are described below:
+And thus, in this assignment, you are recommended to write your search engine following this same order of 3 steps (the reason this is just a recommendation, rather than a requirement, is because one mentor told us that she can produce all the results in the web crawling stage, and she doesn't need 3 steps). More details about each of these 3 steps are described below:
 
 ### Web Crawling
 
@@ -57,15 +55,15 @@ Once the matching documents are identified, you should rank these documents and 
 - Backlinks. <!--: The number and quality of links from other reputable websites are assessed.-->
 <!--- Freshness.-->
 
-For each page to be presented, we calculate a page score, and then present these pages in a descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*. Once we have these two scores, we can get the page score using this formula:
+For each page to be presented, we calculate a page score, and then present these pages in a descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*, respectively. Once we have these two scores, we can get the page score using this formula:
 
 page score = (0.8 * keywords density score + 0.2 * backlinks score); [**formula 1**] <a name="formula-1"></a>
 
 In order to match the results used by the autograder, you should define all scores as *double*. Next we will describe how to calculate the keywords density score and the backlinks score.
 
-#### KeyWords Density Score
+#### Keywords Density Score
 
-A search query may contain one keyword or multiple keywords. Given a set of keywords, we can calculate the keywords density score by doing the following two steps:
+A search query may contain one keyword or multiple keywords. Given a set of keywords, we can calculate the keywords density score by following these two steps:
 
 1. Calculate a density score for each keyword within the document. 
 2. Accumulate these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
@@ -146,7 +144,7 @@ We also limit the user to search no more than 3 words in each query. Based on th
 
 The search engine you implement will not search anything on the Internet, as that requires extensive knowledge in computer networks and will need to include network libraries, which is way beyond the scope of this course. In this assignment, we limit our searches to a local folder, which is provided as [html_files](html_files).
 
-You are also not allowed to use file system libraries such as &lt;filesystem&gt; to access the HTML files.
+You are also not allowed to use file system libraries such as &lt;filesystem&gt; to access the HTML files, rather, you should follow the instructions given in the [other useful code](#other-useful-code) section to open HTML files and follow links within each HTML file to get to other HTML files.
 
 ## Supported Commands
 
@@ -156,14 +154,15 @@ Your program will be run like this:
 nysearch.exe html_files/index.html output.txt Tom
 nysearch.exe html_files/index.html output.txt Tom Cruise
 nysearch.exe html_files/index.html output.txt Tom and Jerry
+nysearch.exe html_files/index.html output.txt "Tom Cruise"
 ```
 
 Here:
 
 - *nysearch.exe* is the executable file name.
-- html_files/index.html is the SEED URL.
+- html_files/index.html is the Seed URL. While Google maintains a list of Seed URL, in this assignment, we will just use one single HTML file as the Seed page and the path of this file is the Seed URL.
 - output.txt is where to print your output to.
-- *Tom* is an example of a search query which contains one word, *Tom Cruise* is an example of a search query which contains two words, *Tom and Jerry* is an example of a search query which contains three words.
+- *Tom* is an example of a search query which contains one word, *Tom Cruise* is an example of a search query which contains two words, *Tom and Jerry* is an example of a search query which contains three words. *"Tom Cruise"* is an example of a phrase search, in which the user wants to find an exact match to this whole phrase.
 
 ### Phrase Search vs Regular Search
 
@@ -171,14 +170,14 @@ Your search engine should support both phrase search and regular search.
 1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
 2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. 
 
-Based on the above definition, a document which contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
+Based on the above definition, a document which only contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
 
 ```console
 Tom and Jerry show
 Have Fun And Save Now With Great Deals When You Cruise With Carnival. Book Online Today.
 ```
 
-But it is not a valid document if the user does a phrase search - "*Tom Cruise*", as no exact match can be found in this document.
+Because we can find both the word *Tom* and the word *Cruise*. But it is not a valid document if the user does a phrase search - *"Tom Cruise"*, as no exact match can be found in this document.
 
 ## Input Files
 
@@ -242,18 +241,21 @@ This snippet contains an excerpt from the page's content that is directly relate
 
 2.2 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query; if an excat match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and the first occurrence of this first keyword within the document is in this sentence.
 
-**Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. And for this purpose, the string function *rfind*() can be useful, as this function can be used to searches a string for the last occurrence of the period sign. For example, you can use the *rfind*() function like this to get the start of the sentence which contains the query.
-
-```cpp
-size_t sentenceStart = data.rfind(".", queryPos) + 1;
-```
-
-Here *data* is a string which contains the full content of the document, and *queryPos* is the position within this document where the query is found. This function will search backwards in data, starting from the *queryPos*, and find the period sign. As soon as a period sign is found, the *data.rfind*() function will return its position. And incrementing this position by 1 will give you the starting position of the sentence. In this assignment, you can assume that there is always a period sign right before the sentence which contains the snippet you are going to construct.
+**Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there exist some white spaces in between the period and the start of the sentence.
 
 ## Useful String Functions
 
-Besides the *rfind()* function, you may find the following string functions to be useful:
+You may find the following functions to be useful (most of them are string functions, except *std::isspace*):
 
+- rfind: this function does reverse find in a string. When finding the start position of a sentence which contains a keyword or a query, the string function *rfind*() can be useful, as this function can be used to search a string for the last occurrence of the period sign. For example, if you find that the query starts at position *queryPos*, then you can use the *rfind*() function like this to locate the period sign before the sentence which contains this query:
+
+```cpp
+size_t periodPos = data.rfind(".", queryPos);
+```
+
+Here *data* is a string which contains the full content of the document. Once you locate the period sign, you can then skip any possible whitespaces to get to the start of the sentence. And in order to skip whitespaces, you may want to use this next function - *std::isspace*().
+
+- std::isspace: we use this function to check if a given character is a whitespace character.
 - find: we use this function to search a string for the first occurrence of some character or some substring.
 - substr: we use this function to get a substring of an existing string.
 - find_last_of: in this assignment, there might be several situations when you need to find the last slash of a URL. And for that purpose, you can use the *find_last_of*() function. An example usage case is, given the URL "html_files/subdir1/subdir2/file7.html" as a string, if you want to get the directory "html_files/subdir1/subdir2/", you can use *find_last_of*() and *substr*() like this.
@@ -266,34 +268,33 @@ if (lastSlashPos != std::string::npos) {
 	directory = URL.substr(0, lastSlashPos + 1);
 }
 ```
-- erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove this double quotes, and you can do so using code like this:
+- erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove the double quotes, and you can do so using code like this:
 
 ```cpp
-// here tmpString is a string which might contain one double quote character.
+// here tmpString is a string which might contain one double quote character, for example, tmpString might be *"Tom*, or it might be *Cruise"*.
 size_t quotePos;
 // unfortunately, autograder will pass \" to the command line, and thus the double quote will be a part of the string.
 if( (quotePos = tmpString.find('"')) != std::string::npos ){
-	tmpString1.erase(quotePos, 1); // remove the double quote character at the found position
+	tmpString.erase(quotePos, 1); // remove the double quote character at the found position
 }
 
 ```
-- std::isspace: we use this function to check if a given character is a whitespace character.
 
 ## Provided Functions
 
 Parsing an HTML file and extract all the links from this file may require some regular expression library functions, and using these regular expression library functions is beyond the scope of this course, and thus the following function (which calls regular expression library functions) is provided for you. This function takes a std::string argument, representing the content of an HTML file, and this function will extract all links in this HTML file, and return them as a linked list, represented by an std::list&lt;std::string&gt; object.
 
 ```cpp
-// Function to parse an HTML file and extract links to local files
-std::list<std::string> ExtractLinksFromHTML(const std::string& htmlContent) {
+// function to parse an HTML file and extract links to local files
+std::list<std::string> extractLinksFromHTML(const std::string& fileContent) {
     std::list<std::string> links;
-    // Regular expression to match href attributes in anchor tags
+    // regular expression to match href attributes in anchor tags
     std::regex linkRegex("<a\\s+[^>]*href\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>");
     std::smatch match;
 
-    // Search for links in the HTML content
-    std::string::const_iterator start = htmlContent.cbegin();
-    while (std::regex_search(start, htmlContent.cend(), match, linkRegex)) {
+    // search for links in the HTML content
+    std::string::const_iterator start = fileContent.cbegin();
+    while (std::regex_search(start, fileContent.cend(), match, linkRegex)) {
         if (match.size() > 1) {
             links.push_back(match[1].str());
         }
@@ -312,7 +313,7 @@ In order to use this function, you need to include the regex library like this:
 
 ## Other Useful Code
 
-Unlike previous assignments where you read input files and parse it, in this assignment, when you open an HTML file, you may want to store the full content of this file into a string. For example, you want to open the file file3.html, whose path is "html_files/subdir1/file3.html", and store the full content of this file into a string, then you can do this:
+Unlike previous assignments where you read input files and parse it line by line, in this assignment, when you open an HTML file, you may want to store the full content of this file into a string. For example, you want to open the file file3.html, whose path is "html_files/subdir1/file3.html", and store the full content of this file into a string, then you can do this:
 
 ```cpp
 std::ifstream fileStream(filePath);
@@ -323,9 +324,15 @@ if (fileStream.is_open()) {
 }
 ```
 
+Make sure you still include the fstream library.
+
+```cpp
+#include <fstream>
+```
+
 ## Program Requirements & Submission Details
 
-In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
+In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

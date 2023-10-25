@@ -274,7 +274,7 @@ if (lastSlashPos != std::string::npos) {
 size_t quotePos;
 // unfortunately, autograder will pass \" to the command line, and thus the double quote will be a part of the string.
 if( (quotePos = tmpString.find('"')) != std::string::npos ){
-	tmpString.erase(quotePos, 1); // remove the double quote character at the found position
+	tmpString.erase(quotePos, 1); // remove the double quote character at the found position; here number 1 as the second argument means erasing 1 character.
 }
 ```
 

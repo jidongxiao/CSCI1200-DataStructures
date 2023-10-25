@@ -1,0 +1,31 @@
+Matching documents: 
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: What Sam Cassell and Charles Lee Bring to the Boston Celtics Myles Turner Bojan Bogdanovic Bogdan Bogdanovic Nick Richar
+
+Title: Sports Illustrated
+URL: html_files/subdir1/file3.html
+Description: Celtics Hire Former Knicks Coach - Sports Illustrated
+Snippet: In Jeff Van Gundy, the Boston Celtics added a consultant with 11 years of experience as an NBA head coach. Former New Yo
+
+Title: Screen Rant
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file23.html
+Description: Tom Cruise's Age In Mission Impossible 7 Is A Shocking ...
+Snippet: Boston Celtics rookie Jordan Walsh is already working toward earning the trust of his teammates weeks ahead of the 2023-
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: The Boston Celtics and Dallas Mavericks G League affiliates have made a trade. Pinson's G League rights were traded (on 
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: The Boston Celtics are a National Basketball Association team that plays in the Eastern Conference. The Celtics have won
+
+Title: ESPN
+URL: html_files/subdir1/subdir2/file4.html
+Description: Boston Celtics 2023-24 NBA Roster
+Snippet: Boston Celtics Roster 2023-24 More NBA Teams Team Roster NAME POS AGE HT WT COLLEGE SALARY https://a.espncdn.com/i/heads

@@ -3,13 +3,16 @@
 ## Review from Lecture 16
 
 - STL set container class (like STL map, but without the pairs!)
+- set iterators, insert, erase, find
 
 ## Today’s Lecture
 
+- Binary trees, binary search trees
 - Implementation of ds_set class using binary search trees
 - In-order, pre-order, and post-order traversal
 
 ## 17.1 Definition: Binary Trees
+
 - A binary tree (strictly speaking, a “rooted binary
 tree”) is either empty or is a node that has
 pointers to two binary trees.
@@ -100,8 +103,7 @@ integer. Hint: think recursively!
 
 ## 17.7 ds_set and Binary Search Tree Implementation
 
-- A partial implementation of a set using a binary search tree is in the code attached. We will continue to study
-this implementation in Lab 10 & the next lecture.
+- A partial implementation of a set using a binary search tree is [here](ds_set_starter.h). We will continue to study this implementation in Lab 10 & the next lecture.
 - The increment and decrement operations for iterators have been omitted from this implementation. Next week
 in lecture we will discuss a couple strategies for adding these operations.
 - We will use this as the basis both for understanding an initial selection of tree algorithms and for thinking
@@ -120,6 +122,8 @@ about how standard library sets really work.
 node) that does all of the work.
 - Because the class stores and manages dynamically allocated memory, a copy constructor, operator=, and
 destructor must be provided.
+
+![alt text](ds_set_diagram.png "ds set diagram")
 
 ## 17.9 Exercises
 

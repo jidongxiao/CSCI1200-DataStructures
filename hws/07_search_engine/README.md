@@ -349,7 +349,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/search/). Note that this page just uses a copy of Google's homepage to serve as the front end, and at the back end it runs the instructor's C++ code.
+You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/search/). Note that this page just uses a copy of Google's homepage to serve as the front end, and at the back end it runs the instructor's C++ code. This page does not support the "enter" key, you need to press the "New York Search" button to submit a query.
 
 ## Rubric
 

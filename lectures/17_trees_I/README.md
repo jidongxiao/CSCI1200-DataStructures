@@ -1,59 +1,78 @@
 # Lecture 17 --- Trees, Part I
 
-## 17.1 Standard Library Sets
+## Review from Lecture 16
 
-- STL sets are ordered containers storing unique “keys”. An ordering relation on the keys, which defaults to
-operator<, is necessary. Because STL sets are ordered, they are technically not traditional mathematical sets.
-- Sets are like maps except they have only keys, there are no associated values. Like maps, the keys are constant.
-This means you can’t change a key while it is in the set. You must remove it, change it, and then reinsert it.
-- Access to items in sets is extremely fast! O(log n), just like maps, but sets do not have the [] operator, and
-you shouldn’t use [] to access elements in a set.
-- Like other containers, sets have the usual constructors as well as the size member function.
+- STL set container class (like STL map, but without the pairs!)
 
-## 17.2 Set iterators
+## Today’s Lecture
 
-- Set iterators, similar to map iterators, are bidirectional: they allow you to step forward (++) and backward
-(--) through the set. Sets provide begin() and end() iterators to delimit the bounds of the set.
-- Set iterators refer to const keys (as opposed to the pairs referred to by map iterators). For example, the
-following code outputs all strings in the set words:
+- Implementation of ds_set class using binary search trees
+- In-order, pre-order, and post-order traversal
 
-```cpp
-for (set<string>::iterator p = words.begin(); p!= words.end(); ++p)
-cout << *p << endl;
-```
+## 17.1 Definition: Binary Trees
+- A binary tree (strictly speaking, a “rooted binary
+tree”) is either empty or is a node that has
+pointers to two binary trees.
+- Here’s a picture of a binary tree storing integer
+values. In this figure, each large box indicates a
+tree node, with the top rectangle representing the
+value stored and the two lower boxes representing
+pointers. Pointers that are null are shown with a
+slash through the box.
 
-## 17.3 Set insert
+![alt text](binary_tree.png "binary tree")
 
-- There are two different versions of the insert member function. The first version inserts the entry into the
-set and returns a pair. The first component of the returned pair refers to the location in the set containing the
-entry. The second component is true if the entry wasn’t already in the set and therefore was inserted. It is
-false otherwise. The second version also inserts the key if it is not already there. The iterator pos is a “hint”
-as to where to put it. This makes the insert faster if the hint is good.
+- The topmost node in the tree is called the root.
+- The pointers from each node are called left and
+right. The nodes they point to are referred to as
+that node’s (left and right) children.
+- The (sub)trees pointed to by the left and right
+pointers at any node are called the left subtree
+and right subtree of that node.
+- A node where both children pointers are null is
+called a leaf node.
+- A node’s parent is the unique node that points to
+it. Only the root has no parent.
 
-```cpp
-pair<iterator,bool> set<Key>::insert(const Key& entry);
-iterator set<Key>::insert(iterator pos, const Key& entry);
-```
+## 17.2 Definition: Binary Search Trees
 
-## 17.4 Set erase
-- There are three versions of erase. The first erase returns the number of entries removed (either 0 or 1). The
-second and third erase functions are just like the corresponding erase functions for maps. Note that the erase
-functions do not return iterators. This is different from the vector and list erase functions.
+- A binary search tree (often abbreviated to
+BST) is a binary tree where at each node
+of the tree, the value stored at the node is
+  – greater than or equal to all values
+stored in the left subtree, and
 
-```cpp
-size_type set<Key>::erase(const Key& x);
-void set<Key>::erase(iterator p);
-void set<Key>::erase(iterator first, iterator last);
-```
+  – less than or equal to all values stored in
+the right subtree.
 
-## 17.5 Set find
-- The find function returns the end iterator if the key is not in the set:
+- Here is a picture of a binary search tree
+storing string values.
 
-```cpp
-const_iterator set<Key>::find(const Key& x) const;
-```
+![alt text](bst.png "binary search tree")
 
-## 17.6 Beginning our implementation of ds set: The Tree Node Class
+## 17.3 Definition: Balanced Trees
+
+- The number of nodes on each subtree of each node in a
+“balanced” tree is approximately the same. In order to
+be an exactly balanced binary tree, what must be true
+about the number of nodes in the tree?
+- In order to claim the performance advantages of trees, we must assume and ensure that our data structure
+remains approximately balanced. (You’ll see much more of this in Intro to Algorithms!)
+
+## 17.4 Exercise
+
+Consider the following values:
+4.5, 9.8, 3.5, 13.6, 19.2, 7.4, 11.7
+
+1. Draw a binary tree with these values that is NOT a binary search tree.
+
+2. Draw two different binary search trees with these values. Important note: This shows that the binary search
+tree structure for a given set of values is not unique!
+
+3. How many exactly balanced binary search trees exist with these numbers? How many exactly balanced
+binary trees exist with these numbers?
+
+## 17.5 Beginning our implementation of ds set: The Tree Node Class
 
 - Here is the class definition for nodes in the tree. We will use this for the tree manipulation code we write.
 
@@ -70,21 +89,16 @@ public:
 
 - Note: Sometimes a 3rd pointer — to the parent TreeNode — is added.
 
-## 17.7 Exercises
+## 17.6 Exercises
 
 1. Write a templated function to find the smallest value stored in a binary search tree whose root node is pointed
 to by p.
-\\
-\\
-\\
-\\
-
 
 2. Write a function to count the number of odd numbers stored in a binary tree (not necessarily a binary search
 tree) of integers. The function should accept a TreeNode<int> pointer as its sole argument and return an
 integer. Hint: think recursively!
 
-## 17.8 ds_set and Binary Search Tree Implementation
+## 17.7 ds_set and Binary Search Tree Implementation
 
 - A partial implementation of a set using a binary search tree is in the code attached. We will continue to study
 this implementation in Lab 10 & the next lecture.
@@ -93,7 +107,7 @@ in lecture we will discuss a couple strategies for adding these operations.
 - We will use this as the basis both for understanding an initial selection of tree algorithms and for thinking
 about how standard library sets really work.
 
-## 17.9 ds_set: Class Overview
+## 17.8 ds_set: Class Overview
 
 - There is two auxiliary classes, TreeNode and tree_iterator. All three classes are templated.
 - The only member variables of the ds_set class are the root and the size (number of tree nodes).
@@ -107,7 +121,7 @@ node) that does all of the work.
 - Because the class stores and manages dynamically allocated memory, a copy constructor, operator=, and
 destructor must be provided.
 
-## 17.10 Exercises
+## 17.9 Exercises
 
 1. Provide the implementation of the member function ds_set<T>::begin. This is essentially the problem of
 finding the node in the tree that stores the smallest value.
@@ -117,7 +131,7 @@ finding the node in the tree that stores the smallest value.
 
 2. Write a recursive version of the function find.
 
-## 17.11 In-order, Pre-Order, Post-Order Traversal
+## 17.10 In-order, Pre-Order, Post-Order Traversal
 
 - One of the fundamental tree operations is “traversing” the nodes in the tree and doing something at each node.
 The “doing something”, which is often just printing, is referred to generically as “visiting” the node.

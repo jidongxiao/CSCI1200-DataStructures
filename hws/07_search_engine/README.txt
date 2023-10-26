@@ -1,4 +1,4 @@
-HOMEWORK 6: Search Engine
+HOMEWORK 7: Search Engine
 
 
 NAME:  < insert name >

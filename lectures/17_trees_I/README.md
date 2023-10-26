@@ -75,7 +75,7 @@ tree structure for a given set of values is not unique!
 3. How many exactly balanced binary search trees exist with these numbers? How many exactly balanced
 binary trees exist with these numbers?
 
-## 17.5 Beginning our implementation of ds set: The Tree Node Class
+## 17.5 Beginning our implementation of ds_set: The Tree Node Class
 
 - Here is the class definition for nodes in the tree. We will use this for the tree manipulation code we write.
 
@@ -141,6 +141,7 @@ finding the node in the tree that stores the smallest value.
 The “doing something”, which is often just printing, is referred to generically as “visiting” the node.
 - There are three general orders in which binary trees are traversed: pre-order, in-order and post-order.
  In order to explain these, let’s first draw an “exactly balanced” binary search tree with the elements 1-7:
+
   – What is the in-order traversal of this tree? Hint: it is monotonically increasing, which is always true for
 an in-order traversal of a binary search tree!
 

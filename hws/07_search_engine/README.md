@@ -219,7 +219,13 @@ In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a
 
 ### The URL
 
-This portion will be different from what Google shows, as our search is limited to the [html_files](html_files) folder, the URL we present will just be a path within this folder.
+This portion will be different from what Google shows, as our search is limited to the [html_files](html_files) folder, the URL we present will just be a path within this folder. Here are some example URLs we use in this assignment:
+
+```plaintext
+html_files/file1.html
+html_files/subdir1/subdir2/file7.html
+html_files/subdir1/subdir2/subdir3/subdir4/file13.html
+```
 
 ### The Description
 

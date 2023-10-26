@@ -103,7 +103,7 @@ integer. Hint: think recursively!
 
 ## 17.7 ds_set and Binary Search Tree Implementation
 
-- A partial implementation of a set using a binary search tree is [here](ds_set_starter.h). We will continue to study this implementation in Lab 10 & the next lecture.
+- A partial implementation of a set using a binary search tree is provided in this [ds_set_starter.h](ds_set_starter.h). We will continue to study this implementation in Lab 10 & the next lecture.
 - The increment and decrement operations for iterators have been omitted from this implementation. Next week
 in lecture we will discuss a couple strategies for adding these operations.
 - We will use this as the basis both for understanding an initial selection of tree algorithms and for thinking

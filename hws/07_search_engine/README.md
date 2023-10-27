@@ -259,7 +259,7 @@ This snippet contains an excerpt from the page's content that is directly relate
 
 2.2 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query, and if the query appears multiple times in the document, consider the first occurrence only; if an exact match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and if the first keyword appears multiple times in the document, consider the first occurrence only.
 
-**Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there exist some white spaces in between the period and the start of the sentence.
+**Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there are some whitespaces in between the period and the start of the sentence.
 
 ## Useful String Functions
 

@@ -97,6 +97,8 @@ public:
 
 - Note: Sometimes a 3rd pointer — to the parent TreeNode — is added.
 
+  ![alt text](ds_set_diagram.png "ds set diagram")
+
 ## 17.6 Exercises
 
 1. Write a templated function to find the smallest value stored in a binary search tree whose root node is pointed
@@ -127,8 +129,6 @@ about how standard library sets really work.
 node) that does all of the work.
 - Because the class stores and manages dynamically allocated memory, a copy constructor, operator=, and
 destructor must be provided.
-
-![alt text](ds_set_diagram.png "ds set diagram")
 
 ## 17.9 Exercises
 

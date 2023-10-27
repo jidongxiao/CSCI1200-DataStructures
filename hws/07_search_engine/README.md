@@ -132,7 +132,7 @@ When searching *Tom Cruise*, your search engine should not include a page which 
 
 Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt; section of the HTML file. The &lt;body&gt; section, enclosed within the &lt;body&gt;&lt;/body&gt; tags in an HTML document, represents the primary content area of the web page.
 
-Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third page showed in this image should not be included in your search results, unless the words *Tom Cruise* appears in the other part of the &lt;body&gt;&lt;/body&gt; section of this web page, which is not displayed here.
+Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the second page showed in this image should not be included in your search results, unless the words *Tom Cruise* appears in the other part of the &lt;body&gt;&lt;/body&gt; section of this web page, which is not displayed here.
 
 ![alt text](images/tom_cruise.png "tom cruise")
 
@@ -141,6 +141,12 @@ But wait, we see *Tom Cruise* here:
 ![alt text](images/tom_cruise_description.png "tom cruise description")
 
 That's true, but this line is not in the &lt;body&gt; section of the HTML file, it is created via a meta description tag which is in the &lt;head&gt; section of the HTML file. We will have more details on this in [a later section](#the-description) in this README.
+
+The same thing for this line:
+
+![alt text](images/tom_cruise_title.png "tom cruise title")
+
+this line is not in the &lt;body&gt; section of the HTML file, rather, it is created via a title tag which is in the &lt;head&gt; section of the HTML file. More details on this in [a later section](#the-title) in this README.
 
 ### Rule 3. Search Query: No More Than 3 Words
 

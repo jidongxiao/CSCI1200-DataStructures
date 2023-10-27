@@ -57,7 +57,7 @@ Once the matching documents are identified, you should rank these documents and 
 
 For each page to be presented, we calculate a page score, and then present these pages in a descending order to the user, i.e., pages whose page score is higher should be presented first. As the page score consists of two factors, we will calculate the score for each of these two factors, and we name them the *keywords density score*, and the *backlinks score*, respectively. Once we have these two scores, we can get the page score using this formula:
 
-page score = (0.8 * keywords density score + 0.2 * backlinks score); [**formula 1**] <a name="formula-1"></a>
+page score = (0.5 * keywords density score + 0.5 * backlinks score); [**formula 1**] <a name="formula-1"></a>
 
 In order to match the results used by the autograder, you should define all scores as *double*. Next we will describe how to calculate the keywords density score and the backlinks score.
 
@@ -111,7 +111,7 @@ A backlinks score for a webpage is based on the importance of its incoming backl
 
 
 ```console
-backlinks score = ( 1.0 / (1 + doc_1->outgoingLinks * doc_1->outgoingLinks) + 1.0 / (1 + doc_2->outgoingLinks * doc_2->outgoingLinks) + ... + 1.0 / (1 + doc_N->outgoingLinks * doc_N->outgoingLinks) );
+backlinks score = ( 1.0 / (1 + doc_1->outgoingLinks) + 1.0 / (1 + doc_2->outgoingLinks) + ... + 1.0 / (1 + doc_N->outgoingLinks) );
 ```
 
 Once you have both the keywords density score and the backlinks score, you can then use [formula 1](#formula-1) to get the overall score for a page.

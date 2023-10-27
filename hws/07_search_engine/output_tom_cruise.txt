@@ -20,17 +20,17 @@ URL: html_files/subdir1/subdir2/subdir3/file10.html
 Description: Watch Tom and Jerry: The Complete First Volume - Amazon
 Snippet: In this decades-old rivalry, Tom Cat and Jerry Mouse match wits against each other in numerous situations and settings. 
 
-Title: Bleacher Report
-URL: html_files/file1.html
-Description: Tom Brady - Tampa Bay Buccaneers Quarterback
-Snippet: The New York Jets did not make a call to Tom Brady after Aaron Rodgers was lost for the season to a torn Achilles, sourc
+Title: CBS Sports
+URL: html_files/subdir1/subdir2/subdir3/file9.html
+Description: Tom Brady on coming out of retirement again: 'I wouldn't be...
+Snippet: Tom Cruise, Despite appearing in a whole range of movies from romance to dramas, there's one genre that Tom Cruise domin
 
 Title: The New York Times
 URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
 Description: My Impossible Mission to Find Tom Cruise
 Snippet: In an interview with Playboy in 2012, Tom Cruise described Katie Holmes as “an extraordinary person” with a “wonde
 
-Title: CBS Sports
-URL: html_files/subdir1/subdir2/subdir3/file9.html
-Description: Tom Brady on coming out of retirement again: 'I wouldn't be...
-Snippet: Tom Cruise, Despite appearing in a whole range of movies from romance to dramas, there's one genre that Tom Cruise domin
+Title: Bleacher Report
+URL: html_files/file1.html
+Description: Tom Brady - Tampa Bay Buccaneers Quarterback
+Snippet: The New York Jets did not make a call to Tom Brady after Aaron Rodgers was lost for the season to a torn Achilles, sourc

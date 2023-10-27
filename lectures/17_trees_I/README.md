@@ -11,6 +11,11 @@
 - Implementation of ds_set class using binary search trees
 - In-order, pre-order, and post-order traversal
 
+## Overview: Lists vs Trees vs Graphs
+- Trees create a hierarchical organization of data, rather than the linear organization in linked lists (and arrays and vectors).
+- Binary search trees are the mechanism underlying maps & sets (and multimaps & multisets).
+- Mathematically speaking: A _graph_ is a set of vertices connected by edges. And a tree is a special graph that has no _cycles_. The edges that connect nodes in trees and graphs may be _directed_ or _undirected_.
+
 ## 17.1 Definition: Binary Trees
 
 - A binary tree (strictly speaking, a “rooted binary

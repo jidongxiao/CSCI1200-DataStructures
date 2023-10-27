@@ -68,38 +68,38 @@ A search query may contain one keyword or multiple keywords. Given a set of keyw
 1. Calculate a density score for each keyword within the document. 
 2. Accumulate these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
 
-For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its average occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
+For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
 
 ```console
-Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Average Keyword Density Across All Documents)
+Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Keyword Density Across All Documents)
 ```
 
 Here, we consider the content of each document as a string.
 
-Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword *Tom* appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the average density across all documents would be:
+Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword *Tom* appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the density across all documents would be:
 
 ```console
-2/50 + 3/40 + 4/100 = 0.155
+(2 + 3 + 4) / (50 + 40 + 100) = 0.047
 ```
 
 and the keyword density score for this keyword *Tom* in the first document, would be:
 
 ```console
-2 / (50 * 0.155) = 0.258
+2 / (50 * 0.047) = 0.851
 
 ```
 
 and the keyword density score for this keyword *Tom* in the second document, would be:
 
 ```console
-3 / (40 * 0.155) = 0.484
+3 / (40 * 0.047) = 1.596
 
 ```
 
 and the keyword density score for this keyword *Tom* in the third document, would be:
 
 ```console
-4 / (100 * 0.155) = 0.258
+4 / (100 * 0.047) = 0.851
 
 ```
 

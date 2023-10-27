@@ -74,7 +74,7 @@ For each keyword, the keyword's density score is a measure of how the keyword's 
 Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Keyword Density Across All Documents)
 ```
 
-Here, we consider the content of each document as a string. Also, here "Total Content Length" means the total length of the whole document, not just the length of the &lt;body&gt; section; and the "Number of Times Keyword Appears" means the number of times keyword appears in the whole document, not just in the &lt;body&gt; section. Similarly, when calculate the "Keyword Density Across All Documents", you should also consider the whole document, not just the &lt;body&gt; section.
+Here, we consider the content of each document as a string. Also, here "Total Content Length" means the total length of the whole document, not just the length of the &lt;body&gt; section; and the "Number of Times Keyword Appears" means the number of times the keyword appears in the whole document, not just in the &lt;body&gt; section. Similarly, when calculating the "Keyword Density Across All Documents", you should also consider the whole document, not just the &lt;body&gt; section.
 
 Let's explain this formula with an example: let's say we have 3 documents in total, and the user wants to search *Tom Cruise*. Assume the first document has 50 characters (i.e., the document length of the first document is 50), and the second document has 40 characters, and the third document has 100 characters. The keyword *Tom* appears in the first document 2 times, appears in the second document 3 times, appears in the third document 4 times. Then for this keyword *Tom*, the density across all documents would be:
 

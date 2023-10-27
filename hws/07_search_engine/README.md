@@ -136,6 +136,12 @@ Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the third pag
 
 ![alt text](images/tom_cruise.png "tom cruise")
 
+But wait, we see *Tom Cruise* here:
+
+![alt text](images/tom_cruise_description.png "tom cruise description")
+
+That's true, but this line is not in the &lt;body&gt; section of the HTML file, it is created via a meta description tag which is in the &lt;head&gt; section of the HTML file. We will have more details on this in [a later section](#the-description) in this README.
+
 ### Rule 3. Search Query: No More Than 3 Words
 
 We also limit the user to search no more than 3 words in each query. Based on this rule, we allow users to search *Tom*, *Tom Cruise*, *Tom and Jerry*, but *Tom Hanks Academy Award* is not allowed, as it contains more than 3 words.
@@ -235,7 +241,7 @@ In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a
 <meta name="description" content="Boston Celtics Scores, Stats and Highlights">
 ```
 
-Here, "Boston Celtics Scores, Stats and Highlights" is the description.
+Here, "Boston Celtics Scores, Stats and Highlights" is the description. Keep in mind that this description tag is always in the &lt;head&gt; section, rather than in the &lt;body&gt; section, and thus a match found in the description should not be counted as a valid match.
 
 ### The Snippet
 

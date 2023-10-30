@@ -20,6 +20,8 @@ Write the ds set::destroy tree private helper function.
 
 ## 18.2 Insert
 
+![alt text](ds_set_diagram.png "ds set diagram")
+
 - Move left and right down the tree based on
 comparing keys. The goal is to find the location to
 do an insert that preserves the binary search tree
@@ -65,6 +67,7 @@ point to the “in-order predecessor”.
 - Unlike the situation with lists and vectors, these predecessors and successors are not necessarily “nearby”
 (either in physical memory or by following a link) in the tree, as examples we draw in class will illustrate.
 - There are two common solution approaches:
+
   – Each node stores a parent pointer. Only the root node has a null parent pointer. [method 1]
 
   – Each iterator maintains a stack of pointers representing the path down the tree to the current node. [method 2]

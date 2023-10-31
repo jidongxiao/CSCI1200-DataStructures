@@ -285,6 +285,8 @@ This snippet contains an excerpt from the page's content that is directly relate
 
 **Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there are some whitespaces in between the period and the start of the sentence.
 
+**Note 2**, when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files.
+
 ## Useful String Functions
 
 You may find the following functions to be useful (most of them are string functions, except *std::isspace*):

@@ -10,7 +10,9 @@ problem 2: Create a exactly balanced binary search tree with 7 color words (orde
 
 problem 3: Draw a exactly-balanced binary search tree containing the letters of the word: uncopyrightable
 
-<div style="width: 100%; height: 200px; border: 1px solid #000;"></div>
+&nbsp;
+&nbsp;
+&nbsp;
 
 What is the pre-order traversal of the tree above?
 

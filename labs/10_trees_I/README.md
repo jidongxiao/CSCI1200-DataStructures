@@ -54,4 +54,4 @@ because each depends on a private member function called *copy_tree*, the body o
 written. Write *copy_tree* and then test to see if it works by “uncommenting” the appropriate code from the
 main function.
 
-**To complete this checkpoint**: Show one of the TAs your new code. Be prepared to discuss the running
+**To complete this checkpoint**: Test your code and show one of the TAs your new code.

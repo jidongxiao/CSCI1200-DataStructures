@@ -1,3 +1,27 @@
+## Clarification
+
+We made a clarification on the discussion forum. In case you didn't pay attenton there, we are adding the clarification here.
+
+1. when determining which document contains "Tom", we do not consider the word "Tomato" as a match; also, to simplify your task, we do not consider "Tom.", "Tom-", ".Tom", "-Tom", "_Tom", etc., as considering all these cases would make your job much harder. So the word Tom is found only if "Tom" is right before whitespaces and is followed by whitespaces. In other words, the character before "Tom" and the character after "Tom" must be a whitespace character.
+
+2. However, these are two situations where the above rule does not apply:
+
+2.1. when constructing the snippet, this above rule does not apply. When constructing the snippet, you just find the first occurrence of that word (or that query), and that really is saying that you can just call the find() function to find the first occurrence of that word (or that query) within the body section of the HTML file. And therefore your snippet may be like this:
+
+"I am Lady Gaga."
+
+when the search is a phrase search of "Lady Gaga". So this means that "." after Gaga is okay, we do not care.
+
+This is also why for test case 4.2, the following is showed in the snippet:
+
+"Since 1982, The Statue of Liberty-Ellis Island Foundation has partnered with the"
+
+when the search query is a phrase search of "Statue of Liberty". And this means that "-" after Liberty is okay, we do not care.
+
+2.2. when counting the number of occurrences of each keyword (in the keyword density score calculation process), the above rule does not apply. When counting the occurrences of each keyword, you can just call the find() function to find the occurrence of that keyword. And therefore, when the keyword is *Gaga*, and the find() function finds *Gaga* in the sentence of "I am Lady Gaga.", that is okay, we will count this one as a valid occurrence.
+
+So you may see that 1 and 2 are not consistent; but the only reason we allow this inconsistence to exist in this assignment is to simplify your task. A fully functioning search engine will need to handle a lot of complicated cases, and that's way beyond the scope of this course.
+
 # Homework 7 — Design and Implementation of a Simple Google
 
 In this assignment you will develop a simple search engine called New York Search. Your program will mimic some of the features provided by Google. Please read the entire handout before starting to code the assignment.

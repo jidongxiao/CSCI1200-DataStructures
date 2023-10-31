@@ -75,7 +75,7 @@ int main() {
 
 
   /*
-  //  Needed for checkpoint 2, part 2
+  //  Needed for checkpoint 3
   ds_set<std::string> set2(set1);
   std::cout << "set1.size() = " << set1.size() << ", set2.size() = " << set2.size() << std::endl;
   std::cout << "\nHere is set2 printed sideways:\n";

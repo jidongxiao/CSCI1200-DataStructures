@@ -13,19 +13,23 @@ problem 3: Draw a exactly-balanced binary search tree containing the letters of 
 &nbsp;
 &nbsp;
 &nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 What is the pre-order traversal of the tree above?
 
 problem 4: Now draw a exactly-balanced binary tree of characters such that a post-order traversal spells the word: uncopyrightable
 
 
-
-
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 What is the breadth-first traversal of the tree above?
 

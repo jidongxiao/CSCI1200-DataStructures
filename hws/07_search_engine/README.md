@@ -408,6 +408,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (7 pts)
    - Uses data structures which have not been covered in this class. (-7)
+   - Uses filesystem library (i.e., #include &lt;filesystem&gt; ). (-7)
    - Neither std::map nor std::set is used. (-7)
    - Member variables are public. (-2)
  - RECURSION (3 pts)

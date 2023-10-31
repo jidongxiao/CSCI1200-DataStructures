@@ -10,15 +10,7 @@ problem 2: Create a exactly balanced binary search tree with 7 color words (orde
 
 problem 3: Draw a exactly-balanced binary search tree containing the letters of the word: uncopyrightable
 
-
-
-
-
-
-
-
-
-
+<div style="width: 100%; height: 200px; border: 1px solid #000;"></div>
 
 What is the pre-order traversal of the tree above?
 
@@ -41,15 +33,11 @@ What is the breadth-first traversal of the tree above?
 
 *estimate: 20-35 minutes*
 
-Now let’s explore the implementation of the ds_set class, along with the use of recursive functions to
+Now let’s explore the implementation of the ds_set class, along with the use of recursive functions to manipulate binary search trees. Download and examine the files: [ds_set.h](ds_set.h) and [test_ds_set.cpp](test_ds_set.cpp).
 
-manipulate binary search trees. Download and examine the files: [ds_set.h](ds_set.h) and [test_ds_set.cpp](test_ds_set.cpp).
+The implementation of find provided in ds_set.h is recursive. Re-implement and test a non-recursive replacement for this function.
 
-The implementation of find provided in ds_set.h is recursive. Re-implement and test a
-non-recursive replacement for this function.
-
-**To complete this checkpoint**: Show one of the TAs your new code. Be prepared to discuss the running
-time for the two different versions of find for various inputs.
+**To complete this checkpoint**: Show one of the TAs your new code. Be prepared to discuss the running time for the two different versions of find for various inputs.
 
 ## Checkpoint 3
 

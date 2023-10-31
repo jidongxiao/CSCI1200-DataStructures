@@ -50,8 +50,8 @@ The implementation of find provided in ds_set.h is recursive. Re-implement and t
 *estimate: 20-35 minutes*
 
 The implementation of the copy constructor and the assignment operator is not yet complete
-because each depends on a private member function called copy tree, the body of which has not yet been
-written. Write copy tree and then test to see if it works by “uncommenting” the appropriate code from the
+because each depends on a private member function called copy_tree, the body of which has not yet been
+written. Write copy_tree and then test to see if it works by “uncommenting” the appropriate code from the
 main function.
 
 **To complete this checkpoint**: Show one of the TAs your new code. Be prepared to discuss the running

@@ -10,13 +10,32 @@ problem 2: Create a exactly balanced binary search tree with 7 color words (orde
 
 problem 3: Draw a exactly-balanced binary search tree containing the letters of the word: uncopyrightable
 
+
+
+
+
+
+
+
+
+
+
 What is the pre-order traversal of the tree above?
 
 problem 4: Now draw a exactly-balanced binary tree of characters such that a post-order traversal spells the word: uncopyrightable
 
+
+
+
+
+
+
+
+
+
 What is the breadth-first traversal of the tree above?
 
-*To complete this checkpoint*: When you have finished all of the problems, discuss your answers with your lab TA or mentor.
+**To complete this checkpoint**: When you have finished all of the problems, discuss your answers with your lab TA or mentor.
 
 ## Checkpoint 2
 

@@ -6,7 +6,7 @@ We made a clarification on the discussion forum. In case you didn't pay attenton
 
 2. However, these are two situations where the above rule does not apply:
 
-2.1. when constructing the snippet, this above rule does not apply. When constructing the snippet, you just find the first occurrence of that word (or that query), and that really is saying that you can just call the find() function to find the first occurrence of that word (or that query) within the body section of the HTML file. And therefore your snippet may be like this:
+2.1. when constructing the snippet, this above rule does not apply. When constructing the snippet, you just find the first occurrence of that word (or that query), and that really is saying that you can just call the **std::string::find**() function to find the first occurrence of that word (or that query) within the body section of the HTML file. And therefore your snippet may be like this:
 
 "I am Lady Gaga."
 
@@ -18,7 +18,7 @@ This is also why for test case 4.2, the following is showed in the snippet:
 
 when the search query is a phrase search of "Statue of Liberty". And this means that "-" after Liberty is okay, we do not care.
 
-2.2. when counting the number of occurrences of each keyword (in the keyword density score calculation process), the above rule does not apply. When counting the occurrences of each keyword, you can just call the find() function to find the occurrence of that keyword. And therefore, when the keyword is *Gaga*, and the find() function finds *Gaga* in the sentence of "I am Lady Gaga.", that is okay, we will count this one as a valid occurrence.
+2.2. when counting the number of occurrences of each keyword (in the keyword density score calculation process), the above rule does not apply. When counting the occurrences of each keyword, you can just call the **std::string::find**() function to find the occurrence of that keyword. And therefore, when the keyword is *Gaga*, and the **std::string::find**() function finds *Gaga* in the sentence of "I am Lady Gaga.", that is okay, we will count this one as a valid occurrence even though there is period "." after *Gaga*.
 
 So you may see that 1 and 2 are not consistent; but the only reason we allow this inconsistence to exist in this assignment is to simplify your task. A fully functioning search engine will need to handle a lot of complicated cases, and that's way beyond the scope of this course.
 

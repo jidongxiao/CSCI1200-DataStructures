@@ -18,7 +18,7 @@ of pointers to the iterator.
 
 ## 19.1 ds_set Warmup/Review Exercises
 
--Draw a diagram of a possible memory layout for a ds set containing the numbers 16, 2, 8, 11, and 5. Is there
+- Draw a diagram of a possible memory layout for a ds set containing the numbers 16, 2, 8, 11, and 5. Is there
 only one valid memory layout for this data as a ds set? Why?
 
 &nbsp;

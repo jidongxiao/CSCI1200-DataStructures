@@ -1,3 +1,5 @@
+This README is still incomplete.
+
 # Homework 8 — Managing Youtube Comments
 
 In this assignment you will develop a program to manage youtube comments, let's call this program New York Comments. Please read the entire handout before starting to code the assignment.
@@ -44,7 +46,7 @@ Here:
 
 - *nycomments.exe* is the executable file name.
 - input1.txt contains existing comments to a youtube video.
-- input2.txt contains operations we want to perform: these operations include: 1. adding comments, 2. remove comments, 3. display comments.
+- input2.txt contains operations we want to perform. These operations include: 1. adding comments, 2. remove comments, 3. display comments.
 - output.txt is where to print your output to.
 
 ## Format of input1.txt 

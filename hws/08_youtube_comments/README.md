@@ -208,7 +208,7 @@ In this assignment, we define that a child comment should be indented by four sp
 
 ### getline
 
-Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
+1. Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
 
 ```cpp
 	// assume inputFile is a std::string, containing the file name of the input file.
@@ -228,6 +228,38 @@ Unlike previous assignments where the input files only contain fields separated 
 ```
 
 After these lines, the whole content of the json file will be stored as a string in the std::string variable *json_content*. And you can then parse it to get each individual comment.
+
+2. **The second input file** contains comments, which may have spaces, and that makes it hard for you to use the >> operator to read the content of the file. Once again, the *getline* function can come into play. Let's say you want to read a line like this:
+
+```console
+reply_to_comment UgxCAk2MEXaUMS8E5dx4AaABAg UgxCAk2MEXaUMS8E5dx4AaABAg.0 @user3 "I love this song!"
+```
+
+You can use the following lines of code:
+
+```cpp
+	// assuming opsFile is an std::ifstream object, which you use to open the second input file.
+	// assuming command, parent_id, id, author, comment are all std::string objects.
+	// read the command, the parent comment id, the child comment id, the author, the comment.
+	opsFile >> command;
+	opsFile >> parent_id;
+	opsFile >> id;
+	opsFile >> user;
+	// skip any whitespace to get to the next non-whitespace character
+	opsFile >> std::ws;
+	// now, read the comment
+	if (opsFile.peek() == '"') {
+		// if the field starts with a double quote, read it as a whole string
+		opsFile.get();  // consume the opening double quote
+		std::getline(opsFile, comment, '"');  // read until the closing double quote
+		// opsFile >> comment;  // read the quoted field
+		if (!comment.empty() && comment.back() == '"') {
+			comment.pop_back();  // remove the closing double quote
+		}
+	}
+```
+
+After executing the above lines, your *command* will be "reply_to_comment", your *parent_id* will be "UgxCAk2MEXaUMS8E5dx4AaABAg", your *id* will be "UgxCAk2MEXaUMS8E5dx4AaABAg.0", your *user* will be "@user3", your *comment* will be "I love this song!".
 
 ### print thumbs up symbol
 

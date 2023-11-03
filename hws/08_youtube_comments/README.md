@@ -227,7 +227,7 @@ In this assignment, we define that a child comment should be indented by four sp
         jsonFile.close();
 ```
 
-After these lines, the whole content of the json file will be stored as a string in the std::string variable *json_content*. And you can then parse it to get each individual comment.
+After these lines, the whole content of the json file will be stored as a string in the std::string variable *json_content*. And you can then parse it to get each individual comment. In order to parse the *json_content*, which is a std::string, you will once again find that the std::string functions such as *std::string::find*(), and *std::string**substr*() to be very useful.
 
 2. **The second input file** contains comments, which may have spaces, and that makes it hard for you to use the >> operator to read the content of the file. Once again, the *getline* function can come into play. Let's say you want to read a line like this:
 
@@ -240,7 +240,7 @@ You can use the following lines of code:
 ```cpp
 	// assuming opsFile is an std::ifstream object, which you use to open the second input file.
 	// assuming command, parent_id, id, author, comment are all std::string objects.
-	// read the command, the parent comment id, the child comment id, the author, the comment.
+	// read the command, the parent comment id, the child comment id, the user name.
 	opsFile >> command;
 	opsFile >> parent_id;
 	opsFile >> id;

@@ -169,13 +169,13 @@ Here:
 
 The following three pictures from youtube demonstrate the visual effect of this delete process.
 
-Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3".
+- Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3". (Question: if "test2" is the parent of "test3", then why do "test2" and "test3" have the same indentation? Well, this is exactly the problem youtube has and it is exactly what we want to you solve in this assignment.)
 ![alt text](before_delete.png "before delete")
 
-Now we want to delete "test". Based on our definition of delete, this should cause the deletion of "test", "test2", and "test3".
+- Now we want to delete "test". Based on our definition of delete, this should cause the deletion of "test", "test2", and "test3".
 ![alt text](during_delete.png "during delete")
 
-And this is what we get after deletion. As can be seen, "test", "test2", "test3" are all deleted.
+- And this is what we get after deletion. As can be seen, "test", "test2", "test3" are all deleted.
 ![alt text](after_delete.png "after delete")
 
 5. display comment

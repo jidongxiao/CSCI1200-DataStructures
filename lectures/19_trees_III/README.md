@@ -1,5 +1,9 @@
 # Lecture 19 --- Trees, Part III
 
+## Announcements
+
+- Homework Deadline requests can only be made upto 4hrs before the deadline and for specific reasons only through an email to ds_instructors@cs.rpi.edu
+
 Review from Lecture 17 & 18
 - Overview of the ds_set implementation
 - begin, find, destroy_tree, insert
@@ -9,6 +13,9 @@ of pointers to the iterator.
 - B+ Tree Overview
 
 ## Today’s Lecture
+
+- Trivia 1
+- Submini Poll from Lecture 18
 
 - Last piece of ds_set: removing an item, erase
 - Breadth-first and depth-first tree search

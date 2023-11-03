@@ -70,7 +70,10 @@ point to the “in-order predecessor”.
 
   – Each node stores a parent pointer. Only the root node has a null parent pointer. [method 1]
 
+
   – Each iterator maintains a stack of pointers representing the path down the tree to the current node. [method 2]
+
+
 - If we choose the parent pointer method, we’ll need to rewrite the insert and erase member functions to
 correctly adjust parent pointers.
 - Although iterator increment looks expensive in the worst case for a single application of operator++, it is fairly
@@ -78,10 +81,12 @@ easy to show that iterating through a tree storing n nodes requires O(n) operati
 
 Exercise: [method 1] Write a fragment of code that given a node, finds the in-order successor using parent pointers.
 Be sure to draw a picture to help you understand!
+![alt text](ds_set_parent_ptrs.png "ds set parent ptrs")
 
 Exercise: [method 2] Write a fragment of code that given a tree iterator containing a pointer to the node and a
 stack of pointers representing path from root to node, finds the in-order successor (without using parent pointers).
 Either version can be extended to complete the implementation of increment/decrement for the ds_set tree iterators.
+![alt text](ds_set_history.png "ds set history")
 
 Exercise: What are the advantages & disadvantages of each method?
 

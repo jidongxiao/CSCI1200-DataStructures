@@ -198,9 +198,11 @@ To summerize the rules, in this homework, no sorting is needed.
 
 ### Indentation
 
-Just like youtube, we use indentations to display the tree structure of the comments. More specifically, a child comment should be indented by four space characters relative to its parent comment. Sibling comments should have the same identation.
+Just like youtube, we use indentations to display the tree structure of the comments. The following image is an example from youtube:
 
 ![alt text](comments_indentation.png "comments indentation")
+
+In this assignment, we define that a child comment should be indented by four space characters relative to its parent comment. Sibling comments should have the same identation.
 
 ## Program Requirements & Submission Details
 

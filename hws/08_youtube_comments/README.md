@@ -282,7 +282,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Instructor's Code
 
-Links to instructor's code for testing might be added here later if available. (This is not a promise).
+You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/comments/). 
 
 ## Rubric
 

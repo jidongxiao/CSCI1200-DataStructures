@@ -72,19 +72,28 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 
 Each field is a key-value pair.
 
-Please note that all existing comments which are direct responses to the original video, are considered as sibilings. And they do not have a parent. The parent_comment_id field of these comments is empty. The following is such an example:
+Please note that all existing comments which are direct responses to the original video, are considered as sibilings. And they do not have a parent. The *parent_comment_id* field of these comments is empty. The following is such an example:
 
 ```console
 {"video_id": "zz42pQ-2ytI", "author": "@user-ek5tl4nu7p", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "like_count": 826, "reply_count": 33, "is_reply": false, "parent_comment_id": "", "published_date": "7 hours ago (edited)", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "I am a Man City fan, but I have to ask the Man United players, how could they leave Haaland so wide open on the second goal."}
 ```
 
-As can be seen from this above example, a comment which is a direct response to the original video, has this field *parent_comment_id* as an empty string, and also has this field *is_reply* as false; in contrast, a comment which is not a direct response to the original video, but rather is a response to an existing comment, will have the id of that existing comment as its *parent_comment_id*, and will also have the *is_reply* field as *true*. The following is an example of such comments:
+As can be seen from this above example, a comment which is a direct response to the original video, has this field *parent_comment_id* as an empty string, and also has this field *is_reply* as **false**; in contrast, a comment which is not a direct response to the original video, but rather is a response to an existing comment, will have the id of that existing comment as its *parent_comment_id*, and will also have the *is_reply* field as **true**. The following is an example of such comments:
 
 ```console
 {"video_id": "zz42pQ-2ytI", "author": "@abelendecody1", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg.9wTA3njI9fp9wTE98Q3wqB", "like_count": 83, "reply_count": 0, "is_reply": true, "parent_comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "published_date": "6 hours ago", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "Because they don’t know what they’re doing out there. It’s so sad to see."}
 ```
 
 see the *is_reply* field is true here.
+
+Our data set includes 6 json files, just to satisfiy your curiosity, they include comments corresponding to the following 6 youtube videos:
+
+hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
+manchester_derby.json is corresponding to this video titled [Manchester United v. Manchester City | PREMIER LEAGUE HIGHLIGHTS](https://www.youtube.com/watch?v=zz42pQ-2ytI).
+need_you_now.json is corresponding to this video titled [Lady Antebellum - Need You Now (Official Music Video)](https://www.youtube.com/watch?v=PMootRNTC-A).
+remembering_matthew_perry.json is corresponding to this video titled ["Remembering Matthew Perry, Part 1: The 'Friend' who made us laugh"](https://www.youtube.com/watch?v=riyOeTLGWHw).
+should_you_go_to_rpi.json is corresponding to this video titled [Should You Go To RPI? - Opinions from a Rensselaer Polytechnic Institute Graduate](https://www.youtube.com/watch?v=5RSsr-MagHw).
+rpi_admissions.json is corresponding to this video titled [Welcome to Rensselaer!](https://www.youtube.com/watch?v=9tsirvC4sSQ).
 
 ## Format of input2.txt 
 

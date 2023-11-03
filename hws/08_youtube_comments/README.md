@@ -58,16 +58,16 @@ input1.json represents the json files, it stores all existing comments. Each lin
 
 The line is enclosed with a pair of curly braces. And every line has these same fields:
 
-- video id: youtube assign each video an id.
+- *video_id*: youtube assign each video an id.
 - author: username of the author.
-- comment id: youtube assign each comment an id.
-- like count: how many likes this comment gets.
-- reply count: how many comments are a reply to this comment.
-- is reply: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
-- parent comment id: if comment A is a reply to comment B, then we define comment B as the parent of comment A.
-- published date: when this comment was made, for all the new comments we are going to make this assignment, please set the published date to be "0 seconds ago".
-- crawled date: when the comment data was collected, you won't really use this field in this assignment.
-- is video owner: indicates if this comment is made by the video owner.
+- *comment_id*: youtube assign each comment an id.
+- *like_count*: how many likes this comment gets.
+- *reply_count*: how many comments are a reply to this comment.
+- *is_reply*: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
+- *parent_comment_id*: if comment A is a reply to comment B, then we define comment B as the parent of comment A.
+- *published_date*: when this comment was made, for all the new comments we are going to make this assignment, please set the published date to be "0 seconds ago".
+- *crawled_date*: when the comment data was collected, you won't really use this field in this assignment.
+- *is_video_owner*: indicates if this comment is made by the video owner.
 - comment: the actual comment.
 
 Each field is a key-value pair.

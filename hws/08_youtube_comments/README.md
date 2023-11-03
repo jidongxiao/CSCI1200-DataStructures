@@ -1,5 +1,3 @@
-This README is still incomplete.
-
 # Homework 8 — Managing Youtube Comments
 
 In this assignment you will develop a program to manage youtube comments, let's call this program New York Comments. Please read the entire handout before starting to code the assignment.
@@ -52,7 +50,7 @@ Here:
 
 ## Format of input1.json
 
-input1.json represents the json files. Each line of the .json file has this same format:
+input1.json represents the json files, it stores all existing comments. Each line of the .json file has this same format:
 
 ```console
 {"video_id": "PMootRNTC-A", "author": "@tedybossu98", "comment_id": "UgwRfodAvGV1UOSQHhN4AaABAg", "like_count": 145, "reply_count": 51, "is_reply": false, "parent_comment_id": "", "published_date": "11 years ago", "crawled_date": "2023-10-31T22:35:37.499265", "is_video_owner": false, "comment": "Great Lord. Every time i hear this song i picture myself calling my ex and having the most romantic conversation on Earth. (her crying ..me crying) but when the song ends i never call her. I go play MW3 ..lame"}
@@ -65,7 +63,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - comment id: youtube assign each comment an id.
 - like count: how many likes this comment gets.
 - reply count: how many comments are a reply to this comment.
-- is reply: is this a reply to an existing comment? (if not, then it's a reply to the video)
+- is reply: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
 - parent comment id: if comment A is a reply to comment B, then we define comment B as the parent of comment A.
 - published date: when this comment was made, for all the new comments we are going to make this assignment, please set the published date to be "0 seconds ago".
 - crawled date: when the comment data was collected, you won't really use this field in this assignment.
@@ -73,6 +71,20 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - comment: the actual comment.
 
 Each field is a key-value pair.
+
+Please note that all existing comments which are direct responses to the original video, are considered as sibilings. And they do not have a parent. The parent_comment_id field of these comments is empty. The following is such an example:
+
+```console
+{"video_id": "zz42pQ-2ytI", "author": "@user-ek5tl4nu7p", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "like_count": 826, "reply_count": 33, "is_reply": false, "parent_comment_id": "", "published_date": "7 hours ago (edited)", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "I am a Man City fan, but I have to ask the Man United players, how could they leave Haaland so wide open on the second goal."}
+```
+
+As can be seen from this above example, a comment which is a direct response to the original video, has this field *parent_comment_id* as an empty string, and also has this field *is_reply* as false; in contrast, a comment which is not a direct response to the original video, but rather is a response to an existing comment, will have the id of that existing comment as its *parent_comment_id*, and will also have the *is_reply* field as *true*. The following is an example of such comments:
+
+```console
+{"video_id": "zz42pQ-2ytI", "author": "@abelendecody1", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg.9wTA3njI9fp9wTE98Q3wqB", "like_count": 83, "reply_count": 0, "is_reply": true, "parent_comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "published_date": "6 hours ago", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "Because they don’t know what they’re doing out there. It’s so sad to see."}
+```
+
+see the *is_reply* field is true here.
 
 ## Format of input2.txt 
 
@@ -160,7 +172,7 @@ All expected output files are provided. Among all the five operations mentioned 
 
 When displaying the comments, we need to consider the displaying order of the comments. The rules are:
 
-1. existing comments: comments which are included in the json file are existing comments. And when displaying comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the order as they are in the json file. For example, both A and B are existing commens, if comment A appears in line 1 of the json file, and comment B appears in line 4 of the json file, then comment A should be displayed (i.e., printed to the output file) before comment B is displayed (i.e., printed to the output file).
+1. existing comments: comments which are included in the json file are existing comments. And when displaying existing comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the order as they are in the json file. For example, both A and B are existing commens, if comment A appears in line 1 of the json file, and comment B appears in line 4 of the json file, then comment A should be displayed (i.e., printed to the output file) before comment B is displayed (i.e., printed to the output file).
 2. newly added comments: for newly added comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the same order as they are in the input2.txt file.
 
 ## Program Requirements & Submission Details

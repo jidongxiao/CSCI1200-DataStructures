@@ -165,7 +165,7 @@ Here:
 - delete_comment is the operation name. Lines describing the operation of *delete a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being deleted.
 - Ugw2rL586Lv-OZNS6E94AaABAF is the id of the comment which is now being deleted.
 
-**Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendant.
+**Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendants.
 
 The following three pictures from youtube demonstrate the visual effect of this delete process.
 
@@ -191,7 +191,7 @@ Here:
 - display_comment is the operation name. Lines describing the operation of *display a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being displayed.
 - Ugw2rL586Lv-OZNS6E94AaABAH is the id of the comment which is now being displayed.
 
-**Definition of display a comment**:  in this assignment, the definition of "display a comment" means display this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "displaying A" means displaying A, B, C, D, E, and F, i.e., displaying A, and all of its descendant. And display means display the comments into the output file.
+**Definition of display a comment**:  in this assignment, the definition of "display a comment" means display this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "displaying A" means displaying A, B, C, D, E, and F, i.e., displaying A, and all of its descendants. And display means display the comments into the output file.
 
 ## Output File Format
 

@@ -205,7 +205,7 @@ When displaying the comments, we need to consider the displaying order of the co
 4. if a newly added comment is a response to the original video, then this newly added comment should be displayed at the very bottom; in other words, it should be displayed after all existing comments are displayed.
 5. if two newly added comments, let's say A and B, both are responses to the original video, then both A and B should be displayed at the very bottom; but the order between A and B themselves, should stay the same as they appear in **the second input file**.
 
-To summarize the rules, in this homework, no sorting is needed.
+To summarize the rules, in this homework, no sorting is needed, but you need to make sure that a newly added comment should always be below its all existing siblings.
 
 ### Indentation
 

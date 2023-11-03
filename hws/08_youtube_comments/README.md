@@ -213,7 +213,7 @@ Just like youtube, we use indentations to display the tree structure of the comm
 
 ![alt text](comments_indentation.png "comments indentation")
 
-In this assignment, we define that a child comment should be indented by four space characters relative to its parent comment. Sibling comments should have the same identation.
+In this assignment, we define that a child comment should be indented by four space characters relative to its parent comment. Sibling comments should have the same identation. Multiple replying comments to the same comment should all be considered as siblings. Also, as we have already mentioned earlier, multiple comments which are responses to the original video should all be considered as siblings.
 
 ## Useful Code
 

@@ -88,12 +88,17 @@ see the *is_reply* field is true here.
 
 Our data set includes 6 json files, just to satisfiy your curiosity, they include comments corresponding to the following 6 youtube videos:
 
-hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
-manchester_derby.json is corresponding to this video titled [Manchester United v. Manchester City | PREMIER LEAGUE HIGHLIGHTS](https://www.youtube.com/watch?v=zz42pQ-2ytI).
-need_you_now.json is corresponding to this video titled [Lady Antebellum - Need You Now (Official Music Video)](https://www.youtube.com/watch?v=PMootRNTC-A).
-remembering_matthew_perry.json is corresponding to this video titled ["Remembering Matthew Perry, Part 1: The 'Friend' who made us laugh"](https://www.youtube.com/watch?v=riyOeTLGWHw).
-should_you_go_to_rpi.json is corresponding to this video titled [Should You Go To RPI? - Opinions from a Rensselaer Polytechnic Institute Graduate](https://www.youtube.com/watch?v=5RSsr-MagHw).
-rpi_admissions.json is corresponding to this video titled [Welcome to Rensselaer!](https://www.youtube.com/watch?v=9tsirvC4sSQ).
+- hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
+
+- manchester_derby.json is corresponding to this video titled [Manchester United v. Manchester City | PREMIER LEAGUE HIGHLIGHTS](https://www.youtube.com/watch?v=zz42pQ-2ytI).
+
+- need_you_now.json is corresponding to this video titled [Lady Antebellum - Need You Now (Official Music Video)](https://www.youtube.com/watch?v=PMootRNTC-A).
+
+- remembering_matthew_perry.json is corresponding to this video titled ["Remembering Matthew Perry, Part 1: The 'Friend' who made us laugh"](https://www.youtube.com/watch?v=riyOeTLGWHw).
+
+- should_you_go_to_rpi.json is corresponding to this video titled [Should You Go To RPI? - Opinions from a Rensselaer Polytechnic Institute Graduate](https://www.youtube.com/watch?v=5RSsr-MagHw).
+
+- rpi_admissions.json is corresponding to this video titled [Welcome to Rensselaer!](https://www.youtube.com/watch?v=9tsirvC4sSQ).
 
 ## Format of input2.txt 
 

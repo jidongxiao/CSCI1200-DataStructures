@@ -167,6 +167,17 @@ Here:
 
 **Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendant.
 
+The following three pictures from youtube demonstrate the visual effect of this delete process.
+
+Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3".
+![alt text](before_delete.png "before delete")
+
+Now we want to delete "test". Based on our definition of delete, this should cause the deletion of "test", "test2", and "test3".
+![alt text](during_delete.png "during delete")
+
+And this is what we get after deletion. As can be seen, "test", "test2", "test3" are all deleted.
+![alt text](after_delete.png "after delete")
+
 5. display comment
 
 A line which starts with the string "display_comment" means this line describes the operation of "display a comment". Here is an example:

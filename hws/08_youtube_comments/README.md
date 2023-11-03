@@ -44,11 +44,11 @@ nycomments.exe input1.json input2.txt output.txt
 Here:
 
 - *nycomments.exe* is the executable file name.
-- input1.json contains existing comments to a youtube video.
-- input2.txt contains operations we want to perform.
+- input1.json contains existing comments to a youtube video. In this README we will refer to this file as **the json file**.
+- input2.txt contains operations we want to perform. In this README we will refer to this file as **the second input file**, or just the **input2** file.
 - output.txt is where to print your output to.
 
-To summerize what your program does: your program reads all existing comments from *input1.json* (replace this with the real json file names), store them in trees, and read the operations from *input2.txt* (replace this with the real input txt file names), and then perform these operations, and every time there is a "display_comment" operation in the *input2.txt* file, you program display the specified comment into output.txt. If there are multiple *display_comment* operations in *input2.txt*, then your program will display all of them in *output.txt*, one by one.
+To summerize what your program does: your program reads all existing comments from **the json file**, store them in trees, and read the operations from **the second input file**, and then perform these operations, and every time there is a "display_comment" operation in **the second input file**, you program display the specified comment into output.txt. If there are multiple *display_comment* operations in **the second input file**, then your program will display all of them in *output.txt*, one by one.
 
 ## Format of input1.json
 
@@ -188,8 +188,13 @@ All expected output files are provided. Among all the five operations mentioned 
 
 When displaying the comments, we need to consider the displaying order of the comments. The rules are:
 
-1. existing comments: comments which are included in the json file are existing comments. And when displaying existing comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the order as they are in the json file. For example, both A and B are existing commens, if comment A appears in line 1 of the json file, and comment B appears in line 4 of the json file, then comment A should be displayed (i.e., printed to the output file) before comment B is displayed (i.e., printed to the output file).
-2. newly added comments: for newly added comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the same order as they are in the input2.txt file.
+1. existing comments: comments which are included in the json file are existing comments. And when displaying existing comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments which have the same parent should stay in the order as they are in the json file. For example, both A and B are existing commens, if comment A appears in line 1 of the json file, and comment B appears in line 4 of the json file, then comment A should be displayed (i.e., printed to the output file) before comment B is displayed (i.e., printed to the output file). Also, two comments which are both a response to the original video, should stay in the same order as they appear in the json file.
+2. newly added comments: for newly added comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the same order as they are in **the second input file**.
+3. if a newly added comment is a reply to an existing comment, then it should be displayed right below that existing comment.
+4. if a newly added comment is a response to the original video, then this newly added comment should be displayed at the very bottom; in other words, it should be displayed after all existing comments are displayed.
+5. if two newly added comments, let's say A and B, both are responses to the original video, then both A and B should be displayed at the very bottom; but the order between A and B themselves, should stay the same as they appear in **the second input file**.
+
+To summerize the rules, in this homework, no sorting is needed.
 
 ## Program Requirements & Submission Details
 

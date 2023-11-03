@@ -76,18 +76,34 @@ Each field is a key-value pair.
 
 ## Format of input2.txt 
 
-input2.txt contains operations we want to perform. These operations include:
+input2.txt contains operations we want to perform, each line of this file describes one operation. These operations include:
 
 1. reply to a video
+
+When a line starts with the string *reply_to_video*, it means that this line describes the operation of *reply to a video*. Here is an example:
+
+```console
+reply_to_video Ugw2rL586Lv-OZNS6E94AaABAH @user2 "Friends marks my childhood."
+```
+
+Here:
+
+- reply_to_video is the operation name. Lines describing the operation of *reply to a video* has 4 fields: operation name, id of this comment, user name of the author who is making this replying comment (to the video), and the content of the replying comment.
+- Ugw2rL586Lv-OZNS6E94AaABAH is the id of this current comment 
+- user2 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
+- "Friends marks my childhood." is the content of the comment.
+
 2. reply to a comment
 
-Here is a sample:
+A line which starts with the string *reply_to_comment" means this line describes the operation of "reply to a comment". Here is an example:
+
 ```console
 reply_to_comment Ugzsyj0jivPUQdfy_Y94AaABAg Ugzsyj0jivPUQdfy_Y94AaABAg.0 @user1 "Britney is back!"
 ```
+
 Here:
 
-- reply_to_comment is the operation.
+- reply_to_comment is the operation name. Lines describing the operation of *reply to a comment* has 5 fields: operation name, id of the parent comment, id of this comment, user name of the author who is making this replying comment (to another comment), and the content of the replying comment.
 - Ugzsyj0jivPUQdfy_Y94AaABAg is the parent comment id.
 - Ugzsyj0jivPUQdfy_Y94AaABAg.0 is the id of this current comment.
 - user1 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
@@ -96,12 +112,56 @@ Here:
 This whole lines means that this user *user1* is making a comment with the content of "Britney is back!", and the id of this comment is Ugzsyj0jivPUQdfy_Y94AaABAg.0, and this comment is a reply to the comment whose id is Ugzsyj0jivPUQdfy_Y94AaABAg.
 
 3. like a comment
+
+A line which starts with the string *like_comment" means this line describes the operation of "like a comment". Here is an example:
+
+```console
+like_comment Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888
+```
+
+Here:
+
+- like_comment is the operation name. Lines describing the operation of *like a comment* has just 2 fields: the operation name, and the id the of comment which is being liked.
+- Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888 is the id of the comment which is being liked.
+
 4. delete comments
+
+A line which starts with the string *delete_comment" means this line describes the operation of "delete a comment". Here is an example:
+
+```console
+delete_comment Ugw2rL586Lv-OZNS6E94AaABAF
+```
+
+Here:
+
+- delete_comment is the operation name. Lines describing the operation of *delete a comment* has just 2 fields: the operation name, and the id the of comment which is being deleted.
+- Ugw2rL586Lv-OZNS6E94AaABAF is the id of the comment which is now being deleted.
+
+**Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendant.
+
 5. display comments
+
+A line which starts with the string "display_comment" means this line describes the operation of "display a comment". Here is an example:
+
+```console
+display_comment Ugw2rL586Lv-OZNS6E94AaABAH
+```
+
+Here:
+
+- display_comment is the operation name. Lines describing the operation of *display a comment* has just 2 fields: the operation name, and the id the of comment which is being displayed.
+- Ugw2rL586Lv-OZNS6E94AaABAH is the id of the comment which is now being displayed.
+
+**Definition of display a comment**:  in this assignment, the definition of "display a comment" means display this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "displaying A" means displaying A, B, C, D, E, and F, i.e., displaying A, and all of its descendant. And display means display the comments into the output file.
 
 ## Output File Format
 
-All expected output files are provided.
+All expected output files are provided. Among all the five operations mentioned above, only the *display a comment* operation would trigger a write to the output file.
+
+When displaying the comments, we need to consider the displaying order of the comments. The rules are:
+
+1. existing comments: comments which are included in the json file are existing comments. And when displaying comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the order as they are in the json filee. For example, both A and B are existing commens, if comment A appears in line 1 of the json file, and comment B appears in line 4 of the json file, then comment A should be displayed (i.e., printed to the output file) before comment B is displayed (i.e., printed to the output file).
+2. newly added comments: for newly added comments, a parent comment should be displayed (i.e., printed to the output file) before its children comments are displayed (i.e., printed to the output file). Two children comments who have the same parent should stay in the order as they are in the input2.txt file.
 
 ## Program Requirements & Submission Details
 

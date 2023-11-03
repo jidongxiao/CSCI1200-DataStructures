@@ -52,7 +52,7 @@ To summerize what your program does: your program reads all existing comments fr
 
 ## Format of input1.json
 
-input1.json represents the json files, it stores all existing comments. Each line of the .json file has this same format:
+input1.json represents the json files, it stores all existing comments. Each line of the .json file represents one comment, and each line has this same format:
 
 ```console
 {"video_id": "PMootRNTC-A", "author": "@tedybossu98", "comment_id": "UgwRfodAvGV1UOSQHhN4AaABAg", "like_count": 145, "reply_count": 51, "is_reply": false, "parent_comment_id": "", "published_date": "11 years ago", "crawled_date": "2023-10-31T22:35:37.499265", "is_video_owner": false, "comment": "Great Lord. Every time i hear this song i picture myself calling my ex and having the most romantic conversation on Earth. (her crying ..me crying) but when the song ends i never call her. I go play MW3 ..lame"}
@@ -203,6 +203,41 @@ Just like youtube, we use indentations to display the tree structure of the comm
 ![alt text](comments_indentation.png "comments indentation")
 
 In this assignment, we define that a child comment should be indented by four space characters relative to its parent comment. Sibling comments should have the same identation.
+
+## Useful Code
+
+### getline
+
+Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
+
+```cpp
+	// assume inputFile is a std::string, containing the file name of the input file.
+        std::ifstream jsonFile(inputFile);
+        if (!jsonFile.is_open()) {
+                std::cerr << "Failed to open the JSON file." << std::endl;
+                exit(1);
+        }
+
+        std::string json_content;
+        std::string line;
+        while (std::getline(jsonFile, line)) {
+                json_content += line;
+        }
+        // don't need this json file anymore, as the content is read into json_content.
+        jsonFile.close();
+```
+
+After these lines, the whole content of the json file will be stored as a string in the std::string variable *json_content*. And you can then parse it to get each individual comment.
+
+### print thumbs up symbol
+
+This line will print the thumbs up symbol, indicating likes.
+
+```
+std::cout << "\U0001F44D " << std::endl;
+```
+
+Of course you can change std::cout to a file stream so as to print the thumbs up symbol into the output file.
 
 ## Program Requirements & Submission Details
 

@@ -48,6 +48,8 @@ Here:
 - input2.txt contains operations we want to perform.
 - output.txt is where to print your output to.
 
+To summerize what your program does: your program reads all existing comments from *input1.json* (replace this with the real json file names), store them in trees, and read the operations from *input2.txt* (replace this with the real input txt file names), and then perform these operations, and every time there is a "display_comment" operation in the *input2.txt* file, you program display the specified comment into output.txt. If there are multiple *display_comment* operations in *input2.txt*, then your program will display all of them in *output.txt*, one by one.
+
 ## Format of input1.json
 
 input1.json represents the json files, it stores all existing comments. Each line of the .json file has this same format:
@@ -114,7 +116,7 @@ reply_to_video Ugw2rL586Lv-OZNS6E94AaABAH @user2 "Friends marks my childhood."
 
 Here:
 
-- reply_to_video is the operation name. Lines describing the operation of *reply to a video* has 4 fields: operation name, id of this comment, user name of the author who is making this replying comment (to the video), and the content of the replying comment.
+- reply_to_video is the operation name. Lines describing the operation of *reply to a video* has 4 fields (separated by spaces): operation name, id of this comment, user name of the author who is making this replying comment (to the video), and the content of the replying comment.
 - Ugw2rL586Lv-OZNS6E94AaABAH is the id of this current comment 
 - user2 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
 - "Friends marks my childhood." is the content of the comment.
@@ -129,7 +131,7 @@ reply_to_comment Ugzsyj0jivPUQdfy_Y94AaABAg Ugzsyj0jivPUQdfy_Y94AaABAg.0 @user1 
 
 Here:
 
-- reply_to_comment is the operation name. Lines describing the operation of *reply to a comment* has 5 fields: operation name, id of the parent comment, id of this comment, user name of the author who is making this replying comment (to another comment), and the content of the replying comment.
+- reply_to_comment is the operation name. Lines describing the operation of *reply to a comment* has 5 fields (separated by spaces): operation name, id of the parent comment, id of this comment, user name of the author who is making this replying comment (to another comment), and the content of the replying comment.
 - Ugzsyj0jivPUQdfy_Y94AaABAg is the parent comment id.
 - Ugzsyj0jivPUQdfy_Y94AaABAg.0 is the id of this current comment.
 - user1 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
@@ -147,10 +149,10 @@ like_comment Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888
 
 Here:
 
-- like_comment is the operation name. Lines describing the operation of *like a comment* has just 2 fields: the operation name, and the id the of comment which is being liked.
+- like_comment is the operation name. Lines describing the operation of *like a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being liked.
 - Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888 is the id of the comment which is being liked.
 
-4. delete comments
+4. delete comment
 
 A line which starts with the string *delete_comment" means this line describes the operation of "delete a comment". Here is an example:
 
@@ -160,12 +162,12 @@ delete_comment Ugw2rL586Lv-OZNS6E94AaABAF
 
 Here:
 
-- delete_comment is the operation name. Lines describing the operation of *delete a comment* has just 2 fields: the operation name, and the id the of comment which is being deleted.
+- delete_comment is the operation name. Lines describing the operation of *delete a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being deleted.
 - Ugw2rL586Lv-OZNS6E94AaABAF is the id of the comment which is now being deleted.
 
 **Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendant.
 
-5. display comments
+5. display comment
 
 A line which starts with the string "display_comment" means this line describes the operation of "display a comment". Here is an example:
 
@@ -175,7 +177,7 @@ display_comment Ugw2rL586Lv-OZNS6E94AaABAH
 
 Here:
 
-- display_comment is the operation name. Lines describing the operation of *display a comment* has just 2 fields: the operation name, and the id the of comment which is being displayed.
+- display_comment is the operation name. Lines describing the operation of *display a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being displayed.
 - Ugw2rL586Lv-OZNS6E94AaABAH is the id of the comment which is now being displayed.
 
 **Definition of display a comment**:  in this assignment, the definition of "display a comment" means display this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "displaying A" means displaying A, B, C, D, E, and F, i.e., displaying A, and all of its descendant. And display means display the comments into the output file.
@@ -197,6 +199,10 @@ Use good coding style when you design and implement your program. Organize your 
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
 **Due Date**: 11/09/2023, Thursday, 23:59pm.
+
+## Instructor's Code
+
+Links to instructor's code for testing might be added here later if available. (This is not a promise).
 
 ## Rubric
 

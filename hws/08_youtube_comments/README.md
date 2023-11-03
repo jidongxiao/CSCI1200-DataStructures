@@ -67,7 +67,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - *reply_count*: how many comments are a reply to this comment.
 - *is_reply*: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
 - *parent_comment_id*: if comment A is a reply to comment B, then we define comment B as the parent of comment A.
-- *published_date*: when this comment was made, for all the new comments we are going to make this assignment, please set the published date to be "0 seconds ago".
+- *published_date*: when this comment was made, for all the new comments we are going to make in this assignment, please set the published date to be "0 seconds ago".
 - *crawled_date*: when the comment data was collected, you won't really use this field in this assignment.
 - *is_video_owner*: indicates if this comment is made by the video owner.
 - comment: the actual comment.
@@ -117,7 +117,7 @@ reply_to_video Ugw2rL586Lv-OZNS6E94AaABAH @user2 "Friends marks my childhood."
 Here:
 
 - reply_to_video is the operation name. Lines describing the operation of *reply to a video* has 4 fields (separated by spaces): operation name, id of this comment, user name of the author who is making this replying comment (to the video), and the content of the replying comment.
-- Ugw2rL586Lv-OZNS6E94AaABAH is the id of this current comment 
+- Ugw2rL586Lv-OZNS6E94AaABAH is the id of this current comment. 
 - user2 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
 - "Friends marks my childhood." is the content of the comment.
 
@@ -194,7 +194,7 @@ When displaying the comments, we need to consider the displaying order of the co
 4. if a newly added comment is a response to the original video, then this newly added comment should be displayed at the very bottom; in other words, it should be displayed after all existing comments are displayed.
 5. if two newly added comments, let's say A and B, both are responses to the original video, then both A and B should be displayed at the very bottom; but the order between A and B themselves, should stay the same as they appear in **the second input file**.
 
-To summerize the rules, in this homework, no sorting is needed.
+To summarize the rules, in this homework, no sorting is needed.
 
 ### Indentation
 

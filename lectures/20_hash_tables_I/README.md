@@ -189,30 +189,33 @@ considering the (hopefully, very small) number of items stored per bin
 
 ## 20.11 How do we Resolve Collisions? METHOD 2: Open Addressing
 
-In open addressing, when the chosen table location already stores a key (or key-value pair), a different table
+- In open addressing, when the chosen table location already stores a key (or key-value pair), a different table
 location is sought in order to store the new value (or pair).
- Here are three different open addressing variations to handle a collision during an insert operation:
-– Linear probing: If i is the chosen hash location then the following sequence of table locations is tested
+- Here are three different open addressing variations to handle a collision during an insert operation:
+  – Linear probing: If i is the chosen hash location then the following sequence of table locations is tested
 (“probed”) until an empty location is found:
+```console
 (i+1)%N, (i+2)%N, (i+3)%N, ...
-– Quadratic probing: If i is the hash location then the following sequence of table locations is tested:
+```
+
+  – Quadratic probing: If i is the hash location then the following sequence of table locations is tested:
+```console
 (i+1)%N, (i+2*2)%N, (i+3*3)%N, (i+4*4)%N, ...
+```
 More generally, the j
-th “probe” of the table is (i + c1j + c2j
-2
-) mod N where c1 and c2 are constants.
-– Secondary hashing: when a collision occurs a second hash function is applied to compute a new table
+th “probe” of the table is (i + c1j + c2j2) mod N where c1 and c2 are constants.
+
+  – Secondary hashing: when a collision occurs a second hash function is applied to compute a new table
 location. This is repeated until an empty location is found.
 
-For each of these approaches, the find operation follows the same sequence of locations as the insert operation.
+- For each of these approaches, the find operation follows the same sequence of locations as the insert operation.
 The key value is determined to be absent from the table only when an empty location is found.
- When using open addressing to resolve collisions, the erase function must mark a location as “formerly
+- When using open addressing to resolve collisions, the erase function must mark a location as “formerly
 occupied”. If a location is instead marked empty, find may fail to return elements in the table. Formerlyoccupied locations may (and should) be reused, but only after the find operation has been run to completion.
- Problems with open addressing:
-– Slows dramatically when the table is nearly full (e.g. about 80% or higher). This is particularly problematic
-for linear probing.
-– Fails completely when the table is full.
-– Cost of computing new hash values.
+- Problems with open addressing:
+  – Slows dramatically when the table is nearly full (e.g. about 80% or higher). This is particularly problematic for linear probing.
+  – Fails completely when the table is full.
+  – Cost of computing new hash values.
 
 ## 20.12 Hash Table in STL?
 
@@ -246,12 +249,11 @@ underlying structure to ensure it is rarely needed.
 
 ## 20.14 Our Hash Function (as a Functor or Function Object)
 
-Next lecture we’ll talk about “function objects” or “functors”.... A functor is just a class wrapper around a
+- Next lecture we’ll talk about “function objects” or “functors”.... A functor is just a class wrapper around a
 function, and the function is implemented as the overloaded function call operator for the class.
- Often the programmer/designer for the program using a hash function has the best understanding of the
+- Often the programmer/designer for the program using a hash function has the best understanding of the
 distribution of data to be stored in the hash function. Thus, they are in the best position to define a custom
 hash function (if needed) for the data & application.
-
 - Here’s an example of a (generically) good hash function for STL strings, wrapped up inside of a class:
 
 ```cpp

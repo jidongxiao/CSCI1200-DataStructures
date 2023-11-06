@@ -202,8 +202,7 @@ location is sought in order to store the new value (or pair).
 ```console
 (i+1)%N, (i+2*2)%N, (i+3*3)%N, (i+4*4)%N, ...
 ```
-More generally, the j
-th “probe” of the table is (i + c1j + c2j2) mod N where c1 and c2 are constants.
+More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>2</sub>j<sup>2</sup>) mod N where c<sub>1</sub> and c<sub>2</sub> are constants.
 
   – Secondary hashing: when a collision occurs a second hash function is applied to compute a new table
 location. This is repeated until an empty location is found.

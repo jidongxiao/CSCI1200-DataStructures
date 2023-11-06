@@ -91,6 +91,8 @@ What’s the expected running time for identify, add, and erase?
 
 ## 20.6 Now let’s implement Caller ID with a Hash Table
 
+![alt text](phonebook.png "phonebook")
+
 ```cpp
 #define PHONEBOOK_SIZE 10
 

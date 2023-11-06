@@ -2,7 +2,7 @@
 
 ## Today’s Lecture
 
-- Hash Tables, Hash Functions, and Collision Resolution (leetcode 1, 705, 706)
+- Hash Tables, Hash Functions, and Collision Resolution <!--(leetcode 1, 705, 706)-->
 - Performance of: Hash Tables vs. Binary Search Trees
 - Collision resolution: separate chaining vs open addressing
 - STL’s unordered_set (and unordered_map)

@@ -219,11 +219,13 @@ More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>
 - The Standard Template Library standard and implementation of hash table have been slowly evolving over
 many years. Unfortunately, the names “hashset” and “hashmap” were spoiled by developers anticipating the
 STL standard, so to avoid breaking or having name clashes with code using these early implementations...
-- STL’s agreed-upon standard for hash tables: unordered_set and unordered_map.
-- Depending on your OS/compiler, you may need to add the -std=c++11 flag to the compile line (or other
+- STL’s agreed-upon standard for hash tables: unordered_set and unordered_map. 
+- You can use std::unordered_set the same way as you use std::set, even though the internal of these two are different, the external interface are the same.
+- You can use std::unordered_map the same way as you use std::map, even though the internal of these two are different, the external interface are the same.
+<!--- Depending on your OS/compiler, you may need to add the -std=c++11 flag to the compile line (or other
 configuration tweaks) to access these more recent pieces of STL. (And this will certainly continue to evolve
 in future years!) Also, for many types STL has a good default hash function, so you may not always need to
-specify both template parameters!
+specify both template parameters!-->
 
 <!--## 20.13 Our Copycat Version: A Set As a Hash Table
 

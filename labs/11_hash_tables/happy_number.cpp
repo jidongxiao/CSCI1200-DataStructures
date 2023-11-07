@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unordered_map>
 
 bool isHappy(int n) {
 }
@@ -9,7 +8,7 @@ int main() {
 	// 2, 4, 5, 6, 17, 18, 20 are not happy numbers.
 	// 1, 7, 10, 13, 19, 23, 28, 68 are not happy numbers.
 
-    int testCases[] = {2,4,5,6,17,18,20,68,1,7,10,13,19,23,28};
+    int testCases[] = {2,4,5,6,17,18,20,1,7,10,13,19,23,28,68};
 
     for (int n : testCases) {
         if (isHappy(n)) {

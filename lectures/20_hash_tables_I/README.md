@@ -341,6 +341,7 @@ the table. The erase function only invalidates an iterator that references the c
 ## 20.13 Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum_hash_table.cpp](../../leetcode/p1_twosum_hash_table.cpp).
+
 **Note**: make sure you understand this longest consecutive sequence problem and its solution, because you will re-write this function in the lab.
 - [Leetcode problem 128: Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/). Solution: [p128_longest_consecutive_sequence.cpp](../../leetcode/p128_longest_consecutive_sequence.cpp).
 

@@ -7,10 +7,9 @@
 - Collision resolution: separate chaining vs open addressing
 - STL’s unordered_set and unordered_map
 - Using a hash table to implement a set/map
+<!--  – Hash functions as functors/function objects (leetcode 1451: Rearrange Words in a Sentence)
 
-  – Hash functions as functors/function objects (leetcode 1451: Rearrange Words in a Sentence)
-
-  – Iterators, find, insert, and erase
+  – Iterators, find, insert, and erase-->
 
 ## 20.1 Definition: What’s a Hash Table?
 

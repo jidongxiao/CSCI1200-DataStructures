@@ -62,7 +62,7 @@ Complete the *isHappy* function using separate chaining. Do not use any of these
 
 ## Checkpoint 3: Separate Chaining Hash Table
 
-*estimate: 20-30 minutes*
+*estimate: 30-40 minutes*
 
 Form a team of two members. Complete the *longestConsecutive* function in this [program](test_longest_consecutive_sequence.cpp). You must use a separate-chaining-based hash table. Do not use any of these: std::unordered_map, std::unordered_set, std::map, std::set.
 

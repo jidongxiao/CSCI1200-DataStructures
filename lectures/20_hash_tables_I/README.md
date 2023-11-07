@@ -330,7 +330,7 @@ finding the appropriate iterator location in the appropriate list, and applying 
 ## 20.20 Resize
 
 - Must copy the contents of the current vector into a scratch vector, resize the current vector, and then re-insert
-each key into the resized vector. Exercise: Write resize()
+each key into the resized vector. Exercise: Write resize().
 
 ## 20.21 Hash Table Iterator Invalidation
 
@@ -340,4 +340,5 @@ the table. The erase function only invalidates an iterator that references the c
 ## 20.22 Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum_hash_table.cpp](../../leetcode/p1_twosum_hash_table.cpp).
+- [Leetcode problem 128: Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/). Solution: [p128_longest_consecutive_sequence.cpp](../../leetcode/p128_longest_consecutive_sequence.cpp).
 

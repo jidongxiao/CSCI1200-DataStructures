@@ -219,7 +219,7 @@ More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>
 - The Standard Template Library standard and implementation of hash table have been slowly evolving over
 many years. Unfortunately, the names “hashset” and “hashmap” were spoiled by developers anticipating the
 STL standard, so to avoid breaking or having name clashes with code using these early implementations...
-- STL’s agreed-upon standard for hash tables: unordered set and unordered map
+- STL’s agreed-upon standard for hash tables: unordered_set and unordered_map.
 - Depending on your OS/compiler, you may need to add the -std=c++11 flag to the compile line (or other
 configuration tweaks) to access these more recent pieces of STL. (And this will certainly continue to evolve
 in future years!) Also, for many types STL has a good default hash function, so you may not always need to
@@ -281,10 +281,8 @@ ds_hashset<std::string, hash_string_obj> my_hashset;
 
 ## 20.15 Hash Set Iterators
 
-- Iterators move through the hash table in the order of the storage locations rather than the ordering imposed
-by (say) an operator<. Thus, the visiting/printing order depends on the hash function and the table size.
-  – Hence the increment operators must move to the next entry in the current linked list or, if the end of the
-current list is reached, to the first entry in the next non-empty list.
+- Iterators move through the hash table in the order of the storage locations rather than the ordering imposed by (say) an operator<. Thus, the visiting/printing order depends on the hash function and the table size.
+  - Hence the increment operators must move to the next entry in the current linked list or, if the end of the current list is reached, to the first entry in the next non-empty list.
 - The declaration is nested inside the ds_hashset declaration in order to avoid explicitly templating the iterator
 over the hash function type.
 - The iterator must store:

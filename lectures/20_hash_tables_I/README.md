@@ -183,19 +183,15 @@ unsigned int hash(string const& k, unsigned int N) {
 
 ## 20.10 How do we Resolve Collisions? METHOD 1: Separate Chaining
 
-- Each table location stores a linked list of keys (and values) hashed to that location (as shown above in the
-phonebook hashtable). Thus, the hashing function really just selects which list to search or modify.
-- This works well when the number of items stored in each list is small, e.g., an average of 1. Other data
-structures, such as binary search trees, may be used in place of the list, but these have even greater overhead
-considering the (hopefully, very small) number of items stored per bin
+- Each table location stores a linked list of keys (and values) hashed to that location (as shown above in the phonebook hashtable). Thus, the hashing function really just selects which list to search or modify.
+- This works well when the number of items stored in each list is small, e.g., an average of 1. Other data structures, such as binary search trees, may be used in place of the list, but these have even greater overhead considering the (hopefully, very small) number of items stored per bin.
 
 ## 20.11 How do we Resolve Collisions? METHOD 2: Open Addressing
 
-- In open addressing, when the chosen table location already stores a key (or key-value pair), a different table
-location is sought in order to store the new value (or pair).
+- In open addressing, when the chosen table location already stores a key (or key-value pair), a different table location is sought in order to store the new value (or pair).
 - Here are three different open addressing variations to handle a collision during an insert operation:
-  – Linear probing: If i is the chosen hash location then the following sequence of table locations is tested
-(“probed”) until an empty location is found:
+
+  – Linear probing: If i is the chosen hash location then the following sequence of table locations is tested (“probed”) until an empty location is found:
 ```console
 (i+1)%N, (i+2)%N, (i+3)%N, ...
 ```
@@ -206,16 +202,16 @@ location is sought in order to store the new value (or pair).
 ```
 More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>2</sub>j<sup>2</sup>) mod N where c<sub>1</sub> and c<sub>2</sub> are constants.
 
-  – Secondary hashing: when a collision occurs a second hash function is applied to compute a new table
-location. This is repeated until an empty location is found.
+  – Secondary hashing: when a collision occurs a second hash function is applied to compute a new table location. This is repeated until an empty location is found.
 
-- For each of these approaches, the find operation follows the same sequence of locations as the insert operation.
-The key value is determined to be absent from the table only when an empty location is found.
-- When using open addressing to resolve collisions, the erase function must mark a location as “formerly
-occupied”. If a location is instead marked empty, find may fail to return elements in the table. Formerlyoccupied locations may (and should) be reused, but only after the find operation has been run to completion.
+- For each of these approaches, the find operation follows the same sequence of locations as the insert operation. The key value is determined to be absent from the table only when an empty location is found.
+- When using open addressing to resolve collisions, the erase function must mark a location as “formerly occupied”. If a location is instead marked empty, find may fail to return elements in the table. Formerlyoccupied locations may (and should) be reused, but only after the find operation has been run to completion.
 - Problems with open addressing:
+
   – Slows dramatically when the table is nearly full (e.g. about 80% or higher). This is particularly problematic for linear probing.
+
   – Fails completely when the table is full.
+
   – Cost of computing new hash values.
 
 ## 20.12 Hash Table in STL?

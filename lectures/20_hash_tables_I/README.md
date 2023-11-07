@@ -204,7 +204,7 @@ More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>
   – Secondary hashing: when a collision occurs a second hash function is applied to compute a new table location. This is repeated until an empty location is found.
 
 - For each of these approaches, the find operation follows the same sequence of locations as the insert operation. The key value is determined to be absent from the table only when an empty location is found.
-- When using open addressing to resolve collisions, the erase function must mark a location as “formerly occupied”. If a location is instead marked empty, find may fail to return elements in the table. Formerlyoccupied locations may (and should) be reused, but only after the find operation has been run to completion.
+- When using open addressing to resolve collisions, the erase function must mark a location as “formerly occupied”. If a location is instead marked empty, find may fail to return elements in the table. Formerly occupied locations may (and should) be reused, but only after the find operation has been run to completion.
 - Problems with open addressing:
 
   – Slows dramatically when the table is nearly full (e.g. about 80% or higher). This is particularly problematic for linear probing.

@@ -60,7 +60,7 @@ Complete the *isHappy* function using separate chaining. Do not use any of these
 
 **To complete this checkpoint**: Show a TA these additions and the test output.
 
-## Checkpoint 3,4,5,6: Separate Chaining Hash Table (Yes, it's Checkpoint 3,4,5,6, as there are 3 extra credits for make this program work.)
+## Checkpoint 3,4,5,6: Separate Chaining Hash Table (Yes, it's Checkpoint 3,4,5,6, as there are 3 extra credits for making this program work.)
 
 *estimate: 30-40 minutes*
 

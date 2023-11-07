@@ -225,7 +225,7 @@ configuration tweaks) to access these more recent pieces of STL. (And this will 
 in future years!) Also, for many types STL has a good default hash function, so you may not always need to
 specify both template parameters!
 
-## 20.13 Our Copycat Version: A Set As a Hash Table
+<!--## 20.13 Our Copycat Version: A Set As a Hash Table
 
 - The class is templated over both the key type and the hash function type.
 
@@ -335,9 +335,9 @@ each key into the resized vector. Exercise: Write resize().
 ## 20.21 Hash Table Iterator Invalidation
 
 - Any insert operation invalidates all ds_hashset iterators because the insert operation could cause a resize of
-the table. The erase function only invalidates an iterator that references the current object.
+the table. The erase function only invalidates an iterator that references the current object.-->
 
-## 20.22 Leetcode Exercises
+## 20.13 Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum_hash_table.cpp](../../leetcode/p1_twosum_hash_table.cpp).
 - [Leetcode problem 128: Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/). Solution: [p128_longest_consecutive_sequence.cpp](../../leetcode/p128_longest_consecutive_sequence.cpp).

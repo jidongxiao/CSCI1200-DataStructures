@@ -113,7 +113,8 @@ if (itr != my_data.end()) {
 ## 21.5 Using STL’s Associative Hash Table (Map)
 
 - Using the default std::string hash function.
-  – With no specified initial table size.
+
+  – With no specified initial table size. (map a std::string type key to a Foo class type value)
 ```cpp
 std::unordered_map<std::string,Foo> m;
 ```

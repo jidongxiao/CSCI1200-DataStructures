@@ -118,6 +118,7 @@ if (itr != my_data.end()) {
 ```cpp
 std::unordered_map<std::string,Foo> m;
 ```
+
   – Optionally specifying initial (minimum) table size.
 ```cpp
 std::unordered_map<std::string,Foo> m(1000);
@@ -127,6 +128,7 @@ std::unordered_map<std::string,Foo> m(1000);
 ```cpp
 std::unordered_map<std::string,Foo,std::function<unsigned int(std::string)> > m(1000, MyHashFunction);
 ```
+
   – Using the decltype specifier to get the “declared type of an entity”.
 ```cpp
 std::unordered_map<std::string,Foo,decltype(&MyHashFunction)> m(1000, MyHashFunction);
@@ -137,6 +139,7 @@ std::unordered_map<std::string,Foo,decltype(&MyHashFunction)> m(1000, MyHashFunc
 ```cpp
 std::unordered_map<std::string,Foo,MyHashFunctor> m;
 ```
+
   – Optionally specifying initial (minimum) table size.
 ```cpp
 std::unordered_map<std::string,Foo,MyHashFunctor> m(1000);

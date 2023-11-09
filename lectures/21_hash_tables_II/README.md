@@ -164,3 +164,5 @@ but requires more work to get right.
 
 - [Leetcode problem 1451: Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence/). Solution: [p1451_rearrange_words_in_a_sentence.cpp](../../leetcode/p1451_rearrange_words_in_a_sentence.cpp).
 - [Leetcode problem 508: Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/). Solution: [p508_most_frequent_subtree_sum.cpp](../../leetcode/p508_most_frequent_subtree_sum.cpp).
+- [Leetcode problem 225: Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/). Solution: [p225_stack_using_queues.cpp](../../leetcode/p225_stack_using_queues.cpp).
+- [Leetcode problem 232: Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).

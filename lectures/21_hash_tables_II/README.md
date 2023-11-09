@@ -150,7 +150,7 @@ functionality.-->
 - Stacks allow access, insertion and deletion from only one end called the top.
   - There is no access to values in the middle of a stack.
   - Stacks may be implemented efficiently in terms of vectors and lists, although vectors are preferable.
-  - All stack operations are O(1)
+  - All stack operations are O(1).
 
 ## 21.7 Additional STL Container Classes: Queues
 
@@ -158,7 +158,7 @@ functionality.-->
   - There is no access to values in the middle of a queue.
   - Queues may be implemented efficiently in terms of a list. Using vectors for queues is also possible,
 but requires more work to get right.
-  - All queue operations are O(1)
+  - All queue operations are O(1).
 
 ## 21.8 Leetcode Exercises
 

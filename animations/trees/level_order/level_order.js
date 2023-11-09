@@ -211,6 +211,30 @@ var messageText = new Konva.Text({
   fill: 'black'
 });
 
+function makeBuffer(xstart,ystart,bufferSize,w,h) {
+    for(let i=0;i<bufferSize;i++){
+        let tr = new Konva.Rect({
+            x: xstart+i*w,
+            y: ystart,
+            id:"buf_"+i,
+            stroke: '#343434',
+            strokeWidth: 5,
+            fill: '#ddd',
+            width: w,
+            height: h,
+            shadowColor: 'black',
+            shadowBlur: 10,
+            shadowOffsetX: 10,
+            shadowOffsetY: 10,
+            shadowOpacity: 0.2,
+        });
+        layer.add(tr);
+    }
+}
+
+/* this array displays the input string */
+makeBuffer(100,240,9,50,50); // a buffer whose size is 9, the array has 8 elements, and we need a space for '\0'.
+
 drawNode(650, 100, '5');
 layer.add(line1);
 layer.add(line2);

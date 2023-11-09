@@ -146,7 +146,8 @@ std::unordered_map<std::string,Foo,MyHashFunctor> m(1000);
 terms of operations. One way to obtain computational efficiency is to consider a simplified set of operations or
 functionality.-->
 <!-- For example, with a hash table we give up the notion of a sorted table and gain in find, insert, & erase efficiency.-->
-– Stacks allow access, insertion and deletion from only one end called the top
+
+- Stacks allow access, insertion and deletion from only one end called the top.
   - There is no access to values in the middle of a stack.
   - Stacks may be implemented efficiently in terms of vectors and lists, although vectors are preferable.
   - All stack operations are O(1)
@@ -162,3 +163,4 @@ but requires more work to get right.
 ## 21.8 Leetcode Exercises
 
 - [Leetcode problem 1451: Rearrange Words in a Sentence](https://leetcode.com/problems/rearrange-words-in-a-sentence/). Solution: [p1451_rearrange_words_in_a_sentence.cpp](../../leetcode/p1451_rearrange_words_in_a_sentence.cpp).
+- [Leetcode problem 508: Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/). Solution: [p508_most_frequent_subtree_sum.cpp](../../leetcode/p508_most_frequent_subtree_sum.cpp).

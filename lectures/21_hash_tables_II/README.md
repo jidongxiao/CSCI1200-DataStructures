@@ -114,31 +114,31 @@ if (itr != my_data.end()) {
 
 - Using the default std::string hash function.
   - With no specified initial table size. (map a std::string type key to a class Foo type value)
-```cpp
-std::unordered_map<std::string,Foo> m;
-```
+  ```cpp
+  std::unordered_map<std::string,Foo> m;
+  ```
   - Optionally specifying initial (minimum) table size.
-```cpp
-std::unordered_map<std::string,Foo> m(1000);
-```
+  ```cpp
+  std::unordered_map<std::string,Foo> m(1000);
+  ```
 - Using a home-made std::string hash function. Note: We are required to specify the initial table size.
   - Manually specifying the hash function type.
-```cpp
-std::unordered_map<std::string,Foo,std::function<unsigned int(std::string)> > m(1000, MyHashFunction);
-```
+  ```cpp
+  std::unordered_map<std::string,Foo,std::function<unsigned int(std::string)> > m(1000, MyHashFunction);
+  ```
   - Using the decltype specifier to get the “declared type of an entity”.
-```cpp
-std::unordered_map<std::string,Foo,decltype(&MyHashFunction)> m(1000, MyHashFunction);
-```
+  ```cpp
+  std::unordered_map<std::string,Foo,decltype(&MyHashFunction)> m(1000, MyHashFunction);
+  ```
 - Using a home-made std::string hash functor or function object.
   - With no specified initial table size.
-```cpp
-std::unordered_map<std::string,Foo,MyHashFunctor> m;
-```
+  ```cpp
+  std::unordered_map<std::string,Foo,MyHashFunctor> m;
+  ```
   - Optionally specifying initial (minimum) table size.
-```cpp
-std::unordered_map<std::string,Foo,MyHashFunctor> m(1000);
-```
+  ```cpp
+  std::unordered_map<std::string,Foo,MyHashFunctor> m(1000);
+  ```
 
 ## 21.6 Additional STL Container Classes: Stacks
 

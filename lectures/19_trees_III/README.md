@@ -74,6 +74,59 @@ tree, give an erase ordering that yields an unbalanced tree.
 &nbsp;
 &nbsp;
 
+```cpp
+Code for function ERASE built in class so remember it has not been executed yet and may require some fixes here and there.
+
+int erase (T const& key_value, TreeNode* &p){
+ if (p->value == key_value)
+ {
+   if (p->left == NULL && p->right == NULL)
+    {
+      delete p;
+      p=NULL;
+      return 1;
+    }
+   else if (p->left == NULL)
+    {
+      TreeNode* tmp = p->right;
+      tmp->parent = p->parent;
+      delete p;
+      p=tmp;
+      return 1;
+    }
+    else if (p->right == NULL)
+    {
+      TreeNode* tmp = p->left;
+      tmp->parent = p->parent;
+      delete p;
+      p=tmp;
+      return 1;
+    }
+    else
+    { //reusing begin logic
+      TreeNode* tmp = p->left;
+      while(tmp -> right)
+          tmp = tmp->right;
+      
+      p->value = tmp->value;
+      return erase(p->value, tmp);
+    }
+}
+else if (p-> value < key_value)
+{
+  return erase(key_value, p->right);
+}
+else
+{
+  assert (p->value > key_value);
+  return erase (key_value, p->left);
+}
+return 0;
+}
+
+}
+```
+
 ## 19.3 Depth-first vs. Breadth-first Search
 
 - We should also discuss two other important tree traversal terms related to problem solving and searching.
@@ -90,6 +143,35 @@ tree, give an erase ordering that yields an unbalanced tree.
 ## 19.4 General-Purpose Breadth-First Search/Tree Traversal
 
 - Write an algorithm to print the nodes in the tree one tier at a time, that is, in a breadth-first manner.
+
+  ```cpp
+  BFS code discussed in class
+
+  void breadth_first_traverse(Node* root)
+  {
+    int level=0;
+    std::vector<Node*> current_level;
+    std::vector<Node*> next_level;
+    if(root==NULL){return;}
+    current_level.push_back(root);
+    while(current_level.size()!=0)
+    {
+      std::cout<<"level"<<level<<":";
+      for (unsigned i=0; i<current_level.size();i++)
+       {
+         if(current_level[i]->left != NULL)
+          next_level.push_back(current_level[i]->left);
+         if(current_level[i]->right != NULL)
+          next_level.push_back(current_level[i]->right);
+         std::cout<<" "<<current_level[i]->value;
+        }
+       current_level = next_level;
+       level++;
+       next_level.clear();
+       std::cout<<std.endl;
+      }
+     }
+  ```
 
 - What is the best/average/worst-case running time of this algorithm? What is the best/average/worst-case
 memory usage of this algorithm? Give a specific example tree that illustrates each case.
@@ -108,12 +190,69 @@ memory usage of this algorithm? Give a specific example tree that illustrates ea
 &nbsp;
 &nbsp;
 
+```cpp
+Code generated in class for height and height calculation
+
+unsigned int height(Node* p)
+{
+  if(p==NULL)
+    return 0;
+  if(p->right==NULL && p->left==NULL)
+    return 1;
+
+  unsigned int left = 1 + height(p->left);
+  unsigned int right = 1 + height(p->right);
+  if (left>right)
+    return left
+   return right;
+}
+```
+
+```cpp
+another method of writing the above code
+
+unsigned int height(Node* p)
+{
+  if (p) return 0;
+
+  return 1 + std::max(height(p->left), height(p->right));
+}
+```
+
 ## 19.6 Shortest Paths to Leaf Node
 
 - Now let’s write a function to instead calculate the shortest path to a NULL child pointer.
 &nbsp;
 &nbsp;
 &nbsp;
+
+```cpp
+code generated in class
+
+void shortest_path_breadth(Node* root)
+  {
+    unsigned int level=0;
+    std::vector<Node*> current_level;
+    std::vector<Node*> next_level;
+    if(root==NULL){return level;}
+    current_level.push_back(root);
+    while(current_level.size()!=0)
+    {
+      level++;
+      for (unsigned i=0; i<current_level.size();i++)
+       {
+         if(current_level[i]->left != NULL)
+          next_level.push_back(current_level[i]->left);
+          else return level;
+         if(current_level[i]->right != NULL)
+          next_level.push_back(current_level[i]->right);
+         else return level;
+        }
+      }
+       current_level = next_level;
+       next_level.clear();
+      }
+     }
 
 - What is the running time of this algorithm? Can we do better? Hint: How does a breadth-first vs. depth-first algorithm for this problem compare?
 &nbsp;

@@ -10,21 +10,6 @@ var stage = new Konva.Stage({
 var layer = new Konva.Layer();
 stage.add(layer);
 
-function makeNULL(x,y) {
-    let text = new Konva.Text({
-        x: x,
-        y: y,
-        text: 'NULL',
-        id: 'nullptr',
-        fontSize: 18,
-        fontFamily: 'Calibri',
-        fill: '#000000',
-        width: 400,
-        padding: 20,
-    });
-        layer.add(text);
-}
-
 // Create a function to draw nodes
 function drawNode(x, y, label) {
 	var circle = new Konva.Circle({
@@ -232,8 +217,11 @@ function makeBuffer(xstart,ystart,bufferSize,w,h) {
     }
 }
 
-/* this array displays the input string */
-makeBuffer(100,240,9,50,50); // a buffer whose size is 9, the array has 8 elements, and we need a space for '\0'.
+// representing the queue
+makeBuffer(900,240,7,100,100); // a buffer whose size is 9, the array has 8 elements, and we need a space for '\0'.
+makeBuffer(1200,440,1,100,100); // a buffer whose size is 9, the array has 8 elements, and we need a space for '\0'.
+makeText(1100,460,"current",'cur');
+makeText(1220,460,"",'cur_val');
 
 drawNode(650, 100, '5');
 layer.add(line1);
@@ -254,176 +242,452 @@ layer.add(line8);
 line8.hide();
 layer.draw();
 
-var key;
-var old_key = 0;
-function start() {
-	key = document.getElementById('textIn').value;
-	stage.find('#nullptr').hide();
-	if(hidden_2==1){
-		// show line 6
-		line6.show();
-		// show 2
-		stage.find('#node_'+2).show();
-		stage.find('#node_text_'+2).show();
-		hidden_2=0;
-		// reset 1
-		stage.find('#node_'+1).x(200);
-		stage.find('#node_'+1).y(400);
-		stage.find('#node_text_'+1).x(195);
-		stage.find('#node_text_'+1).y(390);
-	}
-	if(hidden_7==1){
-		// show line 7
-		line7.show();
-		// show 7
-		stage.find('#node_'+7).show();
-		stage.find('#node_text_'+7).show();
-		hidden_7=0;
-		// reset 8
-		stage.find('#node_'+8).x(800);
-		stage.find('#node_'+8).y(400);
-		stage.find('#node_text_'+8).x(795);
-		stage.find('#node_text_'+8).y(390);
-	}
-	if(hidden_6==1){
-		line5.show();
-		stage.find('#node_'+6).show();
-		stage.find('#node_text_'+6).show();
-		// move 7 and 8 back
-		stage.find('#node_'+7).x(700);
-		stage.find('#node_'+7).y(300);
-		stage.find('#node_text_'+7).x(695);
-		stage.find('#node_text_'+7).y(290);
-		stage.find('#node_'+8).x(800);
-		stage.find('#node_'+8).y(400);
-		stage.find('#node_text_'+8).x(795);
-		stage.find('#node_text_'+8).y(390);
-		line7.show();
-		line8.hide();
-		hidden_6=0;
-	}
-	if(deleted_3==1){
-		// swap 3 and 4 back
-			stage.find('#node_'+3).x(500);
-			stage.find('#node_'+3).y(200);
-			stage.find('#node_text_'+3).x(495);
-			stage.find('#node_text_'+3).y(190);
-			stage.find('#node_'+4).x(600);
-			stage.find('#node_'+4).y(300);
-			stage.find('#node_text_'+4).x(595);
-			stage.find('#node_text_'+4).y(290);
-			deleted_3=0;
-			// reset pc
-			pc=1;
-	}
-	if(old_key == 0){
-	}else{
-		// un-highlight the old node.
-		stage.find('#node_'+old_key).fill("lightgray");
-		// show the old node
-		stage.find('#node_'+old_key).show();
-		stage.find('#node_text_'+old_key).show();
-	}
-	// highlight this node.
-	stage.find('#node_'+key).fill("red");
-	layer.draw();
-	old_key = key;
-	console.log("start");
+var console_box = new Konva.Rect({
+    x: 1450,
+    y: 0,
+    id:"console_box",
+    stroke: '#ffa07a',
+    strokeWidth: 5,
+    fill: '#ddd',
+    width: 100,
+    height: 200,
+    shadowColor: 'black',
+    shadowBlur: 10,
+    shadowOffsetX: 10,
+    shadowOffsetY: 10,
+    shadowOpacity: 0.2,
+    cornerRadius: 10,
+});
+
+var console_msg=["$",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""];
+
+function updateConsoleMsg(msg,i) {
+        stage.find('#text_console_msg'+i).text(msg);
 }
 
-makeNULL(130,390);
-var hidden_2=0;
-var hidden_6=0;
-var hidden_7=0;
-var deleted_3=0;
+function makeConsoleText(x,y,str,id) {
+    let text = new Konva.Text({
+        x: x,
+        y: y,
+        text: str,
+        id: 'text_'+id,
+        fontSize: 16,
+        fontFamily: 'Calibri',
+        fill: '#000000',
+        width: 400,
+        padding: 20,
+        // align: 'center',
+    });
+        layer.add(text);
+}
+
+var msg_box = new Konva.Rect({
+    x: 900,
+    y: 0,
+    id:"message_box",
+    stroke: '#ffa07a',
+    strokeWidth: 5,
+    fill: '#ddd',
+    width: 400,
+    height: 200,
+    shadowColor: 'black',
+    shadowBlur: 10,
+    shadowOffsetX: 10,
+    shadowOffsetY: 10,
+    shadowOpacity: 0.2,
+    cornerRadius: 10,
+});
+
+var message=["push 5 into the queue.",
+    "",
+    "",
+    ""];
+
+function updateMessage(msg,i) {
+        stage.find('#text_msg'+i).text(msg);
+}
+
+function clearMessage() {
+        updateMessage("",0);
+        updateMessage("",1);
+        updateMessage("",2);
+        updateMessage("",3);
+}
+
+function makeText(x,y,str,id) {
+    let text = new Konva.Text({
+        x: x,
+        y: y,
+        text: str,
+        id: 'text_'+id,
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#000000',
+        width: 400,
+        padding: 20,
+        // align: 'center',
+    });
+        layer.add(text);
+}
+
+makeText(920,260,"",1);
+makeText(1020,260,"",2);
+makeText(1120,260,"",3);
+makeText(1220,260,"",4);
+makeText(1320,260,"",5);
+makeText(1420,260,"",6);
+makeText(1520,260,"",7);
+
+//console.log("start");
+
 var pc=1;
 function nextstep() {
-	if(key == 1){
-		// hide this node, and show a NULL pointer.
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		stage.find('#nullptr').x(130);
-		stage.find('#nullptr').y(390);
-		stage.find('#nullptr').show();
+	if(pc == 1){
+		/* draw the message box */
+		layer.add(msg_box);
+		layer.add(console_box);
+		makeConsoleText(1450,0,console_msg[0],'console_msg0');
+		makeConsoleText(1450,20,console_msg[1],'console_msg1');
+		makeConsoleText(1450,40,console_msg[2],'console_msg2');
+		makeConsoleText(1450,60,console_msg[3],'console_msg3');
+		makeConsoleText(1450,80,console_msg[4],'console_msg4');
+		makeConsoleText(1450,100,console_msg[5],'console_msg5');
+		makeConsoleText(1450,120,console_msg[6],'console_msg6');
+		makeConsoleText(1450,140,console_msg[7],'console_msg7');
+
+		makeText(900,0,message[0],'msg0');
+		makeText(900,50,message[1],'msg1');
+		makeText(900,100,message[2],'msg2');
+		makeText(900,150,message[3],'msg3');
+		layer.draw();
+		pc = pc + 1;
+	}else if(pc == 2){
+		// push 5 into queue
+		stage.find('#node_'+5).fill('#FF5733');
+		stage.find('#text_'+1).text('5');
                 layer.draw();
-	}else if(key == 2){
-		line6.hide();
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		stage.find('#node_'+1).x(350);
-		stage.find('#node_'+1).y(300);
-		stage.find('#node_text_'+1).x(345);
-		stage.find('#node_text_'+1).y(290);
-		hidden_2=1;
+		pc = pc + 1;
+	}else if(pc == 3){
+		updateMessage("if queue is not empty,",0);
+		updateMessage("starting from the front,",1);
+		updateMessage("pop all current elements from the queue,",2);
+		updateMessage("and print each of them.",3);
                 layer.draw();
-	}else if(key == 3){
-		if(pc==1){
-			// swap 3 and 4
-			stage.find('#node_'+4).x(500);
-			stage.find('#node_'+4).y(200);
-			stage.find('#node_text_'+4).x(495);
-			stage.find('#node_text_'+4).y(190);
-			stage.find('#node_'+3).x(600);
-			stage.find('#node_'+3).y(300);
-			stage.find('#node_text_'+3).x(595);
-			stage.find('#node_text_'+3).y(290);
-			deleted_3=1;
-                	layer.draw();
-			pc = pc + 1;
-		}else if(pc==2){
-			// hide this node, and show a NULL pointer.
-			stage.find('#node_'+key).hide();
-			stage.find('#node_text_'+key).hide();
-			stage.find('#nullptr').x(535);
-			stage.find('#nullptr').y(260);
-			stage.find('#nullptr').show();
-                	layer.draw();
-			pc = pc + 1;
-		}
-	}else if(key == 4){
-		// hide this node, and show a NULL pointer.
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		stage.find('#nullptr').x(535);
-		stage.find('#nullptr').y(260);
-		stage.find('#nullptr').show();
-                layer.draw();
-	}else if(key == 5){
-	}else if(key == 6){
-		line5.hide();
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		// move 7 and 8
-		stage.find('#node_'+7).x(800);
-		stage.find('#node_'+7).y(200);
-		stage.find('#node_text_'+7).x(795);
-		stage.find('#node_text_'+7).y(190);
-		stage.find('#node_'+8).x(950);
-		stage.find('#node_'+8).y(300);
-		stage.find('#node_text_'+8).x(945);
-		stage.find('#node_text_'+8).y(290);
-		line7.hide();
-		line8.show();
-		hidden_6=1;
+		pc = pc + 1;
+	}else if(pc == 4){
+		// pop 5 out of queue
+		// update current to 5
+		stage.find('#text_cur_val').text('5');
+		// mark 5 as current
+		stage.find('#node_'+5).fill('#FFC300');
                	layer.draw();
-	}else if(key == 7){
-		line7.hide();
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		stage.find('#node_'+8).x(700);
-		stage.find('#node_'+8).y(300);
-		stage.find('#node_text_'+8).x(695);
-		stage.find('#node_text_'+8).y(290);
-		hidden_7=1;
+		pc = pc + 1;
+	}else if(pc == 5){
+		stage.find('#text_'+1).text('');
+		// print 5
+		updateConsoleMsg("$ 5",0);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 6){
+		clearMessage();
+		updateMessage("push current's left child (if exists) into queue.",0);
                 layer.draw();
-	}else if(key == 8){
-		// hide this node, and show a NULL pointer.
-		stage.find('#node_'+key).hide();
-		stage.find('#node_text_'+key).hide();
-		stage.find('#nullptr').x(770);
-		stage.find('#nullptr').y(390);
-		stage.find('#nullptr').show();
+		pc = pc + 1;
+	}else if(pc == 7){
+		// push 3 into queue
+		stage.find('#node_'+3).fill('#FF5733');
+		stage.find('#text_'+1).text('3');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 8){
+		updateMessage("push current's right child (if exists) into queue.",0);
                 layer.draw();
-	//alert("End of animation! Refresh the page if you want to re-run the animation.");
+		pc = pc + 1;
+	}else if(pc == 9){
+		// push 6 into queue
+		stage.find('#node_'+6).fill('#FF5733');
+		stage.find('#text_'+1).text('6');
+		stage.find('#text_'+2).text('3');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 10){
+		// mark as printed, and also, children in queue already
+		stage.find('#node_'+5).fill('#900C3F');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 11){
+		updateMessage("if queue is not empty,",0);
+		updateMessage("starting from the front,",1);
+		updateMessage("pop all current elements from the queue,",2);
+		updateMessage("and print each of them.",3);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 12){
+		// pop 3 out of queue
+		// update current to 3
+		stage.find('#text_'+2).text('');
+		stage.find('#text_cur_val').text('3');
+		// mark 3 as current
+		stage.find('#node_'+3).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 13){
+		// print 3
+		updateConsoleMsg("$ 3",1);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 14){
+		clearMessage();
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 15){
+		// push 2 into queue
+		stage.find('#node_'+2).fill('#FF5733');
+		stage.find('#text_'+1).text('2');
+		stage.find('#text_'+2).text('6');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 16){
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 17){
+		// push 4 into queue
+		stage.find('#node_'+4).fill('#FF5733');
+		stage.find('#text_'+1).text('4');
+		stage.find('#text_'+2).text('2');
+		stage.find('#text_'+3).text('6');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 18){
+		// mark 3 as printed, and also, children in queue already
+		stage.find('#node_'+3).fill('#900C3F');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 19){
+		// pop 6 out of queue
+		// update current to 6
+		stage.find('#text_'+3).text('');
+		stage.find('#text_cur_val').text('6');
+		// mark 6 as current
+		stage.find('#node_'+6).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 20){
+		// print 6
+		updateConsoleMsg("$ 6",2);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 21){
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 22){
+		// push 7 into queue
+		stage.find('#node_'+7).fill('#FF5733');
+		stage.find('#text_'+1).text('7');
+		stage.find('#text_'+2).text('4');
+		stage.find('#text_'+3).text('2');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 23){
+		// current node, 6, doesn't have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 24){
+		// mark 6 as printed, and also, children in queue already
+		stage.find('#node_'+6).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 25){
+		updateMessage("if queue is not empty,",0);
+		updateMessage("starting from the front,",1);
+		updateMessage("pop all current elements from the queue,",2);
+		updateMessage("and print each of them.",3);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 26){
+		// pop 2 out of queue
+		// update current to 2
+		stage.find('#text_'+3).text('');
+		stage.find('#text_cur_val').text('2');
+		// mark 2 as current
+		stage.find('#node_'+2).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 27){
+		// print 2
+		updateConsoleMsg("$ 2",3);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 28){
+		clearMessage();
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 29){
+		// push 1 into queue
+		stage.find('#node_'+1).fill('#FF5733');
+		stage.find('#text_'+1).text('1');
+		stage.find('#text_'+2).text('7');
+		stage.find('#text_'+3).text('4');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 30){
+		// current node, 2, doesn't have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 31){
+		// mark 2 as printed, and also, children in queue already
+		stage.find('#node_'+2).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 32){
+		// pop 4 out of queue
+		// update current to 4
+		stage.find('#text_'+3).text('');
+		stage.find('#text_cur_val').text('4');
+		// mark 4 as current
+		stage.find('#node_'+4).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 33){
+		// print 4
+		updateConsoleMsg("$ 4",4);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 34){
+		// current node, 4, doesn't have a left child.
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 35){
+		// current node, 4, doesn't have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 36){
+		// mark 4 as printed, and also, children in queue already
+		stage.find('#node_'+4).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 37){
+		// pop 7 out of queue
+		// update current to 7
+		stage.find('#text_'+2).text('');
+		stage.find('#text_cur_val').text('7');
+		// mark 7 as current
+		stage.find('#node_'+7).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 38){
+		// print 7
+		updateConsoleMsg("$ 7",5);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 39){
+		// current node, 7, doesn't have a left child.
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 40){
+		// current node, 7, does have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 41){
+		// push 8 into queue
+		stage.find('#node_'+8).fill('#FF5733');
+		stage.find('#text_'+1).text('8');
+		stage.find('#text_'+2).text('1');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 42){
+		// mark 7 as printed, and also, children in queue already
+		stage.find('#node_'+7).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 43){
+		updateMessage("if queue is not empty,",0);
+		updateMessage("starting from the front,",1);
+		updateMessage("pop all current elements from the queue,",2);
+		updateMessage("and print each of them.",3);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 44){
+		// pop 1 out of queue
+		// update current to 1
+		stage.find('#text_'+2).text('');
+		stage.find('#text_cur_val').text('1');
+		// mark 1 as current
+		stage.find('#node_'+1).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 45){
+		// print 1
+		updateConsoleMsg("$ 1",6);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 46){
+		clearMessage();
+		// current node, 1, doesn't have a left child.
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 47){
+		// current node, 1, doesn't have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 48){
+		// mark 1 as printed, and also, children in queue already
+		stage.find('#node_'+1).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 49){
+		// pop 8 out of queue
+		// update current to 8
+		stage.find('#text_'+1).text('');
+		stage.find('#text_cur_val').text('8');
+		// mark 8 as current
+		stage.find('#node_'+8).fill('#FFC300');
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 50){
+		// print 8
+		updateConsoleMsg("$ 8",7);
+               	layer.draw();
+		pc = pc + 1;
+	}else if(pc == 51){
+		// current node, 8, doesn't have a left child.
+		updateMessage("push current's left child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 52){
+		// current node, 8, doesn't have a right child.
+		updateMessage("push current's right child (if exists) into queue.",0);
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 53){
+		// mark 8 as printed, and also, children in queue already
+		stage.find('#node_'+8).fill('#900C3F');
+                layer.draw();
+		pc = pc + 1;
+	}else if(pc == 54){
+		clearMessage();
+		updateMessage("queue is empty, job done!",0);
+                layer.draw();
+		pc = pc + 1;
 	}
 }
+	//alert("End of animation! Refresh the page if you want to re-run the animation.");

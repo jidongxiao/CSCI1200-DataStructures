@@ -98,15 +98,19 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 ## 22.4 Some Data Structure Options for Implementing a Priority Queue
 
 - Vector or list, either sorted or unsorted
+
   – At least one of the operations, push or pop, will cost linear time, at least if we think of the container as a linear structure.
 - Binary search trees
+  
   – If we use the priority as a key, then we can use a combination of finding the minimum key and erase to implement pop. An ordinary binary-search-tree insert may be used to implement push.
+  
   – This costs logarithmic time in the average case (and in the worst case as well if balancing is used).
 - The latter is the better solution, but we would like to improve upon it — for example, it might be more natural if the minimum priority value were stored at the root.
 
 ## 22.5 Definition: Binary Heaps
 
 - A binary heap is a complete binary tree such that at each internal node, p, the value stored is less than the value stored at either of p’s children.
+
   – A complete binary tree is one that is completely filled, except perhaps at the lowest level, and at the lowest level all leaf nodes are as far to the left as possible.
 - Binary heaps will be drawn as binary trees, but implemented using vectors!
 - Alternatively, the heap could be organized such that the value stored at each internal node is greater than the values at its children.
@@ -120,6 +124,7 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 ## 22.7 Implementing a Heap with a Vector (instead of Nodes & Pointers)
 
 - The standard library (STL) priority_queue is implemented as a binary heap.
+- The STL priority_queue is a max heap.
 
 ## 22.8 Leetcode Exercises
 

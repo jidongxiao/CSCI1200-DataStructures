@@ -39,6 +39,6 @@ std::queue<TreeNode*> myQueue;
 
 *estimate: 15-20 minutes*
 
-The provided program clearly has memory leaks. Fix the memory leaks. This is an individual checkpoint, do not work with another student.
+The provided program clearly has memory leaks. Fix the memory leaks.
 
 **To complete this checkpoint**: Show a TA your program, and your test results with either Valgrind or DrMemory.

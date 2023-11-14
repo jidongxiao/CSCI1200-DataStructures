@@ -154,10 +154,9 @@ functionality.-->
 
 ## 21.7 Additional STL Container Classes: Queues
 
-- Queues allow insertion at one end, called the back and removal from the other end, called the front
+- Queues allow insertion at one end, called the back and removal from the other end, called the front.
   - There is no access to values in the middle of a queue.
-  - Queues may be implemented efficiently in terms of a list. Using vectors for queues is also possible,
-but requires more work to get right.
+  - Queues may be implemented efficiently in terms of a list. Using vectors for queues is also possible, but requires more work to get right.
   - All queue operations are O(1).
 
 ## 21.8 Leetcode Exercises

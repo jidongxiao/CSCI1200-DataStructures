@@ -14,7 +14,7 @@ Level Order Traversal: 1 2 3 4 5 6 7 8
 
 *estimate: 30-40 minutes*
 
-Form a team of two members. Read the code of provided program, and then run the program to see its output. After that, replace the STL queue library with the STL stack library, and implement the queue using two stacks. Do not change the *main* function. Do not change the *levelOrderTraversal* function, except this line:
+Read the code of provided program, and then run the program to see its output. After that, replace the STL queue library with the STL stack library, and implement the queue using two stacks. Do not change the *main* function. Do not change the *levelOrderTraversal* function, except this line:
 
 ```cpp
 std::queue<TreeNode*> myQueue;
@@ -26,7 +26,7 @@ std::queue<TreeNode*> myQueue;
 
 *estimate: 30-40 minutes*
 
-Form a new team of two members. Re-implement the queue using the STL list library. Still, do not change the *main* function, and do not change the *levelOrderTraversal* function, except this line:
+Re-implement the queue using the STL list library. Still, do not change the *main* function, and do not change the *levelOrderTraversal* function, except this line:
 
 ```cpp
 std::queue<TreeNode*> myQueue;

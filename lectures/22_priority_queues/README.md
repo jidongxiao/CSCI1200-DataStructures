@@ -125,6 +125,7 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 
 - The standard library (STL) priority_queue is implemented as a binary heap.
 - The STL priority_queue is a max heap.
+- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator; or use a lambda expression.
 
 ## 22.8 Leetcode Exercises
 

@@ -167,3 +167,5 @@ functionality.-->
 - [Leetcode problem 232: Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).
 - [Leetcode problem 102: Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/). Solution: [p102_level_order_traversal.cpp](../../leetcode/p102_level_order_traversal.cpp).
   - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to see how the level order traversal works.
+
+- [Leetcode problem 20: Valid Parentheses](https://leetcode.com/problems/valid-parentheses/). Solution: [p20_valid_parentheses.cpp](../../leetcode/p20_valid_parentheses.cpp)

@@ -8,8 +8,6 @@
 - What’s a Priority Queue?
 - A Priority Queue as a Heap
 - A Heap as a Vector
-- Building a Heap
-- Heap Sort
 
 ## 22.1 Range Based for Loop
 
@@ -117,9 +115,13 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 
 - Draw two different binary heaps with these values: 52 13 48 7 32 40 18 25 4
 
-- Draw several other trees with these values that not binary heaps.
+- Draw several other trees with these values which are not binary heaps.
 
-## 22.7 Leetcode Exercises
+## 22.7 Implementing a Heap with a Vector (instead of Nodes & Pointers)
+
+- The standard library (STL) priority_queue is implemented as a binary heap.
+
+## 22.8 Leetcode Exercises
 
 - [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/rearrange-words-in-a-sentence/). Solution: [p1451_rearrange_words_in_a_sentence.cpp](../../leetcode/p1451_rearrange_words_in_a_sentence.cpp).
 - [Leetcode problem 373: Find K Pairs with Smallest Sums](https://leetcode.com/problems/most-frequent-subtree-sum/). Solution: [p508_most_frequent_subtree_sum.cpp](../../leetcode/p508_most_frequent_subtree_sum.cpp).

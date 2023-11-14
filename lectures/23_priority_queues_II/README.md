@@ -30,6 +30,8 @@ percolate_down(TreeNode<T> * p) {
 }
 ```
 
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/pop/index.html) to see how the pop works
+
 ## 23.2 Implementing Push (a.k.a. Insert)
 
 - To add a value to the heap, a new last leaf node in the tree is created to store that value.
@@ -46,6 +48,8 @@ percolate_up(TreeNode<T> * p) {
 	}
 }
 ```
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/push/index.html) to see how the push works
 
 ## 23.3 Push (Insert) and Pop (Delete-Min) Usage Exercise
 

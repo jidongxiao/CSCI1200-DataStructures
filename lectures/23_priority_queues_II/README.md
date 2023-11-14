@@ -30,7 +30,7 @@ percolate_down(TreeNode<T> * p) {
 }
 ```
 
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/pop/index.html) to see how the pop works
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/pop/index.html) to see how the pop works.
 
 ## 23.2 Implementing Push (a.k.a. Insert)
 
@@ -49,7 +49,7 @@ percolate_up(TreeNode<T> * p) {
 }
 ```
 
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/push/index.html) to see how the push works
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/push/index.html) to see how the push works.
 
 ## 23.3 Push (Insert) and Pop (Delete-Min) Usage Exercise
 

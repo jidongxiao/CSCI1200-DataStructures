@@ -123,7 +123,7 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 
 ## 22.8 Leetcode Exercises
 
-- [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/rearrange-words-in-a-sentence/). Solution: [p1451_rearrange_words_in_a_sentence.cpp](../../leetcode/p1451_rearrange_words_in_a_sentence.cpp).
+- [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/). Solution: [p215_kth_largest_element.cpp](../../leetcode/p215_kth_largest_element.cpp).
 - [Leetcode problem 373: Find K Pairs with Smallest Sums](https://leetcode.com/problems/most-frequent-subtree-sum/). Solution: [p508_most_frequent_subtree_sum.cpp](../../leetcode/p508_most_frequent_subtree_sum.cpp).
 - [Leetcode problem 692:  Top K Frequent Words](https://leetcode.com/problems/implement-stack-using-queues/). Solution: [p225_stack_using_queues.cpp](../../leetcode/p225_stack_using_queues.cpp).
 - [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).

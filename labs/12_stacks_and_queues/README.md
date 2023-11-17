@@ -1,8 +1,6 @@
 # Lab 12 — Stacks and Queues
 
-In this lab, you will implement queues in different ways, and then fix memory leaks in the provided program. Start by downloading the provided program [levelOrder.cpp](levelOrder.cpp), and then turn off all network connections.
-
-The provided program [levelOrder.cpp](levelOrder.cpp) traverses a binary tree by level order. It prints the following message to STDOUT:
+In this lab, you will implement queues in different ways, and then fix memory leaks in the provided program. Start by downloading the provided program [levelOrder.cpp](levelOrder.cpp). The provided program [levelOrder.cpp](levelOrder.cpp) traverses a binary tree by level order. It prints the following message to STDOUT:
 
 ```console
 Level Order Traversal: 1 2 3 4 5 6 7

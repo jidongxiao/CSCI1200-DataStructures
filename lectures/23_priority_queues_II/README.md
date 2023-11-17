@@ -77,9 +77,13 @@ and the child and parent “pointers” can be implicitly calculated.
 - To do this, number the nodes in the tree starting with 0 first by level (top to bottom) and then scanning across
 each row (left to right). These are the vector indices. Place the values in a vector in this order.
 - As a result, for each subscript, i,
+
   – The parent, if it exists, is at location &lfloor;(i − 1)/2&rfloor;.
+
   – The left child, if it exists, is at location 2i + 1.
+
   – The right child, if it exists, is at location 2i + 2.
+
 - For a binary heap containing n values, the last leaf is at location n − 1 in the vector and the first node with less than two children is at location &lfloor;(n − 1)/2&rfloor;.
 - The standard library (STL) priority_queue is implemented as a binary heap.
 

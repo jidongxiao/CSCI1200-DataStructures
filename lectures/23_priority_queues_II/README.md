@@ -118,4 +118,4 @@ organized heap data, but incur a O(n log n) cost. Why?
 
 ## 23.10 Leetcode Exercises
 
-- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).
+- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_heapsort_array.cpp](../../leetcode/p912_heapsort_array.cpp).

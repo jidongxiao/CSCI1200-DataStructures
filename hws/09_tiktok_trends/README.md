@@ -16,7 +16,11 @@ In this assignment you will develop a program to display the trends page like Ti
 
 According to [TikTok support](https://support.tiktok.com/en/using-tiktok/exploring-videos/discover-and-search): Discover is a page on TikTok that allows you to search and explore the wide variety of content in the TikTok community. In this feed you'll find trending videos, hashtags, creators, and sponsored content.
 
-To access the Discover page, users just tap Discover, located at the bottom of phone screen.
+To access the Discover page via the mobile app, users just tap Discover, located at the bottom of phone screen.
+
+To access the Discover page via your web browser, just go to [https://www.tiktok.com/discover](https://www.tiktok.com/discover).
+
+On the Discover page, two lists of videos are displayed: Trending hashtags and trending sounds. And displaying these two lists of videos is the main task of this assignment.
 
 ## Special Requirements
 

@@ -26,13 +26,13 @@ As can be seen from the above screenshot (taken on November 19th, 2023), on the 
 
 ## Special Requirements
 
-As we are learning C++ exceptions, the input files in this assignment are made to include issues and you should not assume the format are completely correct. Rather, when your program find something abnormal in the input file, your program should print an error message into the output file:
+As we are learning C++ exceptions, the input files in this assignment are made to include issues and you should not assume the format are completely correct. <!--Rather, when your program find something abnormal in the input file, your program should print an error message into the output file:
 
 ```console
 Exception Caught: The Field of xxx is Incorrect.
 ```
 
-And in cases like this, exit your program, do not print anything else into the output file except the above message.
+And in cases like this, exit your program, do not print anything else into the output file except the above message.-->
 
 ## Supported Commands
 

@@ -56,146 +56,31 @@ To summerize what your program does: your program reads data from **the json fil
 
 ## Format of input1.json
 
-input1.json represents the json files, it stores all existing comments. Each line of the .json file represents one comment, and each line has this same format:
+input1.json represents the json file. It stores posts we collected from TikTok. Each line of the json file represents one post, and each line **is supposed to** have the same format. And below is an example, which describes a post by Taylor Swift. (You can view her post [here](https://www.tiktok.com/@taylorswift/video/7216853341702278446).)
 
 ```console
-{"video_id": "PMootRNTC-A", "author": "@tedybossu98", "comment_id": "UgwRfodAvGV1UOSQHhN4AaABAg", "like_count": 145, "reply_count": 51, "is_reply": false, "parent_comment_id": "", "published_date": "11 years ago", "crawled_date": "2023-10-31T22:35:37.499265", "is_video_owner": false, "comment": "Great Lord. Every time i hear this song i picture myself calling my ex and having the most romantic conversation on Earth. (her crying ..me crying) but when the song ends i never call her. I go play MW3 ..lame"}
+{"id": "7216853341702278446", "text": "That’s my whole world 💕 #tstheerastour #swifttok ", "createTime": 1680304615, "createTimeISO": "2023-03-31T23:16:55.000Z", "locationCreated": "US", "authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "commerceUserInfo": {"commerceUser": false}, "privateAccount": false, "region": "US", "roomId": "", "ttSeller": false, "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}, "musicMeta": {"musicName": "So it goes x Miss Americana", "musicAuthor": "🪩", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/3b1da6666aed49658c9f51e43d08ea46/?a=1988&ch0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=ZmY0aTtlOjY0ZjxlaDNlOUBpM212eGU6ZnVsZjMzZzU8NEBfNTE1NjAuNjAxY18tNTYtYSNxcjZtcjQwNGhgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307910&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=00588d20de31148a1b020adebf99713b&tk=0", "coverMediumUrl": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0049bec51b5b8fcacf4339562209fd19~c5_720x720.jpeg?x-expires=1700456400&x-signature=6NwY7jHmDO1xGlE4ULhwCOEA%2F6o%3D", "musicId": "7145281770450078507"}, "webVideoUrl": "https://www.tiktok.com/@taylorswift/video/7216853341702278446", "videoMeta": {"height": 1088, "width": 576, "duration": 7, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "originalCoverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "definition": "540p", "format": "mp4", "originalDownloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token"}, "diggCount": 3700000, "shareCount": 33600, "playCount": 29300000, "commentCount": 47000, "mentions": [], "hashtags": []}
 ```
 
-The line is enclosed with a pair of curly braces. And every line has these same fields:
+The line is enclosed with a pair of curly braces. And every line **is supposed to** have these same fields:
 
-- *video_id*: youtube assign each video an id.
-- author: username of the author.
-- *comment_id*: youtube assign each comment an id.
-- *like_count*: how many likes this comment gets.
-- *reply_count*: how many comments are a reply to this comment.
-- *is_reply*: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
-- *parent_comment_id*: if comment A is a reply to comment B, then we define comment B as the parent of comment A.
-- *published_date*: when this comment was made, for all the new comments we are going to make in this assignment, please set the published date to be "0 seconds ago".
-- *crawled_date*: when the comment data was collected, you won't really use this field in this assignment.
-- *is_video_owner*: indicates if this comment is made by the video owner.
-- comment: the actual comment.
+- *id*: TikTok assigns each post an id.
+- text: Each post has its text content and its video/audio content. The text content is stored here. Keep in mind that on TikTok, a post can't just include text information, it must contain a video. Therefore, in the remainder of this section, when we say **the video** or **this video**, we mean the video which comes with this post.
+- *createTime*: A timestamp indicating when this post was created. This is the timestamp in Unix epoch format. It represents the number of seconds that have passed since January 1, 1970 (the Unix epoch) until the specified date and time.
+- *createTimeISO*: Still a timestamp indicating when this post was created. This is the same timestamp but presented in the ISO 8601 date and time format, which is more human friendly. Here, *"T"* is a separator indicating the beginning of the time portion; and *"Z"* indicates that the time is in Coordinated Universal Time (UTC).
+- *locationCreated*: Where this post was created.
+- *authorMeta*: The author's information, which includes multiple items.
+- *musicMeta*:  Information of the music used in the video. This also includes multiple items.
+- *webVideoUrl*: The URL of this post.
+- *videoMeta*: Information of the video. This also includes multiple items.
+- *diggCount*: How many likes this video gets.
+- *shareCount*: How many times this video has been shared.
+- *playCount*: How many times this video has been viewed.
+- *commentCount*: How many comments users have made as a reaction to this video.
+- *mentions*: Whom the author of this post has mentioned in the post. This could include multiple items - if multiple users are mentioned.
+- *hashtags*: The hashtags used in the text content of the post are also stored here separately. This could include multiple items - if multiple hashtags are used.
 
 Each field is a key-value pair.
-
-Please note that all comments which are direct responses to the original video, are considered as siblings. And they do not have a parent. The *parent_comment_id* field of these comments is empty. The following is such an example:
-
-```console
-{"video_id": "zz42pQ-2ytI", "author": "@user-ek5tl4nu7p", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "like_count": 826, "reply_count": 33, "is_reply": false, "parent_comment_id": "", "published_date": "7 hours ago (edited)", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "I am a Man City fan, but I have to ask the Man United players, how could they leave Haaland so wide open on the second goal."}
-```
-
-As can be seen from this above example, a comment which is a direct response to the original video, has this field *parent_comment_id* as an empty string, and also has this field *is_reply* as **false**; in contrast, a comment which is not a direct response to the original video, but rather is a response to an existing comment, will have the id of that existing comment as its *parent_comment_id*, and will also have the *is_reply* field as **true**. The following is an example of such comments:
-
-```console
-{"video_id": "zz42pQ-2ytI", "author": "@abelendecody1", "comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg.9wTA3njI9fp9wTE98Q3wqB", "like_count": 83, "reply_count": 0, "is_reply": true, "parent_comment_id": "UgwELiGkULP-8OvPOAZ4AaABAg", "published_date": "6 hours ago", "crawled_date": "2023-10-29T23:00:47.300265", "is_video_owner": false, "comment": "Because they don’t know what they’re doing out there. It’s so sad to see."}
-```
-
-see the *is_reply* field is true here.
-
-Our data set includes 6 json files, just to satisfiy your curiosity, they include comments corresponding to the following 6 youtube videos:
-
-- hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
-
-- manchester_derby.json is corresponding to this video titled [Manchester United v. Manchester City | PREMIER LEAGUE HIGHLIGHTS](https://www.youtube.com/watch?v=zz42pQ-2ytI).
-
-- need_you_now.json is corresponding to this video titled [Lady Antebellum - Need You Now (Official Music Video)](https://www.youtube.com/watch?v=PMootRNTC-A).
-
-- remembering_matthew_perry.json is corresponding to this video titled ["Remembering Matthew Perry, Part 1: The 'Friend' who made us laugh"](https://www.youtube.com/watch?v=riyOeTLGWHw).
-
-- should_you_go_to_rpi.json is corresponding to this video titled [Should You Go To RPI? - Opinions from a Rensselaer Polytechnic Institute Graduate](https://www.youtube.com/watch?v=5RSsr-MagHw).
-
-- rpi_admissions.json is corresponding to this video titled [Welcome to Rensselaer!](https://www.youtube.com/watch?v=9tsirvC4sSQ).
-
-## Format of input2.txt 
-
-input2.txt contains operations we want to perform, each line of this file describes one operation. These operations include:
-
-1. reply to a video
-
-When a line starts with the string *reply_to_video*, it means that this line describes the operation of *reply to a video*. Here is an example:
-
-```console
-reply_to_video Ugw2rL586Lv-OZNS6E94AaABAH @user2 "Friends marks my childhood."
-```
-
-Here:
-
-- reply_to_video is the operation name. Lines describing the operation of *reply to a video* has 4 fields (separated by spaces): operation name, id of this comment, user name of the author who is making this replying comment (to the video), and the content of the replying comment.
-- Ugw2rL586Lv-OZNS6E94AaABAH is the id of this current comment. 
-- user2 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
-- "Friends marks my childhood." is the content of the comment.
-
-2. reply to a comment
-
-A line which starts with the string *reply_to_comment" means this line describes the operation of "reply to a comment". Here is an example:
-
-```console
-reply_to_comment Ugzsyj0jivPUQdfy_Y94AaABAg Ugzsyj0jivPUQdfy_Y94AaABAg.0 @user1 "Britney is back!"
-```
-
-Here:
-
-- reply_to_comment is the operation name. Lines describing the operation of *reply to a comment* has 5 fields (separated by spaces): operation name, id of the parent comment, id of this comment, user name of the author who is making this replying comment (to another comment), and the content of the replying comment.
-- Ugzsyj0jivPUQdfy_Y94AaABAg is the parent comment id.
-- Ugzsyj0jivPUQdfy_Y94AaABAg.0 is the id of this current comment.
-- user1 is the user name of this author who is now making the comment, and there is always an @ symbol in front of the user name.
-- "Britney is back!" is the content of the comment.
-
-This whole lines means that this user *user1* is making a comment with the content of "Britney is back!", and the id of this comment is Ugzsyj0jivPUQdfy_Y94AaABAg.0, and this comment is a reply to the comment whose id is Ugzsyj0jivPUQdfy_Y94AaABAg.
-
-3. like a comment
-
-A line which starts with the string *like_comment" means this line describes the operation of "like a comment". Here is an example:
-
-```console
-like_comment Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888
-```
-
-Here:
-
-- like_comment is the operation name. Lines describing the operation of *like a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being liked.
-- Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888 is the id of the comment which is being liked.
-
-4. delete comment
-
-A line which starts with the string *delete_comment" means this line describes the operation of "delete a comment". Here is an example:
-
-```console
-delete_comment Ugw2rL586Lv-OZNS6E94AaABAF
-```
-
-Here:
-
-- delete_comment is the operation name. Lines describing the operation of *delete a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being deleted.
-- Ugw2rL586Lv-OZNS6E94AaABAF is the id of the comment which is now being deleted.
-
-**Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendants.
-
-The following three pictures from youtube demonstrate the visual effect of this delete process.
-
-- Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3". (Question: if "test2" is the parent of "test3", then why do "test2" and "test3" have the same indentation? Well, this is exactly the problem youtube has and it is exactly what we want to you solve in this assignment.)
-![alt text](before_delete.png "before delete")
-
-- Now we want to delete "test". Based on our definition of delete, this should cause the deletion of "test", "test2", and "test3".
-![alt text](during_delete.png "during delete")
-
-- And this is what we get after deletion. As can be seen, "test", "test2", "test3" are all deleted.
-![alt text](after_delete.png "after delete")
-
-5. display comment
-
-A line which starts with the string "display_comment" means this line describes the operation of "display a comment". Here is an example:
-
-```console
-display_comment Ugw2rL586Lv-OZNS6E94AaABAH
-```
-
-Here:
-
-- display_comment is the operation name. Lines describing the operation of *display a comment* has just 2 fields (separated by spaces): the operation name, and the id the of comment which is being displayed.
-- Ugw2rL586Lv-OZNS6E94AaABAH is the id of the comment which is now being displayed.
-
-**Definition of display a comment**:  in this assignment, the definition of "display a comment" means display this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "displaying A" means displaying A, B, C, D, E, and F, i.e., displaying A, and all of its descendants. And display means display the comments into the output file.
 
 ## Output File Format
 

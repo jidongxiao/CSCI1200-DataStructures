@@ -73,7 +73,7 @@ The line is enclosed with a pair of curly braces. And every line **is supposed t
 - *musicMeta*:  information of the music used in the video. This also includes multiple items.
 - *webVideoUrl*: the URL of this post.
 - *videoMeta*: information of the video. This also includes multiple items.
-- *diggCount*: how many likes this video gets.
+- *diggCount*: how many likes this video has received.
 - *shareCount*: how many times this video has been shared.
 - *playCount*: how many times this video has been viewed.
 - *commentCount*: how many comments users have made as a reaction to this video.
@@ -146,7 +146,7 @@ TikTok uses the following sub-fields to describe each music:
 
 ### Mentions
 
-If multiple users are mentioned, it will appear here like an array; if no account is mentioned, like the case in this Taylor Swift post, then it will be stored like this as an empty array.
+Unliked the *authorMeta*, *musicMeta*, *videoMeta* which includes multiple sub-fields. *mentions* and *hashtags* are more like arrays which store objects of the same type. If multiple users are mentioned, then these users will appear in this *mentions* array; if no account is mentioned, like the case in this Taylor Swift post, then the *mentions* field will be stored like an empty array like this:
 
 ```console
 "mentions": []

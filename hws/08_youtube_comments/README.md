@@ -88,7 +88,7 @@ As can be seen from this above example, a comment which is a direct response to 
 
 see the *is_reply* field is true here.
 
-Our data set includes 6 json files, just to satisfiy your curiosity, they include comments corresponding to the following 6 youtube videos:
+Our data set includes 6 json files, just to satisfy your curiosity, they include comments corresponding to the following 6 youtube videos:
 
 - hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
 

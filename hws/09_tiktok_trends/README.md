@@ -107,6 +107,10 @@ TikTok uses the following sub-fields to describe each author (i.e., user):
 - *video*: how many videos this account has posted.
 - *digg*: how many likes this user has pressed.
 
+Some of these sub-fields can be better explained via this Taylor Swift profile screenshot, taken on November 19th, 2023.
+
+![alt text](images/taylor_swift.png "taylor swift profile")
+
 ### Music Meta
 
 ```console

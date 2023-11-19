@@ -20,7 +20,7 @@ To access the Discover page via the mobile app, users just tap Discover, located
 
 To access the Discover page via your web browser, just go to [https://www.tiktok.com/discover](https://www.tiktok.com/discover).
 
-![alt text](tiktok_discover.png "tiktok discover")
+![alt text](images/tiktok_discover.png "tiktok discover")
 
 As can be seen from the above screenshot (taken on November 19th, 2023), on the Discover page, two lists of videos are displayed: trending hashtags (on the left) and trending sounds (on the right). And displaying these two lists of videos is the main task of this assignment.
 

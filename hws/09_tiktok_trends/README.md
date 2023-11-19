@@ -37,16 +37,16 @@ And in cases like this, exit your program, do not print anything else into the o
 Your program will be run like this:
 
 ```console
-nytrends.exe hashtag input.json output.txt
-nytrends.exe sound input.json output.txt
+nytrends.exe input.json output.txt hashtag
+nytrends.exe input.json output.txt sound
 ```
 
 Here:
 
 - *nytrends.exe* is the executable file name.
-- this field will be either hashtag or sound. When this field is *hashtag*, your program should display the top 10 trending hashtags to the output file. When this field is *sound*, your program should display the top 10 trending sounds to the output file.
 - input.json contains data collected from TikTok. In this README we will refer to this file as **the json file**.
 - output.txt is where to print your output to. In this README we will refer to this file as **the output file**.
+- this field will be either hashtag or sound. When this field is *hashtag*, your program should display the top 10 trending hashtags to the output file. When this field is *sound*, your program should display the top 10 trending sounds to the output file.
 
 To summerize what your program does: your program reads data from **the json file**, analyze the data and find out the top 10 trending hashtags, or the top 10 trending sounds, and display them in the output file.
 

@@ -54,9 +54,9 @@ Here:
 
 To summerize what your program does: your program reads data from **the json file**, analyze the data and find out the top 10 trending hashtags, or the top 10 trending sounds, and display them in the output file.
 
-## Format of input1.json
+## Format of input.json
 
-input1.json represents the json file. It stores posts we collected from TikTok. Each line of the json file represents one post, and each line **is supposed to** have the same format. And below is an example, which describes a post by Taylor Swift. (You can view her post [here](https://www.tiktok.com/@taylorswift/video/7216853341702278446).)
+input.json represents the json file. It stores posts we collected from TikTok. Each line of the json file represents one post, and each line **is supposed to** have the same format. And below is an example, which describes a post by Taylor Swift. (You can view her post [here](https://www.tiktok.com/@taylorswift/video/7216853341702278446).)
 
 ```console
 {"id": "7301080543981096234", "text": "Never beating the sorcery allegations ✨🛬✨", "createTime": 1699915303, "createTimeISO": "2023-11-13T22:41:43.000Z", "locationCreated": "US", "authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "privateAccount": false, "region": "US", "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}, "musicMeta": {"musicName": "original sound", "musicAuthor": "Taylor Swift", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/o8fSJqV9lISAU8D0pBUFsRYEMSDGWxCKpgfSii/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=OTM0NTc4N2Y8NTxmZWZoOkBpank3bnQ5cmRkbzMzZzU8NEAzMzEzNl82XzExYTQxNTU0YSNeXjYyMmRjYDZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=86fdf07638903cf00e885b900b5fe456&tk=0", "coverMediumUrl": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "musicId": "7301080633693735726"}, "webVideoUrl": "https://www.tiktok.com/@taylorswift/video/7301080543981096234", "videoMeta": {"height": 576, "width": 1024, "duration": 24, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/06fe558eb09e460b8dd87c852dab1d64_1699915304?x-expires=1700456400&x-signature=e%2BxReps37YechC%2FN3YDMa5MW4Bs%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/o4ISEQDQRpSUArDlMF5QfSPe8WrE0EDgSwqjBk/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=2176&bt=1088&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=OTM6Z2k8NDZpO2hlNWg6OUBpM2xlOm85cmdkbzMzZzczNEBeYDQwMi5fNV8xNDU0NDMuYSNyLWZnMmQ0XzZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=13889ecbdab6dd7518b441cb427600c9&tk=tt_chain_token"}, "diggCount": 2400000, "shareCount": 19900, "playCount": 9700000, "commentCount": 22900, "mentions": [], "hashtags": []}
@@ -113,15 +113,80 @@ Some of these sub-fields (such as name, nickName, verified, signature, bioLink, 
 
 ### Music Meta
 
+Let's extract the *musicMeta* field from this same Taylor Swift post and take a closer look.
+
 ```console
 "musicMeta": {"musicName": "original sound", "musicAuthor": "Taylor Swift", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/o8fSJqV9lISAU8D0pBUFsRYEMSDGWxCKpgfSii/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=OTM0NTc4N2Y8NTxmZWZoOkBpank3bnQ5cmRkbzMzZzU8NEAzMzEzNl82XzExYTQxNTU0YSNeXjYyMmRjYDZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=86fdf07638903cf00e885b900b5fe456&tk=0", "coverMediumUrl": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "musicId": "7301080633693735726"},
 ```
+
+TikTok uses the following sub-fields to describe each music:
+
+- *musicName*: the name of this music.
+- *musicAuthor*: the author of this music.
+- *musicOriginal*: is this original music?
+- *playUrl*: this url takes you to audio content of this music.
+- *coverMediumUrl*: this url takes you to the cover page of this music.
+- *musicId": TikTok assigns each music an id.
 
 ### Video Meta
 
 ```console
 "videoMeta": {"height": 576, "width": 1024, "duration": 24, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/06fe558eb09e460b8dd87c852dab1d64_1699915304?x-expires=1700456400&x-signature=e%2BxReps37YechC%2FN3YDMa5MW4Bs%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/o4ISEQDQRpSUArDlMF5QfSPe8WrE0EDgSwqjBk/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=2176&bt=1088&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=OTM6Z2k8NDZpO2hlNWg6OUBpM2xlOm85cmdkbzMzZzczNEBeYDQwMi5fNV8xNDU0NDMuYSNyLWZnMmQ0XzZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=13889ecbdab6dd7518b441cb427600c9&tk=tt_chain_token"},
 ```
+
+TikTok uses the following sub-fields to describe each music:
+
+- *height*: how this video will be displayed - the height.
+- *width*: how this video will be displayed - the width.
+- *duration*: the duration of this video - how many seconds.
+- *coverUrl*: this url takes you to the thumbnail view image of this video.
+- *definition*: the definition of this video.
+- *format*: the format of this video.
+- *downloadAddr*: the url where you can download this video.
+
+### Mentions
+
+If multiple users are mentioned, it will appear here like an array; if no account is mentioned, like the case in this Taylor Swift post, then it will be stored like this as an empty array.
+
+```console
+"mentions": []
+```
+
+### Hashtags
+
+If no hashtags are used in the text content of the post, this field will be stored like this - which is just an empty array.
+
+```console
+"hashtags": []
+```
+
+If hashtags are used in the text content of the post, they will be stored in this hashtags array in this format:
+
+```console
+"hashtags": [{"id": "1640230938585093", "name": "cleantok", "title": "Whether you're a daily cleaner or a once a month deep clean type, spring is here and it's the perfect time to get stuck into those therapeutic cleaning tasks. From scrubbing your sink, to descaling the dishwasher, deep cleaning your rugs, to refreshing the fridge - share your tips and show off how your spring clean is done.", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/9342f13cf27fe417b49e65a6f4cadcbe.png"}, {"id": "1655304719036422", "name": "cleaningtiktok", "title": "Start cleaning with #CleaningTikTok.", "cover": ""}, {"id": "170127", "name": "springcleaning", "title": "Whether it's minimizing or taking out the trash, get ready for some #SpringCleaning.", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/1629633553410053.PNG"}, {"id": "75424303", "name": "cleaninghacks", "title": "Show us how you keep things neat and tidy!", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/3320a6a94d0ad4bae1a025c0b3239481"}, {"id": "1614083057293334", "name": "cleaningasmr", "title": "", "cover": ""}, {"id": "15898164", "name": "cleaningproducts", "title": "", "cover": ""}]
+```
+
+This hashtags array stores multiple hashtags, and they are:
+
+- cleantok
+- cleaningtiktok
+- springcleaning
+- cleaninghacks
+- cleaningasmr
+- cleaningproducts
+
+For each hash tag, TikTok maintains four sub-fields:
+
+- *id*: TikTok assigns each hashtag an id.
+- *name*: the name of the hashtag.
+- *title*: some hashtags have a title. The initial creation of popular or trending hashtags is initiated by TikTok itself. TikTok's content moderation and curation teams may introduce new hashtags, along with associated titles, to highlight specific themes, challenges, or trends.
+- *cover*: the url which takes you to the cover image of this hashtag page.
+
+TikTok also maintains a web page for each hashtag, for example, the hashtag cleantok is maintained on this page:
+
+![alt text](images/cleantok.png "hashtag cleantok")
+
+and you can visit this page via [https://www.tiktok.com/tag/cleantok](https://www.tiktok.com/tag/cleantok).
 
 ## Output File Format
 

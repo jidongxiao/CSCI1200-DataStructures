@@ -59,28 +59,65 @@ To summerize what your program does: your program reads data from **the json fil
 input1.json represents the json file. It stores posts we collected from TikTok. Each line of the json file represents one post, and each line **is supposed to** have the same format. And below is an example, which describes a post by Taylor Swift. (You can view her post [here](https://www.tiktok.com/@taylorswift/video/7216853341702278446).)
 
 ```console
-{"id": "7216853341702278446", "text": "That’s my whole world 💕 #tstheerastour #swifttok ", "createTime": 1680304615, "createTimeISO": "2023-03-31T23:16:55.000Z", "locationCreated": "US", "authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "commerceUserInfo": {"commerceUser": false}, "privateAccount": false, "region": "US", "roomId": "", "ttSeller": false, "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}, "musicMeta": {"musicName": "So it goes x Miss Americana", "musicAuthor": "🪩", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/3b1da6666aed49658c9f51e43d08ea46/?a=1988&ch0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=ZmY0aTtlOjY0ZjxlaDNlOUBpM212eGU6ZnVsZjMzZzU8NEBfNTE1NjAuNjAxY18tNTYtYSNxcjZtcjQwNGhgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307910&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=00588d20de31148a1b020adebf99713b&tk=0", "coverMediumUrl": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0049bec51b5b8fcacf4339562209fd19~c5_720x720.jpeg?x-expires=1700456400&x-signature=6NwY7jHmDO1xGlE4ULhwCOEA%2F6o%3D", "musicId": "7145281770450078507"}, "webVideoUrl": "https://www.tiktok.com/@taylorswift/video/7216853341702278446", "videoMeta": {"height": 1088, "width": 576, "duration": 7, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "originalCoverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "definition": "540p", "format": "mp4", "originalDownloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token"}, "diggCount": 3700000, "shareCount": 33600, "playCount": 29300000, "commentCount": 47000, "mentions": [], "hashtags": []}
+{"id": "7301080543981096234", "text": "Never beating the sorcery allegations ✨🛬✨", "createTime": 1699915303, "createTimeISO": "2023-11-13T22:41:43.000Z", "locationCreated": "US", "authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "privateAccount": false, "region": "US", "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}, "musicMeta": {"musicName": "original sound", "musicAuthor": "Taylor Swift", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/o8fSJqV9lISAU8D0pBUFsRYEMSDGWxCKpgfSii/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=OTM0NTc4N2Y8NTxmZWZoOkBpank3bnQ5cmRkbzMzZzU8NEAzMzEzNl82XzExYTQxNTU0YSNeXjYyMmRjYDZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=86fdf07638903cf00e885b900b5fe456&tk=0", "coverMediumUrl": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "musicId": "7301080633693735726"}, "webVideoUrl": "https://www.tiktok.com/@taylorswift/video/7301080543981096234", "videoMeta": {"height": 576, "width": 1024, "duration": 24, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/06fe558eb09e460b8dd87c852dab1d64_1699915304?x-expires=1700456400&x-signature=e%2BxReps37YechC%2FN3YDMa5MW4Bs%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/o4ISEQDQRpSUArDlMF5QfSPe8WrE0EDgSwqjBk/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=2176&bt=1088&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=OTM6Z2k8NDZpO2hlNWg6OUBpM2xlOm85cmdkbzMzZzczNEBeYDQwMi5fNV8xNDU0NDMuYSNyLWZnMmQ0XzZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=13889ecbdab6dd7518b441cb427600c9&tk=tt_chain_token"}, "diggCount": 2400000, "shareCount": 19900, "playCount": 9700000, "commentCount": 22900, "mentions": [], "hashtags": []}
 ```
 
 The line is enclosed with a pair of curly braces. And every line **is supposed to** have these same fields:
 
 - *id*: TikTok assigns each post an id.
-- text: Each post has its text content and its video/audio content. The text content is stored here. Keep in mind that on TikTok, a post can't just include text information, it must contain a video. Therefore, in the remainder of this section, when we say **the video** or **this video**, we mean the video which comes with this post.
-- *createTime*: A timestamp indicating when this post was created. This is the timestamp in Unix epoch format. It represents the number of seconds that have passed since January 1, 1970 (the Unix epoch) until the specified date and time.
-- *createTimeISO*: Still a timestamp indicating when this post was created. This is the same timestamp but presented in the ISO 8601 date and time format, which is more human friendly. Here, *"T"* is a separator indicating the beginning of the time portion; and *"Z"* indicates that the time is in Coordinated Universal Time (UTC).
-- *locationCreated*: Where this post was created.
-- *authorMeta*: The author's information, which includes multiple items.
-- *musicMeta*:  Information of the music used in the video. This also includes multiple items.
-- *webVideoUrl*: The URL of this post.
-- *videoMeta*: Information of the video. This also includes multiple items.
-- *diggCount*: How many likes this video gets.
-- *shareCount*: How many times this video has been shared.
-- *playCount*: How many times this video has been viewed.
-- *commentCount*: How many comments users have made as a reaction to this video.
-- *mentions*: Whom the author of this post has mentioned in the post. This could include multiple items - if multiple users are mentioned.
-- *hashtags*: The hashtags used in the text content of the post are also stored here separately. This could include multiple items - if multiple hashtags are used.
+- text: each post has its text content and its video/audio content. The text content is stored here. Keep in mind that on TikTok, a post can't just include text information, it must contain a video. Therefore, in the remainder of this section, when we say **the video** or **this video**, we mean the video which comes with this post.
+- *createTime*: a timestamp indicating when this post was created. This is the timestamp in Unix epoch format. It represents the number of seconds that have passed since January 1, 1970 (the Unix epoch) until the specified date and time.
+- *createTimeISO*: still a timestamp indicating when this post was created. This is the same timestamp but presented in the ISO 8601 date and time format, which is more human friendly. Here, *"T"* is a separator indicating the beginning of the time portion; and *"Z"* indicates that the time is in Coordinated Universal Time (UTC).
+- *locationCreated*: where this post was created.
+- *authorMeta*: the author's information, which includes multiple items.
+- *musicMeta*:  information of the music used in the video. This also includes multiple items.
+- *webVideoUrl*: the URL of this post.
+- *videoMeta*: information of the video. This also includes multiple items.
+- *diggCount*: how many likes this video gets.
+- *shareCount*: how many times this video has been shared.
+- *playCount*: how many times this video has been viewed.
+- *commentCount*: how many comments users have made as a reaction to this video.
+- *mentions*: whom the author of this post has mentioned in the post. This could include multiple items - if multiple users are mentioned.
+- *hashtags*: the hashtags used in the text content of the post are also stored here separately. This could include multiple items - if multiple hashtags are used.
 
-Each field is a key-value pair.
+Each field is a key-value pair. As mentioned above, there are five fields which could include multiple items, and these five fields are: *authorMeta*, *musicMeta*, *videoMeta*, *mentions*, *hashtags*. We will describe each of these five fields next.
+
+### Author Meta
+
+The word *meta* means meta data. Let's extract the *authorMeta* field from this same Taylor Swift post and take a closer look.
+
+```console
+"authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "privateAccount": false, "region": "US", "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161},
+```
+
+TikTok uses the following sub-fields to describe each author (i.e., user):
+
+- *id*: TikTok assigns each author an id.
+- *name*: the user name. Not necessarily the real name; but of course celebrities would use their real name for their official account.
+- *nickName*: each user can also have nick name.
+- *verified*: official accounts are usually verified.
+- *signature*: users can put a few words introducin this account.
+- *bioLink*: users can put a link in their bio section.
+- *avatar*: link to the account's profile picture.
+- *privateAccount*: is this a private account? Private accounts are only visible to users who have the permission from the account owner.
+- *region*: where this user is located.
+- *following*: how many accounts this user is following. Taylor Swift does not follow anyone. Hence her *following* is 0.
+- *fans*: how many followers this account has.
+- *heart*: how many likes (in total) this account received.
+- *video*: how many videos this account has posted.
+- *digg*: how many likes this user has pressed.
+
+### Music Meta
+
+```console
+"musicMeta": {"musicName": "original sound", "musicAuthor": "Taylor Swift", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/o8fSJqV9lISAU8D0pBUFsRYEMSDGWxCKpgfSii/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=OTM0NTc4N2Y8NTxmZWZoOkBpank3bnQ5cmRkbzMzZzU8NEAzMzEzNl82XzExYTQxNTU0YSNeXjYyMmRjYDZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=86fdf07638903cf00e885b900b5fe456&tk=0", "coverMediumUrl": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "musicId": "7301080633693735726"},
+```
+
+### Video Meta
+
+```console
+"videoMeta": {"height": 576, "width": 1024, "duration": 24, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/06fe558eb09e460b8dd87c852dab1d64_1699915304?x-expires=1700456400&x-signature=e%2BxReps37YechC%2FN3YDMa5MW4Bs%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/o4ISEQDQRpSUArDlMF5QfSPe8WrE0EDgSwqjBk/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=2176&bt=1088&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=OTM6Z2k8NDZpO2hlNWg6OUBpM2xlOm85cmdkbzMzZzczNEBeYDQwMi5fNV8xNDU0NDMuYSNyLWZnMmQ0XzZgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307894&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=13889ecbdab6dd7518b441cb427600c9&tk=tt_chain_token"},
+```
 
 ## Output File Format
 

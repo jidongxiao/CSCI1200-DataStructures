@@ -123,4 +123,4 @@ organized heap data, but incur a O(n log n) cost. Why?
 ## 23.10 Leetcode Exercises
 
 - [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_heapsort_array.cpp](../../leetcode/p912_heapsort_array.cpp).
-Solution 2: [p912_heapsort_array_heapify.cpp](../../leetcode/p912_heapsort_array_heapify.cpp). Solution 3 - min heap: [p912_heapsort_array_min_heap.cpp](p912_heapsort_array_min_heap.cpp).
+Solution 2: [p912_heapsort_array_heapify.cpp](../../leetcode/p912_heapsort_array_heapify.cpp). Solution 3 - min heap: [p912_heapsort_array_min_heap.cpp](../../leetcode/p912_heapsort_array_min_heap.cpp).

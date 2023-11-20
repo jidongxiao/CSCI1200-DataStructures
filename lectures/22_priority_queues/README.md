@@ -201,8 +201,6 @@ int main() {
 1 3 3 4 5
 ```
 
-- If you just define the priority queue with std::priority_queue<int>, you will get a max heap.
-
 ## 22.8 Leetcode Exercises
 
 - [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/). Solution: [p215_kth_largest_element.cpp](../../leetcode/p215_kth_largest_element.cpp).

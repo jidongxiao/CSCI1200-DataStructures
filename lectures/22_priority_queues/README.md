@@ -134,11 +134,72 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 
 - Draw several other trees with these values which are not binary heaps.
 
-## 22.7 Implementing a Heap with a Vector (instead of Nodes & Pointers)
+## 22.7 STL priority_queue
 
 - The standard library (STL) priority_queue is implemented as a binary heap.
 - The STL priority_queue is a max heap.
+- You need to include &lt;queue&gt; in order to use the STL priority_queue. Below is a simple [example](max_heap.cpp):
+
+#include <iostream>
+#include <queue>
+
+int main() {
+    std::priority_queue<int> maxHeap;
+
+    maxHeap.push(3);
+    maxHeap.push(4);
+    maxHeap.push(3);
+    maxHeap.push(1);
+    maxHeap.push(5);
+
+    while (!maxHeap.empty()) {
+        std::cout << maxHeap.top() << " ";
+        maxHeap.pop();
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+- The above program will print:
+
+```console
+5 4 3 3 1
+```
+
 - When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator; or use a lambda expression.
+- You can use std::priority_queue as a min heap via using std::greater, as can be seen in this [example](min_heap.cpp):
+
+```cpp
+#include <iostream>
+#include <queue>
+
+int main() {
+	std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
+
+	minHeap.push(3);
+	minHeap.push(4);
+	minHeap.push(3);
+	minHeap.push(1);
+	minHeap.push(5);
+
+	while (!minHeap.empty()) {
+		std::cout << minHeap.top() << " ";
+		minHeap.pop();
+	}
+	std::cout << std::endl;
+
+	return 0;
+}
+```
+
+- This above program will print:
+
+```console
+1 3 3 4 5
+```
+
+- If you just define the priority queue with std::priority_queue<int>, you will get a max heap.
 
 ## 22.8 Leetcode Exercises
 

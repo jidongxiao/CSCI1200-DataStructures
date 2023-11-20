@@ -4,7 +4,7 @@
 
 - HW9 Discussion
 - Error handling strategies
-- Basic exception mechanisms: try/throw/catch (Leetcode 7: Reverse Integer)
+- Basic exception mechanisms: try/throw/catch
 - Functions & exceptions, constructors & exceptions
 - STL exceptions
 

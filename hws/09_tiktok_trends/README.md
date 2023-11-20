@@ -190,7 +190,27 @@ and you can visit this page via [https://www.tiktok.com/tag/cleantok](https://ww
 
 ## Output File Format
 
-to be added.
+1. when users run this command:
+
+```console
+nytrends.exe input.json output.txt hashtag
+```
+
+your program should produce an output similar to what TikTok does:
+![alt text](images/hashtags.png "Hashtags")
+
+this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
+
+2. when users run this command:
+
+```console
+nytrends.exe input.json output.txt sound
+```
+
+your program should produce an output similar to what TikTok does:
+![alt text](images/sounds.png "sounds")
+
+this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
 ## Useful Code
 

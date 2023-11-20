@@ -17,10 +17,12 @@ but powerful.
 ```cpp
 class my_class_name {
 public:
-// ... normal class stuff ...
-my_return_type operator() ( /* my list of args */ );
+	// ... normal class stuff ...
+	my_return_type operator() ( /* my list of args */ );
 };
 ```
+
+- See and run this simple functor [example](functor.cpp).
 
 ## 21.2 Why are Functors Useful?
 

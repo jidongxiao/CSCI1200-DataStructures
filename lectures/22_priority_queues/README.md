@@ -140,6 +140,7 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 - The STL priority_queue is a max heap.
 - You need to include &lt;queue&gt; in order to use the STL priority_queue. Below is a simple [example](max_heap.cpp):
 
+```cpp
 #include <iostream>
 #include <queue>
 
@@ -160,6 +161,7 @@ int main() {
 
     return 0;
 }
+```
 
 - The above program will print:
 

@@ -156,41 +156,45 @@ Here’s code using exceptions to sort a collection of lines by slope:
 ```cpp
 class Point {
 public:
-Point(double x_, double y_) : x(x_),y(y_) {}
-double x,y;
+	Point(double x_, double y_) : x(x_),y(y_) {}
+	double x,y;
 };
 class Line {
 public:
-Line(const Point &a_, const Point &b_) : a(a_),b(b_) {}
-Point a,b;
+	Line(const Point &a_, const Point &b_) : a(a_),b(b_) {}
+	Point a,b;
 };
+
 double compute_slope(const Point &a, const Point &b) throw(int) {
-double rise = b.y - a.y;
-double run = b.x - a.x;
-double epsilon = 0.00001;
-if (fabs(run) < epsilon) throw -1;
-return rise / run;
+	double rise = b.y - a.y;
+	double run = b.x - a.x;
+	double epsilon = 0.00001;
+	if (fabs(run) < epsilon) throw -1;
+		return rise / run;
+	}
+	double slope(const Line &ln) {
+	return compute_slope(ln.a,ln.b);
 }
-double slope(const Line &ln) {
-return compute_slope(ln.a,ln.b);
-}
+
 bool steeper_slope(const Line &m, const Line &n) {
-double slope_m = slope(m);
-double slope_n = slope(n);
-return slope_m > slope_n;
+	double slope_m = slope(m);
+	double slope_n = slope(n);
+	return slope_m > slope_n;
 }
+
 void organize(std::vector<Line> &lines) {
-std::sort(lines.begin(),lines.end(), steeper_slope);
+	std::sort(lines.begin(),lines.end(), steeper_slope);
 }
+
 int main () {
-std::vector<Line> lines;
-/* omitting code to initialize some data */
-try {
-organize(lines);
-/* omitting code to print out the results */
-} catch (int) {
-std::cout << "error: infinite slope" << std::endl;
-}
+	std::vector<Line> lines;
+	/* omitting code to initialize some data */
+	try {
+	organize(lines);
+	/* omitting code to print out the results */
+	} catch (int) {
+		std::cout << "error: infinite slope" << std::endl;
+	}
 }
 ```
 
@@ -206,19 +210,20 @@ type from the exception class, and overwrite the what() member function
 
 ```cpp
 class myexception: public std::exception {
-virtual const char* what() const throw() {
-return "My exception happened";
-}
+	virtual const char* what() const throw() {
+		return "My exception happened";
+	}
 };
+
 int main () {
-myexception myex;
-try {
-throw myex;
-}
-catch (std::exception& e) {
-std::cout << e.what() << std::endl;
-}
-return 0;
+	myexception myex;
+	try {
+		throw myex;
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
 }
 ```
 - The STL library throws several different types of exceptions (all derived from the STL exception class):
@@ -239,10 +244,10 @@ allocate sufficient memory resources for the object, the bad alloc exception is 
 
 ```cpp
 try {
-int* myarray= new int[1000];
+	int* myarray= new int[1000];
 }
 catch (std::exception& e) {
-std::cout << "Standard exception: " << e.what() << std::endl;
+	std::cout << "Standard exception: " << e.what() << std::endl;
 }
 ```
 - It can also be useful to have the constructor for a custom class throw a descriptive exception if the arguments

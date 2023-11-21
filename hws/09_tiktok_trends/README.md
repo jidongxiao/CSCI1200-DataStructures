@@ -197,7 +197,7 @@ and you can visit this page via [https://www.tiktok.com/tag/cleantok](https://ww
 nytrends.exe input.json output.txt hashtag
 ```
 
-your program should produce an output similar to what TikTok does:
+your program should produce an output similar to what TikTok does (of course we will not print the pictures):
 
 ![alt text](images/hashtags.png "Hashtags")
 
@@ -209,7 +209,7 @@ this basically is the trending hashtags, each is associated with some videos. In
 nytrends.exe input.json output.txt sound
 ```
 
-your program should produce an output similar to what TikTok does:
+your program should produce an output similar to what TikTok does (of course we will not print the pictures):
 
 ![alt text](images/sounds.png "sounds")
 

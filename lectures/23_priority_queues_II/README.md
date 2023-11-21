@@ -68,7 +68,7 @@ pop
 
 - Both percolate_down and percolate_up are O(log n) in the worst-case. Why?
 
-- But, percolate_up (and as a result push) is O(1) in the average case. Why?
+<!-- - But, percolate_up (and as a result push) is O(1) in the average case. Why? -->
 
 ## 23.5 Implementing a Heap with a Vector (instead of Nodes & Pointers)
 

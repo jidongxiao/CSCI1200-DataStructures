@@ -199,6 +199,10 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
+More specifically, you should print the top 10 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+
+Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag. When two hashtags are both used for the same amount of times, break the tie by the hashtag name (i.e., alphabetical order).
+
 2. when users run this command:
 
 ```console
@@ -210,6 +214,10 @@ your program should produce an output similar to what TikTok does (of course we 
 ![alt text](images/sounds.png "sounds")
 
 this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
+
+More specifically, you should print the top 10 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+
+Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by the music id - the one with the smaller music id will be displayed first.
 
 ## Useful Code
 

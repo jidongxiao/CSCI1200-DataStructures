@@ -219,7 +219,9 @@ this basically is the trending sounds, each is associated with some videos. In y
 
 ### getline
 
-1. Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
+**Note**: this paragraph is the same as that paragraph in homework 8, and you are once again recommended to read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
+
+Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
 
 ```cpp
 	// assume inputFile is a std::string, containing the file name of the input file.
@@ -240,37 +242,38 @@ this basically is the trending sounds, each is associated with some videos. In y
 
 After these lines, the whole content of the json file will be stored as a string in the std::string variable *json_content*. And you can then parse it to get each individual comment. In order to parse the *json_content*, which is a std::string, you will once again find that the std::string functions such as *std::string::find*(), and *std::string::substr*() to be very useful.
 
-2. **The second input file** contains comments, which may have spaces, and that makes it hard for you to use the >> operator to read the content of the file. Once again, the *getline* function can come into play. Let's say you want to read a line like this:
+### Extract Hashtags from the Post Text
 
-```console
-reply_to_comment UgxCAk2MEXaUMS8E5dx4AaABAg UgxCAk2MEXaUMS8E5dx4AaABAg.0 @user3 "I love this song!"
-```
-
-You can use the following lines of code:
+Assume you store the post text content in a std::string variable called *text*, the following code block will extract all hashtags from this text string.
 
 ```cpp
-	// assuming opsFile is an std::ifstream object, which you use to open the second input file.
-	// assuming command, parent_id, id, author, comment are all std::string objects.
-	// read the command, the parent comment id, the child comment id, the user name.
-	opsFile >> command;
-	opsFile >> parent_id;
-	opsFile >> id;
-	opsFile >> user;
-	// skip any whitespace to get to the next non-whitespace character
-	opsFile >> std::ws;
-	// now, read the comment
-	if (opsFile.peek() == '"') {
-		// if the field starts with a double quote, read it as a whole string
-		opsFile.get();  // consume the opening double quote
-		std::getline(opsFile, comment, '"');  // read until the closing double quote
-		// opsFile >> comment;  // read the quoted field
-		if (!comment.empty() && comment.back() == '"') {
-			comment.pop_back();  // remove the closing double quote
-		}
-	}
+// the text of the post is given as a std::string, extract hashtags from the text.
+
+    // define a regular expression to match hashtags with emojis
+    std::regex hashtagRegex("#([\\w\\u0080-\\uFFFF]+)");
+
+    // create an iterator for matching
+    std::sregex_iterator hashtagIterator(text.begin(), text.end(), hashtagRegex);
+    std::sregex_iterator endIterator;
+
+    // iterate over the matches and extract the hashtags
+    while (hashtagIterator != endIterator) {
+        std::smatch match = *hashtagIterator;
+        std::string hashtag = match.str(1);  // extract the first capturing group
+	// this line will print each hash tag
+	// if you want to do more with each hash tag, do it here. for example, store all hash tags in your container.
+        std::cout << "Hashtag: " << hashtag << std::endl;
+
+        ++hashtagIterator;
+    }
+}
 ```
 
-After executing the above lines, your *command* will be "reply_to_comment", your *parent_id* will be "UgxCAk2MEXaUMS8E5dx4AaABAg", your *id* will be "UgxCAk2MEXaUMS8E5dx4AaABAg.0", your *user* will be "@user3", your *comment* will be "I love this song!".
+In order to use this above code block, you need to include the regular expression library like this:
+
+```cpp
+#include <regex>
+```
 
 ## Program Requirements & Submission Details
 

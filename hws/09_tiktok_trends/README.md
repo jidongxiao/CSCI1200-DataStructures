@@ -219,7 +219,7 @@ this basically is the trending sounds, each is associated with some videos. In y
 
 ### getline
 
-**Note**: this paragraph is the same as that paragraph in homework 8, and you are once again recommended to read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
+**Note**: this next paragraph is the same as that paragraph in homework 8, and you are once again recommended to read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
 
 Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
 

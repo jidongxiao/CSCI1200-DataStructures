@@ -199,7 +199,7 @@ this basically is the trending hashtags, each is associated with some videos. In
 
 More specifically, you should print the top 10 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
-Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag.
+Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by the hashtag's name, and smaller name is the winner: i.e., #tstheerastour vs #swifttok now becomes tstheerastour vs swifttok, which is a comparison of two std::string objects, and swifttok is smaller than tstheerastour.
 
 Example 1:
 

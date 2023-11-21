@@ -24,10 +24,6 @@ To access the Discover page via your web browser, just go to [https://www.tiktok
 
 As can be seen from the above screenshot (taken on November 19th, 2023), on the Discover page, two lists of videos are displayed: trending hashtags (on the left) and trending sounds (on the right). And displaying these two lists of videos is the main task of this assignment.
 
-## Special Requirements
-
-To be added.
-
 <!--As we are learning C++ exceptions, the input files in this assignment are made to include issues and you should not assume the format are completely correct. Rather, when your program find something abnormal in the input file, your program should print an error message into the output file:
 
 ```console

@@ -255,4 +255,4 @@ are invalid in some way.
 
 ## 23.10 Leetcode Exercises
 
-- [Leetcode problem 7: Reverse Integer](https://leetcode.com/problems/sort-an-array/). Solution: [p7_reverse_integers.cpp](../../leetcode/p7_reverse_integers.cpp).
+- [Leetcode problem 7: Reverse Integer](https://leetcode.com/problems/reverse-integer/). Solution: [p7_reverse_integers.cpp](../../leetcode/p7_reverse_integers.cpp).

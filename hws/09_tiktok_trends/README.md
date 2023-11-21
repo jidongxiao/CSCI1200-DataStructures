@@ -1,5 +1,3 @@
-This README is still not complete.
-
 # Homework 9 — TikTok Trends
 
 In this assignment you will develop a program to display the trends page like TikTok does, let's call this program New York Trends. Please read the entire handout before starting to code the assignment.
@@ -201,7 +199,15 @@ this basically is the trending hashtags, each is associated with some videos. In
 
 More specifically, you should print the top 10 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
-Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag. When two hashtags are both used for the same amount of times, break the tie by the hashtag name (i.e., alphabetical order).
+Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag.
+
+Example 1:
+
+hashtag A is used 100 times, hashtag B is used 20 times. Then hashtag A is the clear winner.
+
+Example 2:
+
+hashtag A is used 1000 times, hashtag B is used 1000 times, but all the posts which use hashtag A are viewed 50000 times, but all the posts which use hashtag B are viewed 2000 times, then A is the clear winner.
 
 2. when users run this command:
 
@@ -218,6 +224,14 @@ this basically is the trending sounds, each is associated with some videos. In y
 More specifically, you should print the top 10 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
 Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by the music id - the one with the smaller music id will be displayed first.
+
+Example 1:
+
+sound A is used in 100 videos, and these 100 videos have been viewed (in total) 10000 times, sound B is used in 1 video, but this video has been viewed 1000000 times. Then sound B is the clear winner.
+
+Example 2:
+
+sound A is used in 1000 videos, and these 1000 videos have been viewed (in total) 10000 times; sound B is used in 5000 videos, and all these 5000 videos in total have been viewed 10000 times. Then we get a tie based on the view count. Let's say sound A's music id is 123, sound B's music id is 456, then the smaller music id wins. thus we break the tie and A is the winner.
 
 ## Useful Code
 

@@ -286,13 +286,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Instructor's Code
 
+To be added (not a promise).
+
 <!--You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/comments/). -->
 
 ## Rubric
 
-To be added.
-
-<!--
 17 pts
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)
@@ -309,9 +308,7 @@ To be added.
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
-   - Uses data structures which have not been covered in this class. (-6)
-   - Does not use tree data structures to store the comments. (-6)
+   - Does not use std::priority_queue at all. (-6)
    - Member variables are public. (-2)
- - RECURSION (2 pts)
-   - Does not use recursion at all. (-2)
--->
+ - Exceptions (2 pts)
+   - Does not use try-catch-throw anywhere in the code. (-2)

@@ -207,7 +207,7 @@ hashtag A is used 100 times, hashtag B is used 20 times. Then hashtag A is the c
 
 Example 2:
 
-hashtag A is used 1000 times, hashtag B is used 1000 times, but all the posts which use hashtag A are viewed 50000 times, but all the posts which use hashtag B are viewed 2000 times, then A is the clear winner.
+hashtag A is used 1000 times, hashtag B is used 1000 times, but all the posts which use hashtag A are (in total) viewed 50000 times, but all the posts which use hashtag B are (in total) viewed 2000 times, then A is the clear winner.
 
 2. when users run this command:
 

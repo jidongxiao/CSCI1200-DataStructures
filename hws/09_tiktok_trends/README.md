@@ -308,6 +308,7 @@ To be added (not a promise).
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
+   - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
    - Does not use std::priority_queue at all. (-6)

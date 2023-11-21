@@ -185,6 +185,8 @@ and you can visit this page via [https://www.tiktok.com/tag/cleantok](https://ww
 
 ## Output File Format
 
+All expected output files are provided.
+
 1. when users run this command:
 
 ```console
@@ -213,6 +215,12 @@ Example 3:
 
 hashtag A and hashtag B are both used 100 times, and their associated videos are both view 1000 times. hashtag A is "#tstheerastour", and hashtag B is "#swifttok", both are std::string objects. Then, "#swifttok" will be the winner, because "#swifttok" is smaller than "#tstheerastour".
 
+Some differences between the expected output file and what TikTok actually shows:
+
+- For the videos, we do not show the video, but we just print the coverUrl and the webVideoUrl of the video.
+- For trending hashtags, we also print the usage count - as this is used to rank the hashtags, showing this will help you to diagnose potential problems.
+- For view counts, which can be a very very large number, we use the raw numbers, whereas TikTok uses the more readable format. i.e., we may print *1200000000 views*, whereas TikTok would just print *1.2B views*.
+
 2. when users run this command:
 
 ```console
@@ -236,6 +244,12 @@ sound A is used in 100 videos, and these 100 videos have been viewed (in total) 
 Example 2:
 
 sound A is used in 1000 videos, and these 1000 videos have been viewed (in total) 10000 times; sound B is used in 5000 videos, and all these 5000 videos in total have been viewed 10000 times. Then we get a tie based on the view count. Let's say sound A's music id is 123, sound B's music id is 456, then the smaller music id wins. Thus we break the tie and A is the winner.
+
+Some differences between the expected output file and what TikTok actually shows:
+
+- For the videos, we do not show the video, but we just print the coverUrl and the webVideoUrl of the video.
+- For trending sounds, we also print the music id - as this is used to break the tie, showing this will help you to diagnose potential problems.
+- For view counts, which can be a very very large number, we use the raw numbers, whereas TikTok uses the more readable format. i.e., we may print *1200000000 views*, whereas TikTok would just print *1.2B views*.
 
 ## Useful Code
 

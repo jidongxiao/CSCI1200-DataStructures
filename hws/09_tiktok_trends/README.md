@@ -231,7 +231,7 @@ sound A is used in 100 videos, and these 100 videos have been viewed (in total) 
 
 Example 2:
 
-sound A is used in 1000 videos, and these 1000 videos have been viewed (in total) 10000 times; sound B is used in 5000 videos, and all these 5000 videos in total have been viewed 10000 times. Then we get a tie based on the view count. Let's say sound A's music id is 123, sound B's music id is 456, then the smaller music id wins. thus we break the tie and A is the winner.
+sound A is used in 1000 videos, and these 1000 videos have been viewed (in total) 10000 times; sound B is used in 5000 videos, and all these 5000 videos in total have been viewed 10000 times. Then we get a tie based on the view count. Let's say sound A's music id is 123, sound B's music id is 456, then the smaller music id wins. Thus we break the tie and A is the winner.
 
 ## Useful Code
 

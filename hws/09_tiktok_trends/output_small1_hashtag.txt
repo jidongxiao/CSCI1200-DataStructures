@@ -25,6 +25,18 @@ cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/bd65c5aa044c4
 web video url: https://www.tiktok.com/@justhype/video/6935762491267976453
 ========================
 ========================
+#newyorkcity
+used 25 times
+155000000 views
+
+cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/e4b3e025a838487d998bba602173c6a7_1683659387?x-expires=1700452800&x-signature=e2eQiuHiNj%2Fs4IOPh8eEMkqjeVk%3D
+web video url: https://www.tiktok.com/@5boroughfoodie/video/7231261958329077034
+cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/c9e4f40029bf447b8cf8202b10dda177?x-expires=1700452800&x-signature=e6roUeTm4UWwAVal5ejDwreuKbo%3D
+web video url: https://www.tiktok.com/@shaleensunesara/video/6943447375952219398
+cover url: https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/14633ef6a4a9496d87820bcd33b82809~tplv-dmt-logom:tos-useast5-i-0068-tx/d5e7f3a0c4614804a3f59c30841b4631.image?x-expires=1700452800&x-signature=cO7Fz0cbgGQzV3st4pKRwbeMFos%3D
+web video url: https://www.tiktok.com/@masterofzoom/video/7141179132758773038
+========================
+========================
 #viral
 used 24 times
 414094700 views
@@ -35,18 +47,6 @@ cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/08824d173d3041
 web video url: https://www.tiktok.com/@richardsalesofficial/video/6982283710544579842
 cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/a415407eec764f5ab1e75a11a9244a62_1685026241?x-expires=1700449200&x-signature=71oX18CF77G6NCRidcg7%2FuqCFjw%3D
 web video url: https://www.tiktok.com/@cutearron/video/7237132483743976746
-========================
-========================
-#newyorkcity
-used 24 times
-152300000 views
-
-cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/e4b3e025a838487d998bba602173c6a7_1683659387?x-expires=1700452800&x-signature=e2eQiuHiNj%2Fs4IOPh8eEMkqjeVk%3D
-web video url: https://www.tiktok.com/@5boroughfoodie/video/7231261958329077034
-cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/c9e4f40029bf447b8cf8202b10dda177?x-expires=1700452800&x-signature=e6roUeTm4UWwAVal5ejDwreuKbo%3D
-web video url: https://www.tiktok.com/@shaleensunesara/video/6943447375952219398
-cover url: https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/14633ef6a4a9496d87820bcd33b82809~tplv-dmt-logom:tos-useast5-i-0068-tx/d5e7f3a0c4614804a3f59c30841b4631.image?x-expires=1700452800&x-signature=cO7Fz0cbgGQzV3st4pKRwbeMFos%3D
-web video url: https://www.tiktok.com/@masterofzoom/video/7141179132758773038
 ========================
 ========================
 #ifweeverbrokeup

@@ -2,8 +2,8 @@ trending hashtags:
 
 ========================
 #fyp
-used 3202 times
-110062679602 views
+used 3206 times
+110103745902 views
 
 cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/567504ab3e4648dea968213ce979f281?x-expires=1700449200&x-signature=bjGEgY4bdEVOMMHQa2S0qrzNCQY%3D
 web video url: https://www.tiktok.com/@bellapoarch/video/6862153058223197445
@@ -14,8 +14,8 @@ web video url: 227302284517642240"
 ========================
 ========================
 #foryou
-used 1154 times
-39629981679 views
+used 1155 times
+39630586079 views
 
 cover url: https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d57bd10bd2594b148d48c5443d5571b0?x-expires=1700449200&x-signature=Z%2FTgQwhQ9eSmRMF3cBmH%2BdVHve8%3D
 web video url: https://www.tiktok.com/@honeycats77/video/7190528800352980267
@@ -26,8 +26,8 @@ web video url: https://www.tiktok.com/@metrevelisalii/video/7298305522623679752
 ========================
 ========================
 #viral
-used 741 times
-25104674371 views
+used 745 times
+25140334071 views
 
 cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/o4n0aDMCxQPkleFE5JnbeaoIw9uEBRQiTkIzAB?x-expires=1700449200&x-signature=zOxX4QIMqL%2BNOyl6R57PLiVKb%2BE%3D
 web video url: https://www.tiktok.com/@dada_ahoufe_/video/7247202774696447238
@@ -38,8 +38,8 @@ web video url: https://www.tiktok.com/@ricoanimations0/video/7241573984590957830
 ========================
 ========================
 #makeuptutorial
-used 727 times
-9743761300 views
+used 730 times
+9768061300 views
 
 cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ea183fe6de594a319ba917d1ffbff11b?x-expires=1700503200&x-signature=9L4ypK162uI%2BirECcDcFqctjvn8%3D
 web video url: 227302284517642240"
@@ -61,6 +61,18 @@ cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/400b40e8d9564
 web video url: https://www.tiktok.com/@extrahack/video/6992985266445094150
 ========================
 ========================
+#funnyvideos
+used 673 times
+28693345600 views
+
+cover url: https://p16-sign-useast2a.tiktokcdn.com/obj/tos-useast2a-p-0037-euttp/b0fed04ac06b45f58a9c3add061342dd_1686566824?x-expires=1700449200&x-signature=HTd5Yy2XA1y%2Bn0Gy2PnX9t%2FNpw4%3D
+web video url: https://www.tiktok.com/@funnnyh/video/7243749070475496731
+cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oYnvbUpjQBUNzIDjebRuEsPBn2jQ9gEFBXAVek?x-expires=1700449200&x-signature=ul%2BWkj7HN2MvNTVBxdBZoUi1rwM%3D
+web video url: https://www.tiktok.com/@funnyfunding/video/7221484510020488449
+cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oYnvbUpjQBUNzIDjebRuEsPBn2jQ9gEFBXAVek?x-expires=1700449200&x-signature=ul%2BWkj7HN2MvNTVBxdBZoUi1rwM%3D
+web video url: https://www.tiktok.com/@funnyfunding/video/7221484510020488449
+========================
+========================
 #couplestiktok
 used 673 times
 6187485000 views
@@ -73,21 +85,9 @@ cover url: https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/a46e49032c7f4
 web video url: https://www.tiktok.com/@hannahschibicreations/video/7124375546682887470
 ========================
 ========================
-#funnyvideos
-used 671 times
-28643045600 views
-
-cover url: https://p16-sign-useast2a.tiktokcdn.com/obj/tos-useast2a-p-0037-euttp/b0fed04ac06b45f58a9c3add061342dd_1686566824?x-expires=1700449200&x-signature=HTd5Yy2XA1y%2Bn0Gy2PnX9t%2FNpw4%3D
-web video url: https://www.tiktok.com/@funnnyh/video/7243749070475496731
-cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oYnvbUpjQBUNzIDjebRuEsPBn2jQ9gEFBXAVek?x-expires=1700449200&x-signature=ul%2BWkj7HN2MvNTVBxdBZoUi1rwM%3D
-web video url: https://www.tiktok.com/@funnyfunding/video/7221484510020488449
-cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/oYnvbUpjQBUNzIDjebRuEsPBn2jQ9gEFBXAVek?x-expires=1700449200&x-signature=ul%2BWkj7HN2MvNTVBxdBZoUi1rwM%3D
-web video url: https://www.tiktok.com/@funnyfunding/video/7221484510020488449
-========================
-========================
 #newyorkcity
-used 650 times
-3560880400 views
+used 652 times
+3570880400 views
 
 cover url: https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/0212aa75624b4419877ee22f74334908_1644688463~tplv-dmt-logom:tos-useast5-p-0000-tx/0d0ed814569e40789355cda2a2d769d2.image?x-expires=1700452800&x-signature=%2FndlYC9whjAu5guDm9kQiXOFEoQ%3D
 web video url: https://www.tiktok.com/@nychighlife/video/7063883144973487406
@@ -98,8 +98,8 @@ web video url: https://www.tiktok.com/@jeremycohen/video/6807075946470837509
 ========================
 ========================
 #ifweeverbrokeup
-used 646 times
-571597849 views
+used 650 times
+574309449 views
 
 cover url: https://p16-sign-sg.tiktokcdn.com/obj/tos-alisg-p-0037/ee79eb2bea6445739ed71cef3e9b84b6_1686646723?x-expires=1700456400&x-signature=0MADrs89I23eeCudb%2FJxkI%2FJbR8%3D
 web video url: https://www.tiktok.com/@zanmangloopyofficial/video/7244092495129218312
@@ -110,8 +110,8 @@ web video url: https://www.tiktok.com/@maestephens_/video/7239463060564479259
 ========================
 ========================
 #foryoupage
-used 643 times
-20483617000 views
+used 644 times
+20484221400 views
 
 cover url: https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/d57bd10bd2594b148d48c5443d5571b0?x-expires=1700449200&x-signature=Z%2FTgQwhQ9eSmRMF3cBmH%2BdVHve8%3D
 web video url: https://www.tiktok.com/@honeycats77/video/7190528800352980267

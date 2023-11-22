@@ -213,7 +213,7 @@ hashtag A is used 1000 times, hashtag B is used 1000 times, but all the posts wh
 
 Example 3:
 
-hashtag A and hashtag B are both used 100 times, and their associated videos are both view 1000 times. hashtag A is "#tstheerastour", and hashtag B is "#swifttok", both are std::string objects. Then, "#swifttok" will be the winner, because "#swifttok" is smaller than "#tstheerastour".
+hashtag A and hashtag B are both used 100 times, and their associated videos are both view 1000 times. hashtag A is "#tstheerastour", and hashtag B is "#swifttok", both are std::string objects. Then, "#swifttok" will be the winner, because "#swifttok" is smaller than "#tstheerastour" when we use the comparison operators (<, <=, >, >=) directly on these two std::string objects.
 
 Some differences between the expected output file and what TikTok actually shows:
 

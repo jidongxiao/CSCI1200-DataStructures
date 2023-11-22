@@ -285,7 +285,7 @@ Assume you store the post text content in a std::string variable called *text*, 
 ```cpp
 // the text of the post is given as a std::string, extract hashtags from the text.
 
-    // define a regular expression to match hashtags with emojis
+    // define a regular expression to match hashtags
     std::regex hashtagRegex("#([\\w\\u0080-\\uFFFF]+)");
 
     // create an iterator for matching

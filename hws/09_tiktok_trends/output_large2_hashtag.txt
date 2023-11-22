@@ -42,9 +42,9 @@ used 979 times
 13045973300 views
 
 cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ea183fe6de594a319ba917d1ffbff11b?x-expires=1700449200&x-signature=rcENEycgNpS6i8fr9deD4lVF7uk%3D
-web video url: 227302284517642240"
+web video url: https://www.tiktok.com/@dollievision/video/7208244986666585386
 cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ea183fe6de594a319ba917d1ffbff11b?x-expires=1700503200&x-signature=9L4ypK162uI%2BirECcDcFqctjvn8%3D
-web video url: 227302284517642240"
+web video url: https://www.tiktok.com/@dollievision/video/7208244986666585386
 cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/5461c70dd8ee4a0d891e7f2529f6b8ea_1670789072?x-expires=1700503200&x-signature=TqqnBqyBh5cnb150Ri0jXfwaL9s%3D
 web video url: https://www.tiktok.com/@alicekingmakeup/video/7175984394950167813
 ========================

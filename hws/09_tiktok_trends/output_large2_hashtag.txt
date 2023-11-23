@@ -2,8 +2,8 @@ trending hashtags:
 
 ========================
 #fyp
-used 4399 times
-151817354939 views
+used 4398 times
+151683754939 views
 
 cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/567504ab3e4648dea968213ce979f281?x-expires=1700449200&x-signature=bjGEgY4bdEVOMMHQa2S0qrzNCQY%3D
 web video url: https://www.tiktok.com/@bellapoarch/video/6862153058223197445
@@ -62,15 +62,15 @@ web video url: https://www.tiktok.com/@debbiekval/video/7205018880622857515
 ========================
 ========================
 #lifehack
-used 912 times
-19552378300 views
+used 911 times
+19418778300 views
 
-cover url: https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/d6a1c1c323614919975fad3ee1c1ef9e~tplv-dmt-logom:tos-alisg-i-0000/4124427fcd3045968ac1c3136bd92d6c.image?x-expires=1700449200&x-signature=WSl3XKN1HPXy7jpguj8v0AaI3FU%3D
-web video url: https://www.tiktok.com/@tresorfie/video/7039091515863403778
 cover url: https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/d6a1c1c323614919975fad3ee1c1ef9e~tplv-dmt-logom:tos-alisg-i-0000/4124427fcd3045968ac1c3136bd92d6c.image?x-expires=1700452800&x-signature=qCaN1hrF7pqQ0kvZJnlFnc9jI6Q%3D
 web video url: https://www.tiktok.com/@tresorfie/video/7039091515863403778
 cover url: https://p16-sign-sg.tiktokcdn.com/tos-alisg-p-0037/501627c6b36849e282740c764611f2a7_1634994542~tplv-dmt-logom:tos-alisg-pv-0037/f3273e6f3e92421d860be8f5e72ac0bd.image?x-expires=1700452800&x-signature=DkwRLgyyY5ec0757c1hCq372yJM%3D
 web video url: https://www.tiktok.com/@issei0806/video/7022248055625846018
+cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/400b40e8d9564b939c3817bfa9e2fe61?x-expires=1700452800&x-signature=tU4wNlAyRJe5wnjD9HFzCIWGVQU%3D
+web video url: https://www.tiktok.com/@extrahack/video/6992985266445094150
 ========================
 ========================
 #foryoupage
@@ -86,8 +86,8 @@ web video url: https://www.tiktok.com/@emma.cxmpbell/video/6866909240007691526
 ========================
 ========================
 #funnyvideos
-used 902 times
-38603228800 views
+used 901 times
+38469628800 views
 
 cover url: https://p16-sign-useast2a.tiktokcdn.com/obj/tos-useast2a-p-0037-euttp/b0fed04ac06b45f58a9c3add061342dd_1686566824?x-expires=1700449200&x-signature=HTd5Yy2XA1y%2Bn0Gy2PnX9t%2FNpw4%3D
 web video url: https://www.tiktok.com/@funnnyh/video/7243749070475496731

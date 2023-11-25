@@ -150,7 +150,7 @@ stack:
 
 - Stop & Copy:
 
-  – - requires a long pause in program execution  
+  - - requires a long pause in program execution  
   - \+ can handle cyclical data structures!  
   - – requires 100% extra memory (you can only use half the memory)  
   - \+ runs fast if most of the memory is garbage (it only touches the nodes reachable from the root)  
@@ -158,10 +158,10 @@ stack:
 
 - Mark-Sweep:
 
-  – - requires a long pause in program execution  
+  - - requires a long pause in program execution  
   - \+ can handle cyclical data structures!  
   - \+ requires ∼1% extra memory (just one bit per node)  
-  – - runs the same speed regardless of how much of memory is garbage.  
+  - - runs the same speed regardless of how much of memory is garbage.  
     It must touch all nodes in the mark phase, and must link together all garbage nodes into a free list.
 
 ## 25.11 Practical Garbage Collection Methodology in C++: Smart Pointers

@@ -77,14 +77,11 @@ root: 105
 
 1. Split memory in half (working memory and copy memory).
 2. When out of working memory, stop computation and begin garbage collection.
-(a) Place scan and free pointers at the start of the copy memory.
-(b) Copy the root to copy memory, incrementing free. Whenever a node is copied from working memory,
-leave a forwarding address to its new location in copy memory in the left address slot of its old location.
-(c) Starting at the scan pointer, process the left and right pointers of each node. Look for their locations
-in working memory. If the node has already been copied (i.e., it has a forwarding address), update the
-reference. Otherwise, copy the location (as before) and update the reference.
-(d) Repeat until scan == free.
-(e) Swap the roles of the working and copy memory.
+  (a) Place scan and free pointers at the start of the copy memory.  
+  (b) Copy the root to copy memory, incrementing free. Whenever a node is copied from working memory, leave a forwarding address to its new location in copy memory in the left address slot of its old location.  
+  (c) Starting at the scan pointer, process the left and right pointers of each node. Look for their locations in working memory. If the node has already been copied (i.e., it has a forwarding address), update the reference. Otherwise, copy the location (as before) and update the reference.  
+  (d) Repeat until scan == free.  
+  (e) Swap the roles of the working and copy memory.
 
 ## 25.7 Stop and Copy Exercise
 
@@ -118,12 +115,12 @@ free:
 2. Keep a free pointer to the head of the free list.
 3. When memory runs out, stop computation, clear the mark bits and begin garbage collection.
 4. Mark
-(a) Start at the root and follow the accessible structure (keeping a stack of where you still need to go).
-(b) Mark every node you visit.
-(c) Stop when you see a marked node, so you don’t go into a cycle.
+  (a) Start at the root and follow the accessible structure (keeping a stack of where you still need to go).  
+  (b) Mark every node you visit.  
+  (c) Stop when you see a marked node, so you don’t go into a cycle.  
 5. Sweep
-(a) Start at the end of memory, and build a new free list.
-(b) If a node is unmarked, then it’s garbage, so hook it into the free list by chaining the left pointers.
+  (a) Start at the end of memory, and build a new free list.  
+  (b) If a node is unmarked, then it’s garbage, so hook it into the free list by chaining the left pointers.
 
 ## 25.9 Mark-Sweep Exercise
 
@@ -146,9 +143,9 @@ stack:
 ## 25.10 Garbage Collection Comparison
 
 - Reference Counting:
-  + fast and incremental  
-  – can’t handle cyclical data structures!  
-  ? requires ∼33% extra memory (1 integer per node)  
+  - + fast and incremental  
+  - – can’t handle cyclical data structures!  
+  - ? requires ∼33% extra memory (1 integer per node)  
 - Stop & Copy:
   – requires a long pause in program execution  
   + can handle cyclical data structures!  
@@ -171,9 +168,13 @@ enormous beast of a programming language (but that doesn’t stop people from tr
 we can do? Yes, we can use Smart Pointers to gain some of the features of garbage collection.
  Some examples below are modified from these nice online references:
 [http://ootips.org/yonat/4dev/smart-pointers.html](http://ootips.org/yonat/4dev/smart-pointers.html)
+
 [http://www.codeproject.com/KB/stl/boostsmartptr.aspx](http://www.codeproject.com/KB/stl/boostsmartptr.aspx)
+
 [http://en.wikipedia.org/wiki/Smart_pointer](http://en.wikipedia.org/wiki/Smart_pointer)
+
 [http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm](http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm)
+
 [http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/](http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/)
 
 ## 25.12 What’s a Smart Pointer?

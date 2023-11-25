@@ -22,6 +22,8 @@ have performance and memory usage disadvantages.
 
 - For our discussion today, we’ll assume that all program data is stored in dynamically-allocated instances of the
 following simple class. This class can be used to build linked lists, trees, and graphs with cycles:
+
+```cpp
 class Node {
 public:
 	Node(char v, Node* l, Node* r) :
@@ -30,6 +32,7 @@ public:
 	Node* left;
 	Node* right;
 };
+```
 
 ## 25.3 Garbage Collection Technique #1: Reference Counting
 
@@ -143,20 +146,20 @@ stack:
 ## 25.10 Garbage Collection Comparison
 
 - Reference Counting:
-  + fast and incremental
-  – can’t handle cyclical data structures!
-  ? requires ∼33% extra memory (1 integer per node)
+  + fast and incremental  
+  – can’t handle cyclical data structures!  
+  ? requires ∼33% extra memory (1 integer per node)  
 - Stop & Copy:
-  – requires a long pause in program execution
-  + can handle cyclical data structures!
-  – requires 100% extra memory (you can only use half the memory)
-  + runs fast if most of the memory is garbage (it only touches the nodes reachable from the root)
+  – requires a long pause in program execution  
+  + can handle cyclical data structures!  
+  – requires 100% extra memory (you can only use half the memory)  
+  + runs fast if most of the memory is garbage (it only touches the nodes reachable from the root)  
   + data is clustered together and memory is “de-fragmented”
 - Mark-Sweep:
-  – requires a long pause in program execution
-  + can handle cyclical data structures!
-  + requires ∼1% extra memory (just one bit per node)
-  – runs the same speed regardless of how much of memory is garbage.
+  – requires a long pause in program execution  
+  + can handle cyclical data structures!  
+  + requires ∼1% extra memory (just one bit per node)  
+  – runs the same speed regardless of how much of memory is garbage.  
     It must touch all nodes in the mark phase, and must link together all garbage nodes into a free list.
 
 ## 25.11 Practical Garbage Collection Methodology in C++: Smart Pointers
@@ -167,11 +170,11 @@ also when we are developing big complex programs that process and rearrange lots
 enormous beast of a programming language (but that doesn’t stop people from trying!). So is there anything
 we can do? Yes, we can use Smart Pointers to gain some of the features of garbage collection.
  Some examples below are modified from these nice online references:
-http://ootips.org/yonat/4dev/smart-pointers.html
-http://www.codeproject.com/KB/stl/boostsmartptr.aspx
-http://en.wikipedia.org/wiki/Smart_pointer
-http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm
-http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/
+[http://ootips.org/yonat/4dev/smart-pointers.html](http://ootips.org/yonat/4dev/smart-pointers.html)
+[http://www.codeproject.com/KB/stl/boostsmartptr.aspx](http://www.codeproject.com/KB/stl/boostsmartptr.aspx)
+[http://en.wikipedia.org/wiki/Smart_pointer](http://en.wikipedia.org/wiki/Smart_pointer)
+[http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm](http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm)
+[http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/](http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/)
 
 ## 25.12 What’s a Smart Pointer?
 
@@ -184,12 +187,12 @@ obsess about how & when it will get deleted (it happens automatically).
 template <class T>
 class auto_ptr {
 public:
-explicit auto_ptr(T* p = NULL) : ptr(p) {} /* prevents cast/conversion */
-~auto_ptr() { delete ptr; }
-T& operator*() { return *ptr; }
-T* operator->() { return ptr; } /* fakes being a pointer */
+	explicit auto_ptr(T* p = NULL) : ptr(p) {} /* prevents cast/conversion */
+	~auto_ptr() { delete ptr; }
+	T& operator*() { return *ptr; }
+	T* operator->() { return ptr; } /* fakes being a pointer */
 private:
-T* ptr;
+	T* ptr;
 };
 ```
 
@@ -197,17 +200,17 @@ T* ptr;
 
 ```cpp
 void foo() {
-Polygon* p(new Polygon(/* stuff */));
-p->DoSomething();
-delete p;
+	Polygon* p(new Polygon(/* stuff */));
+	p->DoSomething();
+	delete p;
 }
 ```
 - Here’s how we can re-write the same example with our auto_ptr:
 
 ```cpp
 void foo() {
-auto_ptr<Polygon> p(new Polygon(/* stuff */);
-p->DoSomething();
+	auto_ptr<Polygon> p(new Polygon(/* stuff */);
+	p->DoSomething();
 }
 ```
 
@@ -230,7 +233,7 @@ std::vector<Polygon*> polys;
 polys.push_back(new Triangle(/*...*/));
 polys.push_back(new Quad(/*...*/));
 for (unsigned int i = 0; i < polys.size(); i++) {
-delete polys[i];
+	delete polys[i];
 }
 polys.clear();
 ```

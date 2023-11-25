@@ -152,7 +152,7 @@ stack:
 
   - \- requires a long pause in program execution  
   - \+ can handle cyclical data structures!  
-  - \– requires 100% extra memory (you can only use half the memory)  
+  - – requires 100% extra memory (you can only use half the memory)  
   - \+ runs fast if most of the memory is garbage (it only touches the nodes reachable from the root)  
   - \+ data is clustered together and memory is “de-fragmented”
 

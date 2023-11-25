@@ -1,4 +1,4 @@
-# Lab 12 — Garbage Collection & Smart Pointers
+# Lab 13 — Garbage Collection & Smart Pointers
 
 ## Checkpoint 1:
 

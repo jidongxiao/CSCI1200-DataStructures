@@ -235,7 +235,7 @@ this basically is the trending sounds, each is associated with some videos. In y
 
 More specifically, you should print the top 10 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
-Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by the music id - the one with the smaller music id will be displayed first.
+Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by the music id - the one with the smaller music id will be displayed first. (Note: use the comparison operators (<, <=, >, >=) directly on these two std::string objects to decide which one is smaller.)
 
 Example 1:
 

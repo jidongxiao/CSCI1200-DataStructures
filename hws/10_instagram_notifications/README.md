@@ -44,18 +44,19 @@ Users can also decide to pause all notifications:
 Your program will be run like this:
 
 ```console
-nytrends.exe input.json output.txt hashtag
-nytrends.exe input.json output.txt sound
+nynotifications.exe posts.json users.json events.txt output.txt username
 ```
 
 Here:
 
-- *nytrends.exe* is the executable file name.
-- input.json contains data collected from TikTok. In this README we will refer to this file as **the json file**.
-- output.txt is where to print your output to. In this README we will refer to this file as **the output file**.
-- this field will be either hashtag or sound. When this field is *hashtag*, your program should display the top 10 trending hashtags to the output file. When this field is *sound*, your program should display the top 10 trending sounds to the output file.
+- *nynotifications.exe* is the executable file name.
+- posts.json contains data collected from Instagram. Each line in this json file represents one post on Instagram.
+- users.json contains data collected from Instagram as well as simulated data for users' notification preferences. Each line in this json file represents one user on Instagram.
+- events.txt defines all events which might trigger a notification. In this README we will refer to this file as the **events file**.
+- output.txt is where to print your output to, and each line in this output file should represent one notification. In this README we will refer to this file as **the output file**.
+- this argument would be a username. For each run of your program, **the output file** should contain notifications which are only supposed to be delivered to this user as specified by this **username**.
 
-To summerize what your program does: your program reads data from **the json file**, analyze the data and find out the top 10 trending hashtags, or the top 10 trending sounds, and display them in the output file.
+To summerize what your program does: your program reads data from the two json files, and parse events from the events file. Based on the events and users' notification preferences, your program display notifications for this user (as specified in the **username** command line argument) in the output file.
 
 ## Format of input.json
 

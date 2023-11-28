@@ -56,7 +56,7 @@ Here:
 - output.txt is where to print your output to, and each line in this output file should represent one notification. In this README we will refer to this file as **the output file**.
 - this argument would be a username. For each run of your program, **the output file** should contain notifications which are only supposed to be delivered to this user as specified by this **username**.
 
-To summerize what your program does: your program reads data from the two json files, and parse events from the events file. Based on the events and users' notification preferences, your program display notifications for this user (as specified in the **username** command line argument) in the output file.
+To summarize what your program does: your program reads data from the two json files, and parse events from the events file. Based on the events and users' notification preferences, your program display notifications for this user (as specified in the **username** command line argument) in the output file.
 
 ## Format of input.json
 

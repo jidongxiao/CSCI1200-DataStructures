@@ -258,13 +258,11 @@ In order to use this above code block, you need to include the regular expressio
 
 ## Program Requirements & Submission Details
 
-<!--In this assignment, you are required to use std::priority_queue. You can also use any other data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::unordered_map, std::unordered_set, std::stack, std::queue. It is okay if you decide not to use std::unordered_map or std::unordered_set, although they fit very well with this assignment.
-
-**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.
+In this assignment, you can use any other data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::unordered_map, std::unordered_set, std::stack, std::queue, std::priority_queue. **You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
--->
+
 **Due Date**: 12/07/2023, Thursday, 23:59pm.
 
 <!--## Instructor's Code

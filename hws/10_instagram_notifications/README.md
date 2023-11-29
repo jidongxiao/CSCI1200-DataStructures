@@ -83,7 +83,9 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - *ownerId*: Instagram assigns each user an id.
 - *taggedUsers*: whom the author of this post has tagged in the images of this post. This could include multiple items - if multiple users are tagged.
 
-Each field is a key-value pair. As mentioned above, there are four fields which could include multiple items, and these four fields are: *authorMeta*, *musicMeta*, *videoMeta*, *mentions*. We will describe each of these four fields next.
+Each field is a key-value pair. The screenshot of this Taylor Swift's post will help you better understand some of these fields.
+
+![alt text](images/taylor_swift_post.png "Taylor Swift post")
 
 ## Format of users.json
 

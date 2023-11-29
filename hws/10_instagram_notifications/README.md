@@ -104,7 +104,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 
 ### Format of events.txt
 
-events.txt contains events which may occur on Instagram, each line of this file describes one event, and each line has 3 columns, where the first column is always an username, and the thid column is always either a username, or a post id. The second column of each line defines what event it is. The events we use in our data set include:
+events.txt contains events which may occur on Instagram, each line of this file describes one event, and each line has 3 columns, separated by a space. The first column is always a username, and the third column is always either a username, or a post id. The second column of each line defines what event it is. The events we use in our data set include:
 
 1. likes
 
@@ -174,19 +174,23 @@ For like notifications:
 
 ![alt text](images/like_notifications.png "Someone liked your post")
 
-For follow notification:
+For follow notifications:
 
 ![alt text](images/follow_notifications.png "Someone started following you")
 
-For tag notification:
+**Note**: our follow notification messages will use the user's username, rather than the full name (first name, last name) format as Instagram does.
+
+For tag notifications:
 
 ![alt text](images/tag_notifications.png "Someone tagged you in a post")
 
-For comments_on notification:
+For comment notifications:
 
 ![alt text](images/comment_notifications.png "Someone commented on your post")
 
-For messageRequest notification:
+**Note**: our comment notification messages do not include the actual comments. Plus, our messages will use the user's username, rather than the full name (first name, last name) format as Instagram does.
+
+For messageRequest notifications:
 
 ![alt text](images/messageRequest_notifications.png "Someone wants to send you a message")
 
@@ -261,9 +265,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 -->
 **Due Date**: 12/07/2023, Thursday, 23:59pm.
 
-## Instructor's Code
+<!--## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/trends/).
+-->
 
 ## Rubric
 

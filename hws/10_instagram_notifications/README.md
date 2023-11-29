@@ -17,7 +17,7 @@ Instagram sends notifications to users in different situations, such as:
 3. when someone mentions you in a comment.
 4. when someone sends you a message.
 
-And there are many more. In this assignment, your program will support five types of notifications: like, follow, comment, tag, and message requests.
+And there are many more. In this assignment, your program will support five types of notifications: like, follow, comment, tag, and message request.
 
 On Instagram, on the "Settings and privacy" page, users can choose to turn on or turn off each of these notifications, as shown in the following five screenshots:
 
@@ -52,214 +52,138 @@ Here:
 - *nynotifications.exe* is the executable file name.
 - posts.json contains data collected from Instagram. Each line in this json file represents one post on Instagram.
 - users.json contains data collected from Instagram as well as simulated data for users' notification preferences. Each line in this json file represents one user on Instagram.
-- events.txt defines all events which might trigger a notification. In this README we will refer to this file as the **events file**.
+- events.txt defines all events which might trigger a notification. In this README we will refer to this file as the **events file**. Note that we have multiple events files, representing different test cases. These events files include events_tiny.txt, events_small.txt, events_medium.txt, events_large.txt, and events_huge.txt.
 - output.txt is where to print your output to, and each line in this output file should represent one notification. In this README we will refer to this file as **the output file**.
 - this argument would be a username. For each run of your program, **the output file** should contain notifications which are only supposed to be delivered to this user as specified by this **username**.
 
 To summarize what your program does: your program reads data from the two json files, and parse events from the events file. Based on the events and users' notification preferences, your program display notifications for this user (as specified in the **username** command line argument) in the output file.
 
-## Format of input.json
+## Format of posts.json
 
-input.json represents the json file. It stores posts we collected from TikTok. Each line of the json file represents one post, and each line has the same format. And below is an example, which describes a post by Taylor Swift. (You can view her post [here](https://www.tiktok.com/@taylorswift/video/7216853341702278446).)
+posts.json stores posts we collected from Instagram. Each line of this json file represents one post, and each line has the same format. And below is an example, which describes a post by Taylor Swift.
 
 ```console
-{"id": "7216853341702278446", "text": "That\u2019s my whole world \ud83d\udc95 #tstheerastour #swifttok ", "createTime": 1680304615, "createTimeISO": "2023-03-31T23:16:55.000Z", "authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "privateAccount": false, "region": "US", "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}, "musicMeta": {"musicName": "So it goes x Miss Americana", "musicAuthor": "\ud83e\udea9", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/3b1da6666aed49658c9f51e43d08ea46/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=ZmY0aTtlOjY0ZjxlaDNlOUBpM212eGU6ZnVsZjMzZzU8NEBfNTE1NjAuNjAxY18tNTYtYSNxcjZtcjQwNGhgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307910&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=00588d20de31148a1b020adebf99713b&tk=0", "coverMediumUrl": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0049bec51b5b8fcacf4339562209fd19~c5_720x720.jpeg?x-expires=1700456400&x-signature=6NwY7jHmDO1xGlE4ULhwCOEA%2F6o%3D", "musicId": "7145281770450078507"}, "webVideoUrl": "https://www.tiktok.com/@taylorswift/video/7216853341702278446", "videoMeta": {"height": 1088, "width": 576, "duration": 7, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token"}, "diggCount": 3700000, "shareCount": 33600, "playCount": 29300000, "commentCount": 47000, "mentions": []}
+{"id":"3166098261500503829","type":"Image","caption":"Surprise!! 1989 (Taylor\u2019s Version) is on its way to you \ud83d\udd1c! The 1989 album changed my life in countless ways, and it fills me with such excitement to announce that my version of it will be out October 27th. To be perfectly honest, this is my most FAVORITE re-record I\u2019ve ever done because the 5 From The Vault tracks are so insane. I can\u2019t believe they were ever left behind. But not for long! Pre order 1989 (Taylor\u2019s Version) on my site \ud83e\ude75\ud83d\ude0e\ud83e\ude75\n\n\ud83d\udcf7: @bethgarrabrant","hashtags":[],"mentions":["bethgarrabrant"],"url":"https://www.instagram.com/p/CvwPZgYuCcV/","commentsCount":0,"displayUrl":"https://scontent-ord5-2.cdninstagram.com/v/t51.2885-15/366422100_147674528370406_9143482148277133418_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=1&_nc_ohc=rBcVFTxJPEYAX9clyr2&edm=AOQ1c0wBAAAA&ccb=7-5&ig_cache_key=MzE2NjA5ODI2MTUwMDUwMzgyOQ%3D%3D.2-ccb7-5&oh=00_AfBuyZsouLs0N90G6dXlfhiUTKIFL3sJP3YUWQnqtBFXnQ&oe=656720E4&_nc_sid=8b3546","images":[],"likesCount":12532920,"timestamp":"2023-08-10T06:19:06.000Z","ownerUsername":"taylorswift","ownerId":"11830955","taggedUsers":[{"full_name":"Beth Garrabrant","id":"34234869","is_verified":false,"profile_pic_url":"https://scontent-ord5-2.cdninstagram.com/v/t51.2885-19/365905608_305188601913736_4756066331028114622_n.jpg?stp=dst-jpg_s150x150&_nc_ht=scontent-ord5-2.cdninstagram.com&_nc_cat=104&_nc_ohc=osCkZA1f-NYAX9uyTTV&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfAmj-OGhpkJTUNN-jo_k-GOUu1PphuKjvAQJjtGPpAbcw&oe=65673C00&_nc_sid=8b3546","username":"bethgarrabrant"}]}
 ```
 
 The line is enclosed with a pair of curly braces. And every line has these same fields:
 
-- *id*: TikTok assigns each post an id.
-- text: each post has its text content and its video/audio content. The text content is stored here. Keep in mind that on TikTok, a post can't just include text information, it must contain a video. Therefore, in the remainder of this section, when we say **the video** or **this video**, we mean the video which comes with this post. When users uses hash tags, these hash tags will appear in the text content, like in this above example, Taylor Swift used hash tags twice: *#tstheerastour* and *#swifttok*.
-- *createTime*: a timestamp indicating when this post was created. This is the timestamp in Unix epoch format. It represents the number of seconds that have passed since January 1, 1970 (the Unix epoch) until the specified date and time.
-- *createTimeISO*: still a timestamp indicating when this post was created. This is the same timestamp but presented in the ISO 8601 date and time format, which is more human friendly. Here, *"T"* is a separator indicating the beginning of the time portion; and *"Z"* indicates that the time is in Coordinated Universal Time (UTC).
-<!-- *locationCreated*: where this post was created.-->
-- *authorMeta*: the author's information, which includes multiple items.
-- *musicMeta*:  information of the music used in the video. This also includes multiple items.
-- *webVideoUrl*: the URL of this post. To satsify your curiosity, open this specific [webVideoUrl](https://www.tiktok.com/@taylorswift/video/7216853341702278446) in your browser, and you will see which video we are talking about right now.
-- *videoMeta*: information of the video. This also includes multiple items.
-- *diggCount*: how many likes this video has received.
-- *shareCount*: how many times this video has been shared.
-- *playCount*: how many times this video has been viewed.
-- *commentCount*: how many comments users have made as a reaction to this video.
-- *mentions*: whom the author of this post has mentioned in the post. This could include multiple items - if multiple users are mentioned.
-<!--- *hashtags*: the hashtags used in the text content of the post are also stored here separately. This could include multiple items - if multiple hashtags are used.-->
+- *id*: Instagram assigns each post an id.
+- type: Instagram supports different types of posts. The two most common ones are "Image" type and "Video" type. This above post is an Image post. 
+- caption: each post has its text content and its image/video content. The text content is known as *caption* and is stored here.
+- *hashtags*: if hashtags are used in the caption, Instagram would store them here.
+- *mentions*: if the post text content mentions some other users, the username of these users will be stored here. In this above example, Taylor Swift mentioned @bethgarrabrant, to thank her for shooting the photo.
+- *url*: the URL of this post. You can open this url [https://www.instagram.com/p/CvwPZgYuCcV/](https://www.instagram.com/p/CvwPZgYuCcV/) in your browser so you will see which post we are talking about right now.
+- *commentsCount*: how many comments users have made as a reaction to this video. Taylor Swift doesn't allow users to comment on this post, thus its commentCount for this specific post is 0.
+- *displayUrl*: this URL takes you to the cover image of this post.
+- *images*: some posts have multiple images, information about these images will be stored here.
+- *likesCount*: how many times this post has been liked.
+- *timestamp*: when this post was created.
+- *ownerUsername*: the username of the owner who owns/created this post.
+- *ownerId*: Instagram assigns each user an id.
+- *taggedUsers*: whom the author of this post has tagged in the images of this post. This could include multiple items - if multiple users are tagged.
 
 Each field is a key-value pair. As mentioned above, there are four fields which could include multiple items, and these four fields are: *authorMeta*, *musicMeta*, *videoMeta*, *mentions*. We will describe each of these four fields next.
 
-### Author Meta
+## Format of users.json
 
-The word *meta* means meta data. Let's extract the *authorMeta* field from this same Taylor Swift post and take a closer look.
-
-```console
-"authorMeta": {"id": "6881290705605477381", "name": "taylorswift", "nickName": "Taylor Swift", "verified": true, "signature": "This is pretty much just a cat account", "bioLink": "taylorswift.com", "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/13f2a0d585f3cd8578da0d18c36a18c4~c5_720x720.jpeg?x-expires=1700456400&x-signature=jkLwlnqFUpLwoYe6TvlGXZs%2FhP8%3D", "privateAccount": false, "region": "US", "following": 0, "fans": 22900000, "heart": 200400000, "video": 61, "digg": 2161}
-```
-
-TikTok uses the following sub-fields to describe each author (i.e., user):
-
-- *id*: TikTok assigns each author an id.
-- *name*: the user name. Not necessarily the real name; but of course celebrities would use their real name for their official account.
-- *nickName*: each user can also have nick name.
-- *verified*: official accounts are usually verified.
-- *signature*: users can put a few words introducin this account.
-- *bioLink*: users can put a link in their bio section.
-- *avatar*: link to the account's profile picture.
-- *privateAccount*: is this a private account? Private accounts are only visible to users who have the permission from the account owner.
-- *region*: where this user is located.
-- *following*: how many accounts this user is following. Taylor Swift does not follow anyone. Hence her *following* is 0.
-- *fans*: how many followers this account has.
-- *heart*: how many likes (in total) this account received.
-- *video*: how many videos this account has posted.
-- *digg*: how many likes this user has pressed.
-
-Some of these sub-fields (such as name, nickName, verified, signature, bioLink, avatar, following, fans, heart) are directly visible on Taylor Swift's TikTok profile page, as shown in this following screenshot, taken on November 19th, 2023.
-
-![alt text](images/taylor_swift.png "taylor swift profile")
-
-### Music Meta
-
-Let's extract the *musicMeta* field from this same Taylor Swift post and take a closer look.
+users.json stores users we collected from Instagram, we also added some random data here to represent each user's notification preferences. Each line of this json file represents one user, and each line has the same format. And below is an example, which describes the user Taylor Swift.
 
 ```console
-"musicMeta": {"musicName": "So it goes x Miss Americana", "musicAuthor": "\ud83e\udea9", "musicOriginal": false, "playUrl": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-v-27dcd7-tx/3b1da6666aed49658c9f51e43d08ea46/?a=1988&ch=0&cr=0&dr=0&er=0&lr=default&cd=0%7C0%7C0%7C0&br=250&bt=125&bti=ODszNWYuMDE6&ft=tlc-I-Inz7TfiVYZiyq8Z&mime_type=audio_mpeg&qs=6&rc=ZmY0aTtlOjY0ZjxlaDNlOUBpM212eGU6ZnVsZjMzZzU8NEBfNTE1NjAuNjAxY18tNTYtYSNxcjZtcjQwNGhgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307910&l=202311180544290984F2C815B65729734D&ply_type=3&policy=3&signature=00588d20de31148a1b020adebf99713b&tk=0", "coverMediumUrl": "https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/0049bec51b5b8fcacf4339562209fd19~c5_720x720.jpeg?x-expires=1700456400&x-signature=6NwY7jHmDO1xGlE4ULhwCOEA%2F6o%3D", "musicId": "7145281770450078507"}
+{"id": "11830955", "username": "taylorswift", "url": "https://www.instagram.com/taylorswift", "fullName": "Taylor Swift", "biography": "I’m the problem, it’s me", "notifications": [{"pauseAll": "false", "likes": "true", "tags": "true", "comments": "true", "newFollowers": "true", "messageRequests": "true"}]}
 ```
 
-TikTok uses the following sub-fields to describe each music:
+The line is enclosed with a pair of curly braces. And every line has these same fields:
 
-- *musicName*: the name of this music.
-- *musicAuthor*: the author of this music.
-- *musicOriginal*: is this original music?
-- *playUrl*: this url takes you to audio content of this music.
-- *coverMediumUrl*: this url takes you to the cover page of this music.
-- *musicId": TikTok assigns each music an id. Keep in mind that two songs can have the same name, but the musicId is unique.
+- *id*: Instagram assign each user an id.
+- *username*: when registering on Instagram, users can choose a username - if it's still available.
+- *url*: this URL takes you to the user's profile page.
+- *fullName*: the full name of this user.
+- *biography*: users can briefly describe themselves here.
+- *notifications*: this is the data we added. Since notification preferences are private data, we are not able to collect them from Instagram, thus we just randomly assign a *true* or *false* value to each of the five notification types we use in this assignment, and we also randomly set this *pauseAll* attributes to either *true* or *false*. When this *pauseAll* attribute is set to *true*, no notifications should be delivered to this user.
 
-### Video Meta
+### Format of events.txt
+
+events.txt contains events which may occur on Instagram, each line of this file describes one event, and each line has 3 columns, where the first column is always an username, and the thid column is always either a username, or a post id. The second column of each line defines what event it is. The events we use in our data set include:
+
+1. likes
+
+When the second column of a line is the string *likes*, it means that this line describes the event of *someone likes a post*. Here is an example:
 
 ```console
-"videoMeta": {"height": 1088, "width": 576, "duration": 7, "coverUrl": "https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/673c6a9a5a13481f9b1ad0c4fd1bac57?x-expires=1700456400&x-signature=knRr2wspgekIz60TWQ80WwON3%2Bw%3D", "definition": "540p", "format": "mp4", "downloadAddr": "https://v16-webapp-prime.us.tiktok.com/video/tos/useast5/tos-useast5-pve-0068-tx/71aa3cd7b7b043f484a10b6f836747cc/?a=1988&ch=0&cr=3&dr=0&lr=tiktok_m&cd=0%7C0%7C1%7C3&cv=1&br=3358&bt=1679&bti=ODszNWYuMDE6&cs=0&ds=3&ft=_rKBMBnZq8Zmoc_CKQ_vjFy.VAhLrus&mime_type=video_mp4&qs=0&rc=Zjw6ODY5aTdmOTg0NjM0ZkBpM2o2bjc6ZjlwajMzZzczNEAvMTRiNl9gNTUxLWA0XmFfYSMwYDJncjRfZmdgLS1kMS9zcw%3D%3D&btag=e00008000&expire=1700307877&l=202311180544290984F2C815B65729734D&ply_type=2&policy=2&signature=b2a0bf53c132df575cfec2b39c2dcfc7&tk=tt_chain_token"}
+jasonevans likes 3241797774743415032
 ```
 
-TikTok uses the following sub-fields to describe each music:
+Here: jasonevans is a username. This user like the post which has an id of 3241797774743415032.
 
-- *height*: how this video will be displayed - the height.
-- *width*: how this video will be displayed - the width.
-- *duration*: the duration of this video - how many seconds.
-- *coverUrl*: this url takes you to the thumbnail view image of this video.
-- *definition*: the definition of this video.
-- *format*: the format of this video.
-- *downloadAddr*: the url where you can download this video.
+2. follows
 
-### Mentions
-
-Unliked the *authorMeta*, *musicMeta*, *videoMeta* which includes multiple sub-fields. *mentions* is more like an array which store objects of the same type. If multiple users are mentioned, then these users will appear in this *mentions* array; if no account is mentioned, like the case in this Taylor Swift post, then the *mentions* field will be stored like an empty array like this:
+When the second column of a line is the string *follows*, it means that this line describes the event of *someone follows another user*. Here is an example:
 
 ```console
-"mentions": []
+carter_singh follows jaytatum0
 ```
 
-<!--### Hashtags
+Here: carter_singh is a username. This user starts following jaytatum0, which is the username of Boston Celtics' player Jayson Tatum.
 
-If no hashtags are used in the text content of the post, this field will be stored like this - which is just an empty array.
+3. tags
+
+When the second column of a line is the string *tags*, it means that this line describes the event of *someone tags another user in a photo*. Here is an example:
 
 ```console
-"hashtags": []
+lilynguyen tags nicolekidman
 ```
 
-If hashtags are used in the text content of the post, they will be stored in this hashtags array in this format:
+Here: lilynguyen is a username. This user tags Nicole Kidman, whose username is nicolekidman, in a photo. (In which photo? That is not relevant to this assignment.)
+
+4. comments_on
+
+When the second column of a line is the string *comments_on*, it means that this line describes the event of *someone makes a comment on a post*. Here is an example:
 
 ```console
-"hashtags": [{"id": "1640230938585093", "name": "cleantok", "title": "Whether you're a daily cleaner or a once a month deep clean type, spring is here and it's the perfect time to get stuck into those therapeutic cleaning tasks. From scrubbing your sink, to descaling the dishwasher, deep cleaning your rugs, to refreshing the fridge - share your tips and show off how your spring clean is done.", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/9342f13cf27fe417b49e65a6f4cadcbe.png"}, {"id": "1655304719036422", "name": "cleaningtiktok", "title": "Start cleaning with #CleaningTikTok.", "cover": ""}, {"id": "170127", "name": "springcleaning", "title": "Whether it's minimizing or taking out the trash, get ready for some #SpringCleaning.", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/1629633553410053.PNG"}, {"id": "75424303", "name": "cleaninghacks", "title": "Show us how you keep things neat and tidy!", "cover": "https://p16-amd-va.tiktokcdn.com/obj/musically-maliva-obj/3320a6a94d0ad4bae1a025c0b3239481"}, {"id": "1614083057293334", "name": "cleaningasmr", "title": "", "cover": ""}, {"id": "15898164", "name": "cleaningproducts", "title": "", "cover": ""}]
+alexjones comments_on 3241978951060130582
 ```
 
-This hashtags array stores multiple hashtags, and they are:
+Here: alexjones is a username. This user makes a comment on the post which has an id of 3241978951060130582.
 
-- cleantok
-- cleaningtiktok
-- springcleaning
-- cleaninghacks
-- cleaningasmr
-- cleaningproducts
+5. messageRequests
 
-For each hash tag, TikTok maintains four sub-fields:
+When the second column of a line is the string *messageRequests*, it means that this line describes the event of *someone attempts to message someone else*. On Instagram, you can not message another user if the other user does not follow you. And if you do want to message another user who is not following you, you need to make this message request, and if the other user approves the request, then you will be able to send messages to the other user. Here is an example:
 
-- *id*: TikTok assigns each hashtag an id.
-- *name*: the name of the hashtag.
-- *title*: some hashtags have a title. The initial creation of popular or trending hashtags is initiated by TikTok itself. TikTok's content moderation and curation teams may introduce new hashtags, along with associated titles, to highlight specific themes, challenges, or trends.
-- *cover*: the url which takes you to the cover image of this hashtag page.
+```console
+brandon_wilson messageRequests jenniferaniston
+```
 
-TikTok also maintains a web page for each hashtag, for example, the hashtag cleantok is maintained on this page:
-
-![alt text](images/cleantok.png "hashtag cleantok")
-
-and you can visit this page via [https://www.tiktok.com/tag/cleantok](https://www.tiktok.com/tag/cleantok).
--->
+Here: brandon_wilson is a username. This user attempts to send a message to Jennifer Aniston, whose username is jenniferaniston.
 
 ## Output File Format
 
 All expected output files are provided.
 
-1. when users run this command:
+When users run this command:
 
 ```console
-nytrends.exe input.json output.txt hashtag
+nynotifications.exe posts.json users.json events_medium.txt output.txt taylorswift
 ```
 
-your program should produce an output similar to what TikTok does (of course we will not print the pictures):
+your program should produce an output which contains notifications which should be delivered to taylorswift.
 
-![alt text](images/hashtags.png "Hashtags")
+The format of these notification messages should be similar to what Instagram does:
 
-this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
+For like notifications:
+![alt text](images/like_notifications.png "Someone liked your post")
 
-More specifically, you should print the top 10 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+For follow notification:
+![alt text](images/follow_notifications.png "Someone started following you")
 
-Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by the hashtag's name, and the smaller name is the winner.
+For tag notification:
+![alt text](images/tag_notifications.png "Someone tagged you in a post")
 
-Example 1:
+For comments_on notification:
+![alt text](images/comment_notifications.png "Someone commented on your post")
 
-hashtag A is used 100 times, hashtag B is used 20 times. Then hashtag A is the clear winner.
-
-Example 2:
-
-hashtag A is used 1000 times, hashtag B is used 1000 times, but all the posts which use hashtag A are (in total) viewed 50000 times, but all the posts which use hashtag B are (in total) viewed 2000 times, then A is the clear winner.
-
-Example 3:
-
-hashtag A and hashtag B are both used 100 times, and their associated videos are both view 1000 times. hashtag A is "#tstheerastour", and hashtag B is "#swifttok", both are std::string objects. Then, "#swifttok" will be the winner, because "#swifttok" is smaller than "#tstheerastour" when we use the comparison operators (<, <=, >, >=) directly on these two std::string objects.
-
-Some differences between the expected output file and what TikTok actually shows:
-
-- For the videos, we do not show the video, but we just print the coverUrl and the webVideoUrl of the video.
-- For trending hashtags, we also print the usage count - as this is used to rank the hashtags, showing this will help you to diagnose potential problems.
-- For view counts, which can be a very very large number, we use the raw numbers, whereas TikTok uses the more readable format. i.e., we may print *1200000000 views*, whereas TikTok would just print *1.2B views*.
-
-2. when users run this command:
-
-```console
-nytrends.exe input.json output.txt sound
-```
-
-your program should produce an output similar to what TikTok does (of course we will not print the pictures):
-
-![alt text](images/sounds.png "sounds")
-
-this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
-
-More specifically, you should print the top 10 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
-
-Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by the music id - the one with the smaller music id will be displayed first. (Note: use the comparison operators (<, <=, >, >=) directly on these two std::string objects to decide which one is smaller.)
-
-Example 1:
-
-sound A is used in 100 videos, and these 100 videos have been viewed (in total) 10000 times, sound B is used in 1 video, but this video has been viewed 1000000 times. Then sound B is the clear winner.
-
-Example 2:
-
-sound A is used in 1000 videos, and these 1000 videos have been viewed (in total) 10000 times; sound B is used in 5000 videos, and all these 5000 videos in total have been viewed 10000 times. Then we get a tie based on the view count. Let's say sound A's music id is 123, sound B's music id is 456, then the smaller music id wins. Thus we break the tie and A is the winner.
-
-Some differences between the expected output file and what TikTok actually shows:
-
-- For the videos, we do not show the video, but we just print the coverUrl and the webVideoUrl of the video.
-- For trending sounds, we also print the music id - as this is used to break the tie, showing this will help you to diagnose potential problems.
-- For view counts, which can be a very very large number, we use the raw numbers, whereas TikTok uses the more readable format. i.e., we may print *1200000000 views*, whereas TikTok would just print *1.2B views*.
+For messageRequest notification:
+![alt text](images/messageRequest_notifications.png "Someone wants to send you a message")
 
 ## Useful Code
 

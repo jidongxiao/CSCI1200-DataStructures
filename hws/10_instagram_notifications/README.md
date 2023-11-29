@@ -170,7 +170,7 @@ nynotifications.exe posts.json users.json events_medium.txt output.txt taylorswi
 
 your program should produce an output which contains notifications which should be delivered to taylorswift. The notifications should stay in the same order as the corresponding event appears in the events file. In other words, let's say event A triggers notification A, and event B triggers notification B, and event A occurs before event B, then notification A should be printed in the output file before notification B.
 
-The format of these notification messages should be similar to (but not identical to) what Instagram does:
+The format of these notification messages should be similar to (but not identical to) what Instagram shows:
 
 For like notifications:
 

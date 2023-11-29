@@ -168,21 +168,26 @@ nynotifications.exe posts.json users.json events_medium.txt output.txt taylorswi
 
 your program should produce an output which contains notifications which should be delivered to taylorswift.
 
-The format of these notification messages should be similar to what Instagram does:
+The format of these notification messages should be similar to (but not identical to) what Instagram does:
 
 For like notifications:
+
 ![alt text](images/like_notifications.png "Someone liked your post")
 
 For follow notification:
+
 ![alt text](images/follow_notifications.png "Someone started following you")
 
 For tag notification:
+
 ![alt text](images/tag_notifications.png "Someone tagged you in a post")
 
 For comments_on notification:
+
 ![alt text](images/comment_notifications.png "Someone commented on your post")
 
 For messageRequest notification:
+
 ![alt text](images/messageRequest_notifications.png "Someone wants to send you a message")
 
 ## Useful Code

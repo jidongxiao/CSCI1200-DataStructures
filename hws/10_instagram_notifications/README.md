@@ -102,7 +102,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - *biography*: users can briefly describe themselves here.
 - *notifications*: this is the data we added. Since notification preferences are private data, we are not able to collect them from Instagram, thus we just randomly assign a *true* or *false* value to each of the five notification types we use in this assignment, and we also randomly set this *pauseAll* attributes to either *true* or *false*. When this *pauseAll* attribute is set to *true*, no notifications should be delivered to this user.
 
-### Format of events.txt
+## Format of events.txt
 
 events.txt contains events which may occur on Instagram, each line of this file describes one event, and each line has 3 columns, separated by a space. The first column is always a username, and the third column is always either a username, or a post id. The second column of each line defines what event it is. The events we use in our data set include:
 

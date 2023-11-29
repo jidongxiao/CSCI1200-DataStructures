@@ -180,7 +180,7 @@ For follow notifications:
 
 ![alt text](images/follow_notifications.png "Someone started following you")
 
-**Note**: our follow notification messages will use the user's username, rather than the full name (first name, last name) format as Instagram does.
+**Note**: our follow notification messages will use the user's username, rather than the full name format as Instagram does.
 
 For tag notifications:
 
@@ -190,7 +190,7 @@ For comment notifications:
 
 ![alt text](images/comment_notifications.png "Someone commented on your post")
 
-**Note**: our comment notification messages do not include the actual comments. Plus, our messages will use the user's username, rather than the full name (first name, last name) format as Instagram does.
+**Note**: our comment notification messages do not include the actual comments. Plus, our messages will use the user's username, rather than the full name format as Instagram does.
 
 For messageRequest notifications:
 

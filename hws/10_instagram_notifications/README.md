@@ -1,3 +1,5 @@
+This README is still incomplete and is not ready!
+
 # Homework 10 — Instagram Notifications
 
 In this assignment you will develop a program to deliver notifications to users like Instagram does, let's call this program New York Notifications. Please read the entire handout before starting to code the assignment. As the main learning objective of this assignment is to practice using the C++ inheritance, in this assignment, we explicitly require you to define a class called Notification, and use this class as the base class to derive classes for various types of notifications.

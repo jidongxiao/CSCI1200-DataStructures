@@ -160,17 +160,29 @@ brandon_wilson messageRequests jenniferaniston
 
 Here: brandon_wilson is a username. This user attempts to send a message to Jennifer Aniston, whose username is jenniferaniston.
 
+**Note**: In this assignment, we assume events in this events file are sorted in chronological order. Meaning the first line of the events file represents an event which occurs earlier than any other events, and the last line (at the very bottom) of the events file represents an event which occurs later than any other events, which also means it is the most recent event.
+
 ## Output File Format
 
 All expected output files are provided.
 
-When users run this command:
+Example 1: When users run this command:
 
 ```console
 nynotifications.exe posts.json users.json events_medium.txt output.txt taylorswift
 ```
 
-your program should produce an output which contains notifications which should be delivered to taylorswift. The notifications should be displayed in the **opposite** order as the corresponding event appears in the events file. In other words, the most recent notifications should be displayed at the top of your output file. For example, let's say event A triggers notification A, and event B triggers notification B, and event A occurs before event B, then notification B should be printed in the output file before notification A, because compared to event A, event B is more recent. This behavior can also be seen from the following five screenshots.
+your program should produce an output which contains notifications which should be delivered to taylorswift.
+
+Example 2: When users run this command:
+
+```console
+nynotifications.exe posts.json users.json events_large.txt output.txt andrewyang
+```
+
+your program should produce an output which contains notifications which should be delivered to andrewyang.
+
+The notifications should be displayed in the **opposite** order as the corresponding events appear in the events file. In other words, they should be displayed in a descending chronological order, where the notification corresponding to the most recent event should be displayed at the very top of your output file, and the notification corresponding to the oldest event should be displayed at the very bottom. For example, let's say event A triggers notification A, and event B triggers notification B, and event A occurs before event B, then notification B should be printed in the output file before notification A, because compared to event A, event B is more recent. This behavior can also be seen from the following five screenshots.
 
 For like notifications:
 
@@ -198,7 +210,7 @@ For messageRequest notifications:
 
 In this assignment, your notification messages will be similar to (but not identical to) what Instagram shows.
 
-### Number of Notifications
+### Max Number of Notifications
 
 In this assignment, we set a cap on how many notifications can be delivered to one user, and this cap number is 100, which means your output file should be no more than 100 lines, each line represents one notification message.
 
@@ -206,7 +218,7 @@ In this assignment, we set a cap on how many notifications can be delivered to o
 
 ### getline
 
-**Note**: this next paragraph is the same as that paragraph in homework 8 and homework 9, and for the two json files we use in this assignment, you are once again recommended to read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
+**Note**: this next paragraph is the same as that paragraph in homework 8 and homework 9, and for the two json files we use in this assignment, you are once again can read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
 
 Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
 

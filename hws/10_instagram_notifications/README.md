@@ -19,21 +19,21 @@ Instagram sends notifications to users in different situations, such as:
 3. when someone mentions you in a comment.
 4. when someone sends you a message.
 
-And there are many more. In this assignment, your program will support five types of notifications: like, follow, comment, tag, and message request.
+And there are many more. In this assignment, your program will support five types of notifications: like, tag, comment, follow, and message request.
 
 On Instagram, on the "Settings and privacy" page, users can choose to turn on or turn off each of these notifications, as shown in the following five screenshots:
 
 To turn on or off like notifications:
 ![alt text](images/instagram_likes.png "Instagram Likes")
 
-To turn on or off follow notifications:
-![alt text](images/instagram_follows.png "Instagram Follows")
+To turn on or off tag notifications:
+![alt text](images/instagram_tags.jpg "Instagram Tags")
 
 To turn on or off comment notifications:
 ![alt text](images/instagram_comments.png "Instagram Comments")
 
-To turn on or off tag notifications:
-![alt text](images/instagram_tags.jpg "Instagram Tags")
+To turn on or off follow notifications:
+![alt text](images/instagram_follows.png "Instagram Follows")
 
 To turn on or off message request notifications:
 ![alt text](images/instagram_message_requests.png "Instagram Message Requests")
@@ -120,17 +120,7 @@ jasonevans likes 3241797774743415032
 
 Here: jasonevans is a username. This user like the post which has an id of 3241797774743415032.
 
-2. follows
-
-When the second column of a line is the string *follows*, it means that this line describes the event of *someone follows another user*. Here is an example:
-
-```console
-carter_singh follows jaytatum0
-```
-
-Here: carter_singh is a username. This user starts following jaytatum0, which is the username of Boston Celtics' player Jayson Tatum.
-
-3. tags
+2. tags
 
 When the second column of a line is the string *tags*, it means that this line describes the event of *someone tags another user in a photo*. Here is an example:
 
@@ -140,7 +130,7 @@ lilynguyen tags nicolekidman
 
 Here: lilynguyen is a username. This user tags Nicole Kidman, whose username is nicolekidman, in a photo. (In which photo? That is not relevant to this assignment.)
 
-4. comments_on
+3. comments_on
 
 When the second column of a line is the string *comments_on*, it means that this line describes the event of *someone makes a comment on a post*. Here is an example:
 
@@ -149,6 +139,16 @@ alexjones comments_on 3241978951060130582
 ```
 
 Here: alexjones is a username. This user makes a comment on the post which has an id of 3241978951060130582.
+
+4. follows
+
+When the second column of a line is the string *follows*, it means that this line describes the event of *someone follows another user*. Here is an example:
+
+```console
+carter_singh follows jaytatum0
+```
+
+Here: carter_singh is a username. This user starts following jaytatum0, which is the username of Boston Celtics' player Jayson Tatum.
 
 5. messageRequests
 
@@ -170,19 +170,11 @@ When users run this command:
 nynotifications.exe posts.json users.json events_medium.txt output.txt taylorswift
 ```
 
-your program should produce an output which contains notifications which should be delivered to taylorswift. The notifications should stay in the same order as the corresponding event appears in the events file. In other words, let's say event A triggers notification A, and event B triggers notification B, and event A occurs before event B, then notification A should be printed in the output file before notification B.
-
-The format of these notification messages should be similar to (but not identical to) what Instagram shows:
+your program should produce an output which contains notifications which should be delivered to taylorswift. The notifications should be displayed in the **opposite** order as the corresponding event appears in the events file. In other words, the most recent notifications should be displayed at the top of your output file. For example, let's say event A triggers notification A, and event B triggers notification B, and event A occurs before event B, then notification B should be printed in the output file before notification A, because compared to event A, event B is more recent. This behavior can also be seen from the following five screenshots.
 
 For like notifications:
 
 ![alt text](images/like_notifications.png "Someone liked your post")
-
-For follow notifications:
-
-![alt text](images/follow_notifications.png "Someone started following you")
-
-**Note**: our follow notification messages will use the user's username, rather than the full name format as Instagram does.
 
 For tag notifications:
 
@@ -194,9 +186,21 @@ For comment notifications:
 
 **Note**: our comment notification messages do not include the actual comments. Plus, our messages will use the user's username, rather than the full name format as Instagram does.
 
+For follow notifications:
+
+![alt text](images/follow_notifications.png "Someone started following you")
+
+**Note**: our follow notification messages will use the user's username, rather than the full name format as Instagram does.
+
 For messageRequest notifications:
 
 ![alt text](images/messageRequest_notifications.png "Someone wants to send you a message")
+
+In this assignment, your notification messages will be similar to (but not identical to) what Instagram shows.
+
+### Number of Notifications
+
+In this assignment, we set a cap on how many notifications can be delivered to one user, and this cap number is 100, which means your output file should be no more than 100 lines, each line represents one notification message.
 
 ## Useful Code
 

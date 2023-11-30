@@ -212,7 +212,9 @@ In this assignment, your notification messages will be similar to (but not ident
 
 ### Max Number of Notifications
 
-In this assignment, we set a cap on how many notifications can be delivered to one user, and this cap number is 100, which means your output file should be no more than 100 lines, each line represents one notification message.
+In this assignment, we set a cap of 100 on how many notifications can be displayed in your output file. This means your output file should be no more than 100 lines, and each line represents one notification message. These notification messages should be the notifications corresponding to the most recent events.
+
+<!--shall we aggregate notifications?-->
 
 ## Useful Code
 

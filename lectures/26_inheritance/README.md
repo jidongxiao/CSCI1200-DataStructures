@@ -106,8 +106,10 @@ protected:
 };
 ```
 
+```cpp
 Account a(100); //<---one balance member, not related to c1
 CheckingAccount c1(100, 366, 0.4); //c1 has it's own CheckingAccount + Account objects <---one balance member
+```
 
 ## 26.4 Constructors and Destructors
 

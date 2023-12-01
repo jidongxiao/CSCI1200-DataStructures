@@ -104,7 +104,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - *url*: this URL takes you to the user's profile page.
 - *fullName*: the full name of this user.
 - *biography*: users can briefly describe themselves here.
-- *notifications*: this is the data we added. Since notification preferences are private data, we are not able to collect them from Instagram, thus we just randomly assign a *true* or *false* value to each of the five notification types we use in this assignment, and we also randomly set this *pauseAll* attributes to either *true* or *false*. When this *pauseAll* attribute is set to *true*, no notifications should be delivered to this user.
+- *notifications*: this is the data we added. Since notification preferences are private data, we are not able to collect them from Instagram, thus we just randomly assign a *true* or *false* value to each of the five notification types we use in this assignment. When it is *true*, it means the user has turned this notification type on, meaning the user expects to receive such notifications. We also randomly set this *pauseAll* attributes to either *true* or *false*. When this *pauseAll* attribute is set to *true*, no notifications should be delivered to this user.
 
 ## Format of events.txt
 

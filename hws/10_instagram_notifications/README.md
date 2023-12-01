@@ -306,8 +306,6 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
 
 ## Rubric
 
-To be added.
-
 17 pts
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)

@@ -246,7 +246,7 @@ Triangle *t_ptr = new Triangle( .... );
 polygons.push_back(t_ptr);
 ```
 
-Note: We’ve used the same pointer variable (p ptr) to point to objects of two different types
+Note: We’ve used the same pointer variable (p_ptr) to point to objects of two different types.
 
 ## 26.13 Accessing Objects Through a Polymorphic List of Pointers
 

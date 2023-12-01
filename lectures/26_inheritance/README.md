@@ -129,7 +129,10 @@ virtual for this chain of calls to happen.
 
 ## 26.6 Public, Private and Protected Inheritance
 
-- Notice the line class Savings_Account : public Account {
+- Notice the line 
+```cpp
+class Savings_Account : public Account {
+```
   This specifies that the member functions and variables from Account do not change their public, protected or private status in SavingsAccount. This is called public inheritance.
 - protected and private inheritance are other options:
 
@@ -163,8 +166,7 @@ public:
 
 ## 26.8 Is-A, Has-A, As-A Relationships Among Classes
 
-- When trying to determine the relationship between (hypothetical) classes C1 and C2, try to think of a logical
-relationship between them that can be written:
+- When trying to determine the relationship between (hypothetical) classes C1 and C2, try to think of a logical relationship between them that can be written:  
   – C1 is a C2,  
   – C1 has a C2, or  
   – C1 is implemented as a C2

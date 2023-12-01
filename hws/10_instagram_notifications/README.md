@@ -235,8 +235,8 @@ noah_brown started following you.
 ```
 
 then:
-1. We do not aggregate the follow notifications, because the number of follow notifications are just 2 and they are not consecutive.
-2. We do not aggregate the comment notifications, because the number of comment notifications are just 3, even though they are consecutive.
+1. We do not aggregate the follow notifications, because the number of follow notifications is just 2 and they are not consecutive.
+2. We do not aggregate the comment notifications, because the number of comment notifications is just 3, even though they are consecutive.
 
 But in this next example, we have 4 comment notifications and 2 follow notifications:
 

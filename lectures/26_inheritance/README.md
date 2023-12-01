@@ -254,8 +254,9 @@ Note: We’ve used the same pointer variable (p_ptr) to point to objects of two 
 
 ```cpp
 double area = 0;
-for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i)
-area += (*i)->Area();
+for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i){
+	area += (*i)->Area();
+}
 ```
 
 Which Area function is called? If *i points to a Triangle object then the function defined in the Triangle
@@ -265,8 +266,9 @@ class would be called. If *i points to a Quadrilateral object then Quadrilateral
 
 ```cpp
 int count = 0;
-for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i)
-count += (*i)->IsSquare();
+for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i){
+	count += (*i)->IsSquare();
+}
 ```
 
 If Polygon::IsSquare had not been declared virtual then the function defined in Polygon would always be

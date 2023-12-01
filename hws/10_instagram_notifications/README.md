@@ -257,7 +257,7 @@ sebastianflores, zoeygraham and 2 others commented on your post.
 noah_brown started following you.
 ```
 
-This aggregation occurs because we find 4 (which is more than 3), consecutive notifications of the same type - comment notification.
+This aggregation occurs because we find 4 (which is more than 3) consecutive notifications of the same type - comment notification.
 
 Keep in mind that *Notification Aggregation* should not break the order of the output - your output should still be in a descending chronological order. In this above example, it means all 4 commenting events must occur in between the two following events. In other words, out of the 6 events, *carterkim started following you* represents the most recent event, *noah_brown started following you* represents the oldest event, and all of these four commenting events occur in between these two following events.
 
@@ -265,7 +265,7 @@ Keep in mind that *Notification Aggregation* should not break the order of the o
 
 ### getline
 
-**Note**: this next paragraph is the same as that paragraph in homework 8 and homework 9, and for the two json files we use in this assignment, you are once again can read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
+**Note**: this next paragraph is the same as that paragraph in homework 8 and homework 9, and for the two json files we use in this assignment, you once again can read the whole file into a large string; but if you want to beat Jidong on the leaderboard, whether or not this is the most efficient way to read the file is a question for you to think about.
 
 Unlike previous assignments where the input files only contain fields separated by spaces, in this assignment, fields are not separated by spaces, and therefore you may need a different way to read the input files. And the function *getline* will now come into play. To read the json file and store the whole json file into a std::string, you can use the following lines of code:
 

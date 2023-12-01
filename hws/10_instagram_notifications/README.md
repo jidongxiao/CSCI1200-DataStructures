@@ -1,13 +1,13 @@
-This README is still incomplete and is not ready!
-
 # Homework 10 — Instagram Notifications
 
 In this assignment you will develop a program to deliver notifications to users like Instagram does, let's call this program New York Notifications. Please read the entire handout before starting to code the assignment. As the main learning objective of this assignment is to practice using the C++ inheritance, in this assignment, we explicitly require you to define a class called Notification, and use this class as the base class to derive classes for various types of notifications.
 
 ## Learning Objectives
 
-- Practice using C++ inheritance.
+- Practice using C++ inheritance and polymorphism.
 - Practice using C++ exceptions.
+- Practice using std::queue.
+- Practice using std::stack.
 
 ## Background
 
@@ -19,7 +19,7 @@ Instagram sends notifications to users in different situations, such as:
 3. when someone mentions you in a comment.
 4. when someone sends you a message.
 
-And there are many more. In this assignment, your program will support five types of notifications: like, tag, comment, follow, and message request.
+And there are many more. In this assignment, your program will support five types of notifications: like, tag, comment, follow, and message request. This means, your program must define a base class called Notification, and then define five derived classes, each of them represents one of these five types of notifications.
 
 On Instagram, on the "Settings and privacy" page, users can choose to turn on or turn off each of these notifications, as shown in the following five screenshots:
 
@@ -83,7 +83,7 @@ The line is enclosed with a pair of curly braces. And every line has these same 
 - *timestamp*: when this post was created.
 - *ownerUsername*: the username of the owner who owns/created this post.
 - *ownerId*: Instagram assigns each user an id.
-- *taggedUsers*: whom the author of this post has tagged in the images of this post. This could include multiple items - if multiple users are tagged.
+- *taggedUsers*: whom the author of this post has tagged in the images of this post. This could include multiple items - if multiple users are tagged. This field will not exist if no users are tagged.
 
 Each field is a key-value pair. The screenshot of this Taylor Swift's post will help you better understand some of these fields.
 
@@ -214,7 +214,52 @@ In this assignment, your notification messages will be similar to (but not ident
 
 In this assignment, we set a cap of 100 on how many notifications can be displayed in your output file. This means your output file should be no more than 100 lines, and each line represents one notification message. These notification messages should be the notifications corresponding to the most recent events.
 
-<!--shall we aggregate notifications?-->
+### Notification Aggregation
+
+Besides setting a max number of notifications, in this assignment, we also group notifications of the same type together to avoid overwhelming the user with individual notifications for each event. This provides a more streamlined and user-friendly notification experience by presenting a summary of similar activities. We call this feature "Notification Aggregation". This behavior can be seen in the following Instagram screenshot, and we will use this as an example to explain how this *Notification Aggregation* works.
+
+![alt text](images/notification_aggregation.png "Notification Aggregation")
+
+Here, 19 users liked this user's photo. Instead of delivering 19 notifications, you should just deliver one notification, and only display two usernames, with itsgraemebeing the user who most recently liked this user's photo, and nicstagram80 being the user whose like is the next most recent like. Usernames of the other 17 users should not be displayed here.
+
+In this assignment, we define that this *Notification Aggregation* will be used when there are more than 3 consecutive notifications of the same type.
+
+For example, if we have the following 3 comment notifications and 2 follow notificatons like this:
+
+```console
+carterkim started following you.
+sebastianflores commented on your post.
+zoeygraham commented on your post.
+natalie_young commented on your post.
+noah_brown started following you.
+```
+
+Here:
+1. We do not aggregate the follow notifications, because the number of follow notifications are just 2 and they are not consecutive.
+2. We do not aggregate the comment notifications, because the number of comment notifications are just 3, even though they are consecutive.
+
+But in this next example, we have 4 comment notifications and 2 follow notifications:
+
+```console
+carterkim started following you.
+sebastianflores commented on your post.
+zoeygraham commented on your post.
+natalie_young commented on your post.
+david_johnson commented on your post.
+noah_brown started following you.
+```
+
+Then the above notifications should be printed as:
+
+```console
+carterkim started following you.
+sebastianflores, zoeygraham and 2 others commented on your post.
+noah_brown started following you.
+```
+
+This aggregation occurs because we find 4 (which is more than 3), consecutive notifications of the same type - comment notification.
+
+Keep in mind that *Notification Aggregation* should not break the order of the output - your output should still be in a descending chronological order. In this above example, it means all 4 commenting events must occur in between the two following events. In other words, out of the 6 events, *carterkim started following you* represents the most recent event, *noah_brown started following you* represents the oldest event, and all of these four commenting events occur in between these two following events.
 
 ## Useful Code
 
@@ -245,7 +290,9 @@ After these lines, the whole content of the json file will be stored as a string
 
 ## Program Requirements & Submission Details
 
-In this assignment, you can use any other data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::unordered_map, std::unordered_set, std::stack, std::queue, std::priority_queue. **You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.
+In this assignment, you can use any data structures we have learned in this course, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::unordered_map, std::unordered_set, std::stack, std::queue, std::priority_queue. std::stack and std::queue fit very well with this assignment, but it's okay if you decide not to use them.
+
+**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
@@ -261,7 +308,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
 
 To be added.
 
-<!--17 pts
+17 pts
  - README.txt Completed (2 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
@@ -278,7 +325,11 @@ To be added.
    - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
+   - Does not define the Notification base class. (-6)
+   - Does not define any of the five derived Notification classes. (-6)
+   - One of the five derived Notification classes is missing. (-1)
+   - Two of the five derived Notification classes are missing. (-1)
+   - Three or more of the five derived Notification classes are missing. (-6)
    - Member variables are public. (-2)
  - Exceptions (2 pts)
    - Does not use try/throw/catch anywhere in the code. (-2)
--->

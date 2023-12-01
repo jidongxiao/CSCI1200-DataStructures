@@ -220,7 +220,7 @@ Besides setting a max number of notifications, in this assignment, we also group
 
 ![alt text](images/notification_aggregation.png "Notification Aggregation")
 
-Here, 19 users liked this user's photo. Instead of delivering 19 notifications, you should just deliver one notification, and only display two usernames, with itsgraemebeing the user who most recently liked this user's photo, and nicstagram80 being the user whose like is the next most recent like. Usernames of the other 17 users should not be displayed here.
+Here, 19 users liked this user's photo. Instead of delivering 19 notifications, you should just deliver one notification, and only display two usernames, with *itsgraeme* being the user who most recently liked this user's photo, and *nicstagram80* being the user whose like is the next most recent like. Usernames of the other 17 users should not be displayed here.
 
 In this assignment, we define that this *Notification Aggregation* will be used when there are more than 3 consecutive notifications of the same type.
 
@@ -234,7 +234,7 @@ natalie_young commented on your post.
 noah_brown started following you.
 ```
 
-Here:
+then:
 1. We do not aggregate the follow notifications, because the number of follow notifications are just 2 and they are not consecutive.
 2. We do not aggregate the comment notifications, because the number of comment notifications are just 3, even though they are consecutive.
 

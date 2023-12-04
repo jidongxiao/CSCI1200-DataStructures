@@ -41,6 +41,9 @@ The list above is just a sampling of the possible variety of hybrid / variant da
 - An unrolled linked list data structure is a hybrid of an array / vector and a linked list. It is very similar to a standard doubly linked list, except that more than one element may be stored at each node.
 - This data structure can have performance advantages (both in memory and running time) over a standard linked list when storing small items and can be used to better align data in the cache.
 - Here’s a diagram of an unrolled linked list:
+
+![alt text](unrolledList.png "unrolled list")
+
 - Each Node object contains a fixed size array (size = 6 in the above example) that will store 1 or more elements from the list. The elements are ordered from left to right.
 - From the outside, this unrolled linked list should perform exactly like an STL list containing the numbers 10 through 23 in sorted order, except we’ve just erased ’19’. Note that to match the behavior, the list_iterator object must also change. The iterator must keep track of not only which Node it refers to, but also which element within the Node it’s on. This can be done with a simple offset index. In the above example, the iterator refers to the element “20”.
 - Just like regular linked lists, the unrolled linked list supports speedy insert and erase operations in the middle of the list. The diagram above illustrates that after erasing an item it is often more efficient to store one fewer item in the affected Node than to shift all elements (like we have to with an array/vector).

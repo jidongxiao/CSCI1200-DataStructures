@@ -82,9 +82,10 @@ smaller coefficient), require less total memory, and work better in parallel. Or
 - In a trie or prefix tree, the key is defined not by storing the data at the node or leaf, but instead by the path to
 get to that node. Each edge from the root node stores one character of the string. The node stores the value
 for the key (or NULL or a special value, e.g., ’-1’, if the path to that point is not a valid key in the structure).
-- Lookup in the structure is fast, O(m) where m is the length (# of characters) in the string. A hash table has
-similar lookup (since we have to hash the string which generally involves looking at every letter). If m << n,
-we can say this is O(1).
+
+![alt text](trie.png "trie")
+
+- Lookup in the structure is fast, O(m) where m is the length (# of characters) in the string. A hash table has similar lookup (since we have to hash the string which generally involves looking at every letter). If m << n, we can say this is O(1).
 
 ## 27.7 Trie / Prefix Tree - Discussion
 

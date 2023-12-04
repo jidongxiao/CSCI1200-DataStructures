@@ -50,6 +50,9 @@ Node is “full” (there’s not an empty slot).
 ## 27.4 Skip List - Overview
 
 - Consider a classic singly-linked list storing a collection of n integers in sorted order.
+
+![alt text](skipList1.png "skip list 1")
+
 - If we want to check to see if ’42’ is in the list, we will have to linearly scan through the structure, with O(n)
 running time.
 - Even though we know the data is sorted... The problem is that unlike an array / vector, we can’t quickly jump
@@ -57,6 +60,9 @@ to the middle of a linked list to perform a binary search.
 - What if instead we stored a additional pointers to be able to jump to the middle of the chain? A skip list stores
 sorted data with multiple levels of linked lists. Each level contains roughly half the nodes of the previous level,
 approximately every other node from the previous level.
+
+![alt text](skipList2.png "skip list 2")
+
 - Now, to find / search for a specific element, we start at the highest level (level 2 in this example), and ask if
 the element is before or after each element in that chain. Since it’s after ’31’, we start at node ’31’ in the next
 lowest level (level 1). ’42’ is after ’31’, but before ’58’, so we start at node ’31’ in the next lowest level (level

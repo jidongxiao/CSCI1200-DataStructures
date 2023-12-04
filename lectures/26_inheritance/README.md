@@ -184,6 +184,7 @@ member functions should be in each class?
 
 - When sketching a class hierarchy for geometric objects, you may have wanted to specify relationships that were more complex... in particular some objects may wish to inherit from more than one base class.
 - This is called multiple inheritance and can make many implementation details significantly more hairy. Different programming languages offer different variations of multiple inheritance.
+- See [example 1](multiple_inheritance1.cpp) and [example 2](multiple_inheritance2.cpp).
 
 ## 26.11 Introduction to Polymorphism
 

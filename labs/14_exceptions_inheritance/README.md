@@ -17,12 +17,13 @@ If you haven’t done so already, please complete your course evaluation for Dat
 
 Consider the “is-a” relationships between these 13 different shapes: Polygon, Triangle, Quadrilateral, Isosceles Triangle, Right Triangle, Isosceles Right Triangle, Equilateral Triangle, Trapezoid, Kite, Parallelogram, Rectangle, Rhombus, and Square. Note that a particular shape may be correctly labeled by more than one of these names; e.g., a Square is also a Quadrilateral.
 
-Draw the class hierarchy with arrows indicating all of the inheritance relationships (you do not need to include the member variables or member functions). Be neat, have a consistent (up or down) orientation to your arrows, and avoid messy scribbles or cross outs and arrow crossings. Sketch the shapes in the [input.txt](cp1/input.txt) file and write the name of each shape next to the most specific type of shape it represents. Hint: you may want to grab or print yourself some graph paper.
+Draw the class hierarchy with arrows indicating all of the inheritance relationships (you do not need to include the member variables or member functions). Be neat, have a consistent (up or down) orientation to your arrows, and avoid messy scribbles or cross outs and arrow crossings. Sketch the shapes in the [input.txt](cp1/input.txt) file - each line of the input file begins with a string name followed by 3 or more 2D coordinate vertices. Write the name of each shape next to the most specific type of shape it represents. Hint: you may want to grab or print yourself some graph paper.
 
 The inheritance diagram of these shapes includes multiple inheritance, specifically in the form of the Diamond Problem. That is, Class D multiply inherits from Class B and Class C, and Class B and Class C each inherit from Class A. Thus when an object of type D is created, in turn instances of B and C are created, and unfortunately both will try to make their own instance of A. If two instances of A were allowed, attempts to refer to member variables or member functions of A would be ambiguous. To solve the problem, we should specify that B virtually inherits from A and C virtually inherits from A. Furthermore, when we construct an instance of D, in addition to specifying how to call constructors for B and C, we also explicitly specify the constructor for A. 
 
 ![alt text](images/multiple_inheritance.png "Multiple Inheritance")
 
+<!--
 ```cpp
 class A {
 public:
@@ -41,11 +42,13 @@ public:
 D() : A(), B(), C() {}
 };
 ```
+-->
 
 Note how in the single inheritance example below, G only explicitly calls a constructor for F.
 
 ![alt text](images/single_inheritance.png "Single Inheritance")
 
+<!--
 ```cpp
 class E {
 public:
@@ -60,6 +63,7 @@ public:
 G() : F() {}
 };
 ```
+-->
 
 Label the virtual inheritance paths in your diagram. Hint: 6 of the inheritance arrows will be labeled virtual.
 
@@ -72,7 +76,7 @@ Label the virtual inheritance paths in your diagram. Hint: 6 of the inheritance 
 To start the implementation, we’ll focus on just 7 of those shapes: Polygon, Triangle, Quadrilateral, Isosceles Triangle, Equilateral Triangle, Rectangle, and Square. This subset will allow us to initially ignore the multiple inheritance diamond property and the need for virtual inheritance it causes.
 
 Download the code and initial example: [simple_main.cpp](cp2/simple_main.cpp), [utilities.h](cp2/utilities.h), [simple.txt](cp2/simple.txt), [output_simple.txt](cp2/output_simple.txt). 
-The program expects 2 command line arguments, the names of the input and output files. Each line of the input file begins with a string name followed by 3 or more 2D coordinate vertices. The output categorizes each shape into one or more classes, and into groups with equal angles, equal edges, and/or a right angle. The provided code includes code to call the constructors of the different classes, generally ordered from most specific/constrained to least specific. For example, the program will try to create a Square with the data first, and only if that constructor fails (throws an exception) then it will it try to create a Rectangle. We also include a utilities.h file with a number of simple geometric operations: e.g., calculate the distance between two points, calculate the angle between two edges, and compare two distances or two angles and judge if they are sufficiently close to be called “equal”. Remember that you usually don’t want to check if two floating point numbers are equal; instead, check if the difference is below an appropriate tolerance.
+The program expects 2 command line arguments, the names of the input and output files. Each line of the input file begins with a string name followed by 3 or more 2D coordinate vertices. The output categorizes each shape into one or more classes, and into groups with equal angles, equal edges, and/or a right angle. The provided code includes code to call the constructors of the different classes, generally ordered from most specific/constrained to least specific. For example, the program will try to create a Square with the data first, and only if that constructor fails (throws an exception) then it will try to create a Rectangle. We also include a utilities.h file with a number of simple geometric operations: e.g., calculate the distance between two points, calculate the angle between two edges, and compare two distances or two angles and judge if they are sufficiently close to be called “equal”. Remember that you usually don’t want to check if two floating point numbers are equal; instead, check if the difference is below an appropriate tolerance.
 
 Create a polygons.h file (and optionally a polygons.cpp file). Create the 7 classes for these shapes deriving classes from the other classes as appropriate. In each constructor write code to check whether the vertices passed in meet the requirements for that shape. Throw an exception if you find a problem. Note: Just throw a value of type integer. The value thrown is unimportant in this program – it will be ignored.
 

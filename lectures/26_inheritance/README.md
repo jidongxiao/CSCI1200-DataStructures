@@ -180,11 +180,13 @@ Create a class hierarchy of geometric objects, such as: triangle, isosceles tria
 rhombus, kite, trapezoid, circle, ellipse, etc. How should this hierarchy be arranged? What member variables and
 member functions should be in each class?
 
-## 26.10 Note: Multiple Inheritance
+## 26.10 Multiple Inheritance
 
 - When sketching a class hierarchy for geometric objects, you may have wanted to specify relationships that were more complex... in particular some objects may wish to inherit from more than one base class.
 - This is called multiple inheritance and can make many implementation details significantly more hairy. Different programming languages offer different variations of multiple inheritance.
 - See [example 1](multiple_inheritance1.cpp) and [example 2](multiple_inheritance2.cpp).
+
+- And see [example 3](multiple_level_inheritance.cpp) for a multiple level inheritance example.
 
 ## 26.11 Introduction to Polymorphism
 

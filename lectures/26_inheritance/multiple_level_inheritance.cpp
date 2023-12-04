@@ -1,3 +1,7 @@
+#include <iostream>
+
+// multiple-level inheritance
+
 class A
 {
 public:
@@ -20,9 +24,15 @@ public:
 class D:public C
 {
 public:
+	D(int a, int b, int c, int d):C(a,b,c),d(d){}
+	void print(){
+		std::cout << a << ":" << b << ":" << c << ":" << d << std::endl;
+	}
 	int d;
 };
 
 int main(){
+	D dObject(1,2,3,4);
+	dObject.print();
 	return 0;
 }

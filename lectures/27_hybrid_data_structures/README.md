@@ -23,15 +23,10 @@ different aspects of these variants.
 This term we’ve already discussed / implemented a number of data structure variants:
 - single vs. doubly linked lists  
   - using more memory can improve convenience and running time for key operations
-- 2D arrays/vectors (HW3) or 2D linked grid/matrix (HW5)
+- 2D arrays/vectors
 - hash table: separate chaining vs open addressing – reduce memory and avoid pointer dereferencing
 - stack and queue – restricted/reduced(!) set of operations on array/vector and list
-
-In the remaining lecture & homeworks we’ll cover 2 additional classic data structures and several more variants...
-
-- priority queue with backpointers (may be used in Homework 10) – when you need to update data already in the
-structure
-- leftist heap (might mention this in Lecture 25...)
+- priority queue
 
 We’ll discuss just a few additional variants today.
 

@@ -330,3 +330,7 @@ int main() {
 	return 0;
 }
 ```
+
+## 26.15 Exercise
+
+What is the output of the following [program](virtual.cpp)?

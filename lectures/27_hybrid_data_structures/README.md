@@ -94,7 +94,7 @@ for the key (or NULL or a special value, e.g., ’-1’, if the path to that poi
 
 ![alt text](trie.png "trie")
 
-- Lookup in the structure is fast, O(m) where m is the length (# of characters) in the string. A hash table has similar lookup (since we have to hash the string which generally involves looking at every letter). If m << n, we can say this is O(1).
+- Lookup in the structure is fast, O(m) where m is the length (# of characters) in the string. <!--A hash table has similar lookup (since we have to hash the string which generally involves looking at every letter). If m << n, we can say this is O(1).-->
 
 ## 27.7 Trie / Prefix Tree - Discussion
 
@@ -105,3 +105,4 @@ for the key (or NULL or a special value, e.g., ’-1’, if the path to that poi
 
 - [Leetcode problem 208: Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/). Solution: [p208_trie.cpp](../../leetcode/p208_trie.cpp).
 - [Leetcode problem 14: Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/). Solution: [p14_longest_common_prefix.cpp](../../leetcode/p14_longest_common_prefix.cpp).
+- [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: [p212_word_search_ii.cpp](../../leetcode/p212_word_search_ii.cpp).

@@ -101,3 +101,8 @@ for the key (or NULL or a special value, e.g., ’-1’, if the path to that poi
 - What is the worst case # of children for a single node? What are the member variables for the Node class?
 - Unlike a hash table, we can iterate over the keys in a trie / prefix tree in sorted order.
 Exercise: Implement the trie sorted-order iterator (in code or pseudocode) and print the table on the right.
+
+## 27.8 Leetcode Exercises
+
+- [Leetcode problem 208: Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/). Solution: [p208_trie.cpp](../../leetcode/p208_trie.cpp).
+

@@ -73,7 +73,7 @@ lowest level (level 1). ’42’ is after ’31’, but before ’58’, so we s
 
 ## 27.5 Skip List - Discussion
 
-How are elements inserted & erased? (Once the location is found) Just edit the chain at each level.
+- How are elements inserted & erased? (Once the location is found) Just edit the chain at each level.
 - But how do we determine what nodes go at each level? Upon insertion, generate a top level for that element
 at random (from [0,log n] where n is the # of elements currently in the list ... details omitted!)
 - The overall hierarchy of a skip list is similar to a binary search tree. Both a skip list and a binary search tree

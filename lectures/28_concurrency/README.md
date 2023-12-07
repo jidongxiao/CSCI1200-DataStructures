@@ -7,7 +7,7 @@
 - OPTIONAL: you are allowed two physical pieces of 8.5x11” paper, that’s four “sides”. We will not collect these electronically and we will not pre-print them, you will have to bring these notes pages yourself if you want them. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
 - Bring to the exam room:  
   – Your Rensselaer photo ID card.  
-  – Pencil(s) & eraser. The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated.  
+  – Pencil(s) & eraser.  
   - Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.
 
 ## Today’s Lecture

@@ -140,7 +140,7 @@ private:
 - So how exactly do we get multiple streams of computation happening simultaneously? There are many choices
 (may depend on your programming language, operating system, compiler, etc.).
 - We’ll use the STL thread library (#include &lt;thread&gt;). The new thread begins execution in the provided
-function (student thread, in this example). We pass the necessary shared data from the main thread to the
+function (student_thread, in this example). We pass the necessary shared data from the main thread to the
 secondary thread to facilitate communication.
 
 ```cpp

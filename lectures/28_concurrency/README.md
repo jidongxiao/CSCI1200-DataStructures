@@ -5,9 +5,9 @@
 - The final exam will be held: Friday December 15th 6:30pm - 9:30pm.
 - Coverage: Lectures 1-27, Labs 1-14, and HW 1-10.
 - OPTIONAL: you are allowed two physical pieces of 8.5x11” paper, that’s four “sides”. We will not collect these electronically and we will not pre-print them, you will have to bring these notes pages yourself if you want them. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
-- Bring to the exam room:
-  – Your Rensselaer photo ID card.
-  – Pencil(s) & eraser. The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated. 
+- Bring to the exam room:  
+  – Your Rensselaer photo ID card.  
+  – Pencil(s) & eraser. The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated.  
   - Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.
 
 ## Today’s Lecture
@@ -143,6 +143,7 @@ private:
 function (student thread, in this example). We pass the necessary shared data from the main thread to the
 secondary thread to facilitate communication.
 
+```cpp
 #define num_notes 10
 void student_thread(Chalkboard *chalkboard) {
 	Student student(chalkboard);
@@ -160,6 +161,8 @@ int main() {
 	}
 	student.join();
 }
+```
+
 - The join command pauses to wait for the secondary thread to finish computation before continuing with the
 program (or exiting in this example).
 - What can still go wrong? How can we fix it?

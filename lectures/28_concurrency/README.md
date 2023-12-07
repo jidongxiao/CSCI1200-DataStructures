@@ -171,8 +171,7 @@ program (or exiting in this example).
 
 - Algorithm analysis: big O notation; best case, average case, or worst case; algorithm running time or additional
 memory usage
-- STL classes: string, vector, list, map, & set, (we talked about but did not practice using STL stack,
-queue, unordered_set, unordered_map, & priority_queue)
+- STL classes: string, vector, list, map, & set, stack, queue, unordered_set, unordered_map, & priority_queue.
 - C++ Classes: constructors (default, copy, & custom argument), assignment operator, & destructor, classes
 with dynamically-allocated memory, operator overloading, inheritance, polymorphism
 - Subscripting (random-access, pointer arithmetic) vs. iteration
@@ -180,7 +179,7 @@ with dynamically-allocated memory, operator overloading, inheritance, polymorphi
 - Memory: pointers & arrays, heap vs. stack, dynamic allocation & deallocation of memory, garbage collection,
 smart pointers
 - Implementing data structures: resizable arrays (vectors), linked lists (singly-linked, doubly-linked, circularlylinked, dummy head/tail nodes), trees (for sets & maps), hash sets
-- Binary Search Trees, tree traversal (in-order, pre-order, post-order, depth-first, & breadth-first), ropes
+- Binary Search Trees, tree traversal (in-order, pre-order, post-order, depth-first, & breadth-first).
 - Hash tables (hash functions, collision resolution), priority queues, heap as a vector
 - Exceptions, concurrency & asynchronous computing
 

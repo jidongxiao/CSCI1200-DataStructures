@@ -63,16 +63,6 @@ c = NULL;
 - For simplicity, we’ll assume that the program uses only one variable, root, through which it accesses all of the
 data. Draw the box-and-pointer diagram for the data accessible from root = 105.
 
-<!--
-```console
-address 100 101 102 103 104 105 106 107
-value a b c d e f g h
-left 0 0 100 100 0 102 105 104
-right 0 100 103 0 105 106 0 0
-root: 105
-```
--->
-
 | Address | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 |
 |---------|-----|-----|-----|-----|-----|-----|-----|-----|
 | Value   | a   | b   | c   | d   | e   | f   | g   | h   |
@@ -97,19 +87,24 @@ Perform stop-and-copy on the following with root = 105:
 
 ```console
 WORKING MEMORY
-address 100 101 102 103 104 105 106 107
-value a b c d e f g h
-left 0 0 100 100 0 102 105 104
-right 0 100 103 0 105 106 0 0
 ```
+
+| Address | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 |
+|---------|-----|-----|-----|-----|-----|-----|-----|-----|
+| Value   | a   | b   | c   | d   | e   | f   | g   | h   |
+| Left    | 0   | 0   | 100 | 100 | 0   | 102 | 105 | 104 |
+| Right   | 0   | 100 | 103 | 0   | 105 | 106 | 0   | 0   |
+
 
 ```console
 COPY MEMORY
-address 108 109 110 111 112 113 114 115
-value
-left
-right
 ```
+
+| Address | 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 |
+|---------|-----|-----|-----|-----|-----|-----|-----|-----|
+| Value   |     |     |     |     |     |     |     |     |
+| Left    |     |     |     |     |     |     |     |     |
+| Right   |     |     |     |     |     |     |     |     |
 
 ```console
 root: 105
@@ -134,13 +129,12 @@ free:
 
 Let’s perform Mark-Sweep on the following with root = 105:
 
-```console
-address 100 101 102 103 104 105 106 107
-value a b c d e f g h
-left 0 0 100 100 0 102 105 104
-right 0 100 103 0 105 106 0 0
-marks
-```
+| Address | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107 |
+|---------|-----|-----|-----|-----|-----|-----|-----|-----|
+| Value   | a   | b   | c   | d   | e   | f   | g   | h   |
+| Left    | 0   | 0   | 100 | 100 | 0   | 102 | 105 | 104 |
+| Right   | 0   | 100 | 103 | 0   | 105 | 106 | 0   | 0   |
+| Marks   |     |     |     |     |     |     |     |     |
 
 ```console
 root: 105

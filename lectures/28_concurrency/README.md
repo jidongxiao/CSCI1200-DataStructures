@@ -2,7 +2,8 @@
 
 ## Final Exam General Information
 
-- The final exam will be held: Friday December 15th 6:30pm - 9:30pm.
+- The final exam will be held: Friday December 15th 6:30pm - 9:30pm. Rooms: DCC 308 and DCC 318. Lally 104 for accommodations.
+- Student’s assigned test room, row, and seat assignments will be re-randomized. If on Wednesday morning you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
 - Coverage: Lectures 1-27, Labs 1-14, and HW 1-10.
 - OPTIONAL: you are allowed two physical pieces of 8.5x11” paper, that’s four “sides”. We will not collect these electronically and we will not pre-print them, you will have to bring these notes pages yourself if you want them. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
 - Bring to the exam room:  

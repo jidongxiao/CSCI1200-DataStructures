@@ -326,7 +326,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Does not define the Notification base class. (-6)
    - Does not define any of the five derived Notification classes. (-6)
    - One of the five derived Notification classes is missing. (-1)
-   - Two of the five derived Notification classes are missing. (-1)
+   - Two of the five derived Notification classes are missing. (-2)
    - Three or more of the five derived Notification classes are missing. (-6)
    - Member variables are public. (-2)
  - Exceptions (2 pts)

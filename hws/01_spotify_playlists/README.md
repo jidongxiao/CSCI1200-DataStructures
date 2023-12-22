@@ -18,9 +18,13 @@ After a playlist is created, users can add new tracks to this playlist, or remov
 
 Before re-ordering, track 1 is "Perfect Duet", track 2 is "Always Remember Us This Way", track 3 is "Million Reasons", and track 4 is "I'll Never Love Again".
 
+![alt text](images/before_reorder.png "Spotify before re-order")
+
 Next, we drag track 4 up to right above track 2.
 
 After this dragging action, now, track 1 is still "Perfect Duet", track 2 is "I'll Never Love Again", track 3 is "Always Remember Us This Way", and track 4 is "Million Reasons".
+
+![alt text](images/after_reorder.png "Spotify after re-order")
 
 ## Command Line Arguments
 

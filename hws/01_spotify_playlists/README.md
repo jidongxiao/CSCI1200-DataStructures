@@ -85,4 +85,25 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA
 if you need help preparing your assignment for submission.
 
-**Due Date**: 09/07/2023, 23:59pm.
+**Due Date**: 01/18/2024, 23:59pm.
+
+## Rubric
+
+12 pts
+ - README.txt Completed (2 pts)
+   - One of name, collaborators, or hours not filled in. (-1)
+   - Two or more of name, collaborators, or hours not filled in. (-2)
+ - STL Vector & String (3 pts)
+   - did not use STL vector (-3)
+ - Program Structure (7 pts)
+   - No credit (significantly incomplete implementation) (-7)
+   - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
+   - Improper uses or omissions of const and reference. (-1)
+   - Almost total lack of helpful comments. (-4)
+   - Too few comments. (-2)
+   - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
+   - Overly cramped, excessive whitespace, or poor indentation. (-1)
+   - Lacks error checking (num of args, invalid file names, invalid command, etc.) (-1)
+   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
+   - Uses global variables. (-1)
+   - Overly long lines, in excess of 100 or so characters. It's recommended to keep all lines short and put comments on their own lines. (-1)

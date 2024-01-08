@@ -102,7 +102,7 @@ Now let's write a brand new C++ program to learn about command line
 arguments.  First open up a brand new file named `silly.cpp`.
 Include &lt;iostream&gt; at the top of the file.
 
-Read this [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php) explaining command line arguments in C++. You may also want to refer to 1.13 of the lecture notes for array syntax.
+Read this [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php) explaining command line arguments in C++. You may also want to refer to the lecture notes for array syntax.
 
 - To start, let's write a program that expects only integers on the
 command line, and it will print the product (multiplication) of those
@@ -138,16 +138,15 @@ product of integers: -600
 ### To complete Checkpoint 2:
 Show a TA or mentor your program. Be ready to demonstrate that your program works with other input requested by the TA or mentor.  
 
-## Checkpoint 3
+## Checkpoint 3: File IO
 *estimate: 45 minutes*
 
-For the remainder of the lab time, work on the Crash Course in C++
-Exercises. Discuss the exercises with your lab study group classmates and ask
-your TA and mentors lots of questions!
+In lecture we talked about how to use the STL file stream library fstream to read data from a file and/or write the output to a file. Let's do some exercises.
 
-### To complete Checkpoint 3 (and the entire lab):
-About 10 minutes before the end of lab the TA and mentors will make a final visit to each study group and check you off. Please be ready to quickly update them
-on your progress.
+Write a C++ program which reads this [json file](users.json), and print all user names into an output file called output.txt. Your output file must be the same as this [sample output file](sample_output.txt). 
+
+### To complete Checkpoint 3:
+Show a TA or mentor your program. Your program must produce the right output and you must be able to explain your program.
 
 ## SPECIAL NOTE FOR FIRST WEEK OF CLASSES
 

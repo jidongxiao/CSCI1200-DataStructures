@@ -1,3 +1,5 @@
+This README is still incomplete.
+
 # Homework 1 — Spotify Playlists
 
 Before starting this homework, make sure you have read and understood the Academic Integrity Policy.
@@ -29,9 +31,9 @@ After this dragging action, now, track 1 is still "Perfect Duet", track 2 is "I'
 ## Command Line Arguments
 
 Your program will expect 4 command line arguments. The first is the name of the input file. The second is
-the name of the output file. The third argument is an integer that specifies the width of the text column. The
-fourth argument will be a string (flush_left, flush_right, or full_justify) specifying which formatting
-mode should be used. Here are examples of valid command lines for your program:
+the name of the output file. The third argument is 
+The fourth argument will be 
+Here are examples of valid command lines for your program:
 
 ```console
 ./nyplaylists.exe playlist1.txt output.txt add
@@ -49,32 +51,6 @@ You must follow the specifications for the command line, input file, and output 
 receive full credit from the Submitty homework submission autograder. We have provided sample input &
 output files on the course website. Examples of using command line arguments can be found on the course
 webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php).
-
-## File I/O
-
-You will read the words to format from an input text file. You should not make any assumptions about the
-formatting of this file, except that the words will be separated by at least one whitespace character. Remember
-that whitespace characters include spaces, tabs, and newlines. Any punctuation in the file (including periods,
-commas, apostrophes, etc.) should be treated as part of the word if it is not separated from the word by
-spaces. The basic iostream string input operator, >>, will work perfectly for this assignment. The output of
-your program will be written to a file, and should follow the specifications in this handout and match our
-examples. Reading and writing files in C++ is very similar to std::cin and std::cout. See examples of
-STL file streams on the course webpage [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php).
-
-## Corner Cases
-
-So now you understand the core requirements for this assignment, but you may already have thought of a
-few problem cases. For example, how should the program full justify a line that contains just a single word?
-There are no available slots between words to use to insert the extra spaces. In this case your program
-should simply left justify the line. Another question you might ask is what to do if one of the words in the
-file is (by itself!) wider than the width of the column? In your initial coding and testing we recommend you
-assume that this will never happen. This solution will be worth nearly full credit. To receive full credit on
-the assignment your program should handle this case by splitting the word and inserting a hyphen. Note
-that we do not expect you to properly split the words between syllables, as that would require a database
-of English words and syllables. If you think of other corner cases as you work on the assignment, propose
-reasonable ways to handle those situations. If those solutions are overly complex or tricky, you do not need
-to tackle the implementation, but you should write up your thoughts in your README.txt for the grader
-to read.
 
 ## Submission Details
 

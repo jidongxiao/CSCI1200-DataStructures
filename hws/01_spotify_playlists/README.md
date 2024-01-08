@@ -57,6 +57,10 @@ For all 3 commands, the output.txt contains the updated playlist. We have provid
 
 You should implement very simple error checking to ensure that 5 or 6 arguments are provided and that the input and output file streams are successfully opened. You should also check that the value for the fifth argument is valid. Your program should exit gracefully with a useful error message sent to std::cerr if there is a problem with the arguments.
 
+## Handling Music Tracks with the Same Title
+
+In cases where multiple tracks may have the same title, choose the first track from the input file. This is NOT the natural behavior of Spotify, but this decision is just to simplify your implementation.
+
 ## Submission Details
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Complete the provided template [README.txt](./README.txt). You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA if you need help preparing your assignment for submission.

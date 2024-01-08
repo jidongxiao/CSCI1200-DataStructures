@@ -49,8 +49,8 @@ individual tutoring, and debugging help.
 *estimate: 30 minutes + installation delays??*
 
 - The course website includes instructions to install and setup the necessary software for Windows, MacOSX, and GNU/Linux.  Windows users will need Windows Subsystem for Linux (WSL) to follow the instructions below.  Ask your TAs and mentors for advice and help if you get stuck.
-   - [development_environment](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/development\_environment.php)
-   - [installation_test](http://www.cs.rpi.edu/academics/courses/fall23/csci1200/installation\_test.php)
+   - [development_environment](http://www.cs.rpi.edu/academics/courses/spring24/csci1200/development\_environment.php)
+   - [installation_test](http://www.cs.rpi.edu/academics/courses/spring24/csci1200/installation\_test.php)
 - Create a directory (a.k.a. "folder") on your laptop to hold Data Structures files.  Create a sub-directory to hold the labs.  And finally, create a sub-directory named `lab1`. Please make sure to save your work frequently and periodically back-up all of your data.
 - Using a web browser, copy the following files to your `lab1` directory: 
    - [quadratic.cpp](https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/labs/01_getting_started/quadratic.cpp)

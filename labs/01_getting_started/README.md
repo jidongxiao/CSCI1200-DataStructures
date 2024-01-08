@@ -139,7 +139,7 @@ product of integers: -600
 Show a TA or mentor your program. Be ready to demonstrate that your program works with other input requested by the TA or mentor.  
 
 ## Checkpoint 3: File IO
-*estimate: 45 minutes*
+*estimate: 30 minutes*
 
 In lecture we talked about how to use the STL file stream library fstream to read data from a file and/or write the output to a file. Let's do some exercises.
 

@@ -137,16 +137,16 @@ std is a namespace that contains the standard template library.
 - I/O streams are the first component of the standard template library that we see. std::cout (“console output”) and
 std::endl (“end line”) are defined in the standard template library header file *iostream*.
 
-## 1.6	A few notes on C++ vs. Java
+<!--## 1.6	A few notes on C++ vs. Java
 
 - In Java, everything is an object and everything “inherits” from java.lang.Object. In C++, functions can
 exist outside of classes. In particular, the main function is never part of a class.
 
 - Source code file organization in C++ does not need to be related to class organization as it does in Java. On
 the other hand, creating one C++ class (when we get to classes) per file is the preferred organization, with the
-main function in a separate file on its own or with a few helper functions.
+main function in a separate file on its own or with a few helper functions.-->
 
-## 1.7	Variables and Types
+## 1.6	Variables and Types
 
 - A variable is an object with a name. A name is C++ identifier such as “a”, “root_1”, or “success”.
 - An object is computer memory that has a type. A type (e.g., int, float, and bool) is a structure to memory
@@ -159,7 +159,7 @@ compiler enforces type checking (a.k.a. static typing). In contrast, the program
 of variables in Python and Perl. These languages are dynamically-typed — the interpreter will deduce the data
 type at runtime.
 
-## 1.8	Expressions, Assignments and Statements
+## 1.7	Expressions, Assignments and Statements
 
 Consider the statement: root_pos = (-b + sqrt_radical) / float(2*a);
 
@@ -170,7 +170,7 @@ same in C++ and Java and Python.
 if all expression values are type *int* we need a cast from *int* to *float* to prevent the truncation of integer
 division.
 
-## 1.9	Conditionals and IF statements
+## 1.8	Conditionals and IF statements
 
 - The general form of an if-else statement is
 
@@ -184,7 +184,7 @@ division.
 - Each statement may be a single statement, such as the continue statement above, or multiple statements
 contained by {. . .}.
 
-## 1.10	Functions and Arguments
+## 1.9	Functions and Arguments
 
 - Functions are used to:
   - Break code up into modules for ease of programming and testing, and for ease of reading by other people
@@ -199,7 +199,7 @@ type of bool and five parameters.
 - The order and types of the parameters in the calling function (the main function in this example) must match
 the order and types of the parameters in the function prototype.
 
-## 1.11 Value Parameters and Reference Parameters
+## 1.10 Value Parameters and Reference Parameters
 
 - What’s the & symbol on the 4th and 5th parameters in the find_roots function prototype?
 - Note that when we call this function, we haven’t yet stored anything in those two root variables.
@@ -219,7 +219,7 @@ the order and types of the parameters in the function prototype.
   - When a function needs to provide more than one result (e.g., find_roots, these results should be returned using multiple reference parameters.
 - We’ll see more examples of the importance of value vs. reference parameters as the semester continues.
 
-## 1.12	for & while Loops
+## 1.11	for & while Loops
 
 - Here is the basic form of a for loop:
 ```cpp
@@ -238,7 +238,7 @@ the order and types of the parameters in the function prototype.
 ```
   - expr is checked before entering the loop and after each iteration. If expr ever evaluates the false the loop is finished.
 
-## 1.13	C-style Arrays
+## 1.12	C-style Arrays
 
 - An array is a fixed-length, consecutive sequence of objects all of the same type. The following declares an array with space for 15 double values. Note the spots in the array are currently uninitialized.
 ```cpp
@@ -252,13 +252,13 @@ the order and types of the parameters in the function prototype.
 - In C/C++, array indexing starts at 0.
 - Arrays are fixed size, and each array knows NOTHING about its own size. The programmer must keep track of the size of each array. (Note: C++ STL has generalization of C-style arrays, called vectors, which do not have these restrictions.)
 
-## 1.14 Python Strings vs. C chars vs. C-style Strings vs. C++ STL Strings
+## 1.13 Python Strings vs. C chars vs. C-style Strings vs. C++ STL Strings
 
 - Strings in Python are immutable, and there is no difference between a string and a char in Python. Thus, ’a’ and "a" are both strings in Python, not individual characters. In C++ & Java, single quotes create a character type (exactly one character) and double quotes create a string of 0, 1, 2, or more characters.
 - A “C-style” string is an array of chars that ends with the special char ’\0’. C-style strings (char* or char[]) can be edited, and there are a number of helper functions to help with common operations.
 - The “C++-style” STL string type has a wider array of operations and functions, which are more convenient and more powerful.
 
-## 1.15	About STL String Objects
+## 1.14	About STL String Objects
 
 - A string is an object type defined in the standard library to contain a sequence of characters.
 - The string type, like all types (including int, double, char, float), defines an interface, which includes construction (initialization), operations, functions (methods).
@@ -283,7 +283,11 @@ object. There are several ways of constructing string objects:
   – string::size_type is generally equivalent to unsigned int.  
   – You may see compiler warnings and potential compatibility problems if you compare an int variable to a.size().  
 
-## 1.16	C++ vs. Java
+## 1.15 Another Sample C++ Program: Reading From & Writing To Files
+
+This [example program](getline.cpp) is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
+
+<!--## 1.16	C++ vs. Java
 
 - Standard C++ library std::string objects behave like a combination of Java String and StringBuffer objects. If you aren’t sure of how a std::string member function (or operator) will behave, check its semantics or try it on small examples (or both, which is preferable).
 - Java objects must be created using new, as in:
@@ -295,4 +299,4 @@ This is not necessary in C++. The C++ (approximate) equivalent to this example i
 std::string name("Chris");
 ```
 Note: There is a new operator in C++ and its behavior is somewhat similar to the new operation in Java. We will study it in a couple weeks.
-
+-->

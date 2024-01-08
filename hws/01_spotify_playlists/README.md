@@ -66,9 +66,10 @@ if you need help preparing your assignment for submission.
 ## Rubric
 
 12 pts
- - README.txt Completed (2 pts)
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
  - STL Vector & String (3 pts)
    - did not use STL vector (-3)
  - Program Structure (7 pts)

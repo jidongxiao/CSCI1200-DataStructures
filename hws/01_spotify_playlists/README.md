@@ -30,42 +30,43 @@ After this dragging action, now, track 1 is still "Perfect Duet", track 2 is "I'
 
 ## Command Line Arguments
 
-Your program will expect 4 command line arguments. The first is the name of the input file. The second is
-the name of the output file. The third argument is 
-The fourth argument will be 
-Here are examples of valid command lines for your program:
+Your program will support 3 commands.
+
+### Command 1: add a music track
+The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "add". The fifth argument is the title of the music track.
 
 ```console
-./nyplaylists.exe playlist1.txt output.txt add
-./nyplaylists.exe playlist1.txt output.txt remove
-./nyplaylists.exe playlist1.txt output.txt reorder old new
-./nyplaylists.exe playlist1.txt output.txt skip count
+./nyplaylists.exe playlist.txt library.txt output.txt add title
 ```
 
-You should implement very simple error checking to ensure that 4 arguments are provided and that the
-input and output file streams are successfully opened. You should also check that the values for the third
-and fourth arguments are valid. Your program should exit gracefully with a useful error message sent to
-std::cerr if there is a problem with the arguments.
+### Command 2: remove a music track
+The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "remove". The fifth argument is the title of the music track.
 
-You must follow the specifications for the command line, input file, and output file exactly to ensure you
-receive full credit from the Submitty homework submission autograder. We have provided sample input &
-output files on the course website. Examples of using command line arguments can be found on the course
-webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/programming_information.php).
+```console
+./nyplaylists.exe playlist.txt library.txt output.txt remove title
+```
+
+### Command 3: move a music track to a new position
+The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "move". The fifth argument is the title of the music track. The sixth argument is the new position - where this user wants the music track to be located on the playlist. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
+
+```console
+./nyplaylists.exe playlist.txt library.txt output.txt move title [new_position]
+```
+
+You should implement very simple error checking to ensure that 5 or 6 arguments are provided and that the input and output file streams are successfully opened. You should also check that the value for the fifth argument is valid. Your program should exit gracefully with a useful error message sent to std::cerr if there is a problem with the arguments.
+
+You must follow the specifications for the command line, input file, and output file exactly to ensure you receive full credit from the Submitty homework submission autograder. We have provided sample input & output files on the course website. Examples of using command line arguments can be found on the course
+webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/programming_information.php).
 
 ## Submission Details
 
-Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
-to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your
-README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA
-if you need help preparing your assignment for submission.
+Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Complete the provided template [README.txt](./README.txt). You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA if you need help preparing your assignment for submission.
 
-**Due Date**: 01/18/2024, 23:59pm.
+**Due Date**: 01/18/2024, 22:00pm.
 
 ## Rubric
 
-12 pts
+13 pts
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)

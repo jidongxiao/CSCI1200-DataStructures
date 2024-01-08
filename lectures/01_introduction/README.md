@@ -275,7 +275,7 @@ object. There are several ways of constructing string objects:
 - The (overloaded) operator ’+’ is defined on strings. It concatenates two strings to create a third string, without changing either of the original two strings.
 - The assignment operation ’=’ on strings overwrites the current contents of the string.
 - The individual characters of a string can be accessed using the subscript operator [] (similar to arrays).
-  – Subscript 0 corresponds to the first character.
+  – Subscript 0 corresponds to the first character.  
   – For example, given std::string a = "Susan"; Then a[0] == 'S' and a[1] == 'u' and a[4] == 'n'.
 - Strings define a special type string::size_type, which is the type returned by the string function size()
 (and length()).  
@@ -285,7 +285,7 @@ object. There are several ways of constructing string objects:
 
 ## 1.15 Another Sample C++ Program: Reading From & Writing To Files
 
-This [example program](getline.cpp) is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
+The STL streams std::cin & std::cout are used to read data from and write data to the "console". Often, we would rather read data from a file and/or write the output to a file. We can do this using the STL file stream library fstream. And here is an [example program](getline.cpp). Actually, this example program is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
 
 ## 1.16 Two Useful String Functions
 

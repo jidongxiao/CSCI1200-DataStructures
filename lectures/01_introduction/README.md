@@ -287,6 +287,13 @@ object. There are several ways of constructing string objects:
 
 This [example program](getline.cpp) is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
 
+## 1.16 Two Useful String Functions
+
+- find()
+- substr()
+
+This [example program](strings.cpp) which uses these two string functions, can also be very useful in your homeworks.
+
 <!--## 1.16	C++ vs. Java
 
 - Standard C++ library std::string objects behave like a combination of Java String and StringBuffer objects. If you aren’t sure of how a std::string member function (or operator) will behave, check its semantics or try it on small examples (or both, which is preferable).

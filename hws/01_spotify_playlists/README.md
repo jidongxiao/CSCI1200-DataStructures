@@ -8,8 +8,8 @@ In this assignment you will develop a program to manage music playlists like Spo
 
 ## Learning Objectives
 
-- Practice handling command line arguments
-- Practice handling file input and output
+- Practice handling command line arguments.
+- Practice handling file input and output.
 - Practice the C++ Standard Template Library string and vector classes. 
 
 ## Background
@@ -60,6 +60,57 @@ You should implement very simple error checking to ensure that 5 or 6 arguments 
 ## Handling Music Tracks with the Same Title
 
 In cases where multiple tracks may have the same title, choose the first track from the input file. This is NOT the natural behavior of Spotify, but this decision is just to simplify your implementation.
+
+## Known Issue on Submitty
+
+The Autograder on Submitty doesn't handle command line arguments correctly when the arguments are enclosed in double quotes. In fact, the autograder would add a backslash as an escape character in front of each double quote.
+
+e.g., For this command:
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add "Umbrella"
+```
+
+The autograder would actually run:
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add \"Umbrella\"
+```
+
+And as a result, the autograder would pass the last argument as "Umbrella" (with the double quotes) to your program. Thus you need to remove the open double quote and the closing double quote in your program.
+
+Another example, for this command,
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move "I Will Never Love Again - Film Version" 1
+```
+
+The autograder would actually run:
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move \"I Will Never Love Again - Film Version\" 1
+```
+
+This means the autograder would pass 14 arguments to your program. And these 14 arguments are:
+0. ./nyplaylists.exe
+1. playlist_tiny1.txt
+2. library.txt
+3. output.txt
+4. move
+5. "I
+6. Will
+7. Never
+8. Love
+9. Again
+10. -
+11. Film
+12. Version"
+13. 1
+
+To deal with this problem, you need to remove double quotes from the arguments. And the std::string erase function can help you remove a double quote. And you can use the following code to do so, here we assume you have a std::string variable called tmpString, and if this tmpString contains a double quote, the following lines will remove that double quote.
+
+```cpp
+        size_t quotePos;
+        if( (quotePos = tmpString.find('"')) != std::string::npos ){
+                tmpString.erase(quotePos, 1); // remove the double quote character at the found position; here number 1 as the second argument means erasing 1 character.
+        }
+```
 
 ## Submission Details
 

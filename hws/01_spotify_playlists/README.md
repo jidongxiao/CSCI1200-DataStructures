@@ -88,6 +88,7 @@ The autograder would actually run:
 ```
 
 This means the autograder would pass 14 arguments to your program. And these 14 arguments are:
+
 0. ./nyplaylists.exe
 1. playlist_tiny1.txt
 2. library.txt
@@ -98,7 +99,7 @@ This means the autograder would pass 14 arguments to your program. And these 14 
 7. Never
 8. Love
 9. Again
-10. -
+10. \-
 11. Film
 12. Version"
 13. 1

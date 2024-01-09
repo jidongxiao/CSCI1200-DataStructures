@@ -1,5 +1,3 @@
-This README is still incomplete.
-
 # Homework 1 — Spotify Playlists
 
 Before starting this homework, make sure you have read and understood the Academic Integrity Policy.
@@ -54,8 +52,6 @@ The first argument is the name of an input file which contains a playlist. The s
 ```
 
 For all 3 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/programming_information.php).
-
-You should implement very simple error checking to ensure that 5 or 6 arguments are provided and that the input and output file streams are successfully opened. You should also check that the value for the fifth argument is valid. Your program should exit gracefully with a useful error message sent to std::cerr if there is a problem with the arguments.
 
 ## Handling Music Tracks with the Same Title
 

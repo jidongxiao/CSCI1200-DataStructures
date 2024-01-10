@@ -39,7 +39,7 @@ The first argument is the name of an input file which contains a playlist. The s
 
 This command will add a music track (specified by the title) to the end of a playlist.
 
-For example, the following command will add the song Umbrella to the end of the playlist.
+For example, the following command will add the song "Umbrella" to the end of the playlist.
 ```console
 ./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add "Umbrella"
 ```

@@ -70,6 +70,10 @@ For example, the following command will move the song "I Will Never Love Again -
 
 For all 3 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/programming_information.php).
 
+## Input and Output File Format
+
+All the input files and output files have the same format.
+
 ## Handling Music Tracks with the Same Title
 
 In cases where multiple tracks may have the same title, choose the first track from the input file. This is NOT the natural behavior of Spotify, but this decision is just to simplify your implementation.

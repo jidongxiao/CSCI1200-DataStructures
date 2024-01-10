@@ -37,6 +37,13 @@ The first argument is the name of an input file which contains a playlist. The s
 ./nyplaylists.exe playlist.txt library.txt output.txt add title
 ```
 
+This command will add a music track (specified by the title) to the end of a playlist.
+
+For example, the following command will add the song Umbrella to the end of the playlist.
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add "Umbrella"
+```
+
 ### Command 2: remove a music track to a playlist
 The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "remove". The fifth argument is the title of the music track.
 
@@ -44,11 +51,21 @@ The first argument is the name of an input file which contains a playlist. The s
 ./nyplaylists.exe playlist.txt library.txt output.txt remove title
 ```
 
+For example, the following command will remove the song "Always Remember Us This Way" from the playlist.
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt remove "Always Remember Us This Way"
+```
+
 ### Command 3: move a music track to a new position on the playlist
 The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "move". The fifth argument is the title of the music track. The sixth argument is the new position - where this user wants the music track to be located on the playlist. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
 
 ```console
 ./nyplaylists.exe playlist.txt library.txt output.txt move title [new_position]
+```
+
+For example, the following command will move the song "I Will Never Love Again - Film Version" to position 1.
+```console
+./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move "I Will Never Love Again - Film Version" 1
 ```
 
 For all 3 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/programming_information.php).
@@ -108,6 +125,8 @@ To deal with this problem, you need to remove double quotes from the arguments. 
                 tmpString.erase(quotePos, 1); // remove the double quote character at the found position; here number 1 as the second argument means erasing 1 character.
         }
 ```
+
+Note that the above double quote removal logic wouldn't do anything if the argument doesn't contain a double quote. This means including the double quote removal logic in your code should not affect how you run your program locally on your own computer.
 
 ## Submission Details
 

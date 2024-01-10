@@ -72,7 +72,16 @@ For all 3 commands, the output.txt contains the updated playlist. We have provid
 
 ## Input and Output File Format
 
-All the input files and output files have the same format.
+All the input files and output files have the same format. Take the playlist_tiny1.txt as an example, this file has the following 4 lines:
+
+```console
+"Perfect Duet" Ed Sheeran, Beyonce
+"Always Remember Us This Way" Lady Gaga
+"Million Reasons" Lady Gaga
+"I Will Never Love Again - Film Version" Lady Gaga, Bradley Cooper
+```
+
+Each line has two fields, the music title, and the artist(s). There is one single space separating these two fields.
 
 ## Handling Music Tracks with the Same Title
 

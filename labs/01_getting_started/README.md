@@ -30,10 +30,8 @@ before the hour and no checkpoints may be earned after this time.
   of downloading lab files provided by the instructor at the start of
   lab, and occasional use of online C++ reference material (e.g., to
   look up the the details of a particular built-in function or class),
-  you are not allowed to use the internet during lab.  Disable your
-  wireless connection if necessary to remove the temptation.  Anyone
-  caught using their cell phones, the internet, or programs not
-  directly relevant to this course will be given an immediate 0 for
+  you are not allowed to use the internet during lab. Anyone
+  caught using their cell phones, the internet, for activities not relevant to the lab will be given an immediate 0 for
   that lab and asked to leave.*
 
 **Today we focus on using the terminal command line and g++ to

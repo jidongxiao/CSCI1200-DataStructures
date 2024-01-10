@@ -1,0 +1,595 @@
+"'Til You Can't" Cody Johnson
+"(Everything I Do) I Do It For You" Bryan Adams
+"(I've Had) The Time of My Life" Bill Medley & Jennifer Warnes
+"(Sittin' On) The Dock Of The Bay" Otis Redding
+"10,000 Hours" Dan + Shay
+"10,000 Reasons (Bless the Lord)" Matt Redman
+"24 Frames" Jason Isbell
+"7empest" Tool
+"9 to 5" Dolly Parton
+"A Feather's Not A Bird" Rosanne Cash
+"A Hard Day's Night" The Beatles
+"A Little More Time With You" James Taylor
+"A Lot" 21 Savage
+"A Taste of Honey" Herb Alpert
+"A Whole New World (Aladdin's Theme)" Peabo Bryson and Regina Belle
+"About Damn Time" Lizzo
+"Addicted To Love" Robert Palmer
+"After The Love Has Gone" Earth, Wind & Fire
+"Again" Lenny Kravitz
+"Against All Odds (Take A Look At Me Now)" Phil Collins
+"Against The Wind" Bob Seger
+"Ain't It Fun" Paramore
+"Ain't No Other Man" Christina Aguilera
+"Ain't No Sunshine" Bill Withers
+"Ain't Nothing Like The Real Thing" Marvin Gaye & Tammi Terrell
+"Ain't That Lonely Yet" Dwight Yoakam
+"All Eyes On Me" Bo Burnham
+"All For You" Janet Jackson
+"All My Life" Foo Fighters
+"All of the Lights" Kanye West
+"All Too Well" Taylor Swift
+"Alley Cat" Bent Fabric
+"Alright" Kendrick Lamar
+"American Woman" Lenny Kravitz
+"And I Am Telling You I'm Not Going" Jennifer Holliday
+"Another Day in Paradise" Phil Collins
+"Another Sad Love Song" Toni Braxton
+"Anything For You" Ledisi
+"Approaching Pavonis Mons By Balloon (Utopia Planitia)" The Flaming Lips
+"Aquarius/Let the Sunshine In" The 5th Dimension
+"At Seventeen" Janis Ian
+"Automatic" The Pointer Sisters
+"B.Y.O.B." System Of A Down
+"Back To Life (However Do You Want Me)" Soul II Soul
+"Bad Blood" Taylor Swift
+"Bad Guy" Billie Eilish
+"Bad Love" Eric Clapton
+"Bad Romance" Lady Gaga
+"Bangarang" Skrillex
+"Battle of New Orleans" Johnny Horton
+"Be Without You" Mary J. Blige
+"Beat It" Michael Jackson
+"Beautiful" Christina Aguilera
+"Beautiful Day" U2
+"Because You Loved Me" Celine Dion
+"Before He Cheats" Carrie Underwood
+"Before I Forget" Slipknot
+"Behind Closed Doors" Charlie Rich
+"Behind My Camel" The Police
+"Best Of My Love" The Emotions
+"Bet Ain't Worth The Hand" Leon Bridges
+"Bette Davis Eyes" Kim Carnes
+"Better Man" Little Big Town
+"Better Than You" Metallica
+"Billie Jean" Michael Jackson
+"Bittersweet" Fantasia
+"Black Cow" Steely Dan
+"Black Hole Sun" Soundgarden
+"Black Parade" Beyoncé
+"Blackstar" David Bowie
+"Block Rockin' Beats" The Chemical Brothers
+"Blown Away" Carrie Underwood
+"Blue" LeAnn Rimes
+"Blue Eyes Crying in the Rain" Willie Nelson
+"Boo'd Up" Ella Mai
+"Boogie On Reggae Woman" Stevie Wonder
+"Boogie Wonderland" Earth, Wind & Fire
+"Boss Of Me" They Might Be Giants
+"Both Sides Now" Judy Collins
+"Boulevard Of Broken Dreams" Green Day
+"Break My Soul" Beyoncé
+"Breathe" Faith Hill
+"Breathe Again" Toni Braxton
+"Bridge Over Troubled Water" Simon & Garfunkel
+"Bring My Flowers Now" Tanya Tucker
+"Broken Halos" Chris Stapleton
+"Broken Horses" Brandi Carlile
+"Brown Skin Girl" Beyoncé
+"Bullet With Butterfly Wings" Smashing Pumpkins
+"Bust A Move" Young MC
+"Butterflies" Kacey Musgraves
+"Butterfly Kisses" Bob Carlisle
+"By the Time I Get to Phoenix" Glen Campbell
+"Call My Name" Prince
+"Can You Feel The Love Tonight" Elton John
+"Can't Stop The Feeling!" Justin Timberlake
+"Car Wash" Rose Royce
+"Caribbean Queen (No More Love On The Run)" Billy Ocean
+"Catch A Falling Star" Perry Como
+"Chain Of Fools" Aretha Franklin
+"Chaise Longue" Wet Leg
+"Change The World" Eric Clapton
+"Chasing Pavements" Adele
+"Cherokee Maiden" Merle Haggard
+"Cinema" Benny Benassi
+"City Of Blinding Lights" U2
+"Clarity" Zedd
+"Classical Gas" Mason Williams
+"Cliffs of Dover" Eric Johnson
+"Clocks" Coldplay
+"Closer To Fine" Indigo Girls
+"Cloud Nine" The Temptations
+"Cold" Chris Stapleton
+"Colors Of The Wind" Vanessa Williams
+"Come Home" Anderson Paak
+"Come to My Window" Melissa Etheridge
+"Come Together" The Beatles
+"Constant Craving" k.d. lang
+"Copacabana (At The Copa)" Barry Manilow
+"Cousin Dupree" Steely Dan
+"Cranes In The Sky" Solange
+"Crawling" Linkin Park
+"Crazy" Aerosmith
+"Crazy In Love" Beyoncé
+"Criminal" Fiona Apple
+"Crowded Table" The Highwomen
+"Cry" Faith Hill
+"Cry Me A River" Justin Timberlake
+"Crying Time" Ray Charles
+"Cuff It" Beyoncé
+"Cut Me Some Slack" Paul McCartney, Dave Grohl, Krist Novoselic & Pat Smear
+"Dance Tonight" Paul McCartney
+"Dance With My Father" Luther Vandross
+"Dang Me" Roger Miller
+"Dani California" Red Hot Chili Peppers
+"Daughters" John Mayer
+"Days Go By" Dirty Vegas
+"Deep Purple" Nino Tempo & April Stevens
+"Degradation Rules" Ozzy Osbourne
+"Déjà Vu" Dionne Warwick
+"Denis" Blondie
+"Desiderata" Les Crane
+"Desire" U2
+"Devils & Dust" Bruce Springsteen
+"Diamonds From Sierra Leone" Kanye West
+"Dig In" Lenny Kravitz
+"Digging In The Dirt" Peter Gabriel
+"Dilemma" Nelly
+"Do You Know the Way to San José" Dionne Warwick
+"Don't It Make My Brown Eyes Blue" Crystal Gayle
+"Don't Know Much" Linda Ronstadt
+"Don't Know Why" Norah Jones
+"Don't Let Me Be Lonely Tonight" James Taylor
+"Don't Let Me Down" The Chainsmokers
+"Don't Phunk With My Heart" The Black Eyed Peas
+"Don't Stand So Close To Me" The Police
+"Don't Stop 'Til You Get Enough" Michael Jackson
+"Don't Wanna Fight" Alabama Shakes
+"Don't Worry Be Happy" Bobby McFerrin
+"Doo Wop (That Thing)" Lauryn Hill
+"Downtown" Petula Clark
+"Drivers License" Olivia Rodrigo
+"Drops Of Jupiter (Tell Me)" Train
+"Drunk In Love" Beyoncé
+"Dystopia" Megadeth
+"Earned It" The Weeknd
+"Easy On Me" Adele
+"Eat It" Weird Al Yankovic
+"Either Way" Chris Stapleton
+"El Paso" Marty Robbins
+"Eleanor Rigby" The Beatles
+"Electric Feel" MGMT
+"Electricity" Silk City
+"Elevation" U2
+"Empire State of Mind" Jay-Z
+"Evergreen" Barbra Streisand
+"Every Breath You Take" The Police
+"Every Little Step" Bobby Brown
+"Everything I Wanted" Billie Eilish
+"Exhale (Shoop Shoop)" Whitney Houston
+"Eye of the Tiger" Survivor
+"Fallin'" Alicia Keys
+"Family Ties" Baby Keem
+"Fast Car" Tracy Chapman
+"Fat" Weird Al Yankovic
+"Feel Good Inc." Gorillaz
+"Feel It Still" Portugal. The Man
+"Fight For You" H.E.R.
+"First Time Ever I Saw Your Face" Roberta Flack
+"Flashdance... What a Feeling" Irene Cara
+"Fly Away" Lenny Kravitz
+"Folsom Prison Blues" Johnny Cash
+"Fool For You" Cee Lo Green
+"For Once In My Life" Stevie Wonder
+"Forget You" Cee Lo Green
+"Formation" Beyoncé
+"Freak On A Leash" Korn
+"Free As A Bird" The Beatles
+"Freedom" Jon Batiste
+"Freeway Of Love" Aretha Franklin
+"From A Distance" Bette Midler
+"From This Valley" The Civil Wars
+"Galvanize" The Chemical Brothers
+"Games People Play" Joe South
+"Gangsta's Paradise" Coolio
+"Georgia On My Mind" Ray Charles
+"Get Lucky" Daft Punk
+"Get Right With God" Lucinda Williams
+"Gettin' Jiggy Wit It" Will Smith
+"Girl Crush" Little Big Town
+"Give It Away" Red Hot Chili Peppers
+"Give Me One Reason" Tracy Chapman
+"Give Me The Night" George Benson
+"Giving You The Best That I Got" Anita Baker
+"Glory" John Legend
+"Go Rest High On That Mountain" Vince Gill
+"God Is Dead?" Black Sabbath
+"God Only Knows" For King & Country
+"God Provides" Tamela Mann
+"God's Gonna Cut You Down" Johnny Cash
+"God's Plan" Drake
+"Good Life" Kanye West
+"Got 'Til It's Gone" Janet Jackson
+"Got To Keep On" The Chemical Brothers
+"Gotta Serve Somebody" Bob Dylan
+"Graceland" Paul Simon
+"Grandpa (Tell Me 'Bout The Good Old Days)" The Judds
+"Gravity" John Mayer
+"Guerilla Radio" Rage Against the Machine
+"Guilty" Barbra Streisand
+"Halo" Beyoncé
+"Happy" Pharrell Williams
+"Heartache Tonight" Eagles
+"Heaven" Los Lonely Boys
+"Hello" Adele
+"Hello, Dolly!" Louis Armstrong
+"Help Me Make It Through The Night" Sammi Smith
+"Help Me Make It Through The Night" Kris Kristofferson
+"Here It Goes Again" OK Go
+"Here We Go Again" Ray Charles and Norah Jones
+"Here You Come Again" Dolly Parton
+"Hey Baby" No Doubt
+"Higher" DJ Khaled
+"Higher Love" Steve Winwood
+"Hold On, I'm Comin'" Sam & Dave
+"Holy Grail" Jay-Z
+"Holy Spirit" Francesca Battistelli
+"Hotel California" Eagles
+"Hotline Bling" Drake
+"How Am I Supposed to Live Without You" Michael Bolton
+"How Deep Is Your Love" Bee Gees
+"How Far I'll Go" Alessia Cara
+"How Great Thou Art" Elvis Presley
+"How Long" Eagles
+"Hrs And Hrs" Muni Long
+"Humble And Kind" Tim McGraw
+"HUMBLE." Kendrick Lamar
+"Hurricane" Kanye West
+"Hurt" Nine Inch Nails
+"Hurts So Good" John Mellencamp
+"I" Kendrick Lamar
+"I Am Woman" Helen Reddy
+"I Believe I Can Fly" R. Kelly
+"I Can't Breathe" H.E.R.
+"I Can't Stop Loving You" Ray Charles
+"I Don't Want To Change The World" Ozzy Osbourne
+"I Hope You Dance" Lee Ann Womack
+"I Know a Place" Petula Clark
+"I Left My Heart in San Francisco" Tony Bennett
+"I Remember Everything" John Prine
+"I Rise" Madonna
+"I Still Believe in You" Vince Gill
+"I Still Haven't Found What I'm Looking For" U2
+"I Swear" All-4-One
+"I Told You So" Carrie Underwood
+"I Try" Macy Gray
+"I Will Always Love You" Whitney Houston
+"I Wish" Stevie Wonder
+"I Write The Songs" Barry Manilow
+"I'd Do Anything For Love (But I Won't Do That)" Meat Loaf
+"I'll Be Good To You" The Brothers Johnson
+"I'll Make Love To You" Boyz II Men
+"I'll Never Fall in Love Again" Dionne Warwick
+"I'll Never Love Again" Lady Gaga
+"I'll Never Love This Way Again" Dionne Warwick
+"I'm in the Mood" John Lee Hooker and Bonnie Raitt
+"I'm Not Gonna Miss You" Glen Campbell
+"Icky Thump" The White Stripes
+"If We Were Vampires" Jason Isbell
+"If You Leave Me Now" Chicago
+"In My Place" Coldplay
+"Intergalactic" Beastie Boys
+"Iron Man" Black Sabbath
+"It's Too Late" Carole King
+"It's Your Thing" The Isley Brothers
+"Jail" Kanye West
+"Janie's Got A Gun" Aerosmith
+"Jerome" Lizzo
+"Jessica" The Allman Brothers Band
+"Jesus Walks" Kanye West
+"Jesus, Take The Wheel" Carrie Underwood
+"Joanne" Lady Gaga
+"Jump (For My Love)" The Pointer Sisters
+"Just Like That" Bonnie Raitt
+"Just The Way You Are" Billy Joel
+"Just The Way You Are" Bruno Mars
+"Just To See Her" Smokey Robinson
+"Killing Me Softly With His Song" Roberta Flack
+"King Of The Road" Roger Miller
+"King's Dead" Jay Rock
+"Kiss An Angel Good Mornin'" Charley Pride
+"Kiss From A Rose" Seal
+"Kiss Me More" Doja Cat
+"La Tortura" Shakira
+"Lake By the Ocean" Maxwell
+"Land of Confusion" Genesis
+"Last Name" Carrie Underwood
+"Lazaretto" Jack White
+"Leave The Door Open" Silk Sonic
+"Let It Go" Idina Menzel
+"Let Me Be There" Olivia Newton-John
+"Let Me Blow Ya Mind" Eve
+"Let Me Ride" Dr. Dre
+"Let The River Run" Carly Simon
+"Let's Get It Started" The Black Eyed Peas
+"Little Green Apples" Roger Miller
+"Live And Let Die" Paul McCartney & Wings
+"Live Like You Were Dying" Tim McGraw
+"Livin' On The Edge" Aerosmith
+"Living for the City" Stevie Wonder
+"Living In America" James Brown
+"Lockdown" Anderson Paak
+"Lonely Boy" The Black Keys
+"Lose Yourself" Eminem
+"Losing My Religion" R.E.M.
+"Love Can Build a Bridge" The Judds
+"Love On Top" Beyoncé
+"Love Will Keep Us Together" Captain & Tennille
+"Love Will Lead You Back" Taylor Dayne
+"Lowdown" Boz Scaggs
+"LOYALTY." Kendrick Lamar
+"Lyin' Eyes" Eagles
+"Mack The Knife" Bobby Darin
+"Make No Mistake, She's Mine" Kenny Rogers
+"Makes Me Wonder" Maroon 5
+"Making A Fire" Foo Fighters
+"Mama Said Knock You Out" LL Cool J
+"Mammas Don't Let Your Babies Grow Up To Be Cowboys" Waylon Jennings and Willie Nelson
+"Man! I Feel Like a Woman!" Shania Twain
+"Maria Maria" Santana
+"Marooned" Pink Floyd
+"Masseduction" St. Vincent
+"Mean" Taylor Swift
+"Men In Black" Will Smith
+"Merry Go 'Round" Kacey Musgraves
+"Messengers" Lecrae
+"Miami Vice Theme" Jan Hammer
+"Michelle" The Beatles
+"Missionary Man" Eurythmics
+"Money For Nothing" Dire Straits
+"Moon River" Henry Mancini
+"Most High" Jimmy Page and Robert Plant
+"Mrs. Robinson" Simon & Garfunkel
+"Ms. Jackson" OutKast
+"Musicology" Prince
+"My Church" Maren Morris
+"My Heart Will Go On" Celine Dion
+"My Humps" The Black Eyed Peas
+"My Woman, My Woman, My Wife" Marty Robbins
+"Need You Now" Lady A
+"Nel Blu, Dipinto di Blu (Volare)" Domenico Modugno
+"Never Alone" Tori Kelly
+"Never Gonna Break My Faith" Aretha Franklin
+"Never Wanted To Be That Girl" Carly Pearce
+"Nick Of Time" Bonnie Raitt
+"Niggas in Paris" The Throne
+"Night Fever" Bee Gees
+"No Diggity" Blackstreet
+"No More I Love You's" Annie Lennox
+"No One" Alicia Keys
+"No Problem" Chance the Rapper
+"No Time To Die" Billie Eilish
+"Not Ready To Make Nice" The Chicks
+"O Death" Traditional
+"Oh Happy Day" The Edwin Hawkins Singers
+"Old Town Road" Lil Nas X
+"On the Road Again" Willie Nelson
+"One" Metallica
+"One Headlight" The Wallflowers
+"One Of The Living" Tina Turner
+"Opposites Attract" Paula Abdul
+"Ordinary People" John Legend
+"Outa-Space" Billy Preston
+"Overcomer" Mandisa
+"Papa's Got A Brand New Bag" James Brown
+"Parents Just Don't Understand" DJ Jazzy Jeff & the Fresh Prince
+"Passionate Kisses" Lucinda Williams
+"Patches" Clarence Carter
+"People" Barbra Streisand
+"Pick Up Your Feelings" Jazmine Sullivan
+"Pink" Aerosmith
+"Plastic Off The Sofa" Beyoncé
+"Plush" Stone Temple Pilots
+"Pontoon" Little Big Town
+"Pusher Love Girl" Justin Timberlake
+"Put Your Lights On" Santana
+"Putin" Randy Newman
+"Q" The Brothers Johnson
+"Racks in the Middle" Nipsey Hussle
+"Radio Nowhere" Bruce Springsteen
+"Radioactive" Imagine Dragons
+"Rain On Me" Lady Gaga
+"Rather Be" Clean Bandit
+"Ray Of Light" Madonna
+"Really Love" D'Angelo
+"Redbone" Childish Gambino
+"Redneck Woman" Gretchen Wilson
+"Rehab" Amy Winehouse
+"Ride Me Back Home" Willie Nelson
+"Rise" Herb Alpert
+"Rockit" Herbie Hancock
+"Rolling In The Deep" Adele
+"Roses" Saint Jhn
+"Royals" Lorde
+"Run" Foo Fighters
+"Run-Around" Blues Traveler
+"Safe And Sound" Taylor Swift
+"Sailing" Christopher Cross
+"Savage" Megan Thee Stallion
+"Saving All My Love For You" Whitney Houston
+"Say My Name" Destiny's Child
+"Say Something" A Great Big World
+"Scar Tissue" Red Hot Chili Peppers
+"Scary Monsters and Nice Sprites" Skrillex
+"Send In The Clowns" Judy Collins
+"Set Fire To The Rain" Adele
+"Seven Nation Army" The White Stripes
+"Sex on Fire" Kings of Leon
+"Sexual Healing" Marvin Gaye
+"Shallow" Lady Gaga
+"Shameika" Fiona Apple
+"Shape Of You" Ed Sheeran
+"Share Your Love With Me" Aretha Franklin
+"Simply Irresistible" Robert Palmer
+"Since U Been Gone" Kelly Clarkson
+"Single Ladies (Put a Ring on It)" Beyoncé
+"Slither" Velvet Revolver
+"Smooth" Santana
+"So Much To Say" Dave Matthews Band
+"Soldier of Love" Sade
+"Somebody That I Used To Know" Gotye
+"Someone Like You" Adele
+"Something in the Water" Carrie Underwood
+"Something To Talk About" Bonnie Raitt
+"Sometimes You Can't Make It On Your Own" U2
+"Somewhere" Barbra Streisand
+"Somewhere Out There" Linda Ronstadt and James Ingram
+"Soul Man" Sam & Dave
+"Space Cowboy" Kacey Musgraves
+"Speechless" Dan + Shay
+"Spin The Black Circle" Pearl Jam
+"Spinning Wheel" Blood, Sweat & Tears
+"Spoonman" Soundgarden
+"Stand By Your Man" Tammy Wynette
+"Stay" Sugarland
+"Stay High" Brittany Howard
+"Stayin' Alive" Bee Gees
+"Steam" Peter Gabriel
+"Steve McQueen" Sheryl Crow
+"Still Crazy After All These Years" Paul Simon
+"Strangers in the Night" Frank Sinatra
+"Streets Of Philadelphia" Bruce Springsteen
+"Stressed Out" Twenty One Pilots
+"Stronger" Kanye West
+"Stuck In A Moment You Can't Get Out Of" U2
+"Stupid Boy" Keith Urban
+"Sultan's Curse" Mastodon
+"Summertime" DJ Jazzy Jeff & the Fresh Prince
+"Sunny Came Home" Shawn Colvin
+"Sweet Child O' Mine" Guns N' Roses
+"Talk" Coldplay
+"Tears In Heaven" Eric Clapton
+"Tequila" The Champs
+"Tequila" Dan + Shay
+"Tha Crossroads" Bone Thugs-N-Harmony
+"That's What Friends Are For" Dionne & Friends
+"That's What I Like" Bruno Mars
+"The Alien" Dream Theater
+"The Battle Hymn of the Republic" Traditional
+"The Boy Is Mine" Brandy & Monica
+"The Calling" Santana
+"The Chipmunk Song" The Chipmunks
+"The Connecton" Emmylou Harris
+"The Devil Went Down To Georgia" The Charlie Daniels Band
+"The End Is The Beginning Is The End" Smashing Pumpkins
+"The Gambler" Kenny Rogers
+"The Girl From Ipanema" Stan Getz and Astrud Gilberto
+"The Heart Part 5" Kendrick Lamar
+"The House That Built Me" Miranda Lambert
+"The Joke" Brandi Carlile
+"The Monster" Eminem
+"The Real Slim Shady" Eminem
+"The Rising" Bruce Springsteen
+"The Soul Cages" Sting
+"The Way We Were" Barbra Streisand
+"The Wind Beneath My Wings" Bette Midler
+"Theme From A Summer Place" Percy Faith
+"Theme From Mission: Impossible" Lalo Schifrin
+"There Goes My Baby" Usher
+"There Was Jesus" Zach Williams
+"These Walls" Kendrick Lamar
+"Thinking Out Loud" Ed Sheeran
+"This Is America" Childish Gambino
+"This Is It" Kenny Loggins
+"This Land" Gary Clark, Jr.
+"This Masquerade" George Benson
+"Thrift Shop" Macklemore & Ryan Lewis
+"Thy Will" Hillary Scott & The Scott Family
+"Tighten Up" The Black Keys
+"Tire Me" Rage Against the Machine
+"Tom Dooley" The Kingston Trio
+"Tonite" LCD Soundsystem
+"Toxic" Britney Spears
+"Traveller" Chris Stapleton
+"Trouble" Pink
+"Truth Hurts" Lizzo
+"Tubular Bells (Part 1)" Mike Oldfield
+"Turn On Your Love Light" Bobby "Blue" Bland
+"Turn Your Love Around" George Benson
+"Two Hearts" Phil Collins
+"U Can't Touch This" MC Hammer
+"Umbrella" Rihanna
+"Un-Break My Heart" Toni Braxton
+"Uncle Albert - Admiral Halsey" Paul McCartney
+"Underneath It All" No Doubt
+"Unforgettable" Nat King Cole
+"Unholy" Sam Smith
+"Uninvited" Alanis Morissette
+"Untitled (How Does It Feel)" D'Angelo
+"Up Where We Belong" Joe Cocker & Jennifer Warnes
+"Up-Up and Away" The 5th Dimension
+"Uptown Funk" Mark Ronson
+"Use Somebody" Kings of Leon
+"Vision Of Love" Mariah Carey
+"Viva La Vida" Coldplay
+"Wagon Wheel" Old Crow Medicine Show
+"Wait For U" Future
+"Waiting On A War" Foo Fighters
+"Waiting On The World To Change" John Mayer
+"Walk" Foo Fighters
+"Walk On" U2
+"Wanna Be Happy?" Kirk Franklin
+"Watermelon Sugar" Harry Styles
+"We Are The World" USA for Africa
+"We Are Young" Fun.
+"We Belong Together" Mariah Carey
+"We Don't Talk About Bruno" Carolina Gaitán
+"Welcome to Jamrock" Damian Marley
+"What a Beautiful Name" Hillsong Worship
+"What a Diff'rence a Day Makes" Dinah Washington
+"What A Fool Believes" The Doobie Brothers
+"What Are You Doing The Rest Of Your Life?" Dusty Springfield
+"What Goes Around... Comes Around" Justin Timberlake
+"What's Love Got To Do With It" Tina Turner
+"When A Man Loves A Woman" Michael Bolton
+"When Bad Does Good" Chris Cornell
+"When Can I See You" Babyface
+"When I Fall In Love" Doris Day
+"When My Amy Prays" Vince Gill
+"Whenever I Say Your Name" Sting
+"Where Are U Now" Jack U
+"Where The Streets Have No Name" U2
+"Where've You Been" Kathy Mattea
+"White Limo" Foo Fighters
+"Who Let The Dogs Out" Baha Men
+"Why Not Me" The Judds
+"With Arms Wide Open" Creed
+"Without You" Nilsson
+"Woman" Wolfmother
+"Yeah!" Usher
+"You Are The Sunshine Of My Life" Stevie Wonder
+"You Don't Know How It Feels" Tom Petty
+"You Light Up My Life" Debby Boone
+"You Make Me Feel Like Dancing" Leo Sayer
+"You Oughta Know" Alanis Morissette
+"You Say" Lauren Daigle
+"You Should Hear How She Talks About You" Melissa Manchester
+"You Should Probably Leave" Chris Stapleton
+"You Want It Darker" Leonard Cohen
+"You'll Think Of Me" Keith Urban
+"You Are Still the One" Shania Twain
+"You've Got A Friend" James Taylor
+"You've Got a Friend" Carole King
+"Younger Me" Brothers Osborne
+"Your Body Is A Wonderland" John Mayer

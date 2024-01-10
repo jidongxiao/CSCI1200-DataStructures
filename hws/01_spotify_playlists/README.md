@@ -145,6 +145,7 @@ Use good coding style when you design and implement your program. Organize your 
    - No reflection. (-1)
  - STL Vector & String (3 pts)
    - did not use STL vector (-3)
+   - did not use STL string (-3)
  - Program Structure (7 pts)
    - No credit (significantly incomplete implementation) (-7)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)

@@ -145,7 +145,7 @@ Note that the above double-quote-removal logic wouldn't do anything if the argum
 
 ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/).
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/). Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service.
 
 ## Program Requirements & Submission Details
 

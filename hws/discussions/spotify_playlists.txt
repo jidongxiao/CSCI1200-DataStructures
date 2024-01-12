@@ -1,0 +1,18 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. How to deal with song titles with one word vs multiple words?
+2. Is there a situation when we want to use the stoi function in this assignment?
+
+3. What data structure can we use to store a music track?
+4. What information do we need to store after reading the playlist file? Store the data in what format?
+
+5. Do we need to open and read library.txt if the command is remove or move?
+6. When reading library.txt, what is our goal?
+
+7. How do we remove a music track from the playlist? What vector member function can we use?
+8. How do we move a track into a new position? What vector member function can we use?
+
+9. What to do if the new position is greater than the size of the playlist?
+10. After writing the updated playlist to output.txt, what else do we need to do?

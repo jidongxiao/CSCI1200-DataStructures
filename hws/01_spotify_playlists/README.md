@@ -143,6 +143,10 @@ You may need to include this double-quote-removal logic twice in your program so
 
 Note that the above double-quote-removal logic wouldn't do anything if the argument doesn't contain a double quote. This means including the double-quote-removal logic in your code should not affect how you run your program locally on your own computer.
 
+## Instructor's Code
+
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/).
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to use both std::string or std::vector. You are NOT allowed to use any data structures we have not learned so far.

@@ -44,7 +44,7 @@ For example, the following command will add the song "Umbrella" to the end of th
 ./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add "Umbrella"
 ```
 
-### Command 2: remove a music track to a playlist
+### Command 2: remove a music track from a playlist
 The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "remove". The fifth argument is the title of the music track.
 
 ```console

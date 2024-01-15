@@ -23,7 +23,7 @@ Drivers can perform one task:
 
 ## Input Files
 
-Companies like Uber and Lyft maintains all drivers and uers information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and riders information in two simple text files, [drivers.txt](drivers.txt) and [riders.txt](riders.txt). Like previous assignments, in this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or riders information, and store them in your own data structures. In this assignment, you are not allowed to use *std::vector*, or any data structures we have not discussed in this class. Instead, you must use *std::list* to store drivers and riders. You are recommended to use one *std::list* instance to store all drivers, use another *std::list* instance to store all riders.
+Companies like Uber and Lyft maintains all drivers and riders information in their database, but database is way beyond the scope of this course, and therefore we will just store drivers information and riders information in two simple text files, [drivers.txt](drivers.txt) and [riders.txt](riders.txt). Like previous assignments, in this assignment you will once again read these files as the input of your program, parse them so as to retrieve drivers and/or riders information, and store them in your own data structures. In this assignment, you are not allowed to use *std::vector*, or any data structures we have not discussed in this class. Instead, you must use *std::list* to store drivers and riders. You are recommended to use one *std::list* instance to store all drivers, use another *std::list* instance to store all riders.
 
 ### Driver Information
 
@@ -152,7 +152,7 @@ When this command is run, and
 
 1.1 print the following information into the output0.txt file:
 ```console
-Ride requested for user Rebecca, looking for an Economy vehicle.
+Ride requested for rider Rebecca, looking for an Economy vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Statue_of_Liberty.
 We have found the closest driver Elena(4.7) for you.
 Elena is now 7.9 miles away from you.
@@ -165,7 +165,7 @@ Replace *Rebecca* with the rider's first name, replace *Economy* with the rider'
 
 2. if a driver can not be found, your program should print the following message into the output0.txt file:
 ```console
-Ride requested for user Isabella, looking for a Luxury vehicle.
+Ride requested for rider Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
 Sorry we can not find a driver for you at this moment.
 ```
@@ -227,7 +227,7 @@ You can only cancel a ride request if you are currently on the way to the pickup
 
 4.1 print the following message to the output0.txt file:
 ```console
-Ride request for user Brenda is now canceled by the user.
+Ride request for rider Brenda is now canceled by the rider.
 ```
 4.2 print an updated version of drivers.txt into output1.txt: driver's state should be changed from On_the_way_to_pickup to Available.
 
@@ -238,7 +238,7 @@ Ride request for user Brenda is now canceled by the user.
 5.1 print the following message to the output0.txt file:
 ```console
 Your driver Edward has cancelled the ride request. We will now find a new driver for you.
-Ride requested for user Angela, looking for a Standard vehicle.
+Ride requested for rider Angela, looking for a Standard vehicle.
 Pick Up Location: The_Met_Cloisters, Drop Off Location: Brooklyn_Navy_Yard.
 We have found the closest driver Robert(3.2) for you.
 Robert is now 2.1 miles away from you.

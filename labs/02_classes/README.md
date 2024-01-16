@@ -1,6 +1,6 @@
 # Overview
 
-In this lab, you will be writing your own C++ classes. We have not covered C++ classes in the lecture, but according to last Friday's poll, everyone is this class has either experience in Java or experience in Python, so the concept of class is not new to you. To get familiar with the C++ syntax on classes, you are recommended to quickly review the following 3 files:
+In this lab, you will be writing your own C++ classes. <!--We have not covered C++ classes in the lecture, but according to last Friday's poll, everyone is this class has either experience in Java or experience in Python, so the concept of class is not new to you.--> To get familiar with the C++ syntax on classes, you are recommended to quickly review the following 3 files:
 
 [date.h](../../lectures/03_classes_I/date.h)  
 [date.cpp](../../lectures/03_classes_I/date.cpp)  
@@ -11,7 +11,7 @@ Some notes about these 3 files:
 - date.h and date.cpp are the implementation of a class called *date*.
 - date_main.cpp is the program to test the *date* class, and therefore, only this file contains the *main* function.
 - the file with the .h file name extension is called the header file, and the .cpp file is callled the implementation file. Note that in C++ the name of the header and implementation files are not required to exactly match the name of the class, but it is good coding style to do so.
-- in this lab, you're not required to use the keyword **const**, as we will cover more about it in lecture. For the same reason, for now, you can also ignore the keyword **const** that is used in the *date* class.
+<!--- in this lab, you're not required to use the keyword **const**, as we will cover more about it in lecture. For the same reason, for now, you can also ignore the keyword **const** that is used in the *date* class.-->
 - typically in C++, we declare a class in the header file, and then define/implement this class in a .cpp file. The declaration of a class includes the prototype of its member functions, and it also includes the member variables of this class. As can be seen from *date.h* and *date.cpp*, the *date* class has 3 member variables:
 ```cpp
   int day;
@@ -220,3 +220,62 @@ difference? Switch the function back to const pass-by-reference parameters befor
 
 **To complete this checkpoint**: Show a TA your tested and debugged extensions. Be prepared to
 discuss your implementation. <!--and const and pass-by-reference.-->
+
+## Checkpoint 4: File IO
+*estimate: 5-10 minutes*
+
+In homework 2 and future homeworks, you will see input files which has a unique format: every line of the file has a fixed number of fields, and all these fields are separated by one or more spaces. For input files like this, we encourage you to use the stream operator>> for all input parsing, rather than using the getline() function.
+
+Following is an example, which is the content of [this input file](input.txt).
+
+```console
+Lisa 25 Female 318-125-5013 Undisclosed Undisclosed 41.5833 -83.9274
+Daniel 27 Male 210-612-4370 Athlete University_of_Pennsylvania 39.0742 -75.9063
+Brandon 29 Male 580-492-5098 Anesthesiologist University_of_Georgia 42.7252 -72.7156
+Edward 32 Male 778-799-8211 Firefighter University_of_California_Western_Islands 38.9078 -70.4912
+Pedro 27 Male 639-312-6466 Undisclosed University_of_California_Desert 40.306 -84.6312
+Rebecca 30 Female 878-162-8033 Electrician University_of_Kansas 39.6714 -80.2924
+Isla 33 Female 884-822-9387 Dental_Hygienist Undisclosed 41.2521 -74.7712
+Brandon 56 Male 357-422-7135 Undisclosed University_of_Chicago 43.5828 -75.3686
+Isaac 36 Male 446-205-6456 Chemist University_of_Colorado_Boulder 42.8806 -81.55
+Timothy 46 Male 600-635-3948 Biomedical_Engineer Undisclosed 38.154 -71.3301
+```
+
+Each line of this file represents one user from an online dating app. Each line has 8 fields. And these 8 fields are:
+
+- User's name
+- User's age
+- User's gender
+- User's phone number
+- User's profession: A user can choose not to disclose their profession, and if so, this field will be Undisclosed.
+- User's school: A user can choose not to disclose his/her school, and if so, this field will be Undisclosed.
+- User's current latitude
+- User's current longitude
+
+Write a C++ program to read this file and print each user's name and phone number in an output file, the name and the phone number should be separated by a comma. Your output file must be identical as this [sample output file](output.txt).
+
+You can use the following code snippet. Try to understand the code snippet before you use it.
+
+```cpp
+	std::ifstream inputFile(filename);
+
+	if (!inputFile.is_open()) {
+		std::cerr << "Failed to open the user data file." << std::endl;
+		exit(1);
+	}
+
+	std::string name, gender, number, profession, school;
+	int age;
+	double latitude, longitude;
+	while(inputFile >> name
+		>> age
+		>> gender
+		>> number
+		>> profession
+		>> school
+		>> latitude
+		>> longitude){
+
+			// do something with any of these 8 fields.
+		}
+```

@@ -130,4 +130,4 @@ cost of copying.
 
 - [Leetcode problem 8: String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
 - [Leetcode problem 211: Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
-- [Leetcode problem 1662: Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
+- [Leetcode problem 1662: Check If Two String Arrays are Equivalent](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/) Solution: [p1662_check_two_strings.cpp](../../leetcode/p1662_check_two_strings.cpp)

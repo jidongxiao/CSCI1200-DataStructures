@@ -27,14 +27,14 @@
 
 ## 3.3 Class scope notation
 
-In the *Date* class example as you saw in lab 2,
+In the *Date* class example as you see in lab 2,
 
 - **Date::** indicates that what follows is within the scope of the class.
 - Within class scope, the member functions and member variables are accessible without the name of the object.
 
 ## 3.4 Constructors
 
-These are special functions that initialize the values of the member variables. The constructor automatically get called when an object of the class is created. You have already used constructors for string and vector objects. As you have seen in the lab, constructors in C++ have the following characteristics:
+These are special functions that initialize the values of the member variables. The constructor automatically get called when an object of the class is created. You have already used constructors for string and vector objects. As you see in the lab, constructors in C++ have the following characteristics:
 
 - Constructors have the same name as the class they belong to.
 - They do not have a return type, not even void.

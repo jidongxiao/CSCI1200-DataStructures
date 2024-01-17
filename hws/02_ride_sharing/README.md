@@ -325,7 +325,7 @@ README.txt file.
 
 ## Rubric
 
-15 pts
+14 pts
 
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
@@ -342,10 +342,10 @@ README.txt file.
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
-   - Does not use std::vector to store drivers or riders. (-5)
-   - Uses std::list or data structures which have not been covered in this class. (-5)
+ - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (4 pts)
+   - No credit (significantly incomplete implementation). (-4)
+   - Does not use std::vector to store drivers or riders. (-4)
+   - Uses std::list or data structures which have not been covered in this class. (-4)
    - Member variables are public. (-2)
  - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

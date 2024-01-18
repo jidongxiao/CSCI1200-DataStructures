@@ -328,6 +328,8 @@ and at the very bottom of your .h file, add this line:
 #endif
 ```
 
+This technique is known as the "Include Guards". Include guards ensure that the compiler will process a header file only once, no matter how many times it is included.
+
 ## Program Requirements & Submission Details
 
 Use good coding style when you design and implement your program. Organize your program into functions:

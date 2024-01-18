@@ -229,9 +229,9 @@ You can only cancel a ride request if you are currently on the way to the pickup
 ```console
 Ride request for rider Brenda is now canceled by the rider.
 ```
-4.2 print an updated version of drivers.txt into output1.txt: driver's state should be changed from On_the_way_to_pickup to Available.
+4.2 print an updated version of drivers.txt into output1.txt: the driver's state should be changed from On_the_way_to_pickup to Available, and the last 3 fields of the driver should be reset to null, meaning that this driver is now not associated with any rider.
 
-4.3 print an updated version of riders.txt into output2.txt: the rider should be removed.
+4.3 print an updated version of riders.txt into output2.txt: the rider's state should be changed from Driver_on_the_way to Ready_to_request, and the last 3 fields of the rider should be reset to null, meaning that no driver is now associated with this rider.
 
 5. if the canceling request is issued by a driver whose state is On_the_way_to_pickup, your program should:
 
@@ -329,6 +329,16 @@ and at the very bottom of your .h file, add this line:
 ```
 
 This technique is known as the "Include Guards". Include guards ensure that the compiler will process a header file only once, no matter how many times it is included.
+
+## FAQs
+
+1. Q: Is the requested vehicle type from a rider's perspective a strict requirement for finding a matching driver? Or is it just a preference. Essentially, if a rider requests Economy and there is no available drivers for Economy, but available drivers with other vehicle types, should we output that no driver could be found, or match the nearest driver with different vehicle type?
+
+A: It is a strict requirement. Do not pick a different vehicle type for the rider.
+
+2. Q: What is the precision of the output distance? Is it one decimal place or significant figures or holding a certain number of spaces? Do we round up round down or simply trim it down?
+
+A: Same as Uber. One decimal place. Just trim it. For example, if the distance is 11.4571 miles, you should output 11.4 miles, instead of 11.5 miles.
 
 ## Program Requirements & Submission Details
 

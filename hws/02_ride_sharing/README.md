@@ -313,6 +313,21 @@ nyride.exe drivers.txt riders.txt search driver_id
 ```
 -->
 
+## Include Guards
+
+If you are writing more than one class, you may run into strange compiler errors when you compile everything. This may be due to a problem with including your class files, which can be solved as follows: for a header file called myclass.h add these two lines at the very top of the header file:
+
+```cpp
+#ifndef __MYCLASS_H
+#define __MYCLASS_H
+```
+
+and at the very bottom of your .h file, add this line:
+
+```cpp
+#endif
+```
+
 ## Program Requirements & Submission Details
 
 Use good coding style when you design and implement your program. Organize your program into functions:

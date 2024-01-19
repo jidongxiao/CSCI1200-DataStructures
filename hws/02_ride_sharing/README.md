@@ -371,7 +371,7 @@ README.txt file.
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
+ - DATA REPRESENTATION (Must use vectors for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)
    - Does not use std::vector to store drivers or riders. (-5)
    - Uses std::list or data structures which have not been covered in this class. (-5)

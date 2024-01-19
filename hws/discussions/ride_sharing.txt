@@ -14,3 +14,4 @@ Discuss the following questions with students around you.
 
 9. When a driver cancels a request, your program tries to find another driver who is the closest to the rider, what if that driver is the same driver as the one who is canceling?
 10. What operator(s) can be a good choice for operator overloading in this program?
+11. Is it a good choice to use the getline() function to read the input files for this program? Why?

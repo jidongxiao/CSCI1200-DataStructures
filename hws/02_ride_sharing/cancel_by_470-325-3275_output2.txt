@@ -7,6 +7,7 @@ Lucia Andres Female 59 256-799-3283 3.1 Grand_Central_Terminal 40.7527 -73.9772 
 Melissa Christopher Female 28 392-390-8218 4.6 The_High_Line 40.748 -74.0048 The_Vessel 40.7536 -74.0023 Standard Driver_on_the_way Brian Luis 845-708-1986
 William Timothy Male 46 808-688-3264 3.7 Broadway_Theater_District 40.7589 -73.9851 Coney_Island 40.5749 -73.9859 Economy Driver_on_the_way Brenda Christopher 886-285-9845
 Linda Chen Female 60 320-807-7264 4.6 Bushwick 40.6944 -73.9213 Columbia_University 40.8075 -73.9642 Premium Ready_to_request null null null
+Brenda Thomas Female 45 470-325-3275 3.2 Bay_Ridge 40.635 -74.019 High_Line_Park 40.748 -74.0048 Premium Ready_to_request null null null
 Brian Michael Male 48 937-470-1454 4.6 Charging_Bull 40.7053 -74.014 The_High_Line 40.748 -74.0048 Premium During_the_trip Joseph Zhao 961-141-4616
 David Kenneth Male 57 867-551-1516 3.6 Yankee_Stadium 40.8296 -73.927 Williamsburg 40.7128 -73.9516 Standard Ready_to_request null null null
 Thomas David Male 22 433-957-3812 4.4 Manhattan_Beach 40.5782 -73.9361 Financial_District 40.706 -74.0092 Premium Driver_on_the_way Linda Carlos 851-539-8248

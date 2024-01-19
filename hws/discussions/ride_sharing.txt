@@ -1,0 +1,15 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. When defining the driver and rider classes, how many constructors do we need to define for each class? Do we have to define the default constructor?
+2. Do we need to define a destructor for the driver or rider class?
+3. Do we need a getter/setter for each of the member variables?
+
+4. What should the main function do?
+5. What should we do when the command is "request"?
+6. What should we do when the command is "cancel"?
+7. When to open and when to close the 2 inputs files and the 3 output files?
+
+8. When a driver cancels a request, your program tries to find another driver who is the closest to the rider, what if that driver is the same driver as the one who is canceling?
+

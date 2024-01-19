@@ -1,4 +1,4 @@
-# Lecture 4 --- Pointers, Arrays, & Pointer Arithmetic
+# Lecture 5 --- Pointers, Arrays, & Pointer Arithmetic
 
 - Pointers store memory addresses.
 - They can be used to access the values stored at their stored memory address.
@@ -7,7 +7,7 @@
 - Pointers are also the primitive mechanism underlying vector iterators, which we have used with std::sort and
 will use more extensively throughout the semester.
 
-## 4.1 Pointer Example
+## 5.1 Pointer Example
 
 - Consider the following code segment:
 
@@ -27,7 +27,7 @@ because x == 72.0. What’s going on?
 
 ![alt text](pointer_init.png "pointer_init")
 
-## 4.2 Pointer Variables and Memory Access
+## 5.2 Pointer Variables and Memory Access
 
 - x is an ordinary float, but p is a pointer that can hold the memory address of a float variable. The difference
 is explained in the picture above.
@@ -46,7 +46,7 @@ Note: *p is an l-value in the above expression.
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example1/index.html).
 
-## 4.3 Defining Pointer Variables
+## 5.3 Defining Pointer Variables
 
 - In the example below, p, s and t are all pointer variables (pointers, for short), but q is NOT. You need the *
 before each variable name.
@@ -62,7 +62,7 @@ and may cause your program to crash! (It won’t crash if the uninitialized valu
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example2/index.html).
 
-## 4.4 Operations on Pointers
+## 5.4 Operations on Pointers
 
 - The unary (single argument/operand) operator * in the expression *p is the “dereferencing operator”. It means
 “follow the pointer”. *p can be either an l-value or an r-value, depending on which side of the = it appears on.
@@ -90,7 +90,7 @@ p = 35.1; // Illegal: float assigned to a pointer
 useful! Less than and greater than comparisons are also allowed. These are useful only when the pointers are
 to locations within an array.
 
-## 4.5 Exercise
+## 5.5 Exercise
 
 - Draw a picture for the following code sequence. What is the output to the screen?
 
@@ -108,7 +108,7 @@ cout << x << " " << y << endl;
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example4/index.html).
 
-## 4.6 Null Pointers
+## 5.6 Null Pointers
 
 - Like the int type, pointers are not default initialized. We should assume it’s a garbage value, leftover from
 the previous user of that memory.
@@ -131,7 +131,7 @@ tests to see if p is pointing somewhere that appears to be useful before accessi
 at that location.
 - But don’t make the mistake of assuming pointers are automatically initialized to NULL.
 
-## 4.7 Arrays
+## 5.7 Arrays
 
 - Here’s a quick example to remind you about how to use an array:
 ```cpp
@@ -148,11 +148,11 @@ shrink dynamically in response to the demands of the application.
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_1/index.html).
 
-## 4.8 Stepping through Arrays with Pointers (Array Iterators)
+## 5.8 Stepping through Arrays with Pointers (Array Iterators)
 
 - The array code above that uses [] subscripting, can be equivalently rewritten to use pointers. We can re-write it in two ways:
 
-### 4.8.1 First Approach
+### 5.8.1 First Approach
 
 ```cpp
 const int n = 10;
@@ -182,7 +182,7 @@ square root of this value is assigned to \*p.
 
 - play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/pointers/example_arrays_2/index.html).
 
-### 4.8.2 Second Approach
+### 5.8.2 Second Approach
 
 The first approach uses pointer arithmetic in several places - just to demonstrate the usage of pointer arithmetic; but many students find it confusing and hard to understand. In contrast, the following approach is easier to understand, and **is the recommended way for you to use in tomorrow's lab**; use the first approach only if you truly understand all the pointer arithmetics involved in that approach.
 
@@ -199,7 +199,7 @@ for ( i=0; i<n; ++i ){
 
 This second approach also "nicely mimics the subscript notation used in the (original) for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by our mentor Eleanor Olson, :smile:.
 
-## 4.9 Sorting an Array
+## 5.9 Sorting an Array
 
 - Arrays may be sorted using std::sort, just like vectors. Pointers are used in place of iterators. For example, if a is an array of doubles and there are n values in the array, then here’s how to sort the values in the array into increasing order:
 
@@ -207,6 +207,6 @@ This second approach also "nicely mimics the subscript notation used in the (ori
 std::sort( a, a+n );
 ```
 
-## 4.10 Exercises
+## 5.10 Exercises
 
 - [Leetcode problem 26: Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/). Solution: [p26_removeduplicates.cpp](../../leetcode/p26_removeduplicates.cpp)

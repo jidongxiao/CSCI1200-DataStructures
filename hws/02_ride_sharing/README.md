@@ -6,7 +6,7 @@ In this assignment you will develop a simple ride sharing application called New
 
 - Practice implementing and working with C++ classes.
 - Practice using std::string, std::vector.
-- Practice overloading operator<<, and understand why it is a bad idea to make it a member function.
+<!--- Practice overloading operator<<, and understand why it is a bad idea to make it a member function.-->
 
 ## Specification
 
@@ -358,8 +358,8 @@ README.txt file.
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (5 pts)
-   - No credit (significantly incomplete implementation) (-5)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
+   - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Improper uses or omissions of const and reference. (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
@@ -369,11 +369,12 @@ README.txt file.
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (4 pts)
-   - No credit (significantly incomplete implementation). (-4)
-   - Does not use std::vector to store drivers or riders. (-4)
-   - Uses std::list or data structures which have not been covered in this class. (-4)
+ - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
+   - No credit (significantly incomplete implementation). (-5)
+   - Does not use std::vector to store drivers or riders. (-5)
+   - Uses std::list or data structures which have not been covered in this class. (-5)
    - Member variables are public. (-2)
- - OUTPUT OPERATOR OVERLOADING (2 pts)
+<!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)
    - Incorrect syntax (wrong return type, wrong arguments). (-1)
+-->

@@ -10,7 +10,13 @@ In this assignment you will complete the implementation of a simple recommendati
 
 ## Background
 
-Amazon Prime Video recommends movies and tv shows to prime users.
+Amazon Prime Video recommends movies and tv shows to prime users. Prime users on the prime video page will see things like this:
+
+![alt text](images/movies.png "Amazon Prime Movies")
+
+and this:
+
+![alt text](images/showss.png "Amazon Prime Shows")
 
 ## Specification
 

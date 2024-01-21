@@ -18,6 +18,8 @@ and this:
 
 ![alt text](images/shows.png "Amazon Prime Shows")
 
+In this assignment, you will be completing a program which aims to implement these two features: recommending movies and recommending tv shows to users.
+
 ## Specification
 
 ## Input Files

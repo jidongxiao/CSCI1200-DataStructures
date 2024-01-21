@@ -16,7 +16,7 @@ Amazon Prime Video recommends movies and tv shows to prime users. Prime users on
 
 and this:
 
-![alt text](images/showss.png "Amazon Prime Shows")
+![alt text](images/shows.png "Amazon Prime Shows")
 
 ## Specification
 

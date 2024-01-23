@@ -124,8 +124,9 @@ will assume NULL and nullptr are equivalent.
   - Comparing a pointer to NULL is very useful. It can be used to indicate whether or not a pointer variable is
 pointing at a useable memory location. For example,
 ```cpp
-if ( p != NULL )
-cout << *p << endl.
+if ( p != NULL ){
+	cout << *p << endl;
+}
 ```
 tests to see if p is pointing somewhere that appears to be useful before accessing and printing the value stored
 at that location.

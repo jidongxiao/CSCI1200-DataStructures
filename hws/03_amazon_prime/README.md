@@ -64,6 +64,37 @@ The file [showRatings.txt](showRatings.txt) can be interpreted in the same way. 
 
 ## Commands to Support
 
+Your program only needs to support one command:
+
+```console
+nyrecommender.exe movieRatings.txt showRatings.txt output.txt userID numRecommendations
+```
+
+Here
+
+- movieRatings.txt is the movie rating input file, already described above.
+- showRatings.txt is the show rating input file, already described above.
+- output.txt is where to print your output.
+- userID specifies the ID of the user.
+- numRecommendations specifies how many movies/shows your program will recommend to the user. For example, if numRecommendation is 5, then your program should try to print up to 5 movies and up to 5 tv shows.
+
+When your program is executed, it produces up to numRecommendations recommended movies to the output file, and also produces up to numRecommendation recommended tv shows to the output file. Following is a sample output file:
+
+```console
+Prime: Movies we think you'll like:
+Elvis
+The Shawshank Redemption
+The Godfather
+Schindler's List
+Forrest Gump
+Prime: TV shows we think you'll like:
+Little Women
+Game of Thrones
+The Simpsons
+Friends
+The Crown
+```
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are NOT allowed to use std::vector anywhere in your code. You must use dynamic memory to store the movie rating matrix, and the show rating matrix.

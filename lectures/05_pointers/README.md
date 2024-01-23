@@ -184,7 +184,7 @@ square root of this value is assigned to \*p.
 
 ### 5.8.2 Second Approach
 
-The first approach uses pointer arithmetic in several places - just to demonstrate the usage of pointer arithmetic; but many students find it confusing and hard to understand. In contrast, the following approach is easier to understand, and **is the recommended way for you to use in tomorrow's lab**; use the first approach only if you truly understand all the pointer arithmetics involved in that approach.
+The first approach uses pointer arithmetic in several places - just to demonstrate the usage of pointer arithmetic; but many students find it confusing and hard to understand. In contrast, the following approach is easier to understand. <!--and **is the recommended way for you to use in tomorrow's lab**; use the first approach only if you truly understand all the pointer arithmetics involved in that approach.-->
 
 ```cpp
 const int n = 10;

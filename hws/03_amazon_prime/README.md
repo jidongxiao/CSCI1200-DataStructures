@@ -95,6 +95,8 @@ Friends
 The Crown
 ```
 
+Note that these recommendations are specifically for this user - as specified by the command line argument userID. Apparently your program will produce different recommendations for different users.
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are NOT allowed to use std::vector anywhere in your code. You must use dynamic memory to store the movie rating matrix, and the show rating matrix.

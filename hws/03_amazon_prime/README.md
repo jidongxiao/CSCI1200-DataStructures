@@ -30,6 +30,8 @@ We assume there are 100 tv shows in total, indexed from 0 to 99.
 
 The index and the name of all the movies and shows are hardcoded in the [main.cpp](main.cpp), just so you do not need to parse more input files.
 
+You are required to define a class named **RecommendationSystem**. The class definition goes to recommendation.h and the implementation of the class goes to [recommendation.cpp](recommendation.cpp), which is provided but is incomplete. Your class must have (at least) two member variables, one is named userMovieRatingsMatrix, the other is named userShowRatingsMatrix, both are two-dimenstional *int* pointers, i.e., int\*\*. Two member functions to your class are provided, and you can call but should not modify these two functions.
+
 ## Input Files
 
 Two input files are provided: [movieRatings.txt](movieRatings.txt) and [showRatings.txt](showRatings.txt). The two files have the same format. For example, the following is the first few lines of the [movieRatings.txt](movieRatings.txt):
@@ -95,6 +97,7 @@ README.txt file.
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (Must use dynamic memory for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)
+   - Does not define the RecommendationSystem class. (-5)
    - Does not use dynamic memory to store the movie rating matrix. (-5)
    - Does not use dynamic memory to store the show rating matrix. (-5)
    - Uses std::vector anywhere in the code. (-5)

@@ -28,7 +28,7 @@ We assume there are 110 movies in total, indexed from 0 to 109.
 
 We assume there are 100 tv shows in total, indexed from 0 to 99.
 
-All the movies and shows are hardcoded in the [main.cpp](main.cpp).
+The index and the name of all the movies and shows are hardcoded in the [main.cpp](main.cpp), just so you do not need to parse more input files.
 
 ## Input Files
 

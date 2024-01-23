@@ -48,6 +48,7 @@ Two input files are provided: [movieRatings.txt](movieRatings.txt) and [showRati
 ```
 
 Each line is representing one user. Each user uses the Amazon star rating (as show in the following image) to rate a movie or a tv show (in the range of 1 to 5).
+
 ![alt text](images/starRatings.png "Amazon Star Rating")
 
 The first line of [movieRatings.txt](movieRatings.txt) means, user 0 gives a rating of 3 to movie 83, gives a rating of 1 to movie 11, gives a rating of 1 to movie 14, gives a rating of 4 to moving 31, gives a rating of 4 to movie 101, gives a rating of 2 to movie 21, etc.

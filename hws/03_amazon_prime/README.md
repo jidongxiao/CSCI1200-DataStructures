@@ -32,7 +32,7 @@ The index and the name of all the movies and shows are hardcoded in the [main.cp
 
 ## Input Files
 
-Two input files are provided: [movieRatings.txt](movieRatings.txt) and [showRatings.txt](showRatings.txt). The two files have the same format. For example, the following is the first few lines of the [movieRatings.txt](movieRatings.txt]:
+Two input files are provided: [movieRatings.txt](movieRatings.txt) and [showRatings.txt](showRatings.txt). The two files have the same format. For example, the following is the first few lines of the [movieRatings.txt](movieRatings.txt):
 
 ```console
 (87,3) (11,1) (14,1) (31,4) (101,4) (21,2) (23,1) (3,4) (38,5) (100,2) (109,1) (80,4) (15,3) (71,5) (52,5) (67,2) (78,2) (69,3) (72,2) (93,4) (35,3) (102,4) (81,4) (107,4) (79,4) (58,1) (105,5) (90,2) (6,3) (9,3) (53,4) (59,2) (62,2) (94,2) (54,2) (85,3) (57,5) (5,4) (32,4) (39,2) (42,2) 

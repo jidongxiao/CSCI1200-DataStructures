@@ -123,7 +123,7 @@ Prime: TV shows we think you'll like:
 
 ```
 
-**Note**: all the expected files contain an empty line at the very end, to match with that, you just need to make sure all your print statements ends with *std::endl;* (or just *endl;* if you don't use *std::*).
+**Note**: all the expected files contain an empty line at the very end, to match with that, you just need to make sure all your print statements end with *std::endl;* (or just *endl;* if you don't use *std::*).
 
 ## Helper Functions
 

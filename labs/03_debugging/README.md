@@ -1,6 +1,6 @@
 # Lab 3 — Memory Diagrams, Testing, and Debugging
 
-For this lab, you must use a termial. Do not use IDEs for this lab.
+For this lab, you must use a terminal. Do not use IDEs for this lab.
 
 ## Checkpoint 1
 *estimate: 20-40 minutes*

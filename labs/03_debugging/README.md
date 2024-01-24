@@ -1,7 +1,11 @@
 # Lab 3 — Memory Diagrams, Testing, and Debugging
 
+For this lab, you must use a termial. Do not use IDEs for this lab.
+
 ## Checkpoint 1
 *estimate: 20-40 minutes*
+
+Read lecture notes [5.7](../../lectures/05_pointers#57-arrays) and [5.8](../../lectures/05_pointers#58-stepping-through-arrays-with-pointers-array-iterators), and try to understand the example code and run the animations. Ask questions if you don't understand the code.
 
 Write a function compute_squares that takes 3 arguments: two C-style arrays (not STL vectors), a and b,
 of unsigned integers, and an unsigned integer, n, representing the size of each of the arrays. The function

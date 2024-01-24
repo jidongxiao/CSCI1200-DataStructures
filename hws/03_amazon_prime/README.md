@@ -62,7 +62,7 @@ The 3rd line descirbes ratings given by user 2, the 4th line describes ratings g
 The file [showRatings.txt](showRatings.txt) can be interpreted in the same way. It is just ratings in that file are for tv shows.
 
 
-## Commands to Support
+## Commands to Support & Program Output
 
 Your program only needs to support one command:
 
@@ -97,6 +97,38 @@ The Crown
 
 Note that these recommendations are specifically for this user - as specified by the command line argument userID. Apparently your program will produce different recommendations for different users.
 
+1. in the case where the number of command line argument is not 6, your program should use std::cerr to print the following message:
+
+```console
+Usage: nyrecommender.exe movieRatings.txt showRatings.txt output.txt userID numRecommendations
+
+```
+
+Nothing should be printed to the output file in such a case.
+
+2. in the case where the userID command line argument is not in the range of 0-499, your program should use std::cerr to print the following error message:
+
+```console
+Invalid User ID.
+
+```
+
+Nothing should be printed to the output file in such a case.
+
+3. in the case where the *numRecommendations* command line argument is 0, your program should produce the output file which contains the following message:
+
+```console
+Prime: Movies we think you'll like:
+Prime: TV shows we think you'll like:
+
+```
+
+**Note**: all the expected files contain an empty line at the very end, to match with that, you just need to make sure all your print statements ends with *std::endl;* (or just *endl;* if you don't use *std::*).
+
+## Helper Functions
+
+TBD.
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are NOT allowed to use std::vector anywhere in your code. You must use dynamic memory to store the movie rating matrix, and the show rating matrix.
@@ -126,7 +158,6 @@ README.txt file.
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-   - Uses global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (Must use dynamic memory for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)

@@ -125,7 +125,7 @@ delete q;
 
 ### 6.2.2 Exercise
 
-In the following program, which variable is stored in the stack?
+In the following program, which variable is stored on the stack?
 
 ```cpp
 #include <iostream>

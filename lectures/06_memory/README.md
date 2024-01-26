@@ -26,17 +26,21 @@ your accommodations for the test.
 
 ## 6.1 Three Types of Memory
 
-- Automatic memory: memory allocation inside a function when you create a variable. This allocates space for
-local variables in functions (on the stack) and deallocates it when variables go out of scope. For example:
+- Stack memory: a region of a computer's memory that is used for the storage of local variables and function call information. When you create variables inside a function, such variables are called local variables and local variables will be stored on the stack and get deallocated when variables go out of scope. For example:
+
 ```cpp
-int x;
-double y;
+void func() {
+	int x;
+	double y;
+}
 ```
-- Static memory: variables allocated statically (with the keyword static). They are are not eliminated when
-they go out of scope. They retain their values, but are only accessible within the scope where they are defined. For example:
+
+- Static memory: variables allocated statically (with the keyword static), located at the data segment of the program's memory. They are are not eliminated when they go out of scope. They retain their values throughout the entire program execution, but are only accessible within the scope where they are defined. For example:
+
 ```cpp
 static int counter;
 ```
+
 - Dynamic memory: explicitly allocated (on the heap) as needed. This is our focus for today.
 
 ## 6.2 Dynamic Memory

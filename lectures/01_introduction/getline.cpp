@@ -50,5 +50,9 @@ int main(int argc, char* argv[]){
 		// print again, but this time print it to a file.
 		outputFile << line << std::endl;
 	}
+
+	// after using the files, close them before exit the program.
+	inputFile.close();
+	outputFile.close();
 	return 0;
 }

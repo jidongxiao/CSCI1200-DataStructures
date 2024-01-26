@@ -101,6 +101,24 @@ other than the pointer variable.
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html) to see what exactly the above code snippet does.
 
+## 6.2.1 Exercise
+
+What’s the output of the following code?
+
+```cpp
+double * p = new double;
+*p = 35.1;
+double * q = p;
+cout << *p << " " << *q << endl;
+p = new double;
+*p = 27.1;
+cout << *p << " " << *q << endl;
+*q = 12.5;
+cout << *p << " " << *q << endl;
+delete p;
+delete q;
+```
+
 ## 6.3 Dynamic Allocation of Arrays
 - How do we allocate an array on the stack? What is the code? What memory diagram is produced by the code?
 - Declaring the size of an array at compile time doesn’t offer much flexibility. Instead we can dynamically allocate an array based on data. This gets us part-way toward the behavior of the standard library vector class. Here’s an example:

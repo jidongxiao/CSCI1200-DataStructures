@@ -125,7 +125,7 @@ delete q;
 
 ## 6.3 Dynamic Allocation of Arrays
 - How do we allocate an array on the stack? What is the code? What memory diagram is produced by the code?
-- Declaring the size of an array at compile time doesn’t offer much flexibility. Instead we can dynamically allocate an array based on data. This gets us part-way toward the behavior of the standard library vector class. Here’s an example:
+- Declaring the size of an array at compile time doesn’t offer much flexibility. Instead we can dynamically allocate an array based on data. Here’s an example:
 
 <table>
  <tr>
@@ -161,14 +161,11 @@ array are not known until the program is executed and the the memory must be all
 In fact, the expression a[i] is exactly equivalent to the pointer arithmetic and dereferencing expression *(a+i)
 which we have seen several times before.
 - After we are done using the array, the line: delete [] a; releases the memory allocated for the entire
-array and calls the destructor (we’ll learn about these soon!) for each slot of the array. Deleting a dynamically
-allocated array without the [] is an error (but it may not cause a crash or other noticeable problem, depending
+array and calls the destructor for each slot of the array. Deleting a dynamically allocated array without the [] is an error (but it may not cause a crash or other noticeable problem, depending
 on the type stored in the array and the specific compiler implementation).
-- Since the program is ending, releasing the memory is not a major concern. However, to demonstrate
-that you understand memory allocation & deallocation, you should always delete dynamically allocated
+- Since the program is ending, releasing the memory is not a major concern. However, to demonstrate that you understand memory allocation & deallocation, you should always delete dynamically allocated
 memory in this course, even if the program is terminating.
-- In more substantial programs it is ABSOLUTELY CRUCIAL. If we forget to release memory repeatedly
-the program can be said to have a memory leak. Long-running programs with memory leaks will eventually
+- In more substantial programs it is ABSOLUTELY CRUCIAL. If we forget to release memory repeatedly the program can be said to have a memory leak. Long-running programs with memory leaks will eventually
 run out of memory and crash.
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example2/index.html) to see what exactly the above code snippet does.

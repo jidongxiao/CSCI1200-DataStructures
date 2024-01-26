@@ -1,7 +1,6 @@
 # Test 1 Information
 
-- Students will be randomly assigned to a test room and seating zone – will be on Submitty Wednesday
-morning.
+- Students will be randomly assigned to a test room and seating zone – will be on Submitty soon.
 <!--  – If you haven’t filled out the “Left or Right Handed” gradeable by Tuesday night, we will assume you are
 right handed. This is used for seating assignments.-->
 - Test 1 will be held **Thursday, 02/01/2024 from 6-7:50pm**.  

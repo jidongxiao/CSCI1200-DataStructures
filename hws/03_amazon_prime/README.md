@@ -1,3 +1,5 @@
+This README is still incomplete!
+
 # Homework 3 — Completing a Simple Amazon Prime Video Recommendation System
 
 In this assignment you will complete the implementation of a simple recommendation system called New York Recommender. Your program will mimic some behaviors of the Amazon Prime Video Recommendation System. Please read the entire handout before starting to code the assignment.

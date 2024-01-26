@@ -399,7 +399,7 @@ hi
 ## 6.11 How to use a memory debugger
 
 - Detailed instructions on installation & use of these tools are available here:
-http://www.cs.rpi.edu/academics/courses/fall23/csci1200/memory_debugging.php
+http://www.cs.rpi.edu/academics/courses/spring24/csci1200/memory_debugging.php
 - Memory errors (uninitialized memory, out-of-bounds read/write, use after free) may cause seg faults, crashes,
 or strange output.
 - Memory leaks on the other hand will never cause incorrect output, but your program will be inefficient and

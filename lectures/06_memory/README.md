@@ -105,7 +105,7 @@ other than the pointer variable.
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/dynamic_memory/example1/index.html) to see what exactly the above code snippet does.
 
-## 6.2.1 Exercise
+### 6.2.1 Exercise
 
 What’s the output of the following code?
 
@@ -121,6 +121,38 @@ cout << *p << " " << *q << endl;
 cout << *p << " " << *q << endl;
 delete p;
 delete q;
+```
+
+### 6.2.2 Exercise
+
+In the following program, which variable is stored in the stack?
+
+```cpp
+#include <iostream>
+
+void func1() {
+    int a = 42;
+    std::cout << "a: " << a << std::endl;
+}
+
+void func2() {
+    int* b = new int(42);
+    std::cout << "b: " << *b << std::endl;
+    delete b;
+}
+
+int c = 42;
+static int d = 42;
+
+int main() {
+    func1();
+    func2();
+
+    std::cout << "c: " << c << std::endl;
+    std::cout << "d: " << d << std::endl;
+
+    return 0;
+}
 ```
 
 ## 6.3 Dynamic Allocation of Arrays

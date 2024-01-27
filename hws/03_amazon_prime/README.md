@@ -133,7 +133,7 @@ Two cpp files are provided: [main.cpp](main.cpp) and [recommendation.cpp](recomm
 
 ### Existing Code in [main.cpp](main.cpp)
 
-A helper function named *process_one_line* is provided in the [main.cpp](main.cpp) file. This function will help you to parse information from the input file, and update the matrix. This function takes three arguments, the first argument is a two-dimensional integer pointer, which is expected to point to the beginning memory location of a two-dimensional array, known as the matrix pointer. This function assumes the caller allocates and reclaims memory for matrix. The second argument is the index i, indicating which row of the matrix will be updated. The third argument is the string line, which represents one line of the input file.
+A helper function named *process_one_line* is provided in the [main.cpp](main.cpp) file.
 
 ```cpp
 void process_one_line(int** matrix, int i, std::string& line){
@@ -148,7 +148,9 @@ void process_one_line(int** matrix, int i, std::string& line){
 }
 ```
 
-Let's take the first line of the [movieRatings.txt](movieRatings.txt) as an example.
+This function will help you to parse information from the input file, and update the matrix. This function takes three arguments, the first argument is a two-dimensional integer pointer, which is expected to point to the beginning memory location of a two-dimensional array, known as the matrix pointer. This function assumes the caller allocates and reclaims memory for matrix. The second argument is the index i, indicating which row of the matrix will be updated. The third argument is the string line, which represents one line of the input file.
+
+To understand what this function does, let's take the first line of the [movieRatings.txt](movieRatings.txt) as an example.
 
 ```console
 (87,3) (11,1) (14,1) (31,4) (101,4) (21,2) (23,1) (3,4) (38,5) (100,2) (109,1) (80,4) (15,3) (71,5) (52,5) (67,2) (78,2) (69,3) (72,2) (93,4) (35,3) (102,4) (81,4) (107,4) (79,4) (58,1) (105,5) (90,2) (6,3) (9,3) (53,4) (59,2) (62,2) (94,2) (54,2) (85,3) (57,5) (5,4) (32,4) (39,2) (42,2)
@@ -183,6 +185,30 @@ When feeding this line to the *process_one_line* function, it will set:
 In addition to this *process_one_line* function, the [main.cpp](main.cpp) also defines two global arrays, one array is named movies, which stores the index and the name of all the movies; the other array is named tvShows, which stores the index and the name of all the tv shows.
 
 ### Existing Code in [recommendation.cpp](recommendation.cpp)
+
+Two member functions of the **RecommendationSystem** class are provided in the [recommendation.cpp](recommendation.cpp) file. The prototype of these two functions are:
+
+```cpp
+void RecommendationSystem::recommendMovies(int userId, int numRecommendations, int* recommendedMovies) const;
+void RecommendationSystem::recommendShows(int userId, int numRecommendations, int* recommendedShows) const;
+```
+
+The first function returns an integer array, representd by its third argument - *recommendedMovies*. Each element of this array is an index of a movie that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
+
+The second function returns an integer array, representd by its third argument - *recommendedShows*. Each element of this array is an index of a tv show that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
+
+These two functions assume the **RecommendationSystem** class has two member variables, 
+
+```cpp
+int** userMovieRatingsMatrix;
+int** userShowRatingsMatrix;
+```
+
+where *userMovieRatingsMatrix* points to the memory location for the movie rating matrix, and *userShowRatingsMatrix* points to the memory location for the tv show rating matrix.
+
+The first argument (*int userId*) of these two functions is the user id, which represents the user whom the movies or the shows will be recommended to.
+
+The second argument (*int numRecommendations*) of these two functions is the number of recommendations, meaning how many movies or how many tv shows will be recommended to the user. The two functions are very similar, and here we will juse describe the first function, i.e., *RecommendationSystem::recommendMovies*. The function *RecommendationSystem::recommendMovies* will use some algorithm to find movies which the user might like, it will then store the index of these movies in the array represented by *recommendedMovies*. Ideally, the size of this array is equal to *numRecommendations*, and by the time this function returns, every element of the array should contain a valid index. However, it is possible there are not enough number of movies which the algorithm thinks the user might like. In order to handle such a case, this function expects the caller to allocate memory for the array and also initialize every element of the array to be -1. And when this function returns, the caller should check which element's value is not -1, and consider these elements as the valid index.
 
 ## Program Requirements & Submission Details
 

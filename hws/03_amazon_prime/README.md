@@ -7,8 +7,9 @@ In this assignment you will complete the implementation of a simple recommendati
 ## Learning Objectives
 
 - Practice managing dynamic memory.
-- Practice using arrays.
-<!--- Practice overloading operator<<, and understand why it is a bad idea to make it a member function.-->
+- Practice using two-dimensional arrays. 
+
+**Note**: in this README, we use the term two-dimensional array and the term matrix interchangeably, as in this assignment, we assume these two terms have the same meaning.
 
 ## Background
 
@@ -32,7 +33,7 @@ We assume there are 100 tv shows in total, indexed from 0 to 99.
 
 The index and the name of all the movies and shows are hardcoded in the [main.cpp](main.cpp), just so you do not need to parse more input files.
 
-You are required to define a class named **RecommendationSystem**. The class definition goes to recommendation.h and the implementation of the class goes to [recommendation.cpp](recommendation.cpp), which is provided but is incomplete. Your class must have (at least) two member variables, one is named userMovieRatingsMatrix, the other is named userShowRatingsMatrix, both are two-dimenstional *int* pointers, i.e., int\*\*. Two member functions to your class are provided, and you can call but should not modify these two functions.
+You are required to define a class named **RecommendationSystem**. The class definition goes to recommendation.h and the implementation of the class goes to [recommendation.cpp](recommendation.cpp), which is provided but is incomplete. Your class must have (at least) two member variables, one is named userMovieRatingsMatrix, the other is named userShowRatingsMatrix, both are two-dimensional *int* pointers, i.e., int\*\*. Two member functions to your class are provided, and you can call but should not modify these two functions.
 
 ## Input Files
 
@@ -55,14 +56,13 @@ Each line is representing one user. Each user uses the Amazon star rating (as sh
 
 ![alt text](images/starRatings.png "Amazon Star Rating")
 
-The first line of [movieRatings.txt](movieRatings.txt) means, user 0 gives a rating of 3 to movie 83, gives a rating of 1 to movie 11, gives a rating of 1 to movie 14, gives a rating of 4 to moving 31, gives a rating of 4 to movie 101, gives a rating of 2 to movie 21, etc.
+The first line of [movieRatings.txt](movieRatings.txt) means, user 0 gives a rating of 3 to movie 87, gives a rating of 1 to movie 11, gives a rating of 1 to movie 14, gives a rating of 4 to moving 31, gives a rating of 4 to movie 101, gives a rating of 2 to movie 21, etc.
 
 The second line of [movieRatings.txt](movieRatings.txt) means, user 1 gives a rating of 1 to movie 6, gives a rating of 2 to movie 61, gives a rating of 2 to movie 109, gives a rating of 4 to moving 87, gives a rating of 4 to movie 28, gives a rating of 5 to movie 38, etc.
 
 The 3rd line descirbes ratings given by user 2, the 4th line describes ratings given by user 3, etc.
 
-The file [showRatings.txt](showRatings.txt) can be interpreted in the same way. It is just ratings in that file are for tv shows.
-
+The file [showRatings.txt](showRatings.txt) can be interpreted in the same way. It is just ratings in that file are for tv shows. In this assignment, your program should read these two input files and store the movie ratings in a matrix, and store the show ratings in another matrix.
 
 ## Commands to Support & Program Output
 
@@ -127,9 +127,62 @@ Prime: TV shows we think you'll like:
 
 **Note**: all the expected files contain an empty line at the very end, to match with that, you just need to make sure all your print statements end with *std::endl;* (or just *endl;* if you don't use *std::*).
 
-## Helper Functions
+## Provided Code
 
-TBD.
+Two cpp files are provided: [main.cpp](main.cpp) and [recommendation.cpp](recommendation.cpp). These two files are incomplete, and you should add your code into these two files. In addition, you should create the recommendation.h file, in which you define the **RecommendationSystem** class.
+
+### Existing Code in [main.cpp](main.cpp)
+
+A helper function named *process_one_line* is provided in the [main.cpp](main.cpp) file. This function will help you to parse information from the input file, and update the matrix. This function takes three arguments, the first argument is a two-dimensional integer pointer, which is expected to point to the beginning memory location of a two-dimensional array, known as the matrix pointer. This function assumes the caller allocates and reclaims memory for matrix. The second argument is the index i, indicating which row of the matrix will be updated. The third argument is the string line, which represents one line of the input file.
+
+```cpp
+void process_one_line(int** matrix, int i, std::string& line){
+	std::istringstream iss(line);
+	// process each (index, value) pair
+        int index, value;
+        char openParen, comma, closeParen;
+	// when used with integers, it reads characters until it encounters a non-digit character or whitespace. However, when used with characters, it reads a single character.
+        while (iss >> openParen >> index >> comma >> value >> closeParen) {
+            matrix[i][index] = value;
+        }
+}
+```
+
+Let's take the first line of the [movieRatings.txt](movieRatings.txt) as an example.
+
+```console
+(87,3) (11,1) (14,1) (31,4) (101,4) (21,2) (23,1) (3,4) (38,5) (100,2) (109,1) (80,4) (15,3) (71,5) (52,5) (67,2) (78,2) (69,3) (72,2) (93,4) (35,3) (102,4) (81,4) (107,4) (79,4) (58,1) (105,5) (90,2) (6,3) (9,3) (53,4) (59,2) (62,2) (94,2) (54,2) (85,3) (57,5) (5,4) (32,4) (39,2) (42,2)
+```
+
+We know this first line represents movie ratings given by user 0. If this above line is stored in the *line* argument, passed to the *process_one_line* function, then this function will set:
+
+- matrix[0][87] to 3 // it's the first row, and that corresponds to matrix[0], and we the rating to movie 87 is 3.
+- matrix[0][11] to 1
+- matrix[0][14] to 1
+- matrix[0][31] to 4
+- matrix[0][101] to 4
+- matrix[0][21] to 2
+- etc.
+
+Let's present one more example, the following is the second line of the [movieRatings.txt](movieRatings.txt):
+
+```console
+(6,1) (61,2) (109,2) (87,4) (28,4) (38,5) (22,4) (11,2) (59,4) (68,3) (33,5) (71,3) (72,4) (15,4) (49,3) (94,1) (55,1) 
+```
+
+When feeding this line to the *process_one_line* function, it will set:
+
+- matrix[1][6] to 1 // // it's the second row, and that corresponds to matrix[1], and the rating to movie 6 is 1.
+- matrix[1][61] to 2
+- matrix[1][109] to 2
+- matrix[1][87] to 4
+- matrix[1][28] to 4
+- matrix[1][38] to 5
+- etc.
+
+In addition to this *process_one_line* function, the [main.cpp](main.cpp) also defines two global arrays, one array is named movies, which stores the index and the name of all the movies; the other array is named tvShows, which stores the index and the name of all the tv shows.
+
+### Existing Code in [recommendation.cpp](recommendation.cpp)
 
 ## Program Requirements & Submission Details
 

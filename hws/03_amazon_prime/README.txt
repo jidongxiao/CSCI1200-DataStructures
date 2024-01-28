@@ -1,4 +1,4 @@
-HOMEWORK 3: Amazon Prime Recommendation
+HOMEWORK 3: Amazon Prime Video Recommendation
 
 
 NAME:  < insert name >

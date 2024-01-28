@@ -1,5 +1,3 @@
-This README is still incomplete!
-
 # Homework 3 — Completing a Simple Amazon Prime Video Recommendation System
 
 In this assignment you will complete the implementation of a simple recommendation system called New York Recommender. Your program will mimic some behaviors of the Amazon Prime Video Recommendation System. Please read the entire handout before starting to code the assignment.
@@ -158,7 +156,7 @@ To understand what this function does, let's take the first line of the [movieRa
 
 We know this first line represents movie ratings given by user 0. If this above line is stored in the *line* argument, passed to the *process_one_line* function, then this function will set:
 
-- matrix[0][87] to 3 // it's the first row, and that corresponds to matrix[0], and we the rating to movie 87 is 3.
+- matrix[0][87] to 3 // it's the first row, and that corresponds to matrix[0], and the rating to movie 87 is 3.
 - matrix[0][11] to 1
 - matrix[0][14] to 1
 - matrix[0][31] to 4
@@ -186,7 +184,9 @@ In addition to this *process_one_line* function, the [main.cpp](main.cpp) also d
 
 ### Existing Code in [recommendation.cpp](recommendation.cpp)
 
-Two member functions of the **RecommendationSystem** class are provided in the [recommendation.cpp](recommendation.cpp) file. The prototype of these two functions are:
+Two member functions of the **RecommendationSystem** class are provided in the [recommendation.cpp](recommendation.cpp) file. You can use these two functions without understanding the internal of these two functions, but we will go over the internal of these two functions in lecture, just to satisfy some students' curiosity of how movies and tv shows are actually recommended. More specifically, how does Amazon or Netflix know which movies or tv shows I like? The detailed answer to this question is beyond the scope of this course, but we will still discuss it in lecture. To complete this assignment, you just need to know how to call these two functions and what these two functions return.
+
+The prototype of these two functions are:
 
 ```cpp
 void RecommendationSystem::recommendMovies(int userId, int numRecommendations, int* recommendedMovies) const;
@@ -214,9 +214,11 @@ The second argument (*int numRecommendations*) of these two functions is the num
 [20, 40, 60, -1, -1]
 ```
 
+On the other hand, if *numRecommendations* is 5, but the algorithm finds 20 movies the user might like, the function would only return 5 indices. In other words, the function will never return more than *numRecommendations* indices.
+
 ## Program Requirements & Submission Details
 
-In this assignment, you are NOT allowed to use std::vector anywhere in your code. You must use dynamic memory to store the movie rating matrix, and the show rating matrix.
+In this assignment, **you are NOT allowed to use std::vector anywhere in your code**. You must use dynamic memory to store the movie rating matrix, and the show rating matrix.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget

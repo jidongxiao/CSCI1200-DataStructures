@@ -193,9 +193,9 @@ void RecommendationSystem::recommendMovies(int userId, int numRecommendations, i
 void RecommendationSystem::recommendShows(int userId, int numRecommendations, int* recommendedShows) const;
 ```
 
-The first function returns an integer array, representd by its third argument - *recommendedMovies*. Each element of this array is an index of a movie that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
+The first function returns an integer array, representd by its third argument - *int\* recommendedMovies*. Each element of this array is an index of a movie that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
 
-The second function returns an integer array, representd by its third argument - *recommendedShows*. Each element of this array is an index of a tv show that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
+The second function returns an integer array, representd by its third argument - *int\* recommendedShows*. Each element of this array is an index of a tv show that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
 
 These two functions assume the **RecommendationSystem** class has two member variables, 
 
@@ -208,7 +208,11 @@ where *userMovieRatingsMatrix* points to the memory location for the movie ratin
 
 The first argument (*int userId*) of these two functions is the user id, which represents the user whom the movies or the shows will be recommended to.
 
-The second argument (*int numRecommendations*) of these two functions is the number of recommendations, meaning how many movies or how many tv shows will be recommended to the user. The two functions are very similar, and here we will juse describe the first function, i.e., *RecommendationSystem::recommendMovies*. The function *RecommendationSystem::recommendMovies* will use some algorithm to find movies which the user might like, it will then store the index of these movies in the array represented by *recommendedMovies*. Ideally, the size of this array is equal to *numRecommendations*, and by the time this function returns, every element of the array should contain a valid index. However, it is possible there are not enough number of movies which the algorithm thinks the user might like. In order to handle such a case, this function expects the caller to allocate memory for the array and also initialize every element of the array to be -1. And when this function returns, the caller should check which element's value is not -1, and consider these elements as the valid index.
+The second argument (*int numRecommendations*) of these two functions is the number of recommendations, meaning how many movies or how many tv shows will be recommended to the user. The two functions are very similar, and here we will just describe the first function, i.e., *RecommendationSystem::recommendMovies*. The function *RecommendationSystem::recommendMovies* will use some algorithm to find movies which the user might like, it will then store the index of these movies in the array represented by *recommendedMovies*. Ideally, the size of this array is equal to *numRecommendations*, and by the time this function returns, every element of the array should contain a valid index. However, it is possible there are not enough number of movies which the algorithm thinks the user might like. In order to handle such a case, this function expects the caller to allocate memory for the array and also initialize every element of the array to be *-1*. And when this function returns, the caller should check which element's value is not *-1*, and only consider these elements as the valid index, and ignore the elements whose is *-1*. You can assume all valid indices are stored at the beginning of the array, and all *-1*s (if any) are stored at the end of the array. For example, if *numRecommendations* is 5, but the algorithm only finds 3 movies the user might like, and if the index of these 3 movies are 20, 40, 60, respectively, then the array returned by this function will be:
+
+```console
+[20, 40, 60, -1, -1]
+```
 
 ## Program Requirements & Submission Details
 

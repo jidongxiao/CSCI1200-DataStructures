@@ -236,7 +236,7 @@ README.txt file.
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (6 pts)
    - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Improper uses or omissions of const and reference. (-1)

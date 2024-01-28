@@ -230,14 +230,14 @@ README.txt file.
 
 ## Rubric
 
-14 pts
+18 pts
 
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (6 pts)
-   - No credit (significantly incomplete implementation) (-6)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (8 pts)
+   - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Improper uses or omissions of const and reference. (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
@@ -246,12 +246,12 @@ README.txt file.
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must use dynamic memory for the implementation.) (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
+ - DATA REPRESENTATION (Must use dynamic memory for the implementation.) (7 pts)
+   - No credit (significantly incomplete implementation). (-7)
    - Does not define the RecommendationSystem class. (-5)
    - Does not use dynamic memory to store the movie rating matrix. (-5)
    - Does not use dynamic memory to store the show rating matrix. (-5)
-   - Uses std::vector anywhere in the code. (-5)
+   - Uses std::vector anywhere in the code. (-7)
    - Member variables are public. (-2)
 <!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

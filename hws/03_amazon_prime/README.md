@@ -154,7 +154,7 @@ To understand what this function does, let's take the first line of the [movieRa
 (87,3) (11,1) (14,1) (31,4) (101,4) (21,2) (23,1) (3,4) (38,5) (100,2) (109,1) (80,4) (15,3) (71,5) (52,5) (67,2) (78,2) (69,3) (72,2) (93,4) (35,3) (102,4) (81,4) (107,4) (79,4) (58,1) (105,5) (90,2) (6,3) (9,3) (53,4) (59,2) (62,2) (94,2) (54,2) (85,3) (57,5) (5,4) (32,4) (39,2) (42,2)
 ```
 
-We know this first line represents movie ratings given by user 0. If this above line is stored in the *line* argument, passed to the *process_one_line* function, then this function will set:
+We know this first line represents movie ratings given by user 0. If this above line is stored in the *line* argument as an std::string, passed to the *process_one_line* function, then this function will set:
 
 - matrix[0][87] to 3 // it's the first row, and that corresponds to matrix[0], and the rating to movie 87 is 3.
 - matrix[0][11] to 1
@@ -172,7 +172,7 @@ Let's present one more example, the following is the second line of the [movieRa
 
 When feeding this line to the *process_one_line* function, it will set:
 
-- matrix[1][6] to 1 // // it's the second row, and that corresponds to matrix[1], and the rating to movie 6 is 1.
+- matrix[1][6] to 1 // it's the second row, and that corresponds to matrix[1], and the rating to movie 6 is 1.
 - matrix[1][61] to 2
 - matrix[1][109] to 2
 - matrix[1][87] to 4

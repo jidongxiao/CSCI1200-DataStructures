@@ -35,7 +35,6 @@ void RecommendationSystem::recommendMovies(int userId, int numRecommendations, i
 				magnitudeB += userMovieRatingsMatrix[otherUserId][movieId] * userMovieRatingsMatrix[otherUserId][movieId];
 			}
 
-			// std::cout << "dotProduct is " << dotProduct << " magnitudeA is " << magnitudeA <<  " magnitudeB is " << magnitudeB << " " << std::endl;
 			// avoid division by zero
 			// the similarity should be in the range of [0,1], with 1 being perfectly similar, and 0 being no similarity.
 			double similarity = (magnitudeA > 0.0 && magnitudeB > 0.0) ? dotProduct / (sqrt(magnitudeA) * sqrt(magnitudeB)) : 0.0;
@@ -65,7 +64,6 @@ void RecommendationSystem::recommendMovies(int userId, int numRecommendations, i
 					weightedSum += similarityScores[otherUserId] * userMovieRatingsMatrix[otherUserId][movieId];
 					totalSimilarity += std::abs(similarityScores[otherUserId]);
 					count++;
-					// std::cout << "weightedSum is " << weightedSum << " similarity is " << similarityScores[otherUserId] << " total similarity is " << totalSimilarity <<  " count is " << count << std::endl;
 				}
 			}
 
@@ -98,7 +96,7 @@ void RecommendationSystem::recommendShows(int userId, int numRecommendations, in
 		return;
 	}
 
-	// Calculate similarity scores between the target user (userId) and other users
+	// calculate similarity scores between the target user (userId) and other users
 	// compute the similarity between the target user and all other users based on their show ratings using the cosine similarity measure. The resulting similarity scores are stored in the similarityScores array. This information can then be used to recommend shows to the target user based on the preferences of similar users.
 	double similarityScores[numUsers];
 	for(int i=0; i<numUsers; i++){
@@ -108,7 +106,7 @@ void RecommendationSystem::recommendShows(int userId, int numRecommendations, in
 
 	for (int otherUserId = 0; otherUserId < numUsers; ++otherUserId) {
 		if (otherUserId != userId) {
-			// Calculate similarity using a simple dot product
+			// calculate similarity using a simple dot product
 			double dotProduct = 0.0;
 			double magnitudeA = 0.0;
 			double magnitudeB = 0.0;

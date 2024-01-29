@@ -438,7 +438,7 @@ or strange output.
 hog system resources. A program with a memory leak may waste so much memory it causes all programs on
 the system to slow down significantly or it may crash the program or the whole operating system if the system
 runs out of memory (this takes a while on modern computers with lots of RAM & harddrive space).
-- For many future homeworks, Submitty will be configured to run your code with Dr. Memory to search for
+- For many future homeworks, Submitty will be configured to run your code with Dr. Memory or Valgrind to search for
 memory problems and present the output with the submission results. For full credit your program must be
 memory error and memory leak free!
 - A program that seems to run perfectly fine on one computer may still have significant memory errors. Running

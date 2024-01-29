@@ -23,14 +23,11 @@ When everyone has finished writing code for the drawing, discuss your answers as
 
 ## Checkpoint 2 & 3:
 
-Checkpoints 2 and 3 focus on using a memory debugger. It is highly recommended that you thoroughly read
-the instructions for Checkpoint 2 and Checkpoint 3 before starting.
+Checkpoints 2 and 3 focus on using a memory debugger. It is highly recommended that you thoroughly read the instructions for Checkpoint 2 and Checkpoint 3 before starting.
 
-Memory debuggers will be a useful tool in many of the assignments this semester, and in C++ development
-if you work with the language outside of this course. While a traditional debugger lets you step through your
-code and examine variables, a memory debugger instead reports memory-related errors during execution and
-can help find memory leaks after your program has terminated. The next time you see a “segmentation
-fault”, or it works on your machine but not on Submitty, try running a memory debugger!
+Memory debuggers will be a useful tool in many of the assignments this semester, and in C++ development if you work with the language outside of this course. While a traditional debugger lets you step through your code and examine variables, a memory debugger instead reports memory-related errors during execution and can help find memory leaks after your program has terminated. The next time you see a “segmentation fault”, or it works on your machine but not on Submitty, try running a memory debugger!
+
+Read lecture notes [6.7](../../lectures/06_memory#67-memory-debugging), [6.8](../../lectures/06_memory#68-sample-buggy-program), [6.9](../../lectures/06_memory#69-using-dr-memory-httpwwwdrmemoryorg), [6.10](../../lectures/06_memory#610-using-valgrind-httpvalgrindorg), and [6.11](../../lectures/06_memory#610-using-valgrind-httpvalgrindorg), and try to understand the example buggy program code and what DrMemory or Valgrind say about this buggy program. Ask questions if you don't understand the code or if you don't understand the output of DrMemory or the output of Valgrind.
 
 Please download the following 4 files needed for this lab:
 

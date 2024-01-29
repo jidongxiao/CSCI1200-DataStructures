@@ -50,7 +50,7 @@ Two input files are provided: [movieRatings.txt](movieRatings.txt) and [showRati
 (101,4) (37,2) (24,1) (0,4) (63,2) (71,5) (64,3) (2,4) (65,1) (45,4) (7,4) (50,2) (81,2) (93,1) (42,5) (83,4) (29,2) (21,2) (51,5) (86,4) (82,1) (108,2) (23,4) (40,2) (89,4) (88,3) (78,5) (107,4) (9,3) (56,5) (60,5) (46,5) (44,4) (67,3) (18,3) (10,4) (103,1) (8,5) (34,3) (12,5) (96,5) (35,2) (68,3) (61,1) (58,1) (20,3) (100,4) (97,4) (47,5) (95,1) (92,4) (32,5) (27,5) (52,4) (25,4) (5,4) (85,4) (57,2) (30,3) (76,4) (72,5) (1,5)
 ```
 
-Each line is representing one user. Each user uses the Amazon star rating (as show in the following image) to rate a movie or a tv show (in the range of 1 to 5).
+Each line is representing one user. Each user uses the Amazon star rating (as shown in the following image) to rate a movie or a tv show (in the range of 1 to 5).
 
 ![alt text](images/starRatings.png "Amazon Star Rating")
 
@@ -242,10 +242,10 @@ README.txt file.
    - Improper uses or omissions of const and reference. (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
+   - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-   - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (Must use dynamic memory for the implementation.) (7 pts)
    - No credit (significantly incomplete implementation). (-7)
    - Does not define the RecommendationSystem class. (-5)

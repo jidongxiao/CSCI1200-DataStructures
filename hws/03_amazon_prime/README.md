@@ -97,7 +97,7 @@ The Crown
 
 Note that these recommendations are specifically for this user - as specified by the command line argument userID. Apparently your program will produce different recommendations for different users.
 
-1. in the case where the number of command line argument is not 6, your program should use std::cerr to print the following message:
+1. in the case where the number of command line arguments is not 6, your program should use std::cerr to print the following message:
 
 ```console
 Usage: nyrecommender.exe movieRatings.txt showRatings.txt output.txt userID numRecommendations

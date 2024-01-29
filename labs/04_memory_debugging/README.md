@@ -94,7 +94,7 @@ and think about the following:
 1. How does the output from your memory debugger differ when you compile your program with the -g
 flag compared to when you leave it out?
 2. How would you rewrite the for loop in part 2 to use the bracket [] operator instead of pointer syntax?
-3. For DrMemory users, you wouldve encountered all of these errors in parts 1, 2, or 3 of Checkpoint 2:
+3. For DrMemory users, you would have encountered all of these errors in parts 1, 2, or 3 of Checkpoint 2:
 
 ```console
 UNITIALIZED READ

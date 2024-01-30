@@ -6,14 +6,9 @@
 - Lots of Examples!
 
   #Test 1
-  - We are grading today and this weekend
-  - We hope to release the Test 1 grades by Monday
- 
-    HW3 is now available
-
-    Use office hours next week!
-
-    Please use the discussion forum to ask questions rather than email to prof or TA -- there is a chance other students have the same question & you'll get a faster reply!
+  - This **Thursday, 02/01/2024 from 6-7:50pm**
+  - More info in Lecture 6 notes https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/lectures/06_memory
+  - No office hours during exam slot and on Friday 02/02/2024
 
 ## 7.1 Algorithm Analysis
 

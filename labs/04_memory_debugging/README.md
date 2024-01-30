@@ -7,7 +7,7 @@
 
 - Introduce yourself to your teammate. Share to your teammate something about yourself (e.g. hobbies, sports, favorite music, etc). Learn something new about your teammate (even if you already know the teammate).
 
-- Our TA/mentor will pick a code snippet for each student, from the following 5 code snippets. Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the code snippet. Use a ‘?’ to represent uninitialized values.
+- Our TA/mentor will pick 3 code snippets for each student, from the following 5 code snippets. Following the conventions used in Data Structures lecture for memory diagramming, draw a picture of the stack and the heap that result from executing the code snippet. Use a ‘?’ to represent uninitialized values.
 
 [Code Snippet 1](fruits.cpp)  
 [Code Snippet 2](grains.cpp)  

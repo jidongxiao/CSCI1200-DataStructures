@@ -197,7 +197,7 @@ The first function returns an integer array, representd by its third argument - 
 
 The second function returns an integer array, representd by its third argument - *int\* recommendedShows*. Each element of this array is an index of a tv show that will be recommended to the user. It is the caller's responsibility to allocate and reclaim memory for this array.
 
-These two functions assume the **RecommendationSystem** class has two member variables, 
+These two functions assume the **RecommendationSystem** class has these two member variables, 
 
 ```cpp
 int** userMovieRatingsMatrix;
@@ -215,6 +215,8 @@ The second argument (*int numRecommendations*) of these two functions is the num
 ```
 
 On the other hand, if *numRecommendations* is 5, but the algorithm finds 20 movies the user might like, the function would only return 5 indices. In other words, the function will never return more than *numRecommendations* indices.
+
+In addition, the two functions also assume the **RecommendationSystem** class has defined the number of users, the number of movies, the number of tv shows as its member variables, named numUsers, numMovies, numShows, respectively.
 
 ## Program Requirements & Submission Details
 

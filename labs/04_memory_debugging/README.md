@@ -115,3 +115,7 @@ Mismatched free() / delete / delete []
 ```
 
 **To receive credit for this checkpoint**, discuss your answers to these questions with a TA or mentor.
+
+## Checkpoint 4
+
+Checkpoint 4 will be available at the start of Wednesday’s lab.

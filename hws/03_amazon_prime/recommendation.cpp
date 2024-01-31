@@ -15,12 +15,11 @@ void RecommendationSystem::recommendMovies(int userId, int numRecommendations, i
 
 	// calculate similarity scores between the target user (userId) and other users
 	// compute the similarity between the target user and all other users based on their movie ratings using the cosine similarity measure. The resulting similarity scores are stored in the similarityScores array. This information can then be used to recommend movies to the target user based on the preferences of similar users.
-	double similarityScores[numUsers];
+	double* similarityScores = new double[numUsers];
 	for(int i=0; i<numUsers; i++){
 		// initialize every element in the array to 0.0.
 		similarityScores[i] = 0.0;
 	};
-
 
 	for (int otherUserId = 0; otherUserId < numUsers; ++otherUserId) {
 		if (otherUserId != userId) {
@@ -83,6 +82,8 @@ void RecommendationSystem::recommendMovies(int userId, int numRecommendations, i
 		}
 	}
 
+	// reclaim memory.
+	delete [] similarityScores;
 	return;
 }
 
@@ -98,7 +99,7 @@ void RecommendationSystem::recommendShows(int userId, int numRecommendations, in
 
 	// calculate similarity scores between the target user (userId) and other users
 	// compute the similarity between the target user and all other users based on their show ratings using the cosine similarity measure. The resulting similarity scores are stored in the similarityScores array. This information can then be used to recommend shows to the target user based on the preferences of similar users.
-	double similarityScores[numUsers];
+	double* similarityScores = new double[numUsers];
 	for(int i=0; i<numUsers; i++){
 		// initialize every element in the array to 0.0.
 		similarityScores[i] = 0.0;
@@ -155,5 +156,7 @@ void RecommendationSystem::recommendShows(int userId, int numRecommendations, in
 		}
 	}
 
+	// reclaim memory.
+	delete [] similarityScores;
 	return;
 }

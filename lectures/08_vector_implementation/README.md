@@ -31,8 +31,6 @@ public:
 // MEMBER FUNCTIONS AND OTHER OPERATORS
 T& operator[] (unsigned int i);
 void push_back(const T& t);
-void clear();
-bool empty() const;
 unsigned int size() const;
 ```
 

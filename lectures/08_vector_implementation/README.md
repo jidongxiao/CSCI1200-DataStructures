@@ -30,9 +30,7 @@ In creating our own version of the STL vector class, we will start by considerin
 public:
 // MEMBER FUNCTIONS AND OTHER OPERATORS
 T& operator[] (unsigned int i);
-const T& operator[] (unsigned int i) const;
 void push_back(const T& t);
-void resize(unsigned int n, const T& fill_in_value = T());
 void clear();
 bool empty() const;
 unsigned int size() const;
@@ -55,12 +53,7 @@ T”. In the actual text of the code files, templated member functions are often
 declaration.
 
 - The templated functions defined outside the template class declaration must be preceded by the phrase:
-template &lt;class T&gt; and then when Vec is referred to it must be as Vec&lt;T&gt;. For example, for member
-function create (two versions), we write:
-
-```cpp
-template <class T> void Vec<T>::create(...
-```
+template &lt;class T&gt; and then when Vec is referred to it must be as Vec&lt;T&gt;. 
 
 ## 8.3 Syntax and Compilation
 

@@ -2,11 +2,12 @@ In-class discussion
 
 Discuss the following questions with students around you.
 
-1. Is it a good choice to use the getline() function to read the input files for this program? Why?
-2. Do we need a getter/setter for each of the member variables?
+1. Is it a good choice to use the input stream operator (i.e., >>) to read the input files for this program? Why?
+2. Is it a good choice to use the getline() function to read the input files for this program? Why?
+3. Do we need a getter/setter for each of the member variables?
 
-3. What should the main function do?
-4. When allocating memory for the two matries, do we need to initialize each element of the matrix?
+4. What should the main function do?
+5. When allocating memory for the two matries, do we need to initialize each element of the matrix?
 
-5. What components of this program will use heap memory?
-6. Where in the program shall we call delete so as to release the allocated heap memory?
+6. What components of this program will use heap memory?
+7. Where in the program shall we call delete so as to release the allocated heap memory?

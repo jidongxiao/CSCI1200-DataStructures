@@ -15,13 +15,13 @@ In creating our own version of the STL vector class, we will start by considerin
 ```cpp
 public:
 // MEMBER FUNCTIONS AND OTHER OPERATORS
-T& operator[] (size_type i);
-const T& operator[] (size_type i) const;
+T& operator[] (unsigned int i);
+const T& operator[] (unsigned int i) const;
 void push_back(const T& t);
-void resize(size_type n, const T& fill_in_value = T());
+void resize(unsigned int n, const T& fill_in_value = T());
 void clear();
 bool empty() const;
-size_type size() const;
+unsigned int size() const;
 ```
 
 - To implement our own generic (a.k.a. templated) vector class, we will implement all of these operations,
@@ -77,13 +77,7 @@ member function should return,
 - m_alloc is the total number of slots in the dynamically allocated block of memory.
 Drawing pictures, which we will do in class, will help clarify this, especially the distinction between m_size and m_alloc.
 
-## 8.5 Typedefs
-
-- Several types are created through typedef statements in the first public area of Vec. Once created the names
-are used as ordinary type names. For example Vec&lt;int&gt;::size type is the return type of the size() function,
-defined here as an unsigned int.
-
-## 8.6 operator[]
+## 8.5 operator[]
 
 Access to the individual locations of a Vec is provided through operator[]. Syntactically, use of this operator
 is translated by the compiler into a call to a function called operator[]. For example, if v is a Vec&lt;int&gt;,
@@ -99,7 +93,7 @@ In most classes there are two versions of operator[]:
 – A non-const version returns a reference to m_data[i]. This is applied to non-const Vec objects.
 – A const version is the one called for const Vec objects. This also returns m_data[i], but as a const reference, so it can not be modified.
 
-## 8.7 Default Versions of Assignment Operator and Copy Constructor Are Dangerous!
+## 8.6 Default Versions of Assignment Operator and Copy Constructor Are Dangerous!
 
 Before we write the copy constructor and the assignment operator, we consider what would happen if we didn’t write them.
 - C++ compilers provide default versions of these if they are not provided. These defaults just copy the values
@@ -114,7 +108,7 @@ In other words, it would construct each member variable from the corresponding m
 dangerous and incorrect behavior for the Vec class. We don’t want to just copy the m_data pointer. We really
 want to create a copy of the entire array! Let’s look at this more closely...
 
-## 8.8 Exercise
+## 8.7 Exercise
 
 Suppose we used the default version of the assignment operator and copy constructor in our Vec&lt;T&gt; class. What
 would be the output of the following program? Assume all of the operations except the copy constructor behave as
@@ -131,7 +125,7 @@ cout << u[i] << " " << v[i] << endl;
 Explain what happens by drawing a picture
 of the memory of both u and v.
 
-## 8.9 Classes With Dynamically Allocated Memory
+## 8.8 Classes With Dynamically Allocated Memory
 
 For Vec (and other classes with dynamically-allocated memory) to work correctly, each object must do its own
 dynamic memory allocation and deallocation. We must be careful to keep the memory of each object instance
@@ -143,7 +137,7 @@ the object itself goes out of scope (through what’s called a destructor).
   – Assignment operator
   – Destructor
 
-## 8.10 The “this” pointer
+## 8.9 The “this” pointer
 
 All class objects have a special pointer defined called this which simply points to the current class object, and
 it may not be changed.
@@ -153,7 +147,7 @@ it may not be changed.
   - Check to see when an assignment is self-referencing.
   - Return a reference to the current object.
 
-## 8.11 Copy Constructor
+## 8.10 Copy Constructor
 
 This constructor must dynamically allocate any memory needed for the object being constructed, copy the
 contents of the memory of the passed object to this new memory, and set the values of the various member
@@ -161,7 +155,7 @@ variables appropriately.
 - Exercise: In our Vec class, the actual copying is done in a private member function called copy. Write the
 private member function copy.
 
-## 8.12 Assignment Operator
+## 8.11 Assignment Operator
 
 Assignment operators of the form:
 ```cpp
@@ -203,13 +197,13 @@ A = B;
 
 These two lines will: the first line creates the object A, and the second line invokes the assignment operator.
 
-## 8.13 Destructor (the “constructor with a tilde/twiddle”)
+## 8.12 Destructor (the “constructor with a tilde/twiddle”)
 
 The destructor is called implicitly when an automatically-allocated object goes out of scope or a dynamically allocated object is deleted. It can never be called explicitly!
 - The destructor is responsible for deleting the dynamic memory “owned” by the class.
 - The syntax of the function definition is a bit weird. The ~ has been used as a bit-wise inverse or logic negation in other contexts.
 
-## 8.14 Increasing the Size of the Vec
+## 8.13 Increasing the Size of the Vec
 
 - push_back(T const& x) adds to the end of the array, increasing m_size by one T location. But what if the allocated array is full (m_size == m_alloc)?
 1. Allocate a new, larger array. The best strategy is generally to double the size of the current array. Why?
@@ -219,12 +213,12 @@ The destructor is called implicitly when an automatically-allocated object goes 
 
 - Only when we are sure there is enough room in the array should we actually add the new object to the back of the array.
 
-## 8.15 Exercises
+## 8.14 Exercises
 
 - Finish the definition of Vec::push_back.
 - Write the Vec::resize function.
 
-## 8.16 Leetcode Exercises
+## 8.15 Leetcode Exercises
 
 - [Leetcode problem 27: Remove Element](https://leetcode.com/problems/remove-element/). Solution: [p27_removeelement.cpp](../../leetcode/p27_removeelement.cpp)
 - [Leetcode problem 263: Ugly Number](https://leetcode.com/problems/ugly-number/). Solution: [p263_uglynumber.cpp](../../leetcode/p263_uglynumber.cpp)

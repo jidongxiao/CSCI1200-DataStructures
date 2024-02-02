@@ -215,8 +215,13 @@ The destructor is called implicitly when an automatically-allocated object goes 
 
 ## 8.14 Exercises
 
-- Finish the definition of Vec::push_back.
-- Write the Vec::resize function.
+Match up the line of code with the function that is called. Each letter is used exactly once.
+
+Foo f1;			a) assignment operator
+Foo\* f2; 		b) destructor
+f2 = new Foo(f1); 	c) copy constructor
+f1 = \*f2;	 	d) default constructor
+delete f2;		e) none of the above
 
 ## 8.15 Leetcode Exercises
 

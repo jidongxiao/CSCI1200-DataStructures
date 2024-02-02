@@ -18,18 +18,18 @@ int main(){
 	teams.push_back("harvard");
 
 	// we can use a type alias defined inside a class even if there is no object of that class. The type alias becomes part of the class's scope and can be used anywhere in your code where the class's scope is visible. although no object of Vec is created in this code, the type alias size_type is still accessible because it is part of the class's scope.
-	for(Vec<int>::size_type i = 0; i < teams.size(); i++){
+	for(unsigned int i = 0; i < teams.size(); i++){
 		std::cout << teams[i] << std::endl;
 	}
 	std::cout<<"========="<<std::endl;
 	teams.pop_back();
-	for(Vec<int>::size_type i = 0; i < teams.size(); i++){
+	for(unsigned int i = 0; i < teams.size(); i++){
 		std::cout << teams[i] << std::endl;
 	}
 	std::cout<<"========="<<std::endl;
 
 	//teams.erase(2);
-	for(Vec<int>::size_type i = 0; i < teams.size(); i++){
+	for(unsigned int i = 0; i < teams.size(); i++){
 		std::cout << teams[i] << std::endl;
 	}
 	std::cout<<"========="<<std::endl;
@@ -46,8 +46,7 @@ int main(){
 	std::cout<<"========="<<std::endl;
 
 	// equivalent to Vector<double> w(v), w is a copy of the elements in v.
-	// we use the const keyword in front of a variable definition to indicate that the value of the variable cannot be changed after it is initialized.
-	const Vec<double> w = v;
+	Vec<double> w = v;
 	for (unsigned int i = 0; i < v.size(); ++i){
 		std::cout << "w[" << i << "] is " << w[i] << " and v[" << i << "] is " << v[i] << std::endl;
 	}

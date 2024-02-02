@@ -1,119 +1,79 @@
-#ifndef Vec_h_
-#define Vec_h_
-// Simple implementation of the vector class, revised from Koenig and Moo.  This 
-// class is implemented using a dynamically allocated array (of templated type T).  
-// We ensure that that m_size is always <= m_alloc and when a push_back or resize 
-// call would violate this condition, the data is copied to a larger array.
+template<class T>
+class Vec{
+public:
+    // default constructor
+    Vec(){
+        m_data = new T[2];
+	m_size = 0;
+	capacity = 2;
+    }
 
-template <class T> class Vec {
+    // other constructor
+    Vec(int size, const T& val){
+        m_data = new T[size];
+	m_size = size;
+	capacity = size;
+	for(int i=0;i<size;i++){
+	    m_data[i] = val;
+	}
+    }
 
-public:   
-  // TYPEDEFS
-  typedef unsigned int size_type;
+    // copy constructor
+    Vec(const Vec& other){
+        capacity = other.capacity;
+	m_size = other.m_size;
+        m_data = new T[capacity];
+	for(unsigned int i=0;i<m_size;i++){
+            m_data[i] = other.m_data[i];
+	}
+    }
 
-  // CONSTRUCTORS, ASSIGNMNENT OPERATOR, & DESTRUCTOR
-  Vec() { this->create(); }
-  Vec(size_type n, const T& t = T()) { this->create(n, t); }
-  Vec(const Vec& v) { copy(v); }
-  Vec& operator=(const Vec& v); 
-  ~Vec() { delete [] m_data; }
+    // destructor
+    ~Vec(){
+        delete [] m_data;
+    }
 
-  // MEMBER FUNCTIONS AND OTHER OPERATORS
-  T& operator[] (size_type i) { return m_data[i]; }
-  const T& operator[] (size_type i) const { return m_data[i]; }
-  void push_back(const T& t);
-  void resize(size_type n, const T& fill_in_value = T());
-  void clear() { delete [] m_data;  create(); }
-  bool empty() const { return m_size == 0; }
-  size_type size() const { return m_size; }
+    // assignment operator
+    Vec<T>& operator=(const Vec& other){
+        if(this != &other){
+            capacity = other.capacity;
+	    m_size = other.m_size;
+	    m_data = new T[m_size];
+	    for(unsigned int i=0;i<m_size;i++){
+                m_data[i] = other.m_data[i];
+	    }
+	}
+	return *this;
+    }
 
-private:  
-  // PRIVATE MEMBER FUNCTIONS
-  void create();
-  void create(size_type n, const T& val);
-  void copy(const Vec<T>& v); 
+    // [] operator
+    T& operator[](int i){
+	return m_data[i];
+    }
 
-  // REPRESENTATION
-  T* m_data;         // Pointer to first location in the allocated array
-  size_type m_size;  // Number of elements stored in the vector
-  size_type m_alloc; // Number of array locations allocated,  m_size <= m_alloc
+    unsigned int size(){
+	    return m_size;
+    }
+
+    void push_back(const T& val){
+	    if(m_size >= capacity){
+                capacity = capacity * 2;
+		// allocate memory for the new array and move content of m_data to the new array.
+                T* temp = new T[capacity];
+		for(unsigned int i=0;i<m_size;i++){
+                    temp[i] = m_data[i];
+		}
+		delete [] m_data;
+		m_data = temp;
+	    }
+	    m_data[m_size] = val;
+            m_size++;
+    }
+    void pop_back(){
+        m_size--;
+    }
+private:
+    int capacity;
+    int m_size;
+    T* m_data;
 };
-
-// Create an empty vector (null pointers everywhere).
-template <class T>  void Vec<T>::create() {
-  m_data = NULL;
-  m_size = m_alloc = 0;  // No memory allocated yet
-}
-
-// Create a vector with size n, each location having the given value
-template <class T> void Vec<T>::create(size_type n, const T& val) {
-  m_data = new T[n];
-  m_size = m_alloc = n;
-  for (size_type i = 0; i < m_size; i++) {
-    m_data[i] = val;
-  }
-}
-
-// Assign one vector to another, avoiding duplicate copying.
-template <class T> Vec<T>& Vec<T>::operator=(const Vec<T>& v) {
-  if (this != &v) {
-    delete [] m_data;
-    this -> copy(v);
-  }
-  return *this;
-}
-
-// Create the vector as a copy of the given vector. 
-template <class T> void Vec<T>::copy(const Vec<T>& v) {
-
-
-
-
-
-
-
-
-}
-
-// Add an element to the end, resize if necesssary. 
-template <class T> void Vec<T>::push_back(const T& val) {
-  if (m_size == m_alloc) { 
-    // Allocate a larger array, and copy the old values
-
-
-
-
-
-
-
-
-
-
-  }
-  // Add the value at the last location and increment the bound
-  m_data[m_size] = val;
-  ++ m_size;
-}
-
-// If n is less than or equal to the current size, just change the size.  If n is 
-// greater than the current size, the new slots must be filled in with the given value. 
-// Re-allocation should occur only if necessary.  push_back should not be used.
-template <class T> void Vec<T>::resize(size_type n, const T& fill_in_value) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-#endif

@@ -8,6 +8,17 @@
 - Templated classes (including compilation and instantiation of templated classes)
 - Copy constructors, assignment operators, and destructors
 
+## Recursion Review
+
+What is the value of fun(2)?
+
+```cpp
+int fun(int n) {
+if (n == 4) return n;
+else return 2*fun(n+1);
+}
+```
+
 ## 8.1 Vector Public Interface
 
 In creating our own version of the STL vector class, we will start by considering the public interface:

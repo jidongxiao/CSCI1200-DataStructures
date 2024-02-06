@@ -48,7 +48,7 @@ Keep in mind that users can select multiple categories, in the above two screens
 
 When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output something similar to what Yelp does. The following is an example:
 
-![alt text](images/alibaba.png "Alibaba")
+![alt text](images/alibaba.jpg "Alibaba")
 
 ## Provided Code
 

@@ -167,13 +167,13 @@ Add several test cases to test_vec.cpp to show that the function works as expect
 notation of your solution in terms of n the size of the vector, and e the number of occurences of the input
 element in the vector?
 
-*Note*: when you are in a non-member function, and you want to use the iterator, which is a member type of the Vec&lt;T&gt; class, you have to use the typename keyword before the Vec&lt;T&gt;:: scope. For example, if you want to define an iterator named *itr*, you can do it like this:
+*Note*: when you are in a non-member function, and you want to use the iterator, which is a member type of the Vec&lt;T&gt; class, you have to use the *typename* keyword before the Vec&lt;T&gt;:: scope. For example, if you want to define an iterator named *itr*, you can do it like this:
 
 ```console
 typename Vec<T>::iterator itr
 ```
 
-without this typename keyword, if you define the iterator *itr* like this:
+without this *typename* keyword, if you define the iterator *itr* like this:
 
 ```console
 Vec<T>::iterator itr
@@ -185,7 +185,7 @@ you will get a compiler error saying:
 error: need ‘typename’ before ‘Vec<T>::iterator’ because ‘Vec<T>’ is a dependent scope
 ```
 
-And the reason that this keyword typename is needed, is because without it, the compiler would think that Vec&lt;T&gt;::iterator is a member variable of the Vec&lt;T&gt; class, but this *typename* explicitly tells the compiler that Vec&lt;T&gt;::iterator is a type, rather than a member variable.
+And the reason that this keyword *typename* is needed, is because without it, the compiler would think that Vec&lt;T&gt;::iterator is a member variable of the Vec&lt;T&gt; class, but this *typename* explicitly tells the compiler that Vec&lt;T&gt;::iterator is a type, rather than a member variable.
 
 **To complete this checkpoint**, show a TA your debugged solution for remove_matching_elements and
 be prepared to discuss the order notation of the function.

@@ -155,7 +155,7 @@ run. How does this change as you increase or decrease each of the data size vari
 **To complete this checkpoint**, as a team, present your work to a TA/mentor.
 
 ## Checkpoint 2
-*estimate: TBD*
+*estimate: 30-40 minutes*
 
 Write a templated non-member function named remove_matching_elements that takes in two arguments,
 a vector of type Vec&lt;T&gt; and an element of type T, and returns the number of elements that matched the
@@ -191,7 +191,7 @@ And the reason that this keyword *typename* is needed, is because without it, th
 be prepared to discuss the order notation of the function.
 
 ## Checkpoint 3
-*estimate: TBD*
+*estimate: 30 minutes*
 
 Add a print member function to Vec to aid in debugging. (Note, neither remove_matching_elements nor
 print are part of the STL standard for vector). You should print the current information stored in the

@@ -1,0 +1,9 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. What is the difference between a member function and a non-member function?
+2. For a templated class, should the member function be defined within the .h file? should the non-member function be defined within the same .h file?
+
+3. Can we use subscripting (i.e., v[i]) to access this vector and hence remove elements from this vector?
+4. Erasing elements from a vector could invalidate iterators, how would this affect our program and how should we deal with this?

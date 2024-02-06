@@ -98,17 +98,11 @@ sequential data that can shrink or grow.
 - However, the use of memory is fundamentally different. Vectors are formed as a single contiguous array-like block of memory. Lists are formed as a sequentially linked structure instead.
 Although the interface (functions called) of lists and vectors and their iterators are quite similar, their implementations are VERY different. Clues to these differences can be seen in the operations that are NOT in common,
 such as:
-- STL vectors / arrays allow “random-access” / indexing / [] subscripting. We can immediately jump to
-an arbitrary location within the vector / array.
-- STL lists have no subscripting operation (we can’t use [] to access data). The only way to get to the
-middle of a list is to follow pointers one link at a time.
-- Lists have push_front and pop_front functions in addition to the push_back and pop_back functions of
-vectors.
-- erase and insert in the middle of the STL list is very efficient, independent of the size of the list. Both
-are implemented by rearranging pointers between the small blocks of memory. (We’ll see this when we
-discuss the implementation details next week).
-- We can’t use the same STL sort function we used for vector; we must use a special sort function defined
-by the STL list type.
+  - STL vectors / arrays allow “random-access” / indexing / [] subscripting. We can immediately jump to an arbitrary location within the vector / array.  
+  - STL lists have no subscripting operation (we can’t use [] to access data). The only way to get to the middle of a list is to follow pointers one link at a time.  
+  - Lists have push_front and pop_front functions in addition to the push_back and pop_back functions of vectors.  
+  - erase and insert in the middle of the STL list is very efficient, independent of the size of the list. Both are implemented by rearranging pointers between the small blocks of memory. (We’ll see this when we discuss the implementation details next week).
+  - We can’t use the same STL sort function we used for vector; we must use a special sort function defined by the STL list type.
 ```cpp
 std::vector<int> my_vec;
 std::list<int> my_lst;
@@ -136,10 +130,10 @@ std::list<int>::iterator q = s.erase(p);
 ```
 
  After the code above is executed:
-– The integer stored in the second entry of the list has been removed.
-– The size of the list has shrunk by one.
-– The iterator p does not refer to a valid entry.
-– The iterator q refers to the item that was the third entry and is now the second.
+- The integer stored in the second entry of the list has been removed.  
+- The size of the list has shrunk by one.  
+- The iterator p does not refer to a valid entry.  
+- The iterator q refers to the item that was the third entry and is now the second.  
 
 To reuse the iterator p and make it a valid entry, you will often see the code written:
 

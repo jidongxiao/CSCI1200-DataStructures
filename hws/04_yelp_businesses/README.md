@@ -12,11 +12,11 @@ In this assignment you will implement a simple business review and recommendatio
 
 Yelp is a popular online platform and mobile application that allows users to discover and review local businesses, particularly restaurants. It provides a platform for users to share their experiences and opinions about various businesses, including restaurants, bars, cafes, and other services. 
 
-In this assignment, you will be implement a program which allows users to discover local businesses.
+Yelp ratings are an essential component of the platform's review system, as they help users assess the quality and reputation of businesses based on the experiences of other customers. Yelp ratings typically use a scale of 1 to 5 stars, with 1 being the lowest rating and 5 being the highest. Users can assign a rating to a business based on their personal experience and satisfaction level.
 
 ## Specification
 
-In this assignment, you will write a program which takes a json file as its input, and produce an output.txt file as its output. The output.txt should display businesses which match with the user's search query, as specified from the command line.
+Similar to Yelp, in this assignment, you will be implementing a program which allows users to discover local businesses. More specifically, you will write a program which takes a json file as its input, and produce an output.txt file as its output. The output.txt should display businesses which match with the user's search query, as specified from the command line.
 
 ## Input Files
 

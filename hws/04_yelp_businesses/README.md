@@ -35,8 +35,18 @@ Here
 - categories indicate the categories of the businesses. This argument can be one or multiple of the following:
 
 ![alt text](images/yelp_categories.png "Yelp Categories")
+![alt text](images/yelp_categories2.png "Yelp Categories")
 
-When your program is executed, it produces the businesses which fall into the categories, and are located in this zipcode area. For each business, your program will print to the output something similar to what Yelp does. The following is an example:
+Keep in mind that users can select multiple categories, in the above two screenshots, six categories were chosen, and they are:
+
+- Pizza
+- Sushi Bars
+- Japanese
+- Barbeque
+- Indian
+- Chinese
+
+When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output something similar to what Yelp does. The following is an example:
 
 ![alt text](images/alibaba.png "Alibaba")
 

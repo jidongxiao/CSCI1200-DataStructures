@@ -9,7 +9,7 @@ int main() {
   // ---------------------------------------------------
   // initialize v1 with 10 values...  the multiples of 5
   Vec<int> v1( 10, 0 );
-  Vec<int>::size_type i;
+  int i;
   for ( i = 0; i < v1.size(); i++) {
     v1[i] = 5 * i;
   }
@@ -84,7 +84,7 @@ int main() {
   for ( i = 0; i<5; ++i )
     z.push_back( sqrt( double(10*(i+1)) ));
   cout << "Contents of vector z: ";
-  for ( Vec<double>::size_type j = 0; j < z.size(); j++ )
+  for (int j = 0; j < z.size(); j++ )
     cout << " " << z[j];
   cout << endl;
 

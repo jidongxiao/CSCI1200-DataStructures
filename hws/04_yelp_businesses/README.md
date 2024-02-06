@@ -188,4 +188,28 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Rubric
 
-TBD.
+18 pts
+
+- README.txt Completed (3 pts)
+  - One of name, collaborators, or hours not filled in. (-1)
+  - Two or more of name, collaborators, or hours not filled in. (-2)
+  - No reflection. (-1)
+- OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (8 pts)
+  - No credit (significantly incomplete implementation) (-8)
+  - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
+  - Improper uses or omissions of const and reference. (-1)
+  - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
+  - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
+  - At least one function is excessively long (i.e., more than 200 lines). (-1)
+  - Overly cramped, excessive whitespace, or poor indentation. (-1)
+  - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
+  - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
+- DATA REPRESENTATION (Must use dynamic memory for the implementation.) (7 pts)
+  - No credit (significantly incomplete implementation). (-7)
+  - Does not use std::list to store the matchng businesses. (-7)
+  - Uses data structures which have not been covered in this class. (-7)
+  - Member variables are public. (-2)
+<!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
+   - Does not overload the output (&lt;&lt;) operator. (-2)
+   - Incorrect syntax (wrong return type, wrong arguments). (-1)
+-->

@@ -176,6 +176,24 @@ For example, if the *line* is:
 
 Keep in mind that some of the fields may not exist. Revise these helper functions as needed to handle such cases. For example, the getPrice() function already has such a logic, if the RestaurantsPriceRange2 field does not exist, the getPrice() function would return -1.
 
+## Other Useful Code
+
+### print rating stars
+
+This line will print the star symbol.
+
+```
+std::cout << "\u2605" << std::endl;
+```
+
+Unfortunately, it is more challenging to print a half star, so for half star, we will print ½ instead, and you can print ½ using this:
+
+```
+std::cout << "\u00BD" << std::endl;
+```
+
+Of course you can change std::cout to a file stream so as to print the these symbols into the output file.
+
 ## Program Requirements & Submission Details
 
 In this assignment, **you must use std::list to store the businesses which match with what the user is searching for**. 

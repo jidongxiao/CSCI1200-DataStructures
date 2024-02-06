@@ -1,6 +1,6 @@
 # Homework 4 — Implementing a Simple Yelp
 
-In this assignment you will implement of a simple business review and recommendation system called New York Businesses. Your program will mimic some behaviors of Yelp. Please read the entire handout before starting to code the assignment.
+In this assignment you will implement a simple business review and recommendation system called New York Businesses. Your program will mimic some behaviors of Yelp. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
 
@@ -14,9 +14,31 @@ Yelp is a popular online platform and mobile application that allows users to di
 
 In this assignment, you will be implement a program which allows users to discover local businesses.
 
+
 ## Specification
 
 ## Input Files
+
+## Commands to Support & Program Output
+
+Your program only needs to support the following command:
+
+```console
+nybusninesses.exe input.json output.txt zipcode categories
+```
+
+Here
+
+- input.json is the input file. In this assignment, we have several input files, but for each run of your program, it takes one input file.
+- output.txt is where to print your output.
+- zipcode indicates the zipcode of the area where the user is trying to search.
+- categories indicate the categories of the businesses. This argument can be one or multiple of the following:
+
+![alt text](images/yelp_categories.png "Yelp Categories")
+
+When your program is executed, it produces the businesses which fall into the categories, and are located in this zipcode area. For each business, your program will print to the output something similar to what Yelp does. The following is an example:
+
+![alt text](images/alibaba.png "Alibaba")
 
 ## Provided Code
 

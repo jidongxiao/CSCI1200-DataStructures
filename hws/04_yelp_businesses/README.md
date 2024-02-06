@@ -180,7 +180,7 @@ Keep in mind that some of the fields may not exist. Revise these helper function
 
 ### print rating stars
 
-This line will print the star symbol.
+This line will print the star symbol (i.e., :star:).
 
 ```
 std::cout << "\u2605" << std::endl;

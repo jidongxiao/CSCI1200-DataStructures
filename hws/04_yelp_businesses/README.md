@@ -14,10 +14,19 @@ Yelp is a popular online platform and mobile application that allows users to di
 
 In this assignment, you will be implement a program which allows users to discover local businesses.
 
-
 ## Specification
 
+In this assignment, you will write a program which takes a json file as its input, and produce an output.txt file as its output. The output.txt should display businesses which match with the user's search query, as specified from the command line.
+
 ## Input Files
+
+Multiple json files are provided for testing. Each time you run your program, it would just take one json file as its input file. Each line of the json file represents one business. All lines have similar format, however, some fields may exist in some lines, but may not exist in other lines. Following is an example, which describes the business Shake Shack located in Nashville, Tennessee.
+
+```console
+{"business_id":"1QBbJ27hYLxAwo9zP8436Q","name":"Shake Shack","address":"4031 Hillsboro Pike, Ste 904","city":"Nashville","state":"TN","postal_code":"37215","latitude":36.1029949,"longitude":-86.8169347,"stars":3.0,"review_count":223,"is_open":1,"attributes":{"OutdoorSeating":"True","RestaurantsPriceRange2":"2","WiFi":"u'no'","BikeParking":"False","DogsAllowed":"False","RestaurantsTakeOut":"True","Ambience":"{'touristy': False, 'hipster': False, 'romantic': False, 'divey': False, 'intimate': False, 'trendy': True, 'upscale': False, 'classy': False, 'casual': True}","BusinessAcceptsCreditCards":"True","BusinessAcceptsBitcoin":"False","RestaurantsReservations":"False","RestaurantsDelivery":"True","DriveThru":"False","Alcohol":"u'beer_and_wine'","Caters":"False","GoodForKids":"True","WheelchairAccessible":"True","GoodForMeal":"{'dessert': False, 'latenight': False, 'lunch': False, 'dinner': False, 'brunch': False, 'breakfast': False}","BusinessParking":"{u'valet': False, u'garage': True, u'street': True, u'lot': None, u'validated': False}","RestaurantsTableService":"False","RestaurantsGoodForGroups":"True","HasTV":"True"},"categories":"Fast Food, Restaurants, Burgers, American (Traditional)","hours":{"Monday":"0:0-0:0","Tuesday":"11:0-21:0","Wednesday":"11:0-21:0","Thursday":"11:0-20:0","Friday":"11:0-22:0","Saturday":"11:0-22:0","Sunday":"11:0-21:0"}}
+```
+
+The meaning of each field is self-explanatory.
 
 ## Commands to Support & Program Output
 
@@ -154,6 +163,19 @@ int getPrice(std::string& line){
 }
 ```
 
+For example, if the *line* is:
+
+```console
+{"business_id":"3uvFklejzRPwEPEZQ5vHYQ","name":"Wawa","address":"100 E Old Baltimore Pike","city":"Media","state":"PA","postal_code":"19063","latitude":39.916175541,"longitude":-75.3876546369,"stars":3.5,"review_count":14,"is_open":1,"attributes":{"Alcohol":"u'none'","RestaurantsReservations":"False","RestaurantsTakeOut":"True","OutdoorSeating":"False","GoodForKids":"True","RestaurantsGoodForGroups":"False","RestaurantsPriceRange2":"2","BusinessAcceptsCreditCards":"True","NoiseLevel":"u'average'","RestaurantsAttire":"u'casual'","Ambience":"{'romantic': False, 'intimate': False, 'touristy': False, 'hipster': False, 'divey': False, 'classy': False, 'trendy': False, 'upscale': False, 'casual': False}","WiFi":"u'free'","HasTV":"True","BusinessParking":"{'garage': False, 'street': True, 'validated': False, 'lot': True, 'valet': False}","BikeParking":"True","RestaurantsDelivery":"True"},"categories":"Delis, Convenience Stores, Restaurants, Food, Coffee & Tea, Sandwiches","hours":{"Monday":"0:0-0:0","Tuesday":"0:0-0:0","Wednesday":"0:0-0:0","Thursday":"0:0-0:0","Friday":"0:0-0:0","Saturday":"0:0-0:0","Sunday":"0:0-0:0"}}
+```
+
+- The getName() function will return an std::string "Wawa".
+- The getCategories() function will return an std::string "Delis, Convenience Stores, Restaurants, Food, Coffee & Tea, Sandwiches".
+- The getRating() function will return a double number: 3.5.
+- The getPrice() function will return an integer number: 2.
+
+Keep in mind that some of the fields may not exist. Revise these helper functions as needed to handle such cases. For example, the getPrice() function already has such a logic, if the RestaurantsPriceRange2 field does not exist, the getPrice() function would return -1.
+
 ## Program Requirements & Submission Details
 
 In this assignment, **you must use std::list to store the businesses which match with what the user is searching for**. 
@@ -166,3 +188,4 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Rubric
 
+TBD.

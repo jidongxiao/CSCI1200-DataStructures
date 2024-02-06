@@ -79,8 +79,8 @@ Now, looking inside the Vec&lt;T&gt; class at the member variables:
 pointers and arrays.
 - m_size indicates the number of locations currently in use in the vector. This is exactly what the size()
 member function should return,
-- m_alloc is the total number of slots in the dynamically allocated block of memory.
-Drawing pictures, which we will do in class, will help clarify this, especially the distinction between m_size and m_alloc.
+- capacity is the total number of slots in the dynamically allocated block of memory.
+Drawing pictures, which we will do in class, will help clarify this, especially the distinction between m_size and capacity.
 
 ## 8.5 operator[]
 
@@ -106,7 +106,7 @@ of the member variables, one-by-one. For example, the default copy constructor w
 ```cpp
 template <class T>
 Vec<T> :: Vec(const Vec<T>& v)
-: m_data(v.m_data), m_size(v.m_size), m_alloc(v.m_alloc)
+: m_data(v.m_data), m_size(v.m_size), capacity(v.capacity)
 {}
 ```
 In other words, it would construct each member variable from the corresponding member variable of v. This is
@@ -211,11 +211,11 @@ The destructor is called implicitly when an automatically-allocated object goes 
 
 ## 8.13 Increasing the Size of the Vec
 
-- push_back(T const& x) adds to the end of the array, increasing m_size by one T location. But what if the allocated array is full (m_size == m_alloc)?
+- push_back(T const& x) adds to the end of the array, increasing m_size by one T location. But what if the allocated array is full (m_size == capacity)?
 1. Allocate a new, larger array. The best strategy is generally to double the size of the current array. Why?
 2. If the array size was originally 0, doubling does nothing. We must be sure that the resulting size is at least 1.
 3. Then we need to copy the contents of the current array.
-4. Finally, we must delete current array, make the m_data pointer point to the start of the new array, and adjust the m_size and m_alloc variables appropriately.
+4. Finally, we must delete current array, make the m_data pointer point to the start of the new array, and adjust the m_size and capacity variables appropriately.
 
 - Only when we are sure there is enough room in the array should we actually add the new object to the back of the array.
 

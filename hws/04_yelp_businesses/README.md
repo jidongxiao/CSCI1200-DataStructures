@@ -196,7 +196,7 @@ Of course you can change std::cout to a file stream so as to print the these sym
 
 ## Program Requirements & Submission Details
 
-In this assignment, **you must use std::list to store the businesses which match with what the user is searching for**. 
+In this assignment, **you must use std::list to store the businesses which match with what the user is searching for, and you must implement at least one class**.
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
@@ -214,6 +214,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
   - No reflection. (-1)
 - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (8 pts)
   - No credit (significantly incomplete implementation) (-8)
+  - Does not implement at least one class. (-8)
   - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
   - Improper uses or omissions of const and reference. (-1)
   - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)

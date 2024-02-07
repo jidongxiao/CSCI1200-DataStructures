@@ -147,10 +147,19 @@ void bar5 (std::vector<int> &a) {
 When you finish, discuss these problems with your teammate. If your teammate hasn’t finished, please help
 them (but without just doing the problems for them).
 
-Once you are both finished, type these examples into your C++ editor, add print statements, and confirm
-your answers are correct. What print statements will be most helpful? In your terminal, instead of running
-just ./a.out try running time ./a.out and reading the real time, which is how long your program took to
-run. How does this change as you increase or decrease each of the data size variables you identified above?
+Once you are both finished, type these examples into your C++ editor, add print statements, and confirm your answers are correct. What print statements will be most helpful? In your terminal, instead of running just
+
+```console
+./a.out
+```
+
+try running
+
+```console
+time ./a.out
+```
+
+and reading the real time, which is how long your program took to run. How does this change as you increase or decrease each of the data size variables you identified above?
 
 **To complete this checkpoint**, as a team, present your work to a TA/mentor.
 

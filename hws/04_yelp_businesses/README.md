@@ -63,6 +63,16 @@ When your program is executed, it produces the businesses which fall into any of
 
 The businesses showed in your output file should be sorted based on the rating of the business, with higher rated businesses being showed before lower rated businesses. For any two businesses which have the same rating, for example, both are 4.5, then in your output file, keep the order of these two as they appear in the input file.
 
+In the case where no matching businesses can be found, your program should print a message similar to what Yelp does:
+
+```console
+Sorry, we couldn't find any results
+```
+
+This message should be printed into the output file. For your reference, this is what Yelp shows:
+
+![alt text](images/yelp_no_results.jpg "Yelp no results found")
+
 ## Provided Code
 
 Several helper functions are provided for you to parse the json file. All of them expect the caller to provide the one line from the json file as the sole argument, in the format of an std::string.
@@ -175,6 +185,8 @@ For example, if the *line* is:
 - The getPrice() function will return an integer number: 2.
 
 Keep in mind that some of the fields may not exist. Revise these helper functions as needed to handle such cases. For example, the getPrice() function already has such a logic, if the RestaurantsPriceRange2 field does not exist, the getPrice() function would return -1.
+
+**Note**: These provided functions are not necessarily fast, if you aim to climb high on the leaderboard, you may want to revise these functions so as to improve the performance of your program.
 
 ## Other Useful Code
 

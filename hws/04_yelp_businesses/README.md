@@ -57,9 +57,11 @@ Keep in mind that users can select multiple categories, in the above two screens
 
 If multiple categories are supplied from the command line, these categories will be separated by a single space. To simplify your command line processing logic, you can assume that our test cases would only use a category if it contains one single word, and that means, we might test the category of "Pizza", "Japanese", "Barbeque", "Indian", "Chinese", but we would not test "Sushi Bars" - because it contains more than one word.
 
-When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output file something similar to what Yelp does. The following is an example:
+When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output file something similar to what Yelp does. The following is an example from Yelp:
 
 ![alt text](images/alibaba.jpg "Alibaba")
+
+All expected output files are provided, refer to these expected output files for the exact format.
 
 The businesses showed in your output file should be sorted based on the rating of the business, with higher rated businesses being showed before lower rated businesses. For any two businesses which have the same rating, for example, both are 4.5, then in your output file, keep the order of these two as they appear in the input file.
 
@@ -72,6 +74,16 @@ Sorry, we couldn't find any results
 This message should be printed into the output file. For your reference, this is what Yelp shows:
 
 ![alt text](images/yelp_no_results.jpg "Yelp no results found")
+
+### The Price Range
+
+In Yelp, the "$" sign is commonly used to indicate the price range for businesses. It helps users quickly gauge the approximate cost of dining or using services at a particular establishment. There are four levels, represented by "$", "$$", "$$$", and "$$$$" respectively. A single "$" indicates that the business is relatively inexpensive, with prices typically ranging from low to moderate. A "$$$$" sign represents the highest price range level, indicating that the business is quite expensive.
+
+In the input json file, the *RestaurantsPriceRange2* field is used for this purpose. The value of this field ranges from 1 to 4. With 1 being the least expensive and 4 being the most expensive. Therefore, for a business whose *RestaurantsPriceRange2* is 1, your program should print a "$" sign; for a business whose *RestaurantsPriceRange2* is 2, your program should print a "$$" sign; etc.
+
+In the case where the *RestaurantsPriceRange2* field does not exist, your program should not print any "$" sign; for your reference, the following is an example from Yelp in which no "$" sign is displayed.
+
+![alt text](images/yelp_no_price.png "Yelp no price")
 
 ## Provided Code
 

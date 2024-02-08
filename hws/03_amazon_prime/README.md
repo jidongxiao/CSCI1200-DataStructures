@@ -240,7 +240,7 @@ README.txt file.
    - No reflection. (-1)
  - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (8 pts)
    - No credit (significantly incomplete implementation) (-8)
-   - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
+   <!--- Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)-->
    - Improper uses or omissions of const and reference. (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)

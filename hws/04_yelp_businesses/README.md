@@ -77,7 +77,7 @@ This message should be printed into the output file. For your reference, this is
 
 In Yelp, the "$" sign is commonly used to indicate the price range for businesses. It helps users quickly gauge the approximate cost of dining or using services at a particular establishment. There are four levels, represented by "$", "$$", "$$$", and "$$$$" respectively. A single "$" indicates that the business is relatively inexpensive, with prices typically ranging from low to moderate. A "$$$$" sign represents the highest price range level, indicating that the business is quite expensive.
 
-In the input json file, the *RestaurantsPriceRange2* field is used to for this purpose. The value of this field ranges from 1 to 4. With 1 being the least expensive and 4 being the most expensive. Therefore, for a business whose *RestaurantsPriceRange2* is 1, your program should print a "$" sign; for a business whose *RestaurantsPriceRange2* is 2, your program should print a "$$" sign; etc.
+In the input json file, the *RestaurantsPriceRange2* field is used for this purpose. The value of this field ranges from 1 to 4. With 1 being the least expensive and 4 being the most expensive. Therefore, for a business whose *RestaurantsPriceRange2* is 1, your program should print a "$" sign; for a business whose *RestaurantsPriceRange2* is 2, your program should print a "$$" sign; etc.
 
 In the case where the *RestaurantsPriceRange2* field does not exist, your program should not print any "$" sign; for your reference, the following is an example from Yelp in which no "$" sign is displayed.
 

@@ -57,9 +57,11 @@ Keep in mind that users can select multiple categories, in the above two screens
 
 If multiple categories are supplied from the command line, these categories will be separated by a single space. To simplify your command line processing logic, you can assume that our test cases would only use a category if it contains one single word, and that means, we might test the category of "Pizza", "Japanese", "Barbeque", "Indian", "Chinese", but we would not test "Sushi Bars" - because it contains more than one word.
 
-When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output file something similar to what Yelp does. The following is an example:
+When your program is executed, it produces the businesses which fall into any of the chosen categories, and are located in this zipcode area. For each business, your program will print to the output file something similar to what Yelp does. The following is an example from Yelp:
 
 ![alt text](images/alibaba.jpg "Alibaba")
+
+All expected output files are provided, refer to these expected output files for the exact format.
 
 The businesses showed in your output file should be sorted based on the rating of the business, with higher rated businesses being showed before lower rated businesses. For any two businesses which have the same rating, for example, both are 4.5, then in your output file, keep the order of these two as they appear in the input file.
 

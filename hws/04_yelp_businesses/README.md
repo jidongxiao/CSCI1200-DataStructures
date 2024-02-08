@@ -81,7 +81,7 @@ In the input json file, the *RestaurantsPriceRange2* field is used for this purp
 
 In the case where the *RestaurantsPriceRange2* field does not exist, your program should not print any "$" sign; for your reference, the following is an example from Yelp in which no "$" sign is displayed.
 
-![alt text](images/yelp_no_price.jpg "Yelp no price")
+![alt text](images/yelp_no_price.png "Yelp no price")
 
 ## Provided Code
 

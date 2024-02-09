@@ -118,6 +118,39 @@ compare function as STL vector.
 
 The value of any associated vector iterator must be re-assigned / re-initialized after these operations.
 
+### List Sort Example
+
+The following [example](list_sort.cpp) demonstrate how to call the list sort function.
+
+```cpp
+#include <iostream>
+#include <list>
+
+int main() {
+    // Create a list of integers
+    std::list<int> numbers = {5, 2, 9, 3, 7};
+
+    // Print the original list
+    std::cout << "Original list: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Sort the list in ascending order
+    numbers.sort();
+
+    // Print the sorted list
+    std::cout << "Sorted list: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+
 ## 9.7 Erase & Iterators
 
 STL lists and vectors each have a special member function called erase. In particular, given list of ints s,

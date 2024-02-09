@@ -120,7 +120,7 @@ The value of any associated vector iterator must be re-assigned / re-initialized
 
 ### List Sort Example
 
-The following [example](list_sort.cpp) demonstrate how to call the list sort function.
+The following [example](list_sort.cpp) demonstrates how to call the list sort function.
 
 ```cpp
 #include <iostream>

@@ -146,7 +146,7 @@ void process_one_line(int** matrix, int i, std::string& line){
 }
 ```
 
-This function will help you to parse information from the input file, and update the matrix. This function takes three arguments, the first argument is a two-dimensional integer pointer, also known as the matrix pointer, which is expected to point to the beginning memory location of a two-dimensional array. This function assumes the caller allocates and reclaims memory for matrix. The second argument is the index i, indicating which row of the matrix will be updated. The third argument is the string line, which represents one line of the input file.
+This function will help you to parse information from the input file, and update the matrix. This function takes three arguments, the first argument is a two-dimensional integer pointer, also known as the matrix pointer, which is expected to point to the beginning memory location of a two-dimensional array. This function assumes the caller allocates and reclaims memory for matrix - **it also assumes that every element of the matrix is initialized to 0**. The second argument is the index i, indicating which row of the matrix will be updated. The third argument is the string line, which represents one line of the input file.
 
 To understand what this function does, let's take the first line of the [movieRatings.txt](movieRatings.txt) as an example.
 

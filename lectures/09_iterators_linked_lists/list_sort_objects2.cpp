@@ -11,12 +11,13 @@ public:
     // Constructor
     Person(std::string name, int age) : name(name), age(age) {}
 
-    // Overload the < operator for sorting
-    bool operator<(const Person& other) const {
-        // Compare based on age
-        return age < other.age;
-    }
 };
+
+// Overload the < operator for sorting
+bool operator<(const Person& p1, const Person& p2) {
+      // Compare based on age
+        return p1.age < p2.age;
+}
 
 int main() {
     // Create a list of Person objects
@@ -28,8 +29,11 @@ int main() {
 
     // Print the original list
     std::cout << "Original list:" << std::endl;
-    for (const auto& person : people) {
-        std::cout << person.name << " (" << person.age << ")" << std::endl;
+    std::list<Person>::iterator itr = people.begin();
+    while(itr != people.end()){
+	// one way to use iterators
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
     }
 
     // Sort the list of Person objects
@@ -37,8 +41,11 @@ int main() {
 
     // Print the sorted list
     std::cout << "\nSorted list:" << std::endl;
-    for (const auto& person : people) {
-        std::cout << person.name << " (" << person.age << ")" << std::endl;
+    itr = people.begin();
+    while(itr != people.end()){
+	// another way to use iterators
+        std::cout << itr->name << " (" << itr->age << ")" << std::endl;
+	++itr;
     }
 
     return 0;

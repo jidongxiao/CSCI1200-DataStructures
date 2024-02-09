@@ -192,14 +192,14 @@ This function takes four parameters, which are the latitude and longitude of two
 ```
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
+This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. The only class you can define is a class named Node. You are not allowed to define any other classes, or use the keyword struct anywhere in your code. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 10/12/2023, Thursday, 23:59pm.
+**Due Date**: 02/22/2024, Thursday, 22pm.
 
 ## Rubric
 
@@ -222,6 +222,9 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - No credit (significantly incomplete implementation). (-5)
    - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
    - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
+   - Does not define the Node class. (-5)
+   - Defines another class other than the Node class. (-5)
+   - Uses the keyword struct. (-5)
    <!--- Member variables are public. (-2)-->
  - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

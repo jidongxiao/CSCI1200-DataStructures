@@ -185,8 +185,10 @@ int main() {
 
     // Print the original list
     std::cout << "Original list:" << std::endl;
-    for (const auto& person : people) {
-        std::cout << person.name << " (" << person.age << ")" << std::endl;
+    std::list<Person>::iterator itr = people.begin();
+    while(itr != people.end()){
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
     }
 
     // Sort the list of Person objects using the custom comparison function
@@ -194,8 +196,10 @@ int main() {
 
     // Print the sorted list
     std::cout << "\nSorted list:" << std::endl;
-    for (const auto& person : people) {
-        std::cout << person.name << " (" << person.age << ")" << std::endl;
+    itr = people.begin();
+    while(itr != people.end()){
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
     }
 
     return 0;

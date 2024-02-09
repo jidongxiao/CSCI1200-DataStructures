@@ -144,10 +144,10 @@ assert (*itr == 100); // might seem ok... but rewrite the code to avoid this!
 
 What is the output of this program?
 
+```cpp
 #include <list>
 #include <iostream>
 
-```cpp
 int main(){
 
 	std::list<int> lst;

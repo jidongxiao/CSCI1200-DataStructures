@@ -98,7 +98,7 @@ std::string getName(std::string& line){
         // to find the first name string.
         int key_start = line.find("name", start);
         int value_start = key_start + 7;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         int len = value_end - value_start;
         // go from start to end, but exclude the character at end.
@@ -120,7 +120,7 @@ std::string getCategories(std::string& line){
         // to find the first categories string.
         int key_start = line.find("categories", start);
         int value_start = key_start + 13;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         int len = value_end - value_start;
         // go from start to end, but exclude the character at end.
@@ -142,7 +142,7 @@ double getRating(std::string& line){
         // to find the first stars string.
         int key_start = line.find("stars", start);
         int value_start = key_start + 7;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         // -1 here because this is not a string.
         int len = value_end - value_start - 1;
@@ -170,7 +170,7 @@ int getPrice(std::string& line){
                 return -1;
         }
         int value_start = key_start + 25;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         // -1 here because this is not a string.
         int len = value_end - value_start;

@@ -1,10 +1,11 @@
 template <class T>
 class Node {
+	// this is an exception in this course 
+	// where we make the member variables of this tiny class public.
 	public:
 		T value;
 		Node* next;
 		Node* prev;
-	private:
 };
 
 // A "forward declaration" of this class is needed

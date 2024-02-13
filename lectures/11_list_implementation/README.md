@@ -32,11 +32,11 @@ trying to use ->next and ->prev with STL list iterators.)
 ```cpp
 template <class T> class Node {
 public:
-Node() : next_(NULL), prev_(NULL) {}
-Node(const T& v) : value_(v), next_(NULL), prev_(NULL) {}
-T value_;
-Node<T>* next_;
-Node<T>* prev_;
+	Node() : next_(NULL), prev_(NULL) {}
+	Node(const T& v) : value_(v), next_(NULL), prev_(NULL) {}
+	T value_;
+	Node<T>* next_;
+	Node<T>* prev_;
 };
 ```
 

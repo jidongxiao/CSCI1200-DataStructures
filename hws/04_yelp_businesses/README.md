@@ -247,7 +247,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
   - Overly cramped. (-1)
   - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-- DATA REPRESENTATION (Must use std::list for the implementation.) (7 pts)
+- DATA REPRESENTATION (7 pts)
   - No credit (significantly incomplete implementation). (-7)
   - Does not use std::list to store the matchng businesses. (-7)
   - Uses data structures which have not been covered in this class. (-7)

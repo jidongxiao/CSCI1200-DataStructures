@@ -7,8 +7,8 @@ In this assignment you will develop a simple online dating application called Ne
 ## Learning Objectives
 
 - Get familiar with a commonly used data structure - linked lists.
-- Practice creating and manipulating linked lists without using the std::list library.
-- Practice overloading the output operator (&lt;&lt;).
+- Practice creating and manipulating linked lists without using the std::list library or creating a list class.
+<!--- Practice overloading the output operator (&lt;&lt;).-->
 
 ## Background
 
@@ -194,7 +194,7 @@ This function takes four parameters, which are the latitude and longitude of two
 ```
 
 ## Program Requirements & Submission Details
-This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. The only class you can define is a class named Node. You are not allowed to define any other classes, or use the keyword struct anywhere in your code. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
+This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. Do not define a List class. You are now allowed to any data structures we have not learned so far.** 
 
 Use good coding style when you design and implement your program. Organize your program into functions:
 don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
@@ -206,9 +206,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 ## Rubric
 
 15 pts
- - README.txt Completed (2 pts)
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
  - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
    - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
@@ -220,14 +221,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
-   - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
-   - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
-   - Does not define the Node class. (-5)
-   - Defines another class other than the Node class. (-5)
-   - Uses the keyword struct. (-5)
+ - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (7 pts)
+   - No credit (significantly incomplete implementation). (-7)
+   - Uses std::list, or data structures which have not been covered in this class. (-7)
+   - Uses iterators in the code to visit list elements (okay for iterating through something other than the lists). (-7)
+   - Defines a list class. (-5)
    <!--- Member variables are public. (-2)-->
- - OUTPUT OPERATOR OVERLOADING (2 pts)
+<!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax (wrong return type, wrong arguments). (-1)
+   - Incorrect syntax (wrong return type, wrong arguments). (-1)-->

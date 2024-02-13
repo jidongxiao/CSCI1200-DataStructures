@@ -50,7 +50,7 @@ class list_iterator {
 			return (this->ptr != other.ptr);
 		}
 
-		// the dslist class needs access to the private ptr_ member variable
+		// the dslist class needs access to the private ptr member variable
 		friend class dslist<T>;
 	private:
 		Node<T>* ptr;

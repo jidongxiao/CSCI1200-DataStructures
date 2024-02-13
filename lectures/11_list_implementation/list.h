@@ -59,7 +59,6 @@ template <class T>
 class dslist {
 	public:
 		typedef list_iterator<T> iterator;
-		typedef unsigned int size_type;
 		// default constructor
 		dslist(){
 			head = nullptr;
@@ -102,7 +101,7 @@ class dslist {
 			}
 		}
 
-		size_type size(){
+		unsigned int size(){
 			return size_;
 		}
 

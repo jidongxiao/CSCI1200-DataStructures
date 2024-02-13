@@ -73,12 +73,17 @@ variable p.
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/doubly_lists/remove/index.html) to see how the remove works.
 
-## 11.7 Special Cases of Remove
+## 11.6 Special Cases of Remove
 
 - If p==head and p==tail, the single node in the list must be removed and both the head and tail pointer
 variables must be assigned the value NULL.
 - If p==head or p==tail, then the pointer adjustment code we just wrote needs to be specialized to removing
 the first or last node.
+
+## 11.7 List Implementation
+
+- We have a list implementation [here](list.h).
+- And we can test our list with this [program](list_main.cpp).
 
 ## 11.8 Leetcode Exercises
 

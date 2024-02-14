@@ -194,12 +194,12 @@ This function takes four parameters, which are the latitude and longitude of two
 ```
 
 ## Program Requirements & Submission Details
-This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. Do not define a List class. You are now allowed to any data structures we have not learned so far.** 
+This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library. You are not allowed to define a List class or an iterator class. You are not allowed to use any data structures we have not learned so far.** 
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
+don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
 **Due Date**: 02/22/2024, Thursday, 22pm.
 
@@ -224,8 +224,8 @@ You must do this assignment on your own, as described in the [Collaboration Poli
  - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (7 pts)
    - No credit (significantly incomplete implementation). (-7)
    - Uses std::list, or data structures which have not been covered in this class. (-7)
-   - Uses iterators in the code to visit list elements (okay for iterating through something other than the lists). (-7)
    - Defines a list class. (-5)
+   - Defines an iterator class. (-5)
    <!--- Member variables are public. (-2)-->
 <!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

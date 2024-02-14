@@ -95,5 +95,7 @@ and lists with one or two values. Also add a test or two of a node chain with so
 If you have time, write 2 versions of this function, one version should be iterative (using a for or while loop)
 and one version should be recursive.
 
+**Note**: this reverse function takes a pointer as its argument, but we are passing this pointer by reference, because we want to modify this pointer. To understand the concept of passing a pointer by reference, you are recommended to read and run this [example program](reference_to_a_pointer.cpp).
+
 **To complete this checkpoint**, show a TA or mentor your diagram and your debugged function(s) to
 reverse a homemade singly-linked list.

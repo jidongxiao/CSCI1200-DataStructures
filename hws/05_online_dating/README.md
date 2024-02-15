@@ -137,9 +137,9 @@ your program should first show profiles of all users who match with this user; a
 
 See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-383-2432.txt) for the format of the output file. In the case where either the user or the other user only has one match, or both the user and the other user have just one match, your output should follow the format of one of these 3 sample output files.
 
-- [user_560-220-1509_unmatch_531-893-6571.txt](user_560-220-1509_unmatch_531-893-6571.txt): when both users only have this one match.
-- [user_741-273-7248_unmatch_621-883-6784.txt](user_741-273-7248_unmatch_621-883-6784.txt): when user has only one match.
-- [user_621-883-6784_unmatch_741-273-7248.txt](user_621-883-6784_unmatch_741-273-7248.txt): when the other user has only one match.
+- [user_410-750-5502_unmatch_318-125-5013.txt](user_410-750-5502_unmatch_318-125-5013.txt): when both users only have this one match.
+- [user_777-921-9436_unmatch_429-204-4054.txt](user_777-921-9436_unmatch_429-204-4054.txt): when user has only one match.
+- [user_429-204-4054_unmatch_777-921-9436.txt](user_429-204-4054_unmatch_777-921-9436.txt): when the other user has only one match.
 
 ### Block Someone
 
@@ -156,7 +156,7 @@ your program should
 - First, print all profiles shown to this user - clearly this other user's profile should not be included; Here the term "all profiles" means all profiles which match with this user's preference on age, gender, and distance.
 - Second, print all profiles shown to this other user - similarly, the current user's profile should not be included. Here the term "all profiles" means all profiles which match with this other user's preference on age, gender, and distance.
 
-All these profiles should be printed into the output file.
+All these profiles should be printed into the output file. See [user_642-798-6219_block_405-855-9725.txt](user_642-798-6219_block_405-855-9725.txt) or [user_686-633-3806_block_704-736-7388.txt](user_686-633-3806_block_704-736-7388.txt) for the format of the output file.
 
 <!--### Delete Account
 

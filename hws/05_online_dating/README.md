@@ -238,7 +238,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - No credit (significantly incomplete implementation). (-7)
    - Uses std::list, or data structures which have not been covered in this class. (-7)
    - Defines/Uses a list class. (-5)
-   - Defines/Uses an iterator class. (-5)
+   - Defines/Uses an iterator class (okay to use iterators to iterate through other containers such as vectors). (-5)
    <!--- Member variables are public. (-2)-->
 <!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)

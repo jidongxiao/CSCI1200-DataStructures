@@ -60,13 +60,14 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support four commands.
+Your program will support six commands.
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
 4. unmatch someone.
-<!--5. delete account.-->
+5. block someone.
+6. delete account.
 
 More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines. But this empty line is not displayed if you open the file from Github in the browser, because GitHub automatically trims trailing whitespace and empty lines at the end of files when displaying them in the browser.
 
@@ -142,7 +143,19 @@ See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-3
 - [user_741-273-7248_unmatch_621-883-6784.txt](user_741-273-7248_unmatch_621-883-6784.txt): when user has only one match.
 - [user_621-883-6784_unmatch_741-273-7248.txt](user_621-883-6784_unmatch_741-273-7248.txt): when the other user has only one match.
 
-<!--### Delete Account
+### Block Someone
+
+Tinder allows users to block other users. Blocking someone on Tinder means that you are preventing that person from seeing your profile and contacting you on the platform. It's a more severe action compared to unmatching. 
+
+When the user (here, *phoneNumber* is this user's phone number and *phoneNumberOther* represents the other user whom this user wants to block) runs this command:
+
+```console
+nydate.exe users.txt output.txt phoneNumber block phoneNumberOther
+```
+
+your program should first print all profiles shown to this user - clearly this other user's profile should not be included; and then print all profiles shown to this other user - similarly, the current user's profile should not be included.
+
+### Delete Account
 
 Users can delete their accounts.
 
@@ -151,7 +164,8 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 ```console
 nydate.exe input.txt output.txt phoneNumber delete
 ```
--->
+
+your program should print all users' information into the output file. This output file should be different from the original input file in two aspects: First, in your output file, this user should be excluded; Second, in your output file, this user's phone number should not appear on any user's like list. In summary, anything about this user should be erased from output file.
 
 ### Output File Order
 

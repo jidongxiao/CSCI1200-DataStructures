@@ -1,10 +1,11 @@
 template <class T>
 class Node {
+	// this is an exception in this course 
+	// where we make the member variables of this tiny class public.
 	public:
 		T value;
 		Node* next;
 		Node* prev;
-	private:
 };
 
 // A "forward declaration" of this class is needed
@@ -49,7 +50,7 @@ class list_iterator {
 			return (this->ptr != other.ptr);
 		}
 
-		// the dslist class needs access to the private ptr_ member variable
+		// the dslist class needs access to the private ptr member variable
 		friend class dslist<T>;
 	private:
 		Node<T>* ptr;
@@ -59,7 +60,6 @@ template <class T>
 class dslist {
 	public:
 		typedef list_iterator<T> iterator;
-		typedef unsigned int size_type;
 		// default constructor
 		dslist(){
 			head = nullptr;
@@ -102,7 +102,7 @@ class dslist {
 			}
 		}
 
-		size_type size(){
+		unsigned int size(){
 			return size_;
 		}
 

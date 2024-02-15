@@ -1,13 +1,13 @@
 # Lecture 10 --- Vector Iterators & Linked Lists
 
-- Keep an eye for an update on Student Excuse Absence Policy which would go in effect from HW4
+<!--- Keep an eye for an update on Student Excuse Absence Policy which would go in effect from HW4
      * Please remember incorporating the new rule may result in
   		+ grading process gets delayed
         	+ you will receive grades late
     		+ will affect your grade inquiry time
      		+ may affect when you receive the solutions or see the actual rubric
      		+ if that HW was due before exam then be ready to receive feedback on that after exams
-     * More detailed info soon
+     * More detailed info soon-->
 - Review of iterators
 - Building our own basic linked lists:  
   – Stepping through a list  
@@ -138,6 +138,36 @@ itr = lst.begin();
 itr--; // dangerous!
 itr++;
 assert (*itr == 100); // might seem ok... but rewrite the code to avoid this!
+```
+
+### Exercise
+
+What is the output of this program?
+
+```cpp
+#include <list>
+#include <iostream>
+
+int main(){
+
+	std::list<int> lst;
+	lst.push_back(150);
+	lst.push_back(250);
+	lst.push_back(350);
+	lst.push_back(450);
+	
+	std::list<int>::iterator itr;
+	itr = lst.begin();
+	++itr;
+	*itr += 5;
+
+	std::list<int>::iterator itr2 = lst.begin();
+	while(itr2 != lst.end()){
+		std::cout << *itr2 << std::endl;
+		itr2++;
+	}
+	
+}
 ```
 
 ## 10.3 Working towards our own version of the STL list

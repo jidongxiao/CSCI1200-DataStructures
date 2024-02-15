@@ -98,7 +98,7 @@ std::string getName(std::string& line){
         // to find the first name string.
         int key_start = line.find("name", start);
         int value_start = key_start + 7;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         int len = value_end - value_start;
         // go from start to end, but exclude the character at end.
@@ -120,7 +120,7 @@ std::string getCategories(std::string& line){
         // to find the first categories string.
         int key_start = line.find("categories", start);
         int value_start = key_start + 13;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         int len = value_end - value_start;
         // go from start to end, but exclude the character at end.
@@ -142,7 +142,7 @@ double getRating(std::string& line){
         // to find the first stars string.
         int key_start = line.find("stars", start);
         int value_start = key_start + 7;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         // -1 here because this is not a string.
         int len = value_end - value_start - 1;
@@ -170,7 +170,7 @@ int getPrice(std::string& line){
                 return -1;
         }
         int value_start = key_start + 25;
-        // remind them to use escape.
+        // remember to use escape.
         int value_end = line.find("\"", value_start);
         // -1 here because this is not a string.
         int len = value_end - value_start;
@@ -244,10 +244,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
   - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
   - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
   - At least one function is excessively long (i.e., more than 200 lines). (-1)
-  - Overly cramped, excessive whitespace, or poor indentation. (-1)
+  - Overly cramped. (-1)
   - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-- DATA REPRESENTATION (Must use dynamic memory for the implementation.) (7 pts)
+- DATA REPRESENTATION (7 pts)
   - No credit (significantly incomplete implementation). (-7)
   - Does not use std::list to store the matchng businesses. (-7)
   - Uses data structures which have not been covered in this class. (-7)

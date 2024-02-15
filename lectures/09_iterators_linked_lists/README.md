@@ -118,6 +118,153 @@ compare function as STL vector.
 
 The value of any associated vector iterator must be re-assigned / re-initialized after these operations.
 
+### List Sort Example
+
+The following [example](list_sort.cpp) demonstrates how to call the list sort function.
+
+```cpp
+#include <iostream>
+#include <list>
+
+int main() {
+    // Create a list of integers
+    std::list<int> numbers = {5, 2, 9, 3, 7};
+
+    // Print the original list
+    std::cout << "Original list: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Sort the list in ascending order
+    numbers.sort();
+
+    // Print the sorted list
+    std::cout << "Sorted list: ";
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+
+### List Sort Example - Sorting Class Objects
+
+The following [example](list_sort_objects.cpp) demonstrates how to call the list sort function to sort a list which contains class objects.
+
+```cpp
+#include <iostream>
+#include <list>
+#include <string>
+
+// Define a simple class representing a person
+class Person {
+public:
+    std::string name;
+    int age;
+
+    // Constructor
+    Person(std::string name, int age) : name(name), age(age) {}
+};
+
+// Custom comparison function to sort Person objects by age
+bool compareByAge(const Person& p1, const Person& p2) {
+    return p1.age < p2.age;
+}
+
+int main() {
+    // Create a list of Person objects
+    std::list<Person> people = {
+        {"Alice", 25},
+        {"Bob", 30},
+        {"Charlie", 20}
+    };
+
+    // Print the original list
+    std::cout << "Original list:" << std::endl;
+    std::list<Person>::iterator itr = people.begin();
+    while(itr != people.end()){
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
+    }
+
+    // Sort the list of Person objects using the custom comparison function
+    people.sort(compareByAge);
+
+    // Print the sorted list
+    std::cout << "\nSorted list:" << std::endl;
+    itr = people.begin();
+    while(itr != people.end()){
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
+    }
+
+    return 0;
+}
+```
+
+### List Sort Example - Sorting Class Objects, via Overloading the Less Than Operator
+
+The following [example](list_sort_objects2.cpp) also demonstrates how to call the list sort function to sort a list which contains class objects.
+
+```cpp
+#include <iostream>
+#include <list>
+#include <string>
+
+// Define a simple class representing a person
+class Person {
+public:
+    std::string name;
+    int age;
+
+    // Constructor
+    Person(std::string name, int age) : name(name), age(age) {}
+
+};
+
+// Overload the < operator for sorting
+bool operator<(const Person& p1, const Person& p2) {
+      // Compare based on age
+        return p1.age < p2.age;
+}
+
+int main() {
+    // Create a list of Person objects
+    std::list<Person> people = {
+        {"Alice", 25},
+        {"Bob", 30},
+        {"Charlie", 20}
+    };
+
+    // Print the original list
+    std::cout << "Original list:" << std::endl;
+    std::list<Person>::iterator itr = people.begin();
+    while(itr != people.end()){
+	// one way to use iterators
+        std::cout << (*itr).name << " (" << (*itr).age << ")" << std::endl;
+	++itr;
+    }
+
+    // Sort the list of Person objects
+    people.sort();
+
+    // Print the sorted list
+    std::cout << "\nSorted list:" << std::endl;
+    itr = people.begin();
+    while(itr != people.end()){
+	// another way to use iterators
+        std::cout << itr->name << " (" << itr->age << ")" << std::endl;
+	++itr;
+    }
+
+    return 0;
+}
+```
+
 ## 9.7 Erase & Iterators
 
 STL lists and vectors each have a special member function called erase. In particular, given list of ints s,

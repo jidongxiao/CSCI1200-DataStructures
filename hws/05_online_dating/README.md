@@ -5,8 +5,8 @@ In this assignment you will develop a simple online dating application called Ne
 ## Learning Objectives
 
 - Get familiar with a commonly used data structure - linked lists.
-- Practice creating and manipulating linked lists without using the std::list library.
-- Practice overloading the output operator (&lt;&lt;).
+- Practice creating and manipulating linked lists without using the std::list library or creating a list class.
+<!--- Practice overloading the output operator (&lt;&lt;).-->
 
 ## Background
 
@@ -58,15 +58,16 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support four commands.
+Your program will support these commands:
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
 4. unmatch someone.
-<!--5. delete account.-->
+5. block someone.
+<!--6. delete account.-->
 
-More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines. But this empty line is not displayed if you open the file from Github in the browser, because GitHub automatically trims trailing whitespace and empty lines at the end of files when displaying them in the browser.
+More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all the expected output files contain an empty line at the end of file, to match with that, you just need to make sure to use *std::endl;* (or just *endl;* if you don't use *std::*) when printing the last line of a file.
 
 **Note**: for all the commands, you can assume the phone numbers (used in the commands) are valid and are corresponding to an existing account.
 
@@ -140,6 +141,23 @@ See [user_405-855-9725_unmatch_595-383-2432.txt](user_405-855-9725_unmatch_595-3
 - [user_741-273-7248_unmatch_621-883-6784.txt](user_741-273-7248_unmatch_621-883-6784.txt): when user has only one match.
 - [user_621-883-6784_unmatch_741-273-7248.txt](user_621-883-6784_unmatch_741-273-7248.txt): when the other user has only one match.
 
+### Block Someone
+
+Tinder allows users to block other users. Blocking someone on Tinder means that you are preventing that person from seeing your profile and contacting you on the platform. It's a more severe action compared to unmatching. 
+
+When the user (here, *phoneNumber* is this user's phone number and *phoneNumberOther* represents the other user whom this user wants to block) runs this command:
+
+```console
+nydate.exe users.txt output.txt phoneNumber block phoneNumberOther
+```
+
+your program should 
+
+- First, print all profiles shown to this user - clearly this other user's profile should not be included; Here the term "all profiles" means all profiles which match with this user's preference on age, gender, and distance.
+- Second, print all profiles shown to this other user - similarly, the current user's profile should not be included. Here the term "all profiles" means all profiles which match with this other user's preference on age, gender, and distance.
+
+All these profiles should be printed into the output file.
+
 <!--### Delete Account
 
 Users can delete their accounts.
@@ -149,6 +167,8 @@ When the user (here, *phoneNumber* is this user's phone number) runs this comman
 ```console
 nydate.exe input.txt output.txt phoneNumber delete
 ```
+
+your program should print all users' information into the output file. This output file should be different from the original input file in two aspects: First, in your output file, this user should be excluded; Second, in your output file, this user's phone number should not appear on any user's like list. In summary, anything about this user should be erased from output file.
 -->
 
 ### Output File Order
@@ -192,37 +212,65 @@ This function takes four parameters, which are the latitude and longitude of two
 ```
 
 ## Program Requirements & Submission Details
-In this assignment, you are required to create and manipulate linked lists, **but you are not allowed to use the std::list library, and the concept of iterators should not appear anywhere in your code. In addition, you are NOT allowed to use std::vector, or any data structures we have not learned so far.** You are also required to overload the output operator.
+
+This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library. You are not allowed to define a List class or an iterator class. You are not allowed to use any data structures we have not learned so far.** 
+
+There is no requirement on whether your linked lists should be singly-linked lists, or doubly-linked lists. It is your design choice, but you must store all the users in a linked list, where each node of the linked list represents one user. For example, you can define your node like this if you decide to use doubly-linked lists:
+
+```cpp
+class User {
+public:
+	// add other fields as needed.
+	User* next;
+	User* prev;
+
+};
+```
+
+or this, if you decide to use singly-linked lists:
+
+```cpp
+class User {
+public:
+	// add other fields as needed.
+	User* next;
+
+};
+```
+
+**Note**: for this homework, it is okay to define member variables as public variables, and this is due to the unique nature of linked lists.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
+don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 10/12/2023, Thursday, 23:59pm.
+**Due Date**: 02/22/2024, Thursday, 22pm.
 
 ## Rubric
 
 15 pts
- - README.txt Completed (2 pts)
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
  - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (6 pts)
    - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
-   - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
-   - Overly cramped, excessive whitespace, or poor indentation. (-1)
+   - At least one function is excessively long (i.e., more than 200 lines). (-1)
+   - Overly cramped. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
-   - Poor variable names. (-1)
-   - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (5 pts)
-   - No credit (significantly incomplete implementation). (-5)
-   - Uses std::vector, std::list, or data structures which have not been covered in this class. (-5)
-   - Uses iterators in the code (okay for iterating through something other than the lists). (-5)
+   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
+ - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (7 pts)
+   - No credit (significantly incomplete implementation). (-7)
+   - Uses std::list, or data structures which have not been covered in this class. (-7)
+   - Defines/Uses a list class. (-5)
+   - Defines/Uses an iterator class (okay to use iterators to iterate through other containers such as vectors). (-5)
+   - Does not use homemade linked lists (which consists of chain of nodes) to store all the users. (-5)
    <!--- Member variables are public. (-2)-->
- - OUTPUT OPERATOR OVERLOADING (2 pts)
+<!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
    - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax (wrong return type, wrong arguments). (-1)
+   - Incorrect syntax (wrong return type, wrong arguments). (-1)-->

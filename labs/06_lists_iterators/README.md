@@ -24,14 +24,18 @@ properties clear:
 ```cpp
 std::list<int> a;
 unsigned int i;
-for ( i=1; i<10; ++i ) a.push_back( i*i );
+for ( i=1; i<10; ++i ){
+	a.push_back( i*i );
+}
 std::list<int>::reverse_iterator ri;
-for( ri = a.rbegin(); ri != a.rend(); ++ri )
-cout << *ri << endl;
+for( ri = a.rbegin(); ri != a.rend(); ++ri ){
+	std::cout << *ri << std::endl;
+}
 ```
 
-This code will print out the values 81, 64, 49, . . . , 1, in order, on separate lines. Observe the type for the
-reverse iterator, the use of the functions rbegin and rend to provide iterators that delimit the bounds on
+This code will print out the values 81, 64, 49, . . . , 1, in order, on separate lines. You can also compile and run this [example program](reverse_iterator.cpp).
+
+Observe the type for the reverse iterator, the use of the functions rbegin and rend to provide iterators that delimit the bounds on
 the reverse iterator, and the use of the ++ operator to take one step backwards through the list. It is very
 important to realize that rbegin and end are NOT the same thing! One of the challenges here will be
 determining when to stop (when you’ve reached the halfway point in the list). You may use an integer
@@ -90,6 +94,8 @@ Finally, read the starter code of checkpoint 3: [checkpoint3.cpp](checkpoint3.cp
 and lists with one or two values. Also add a test or two of a node chain with something other than ints.
 If you have time, write 2 versions of this function, one version should be iterative (using a for or while loop)
 and one version should be recursive.
+
+**Note**: this reverse function takes a pointer as its argument, but we are passing this pointer by reference, because we want to modify this pointer. To understand the concept of passing a pointer by reference, you are recommended to read and run this [example program](reference_to_a_pointer.cpp).
 
 **To complete this checkpoint**, show a TA or mentor your diagram and your debugged function(s) to
 reverse a homemade singly-linked list.

@@ -1,0 +1,15 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. The last command line argument (i.e., categories) may contain one or more words, how does our program know how many words are provided in the categories argument?
+2. Functions to get the business name, the categories, the rating, the price are all given, but how do we get the city? the zip code? and the review count?
+
+3. In our program, how do we determine if a business falls into the chosen categories or not?
+4. Since the homework spec requires us to store the matching businesses in a linked list, is std::vector still a good choice for any part of the program?
+
+5. Is it necessary to store every field of each line into some data structure or some class object?
+6. Is it neceesary to check the categories field of every line?
+
+7. Do we need call a sort function? The std::list container does have a sort member function.
+8. Do we need to implement a destructor for the class we write? Is heap memory a good choice to store the linked list?

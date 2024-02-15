@@ -153,7 +153,12 @@ When the user (here, *phoneNumber* is this user's phone number and *phoneNumberO
 nydate.exe users.txt output.txt phoneNumber block phoneNumberOther
 ```
 
-your program should first print all profiles shown to this user - clearly this other user's profile should not be included; and then print all profiles shown to this other user - similarly, the current user's profile should not be included.
+your program should 
+
+- First, print all profiles shown to this user - clearly this other user's profile should not be included; Here the term "all profiles" means all profiles which match with this user's preference on age, gender, and distance.
+- Second, print all profiles shown to this other user - similarly, the current user's profile should not be included. Here the term "all profiles" means all profiles which match with this other user's preference on age, gender, and distance.
+
+All these profiles should be printed into the output file.
 
 <!--### Delete Account
 

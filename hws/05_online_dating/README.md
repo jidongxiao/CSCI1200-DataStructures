@@ -60,14 +60,14 @@ These two images will give you a better understanding on some of the above field
 
 ## Specification
 
-Your program will support six commands.
+Your program will support these commands:
 
 1. show profiles match with a user's preference.
 2. show all matches to a user.
 3. show all users who swiped right on this user - this feature is only available to premium users.
 4. unmatch someone.
 5. block someone.
-6. delete account.
+<!--6. delete account.-->
 
 More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all of our output files have an empty line at the very end, and the Submitty autograder sometimes will display that as two empty lines. But this empty line is not displayed if you open the file from Github in the browser, because GitHub automatically trims trailing whitespace and empty lines at the end of files when displaying them in the browser.
 
@@ -155,7 +155,7 @@ nydate.exe users.txt output.txt phoneNumber block phoneNumberOther
 
 your program should first print all profiles shown to this user - clearly this other user's profile should not be included; and then print all profiles shown to this other user - similarly, the current user's profile should not be included.
 
-### Delete Account
+<!--### Delete Account
 
 Users can delete their accounts.
 
@@ -166,6 +166,7 @@ nydate.exe input.txt output.txt phoneNumber delete
 ```
 
 your program should print all users' information into the output file. This output file should be different from the original input file in two aspects: First, in your output file, this user should be excluded; Second, in your output file, this user's phone number should not appear on any user's like list. In summary, anything about this user should be erased from output file.
+-->
 
 ### Output File Order
 

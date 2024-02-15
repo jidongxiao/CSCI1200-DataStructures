@@ -211,6 +211,42 @@ This function takes four parameters, which are the latitude and longitude of two
 #include <cmath>
 ```
 
+## Other Useful Code
+
+Given a long string like this: "663-979-6253_953-451-3708_410-750-5502_750-260-3152_688-574-6330_915-954-4073", how do I get each phone number? You can use code like this:
+
+```cpp
+#include <iostream>
+#include <sstream>	// include this so that we can use stringstream
+
+int main(){
+
+        std::string longString = "663-979-6253_953-451-3708_410-750-5502_750-260-3152_688-574-6330_915-954-4073";
+        // create a stringstream to tokenize the long string
+        std::istringstream iss(longString);
+        std::string token;
+
+        // tokenize the long string using the underscore delimiter
+        while (std::getline(iss, token, '_')) {
+                std::cout << token << std::endl;
+        }
+        return 0;
+}
+```
+
+This program will print the following to the console:
+
+```console
+663-979-6253
+953-451-3708
+410-750-5502
+750-260-3152
+688-574-6330
+915-954-4073
+```
+
+You can try to compile and run this tiny [program](provided_code/test.cpp) yourself.
+
 ## Program Requirements & Submission Details
 
 This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library. You are not allowed to define a List class or an iterator class. You are not allowed to use any data structures we have not learned so far.** 

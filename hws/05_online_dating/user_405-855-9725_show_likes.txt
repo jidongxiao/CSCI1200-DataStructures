@@ -1,0 +1,65 @@
+Daniel 59
+
+Charles 61
+Artist
+University of Colorado Colorado Springs
+
+Brandon 34
+Indiana University Bloomington
+
+Xin 45
+Human Resources Manager
+University of South Dakota
+
+Ella 40
+Human Resources Manager
+University of California Canyon
+
+Betty 56
+University of California Shoreline
+
+Emily 31
+Financial Analyst
+
+John 31
+University of Arizona
+
+Isla 51
+Plumber
+University of Colorado Boulder
+
+Camila 38
+Criminal Lawyer
+Massachusetts Institute of Technology
+
+Grace 59
+Physical Therapist
+University of Connecticut
+
+Eun 63
+Translator
+
+Luis 27
+School Counselor
+
+Luna 62
+Radiation Therapist
+University of North Florida
+
+Edward 49
+University of Montana
+
+Min 62
+School Counselor
+University of California Santa Barbara
+
+Karen 48
+Environmental Activist
+University of Michigan
+
+Maria 30
+Chemical Engineer
+University of Kentucky
+
+Charlotte 37
+Stanford University

@@ -1,5 +1,3 @@
-Amy's match list:
-
 Eun 63
 Translator
 
@@ -9,6 +7,10 @@ University of Montana
 Grace 59
 Physical Therapist
 University of Connecticut
+
+Charles 61
+Artist
+University of Colorado Colorado Springs
 
 Luna 62
 Radiation Therapist
@@ -20,15 +22,3 @@ University of Colorado Boulder
 
 Betty 56
 University of California Shoreline
-
-======
-
-Charles's match list:
-
-Laura 51
-Dental Hygienist
-University of Wisconsin-Madison
-
-Brenda 45
-Radiologist
-University of Oregon

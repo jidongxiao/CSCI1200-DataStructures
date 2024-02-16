@@ -350,7 +350,7 @@ to comment your code! Use the provided template [README.txt](./README.txt) file 
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your
 README.txt file. 
 
-**Due Date**: 01/25/2024, Thursday, 22:00pm.
+**Due Date**: 01/25/2024, Thursday, 10pm.
 
 ## Rubric
 

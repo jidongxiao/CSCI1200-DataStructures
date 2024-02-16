@@ -71,8 +71,10 @@ are you going to do with the result of the recursive call?)
 
 ## 12.4 Another Recursion Example: Merge Sort
 
-- Idea: 1) Split a vector in half, 2) Recursively sort each half, and 3) Merge the two sorted halves into a single
-sorted vector.
+- Idea:
+  - 1) Split a vector in half,  
+  - 2) Recursively sort each half, and  
+  - 3) Merge the two sorted halves into a single sorted vector.  
 - Suppose we have a vector called values having two halves that are each already sorted. In particular, the
 values in subscript ranges [low..mid] (the lower interval) and [mid+1..high] (the upper interval) are each
 in increasing order.
@@ -87,6 +89,7 @@ into the scratch vector. Finally, the entire scratch vector is copied back.
 ## 12.5 Thinking About Merge Sort
 
 - It exploits the power of recursion! We only need to think about  
+
   – Base case (intervals of size 1)  
   – Splitting the vector  
   – Merging the results
@@ -96,7 +99,7 @@ Count the number of pairwise comparisons that are required.
 
 ## 12.6 Merge Sort Exercises
 
-<!--- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_sortarray.cpp](../../leetcode/p912_sortarray.cpp)-->
+- [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_sortarray.cpp](../../leetcode/p912_sortarray.cpp)
 - [Leetcode problem 148: Sort List](https://leetcode.com/problems/sort-list/). Solution: [p148_sortlist.cpp](../../leetcode/p148_sortlist.cpp)
 
 ## 12.7 Example: Word Search

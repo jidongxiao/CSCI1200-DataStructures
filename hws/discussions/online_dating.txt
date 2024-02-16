@@ -1,0 +1,11 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. Shall we parse the input file using getline() or using the input stream operator?
+2. How many linked lists may exist in this program? For example, one linked list to store all the users. Any other linked lists for other purposes?
+3. Can you describe the structures of the main function? In other words, what should the main function do?
+
+4. Suppose we write a function to show all profiles matching with a user's perference, how shall we implement this function?
+5. Suppose we write a function to show profiles of all users who match with this user, how shall we implement this function?
+6. Suppose we write a function to show profiles of all users who liked this user, how shall we implement this function?

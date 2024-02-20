@@ -12,6 +12,7 @@ public:
 };
 
 // function to merge two sorted doubly linked lists
+// this function returns a pointer pointing to the head node of the merged list.
 template <class T>
 Node<T>* mergeLists(Node<T>* head_A, Node<T>* head_B) {
 }

@@ -54,6 +54,8 @@ $ ./a.out
 
 **To complete this checkpoint**, explain to a TA your implementation and show the output of your program.
 
+<!--TODO: how about memory leaks?-->
+
 <!--## Checkpoint 3: Debugging a Merge Sort program. 
 *estimate: 30-40 minutes*
 

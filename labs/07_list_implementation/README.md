@@ -32,14 +32,14 @@ Linked List of NodeA nodes: 1 -> 2 -> 3 -> 4 -> 5 -> nullptr
 Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
 ```
 
-**Note**: Hardcoding the PrintList() function to just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room. Also, your functions must be templated functions.
+**Note**: Hardcoding the PrintList() function to just print the above two messages is strictly prohibited. Also, your functions must be templated functions.
 
 **To complete this checkpoint**, show a TA the implementation and the output of your program.
 
 ## Checkpoint 3: Merge Two Lists. 
 *estimate: 30-40 minutes*
 
-Given two doubly-linked lists: linked list A and linked list B, and both linked lists are sorted. Data in linked list A is sorted in an ascending order. Data in linked list B is also sorted in an ascending order. Merge these two lists such that the data in the merged list is still sorted in an ascending order.
+Given two doubly-linked lists: linked list A and linked list B, and both linked lists are sorted. Data in linked list A is sorted in an ascending order. Data in linked list B is also sorted in an ascending order. Merge these two lists such that data in the merged list is still sorted in an ascending order.
 
 More specifically, complete the mergeLists() function in [checkpoint3.cpp](checkpoint3.cpp), such that the program prints the following output.
 

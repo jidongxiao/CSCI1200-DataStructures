@@ -1,10 +1,8 @@
-# Announcements
-
-# Lecture 14 --- Operators & Friends
+# Lecture 13 --- Operators & Friends
 
 - Operators as non-member functions, as member functions, and as friend functions.
 
-## 14.1 Complex Numbers — A Brief Review
+## 13.1 Complex Numbers — A Brief Review
 
 - Complex numbers take the form z = a + bi, where i = &radic;−1 and a and b are real. a is called the real part, b is called the imaginary part.
 - If w = c + di, then  
@@ -13,7 +11,7 @@
   – w × z = (ac − bd) + (ad + bc)i 
 - The magnitude of a complex number is &radic;a<sup>2</sup> + b<sup>2</sup>;
 
-## 14.2 Complex Class declaration ([complex.h](complex.h))
+## 13.2 Complex Class declaration ([complex.h](complex.h))
 
 ```cpp
 class Complex {
@@ -36,7 +34,7 @@ Complex operator- (Complex const& left, Complex const& right); // non-member fun
 ostream& operator<< (ostream& ostr, Complex const& c); // non-member function
 ```
 
-## 14.3 Implementation of Complex Class ([complex.cpp](complex.cpp))
+## 13.3 Implementation of Complex Class ([complex.cpp](complex.cpp))
 
 ```cpp
 // Assignment operator
@@ -72,7 +70,7 @@ ostream& operator<< (ostream & ostr, Complex const& c) {
 }
 ```
 
-## 14.4 Operators as Non-Member Functions and as Member Functions
+## 13.4 Operators as Non-Member Functions and as Member Functions
 
 - We have already written our own operators, especially **operator<**, to sort objects stored in STL containers.
 - We can write them as non-member functions (e.g., **operator-**). When implemented as a non-member function,
@@ -91,7 +89,7 @@ Observe that the function has **only on**e argument!
 objects. Calling constructors for **Complex** objects inside functions, especially member functions that work on
 **Complex** objects, seems somewhat counter-intuitive at first, but it is common practice!
 
-## 14.5 Assignment Operators
+## 13.5 Assignment Operators
 
 - The assignment operator: **z1 = z2**; becomes a function call: **z1.operator=(z2)**;
 And cascaded assignments like: **z1 = z2 = z3**; are really: **z1 = (z2 = z3)**;
@@ -104,7 +102,7 @@ The identifier this is reserved as a pointer inside class scope to the object wh
 Therefore, ***this** is a a reference to this object.
 - The fact that **operator=** returns a reference allows us to write code of the form: **(z1 = z2).real();**
 
-## 14.6 Exercise
+## 13.6 Exercise
 
 Write an operator+= as a member function of the Complex class. To do so, you must combine what you learned
 about operator= and operator+. In particular, the new operator must return a reference, *this.
@@ -112,7 +110,7 @@ about operator= and operator+. In particular, the new operator must return a ref
 
 
 
-## 14.7 Returning Objects vs. Returning References to Objects
+## 13.7 Returning Objects vs. Returning References to Objects
 
 - In the operator+ and operator- functions we create new Complex objects and simply return the new object.
 The return types of these operators are both Complex.
@@ -128,7 +126,7 @@ This avoids creation of a new object.
 created object! This results in someone having a pointer to stale memory. The pointer may behave correctly
 for a short while... until the memory under the pointer is allocated and used by someone else.
 
-## 14.8 Friend Classes vs. Friend Functions
+## 13.8 Friend Classes vs. Friend Functions
 
 - In the example below, the Foo class has designated the Bar to be a friend. This must be done in the public
 area of the declaration of Foo.
@@ -146,7 +144,7 @@ contents) rather than Bar claiming it. What could go wrong if we allowed friends
 grants these functions access similar to that of a member function. The most common example of this is
 operators, and especially stream operators.
 
-## 14.9 Stream Operators as Friend Functions
+## 13.9 Stream Operators as Friend Functions
 
 - The operators >> and << are defined for the Complex class. These are binary operators.
 The compiler translates: cout << z3 into: operator<< (cout, z3)
@@ -159,7 +157,7 @@ function of the Complex class. This is why stream operators are never member fun
 - Stream operators are either ordinary non-member functions (if the operators can do their work through the
 public class interface) or friend functions (if they need non public access).
 
-## 14.10 Summary of Operator Overloading in C++
+## 13.10 Summary of Operator Overloading in C++
 
 - Unary operators that can be overloaded: + - * & ~ ! ++ -- -> ->*
 - Binary operators that can be overloaded: + - * / % ^ & | << >> += -= *= /= %= ^=
@@ -176,7 +174,7 @@ operators in this order:
 meaning of an operator. The whole point of operators is lost if you do. One (bad) example would be
 defining the increment operator on a Complex number.
 
-## 14.11 Extra Practice
+## 13.11 Extra Practice
 
 - Implement the following operators for the Complex class (or explain why they cannot or should not be
 implemented). Think about whether they should be non-member, member, or friend.

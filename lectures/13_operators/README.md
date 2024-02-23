@@ -158,17 +158,17 @@ public class interface) or friend functions (if they need non public access).
 
 You can compile and run these three examples, in which the output stream operators are overloaded as a non-member function, a friend function, and a member function.
 
-- [Example 1](overloading_non_member.cpp)  
-- [Example 2](overloading_friend.cpp)  
-- [Example 3](overloading_member.cpp) - pay attention to the main function, does it surprise you?
+- [Example 1 - overloading as a non member function](overloading_non_member.cpp)  
+- [Example 2 - overloading as a friend function](overloading_friend.cpp)  
+- [Example 3 - overloading as a member function](overloading_member.cpp) - pay attention to the main function, does it surprise you?
 
 ## 13.10 Summary of Operator Overloading in C++
 
-- Unary operators that can be overloaded: + - * & ~ ! ++ -- -> ->*
-- Binary operators that can be overloaded: + - * / % ^ & | << >> += -= *= /= %= ^= &= |= <<= >>= < <= > >= == != && || , [] () new new[] delete delete[]
+- Unary operators that can be overloaded: + - \* & ~ ! ++ -- -> ->\*
+- Binary operators that can be overloaded: + - \* / % ^ & | << >> += -= \*= /= %= ^= &= |= <<= >>= < <= > >= == != && || , [] () new new[] delete delete[]
 - There are only a few operators that can not be overloaded:  
   - . (the . operator)  
-  - .* (what is this?)  
+  - .\* (what is this?)  
   - ?: (the ternary operator)  
   - :: (the scope resolution operator)  
 - We can’t create new operators and we can’t change the number of arguments (except for the function call
@@ -187,4 +187,4 @@ defining the increment operator on a Complex number.
 - Implement the following operators for the Complex class (or explain why they cannot or should not be
 implemented). Think about whether they should be non-member, member, or friend.
 
-operator* operator== operator!= operator<
+operator\* operator== operator!= operator<

@@ -98,7 +98,7 @@ Studying these helps to explain how to write the assignment operator, which is u
 - The argument (the right side of the operator) is passed by constant reference. Its values are used to change
 the contents of the left side of the operator, which is the object whose member function is called. A reference
 to this object is returned, allowing a subsequent call to **operator= (z1’s operator=** in the example above).
-The identifier this is reserved as a pointer inside class scope to the object whose member function is called.
+The identifier **this** is reserved as a pointer inside class scope to the object whose member function is called.
 Therefore, ***this** is a a reference to this object.
 - The fact that **operator=** returns a reference allows us to write code of the form: **(z1 = z2).real();**
 
@@ -112,8 +112,7 @@ about operator= and operator+. In particular, the new operator must return a ref
 
 ## 13.7 Returning Objects vs. Returning References to Objects
 
-- In the operator+ and operator- functions we create new Complex objects and simply return the new object.
-The return types of these operators are both Complex.
+- In the operator+ and operator- functions we create new Complex objects and simply return the new object. The return types of these operators are both Complex.
 Technically, we don’t return the new object (which is stored only locally and will disappear once the scope of
 the function is exited). Instead we create a copy of the object and return the copy. This automatic copying
 happens outside of the scope of the function, so it is safe to access outside of the function. Note: It’s important
@@ -148,9 +147,9 @@ operators, and especially stream operators.
 
 - The operators >> and << are defined for the Complex class. These are binary operators.
 The compiler translates: cout << z3 into: operator<< (cout, z3)
-Consecutive calls to the << operator, such as: cout << "z3 = " << z3 << endl;
+- Consecutive calls to the << operator, such as: cout << "z3 = " << z3 << endl;
 are translated into: ((cout << "z3 = ") << z3) << endl;
-Each application of the operator returns an ostream object so that the next application can occur.
+- Each application of the operator returns an ostream object so that the next application can occur.
 - If we wanted to make one of these stream operators a regular member function, it would have to be a member
 function of the ostream class because this is the first argument (left operand). We cannot make it a member
 function of the Complex class. This is why stream operators are never member functions.
@@ -160,9 +159,12 @@ public class interface) or friend functions (if they need non public access).
 ## 13.10 Summary of Operator Overloading in C++
 
 - Unary operators that can be overloaded: + - * & ~ ! ++ -- -> ->*
-- Binary operators that can be overloaded: + - * / % ^ & | << >> += -= *= /= %= ^=
-&= |= <<= >>= < <= > >= == != && || , [] () new new[] delete delete[]
-- There are only a few operators that can not be overloaded: . .* ?: ::
+- Binary operators that can be overloaded: + - * / % ^ & | << >> += -= *= /= %= ^= &= |= <<= >>= < <= > >= == != && || , [] () new new[] delete delete[]
+- There are only a few operators that can not be overloaded:  
+  - . (the . operator)  
+  - .* (what is this?)  
+  - ?: (the ternary operator)  
+  - :: (the scope resolution operator)  
 - We can’t create new operators and we can’t change the number of arguments (except for the function call
 operator, which has a variable number of arguments).
 - There are three different ways to overload an operator. When there is a choice, we recommend trying to write

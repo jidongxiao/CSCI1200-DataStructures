@@ -156,6 +156,12 @@ function of the Complex class. This is why stream operators are never member fun
 - Stream operators are either ordinary non-member functions (if the operators can do their work through the
 public class interface) or friend functions (if they need non public access).
 
+You can compile and run these three examples, in which the output stream operators are overloaded as a non-member function, a friend function, and a member function.
+
+- [Example 1](overloading_non_member.cpp)  
+- [Example 2](overloading_friend.cpp)  
+- [Example 3](overloading_member.cpp) - pay attention to the main function, does it surprise you?
+
 ## 13.10 Summary of Operator Overloading in C++
 
 - Unary operators that can be overloaded: + - * & ~ ! ++ -- -> ->*

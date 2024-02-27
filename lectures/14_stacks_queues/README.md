@@ -121,6 +121,7 @@ int main() {
 	MultiplyBy multiplyByTwo(2);
 
 	// use the functor as a function
+	// surprising: the object itself can be used like it's a function.
 	std::cout << "Result of multiplying 5 by 2: " << multiplyByTwo(5) << std::endl;
 
 	return 0;

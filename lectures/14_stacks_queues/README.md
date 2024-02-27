@@ -23,6 +23,40 @@
 - Function Objects
 - STL Queue and STL Stack
 
+## 14.0 Some Special Syntax
+
+The following program demonstrates some special syntax about C++ constructors.
+
+```cpp
+#include <iostream>
+
+// custom class definition
+class MyClass {
+public:
+	// constructor
+	MyClass() {
+		std::cout << "Constructor called" << std::endl;
+	}
+    
+	// destructor
+	~MyClass() {
+		std::cout << "Destructor called" << std::endl;
+	}
+};
+
+int main() {
+	MyClass();
+
+	MyClass A;
+	MyClass B;
+	return 0;
+}
+```
+
+What is the output of this program?
+
+You can compile and run the [program](constructor.cpp).
+
 ## 14.1 Function Objects, a.k.a. Functors
 
 - In addition to the basic mathematical operators + - * / < > , another operator we can overload for our C++

@@ -39,7 +39,7 @@ public:
 };
 ```
 
-- See and run this simple functor [example](functor.cpp).
+- Compile and run this simple functor [example](functor.cpp).
 
 ## 14.2 Why are Functors Useful?
 
@@ -59,7 +59,7 @@ bool float_less(float x, float y) {
 std::vector<float> my_data = {1.1, 2.2, 3.3, 4.4, 5.5};
 ```
 
-- Remember how we can sort the my_data vector defined above using our own homemade comparison function for sorting:
+- Remember how we can sort the *my_data* vector defined above using our own homemade comparison function for sorting:
 
 ```cpp
 std::sort(my_data.begin(),my_data.end(),float_less);
@@ -96,48 +96,38 @@ public:
 example float) that returns a bool. That’s exactly what we need for std::sort! This ultimately does the
 same thing as our tiny helper homemade compare function!
 
-## 14.3 Another more Complicated Functor Example
-
-Constructors of function objects can be used to specify internal data for the functor that can then be used
-during computation of the function call operator! For example:
+## 14.3 Another Functor Example
 
 ```cpp
-class between_values {
+#include <iostream>
+
+// functor class
+class MultiplyBy {
 private:
-	float low, high;
+	int factor;
+
 public:
-	between_values(float l, float h) : low(l), high(h) {}
-	bool operator() (float val) {
-		return (low <= val && val <= high);
+	// constructor
+	MultiplyBy(int factor) : factor(factor) {}
+
+	// overloaded function call operator
+	int operator()(int x) const {
+		return x * factor;
 	}
 };
-```
 
-- The range between low & high is specified when a functor/an instance of this class is created. We might
-have multiple different instances of the between_values functor, each with their own range. Later, when the
-functor is used, the query value will be passed in as an argument. The function call operator accepts that
-single argument val and compares against the internal data low & high.
-- This can be used in combination with STL’s find_if construct. For example:
+int main() {
+	// create an instance of the functor
+	MultiplyBy multiplyByTwo(2);
 
-```cpp
-between_values two_and_four(2,4);
-if (std::find_if(my_data.begin(), my_data.end(), two_and_four) != my_data.end()) {
-	std::cout << "Found a value greater than 2 & less than 4!" << std::endl;
+	// use the functor as a function
+	std::cout << "Result of multiplying 5 by 2: " << multiplyByTwo(5) << std::endl;
+
+	return 0;
 }
 ```
 
- Alternatively, we could create the functor without giving it a variable name. And in the use below we also
-capture the return value to print out the first item in the vector inside this range. Note that it does not print
-all values in the range.
-
-```cpp
-std::vector<float>::iterator itr;
-itr = std::find_if(my_data.begin(), my_data.end(), between_values(2,4));
-if (itr != my_data.end()) {
-	std::cout << "my_data contains " << *itr
-	<< ", a value greater than 2 & less than 4!" << std::endl;
-}
-```
+- You can compile and run this [example](multiply.cpp).
 
 ## 14.4 Additional STL Container Classes: Stacks
 
@@ -239,6 +229,7 @@ int main() {
 	}
 
 	myQueue.pop();
+	// What is the output of this next line?
 	std::cout << "Front element after pop: " << myQueue.front() << std::endl;
 
 	return 0;

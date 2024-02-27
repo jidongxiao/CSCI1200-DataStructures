@@ -13,6 +13,11 @@
 - Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted.
 - Practice problems from previous tests are available on the [course materials](https://submitty.cs.rpi.edu/courses/s24/csci1200/course_materials) page on Submitty.
 
+## Other Announcement
+
+- Resources will be dedicated to test grading and thus no office hours on Friday in test weeks. (week of test 1, week of test 2, week of test 3)
+- Jidong's new office hours (effective after the spring break): Monday 2-4pm, Wednesday 1-3pm.
+
 ## Today’s Lecture
 
 - Function Objects

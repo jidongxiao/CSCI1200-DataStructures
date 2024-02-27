@@ -142,7 +142,7 @@ functionality.-->
   - Stacks may be implemented efficiently in terms of vectors and lists, although vectors are preferable.
   - All stack operations are O(1).
 
-### 14.4.1 Basic Operations of a Stack:
+### 14.4.1 Member functions of std::stack
 
 - push(const T& value): Adds an element value to the top of the stack.  
 - pop(): Removes the top element from the stack.  
@@ -177,6 +177,7 @@ int main() {
 	}
 
 	myStack.pop();
+	// What is the output of this next line?
 	std::cout << "Top element after pop: " << myStack.top() << std::endl;
 
 	return 0;
@@ -187,13 +188,58 @@ You can compile and run this above [program](stack.cpp).
 
 ## 14.5 Additional STL Container Classes: Queues
 
+- A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.
 - Queues allow insertion at one end, called the back and removal from the other end, called the front.
   - There is no access to values in the middle of a queue.
   - Queues may be implemented efficiently in terms of a list. Using vectors for queues is also possible, but requires more work to get right.
   - All queue operations are O(1).
+
+### 14.5.1 Member functions of std::queue
+
+- push(const T& value): Adds an element value to the rear of the queue. This operation is also known as enqueue.  
+- pop(): Removes the front element from the queue. This operation is also known as dequeue.  
+- front(): Returns a reference to the front element of the queue without removing it.  
+- empty(): Checks if the queue is empty. Returns true if the queue is empty, false otherwise.  
+- size(): Returns the number of elements in the queue.  
+
+### 14.5.2 Queue Example Program
+
+- Following is an example program, remember to include the queue library.
+
+```cpp
+#include <iostream>
+#include <queue>
+
+int main() {
+	std::queue<int> myQueue;
+
+	myQueue.push(10);
+	myQueue.push(20);
+	myQueue.push(30);
+	myQueue.push(40);
+	myQueue.push(50);
+
+	std::cout << "Size of queue: " << myQueue.size() << std::endl;
+	std::cout << "Front element: " << myQueue.front() << std::endl;
+
+	if (!myQueue.empty()) {
+		std::cout << "Queue is not empty" << std::endl;
+	} else {
+		std::cout << "Queue is empty" << std::endl;
+	}
+
+	myQueue.pop();
+	std::cout << "Front element after pop: " << myQueue.front() << std::endl;
+
+	return 0;
+}
+```
+
+You can compile and run this above [program](queue.cpp).
 
 ## 14.6 Leetcode Exercises
 
 - [Leetcode problem 225: Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/). Solution: [p225_stack_using_queues.cpp](../../leetcode/p225_stack_using_queues.cpp).
 - [Leetcode problem 232: Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).
 - [Leetcode problem 20: Valid Parentheses](https://leetcode.com/problems/valid-parentheses/). Solution: [p20_valid_parentheses.cpp](../../leetcode/p20_valid_parentheses.cpp)
+- [Leetcode problem 71: Simplify Path](https://leetcode.com/problems/simplify-path/). Solution: [p71_simplify_path.cpp](../../leetcode/p71_simplify_path.cpp)

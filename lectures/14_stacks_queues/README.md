@@ -131,10 +131,54 @@ terms of operations. One way to obtain computational efficiency is to consider a
 functionality.-->
 <!-- For example, with a hash table we give up the notion of a sorted table and gain in find, insert, & erase efficiency.-->
 
+- A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle.
 - Stacks allow access, insertion and deletion from only one end called the top.
   - There is no access to values in the middle of a stack.
   - Stacks may be implemented efficiently in terms of vectors and lists, although vectors are preferable.
   - All stack operations are O(1).
+
+### 14.4.1 Basic Operations of a Stack:
+
+- push(const T& value): Adds an element value to the top of the stack.  
+- pop(): Removes the top element from the stack.  
+- top(): Returns a reference to the top element of the stack without removing it.  
+- empty(): Checks if the stack is empty. Returns true if the stack is empty, false otherwise.  
+- size(): Returns the number of elements in the stack.  
+
+### 14.4.2 Stack Example Program
+
+- Following is an example program, remember to include the stack library.
+
+```cpp
+#include <iostream>
+#include <stack>
+
+int main() {
+	std::stack<int> myStack;
+
+	myStack.push(10);
+	myStack.push(20);
+	myStack.push(30);
+	myStack.push(40);
+	myStack.push(50);
+
+	std::cout << "Size of stack: " << myStack.size() << std::endl;
+	std::cout << "Top element: " << myStack.top() << std::endl;
+
+	if (!myStack.empty()) {
+		std::cout << "Stack is not empty" << std::endl;
+	} else {
+		std::cout << "Stack is empty" << std::endl;
+	}
+
+	myStack.pop();
+	std::cout << "Top element after pop: " << myStack.top() << std::endl;
+
+	return 0;
+}
+```
+
+You can compile and run this above [program](stack.cpp).
 
 ## 14.5 Additional STL Container Classes: Queues
 

@@ -4,7 +4,7 @@
 
 - Test 2 will be held Thursday, February 29th, 2024 from 6-7:50pm.
   - No make-ups will be given except for pre-approved absence or illness, and a written excuse from the Dean of Students or the Student Experience office or the RPI Health Center will be required.
-  - If you have a letter from Disability Services for Students and you have not already emailed it to ds_instructors@cs.rpi.edu, please do so ASAP. Shianne Hulbert will be in contact with you about your accommodations for the test.
+  - If you have a letter from Disability Services for Students and you have not already emailed it to ds_instructors@cs.rpi.edu, please do so ASAP. Shianne Hulbert will be in contact with you about your accommodations for the test. And you will go to Lally 102 for the test.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If you don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
 - Coverage: Lectures 1-14, Labs 1-7, HW 1-5.
 - OPTIONAL: you are allowed to bring two physical pieces of 8.5x11” paper, that’s four “sides”. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
@@ -13,10 +13,11 @@
 - Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted.
 - Practice problems from previous tests are available on the [course materials](https://submitty.cs.rpi.edu/courses/s24/csci1200/course_materials) page on Submitty.
 
-## Other Announcement
+## Other Announcements
 
 - Resources will be dedicated to test grading and thus no office hours on Friday in test weeks. (week of test 1, week of test 2, week of test 3)
 - Jidong's new office hours (effective after the spring break): Monday 2-4pm, Wednesday 1-3pm.
+- HW6 will be ready on Thursday night 10pm. Only 10 students passed all test cases last semester. Not just because it's hard, it's just that submitty will stop your program if it runs too long. In order to pass some of the tricky test cases, your program must be fast enough.
 
 ## Today’s Lecture
 

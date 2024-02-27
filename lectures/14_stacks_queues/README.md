@@ -49,18 +49,23 @@ the less than comparison function for the type stored inside the container. How 
 
 ```cpp
 bool float_less(float x, float y) {
-return x < y;
+	return x < y;
 }
 ```
 
-- Remember how we can sort the my_data vector defined above using our own homemade comparison function
-for sorting:
+- And then let's define a vector called *my_data*:
+
+```cpp
+std::vector<float> my_data = {1.1, 2.2, 3.3, 4.4, 5.5};
+```
+
+- Remember how we can sort the my_data vector defined above using our own homemade comparison function for sorting:
 
 ```cpp
 std::sort(my_data.begin(),my_data.end(),float_less);
 ```
 
-If we don’t specify a 3rd argument:
+If we don't specify a 3rd argument:
 
 ```cpp
 std::sort(my_data.begin(),my_data.end());
@@ -81,7 +86,9 @@ of that class. Then, that instance/object can be used like it’s a function. We
 template <class T>
 class less {
 public:
-bool operator() (const T& x, const T& y) const { return x < y; }
+	bool operator() (const T& x, const T& y) const {
+		return x < y;
+	}
 };
 ```
 
@@ -97,10 +104,12 @@ during computation of the function call operator! For example:
 ```cpp
 class between_values {
 private:
-float low, high;
+	float low, high;
 public:
-between_values(float l, float h) : low(l), high(h) {}
-bool operator() (float val) { return low <= val && val <= high; }
+	between_values(float l, float h) : low(l), high(h) {}
+	bool operator() (float val) {
+		return (low <= val && val <= high);
+	}
 };
 ```
 
@@ -116,6 +125,7 @@ if (std::find_if(my_data.begin(), my_data.end(), two_and_four) != my_data.end())
 	std::cout << "Found a value greater than 2 & less than 4!" << std::endl;
 }
 ```
+
  Alternatively, we could create the functor without giving it a variable name. And in the use below we also
 capture the return value to print out the first item in the vector inside this range. Note that it does not print
 all values in the range.

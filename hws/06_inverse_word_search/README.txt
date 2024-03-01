@@ -23,15 +23,21 @@ What's the order notation of your algorithm?
 
 
 
-TEST CASE SUMMARY:
-How did your program perform on the different test cases?  Summarize
-the running times.  (It's ok if it didn't finish the harder examples.)
-What new test cases did you create and how did it perform on those
-tests?
-
 
 
 MISC. COMMENTS TO GRADER:  
 Optional, please be concise!
 
 
+
+## Reflection and Self Assessment
+
+Discuss the issues you encountered during development and testing. What
+problems did you have? What did you have to research and learn on your
+own? What kinds of errors did you get? How did you fix them?
+
+What parts of the assignment did you find challenging? Is there anything that
+finally "clicked" for you in the process of working on this assignment? How well
+did the development and testing process go for you?
+
+< insert reflection >

@@ -1,3 +1,6 @@
+**Special Note 1: For this assignment, we will not deduct points if you use data structures which have not been learned in this class.**
+**Special Note 2: A correct program does not necessarily pass all the test cases for this assignment, as Submitty may let you fail a test case if your program is not fast enough or consumes too much memory.**
+
 # Homework 6 — Inverse Word Search Recursion
 
 In this homework we will build an inverse word search program using the techniques of recursion. 
@@ -47,7 +50,7 @@ solution, your program should just output the first legal solution it finds (it 
 number of solutions, nor does it need to be the first solution shown in our output). If the puzzle is impossible
 your program should output “No solutions found”.
 
-To implement this assignment, you must use recursion in your search. First you should tackle the problem
+**To implement this assignment, you must use recursion in your search.** First you should tackle the problem
 of finding and outputting one legal solution to the puzzle (if one exists).
 
 ## Algorithm Analysis

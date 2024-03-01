@@ -53,10 +53,10 @@ of finding and outputting one legal solution to the puzzle (if one exists).
 ## Algorithm Analysis
 
 For larger, more complex examples, this is a really hard problem. Your program should be able to handle
-the small puzzles we have created in a reasonable amount of time. You should make up your own test cases
+the small puzzles we have created in a reasonable amount of time. <!--You should make up your own test cases
 as well to understand this complexity. Include these test cases with your submission (they will be graded).
 Summarize the results of your testing, which test cases completed successfully and the approximate “wall
-clock time” for completion of each test. The UNIX/WSL time command can be prepended to your command
+clock time” for completion of each test.--> The UNIX/WSL time command can be prepended to your command
 line to estimate the running time:
 
 ```console
@@ -74,18 +74,19 @@ ok if your program can’t solve the biggest puzzles in a reasonable amount of t
 ## Program Requirements & Submission Details
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
+don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 10/26/2023, Thursday, 23:59pm.
+**Due Date**: 03/14/2024, Thursday, 10pm.
 
 ## Rubric
 
-22 pts
- - README.txt Completed (2 pts)
+20 pts
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
  - LETTER GRID REPRESENTATION (2 pts)
    - Grid is not represented via nested structure vector&lt;vector&lt;char&gt;&gt;, vector&lt;vector&lt;string&gt;&gt;, vector&lt;string&gt;, char\*\*, etc. (-1)
    - Lookup of a position is not O(1), uses something like&lt;list&lt;char&gt;&gt; which has lookup of O(n). (-1)
@@ -104,17 +105,18 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Did not finish but provides a reasonable analysis with respect to a theoretical implementation and properly justifies it. (-2)
    - Did not finish but provides a runtime and some small analysis for a theoretical solution. (-4)
    - Correct order notation for a largely incomplete implementation. (-4)
- - TESTING SUMMARY & NEW TEST CASES (Included with submission and discussed in README.txt) (3 pts)
+<!-- - TESTING SUMMARY & NEW TEST CASES (Included with submission and discussed in README.txt) (3 pts)
    - Does not provide an adequate description of what the new testcases were in the README. (-2)
    - Did not provide running times of the new test cases. (-1)
    - Provides new test case description but implementation/test was missing from the submission. (-1)
-   - Did not provide new test cases or implementation too incomplete for new test cases. (-3)
+   - Did not provide new test cases or implementation too incomplete for new test cases. (-3)-->
  - PROGRAM STRUCTURE (6 pts)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
+   - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)

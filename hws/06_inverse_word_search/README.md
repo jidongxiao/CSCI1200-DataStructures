@@ -1,6 +1,5 @@
-**Special Note 1: For this assignment, we will not deduct points if you use data structures which have not been learned in this class.**
-
-**Special Note 2: A correct program does not necessarily pass all the test cases for this assignment, as Submitty may let you fail a test case if your program is not fast enough or consumes too much memory.**
+**Special Note 1: A correct program does not necessarily pass all the test cases for this assignment, as Submitty may let you fail a test case if your program is not fast enough or consumes too much memory.**
+**Special Note 2: For this assignment, we will not deduct points if you use data structures which have not been learned in this class. However, students who passed all test cases last semester did not use any of such data structures. In other words, using only data structures we have learned so far, is sufficient to pass all test cases.**
 
 # Homework 6 — Inverse Word Search Recursion
 

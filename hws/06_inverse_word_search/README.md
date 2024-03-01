@@ -67,9 +67,9 @@ Once you have finished your implementation and testing, analyze the performance 
 order notation. What important variables control the complexity of a particular problem? The width &
 height of the grid (w and h), the number of required words (r), the number of forbidden words (f), the
 number of letters in each word (l), the number of solutions (s)? In your plain text README.txt file, write
-a concise paragraph (< 200 words) justifying your answer. Also include a simple table summarizing the
+a concise paragraph (< 200 words) justifying your answer. <!--Also include a simple table summarizing the
 running time and number of solutions found by your program on each of the provided examples. Note: It’s
-ok if your program can’t solve the biggest puzzles in a reasonable amount of time.
+ok if your program can’t solve the biggest puzzles in a reasonable amount of time.-->
 
 ## Program Requirements & Submission Details
 

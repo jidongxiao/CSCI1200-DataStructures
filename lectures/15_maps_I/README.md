@@ -69,8 +69,7 @@ changed. It can only be erased (together with the associated value).
 
 The mechanics of using std::pairs are relatively straightforward:
 - std::pairs are a templated struct with just two members, called first and second. Reminder: a struct
-is basically a wimpy class and in this course you aren’t allowed to create new structs. You should use classes
-instead.
+is basically a wimpy class.
 - To work with pairs, you must #include &lt;utility&gt;. Note that the header file for maps (#include &lt;map&gt;)
 itself includes utility, so you don’t have to include utility explicitly when you use pairs with maps.
 - Here are simple examples of manipulating pairs:
@@ -87,7 +86,7 @@ p3.second = -1.5;
 // p3.first = std::string("illegal"); // (a)
 // p1 = p3; // (b)
 ```
-- The function std::make pair creates a pair object from the given values. It is really just a simplified
+- The function std::make_pair creates a pair object from the given values. It is really just a simplified
 constructor, and as the example shows there are other ways of constructing pairs.
 - Most of the statements in the above code show accessing and changing values in pairs.
 The two statements at the end are commented out because they cause syntax errors:

@@ -10,4 +10,4 @@ Discuss the following questions with students around you.
 5. Do we need to track if one location is occupied or not?
 6. Do we need to track if a location is shared by multiple words or not?
 
-7. In the word search program we have discuss before relevant to this assignment? Can we use some of the logic from that program?
+7. Is the word search program we have discussed before relevant to this assignment? Can we use some of the logic from that program?

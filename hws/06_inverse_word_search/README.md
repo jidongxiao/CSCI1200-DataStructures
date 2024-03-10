@@ -123,5 +123,4 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor variable names. (-1)
-   - Use of global variables. (-1)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)

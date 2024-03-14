@@ -287,7 +287,7 @@ Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 
 This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirements for this snippet is:
 
-1. when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files. In other words, the snippet must come from the &lt;body&gt; sectiono only.
+1. when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files. In other words, the snippet must come from the &lt;body&gt; section only.
 
 2. The snippet should contain exactly 120 characters.
 

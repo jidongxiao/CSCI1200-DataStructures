@@ -225,7 +225,9 @@ The function takes one single character as its sole argument. It return a non-ze
 
 ## Input Files
 
-All the input files are HTML files, and they are provided under the [html_files](html_files) directory. Among these HTML files, there is only one HTML file which will be provided via the command line, and this file will be considered as the Seed file, and the path of this file (i.e. html_files/index.html) therefore will be used as the Seed URL. Your web crawler should search this HTML file and find links contained in this HTML file, and then follow these links to crawl other HTML files, and repeat this process until you can not reach any more files. Keep in mind that links which take you to an HTML file which you have already crawled, should be skipped, otherwise you will get into an infinite loop situation.
+Your program takes two types of input files: the HTML files and the input.txt file, which contains all the search query terms.
+
+All the HTML files are provided under the [html_files](html_files) directory. Among these HTML files, there is only one HTML file which will be provided via the command line, and this file will be considered as the Seed file, and the path of this file (i.e. html_files/index.html) therefore will be used as the Seed URL. Your web crawler should search this HTML file and find links contained in this HTML file, and then follow these links to crawl other HTML files, and repeat this process until you can not reach any more files. Keep in mind that links which take you to an HTML file which you have already crawled, should be skipped, otherwise you will get into an infinite loop situation.
 
 ## Output File Format
 

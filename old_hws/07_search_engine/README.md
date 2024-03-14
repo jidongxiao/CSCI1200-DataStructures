@@ -209,7 +209,7 @@ Search engines are usually case-insensitive, but making the search engine case-i
 
 ### Rule 2. Word Boundary
 
-When searching the word *Tom*, we do not consider the word *Tom* in *Tomato* as a match, and we do not consider the word *Tom* in *4Tom* or *Tom32* as a match; but we do consider the word *Tom* in *Tom.*, *Tom-*, *.Tom*, *-Tom*, *_Tom*, *Tom!*, " Tom", " Tom ", etc., as a match. In other words, the word *Tom* is found in a document only if it appears as a standalone word, meaning that the character right before *Tom* and the character right after *Tom* must be a word boundary. And in this assignment, you can consider any non-alphanumeric character as a word boundary. This behavior is consistent with what Google does.
+When searching the word *Tom*, we do not consider the substring *Tom* in *Tomato* as a match, and we do not consider the substring *Tom* in *4Tom* or *Tom32* as a match; but we do consider the substring *Tom* in *Tom.*, *Tom-*, *.Tom*, *-Tom*, *_Tom*, *Tom!*, " Tom", " Tom ", etc., as a match. In other words, the word *Tom* is found in a document only if it appears as a standalone word, meaning that the character right before *Tom* and the character right after *Tom* must be a word boundary. And in this assignment, you can consider any non-alphanumeric character as a word boundary. This behavior is consistent with what Google does.
 
 Such a rule also applies to phrase search. We consider a phrase to be a match only if we find the phrase and the character right before the phrase and the character right after the phrase is a word boundary, i.e., a non-alphanumeric character.
 

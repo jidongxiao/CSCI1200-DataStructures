@@ -150,7 +150,7 @@ To reduce the scope of the assignment, and hence reduce the amount of work from 
 
 ### Rule 1. Search HTML Files Only
 
-Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt; section of the HTML file. The &lt;body&gt; section, enclosed within the &lt;body&gt;&lt;/body&gt; tags in an HTML document, represents the primary content area of the web page.
+Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. 
 
 ### Rule 2. Local Searching Only
 
@@ -190,7 +190,7 @@ Your search engine should support both phrase search and regular search.
 1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
 2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. 
 
-Based on the above definition, a document which only contains the following two lines (in the body section of the HTML file) is a valid document when the user performs a regular search looking for *Tom Cruise*:
+Based on the above definition, a document which only contains the following two lines is a valid document when the user performs a regular search looking for *Tom Cruise*:
 
 ```console
 Tom and Jerry show
@@ -279,21 +279,21 @@ In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a
 <meta name="description" content="Boston Celtics Scores, Stats and Highlights">
 ```
 
-Here, "Boston Celtics Scores, Stats and Highlights" is the description. Keep in mind that this description tag is always in the &lt;head&gt; section, rather than in the &lt;body&gt; section, and thus a match found in the description should not be counted as a valid match.
+Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 
 ### The Snippet
 
 This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirements for this snippet is:
 
-1. It should contain exactly 120 characters.
+1. when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files. In other words, the snippet must come from the &lt;body&gt; sectiono only.
 
-2.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence. If the query appears multiple times in a document, consider the first occurrence only. In other words, to construct the snippet, your program should search the first occurrence of the query in the document.
+2. The snippet should contain exactly 120 characters.
 
-2.2 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query, and if the query appears multiple times in the document, consider the first occurrence only; if an exact match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and if the first keyword appears multiple times in the document, consider the first occurrence only.
+3.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence. If the query appears multiple times in a document, consider the first occurrence only. In other words, to construct the snippet, your program should search the first occurrence of the query in the &lt;body&gt; section of the document.
+
+3.2 For a regular search, if an exact match can be found in the &lt;body&gt; section of the document, the snippet should start from the beginning of a sentence which contains the query, and if the query appears multiple times in the &lt;body&gt; section of the document, consider the first occurrence only; if an exact match can not be found in the &lt;body&gt; section of the document, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and if the first keyword appears multiple times in the &lt;body&gt; section of the document, consider the first occurrence only.
 
 **Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there are some whitespaces in between the period and the start of the sentence.
-
-**Note 2**, when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files.
 
 ## Useful String Functions
 

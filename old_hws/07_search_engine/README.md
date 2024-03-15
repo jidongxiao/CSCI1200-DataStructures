@@ -1,3 +1,5 @@
+**Note:** Sample output files will be added later; submitty autograder will not open until Friday afternoon.
+
 <!-- Clarification
 
 We made a clarification on the discussion forum. In case you didn't pay attenton there, we are adding the clarification here.
@@ -90,7 +92,7 @@ A search query may contain one keyword or multiple keywords. Given a set of keyw
 1. Calculate a density score for each keyword within the document. 
 2. Accumulate these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
 
-For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
+For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword. (**Note:** here the term "all documents" literally means all documents, not just the documents which contain the query.)
 
 ```console
 Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Keyword Density Across All Documents)

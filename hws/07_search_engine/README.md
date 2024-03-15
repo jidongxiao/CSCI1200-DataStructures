@@ -231,7 +231,7 @@ All the HTML files are provided under the [html_files](html_files) directory. Am
 
 ## Output File Format
 
-The output of your program should go to the output file. 
+The output of your program should go to the output file. All output files used by the autograder are provided in the [sample_output](sample_output) folder.
 
 - If no matches can be found for a search query, your search engine should print the following message to the output file.
 

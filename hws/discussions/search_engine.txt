@@ -6,5 +6,6 @@ Discuss the following questions with students around you.
 2. Unlike all previous homeworks, in this homework, the output file is not specified from the command line, so how do handle this situation and still print the results into the right output file?
 
 3. During the development of this program, there will be multiple situations when we need to consider the word boundary, what are these situations?
+4. After building the inverted index map, for each word, we know which document contains this word; but how do we get the documents which contain all the words of the search query?
 
-4. What shall we do in the main function?
+5. What shall we do in the main function?

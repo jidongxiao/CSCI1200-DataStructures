@@ -1,0 +1,13 @@
+In-class discussion (This discussion only focus on the basic logic of the program; optimization is not the scope of this discussion)
+
+Discuss the following questions with students around you.
+
+1. What data structure is good to represent one solution? What data structure is good to represent all solutions?
+2. Do we need to initialize the board(s)?
+3. What shall we do in the main function?
+
+4. Do we need to track where exactly (in the board) a word is inserted?
+5. Do we need to track if one location is occupied or not?
+6. Do we need to track if a location is shared by multiple words or not?
+
+7. Is the word search program we have discussed before relevant to this assignment? Can we use some of the logic from that program?

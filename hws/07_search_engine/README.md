@@ -1,8 +1,6 @@
-## Clarification
+<!-- Clarification
 
 We made a clarification on the discussion forum. In case you didn't pay attenton there, we are adding the clarification here.
-
-1. when determining which document contains "Tom", we do not consider the word "Tomato" as a match; also, to simplify your task, we do not consider "Tom.", "Tom-", ".Tom", "-Tom", "_Tom", etc., as considering all these cases would make your job much harder. So the word Tom is found only if "Tom" is right before whitespaces and is followed by whitespaces. In other words, the character before "Tom" and the character after "Tom" must be a whitespace character.
 
 2. However, these are two situations where the above rule does not apply:
 
@@ -20,7 +18,7 @@ when the search query is a phrase search of "Statue of Liberty". And this means 
 
 2.2. when counting the number of occurrences of each keyword (in the keyword density score calculation process), the above rule does not apply. When counting the occurrences of each keyword, you can just call the **std::string::find**() function to find the occurrence of that keyword. And therefore, when the keyword is *Gaga*, and the **std::string::find**() function finds *Gaga* in the sentence of "I am Lady Gaga.", that is okay, we will count this one as a valid occurrence even though there is period "." after *Gaga*.
 
-So you may see that 1 and 2 are not consistent; but the only reason we allow this inconsistence to exist in this assignment is to simplify your task. A fully functioning search engine will need to handle a lot of complicated cases, and that's way beyond the scope of this course.
+So you may see that 1 and 2 are not consistent; but the only reason we allow this inconsistence to exist in this assignment is to simplify your task. A fully functioning search engine will need to handle a lot of complicated cases, and that's way beyond the scope of this course.-->
 
 # Homework 7 — Design and Implementation of a Simple Google
 
@@ -61,7 +59,7 @@ Based on the above description, you can see there are 3 steps when implementing 
 2. query searching
 3. page ranking
 
-And thus, in this assignment, you are recommended to write your search engine following this same order of 3 steps (the reason this is just a recommendation, rather than a requirement, is because one mentor told us that she can produce all the results in the web crawling stage, and she doesn't need 3 steps). More details about each of these 3 steps are described below:
+And thus, in this assignment, you are recommended to (but not required to) write your search engine following this same order of 3 steps. More details about each of these 3 steps are described below:
 
 ### Web Crawling
 
@@ -92,7 +90,7 @@ A search query may contain one keyword or multiple keywords. Given a set of keyw
 1. Calculate a density score for each keyword within the document. 
 2. Accumulate these individual density scores into a combined score. <!--represent the overall keyword density of the document for the given set of keywords.-->
 
-For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword.
+For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword. (**Note:** here the term "all documents" literally means all documents, not just the documents which contain the query.)
 
 ```console
 Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Keyword Density Across All Documents)
@@ -131,6 +129,12 @@ Once we get the density score for the keyword *Tom* in the first document (let's
 
 #### Backlinks Score
 
+There are typically two types of links on the Internet.
+
+1. **Outgoing Links**: These are links from a particular webpage on your website to other webpages or websites. Outgoing links are also known as "outbound links". They provide navigation from your webpage to other relevant resources on the internet.
+
+2. **Incoming Backlinks**: These are links from other websites or webpages that direct users to a specific webpage on your website. Incoming backlinks are also commonly referred to as "inbound links" or simply "backlinks". Search engines like Google consider incoming backlinks as an important factor when determining the authority, relevance, and popularity of a webpage. Pages with a higher number of quality backlinks are often perceived as more authoritative and are likely to rank higher in search engine results pages.
+
 A backlinks score for a webpage is based on the importance of its incoming backlinks, considering that pages with fewer outgoing links are considered more valuable and contribute more to the score. Let's say there are N web pages which have links pointing to this current page. We name these pages doc_1, doc_2,... to doc_N, and we use doc_i->outgoingLinks to denote how many outgoing links document i has. Then we can calculate the backlinks score of this current page as following:
 
 
@@ -144,39 +148,11 @@ Once you have both the keywords density score and the backlinks score, you can t
 
 To reduce the scope of the assignment, and hence reduce the amount of work from you, we make the following rules for this search engine.
 
-### Rule 1. Case-sensitive Search Engine
+### Rule 1. Search HTML Files Only
 
-Search engines are usually case-insensitive, but making the search engine case-insensitive will require some extra work and likely need to call some functions we have not learned in this course. Therefore, to simplify your tasks and reduce the amount of your work, in this assignment, the search engine you are going to implement is case-sensitive.
+Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. 
 
-<!--### Words Which are Concatenated
-
-When searching *Tom Cruise*, your search engine should not include a page which contains *TomCruise*, but does not include "Tom Cruise". Therefore, a search result like the third one here should not be presented in your search results.-->
-
-### Rule 2. Search HTML Files Only
-
-Search Engines like Google will search all types of files on the Internet, but in this assignment, we assume all files we search are HTML files. And we consider an HTML file contains the search query only if the search query can be found within the &lt;body&gt; section of the HTML file. The &lt;body&gt; section, enclosed within the &lt;body&gt;&lt;/body&gt; tags in an HTML document, represents the primary content area of the web page.
-
-Based on Rule 1 and Rule 2: when the search query is *Tom Cruise*, the second page showed in this image should not be included in your search results, unless the words *Tom Cruise* appears in the other part of the &lt;body&gt;&lt;/body&gt; section of this web page, which is not displayed here.
-
-![alt text](images/tom_cruise.png "tom cruise")
-
-But wait, we see *Tom Cruise* here:
-
-![alt text](images/tom_cruise_description.png "tom cruise description")
-
-That's true, but this line is not in the &lt;body&gt; section of the HTML file, it is created via a meta description tag which is in the &lt;head&gt; section of the HTML file. We will have more details on this in [a later section](#the-description) in this README.
-
-The same thing for this line:
-
-![alt text](images/tom_cruise_title.png "tom cruise title")
-
-this line is not in the &lt;body&gt; section of the HTML file, rather, it is created via a title tag which is in the &lt;head&gt; section of the HTML file. More details on this in [a later section](#the-title) in this README.
-
-### Rule 3. Search Query: No More Than 3 Words
-
-We also limit the user to search no more than 3 words in each query. Based on this rule, we allow users to search *Tom*, *Tom Cruise*, *Tom and Jerry*, but *Tom Hanks Academy Award* is not allowed, as it contains more than 3 words.
-
-### Rule 4. Local Searching Only
+### Rule 2. Local Searching Only
 
 The search engine you implement will not search anything on the Internet, as that requires extensive knowledge in computer networks and will need to include network libraries, which is way beyond the scope of this course. In this assignment, we limit our searches to a local folder, which is provided as [html_files](html_files).
 
@@ -187,18 +163,26 @@ You are also not allowed to use file system libraries such as &lt;filesystem&gt;
 Your program will be run like this:
 
 ```console
-nysearch.exe html_files/index.html output.txt Tom
-nysearch.exe html_files/index.html output.txt Tom Cruise
-nysearch.exe html_files/index.html output.txt Tom and Jerry
-nysearch.exe html_files/index.html output.txt "Tom Cruise"
+nysearch.exe html_files/index.html input.txt
 ```
 
 Here:
 
 - *nysearch.exe* is the executable file name.
 - html_files/index.html is the Seed URL. While Google maintains a list of Seed URL, in this assignment, we will just use one single HTML file as the Seed page and the path of this file is the Seed URL.
-- output.txt is where to print your output to.
-- *Tom* is an example of a search query which contains one word, *Tom Cruise* is an example of a search query which contains two words, *Tom and Jerry* is an example of a search query which contains three words. *"Tom Cruise"* is an example of a phrase search, in which the user wants to find an exact match to this whole phrase.
+- input.txt is the input file which contains search queries. Each line of this file is a search query.
+
+Your program should treat each line in the input file as a search query, and print the search results corresponding to each search query into a separate file.
+Name your output file(s) this way: out1.txt, out2.txt, out3.txt, out4.txt, ...
+
+Here
+1. out1.txt contains the search results for the first search query - i.e., the query appears in line 1 of the input file.
+2. out2.txt contains the search results for the second search query - i.e., the query appears in line 2 of the input file.
+3. out3.txt contains the search results for the third search query - i.e., the query appears in line 3 of the input file.
+4. out4.txt contains the search results for the fourth search query - i.e., the query appears in line 4 of the input file.
+...
+
+You must name your output files in such a way. You will fail the test cases if your output files are not named as "out1.txt", "out2.txt", "out3.txt", "out4.txt", etc. And yes, if the input file has 1000 lines, then your program will produce 1000 output files.
 
 ### Phrase Search vs Regular Search
 
@@ -206,7 +190,7 @@ Your search engine should support both phrase search and regular search.
 1. When searching multiple words with double quotes, it is called a phrase search. In phrase search, the whole phrase must exist somewhere in the searched document. In other words, the search engine will search for the exact phrase, word for word, and in the specified order.
 2. When searching multiple words without double quotes, it is called a regular search. In this assignment, we define the term *regular search* as such: the search engine should look for documents which contain every word of the search query, but these words do not need to appear together, and they can appear in any order within the document. 
 
-Based on the above definition, a document which only contains the following two lines (in the body section of the HTML file) is a valid document when the user searches *Tom Cruise*:
+Based on the above definition, a document which only contains the following two lines is a valid document when the user performs a regular search looking for *Tom Cruise*:
 
 ```console
 Tom and Jerry show
@@ -215,9 +199,35 @@ Have Fun And Save Now With Great Deals When You Cruise With Carnival. Book Onlin
 
 Because we can find both the word *Tom* and the word *Cruise*. But it is not a valid document if the user does a phrase search - *"Tom Cruise"*, as no exact match can be found in this document.
 
+### Definition of Match
+
+When searching a document, you should follow these rules:
+
+### Rule 1. Case-sensitive Search Engine
+
+Search engines are usually case-insensitive, but making the search engine case-insensitive will require some extra work and likely need to call some functions we have not learned in this course. Therefore, to simplify your tasks and reduce the amount of your work, in this assignment, the search engine you are going to implement is case-sensitive. In other words, when searching *Tom*, the word *Tom* is a match, neither the word *TOM* nor the word *tom* is a match.
+
+### Rule 2. Word Boundary
+
+When searching the word *Tom*, we do not consider the substring *Tom* in *Tomato* as a match, and we do not consider the substring *Tom* in *4Tom* or *Tom32* as a match; but we do consider the substring *Tom* in *Tom.*, *Tom-*, *.Tom*, *-Tom*, *_Tom*, *Tom!*, " Tom", " Tom ", etc., as a match. In other words, the word *Tom* is found in a document only if it appears as a standalone word, meaning that the character right before *Tom* and the character right after *Tom* must be a word boundary. And in this assignment, you can consider any non-alphanumeric character as a word boundary. This behavior is consistent with what Google does.
+
+Such a rule also applies to phrase search. We consider a phrase to be a match only if we find the phrase and the character right before the phrase and the character right after the phrase is a word boundary, i.e., a non-alphanumeric character.
+
+To determine if a character is an alphanumeric character or not, you can call std::isalnum(). This function considers the following characters as alphanumeric:
+
+```console
+digits (0123456789)
+uppercase letters (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+lowercase letters (abcdefghijklmnopqrstuvwxyz)
+```
+
+The function takes one single character as its sole argument. It return a non-zero value if the character is an alphanumeric character, 0 otherwise.
+
 ## Input Files
 
-All the input files are HTML files, and they are provided under the [html_files](html_files) directory. Among these HTML files, there is only one HTML file which will be provided via the command line, and this file will be considered as the Seed file, and the path of this file (i.e. html_files/index.html) therefore will be used as the Seed URL. Your web crawler should search this HTML file and find links contained in this HTML file, and then follow these links to crawl other HTML files, and repeat this process until you can not reach any more files. Keep in mind that links which take you to an HTML file which you have already crawled, should be skipped, otherwise you will get into an infinite loop situation.
+Your program takes two types of input files: the HTML files and the input.txt file, which contains all the search query terms.
+
+All the HTML files are provided under the [html_files](html_files) directory. Among these HTML files, there is only one HTML file which will be provided via the command line, and this file will be considered as the Seed file, and the path of this file (i.e. html_files/index.html) therefore will be used as the Seed URL. Your web crawler should search this HTML file and find links contained in this HTML file, and then follow these links to crawl other HTML files, and repeat this process until you can not reach any more files. Keep in mind that links which take you to an HTML file which you have already crawled, should be skipped, otherwise you will get into an infinite loop situation.
 
 ## Output File Format
 
@@ -271,21 +281,21 @@ In all HTML files we provide, in the &lt;head&gt; section of the HTML, we have a
 <meta name="description" content="Boston Celtics Scores, Stats and Highlights">
 ```
 
-Here, "Boston Celtics Scores, Stats and Highlights" is the description. Keep in mind that this description tag is always in the &lt;head&gt; section, rather than in the &lt;body&gt; section, and thus a match found in the description should not be counted as a valid match.
+Here, "Boston Celtics Scores, Stats and Highlights" is the description.
 
 ### The Snippet
 
 This snippet contains an excerpt from the page's content that is directly related to the search query. In this assignment, the requirements for this snippet is:
 
-1. It should contain exactly 120 characters.
+1. when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files. In other words, the snippet must come from the &lt;body&gt; section only.
 
-2.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence. If the query appears multiple times in a document, consider the first occurrence only. In other words, to construct the snippet, your program should search the first occurrence of the query in the document.
+2. The snippet should contain exactly 120 characters.
 
-2.2 For a regular search, if an exact match can be found in the document, the snippet should start from the beginning of a sentence which contains the query, and if the query appears multiple times in the document, consider the first occurrence only; if an exact match can not be found, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and if the first keyword appears multiple times in the document, consider the first occurrence only.
+3.1 For a phrase search, the snippet should start from the beginning of a sentence which contains the query; This means the query itself may not appear in the snippet: this is possible when a sentence contains the query, but that query does not appear in the first 120 characters of the sentence. If the query appears multiple times in a document, consider the first occurrence only. In other words, to construct the snippet, your program should search the first occurrence of the query in the &lt;body&gt; section of the document.
+
+3.2 For a regular search, if an exact match can be found in the &lt;body&gt; section of the document, the snippet should start from the beginning of a sentence which contains the query, and if the query appears multiple times in the &lt;body&gt; section of the document, consider the first occurrence only; if an exact match can not be found in the &lt;body&gt; section of the document, the snippet should start from the beginning of a sentence which contains the first keyword of the query, and if the first keyword appears multiple times in the &lt;body&gt; section of the document, consider the first occurrence only.
 
 **Note**, to simplify the construction of the snippets, we have tailored the provided HTML files such that you can identify the beginning of a sentence via searching the period sign before the sentence. In this assignment, you can assume that there is always a period sign before the sentence which contains the snippet you are going to construct, however, it is possible that there are some whitespaces in between the period and the start of the sentence.
-
-**Note 2**, when constructing the snippet, you should only consider the &lt;body&gt; section of the HTML files.
 
 ## Useful String Functions
 
@@ -312,7 +322,8 @@ if (lastSlashPos != std::string::npos) {
 	directory = URL.substr(0, lastSlashPos + 1);
 }
 ```
-- erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove the double quotes, and you can do so using code like this:
+
+<!-- erase: when doing a phrase search, we enclose our query with double quotes. Unfortunately, the autograder is not smart enough to handle this, and it will pass the double quotes as a part of the query string. And therefore, in your program, you need to remove the double quotes, and you can do so using code like this:
 
 ```cpp
 size_t quotePos;
@@ -323,6 +334,7 @@ if( (quotePos = tmpString.find('"')) != std::string::npos ){
 ```
 
 Here *tmpString* is a string which might contain one double quote character, for example, *tmpString* might be **"Tom**, or it might be **Cruise"**.
+-->
 
 ## Provided Functions
 
@@ -379,32 +391,34 @@ Make sure you still include the fstream library.
 In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
+don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
 to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 11/02/2023, Thursday, 23:59pm.
+**Due Date**: 03/21/2024, Thursday, 10pm.
 
 ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/search/). Note that this page just uses a copy of Google's homepage to serve as the front end, and at the back end it runs the instructor's C++ code. This page does not support the "enter" key, you need to press the "New York Search" button to submit a query.
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results.
 
 ## Rubric
 
-20 pts
- - README.txt Completed (2 pts)
+21 pts
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
- - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
+   - No reflection. (-1)
+ - IMPLEMENTATION AND CODING STYLE (8 pts)
    - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
+   - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
-   - Poor variable names. (-1)
+   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (7 pts)
    - Uses data structures which have not been covered in this class. (-7)
@@ -413,3 +427,47 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Member variables are public. (-2)
  - RECURSION (3 pts)
    - Does not use recursion in the web crawler component. (-3)
+
+## Appendix A - HTML File Basics
+
+A typical HTML file consists of two main sections: the &lt;head&gt; section and the &lt;body&gt; section.
+
+1. The &lt;head&gt; section contains metadata about the document, such as its title, character encoding, stylesheets, scripts, and other information that is not directly displayed on the web page.
+
+2. The &lt;body&gt; section contains the actual content of the document that is displayed to the user, such as text, images, links, and other elements.
+
+These two sections together define the structure and content of an HTML document. The following is an example, it is a basic html file.
+
+```html
+1. <!DOCTYPE html>
+2. <html lang="en">
+3. <head>
+4.    <meta charset="UTF-8">
+5.    <meta name="description" content="Example HTML file with head and body sections">
+6.    <meta name="keywords" content="HTML, example, head, body">
+7.    <meta name="author" content="Your Name">
+8.    <title>Example HTML File</title>
+9. </head>
+10. <body>
+11.    <h1>Welcome to My Website</h1>
+12.    <p>This is the body content of the HTML file. You can add any content you like here.</p>
+13.    <ul>
+14.        <li><a href="https://example.com">Example Website</a></li>
+15.        <li><a href="https://www.w3schools.com/html/">HTML Tutorial</a></li>
+16.        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN Web Docs: HTML</a></li>
+17.    </ul>
+18. </body>
+19. </html>
+```
+
+Here:
+
+- line 3 and line 9 marks the head section of this html file.
+
+- line 10 and line 18 marks the body section of this html file.
+
+- line 5 is the description tag.
+
+- line 8 is the title tag.
+
+- line 14, line 15, and line 16 are some outgoing links.

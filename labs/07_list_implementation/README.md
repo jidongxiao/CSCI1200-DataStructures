@@ -32,11 +32,31 @@ Linked List of NodeA nodes: 1 -> 2 -> 3 -> 4 -> 5 -> nullptr
 Linked List of NodeB nodes: 1 -> 1.41421 -> 1.73205 -> 2 -> 2.23607 -> nullptr
 ```
 
-**Note**: Hardcoding the PrintList() function to just print the above two messages is strictly prohibited. Students doing that will be evicted from the lab room. Also, your functions must be templated functions.
+**Note**: Hardcoding the PrintList() function to just print the above two messages is strictly prohibited. Also, your functions must be templated functions.
 
 **To complete this checkpoint**, show a TA the implementation and the output of your program.
 
-## Checkpoint 3: Debugging a Merge Sort program. 
+## Checkpoint 3: Merge Two Lists. 
+*estimate: 30-40 minutes*
+
+Given two doubly-linked lists: linked list A and linked list B, and both linked lists are sorted. Data in linked list A is sorted in an ascending order. Data in linked list B is also sorted in an ascending order. Merge these two lists such that data in the merged list is still sorted in an ascending order.
+
+More specifically, complete the mergeLists() function in [checkpoint3.cpp](checkpoint3.cpp), such that the program prints the following output.
+
+```console
+$ g++ checkpoint3.cpp
+$ ./a.out
+1 3 5 7 9
+2 4 6 8 10
+1 2 3 4 5 6 7 8 9 10
+10 9 8 7 6 5 4 3 2 1
+```
+
+**To complete this checkpoint**, explain to a TA your implementation and show the output of your program.
+
+<!--TODO: how about memory leaks?-->
+
+<!--## Checkpoint 3: Debugging a Merge Sort program. 
 *estimate: 30-40 minutes*
 
 We expect our program [checkpoint3.cpp](checkpoint3.cpp) to produce the following results when it is compiled and run.
@@ -54,4 +74,4 @@ Sorted Vector: 2 3 4 7 8
 
 But this program currently does not behave as expected. Troubleshoot this program, find the problems and fix them. You can use a debugger.
 
-**To complete this checkpoint**, explain to a TA the bugs you found, show a TA your fixes and run the program to show that your fixes are correct and the program now produces the expected results.
+**To complete this checkpoint**, explain to a TA the bugs you found, show a TA your fixes and run the program to show that your fixes are correct and the program now produces the expected results.-->

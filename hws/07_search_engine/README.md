@@ -199,9 +199,9 @@ Have Fun And Save Now With Great Deals When You Cruise With Carnival. Book Onlin
 
 Because we can find both the word *Tom* and the word *Cruise*. But it is not a valid document if the user does a phrase search - *"Tom Cruise"*, as no exact match can be found in this document.
 
-### Definition of Match
+### Definition of Match/Appearance/Occurrence
 
-When searching a document, you should follow these rules:
+In the context of search engine, the term *Match* or *Appearance* or *Occurrence*, has a special meaning. More specifically, in this assignment, when searching a document to determine *match*/*appearnce*/*occurrence*, you should follow these rules:
 
 ### Rule 1. Case-sensitive Search Engine
 

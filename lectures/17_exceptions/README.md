@@ -169,10 +169,13 @@ double compute_slope(const Point &a, const Point &b) throw(int) {
 	double rise = b.y - a.y;
 	double run = b.x - a.x;
 	double epsilon = 0.00001;
-	if (fabs(run) < epsilon) throw -1;
-		return rise / run;
+	if (fabs(run) < epsilon){
+		throw -1;
 	}
-	double slope(const Line &ln) {
+	return rise / run;
+}
+
+double slope(const Line &ln) {
 	return compute_slope(ln.a,ln.b);
 }
 

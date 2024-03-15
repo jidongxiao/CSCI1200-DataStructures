@@ -1,0 +1,34 @@
+Matching documents: 
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: After 64 episodes of television, a feature film and a statue dedication, Aaron Paul has closed the book on Jesse Pinkman
+
+Title: Wikipedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file16.html
+Description: Tom Cruise - Wikipedia
+Snippet: "Breaking Bad" stars Bryan Cranston and Aaron Paul's friendship led to a business relationship in 2019.
+Aaron Paul says 
+
+Title: The Vogue
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file26.html
+Description: Maroon 5
+Snippet: Aaron Paul says he doesn't get residuals from 'Breaking Bad' on Netflix.
+Aaron Paul Once Revealed How Many Curse Words H
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: Bob Odenkirk, RJ Mitte, Anna Gunn, Bryan Cranston, Aaron Paul, Jonathan Banks, Betsy Brandt and Dean Norris made their w
+
+Title: Tomato
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/file30.html
+Description: This is a tomato
+Snippet: Aaron Paul played Jesse Pinkman on Breaking Bad
+However, Jesse still manages to be beloved. I, for one, was rooting for 
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: She subsequently portrayed Lucille Ball in Aaron Sorkin’s biopic Being the Ricardos (2021), which centres on a turbule

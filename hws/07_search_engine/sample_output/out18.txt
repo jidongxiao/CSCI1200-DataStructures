@@ -1,0 +1,38 @@
+Matching documents: 
+
+Title: GRAMMY.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file19.html
+Description: Lady Gaga | Artist
+Snippet: All GRAMMY Awards and Nominations for Lady Gaga. View All Nominations For This Artist · Born Stefani Joanne Angelina Ge
+
+Title: Apple Music
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file15.html
+Description: Lady Gaga
+Snippet: But for Lady Gaga—one of popular culture's greatest, most extravagant creations—the inauthenticity is the point.
+Lad
+
+Title: Twitter
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file11.html
+Description: CNN Breaking News (@cnnbrk) / X
+Snippet: Lady Gaga is off the deep end with her rumored new beau Michael Polansky. Here's everything to know about the tech inves
+
+Title: Instagram
+URL: html_files/subdir1/subdir2/file5.html
+Description: Lady Gaga (@ladygaga) • Instagram photos and videos
+Snippet: 56M Followers, 97 Following, 3639 Posts - See Instagram photos and videos from Lady Gaga (@ladygaga). Lady Gaga Jazz & P
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Lady Gaga and Rihanna aren't the only pop stars nominated for Best Original Song Oscars.
+Rihanna just dropped a trailer 
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: Heartfelt performances by the likes of Lady Gaga and Rihanna came alongside disappointments for the year's biggest music
+
+Title: StatueOfLibertyTickets.com
+URL: html_files/subdir1/subdir2/file6.html
+Description: Statue of Liberty Tickets, Ellis Island Tickets, Statue of Liberty...
+Snippet: Stefani Joanne Angelina Germanotta, known professionally as Lady Gaga, is an American singer, songwriter, and actress. S

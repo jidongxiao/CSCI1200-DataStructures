@@ -1,0 +1,25 @@
+Matching documents: 
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Late basketball player Kobe Bryant shared four children with wife Vanessa Bryant.
+Vanessa Bryant is keeping late husband
+
+Title: Twitter
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file11.html
+Description: CNN Breaking News (@cnnbrk) / X
+Snippet: Kobe Bryant mural near Lakers arena to be kept after landlord ordered for removal.
+	A mural of Kobe Bryant and his daugh
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: Sabrina Ionescu ties the knot with NFL beau in a fairytale wedding and Kobe Bryant's family in attendance.
+    The late 
+
+Title: The Vogue
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file26.html
+Description: Maroon 5
+Snippet: com Arena Unveils Kobe Bryant Memorial Statue.
+Netflix has shared an update on Black Mirror, including a release window 

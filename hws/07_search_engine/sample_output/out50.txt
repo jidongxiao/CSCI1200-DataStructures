@@ -1,0 +1,23 @@
+Matching documents: 
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: Listen to Someone Like You - Single by Adele on Apple Music. 2011. 2 Songs. Duration: 9 minutes.
+
+“Someone Like You”
+
+Title: Adele Performs Hometown Glory
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/subdir12/subdir13/file32.html
+Description: Hometown Glory
+Snippet: Someone Like You Lyrics: I heard that you're settled down / That you found a girl and you're married now / I heard that 
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: Adele ‘Someone Like You’
+Singer finally releases second video from smash hit record
+
+BY ROLLING STONE
+
+I'd hoped you

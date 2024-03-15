@@ -1,0 +1,52 @@
+Matching documents: 
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Boston University, Boston, Massachusetts. 387601 likes · 5379 talking about this. Welcome to Boston University. Boston 
+
+Title: Boston University
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/file25.html
+Description: Boston University: Homepage
+Snippet: Let us help you plan your vacation or meeting and discover everything Boston MA has to offer. Boston University is a lea
+
+Title: Boston.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/file24.html
+Description: Boston.com: Local breaking news, sports, weather, and things ...
+Snippet: News: Stay up to date with Boston.com coverage of News. Sports: Patriots - Red Sox - Celtics - Bruins - New England Revo
+
+Title: Sports Illustrated
+URL: html_files/subdir1/file3.html
+Description: Celtics Hire Former Knicks Coach - Sports Illustrated
+Snippet: In Jeff Van Gundy, the Boston Celtics added a consultant with 11 years of experience as an NBA head coach. Former New Yo
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: What Boston cares about right now: Get breaking updates on news, sports, and weather. Local alerts, things to do, and mo
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: The Boston Celtics and Dallas Mavericks G League affiliates have made a trade. Pinson's G League rights were traded (on 
+
+Title: Screen Rant
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file23.html
+Description: Tom Cruise's Age In Mission Impossible 7 Is A Shocking ...
+Snippet: Boston Celtics rookie Jordan Walsh is already working toward earning the trust of his teammates weeks ahead of the 2023-
+
+Title: ESPN
+URL: html_files/subdir1/subdir2/file4.html
+Description: Boston Celtics 2023-24 NBA Roster
+Snippet: Boston Celtics Roster 2023-24 More NBA Teams Team Roster NAME POS AGE HT WT COLLEGE SALARY https://a.espncdn.com/i/heads
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: The Boston Celtics are a National Basketball Association team that plays in the Eastern Conference. The Celtics have won
+
+Title: GRAMMY.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file19.html
+Description: Lady Gaga | Artist
+Snippet: Celtics
+The Warriors pulled off an incredible 132-126 overtime victory against the Boston Celtics behind standout perfor

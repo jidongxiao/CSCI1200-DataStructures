@@ -1,0 +1,31 @@
+Matching documents: 
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: Though the plot remains under wraps, “Kinds of Kindness” is an anthology film that reunites Stone with her “Poor T
+
+Title: StatueOfLibertyTickets.com
+URL: html_files/subdir1/subdir2/file6.html
+Description: Statue of Liberty Tickets, Ellis Island Tickets, Statue of Liberty...
+Snippet: Poor Things is a humorous, sexy, and Gothic tale that can be philosophically but in the most bizarre ways.
+    Poor Thin
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: BY HEATHER SCHWEDEL
+MARCH 12, 20243:06 PM
+Emma Stone accepting the Oscar for best actress in 2024 for Poor Things and Li
+
+Title: Instagram
+URL: html_files/subdir1/subdir2/file5.html
+Description: Lady Gaga (@ladygaga) • Instagram photos and videos
+Snippet: You can watch "Poor Things" online through streaming platforms and buy the movie to stream at home.
+
+	Perhaps no film ha
+
+Title: Google Play
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file14.html
+Description: CNN Breaking US & World News - Apps on Google Play
+Snippet: Yeoh, who was among several previous winners of the category to present the award to Stone for her role in “Poor Thing

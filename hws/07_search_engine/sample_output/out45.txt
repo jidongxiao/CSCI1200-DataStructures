@@ -1,0 +1,25 @@
+Matching documents: 
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: Chelsea FC, Wrexham AFC rematch to be held at Levi's Stadium.
+    Chelsea’s end of season run sets up a perfect dramat
+
+Title: The Vogue
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file26.html
+Description: Maroon 5
+Snippet: We Are Chelsea podcast launched by Chelsea FC | News | Official Site.
+Chelsea launch new club podcast to take fans behin
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Chelsea FC vs. Newcastle United: Live Stream, TV Channel, Start Time | 3/11/2024.
+Vanessa Bryant Shares Jaw-Dropping New
+
+Title: Tomato
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/file30.html
+Description: This is a tomato
+Snippet: Chelsea FC 2022/23 financial results | News | Official Site.
+'Tonight Show' star Jimmy Fallon talks about visit to Alban

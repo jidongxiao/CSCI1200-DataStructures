@@ -1,0 +1,11 @@
+Matching documents: 
+
+Title: Adele Performs Hometown Glory
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/subdir12/subdir13/file32.html
+Description: Hometown Glory
+Snippet: "Hometown Glory" is the debut single by English singer-songwriter Adele, released on 22 October 2007 in the United Kingd
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: I remember hearing Hometown Glory for the first time in 2007, when I’d literally got off the phone from the boss of Ra

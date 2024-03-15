@@ -1,0 +1,16 @@
+Matching documents: 
+
+Title: GRAMMY.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file19.html
+Description: Lady Gaga | Artist
+Snippet: Jude Bellingham was already a 'man' at Birmingham from day one who used to 'dominate' training sessions as a fresh-faced
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: Birmingham chiefs believed that Sanusi would take Jude Bellingham's record at St Andrew's as their youngest debutant bef
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: Birmingham chiefs believed that Sanusi would take Jude Bellingham's record at St Andrew's as their youngest debutant bef

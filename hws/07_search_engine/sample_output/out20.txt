@@ -1,0 +1,60 @@
+Matching documents: 
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: Bustling Los Angeles is home to Hollywood stars, high-fashion shopping, enchanting beach spots and culture. Visit Los An
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: After more than 135 years, continuing to reinvent ourselves to serve you and help businesses thrive in the Los Angeles r
+
+Title: Twitter
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file11.html
+Description: CNN Breaking News (@cnnbrk) / X
+Snippet: com Arena, the Los Angeles venue where the late Hall of Famer played for his entire NBA career, was saved from being rem
+
+Title: The Vogue
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file26.html
+Description: Maroon 5
+Snippet: The Port of Los Angeles is America's Port®, the nation's #1 container port and global model for sustainability, securit
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: Maroon 5 is an American pop rock band that originated in Los Angeles, California, United States. See Instagram photos an
+
+Title: Apple Music
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file15.html
+Description: Lady Gaga
+Snippet: "
+Lady Gaga attends the 95th Annual Academy Awards on March 12, 2023, Dylan Mulvaney attends the 2023 Streamy Awards at 
+
+Title: Boston.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/file24.html
+Description: Boston.com: Local breaking news, sports, weather, and things ...
+Snippet: Pop Rock band from Los Angeles, US. Formed in 1994 as Kara's Flowers, renamed to Maroon 5 in 2001. Members Adam Levine -
+
+Title: Wikipedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file16.html
+Description: Tom Cruise - Wikipedia
+Snippet: "
+The mural, painted by Louie "Sloe Motions" Palsino, features the late father and daughter looking at one another, with
+
+Title: Ellis Island Foundation
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file13.html
+Description: Liberty 135 | Statue of Liberty & Ellis Island
+Snippet: After a 20-year career with the Los Angeles Lakers, Bryant retired in 2016 with five NBA championship rings and four NBA
+
+Title: GRAMMY.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file19.html
+Description: Lady Gaga | Artist
+Snippet: She was a veteran of New York, Chicago, and Los Angeles stages, and a regular face on episodic television by the time sh
+
+Title: Skylar White
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/subdir12/file31.html
+Description: Breaking Bad
+Snippet: 4, 2024, in Los Angeles. (AP Photo/Chris Pizzello)
+
+One of the night’s biggest awards, record of the year, went to Mil

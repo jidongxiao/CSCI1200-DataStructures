@@ -1,0 +1,19 @@
+Matching documents: 
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Create an account or log into Facebook. Meta Platforms, Inc., doing business as Meta, and formerly named Facebook, Inc.,
+
+Title: Apple Music
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file15.html
+Description: Lady Gaga
+Snippet: Facebook Twitter Flipboard Comments Print Email close
+
+Fox News Flash top sports headlines for August 13
+Pau Gasol knows
+
+Title: Skylar White
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/subdir12/file31.html
+Description: Breaking Bad
+Snippet: Still, there was a time when Walt’s priggish, perma-pregnant, party pooper of a wife raised the hackles like no one el

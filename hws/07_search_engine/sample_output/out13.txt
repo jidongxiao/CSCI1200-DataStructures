@@ -1,0 +1,21 @@
+Matching documents: 
+
+Title: CNN.com
+URL: html_files/index.html
+Description: CNN: Breaking News, Latest News and Videos
+Snippet: View the latest news and breaking news today at CNN.com. CNN operates as a division of Turner Broadcasting System, which
+
+Title: Apple
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file12.html
+Description: CNN: Breaking US & World News 12+ - App Store
+Snippet: Stay informed on breaking news with the global newsgathering power of CNN. CNN has correspondents and bureaus reporting 
+
+Title: Twitter
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file11.html
+Description: CNN Breaking News (@cnnbrk) / X
+Snippet: Breaking news from CNN Digital. Now 64M strong. Check. @cnn. for all things CNN, breaking and more. Download the app for
+
+Title: Google Play
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file14.html
+Description: CNN Breaking US & World News - Apps on Google Play
+Snippet: CNN has correspondents and bureaus reporting from across the world to keep you updated and informed on what matters most

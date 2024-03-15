@@ -1,5 +1,3 @@
-**Note:** Sample output files will be added later; submitty autograder will not open until Friday afternoon.
-
 <!-- Clarification
 
 We made a clarification on the discussion forum. In case you didn't pay attenton there, we are adding the clarification here.
@@ -399,9 +397,9 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 **Due Date**: 03/21/2024, Thursday, 10pm.
 
-<!--## Instructor's Code
+## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/search/). Note that this page just uses a copy of Google's homepage to serve as the front end, and at the back end it runs the instructor's C++ code. This page does not support the "enter" key, you need to press the "New York Search" button to submit a query.-->
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results.
 
 ## Rubric
 
@@ -410,7 +408,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
+ - IMPLEMENTATION AND CODING STYLE (8 pts)
    - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)

@@ -424,6 +424,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Uses data structures which have not been covered in this class. (-7)
    - Uses filesystem library (i.e., #include &lt;filesystem&gt; ). (-7)
    - Neither std::map nor std::set is used. (-7)
+   - Paths to all 32 HTML files are manually specified within the program's code. (The paths should be found by the program during runtime) (-5)
    - Member variables are public. (-2)
  - RECURSION (3 pts)
    - Does not use recursion in the web crawler component. (-3)

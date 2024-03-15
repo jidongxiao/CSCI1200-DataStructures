@@ -403,13 +403,13 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
 
 ## Rubric
 
-20 pts
+21 pts
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (7 pts)
-   - No credit (significantly incomplete implementation) (-7)
+ - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
+   - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)

@@ -201,7 +201,7 @@ Because we can find both the word *Tom* and the word *Cruise*. But it is not a v
 
 ### Definition of Match/Appearance/Occurrence
 
-In the context of search engine, the term *Match* or *Appearance* or *Occurrence*, has a special meaning. More specifically, in this assignment, when searching a document to determine *match*/*appearnce*/*occurrence*, you should follow these rules:
+In the context of search engine, the term *Match* or *Appearance* or *Occurrence*, has a special meaning. More specifically, in this assignment, when searching a document to determine *match*/*appearance*/*occurrence*, you should follow these rules:
 
 ### Rule 1. Case-sensitive Search Engine
 

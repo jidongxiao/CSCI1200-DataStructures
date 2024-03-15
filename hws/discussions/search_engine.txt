@@ -1,0 +1,10 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. How many maps are needed in this program? In each map, we map what to what?
+2. Unlike all previous homeworks, in this homework, the output file is not specified from the command line, so how do handle this situation and still print the results into the right output file?
+
+3. During the development of this program, there will be multiple situations when we need to consider the word boundary, what are these situations?
+
+4. What shall we do in the main function?

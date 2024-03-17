@@ -472,3 +472,35 @@ Here:
 - line 8 is the title tag.
 
 - line 14, line 15, and line 16 are some outgoing links.
+
+## Appendix B - How to store the full content of a file as a string?
+
+You can follow the example below to read a file and store its full content as a string. And then you can use the length() function to get the length of the full content of the file. You are recommended to compile and run this program so as to understand its behavior.
+
+```cpp
+#include <iostream>
+#include <fstream>
+
+// run the program like this:
+// ./a.out input.txt
+// this program will open the input file and print the length of the file content (as a string),
+// and then print the file content.
+int main(int argc, char ** argv){
+
+        std::string input = std::string(argv[1]);
+        std::ifstream inputFile(input);
+        if (!inputFile.is_open()) {
+                std::cerr << "Failed to open the input file." << std::endl;
+                exit(1);
+        }
+
+        // this line gets the full content of the file and store it in an std::string object.
+        std::string fileContent((std::istreambuf_iterator<char>(inputFile)), std::istreambuf_iterator<char>());
+        // prints the length of the file content.
+        std::cout << fileContent.length();
+        std::cout << std::endl;
+        std::cout << std::endl;
+        // prints the file content.
+        std::cout << fileContent << std::endl;
+}
+```

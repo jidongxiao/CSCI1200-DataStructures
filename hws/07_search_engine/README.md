@@ -473,6 +473,7 @@ Here:
 
 - line 14, line 15, and line 16 are some outgoing links.
 
+<!--
 ## Appendix B - How to store the full content of a file as a string?
 
 You can follow the example below to read a file and store its full content as a string. And then you can use the length() function to get the length of the full content of the file. You are recommended to compile and run this program so as to understand its behavior.
@@ -504,3 +505,4 @@ int main(int argc, char ** argv){
         std::cout << fileContent << std::endl;
 }
 ```
+-->

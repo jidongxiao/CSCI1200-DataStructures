@@ -399,7 +399,8 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results.
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results. Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service.
+
 
 ## Rubric
 

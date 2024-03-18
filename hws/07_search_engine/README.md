@@ -93,7 +93,7 @@ A search query may contain one keyword or multiple keywords. Given a set of keyw
 For each keyword, the keyword's density score is a measure of how the keyword's frequency in a document compares to its occurrence in all documents, and we can use the following formula to calculate the density score of one keyword. (**Note:** here the term "all documents" literally means all documents, not just the documents which contain the query.)
 
 ```console
-Keyword Density Score = (Number of Times Keyword Appears) / (Total Content Length of this One Document * Keyword Density Across All Documents)
+Keyword Density Score = (Number of Times Keyword Appears in this One Document) / (Total Content Length of this One Document * Keyword Density Across All Documents)
 ```
 
 Here, we consider the content of each document as a string. Also, here "Total Content Length" means the total length of the whole document, not just the length of the &lt;body&gt; section; and the "Number of Times Keyword Appears" means the number of times the keyword appears in the whole document, not just in the &lt;body&gt; section. Similarly, when calculating the "Keyword Density Across All Documents", you should also consider the whole document, not just the &lt;body&gt; section.

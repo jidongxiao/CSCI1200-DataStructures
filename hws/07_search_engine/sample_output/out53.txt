@@ -7,17 +7,17 @@ Snippet: WHY DID WE ALL LOVE JESSE PINKMAN?
 
 It's 3am and so many thoughts run through my mind, but one I can’t push out is how
 
-Title: Facebook
-URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
-Description: Boston University
-Snippet: The Breaking Bad and El Camino star has decided that his two recent appearances on Better Call Saul are the perfect way 
-
 Title: Skylar White
 URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/subdir11/subdir12/file31.html
 Description: Breaking Bad
 Snippet: Skyler White: the Breaking Bad underdog who set the template for TV's antiheroine
 This article is more than 6 years old
 
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: The Breaking Bad and El Camino star has decided that his two recent appearances on Better Call Saul are the perfect way 
 
 Title: Bleacher Report
 URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html

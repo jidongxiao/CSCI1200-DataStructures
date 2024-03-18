@@ -1,15 +1,15 @@
 Matching documents: 
 
+Title: Instagram
+URL: html_files/subdir1/subdir2/file5.html
+Description: Lady Gaga (@ladygaga) • Instagram photos and videos
+Snippet: “Everything Everywhere All at Once” is an absolutely mental sci-fi adventure that blends comedy, fantasy and heart t
+
 Title: ESPN
 URL: html_files/subdir1/subdir2/file4.html
 Description: Boston Celtics 2023-24 NBA Roster
 Snippet: Harrison Ford presents 'Everything Everywhere All at Once' with the Oscar for Best Picture WINNER
     Yet “Everything 
-
-Title: Instagram
-URL: html_files/subdir1/subdir2/file5.html
-Description: Lady Gaga (@ladygaga) • Instagram photos and videos
-Snippet: “Everything Everywhere All at Once” is an absolutely mental sci-fi adventure that blends comedy, fantasy and heart t
 
 Title: StatueOfLibertyTickets.com
 URL: html_files/subdir1/subdir2/file6.html

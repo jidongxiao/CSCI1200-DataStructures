@@ -253,6 +253,7 @@ void shortest_path_breadth(Node* root)
        next_level.clear();
       }
      }
+```
 
 - What is the running time of this algorithm? Can we do better? Hint: How does a breadth-first vs. depth-first algorithm for this problem compare?
 &nbsp;

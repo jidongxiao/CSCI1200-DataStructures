@@ -401,6 +401,11 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results. Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service.
 
+## FAQ
+
+Q1: When phrase searching "Tom Cruise", is the keywords density score comprised only of all instances of "Tom Cruise" or is it the combination of "Tom" and "Cruise"?
+
+A1: The combination of "Tom" and "Cruise". In other words, no matter it is a phrase search, or it is a regular search, when computing the keywords density score, always follow the two steps: 1. calculate the density score for each keyword within the document; 2. accumulate these individual density scores into a combined score.
 
 ## Rubric
 

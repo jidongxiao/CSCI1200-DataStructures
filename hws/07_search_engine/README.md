@@ -407,6 +407,10 @@ Q1: When phrase searching "Tom Cruise", is the keywords density score comprised 
 
 A1: The combination of "Tom" and "Cruise". In other words, no matter it is a phrase search, or it is a regular search, when computing the keywords density score, always follow the two steps: 1. calculate the density score for each keyword within the document; 2. accumulate these individual density scores into a combined score.
 
+Q2: When it asks for Keyword Density Across All Documents, does it mean all 33 documents or all documents which contain the keyword?
+
+A2: All 33 documents.
+
 ## Rubric
 
 21 pts
@@ -418,7 +422,6 @@ A1: The combination of "Tom" and "Cruise". In other words, no matter it is a phr
    - No credit (significantly incomplete implementation) (-8)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
-   - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines). (-1)

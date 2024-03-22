@@ -140,22 +140,5 @@ finding the node in the tree that stores the smallest value.
 
 2. Write a recursive version of the function find.
 
-## 17.10 In-order, Pre-Order, Post-Order Traversal
 
-- One of the fundamental tree operations is “traversing” the nodes in the tree and doing something at each node.
-The “doing something”, which is often just printing, is referred to generically as “visiting” the node.
-- There are three general orders in which binary trees are traversed: pre-order, in-order and post-order.
- In order to explain these, let’s first draw an “exactly balanced” binary search tree with the elements 1-7:
-
-  – What is the in-order traversal of this tree? Hint: it is monotonically increasing, which is always true for
-an in-order traversal of a binary search tree!
-
-
-
-  – What is the post-order traversal of this tree? Hint, it ends with “4” and the 3rd element printed is “2”.
-
-
-
-  – What is the pre-order traversal of this tree? Hint, the last element is the same as the last element of the
-in-order traversal (but that is not true in general! why not?)
 

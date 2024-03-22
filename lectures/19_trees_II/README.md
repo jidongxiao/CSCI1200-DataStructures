@@ -1,7 +1,7 @@
-# Lecture 18 --- Trees, Part II
+# Lecture 19 --- Trees, Part II
 ## Announcements
 
-## Review from Lecture 17
+## Review from Lecture 18
 
 - Binary Trees, Binary Search Trees, & Balanced Trees
 - STL set container class (like STL map, but without the pairs!)
@@ -15,11 +15,11 @@
 - In-order, pre-order, and post-order traversal
 - Finding the in-order successor of a binary tree node, tree iterator increment
 
-## 18.1 Warmup Exercise
+## 19.1 Warmup Exercise
 
 Write the ds set::destroy tree private helper function.
 
-## 18.2 Insert
+## 19.2 Insert
 
 ![alt text](ds_set_diagram.png "ds set diagram")
 
@@ -38,12 +38,30 @@ This is subtle but important.
 - Exercise: How does the order that the nodes are inserted affect the final tree structure? Give an ordering
 that produces a balanced tree and an insertion ordering that produces a highly unbalanced tree.
 
-## 18.3 In-order, Pre-order, Post-order Traversal
+## 19.3 In-order, Pre-order, Post-order Traversal
+
+- One of the fundamental tree operations is “traversing” the nodes in the tree and doing something at each node.
+The “doing something”, which is often just printing, is referred to generically as “visiting” the node.
+- There are three general orders in which binary trees are traversed: pre-order, in-order and post-order.
+ In order to explain these, let’s first draw an “exactly balanced” binary search tree with the elements 1-7:
+
+  – What is the in-order traversal of this tree? Hint: it is monotonically increasing, which is always true for
+an in-order traversal of a binary search tree!
+
+
+
+  – What is the post-order traversal of this tree? Hint, it ends with “4” and the 3rd element printed is “2”.
+
+
+
+  – What is the pre-order traversal of this tree? Hint, the last element is the same as the last element of the
+in-order traversal (but that is not true in general! why not?)
 
 - Reminder: For an exactly balanced binary search tree with the elements 1-7:
   - In-order: 1 2 3 (4) 5 6 7
   - Pre-order: (4) 2 1 3 6 5 7
   - Post-order: 1 3 2 5 7 6 (4)
+    
 - Now let’s write code to print out the elements in a binary tree in each of these three orders. These functions
 are easy to write recursively, and the code for the three functions looks amazingly similar. Here’s the code for
 an in-order traversal to print the contents of a tree:
@@ -60,7 +78,7 @@ void print_in_order(ostream& ostr, const TreeNode<T>* p) {
 - How would you modify this code to perform pre-order and post-order traversals?
 - What is the traversal order of the destroy_tree function we wrote earlier?
 
-## 18.4 Tree Iterator Increment/Decrement - Implementation Choices
+## 19.4 Tree Iterator Increment/Decrement - Implementation Choices
 
 - The increment operator should change the iterator’s pointer to point to the next TreeNode in an in-order
 traversal — the “in-order successor” — while the decrement operator should change the iterator’s pointer to
@@ -91,14 +109,14 @@ Either version can be extended to complete the implementation of increment/decre
 
 Exercise: What are the advantages & disadvantages of each method?
 
-## 18.5 Limitations of Our BST Implementation
+## 19.5 Limitations of Our BST Implementation
 
 - The efficiency of the main insert, find and erase algorithms depends on the height of the tree.
 - The best-case and average-case heights of a binary search tree storing n nodes are both O(log n). The worstcase, which often can happen in practice, is O(n).
 - Developing more sophisticated algorithms to avoid the worst-case behavior will be covered in Introduction to
 Algorithms. One elegant extension to the binary search tree is described below...
 
-## 18.6 B+ Trees
+## 19.6 B+ Trees
 
 Unlike binary search trees, nodes in B+ trees (and their predecessor, the B tree) have up to b children. Thus
 B+ trees are very flat and very wide. This is good when it is very expensive to move from one node to another.

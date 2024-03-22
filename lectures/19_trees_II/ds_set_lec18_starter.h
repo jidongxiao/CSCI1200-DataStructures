@@ -54,6 +54,7 @@ private:
 template <class T>
 class ds_set {
 public:
+  //CONSTRUCTORS, DESTRUCTORS, ASSIGNMENT OPERATOR
   ds_set() : root_(NULL), size_(0) {}
   ds_set(const ds_set<T>& old) : size_(old.size_) { root_ = this->copy_tree(old.root_,NULL); }
   ~ds_set() { this->destroy_tree(root_); root_ = NULL; }

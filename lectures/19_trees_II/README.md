@@ -1,4 +1,5 @@
 # Lecture 18 --- Trees, Part II
+## Announcements
 
 ## Review from Lecture 17
 

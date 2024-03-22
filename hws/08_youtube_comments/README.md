@@ -284,7 +284,7 @@ Of course you can change std::cout to a file stream so as to print the thumbs up
 
 ## Program Requirements & Submission Details
 
-In this assignment, you are required to maintain the comments in tree nodes, each comment should be stored in one tree node. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::stack, std::queue. **You must use recursion in your program in at least one of your functions.**
+In this assignment, you are required to maintain the comments in tree nodes, each comment should be stored in one tree node. **You must use recursion in your program in at least one of your functions.** There is no other requirement on what data structures you can use and what data structures you can not use.
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
@@ -315,7 +315,6 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
-   - Uses data structures which have not been covered in this class (e.g., unordered_map, unordered_set). (-6)
    - Does not use tree data structures to store the comments. (-6)
    - Member variables are public. (-2)
  - RECURSION (2 pts)

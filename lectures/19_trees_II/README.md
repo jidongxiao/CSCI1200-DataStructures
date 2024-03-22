@@ -134,3 +134,5 @@ implementation).
 - If a B+ tree node has k keys key0, key1, key2, . . . , keyk−1, it will have k + 1 children. The keys in the leftmost
 child must be < key0, the next child must have keys such that they are ≥key0 and < key1, and so on up to
 the rightmost child which has only keys ≥keyk−1.
+
+A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html

@@ -1,10 +1,10 @@
-# Lecture 19 --- Trees, Part III
+# Lecture 20 --- Trees, Part III
 
 ## Announcements
 
 - Homework Deadline requests can only be made upto 4hrs before the deadline and for specific reasons only through an email to ds_instructors@cs.rpi.edu
 
-Review from Lecture 17 & 18
+Review from Lecture 18 & 19
 - Overview of the ds_set implementation
 - begin, find, destroy_tree, insert
 - In-order, pre-order, and post-order traversal;
@@ -15,7 +15,7 @@ of pointers to the iterator.
 ## Today’s Lecture
 
 - Trivia 1
-- Submini Poll from Lecture 18
+- Submini Poll from Lecture 19
 
 - Last piece of ds_set: removing an item, erase
 - Breadth-first and depth-first tree search
@@ -23,7 +23,7 @@ of pointers to the iterator.
 - Erase with parent pointers, increment operation on iterators
 - Limitations of our ds set implementation
 
-## 19.1 ds_set Warmup/Review Exercises
+## 20.1 ds_set Warmup/Review Exercises
 
 - Draw a diagram of a possible memory layout for a ds set containing the numbers 16, 2, 8, 11, and 5. Is there
 only one valid memory layout for this data as a ds set? Why?
@@ -45,7 +45,7 @@ only one valid memory layout for this data as a ds set? Why?
 &nbsp;
 &nbsp;
 
-## 19.2 Erase
+## 20.2 Erase
 
 - First we need to find the node to remove. Once it is found,
 the actual removal is easy if the node has no children or only one child.
@@ -127,7 +127,7 @@ return 0;
 }
 ```
 
-## 19.3 Depth-first vs. Breadth-first Search
+## 20.3 Depth-first vs. Breadth-first Search
 
 - We should also discuss two other important tree traversal terms related to problem solving and searching.
   - In a depth-first search, we greedily follow links down into the tree, and don’t backtrack until we have hit a leaf. When we hit a leaf we step back out, but only to the last decision point and then proceed to the next leaf. This search method will quickly investigate leaf nodes, but if it has made an “incorrect” branch decision early in the search, it will take a long time to work back to that point and go down the “right” branch.
@@ -140,7 +140,7 @@ return 0;
 
   - What is a breadth-first traversal of the elements in our sample binary search trees above?
 
-## 19.4 General-Purpose Breadth-First Search/Tree Traversal
+## 20.4 General-Purpose Breadth-First Search/Tree Traversal
 
 - Write an algorithm to print the nodes in the tree one tier at a time, that is, in a breadth-first manner.
 
@@ -176,7 +176,7 @@ return 0;
 - What is the best/average/worst-case running time of this algorithm? What is the best/average/worst-case
 memory usage of this algorithm? Give a specific example tree that illustrates each case.
 
-## 19.5 Height and Height Calculation Algorithm
+## 20.5 Height and Height Calculation Algorithm
 
 - The height of a node in a tree is the length of the longest path down the tree from that node to a leaf node. The height of a leaf is 1. We will think of the height of a null pointer as 0.
 
@@ -219,7 +219,7 @@ unsigned int height(Node* p)
 }
 ```
 
-## 19.6 Shortest Paths to Leaf Node
+## 20.6 Shortest Paths to Leaf Node
 
 - Now let’s write a function to instead calculate the shortest path to a NULL child pointer.
 &nbsp;
@@ -260,7 +260,7 @@ void shortest_path_breadth(Node* root)
 &nbsp;
 &nbsp;
 
-## 19.7 Erase (now with parent pointers)
+## 20.7 Erase (now with parent pointers)
 
 - If we choose to use parent pointers, we need to add to the Node representation, and re-implement several ds_set member functions.
 - Exercise: Study the new version of insert, with parent pointers.

@@ -284,36 +284,38 @@ Of course you can change std::cout to a file stream so as to print the thumbs up
 
 ## Program Requirements & Submission Details
 
-In this assignment, you are required to maintain the comments in tree nodes, each comment should be stored in one tree node. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::unordered_map, std::unordered_set, std::stack, std::queue. **You must use recursion in your program in at least one of your functions.**
+In this assignment, you are required to maintain the comments in tree nodes, each comment should be stored in one tree node. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list, std::map, std::set, std::pair, std::stack, std::queue. **You must use recursion in your program in at least one of your functions.**
 
-Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/fall23/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
+You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 11/09/2023, Thursday, 23:59pm.
+**Due Date**: 03/28/2023, Thursday, 10pm.
 
 ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://cs.rpi.edu/~xiaoj8/ds/comments/). 
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/comments/). 
 
 ## Rubric
 
 17 pts
- - README.txt Completed (2 pts)
+ - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
- - IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (7 pts)
-   - No credit (significantly incomplete implementation) (-7)
+   - No reflection. (-1)
+ - IMPLEMENTATION AND CODING STYLE (6 pts)
+   - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
+   - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
-   - Poor variable names. (-1)
+   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
-   - Uses data structures which have not been covered in this class. (-6)
+   - Uses data structures which have not been covered in this class (e.g., unordered_map, unordered_set). (-6)
    - Does not use tree data structures to store the comments. (-6)
    - Member variables are public. (-2)
  - RECURSION (2 pts)

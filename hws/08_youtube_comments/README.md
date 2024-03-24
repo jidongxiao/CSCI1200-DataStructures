@@ -289,7 +289,7 @@ In this assignment, you are required to maintain the comments in tree nodes, eac
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 03/28/2023, Thursday, 10pm.
+**Due Date**: 03/28/2024, Thursday, 10pm.
 
 ## Instructor's Code
 
@@ -316,6 +316,5 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (6 pts)
    - Does not use tree data structures to store the comments. (-6)
-   - Member variables are public. (-2)
  - RECURSION (2 pts)
    - Does not use recursion at all. (-2)

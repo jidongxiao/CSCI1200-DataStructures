@@ -11,6 +11,7 @@ of pointers to the iterator.
 ## Today’s Lecture
 
 - Breadth-first and depth-first tree search
+- Increement/decrement operator
 - Tree height, longest-shortest paths, breadth-first search
 - Last piece of ds_set: removing an item, erase
 - Erase with parent pointers, increment operation on iterators

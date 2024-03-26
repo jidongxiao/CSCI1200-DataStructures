@@ -10,7 +10,7 @@ of pointers to the iterator.
 
 ## Today’s Lecture
 
-- Last piece of ds_set: removing an item, erase
+- Last piece of ds_set: destrot, removing an item, erase
 - Breadth-first and depth-first tree search
 - Tree height, longest-shortest paths, breadth-first search
 - Erase with parent pointers, increment operation on iterators

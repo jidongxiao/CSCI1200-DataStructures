@@ -295,6 +295,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/comments/). 
 
+## FAQs
+
+Q1: Why sometimes the reply count does not match with the number of replies displayed?
+
+A1: On youtube, some inappropriate comments are not displayed but they still contribute to the reply count. And such comments are not included in our json files.
+
 ## Rubric
 
 17 pts

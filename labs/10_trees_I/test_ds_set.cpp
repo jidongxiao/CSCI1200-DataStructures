@@ -88,6 +88,7 @@ int main() {
   assert(insert_result.second);
   std::cout << "\nAfter two inserts:\n"
 	    << "set1.size() = " << set1.size() << ", set2.size() = " << set2.size() << "\n"
+	    << "\nThe contents of set1:\n" << set1 << std::endl;
 	    << "\nThe contents of set2:\n" << set2 << std::endl;
 
   */

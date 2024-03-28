@@ -104,9 +104,33 @@ public:
 1. Write a templated function to find the smallest value stored in a binary search tree whose root node is pointed
 to by p.
 
-2. Write a function to count the number of odd numbers stored in a binary tree (not necessarily a binary search
+```cpp
+template <class T> 
+const T& find_smallest (TreeNode <T>* root)
+{
+	if(root->left == NULL)
+	{
+		return root->value;
+	}
+	return find_smallest(root->left);
+}
+```
+
+3. Write a function to count the number of odd numbers stored in a binary tree (not necessarily a binary search
 tree) of integers. The function should accept a TreeNode<int> pointer as its sole argument and return an
 integer. Hint: think recursively!
+
+```cpp
+int count_odd (TreeNode<int>* int)
+{
+	if(node == nullptr)
+	{
+		return 0;
+	}
+	return abs(node->value % 2) + count_odd(node->left) + count_odd(node->right);
+}
+
+```
 
 ## 18.7 ds_set and Binary Search Tree Implementation
 

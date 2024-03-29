@@ -68,7 +68,7 @@ Which nodes are red?
 
 **Note:** Red-Black Trees are just one algorithm for **self-balancing binary search tress**. We have many more, including the AVL trees that we discussed last week.
 
-## Trinary Tree
+## 21.3 Trinary Tree
 
 A  **trinary tree** is similar to a binary tree except that each node has at most 3 children.  Write a **recursive** function named **EqualsChildrenSum** that takes one argument, a pointer to the root of a trinary tree, and returns true if the value at each non-leaf node is the sum of the values of all of its children and false otherwise.  In
 the examples below, the tree on the left will return true and the tree on the right will return false.
@@ -83,5 +83,25 @@ class Node {
   };
 ```
 ![alt text](Trinary_trees.png "Trinary Trees example")
+
+## 21.4 B+ Trees
+
+Unlike binary search trees, nodes in B+ trees (and their predecessor, the B tree) have up to b children. Thus
+B+ trees are very flat and very wide. This is good when it is very expensive to move from one node to another.
+- B+ trees are supposed to be associative (i.e. they have key-value pairs), but we will just focus on the keys.
+- Just like STL map and STL set, these keys and values can be any type, but keys must have an operator<
+defined.
+- In a B tree key-value pairs can show up anywhere in the tree, in a B+ tree all the key-value pairs are in the
+leaves and the non-leaf nodes contain duplicates of some keys.
+- In either type of tree, all leaves are the same distance from the root.
+- The keys are always sorted in a B/B+ tree node, and there are up to b − 1 of them. They act like b − 1 binary
+search tree nodes mashed together.
+- In fact, with the exception of the root, nodes will always have between roughly b/2 and b − 1 keys (in our
+implementation).
+- If a B+ tree node has k keys key0, key1, key2, . . . , keyk−1, it will have k + 1 children. The keys in the leftmost
+child must be < key0, the next child must have keys such that they are ≥key0 and < key1, and so on up to
+the rightmost child which has only keys ≥keyk−1.
+
+A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html
 
 

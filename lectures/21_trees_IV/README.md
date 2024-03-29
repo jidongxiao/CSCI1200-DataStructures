@@ -30,8 +30,14 @@ modifications to the data structure:
 
 What tree does our **ds_set** implementation produce if we insert the
 numbers 1-14 **in order**?
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
-The tree at the right is the result using a red-black tree.  Notice how the tree is still quite balanced.  
+The tree at the top is the result using a red-black tree.  Notice how the tree is still quite balanced.  
 
 Visit these links for an animation of the sequential insertion and re-balancing:
 
@@ -103,5 +109,18 @@ child must be < key0, the next child must have keys such that they are ≥key0 a
 the rightmost child which has only keys ≥keyk−1.
 
 A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html
+
+![alt text](BplusTrees.png "Bplus_Trees example")
+
+Considerations in a full implementation:
+- What happens when we want to add a key to a node that's already full?
+- How do we remove values from a node?
+- How do we ensure the tree stays balanced?
+- How to keep laves linked together? WHy would we want this?
+- How to represent key-value pairs?
+
+## 21.5 Exercise
+
+Draw a B+ tree with b=3 with values inserted in the order 1,2,3,4,5,6. Now draw a B+ tree with b=3 and values inserted in the order 6,5,4,3,2,1. The two trees have a different number of levels.
 
 

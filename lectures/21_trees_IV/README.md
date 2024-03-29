@@ -26,6 +26,7 @@ modifications to the data structure:
 - All paths from a particular node to a NULL child pointer contain the same
   number of black nodes.
 
+![alt text](Red_Black.png "Red_Black Tree example")
 
 What tree does our **ds_set** implementation produce if we insert the
 numbers 1-14 **in order**?
@@ -61,26 +62,25 @@ What is the best/average/worst case shortest-path from root to leaf node in a re
 ## Exercise 21.2
 Fill in the tree on the right with the integers 1-7 to make a binary search tree.  Also, color each node "red" or "black" so that the tree also fulfills the requirements of a Red-Black tree. 
 
+![alt text](Red_Black_fillin.png "Red_Black Tree Fill In example")
 
+Which nodes are red?
 
-- Draw a diagram of a possible memory layout for a ds set containing the numbers 16, 2, 8, 11, and 5. Is there
-only one valid memory layout for this data as a ds set? Why?
+**Note:** Red-Black Trees are just one algorithm for **self-balancing binary search tress**. We have many more, including the AVL trees that we discussed last week.
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+## Trinary Tree
 
-- In what order should a forward iterator visit the data? Draw an abstract table representation of this data
-(omits details of TreeNode memory layout).
+A  **trinary tree** is similar to a binary tree except that each node has at most 3 children.  Write a **recursive** function named **EqualsChildrenSum** that takes one argument, a pointer to the root of a trinary tree, and returns true if the value at each non-leaf node is the sum of the values of all of its children and false otherwise.  In
+the examples below, the tree on the left will return true and the tree on the right will return false.
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+```cpp
+class Node {
+  public:
+    int value;
+    Node* left;
+    Node* middle;
+    Node* right;
+  };
+```
 
 

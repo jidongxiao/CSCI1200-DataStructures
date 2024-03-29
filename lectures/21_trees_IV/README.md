@@ -82,5 +82,6 @@ class Node {
     Node* right;
   };
 ```
+![alt text](Trinary_trees.png "Trinary Trees example")
 
 

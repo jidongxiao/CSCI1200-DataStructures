@@ -8,11 +8,16 @@ Level Order Traversal: 1 2 3 4 5 6 7 8 9
 Level Order Traversal: 1 2 3 4 5 6 7 8
 ```
 
+
 ## Checkpoint 1:
 
 *estimate: 30-40 minutes*
 
-Read the code of provided program, and then run the program to see its output. After that, replace the STL queue library with the STL stack library, and implement the queue using two stacks. Do not change the *main* function. Do not change the *levelOrderTraversal* function, except this line:
+First, read the code of the provided program, and run the program to see its output. 
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to see how level order traverse works.
+
+Then, replace the STL queue library with the STL stack library, and implement the queue using two stacks. Do not change the *main* function. Do not change the *levelOrderTraversal* function, except this line:
 
 ```cpp
 std::queue<TreeNode*> myQueue;

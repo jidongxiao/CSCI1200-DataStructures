@@ -15,8 +15,8 @@
 # Test Taking Skills
 - Look at the point values for each problem, allocate time proportional to the problem points - Roughly 1 minute per point. (Dont spend all your time on one problem and neglect the other big point problems).
 - Look at the size of the answer box. If your solution is going to take a lot more space than the box allows, we are probably looking for the solution to a simpler problem or a simpler solution to the problem.
-- Going in to the test, you should know what big topics will be covered on the test. As you skim through the problems, see if you can match up those big topics to each question. Even if you are atimped about how to solve the whole problem, or some of the details of the problem, make sure you demonstrate your understanding of the big topic that is covered in that question.
-- Re-read the problem statement carefullt. Make sure you didn't miss anything.
+- Going in to the test, you should know what big topics will be covered on the test. As you skim through the problems, see if you can match up those big topics to each question. Even if you are stumped about how to solve the whole problem, or some of the details of the problem, make sure you demonstrate your understanding of the big topic that is covered in that question.
+- Re-read the problem statement carefully. Make sure you didn't miss anything.
 
 # Review from Lecture 21
 - Red Black tree

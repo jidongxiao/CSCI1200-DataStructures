@@ -4,13 +4,13 @@
 
 - Test 3 will be held Thursday, April 4th, 2024 from 6-7:50pm.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If on Tuesday evening you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
-- If you will miss an exam due to a scheduled event or unforeseen circumstance, you should email the DS instructors list (ds_instructors@cs.rpi.edu) as soon as possible as staed in the syllabus. 
+- If you will miss an exam due to a scheduled event or unforeseen circumstance, you should email the DS instructors list (ds_instructors@cs.rpi.edu) as soon as possible as stated in the syllabus. 
 - If you have a letter from Disability Services for Students and you have not already emailed it to ds_instructors@cs.rpi.edu, please do so by Tuesday 4:30pm. Shianne Hulbert will be in contact with you about your accommodations for the test.
-- Coverage: Maps, Sets, Trees. Please remember Recursiona nd Big O notation goes hand in hand with all the topics tought after Test 2.
+- Coverage: Maps, Sets, Trees, as well as concepts learned prior to test 2. Please remember Recursion and Big O notation goes hand in hand with all the topics taught after Test 2.
 - OPTIONAL: you are allowed two physical pieces of 8.5x11” paper, that’s four “sides”. We will not collect these electronically and we will not pre-print them, you will have to bring these notes pages yourself if you want them. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
 - All students must bring their Rensselaer photo ID card.
 - Bring pencil(s) & eraser (pens are ok, but not recommended). 
-- Practice problems from previous tests are available on the [course materials](https://submitty.cs.rpi.edu/courses/s24/csci1200/course_materials)) page on Submitty.
+- Practice problems from previous tests are available on the [course materials](https://submitty.cs.rpi.edu/courses/s24/csci1200/course_materials) page on Submitty.
 
 # Test Taking Skills
 - Look at the point values for each problem, allocate time proportional to the problem points - Roughly 1 minute per point. (Dont spend all your time on one problem and neglect the other big point problems).

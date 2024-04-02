@@ -29,7 +29,6 @@
 # 22.1 Exercises
 
 1. Draw a balanced binary tree that contains the values: 6, 13, 9, 17, 32, 23, and 20.
-   Here we define a balanced binary tree as 
 
 &nbsp;
 &nbsp;
@@ -85,7 +84,7 @@
 &nbsp;
 &nbsp;
 
-6. Draw a Red Black Tree for the following number sequesnce 65, 56, 69, 96, 47, 74.
+6. Draw a Red Black Tree for the following number sequence 65, 56, 69, 96, 47, 74.
 
 &nbsp;
 &nbsp;
@@ -99,7 +98,53 @@
 &nbsp;
 &nbsp;
 
+7. Find the time complexities of teh following code snippets:
 
+```cpp
+ #include <stdio.h>
+
+int main() {
+    int a = 0, b = 0;
+    int N = 10, M = 10;
+
+    // This loop runs for N time
+    for (int i = 0; i < N; i++) {
+        a = a + 10;
+    }
+    // This loop runs for M time
+    for (int i = 0; i < M; i++) {
+        b = b + 40;
+    }
+
+    printf("%d %d", a, b);
+
+    return 0;
+}
+
+```
+
+```cpp
+#include <stdio.h>
+
+// Driver Code
+int main()
+{
+    int a = 0, b = 0;
+    int N = 15, M = 14;
+
+    // Nested loops
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            a = a + j;
+
+            // Print the current value of a
+            printf("%d ", a);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
 # 22.2 Problem Solving Techniques
 
 Discuss how to design and implement algorithms using three steps or stages:

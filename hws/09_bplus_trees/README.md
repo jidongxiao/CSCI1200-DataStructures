@@ -1,3 +1,5 @@
+**This homework is still not ready!**
+
 # Homework 9 — Simplified B+ Trees
 
 In this assignment we will be implementing a partial and modified version of B+ trees. As a result, online
@@ -5,7 +7,7 @@ resources may not use the same terminology or may describe implementation detail
 to our HW8 implementation. You should read the entire assignment before beginning your work. You
 should also make sure you understand the basic concepts discussed at the end of Lecture 17. It is highly
 recommended that before you begin coding, you practice constructing a couple of trees (using b = 3, b = 4)
-by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
+by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html).
 
 The bulk of the assignment will focus on proper insertion in a B+ tree, which is described on the next page.
 

@@ -98,7 +98,7 @@
 &nbsp;
 &nbsp;
 
-7. Find the time complexities of teh following code snippets:
+7. Find the time complexities of the following code snippets:
 
 ```cpp
  #include <stdio.h>

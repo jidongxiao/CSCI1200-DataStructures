@@ -18,7 +18,11 @@
 - Going in to the test, you should know what big topics will be covered on the test. As you skim through the problems, see if you can match up those big topics to each question. Even if you are atimped about how to solve the whole problem, or some of the details of the problem, make sure you demonstrate your understanding of the big topic that is covered in that question.
 - Re-read the problem statement carefullt. Make sure you didn't miss anything.
 
-Today's lecture:
+# Review from Lecture 21
+- Red Black tree
+- B+ Trees
+
+# Today's lecture:
 - Exercises
 - Problen Solving Techniques
 

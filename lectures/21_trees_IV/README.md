@@ -20,6 +20,7 @@ red-black tree properties are maintained throughout all
 modifications to the data structure:
 
 - Each node is either red or black.
+- The root node is always black.
 - The NULL child pointers are black.
 - Both children of every red node are black.
 - Thus, the parent of a red node must also be black.

@@ -1,7 +1,7 @@
 
 # Lecture 21 --- Trees, Part IV
 
-Review from Lecture 19
+Review from Lecture 20
 - Breadth-first and depth-first tree search
 - Increement/decrement operator
 - Tree height, longest-shortest paths, breadth-first search
@@ -77,7 +77,9 @@ Which nodes are red?
 
 ## 21.3 Trinary Tree
 
-A  **trinary tree** is similar to a binary tree except that each node has at most 3 children.  Write a **recursive** function named **EqualsChildrenSum** that takes one argument, a pointer to the root of a trinary tree, and returns true if the value at each non-leaf node is the sum of the values of all of its children and false otherwise.  In
+A  **trinary tree** is similar to a binary tree except that each node has at most 3 children.  
+
+Write a **recursive** function named **EqualsChildrenSum** that takes one argument, a pointer to the root of a trinary tree, and returns true if the value at each non-leaf node is the sum of the values of all of its children and false otherwise.  In
 the examples below, the tree on the left will return true and the tree on the right will return false.
 
 ```cpp

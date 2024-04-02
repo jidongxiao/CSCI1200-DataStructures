@@ -1,4 +1,4 @@
-# Lecture 20 --- Hash Tables
+# Lecture 23 --- Hash Tables
 
 ## Today’s Lecture
 
@@ -11,14 +11,14 @@
 
   – Iterators, find, insert, and erase-->
 
-## 20.1 Definition: What’s a Hash Table?
+## 23.1 Definition: What’s a Hash Table?
 
 - A table implementation with constant time access.
   - Like a set, we can store elements in a collection. Or like a map, we can store key-value pair associations in the hash table. But it’s even faster to do find, insert, and erase with a hash table! However, hash tables do not store the data in sorted order.
 - A hash table is implemented with an array at the top level.
 - Each element or key is mapped to a slot in the array by a hash function.
 
-## 20.2 Definition: What’s a Hash Function?
+## 23.2 Definition: What’s a Hash Function?
 
 - A simple function of one argument (the key) which returns an integer index (a bucket or slot in the array).
 - Ideally the function will “uniformly” distribute the keys throughout the range of legal index values (0 → k-1).
@@ -27,7 +27,7 @@
 - How do we deal with collisions?
   - One way to resolve this is by storing a linked list of values at each slot in the array.
 
-## 20.3 Example: Caller ID
+## 23.3 Example: Caller ID
 
 - We are given a phonebook with 50,000 name/number pairings. Each number is a 10 digit number. We need to
 create a data structure to lookup the name matching a particular phone number. Ideally, name lookup should
@@ -48,7 +48,7 @@ std::cout << identify(phonebook, 4444) << " is calling!" << std::endl;
 
 <!--- We’ll review how we solved this problem in Lab 9 with an STL vector then an STL map. Finally, we’ll implement the system with a hash table.-->
 
-## 20.4 Caller ID with an STL Vector
+## 23.4 Caller ID with an STL Vector
 
 ```cpp
 // create an empty phonebook
@@ -66,7 +66,7 @@ std::string identify(const std::vector<std::string> &phonebook, int number) {
 Exercise: What’s the memory usage for the vector-based Caller ID system?
 What’s the expected running time for identify, insert, and erase?
 
-## 20.5 Caller ID with an STL Map
+## 23.5 Caller ID with an STL Map
 
 ```cpp
 // create an empty phonebook
@@ -88,7 +88,7 @@ std::string identify(const std::map<int,std::string> &phonebook, int number) {
 Exercise: What’s the memory usage for the map-based Caller ID system?
 What’s the expected running time for identify, add, and erase?
 
-## 20.6 Now let’s implement Caller ID with a Hash Table
+## 23.6 Now let’s implement Caller ID with a Hash Table
 
 ![alt text](phonebook.png "phonebook")
 
@@ -138,19 +138,19 @@ std::string identify(Node* phonebook[PHONEBOOK_SIZE], int number) {
 }
 ```
 
-## 20.7 Exercise: Choosing a Hash Function
+## 23.7 Exercise: Choosing a Hash Function
 
 - What’s a good hash function for this application?
 
 - What’s a bad hash function for this application?
 
-## 20.8 Exercise: Hash Table Performance
+## 23.8 Exercise: Hash Table Performance
 
 - What’s the memory usage for the hash-table-based Caller ID system?
 
 - What’s the expected running time for identify, insert, and erase?
 
-## 20.9 What makes a Good Hash Function?
+## 23.9 What makes a Good Hash Function?
 
 - Goals: fast O(1) computation and a random, uniform distribution of keys throughout the table,
 despite the actual distribution of keys that are to be stored.
@@ -180,12 +180,12 @@ unsigned int hash(string const& k, unsigned int N) {
 ```
 - The 2nd method is better, but can be improved further. The theory of good hash functions is quite involved and beyond the scope of this course.
 
-## 20.10 How do we Resolve Collisions? METHOD 1: Separate Chaining
+## 23.10 How do we Resolve Collisions? METHOD 1: Separate Chaining
 
 - Each table location stores a linked list of keys (and values) hashed to that location (as shown above in the phonebook hashtable). Thus, the hashing function really just selects which list to search or modify.
 - This works well when the number of items stored in each list is small, e.g., an average of 1. Other data structures, such as binary search trees, may be used in place of the list, but these have even greater overhead considering the (hopefully, very small) number of items stored per bin.
 
-## 20.11 How do we Resolve Collisions? METHOD 2: Open Addressing
+## 23.11 How do we Resolve Collisions? METHOD 2: Open Addressing
 
 - In open addressing, when the chosen table location already stores a key (or key-value pair), a different table location is sought in order to store the new value (or pair).
 - Here are three different open addressing variations to handle a collision during an insert operation:
@@ -213,7 +213,7 @@ More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>
 
   – Cost of computing new hash values.
 
-## 20.12 Hash Table in STL?
+## 23.12 Hash Table in STL?
 
 - The Standard Template Library standard and implementation of hash table have been slowly evolving over
 many years. Unfortunately, the names “hashset” and “hashmap” were spoiled by developers anticipating the
@@ -338,7 +338,7 @@ each key into the resized vector. Exercise: Write resize().
 - Any insert operation invalidates all ds_hashset iterators because the insert operation could cause a resize of
 the table. The erase function only invalidates an iterator that references the current object.-->
 
-## 20.13 Leetcode Exercises
+## 23.13 Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum_hash_table.cpp](../../leetcode/p1_twosum_hash_table.cpp).
 

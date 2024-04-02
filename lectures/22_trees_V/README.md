@@ -1,4 +1,4 @@
-# Lecture 22 --- Trees, Part V + Problem Solving Techniques
+# Lecture 22 --- Trees, Part V plus bonus lecture on Problem Solving Techniques
 
 ## Test 3 Information
 

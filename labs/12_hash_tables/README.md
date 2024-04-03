@@ -60,7 +60,8 @@ Complete the *isHappy* function using separate chaining. Do not use any of these
 
 **To complete this checkpoint**: Show a TA these additions and the test output.
 
-## Checkpoint 3,4,5,6: Separate Chaining Hash Table (Yes, it's Checkpoint 3,4,5,6, as there are 3 extra credits for making this program work.)
+<!--## Checkpoint 3,4,5,6: Separate Chaining Hash Table (Yes, it's Checkpoint 3,4,5,6, as there are 3 extra credits for making this program work.)-->
+## Checkpoint 3
 
 *estimate: 30-40 minutes*
 
@@ -86,4 +87,4 @@ Explanation: The longest consecutive elements sequence is [0, 1, 2, 3, 4, 5, 6, 
 
 **To complete checkpoint (3,4,5,6)**: Show a TA your program and the test results.
 
-**Note**: checkpoint (3,4,5,6) is very challenging, if you can't get it work during your lab period, make sure you understand it completely after the lab period, because one of the four problems on Test 3, will be about separate-chaining-based hash tables. It's 100% certain.
+<!--**Note**: checkpoint (3,4,5,6) is very challenging, if you can't get it work during your lab period, make sure you understand it completely after the lab period, because one of the four problems on Test 3, will be about separate-chaining-based hash tables. It's 100% certain.-->

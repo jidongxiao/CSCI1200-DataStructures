@@ -10,15 +10,15 @@ In this lab, you will practice using std::unordered_set, std::unordered_map, and
 
 *estimate: 15-30 minutes*
 
-Complete the *isHappy* function in this [program](happy_number.cpp). This function determines if a number n is happy or not. You can assume 1&lt;=n&lt;50000. You must write two versions of the function, one version uses std::unordered_set, the other version uses std::unordered_map.
+Complete the *isGood* function in this [program](good_number.cpp). This function determines if a number n is good or not. You can assume 1&lt;=n&lt;50000. You must write two versions of the function, one version uses std::unordered_set, the other version uses std::unordered_map.
 
-A happy number is a number defined by the following process:
+A good number is a number defined by the following process:
 
 - Starting with any positive integer, replace the number by the sum of the squares of its digits.
 - Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-- Those numbers for which this process ends in 1 are happy.
+- Those numbers for which this process ends in 1 are good.
 
-Return true if n is a happy number, and false if not. Here are some examples:
+Return true if n is a good number, and false if not. Here are some examples:
 
 ```console
 Example 1:
@@ -56,7 +56,7 @@ For the second part of this checkpoint, experiment with the hash function. In th
 
 Finally, implement and test the *resize* function. This function is automatically called from the *insert* function when the set gets “too full”. This function should make a new top level vector structure of the requested size and copy all the data from the old structure to the new structure. Note that the elements will likely be shuffled around from the old structure to the new structure.-->
 
-Complete the *isHappy* function using separate chaining. Do not use any of these: std::unordered_map, std::unordered_set, std::map, std::set.
+Complete the *isGood* function using separate chaining. Do not use any of these: std::unordered_map, std::unordered_set, std::map, std::set.
 
 **To complete this checkpoint**: Show a TA these additions and the test output.
 

@@ -27,7 +27,7 @@ Here:
 
 When running the above command, your program should print all products whose prices fall into the [min,max] range. The [min, max] range concept is similar to the following box you see on Amazon.
 
-![alt text](amazon_price_range.png "amazon price range")
+![alt text](images/amazon_price_range.png "amazon price range")
 
 For all products fall into that price range, sort them based on the rating in a descending order - products with a higher rating being displayed first. If there is a tie, break the tie by prices - products with a lower price being displayed first. If there is still a tie, i.e. two products have the same rating, and have the same price, break the tie by comparing the title of the products, i.e., apply the less than operator (<) to the two titles - both are std::strings, the product whose title is less than the title of the other product should be displayed first.
 

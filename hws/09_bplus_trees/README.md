@@ -4,7 +4,7 @@
 
 In this assignment you will develop a program to manage the products for an online shopping platform, let's call this program New York Shopping. Please read the entire handout before starting to code the assignment.
 
-It is highly recommended that before you begin coding, you practice constructing a couple of trees by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html).
+It is highly recommended that before you begin coding, you practice constructing a couple of B+ trees by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html).
 
 ## Learning Objectives
 
@@ -42,7 +42,7 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## Rubric
 
-15 pts
+20 pts
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
@@ -59,6 +59,6 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (BPlusTree representation and functions are reasonable.) (6 pts)
-   - Does not implement or use a B+ tree. (-6)
-   - Incomplete B+ tree implementation (e.g. failed to reasonably implement find or insert) (-3)
+ - DATA REPRESENTATION (BPlusTree representation and functions are reasonable.) (11 pts)
+   - Does not implement or use a B+ tree. (-11)
+   - Incomplete B+ tree implementation (e.g. failed to reasonably implement find or insert) (-6)

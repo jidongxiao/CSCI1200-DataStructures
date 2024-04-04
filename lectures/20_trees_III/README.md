@@ -90,7 +90,7 @@ memory usage of this algorithm? Give a specific example tree that illustrates ea
 
 ## 20.4 Height and Height Calculation Algorithm
 
-- The height of a node in a tree is the length of the longest path down the tree from that node to a leaf node. The height of a leaf is 1. We will think of the height of a null pointer as 0.
+- The height of a node in a tree is the length of the longest path down the tree from that node to a leaf node. The height of a tree with only one node (the root node) is 1. The height of an empty tree (a tree with no nodes) is 0.
 
 - The height of the tree is the height of the root node, and therefore if the tree is empty the height will be 0. Exercise: Write a simple recursive algorithm to calculate the height of a tree.
 &nbsp;
@@ -125,7 +125,7 @@ another method of writing the above code
 
 unsigned int height(Node* p)
 {
-  if (p) return 0;
+  if (p==NULL) return 0;
 
   return 1 + std::max(height(p->left), height(p->right));
 }

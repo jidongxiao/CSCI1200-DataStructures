@@ -1,42 +1,39 @@
 **This homework is still not ready!**
 
-# Homework 9 — Simplified B+ Trees
+# Homework 9 — Online Shopping
 
-In this assignment we will be implementing a partial and modified version of B+ trees. As a result, online
-resources may not use the same terminology or may describe implementation details that are not relevant
-to our HW8 implementation. You should read the entire assignment before beginning your work. You
-should also make sure you understand the basic concepts discussed at the end of Lecture 17. It is highly
-recommended that before you begin coding, you practice constructing a couple of trees (using b = 3, b = 4)
-by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html).
+In this assignment you will develop a program to manage the products for an online shopping platform, let's call this program New York Shopping. Please read the entire handout before starting to code the assignment.
 
-The bulk of the assignment will focus on proper insertion in a B+ tree, which is described on the next page.
+It is highly recommended that before you begin coding, you practice constructing a couple of trees by hand and then checking your work with [this online visualization tool](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html).
 
 ## Learning Objectives
 
-- Practice using B+ tree data structures.
+- Practice implementing and using B+ tree data structures.
 
-## Implementation Details
+## Supported Commands
 
-In this assignment we will assume that the keys we insert are unique, i.e. for a particular B+ tree, we will
-never call insert(3); insert(3);. We will also assume that b > 2 in all tests. You will find it beneficial to
-borrow code from our partial implementation of the ds set class. We will not implement iterators, so find()
-should instead return a pointer to a BPlusTreeNode. If the tree is empty, this will be a NULL pointer,
-otherwise this will be the leaf node where the key is/would be. The print functions only need to work with
-types/classes that already work with operator<<, and PrintSideways makes its split at b/2 children. You
-must implement all of the functions required to make hw8 test.cpp compile and run correctly.
+Your program will be run like this:
 
-## Hints
+```console
+nyshopping.exe input.json output.txt min max
+```
 
-Unless the tree is empty, find() will always return a pointer to a node in the tree. You do not need to store
-NULL pointers. In the middle of an insertion, it is okay to let your nodes hold too many keys or children as
-long as you fix it before the insertion and splits are finished. Since this is a tree, some things will be more
-“natural” to do with recursion.
+Here:
+
+- nyshopping.exe is the executable file name.
+- input.json contains products information from Amazon. In this README we will refer to this file as the json file.
+- output.txt is where to print your output to.
+- min and max indicates a price range.
+
+When running the above command, your program should print all products whose prices fall into the [min,max] range. The [min, max] range concept is similar to the following box you see on Amazon.
+
+![alt text](amazon_price_range.png "amazon price range")
+
+For all products fall into that price range, sort them based on the rating in a descending order - products with a higher rating being displayed first. If there is a tie, break the tie by prices - products with a lower price being displayed first. If there is still a tie, i.e. two products have the same rating, and have the same price, break the tie by comparing the title of the products, i.e., apply the less than operator (<) to the two titles - both are std::strings, the product whose title is less than the title of the other product should be displayed first.
 
 ## Program Requirements & Submission Details
 
-In this assignment, While you are encouraged to write your own test functions, we will not be looking at them. You only need
-to submit a README.txt and BPlusTree.h file. Dr. Memory will be used on this assignment and you will
-be penalized for leaks and memory errors in your solution. 
+In this assignment, you are required to manage products using a B+ tree. There is no other requirement on what data structures you can use and what data structures you can not use. 
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring24/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
@@ -62,7 +59,6 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
- - DATA REPRESENTATION (BPlusTree representation and functions are reasonable. BPlusTree only needs to track what b is and what the root is for this assignment.) (6 pts)
-   - Bad representation: more member variables than necessary (size is ok) (-2)
-   - Bad or unnecessary functions or classes (e.g. get_root()) (-2)
-   - Incomplete B+ Tree Implementation (e.g. failed to reasonably implement find or insert) (-2)
+ - DATA REPRESENTATION (BPlusTree representation and functions are reasonable.) (6 pts)
+   - Does not implement or use a B+ tree. (-6)
+   - Incomplete B+ tree implementation (e.g. failed to reasonably implement find or insert) (-3)

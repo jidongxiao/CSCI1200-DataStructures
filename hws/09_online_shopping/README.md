@@ -1,5 +1,3 @@
-**This homework is still not ready!**
-
 # Homework 9 — Online Shopping
 
 In this assignment you will develop a program which implements and uses a B+ tree to manage the products for an online shopping platform, let's call this program New York Shopping. Please read the entire handout before starting to code the assignment.

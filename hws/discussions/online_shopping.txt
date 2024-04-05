@@ -11,3 +11,5 @@ Discuss the following questions with students around you.
 5. What shall we do in the main function?
 
 6. Once all products are stored in the B+ tree, how exactly do we find the products whose price falls into the search range?
+
+7. There are 2 types of nodes on a B+ tree, leaf node vs internal node. Do we need to handle them in different ways?

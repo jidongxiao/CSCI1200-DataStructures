@@ -1,0 +1,13 @@
+In-class discussion
+
+Discuss the following questions with students around you.
+
+1. To implement and manage the B+ tree, 4 major functions will need to be implemented, what are they?
+
+2. Each node on a B+ tree stores up to b-1 keys, in this program, What should be the key? And how do we associate the key with the products?
+3. How exactly do we insert a new key to the B+ tree?
+4. When to split nodes? And how to split nodes?
+
+5. What shall we do in the main function?
+
+6. Once all products are stored in the B+ tree, how exactly do we find the products whose price falls into the search range?

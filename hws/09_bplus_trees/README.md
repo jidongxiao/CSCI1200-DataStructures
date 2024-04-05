@@ -49,7 +49,7 @@ For all products fall into that price range, sort them based on the rating in a 
 
 ## Output File Format
 
-The output file should display products information similar to what Amazon does, but exactly the same.
+The output file should display products information similar to what Amazon does, but not exactly the same.
 
 ![alt text](images/amazon_ice_maker.png "amazon ice maker")
 

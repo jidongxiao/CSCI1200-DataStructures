@@ -63,6 +63,12 @@ Use good coding style when you design and implement your program. Organize your 
 
 **Due Date**: 04/11/2024, Thursday, 10pm.
 
+## FAQs
+
+q1: on the lecture notes, it says nodes in B+ trees have up to b children. How shall I choose the b value for my program?
+
+a1: It is your choice, choosing a different "b" may affect the performance of your program, and you should experiment with different "b"s. A larger "b" generally leads to fewer levels in the tree and faster operations, but it may increase the cost of splitting and merging nodes. You are recommended to start with a b=3. Once your program works, you can try different "b"s, but in general, b should be greater than 2.
+
 ## Rubric
 
 20 pts

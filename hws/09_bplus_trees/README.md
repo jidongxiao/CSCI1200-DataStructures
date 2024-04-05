@@ -47,6 +47,14 @@ When running the above command, your program should print all products whose pri
 
 For all products fall into that price range, sort them based on the rating in a descending order - products with a higher rating being displayed first. If there is a tie, break the tie by prices - products with a lower price being displayed first. If there is still a tie, i.e. two products have the same rating, and have the same price, break the tie by comparing the title of the products, i.e., apply the less than operator (<) to the two titles - both are std::strings, the product whose title is less than the title of the other product should be displayed first.
 
+## Output File Format
+
+The output file should display products information similar to what Amazon does, but exactly the same.
+
+![alt text](images/amazon_ice_maker.png "amazon ice maker")
+
+More specifically, your program should print to the output file: the title, the average rating, the number of ratings, the price, and the thumb url - a url which takes you to the thumbnail view image of this product. All of such information can be retrieved from the json file - each line of the json file contains information for one product. When one line contains multiple thumb urls, use the first one.
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to manage products using a B+ tree. There is no other requirement on what data structures you can use and what data structures you can not use. 

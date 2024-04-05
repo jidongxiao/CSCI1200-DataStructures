@@ -63,12 +63,6 @@ Use good coding style when you design and implement your program. Organize your 
 
 **Due Date**: 04/11/2024, Thursday, 10pm.
 
-## FAQs
-
-q1: How shall I choose the "b" of my B+ tree, since each node on the B+ tree can have at most b children.
-
-a1: It is your choice, choosing a different "b" may affect the performance of your program, and you should experiments with different "b"s. A larger "b" generally leads to fewer levels in the tree and faster operations, but it may increase the cost of splitting and merging nodes.
-
 ## Rubric
 
 20 pts

@@ -1,5 +1,3 @@
-**Sample output files will be provided on Friday night; Submitty submission will open on Friday late night.**
-
 # Homework 9 — Online Shopping
 
 In this assignment you will develop a program which implements and uses a B+ tree to manage the products for an online shopping platform, let's call this program New York Shopping. Please read the entire handout before starting to code the assignment.
@@ -53,7 +51,9 @@ The output file should display products information similar to what Amazon does,
 
 ![alt text](images/amazon_ice_maker.png "amazon ice maker")
 
-More specifically, your program should print to the output file: the title, the average rating, the number of ratings, the price, and the thumb url - a url which takes you to the thumbnail view image of this product. All of such information can be retrieved from the json file - each line of the json file contains information for one product. When one line contains multiple thumb urls, use the first one.
+More specifically, your program should print to the output file: the title, the average rating, the number of ratings, the thumb url - a url which takes you to the thumbnail view image of this product, and the price. All of such information can be retrieved from the json file - each line of the json file contains information for one product. When one line contains multiple thumb urls, use the first one.
+
+All sample output files are provided in the [sample_outputs](./sample_outputs) folder.
 
 ## Program Requirements & Submission Details
 

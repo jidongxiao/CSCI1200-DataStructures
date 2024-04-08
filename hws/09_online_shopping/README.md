@@ -88,5 +88,5 @@ a1: It is your choice, choosing a different "b" may affect the performance of yo
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
    - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)
  - DATA REPRESENTATION (BPlusTree representation and functions are reasonable.) (11 pts)
-   - Does not implement or use a B+ tree. (-11)
+   - Does not implement or use a B+ tree. (only storing products whose prices is in the search range is the incorrect usage of the B+ tree, as it violates the spirit of this assignment.) (-11)
    - Incomplete B+ tree implementation (e.g. failed to reasonably implement find or insert) (-6)

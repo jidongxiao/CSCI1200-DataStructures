@@ -176,7 +176,7 @@ int main() {
 5 4 3 3 1
 ```
 
-- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator; or use a lambda expression.
+- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator.<!--; or use a lambda expression.-->
 - You can use std::priority_queue as a min heap via using std::greater, as can be seen in this [example](min_heap.cpp):
 
 ```cpp

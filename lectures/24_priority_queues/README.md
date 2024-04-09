@@ -1,4 +1,4 @@
-# Lecture 22 --- Priority Queues
+# Lecture 24 --- Priority Queues
 
 <!--
 ## Test 3 Information

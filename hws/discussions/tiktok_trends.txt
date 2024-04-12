@@ -3,4 +3,7 @@ In-class discussion
 Discuss the following questions with students around you.
 
 1. how is std::priority_queue relevant to this assignment?
-2. What shall we do in the main function?
+
+2. how many classes shall we define in this assignment?
+
+3. What shall we do in the main function?

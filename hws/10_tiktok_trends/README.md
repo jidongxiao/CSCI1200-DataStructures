@@ -1,4 +1,4 @@
-# Homework 9 — TikTok Trends
+# Homework 10 — TikTok Trends
 
 In this assignment you will develop a program to display the trends page like TikTok does, let's call this program New York Trends. Please read the entire handout before starting to code the assignment.
 

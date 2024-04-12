@@ -295,6 +295,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/trends/).
 
+## FAQs
+
+q1: For cases where a hashtag appears twice on a line does that count as two separate URLs?
+
+a1: Yes, a hashtag appears 2 times in one post will be counted as 2 times. This is the reason why some URLs appear twice in the output as the top 3 videos of some hashtag - as in that #foryou case in tiny1. (This is just to simplify your implementation).
+
 ## Rubric
 
 13 pts

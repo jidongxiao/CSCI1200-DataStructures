@@ -278,6 +278,8 @@ In order to use this above code block, you need to include the regular expressio
 #include <regex>
 ```
 
+**Note**: it is okay if you decide not to use the above code to extract the hashtags, especially if you have a better way to do so.
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to use std::priority_queue. There is no other requirement on what data structures you can use and what data structures you can not use.

@@ -2,7 +2,6 @@
 
 ## Today’s Lecture
 
-- Homework 10 Discussion
 - Inheritance is a relationship among classes. Examples: bank accounts, polygons, stack & list
 - Basic mechanisms of inheritance
 - Types of inheritance

@@ -187,6 +187,10 @@ member functions should be in each class?
 
 - And see [example 3](multiple_level_inheritance.cpp) for a multiple level inheritance example.
 
+  Note:
+
+  ![alt text](Note_multipleInheritance.png "MultipleInheritance_note")
+
 ## 26.11 Introduction to Polymorphism
 
 - Let’s consider a small class hierarchy version of polygonal objects:

@@ -7,10 +7,6 @@ pass the list of points to each specialized shape constructor in turn, and if th
 we know that that list of points is in fact that type of shape. Remember, the only way for a constructor to
 fail is to throw an exception.
 
-## Checkpoint 0
-
-If you haven’t done so already, please complete your course evaluation for Data Structures (your honest & anonymous feedback is very important!). Have the webpage receipt saying “completed” open in your browser to receive credit for Checkpoint 0.
-
 ## Checkpoint 1: Shape Hierarchy
 
 *estimate: 20-40 minutes*

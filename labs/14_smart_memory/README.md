@@ -1,5 +1,9 @@
 # Lab 14 — Garbage Collection & Smart Pointers
 
+## Checkpoint 0
+
+If you haven’t done so already, please complete your course evaluation for Data Structures (your honest & anonymous feedback is very important!). Have the webpage receipt saying “completed” open in your browser to receive credit for Checkpoint 0.
+
 ## Checkpoint 1:
 
 *estimate: 20-40 minutes*

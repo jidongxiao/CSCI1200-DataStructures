@@ -10,7 +10,7 @@ If you haven’t done so already, please complete your course evaluation for Dat
 
 For the first checkpoint, download, compile, and run these files: [stop_and_copy.h](stop_and_copy.h), [stop_and_copy.cpp](stop_and_copy.cpp), [main_stop_and_copy.cpp](main_stop_and_copy.cpp) 
 
-In Lecture 25, we stepped through the Stop and Copy garbage collection algorithm on a small example.
+In Lecture, we stepped through the Stop and Copy garbage collection algorithm on a small example.
 Examine the output of the program to see a computer simulation of this same example. Verify that the
 program behaves as we predicted in lecture.
 

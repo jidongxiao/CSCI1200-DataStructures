@@ -1,0 +1,10 @@
+char*** carrot;
+char** broccoli;
+char* tomato;
+char radish = 'q';
+tomato = new char;
+*tomato = 'z';
+broccoli = new char*;
+*broccoli = tomato;
+carrot = new char**;
+*carrot = broccoli;

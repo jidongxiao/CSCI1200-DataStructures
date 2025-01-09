@@ -177,11 +177,11 @@ The first argument is the name of **playlist file**. The second argument is the 
 ```
 
 For all 5 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/programming_information.php).
--->
 
 ## Handling Music Tracks with the Same Title
 
 In cases where multiple tracks may have the same title, choose the first track from the input file. This is NOT the natural behavior of Spotify, but this decision is just to simplify your implementation.
+-->
 
 <!-- ## Known Issue on Submitty
 

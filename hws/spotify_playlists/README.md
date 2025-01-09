@@ -84,7 +84,7 @@ The second line is special, it ends with the word **current**, meaning that the 
 
 ## Actions File Format
 
-The actions file has a defines actions. Take actions1.txt as an example, this file has the following lines:
+The actions file defines actions. Take actions1.txt as an example, this file has the following lines:
 
 ```console
 add "Umbrella" Rihanna
@@ -102,7 +102,7 @@ move "You Are Still the One" Shania Twain 4
 
 The **actions file** may include 5 different types of actions:
 
-- add, which adds a song to the playlist.
+- add, which adds a song to the end of the playlist.
 - remove, which removes a song from the playlist.
 - move, which moves a song to a new position - the new position is always included at the end of the line. The line *move "I Will Never Love Again - Film Version" Lady Gaga, Bradley Cooper 1*, moves the song "I Will Never Love Again - Film Version" to position 1, and the line *move "You Are Still the One" Shania Twain 4*, moves the song "You Are Still the One" to position 4. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
 - next, which skips the currently playing song and starts playing the song that is listed directly after it.

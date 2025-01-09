@@ -26,9 +26,35 @@ After this dragging action, now, track 1 is still "Perfect Duet", track 2 is "I'
 
 ![alt text](images/after_reorder.png "Spotify after re-order")
 
+### Next and Previous Button
+
+When using Spotify, if users press the "Next" button, Spotify will skip the currently playing song and starts playing the song that is listed directly after it; if users press the "Previous" button, Spotify will go to the song listed directly before the currently playing song.
+
+The following images show the behavior of pressing "Next".
+
+Before pressing "Next", the currently playing song is "Always Remember Us This Way":
+![alt text](images/before_press_next.png "Spotify before pressing next")
+
+Press "Next"
+![alt text](images/press_next.png "Spotify pressing next")
+
+After pressing "Next", the currently playing song is now "Million Reasons":
+![alt text](images/after_press_next.png "Spotify after pressing next")
+
+The following images show the behavior of pressing "Previous".
+
+Before pressing "Previous", the currently playing song is "Million Reasons":
+![alt text](images/before_press_previous.png "Spotify before pressing previous")
+
+Press "Previous"
+![alt text](images/press_previous.png "Spotify pressing previous")
+
+After pressing "Previous", the currently playing song is "Always Remember Us This Way":
+![alt text](images/after_press_previous.png "Spotify after pressing previous")
+
 ## Command Line Arguments
 
-Your program will support 3 commands.
+Your program will support 5 commands.
 
 ### Command 1: add a music track to a playlist
 The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "add". The fifth argument is the title of the music track.
@@ -57,18 +83,34 @@ For example, the following command will remove the song "Always Remember Us This
 ```
 
 ### Command 3: move a music track to a new position on the playlist
-The first argument is the name of an input file which contains a playlist. The second argument is the name of another input file which contains all available music tracks. The third argument is the output file. The fourth argument is the action, which in this case is "move". The fifth argument is the title of the music track. The sixth argument is the new position - where this user wants the music track to be located on the playlist. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
+The first argument is the name of an input file which contains a playlist. The second argument is the output file. The third argument is the action, which in this case is "move". The fourth argument is the title of the music track. The fifth argument is the new position - where this user wants the music track to be located on the playlist. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
 
 ```console
-./nyplaylists.exe playlist.txt library.txt output.txt move title [new_position]
+./nyplaylists.exe playlist.txt output.txt move title [new_position]
 ```
 
 For example, the following command will move the song "I Will Never Love Again - Film Version" to position 1.
 ```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move I Will Never Love Again - Film Version 1
+./nyplaylists.exe playlist_tiny1.txt output.txt move I Will Never Love Again - Film Version 1
 ```
 
-For all 3 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/programming_information.php).
+### Command 4: skip to the next song in the current playlist
+The first argument is the name of an input file which contains a playlist. The second argument is the output file. The third argument is the action, which in this case is "next".
+
+```console
+./nyplaylists.exe playlist.txt output.txt next
+```
+
+This command will skip to the next song in the current playlist.
+
+### Command 5: skip to the previous song in the current playlist
+The first argument is the name of an input file which contains a playlist. The second argument is the output file. The third argument is the action, which in this case is "previous".
+
+```console
+./nyplaylists.exe playlist.txt output.txt previous
+```
+
+For all 5 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/programming_information.php).
 
 ## Input and Output File Format
 

@@ -1,0 +1,41 @@
+add "Bohemian Rhapsody" Queen
+add "Stairway to Heaven" Led Zeppelin
+add "Hotel California" Eagles
+remove "Sweet Child O' Mine" Guns N' Roses
+add "Imagine" John Lennon
+move "Purple Rain" Prince 2
+next
+next
+next
+previous
+move "Hotel California" Eagles 5
+add "Smells Like Teen Spirit" Nirvana
+add "Like a Rolling Stone" Bob Dylan
+remove "Wonderwall" Oasis
+next
+add "Hey Jude" The Beatles
+move "Imagine" John Lennon 3
+previous
+add "Shape of You" Ed Sheeran
+add "Blinding Lights" The Weeknd
+add "Someone Like You" Adele
+remove "Shape of You" Ed Sheeran
+add "Perfect" Ed Sheeran
+move "Blinding Lights" The Weeknd 2
+next
+next
+previous
+move "Someone Like You" Adele 1
+add "Rolling in the Deep" Adele
+add "Happier" Marshmello
+add "Bad Guy" Billie Eilish
+remove "Rolling in the Deep" Adele
+next
+previous
+move "Happier" Marshmello 3
+add "Dance Monkey" Tones and I
+add "Levitating" Dua Lipa
+add "Old Town Road" Lil Nas X
+next
+remove "Old Town Road" Lil Nas X
+move "Levitating" Dua Lipa 5

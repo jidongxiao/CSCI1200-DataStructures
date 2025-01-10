@@ -1,0 +1,11 @@
+add "Umbrella" Rihanna
+add "We Are Young" Fun
+add "You Are Still the One" Shania Twain
+remove "Million Reasons" Lady Gaga
+add "Viva La Vida" Coldplay
+move "I Will Never Love Again - Film Version" Lady Gaga, Bradley Cooper 1
+next
+next
+next
+previous
+move "You Are Still the One" Shania Twain 4

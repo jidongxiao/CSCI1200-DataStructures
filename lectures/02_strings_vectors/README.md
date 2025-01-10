@@ -55,21 +55,22 @@ where h is as defined above.
 std::vector<int> scores;
 ```
 - Vectors are an example of a templated container class. The angle brackets < > are used to specify the type of object (the “template type”) that will be stored in the vector.
-- push back is a vector function to append a value to the end of the vector, increasing its size by one. <!--This is an O(1) operation (on average).-->
-– There is NO corresponding push front operation for vectors.
+- push_back is a vector function to append a value to the end of the vector, increasing its size by one. <!--This is an O(1) operation (on average).-->
+- There is NO corresponding push_front operation for vectors.
 - size is a function defined by the vector type (the vector class) that returns the number of items stored in the vector.
 - After vectors are initialized and filled in, they may be treated just like arrays.
-– In the line
+- In the line
 ```cpp
 sum += scores[i];
 ```
 scores[i] is an “r-value”, accessing the value stored at location i of the vector.
-– We could also write statements like
+
+- We could also write statements like
 ```cpp
 scores[4] = 100;
 ```
 to change a score. Here scores[4] is an “l-value”, providing the means of storing 100 at location 4 of the vector.
-– It is the job of the programmer to ensure that any subscript value i that is used is legal —- at least 0 and strictly less than scores.size().
+- It is the job of the programmer to ensure that any subscript value i that is used is legal —- at least 0 and strictly less than scores.size().
 
 ## 2.4 Initializing a Vector — The Use of Constructors
 Here are several different ways to initialize a vector:

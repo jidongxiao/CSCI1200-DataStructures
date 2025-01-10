@@ -242,11 +242,11 @@ To deal with this problem, you need to remove double quotes from the arguments. 
 You may need to include this double-quote-removal logic twice in your program so as to remove the openning double quote and then the closing double quote.
 
 Note that the above double-quote-removal logic wouldn't do anything if the argument doesn't contain a double quote. This means including the double-quote-removal logic in your code should not affect how you run your program locally on your own computer.
--->
 
 ## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/). Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service.
+-->
 
 ## Program Requirements & Submission Details
 

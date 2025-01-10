@@ -255,7 +255,7 @@ the order and types of the parameters in the function prototype.
 ## 1.13 Python Strings vs. C chars vs. C-style Strings vs. C++ STL Strings
 
 - Strings in Python are immutable, and there is no difference between a string and a char in Python. Thus, ’a’ and "a" are both strings in Python, not individual characters. In C++ & Java, single quotes create a character type (exactly one character) and double quotes create a string of 0, 1, 2, or more characters.
-- A “C-style” string is an array of chars that ends with the special char ’\0’. C-style strings (char* or char[]) can be edited, and there are a number of helper functions to help with common operations.
+- A “C-style” string is an array of chars that ends with the special char ’\0’. C-style strings (char\* or char[]) can be edited, and there are a number of helper functions to help with common operations.
 - The “C++-style” STL string type has a wider array of operations and functions, which are more convenient and more powerful.
 
 ## 1.14	About STL String Objects
@@ -287,23 +287,27 @@ object. There are several ways of constructing string objects:
 
 The STL streams std::cin & std::cout are used to read data from and write data to the "console". Often, we would rather read data from a file and/or write the output to a file. We can do this using the STL file stream library fstream. And here is an [example program](getline.cpp). Actually, this example program is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
 
-## 1.16 Two Useful String Functions
+# 1.16 String Concatenation
+
+The `+` operator can be used to concatenate `std::string` objects or a `std::string` with a C-style string.
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str1 = "Hello";
+    std::string str2 = "World";
+    std::string result = str1 + " " + str2; // Concatenation
+    std::cout << result << std::endl;      // Output: Hello World
+    return 0;
+}
+```
+
+## 1.17 Two Useful String Functions
 
 - find()
 - substr()
 
 This [example program](strings.cpp) which uses these two string functions, can also be very useful in your homeworks.
 
-<!--## 1.16	C++ vs. Java
-
-- Standard C++ library std::string objects behave like a combination of Java String and StringBuffer objects. If you aren’t sure of how a std::string member function (or operator) will behave, check its semantics or try it on small examples (or both, which is preferable).
-- Java objects must be created using new, as in:
-```java
-String name = new String("Chris");
-```
-This is not necessary in C++. The C++ (approximate) equivalent to this example is:
-```cpp
-std::string name("Chris");
-```
-Note: There is a new operator in C++ and its behavior is somewhat similar to the new operation in Java. We will study it in a couple weeks.
--->

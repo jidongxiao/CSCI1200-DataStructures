@@ -122,7 +122,7 @@ When playlist_tiny1.txt and actions1.txt are supplied to your program as the two
 "Viva La Vida" Coldplay
 ```
 
-## Non-existence Songs
+## Non-existent Songs
 
 If a move action or a remove action as defined in the **actions file** attempts to move or remove a song which does not exist in the playlist, your program should ignore such an action.
 

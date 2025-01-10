@@ -1,24 +1,24 @@
-"Rocket Man" Elton John  
-"Someone You Loved" Lewis Capaldi  
-"Shape of You" Ed Sheeran  
-"Perfect" Ed Sheeran  
-"Happier Than Ever" Billie Eilish  
-"bad guy" Billie Eilish  
-"Skyfall" Adele  
-"Rolling in the Deep" Adele  
-"Thinking Out Loud" Ed Sheeran  
-"Take Me to Church" Hozier  
-"Just the Way You Are" Bruno Mars  
-"When I Was Your Man" Bruno Mars  
-"Rolling Stone" Bob Dylan  
-"Mr. Tambourine Man" Bob Dylan  
-"Like a Prayer" Madonna  
-"Vogue" Madonna  
-"Call Me Maybe" Carly Rae Jepsen  
-"Good 4 U" Olivia Rodrigo  
-"drivers license" Olivia Rodrigo  
-"All of Me" John Legend  
-"Ordinary People" John Legend  
-"Someone Like You" Adele  
-"Levitating" Dua Lipa  
+"Rocket Man" Elton John
+"Someone You Loved" Lewis Capaldi
+"Shape of You" Ed Sheeran current
+"Perfect" Ed Sheeran
+"Happier Than Ever" Billie Eilish
+"bad guy" Billie Eilish
+"Skyfall" Adele
+"Rolling in the Deep" Adele
+"Thinking Out Loud" Ed Sheeran
+"Take Me to Church" Hozier
+"Just the Way You Are" Bruno Mars
+"When I Was Your Man" Bruno Mars
+"Rolling Stone" Bob Dylan
+"Mr. Tambourine Man" Bob Dylan
+"Like a Prayer" Madonna
+"Vogue" Madonna
+"Call Me Maybe" Carly Rae Jepsen
+"Good 4 U" Olivia Rodrigo
+"drivers license" Olivia Rodrigo
+"All of Me" John Legend
+"Ordinary People" John Legend
+"Someone Like You" Adele
+"Levitating" Dua Lipa
 "Don't Start Now" Dua Lipa

@@ -126,6 +126,10 @@ When playlist_tiny1.txt and actions1.txt are supplied to your program as the two
 
 If a move action or a remove action as defined in the **actions file** attempts to move or remove a song which does not exist in the playlist, your program should ignore such an action.
 
+## Duplicated Songs
+
+In cases where the same song appears more than once on the playlist, choose the first song (to move or remove) - i.e., search the playlist, starting from the top to the bottom, identify the first occurrence of this song, and use it (to move or remove).
+
 <!-- ### Command 1: add a music track to a playlist
 The first argument is the name of an input file which contains a playlist - in this README, we will refer to this file as the **playlist file**. The second argument is the name of another input file which contains all available music tracks - in this README, we will refer to this file as the **library file**. The third argument is the output file. The fourth argument is the action, which in this case is "add". The fifth argument is the title of the music track.
 

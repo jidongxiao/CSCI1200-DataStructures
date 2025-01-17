@@ -93,7 +93,114 @@ Date b = a;
 
 The first statement will call the default constructor, while the second statement will call the copy constructor.
 
-## 4.5 Exercises
+## 4.5 Assignment Operator
+
+- The assignment operator (=) is used to copy the values from one object to another after both objects have been created.
+
+### Assignment Operator Syntax:
+
+```cpp
+ClassName& operator=(const ClassName& other);
+```
+
+### Assignment Operator Example:
+
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+class MyClass {
+private:
+    string name; // Using a standard string (no pointers)
+public:
+    MyClass(const string& initName) : name(initName) {}
+
+    MyClass& operator=(const MyClass& other) {
+        name = other.name; // Copy data
+        return *this;
+    }
+
+    void print() const { cout << "Name: " << name << endl; }
+};
+
+int main() {
+    MyClass obj1("Object1");
+    MyClass obj2("Object2");
+
+    obj1 = obj2; // Assignment operator invoked
+    obj1.print(); // Output: Name: Object2
+    return 0;
+}
+```
+
+All C++ class objects have a special pointer defined called **this** which simply points to the current class object, and the expression **this* is a reference to the class object.
+
+Assignment operators of the form:
+```cpp
+obj1 = obj2;
+```
+are translated by the compiler as:
+```cpp
+obj1.operator=(obj2);
+```
+- Cascaded assignment operators of the form:
+```cpp
+obj1 = obj2 = obj3;
+```
+are translated by the compiler as:
+```cpp
+obj1.operator=(obj2.operator=(obj3));
+```
+- Therefore, the value of the assignment operator (obj2 = obj3) must be suitable for input to a second assignment operator. This in turn means the result of an assignment operator ought to be a reference to an object.
+
+**Note**: In C++, the assignment operator is used for assignment after an object has already been created. And because of that, the following two code snippets behave differently.
+
+```cpp
+myClass A = B;
+```
+
+This one line will invoke the copy constructor, rather than the assignment operator. And this behavior is called copy initialization.
+
+```cpp
+myClass A;
+A = B;
+```
+
+These two lines will: the first line creates the object A, and the second line invokes the assignment operator.
+
+## 4.6 Destructor (the “constructor with a tilde/twiddle”)
+
+A **destructor** is a special member function automatically called when an object goes out of scope or is explicitly deleted.
+<!-- - The destructor is responsible for deleting the dynamic memory “owned” by the class.
+- The syntax of the function definition is a bit weird. The ~ has been used as a bit-wise inverse or logic negation in other contexts.-->
+
+### Destructor Syntax
+
+```cpp
+~ClassName();
+```
+
+### Destructor Example
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class MyClass {
+public:
+    MyClass() { cout << "Constructor called\n"; }
+    ~MyClass() { cout << "Destructor called\n"; }
+};
+
+int main() {
+    MyClass obj; // Constructor called
+    // Destructor will be called automatically at the end of scope
+    return 0;
+}
+```
+
+## 4.7 Exercises
 
 - [Leetcode problem 56: Merge Intervals](https://leetcode.com/problems/merge-intervals/). Solution: [p56_mergeintervals.cpp](../../leetcode/p56_mergeintervals.cpp)
 - [Leetcode problem 905: Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/). Solution: [p905_sortarraybyparity.cpp](../../leetcode/p905_sortarraybyparity.cpp)

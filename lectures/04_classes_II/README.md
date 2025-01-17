@@ -211,20 +211,22 @@ A **destructor** is a special member function automatically called when an objec
 
 ```cpp
 #include <iostream>
-using namespace std;
 
 class MyClass {
 public:
-    MyClass() { cout << "Constructor called\n"; }
-    ~MyClass() { cout << "Destructor called\n"; }
+    MyClass() { std::cout << "Constructor called" << std::endl; }
+    ~MyClass() { std::cout << "Destructor called" << std::endl; }
 };
 
 int main() {
-    MyClass obj; // Constructor called
+    MyClass obj1; // Constructor called
+    MyClass obj2; // Constructor called
     // Destructor will be called automatically at the end of scope
     return 0;
 }
 ```
+
+**Question**: in the above example, obj1's destructor or obj2's destructor, which one gets called first?
 
 ## 4.4 Overloading `operator<<` in C++
 

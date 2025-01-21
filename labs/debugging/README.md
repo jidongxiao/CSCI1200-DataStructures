@@ -1,4 +1,4 @@
-# Memory Diagrams, Testing, and Debugging
+# Testing, and Debugging
 
 For this lab, you must use a terminal. Do not use IDEs for this lab.
 

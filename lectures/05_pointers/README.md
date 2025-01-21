@@ -22,8 +22,9 @@ else
 cout << "Smaller\n";
 ```
 
-The output is Bigger
-because x == 72.0. What’s going on?
+The output is ?
+<!-- Bigger
+because x == 72.0. What’s going on?-->
 
 ![alt text](pointer_init.png "pointer_init")
 

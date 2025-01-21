@@ -170,20 +170,19 @@ ClassName& operator=(const ClassName& other);
 ```cpp
 #include <iostream>
 #include <string>
-using namespace std;
 
 class MyClass {
 private:
-    string name; // Using a standard string (no pointers)
+    std::string name;
 public:
-    MyClass(const string& initName) : name(initName) {}
+    MyClass(const std::string& initName) : name(initName) {}
 
     MyClass& operator=(const MyClass& other) {
         name = other.name; // Copy data
         return *this;
     }
 
-    void print() const { cout << "Name: " << name << endl; }
+    void print() const { std::cout << "Name: " << name << std::endl; }
 };
 
 int main() {

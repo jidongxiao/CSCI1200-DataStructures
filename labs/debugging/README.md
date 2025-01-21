@@ -1,4 +1,4 @@
-# Lab 3 — Memory Diagrams, Testing, and Debugging
+# Memory Diagrams, Testing, and Debugging
 
 For this lab, you must use a terminal. Do not use IDEs for this lab.
 
@@ -136,7 +136,7 @@ figure out how to do each of the steps below in your debugger of choice.
 Note that in addition to a standard step-by-step program debugger like gdb/lldb, we also recommend the use
 of a memory debugger (drmemory or valgrind) for programs with dynamically-allocated memory (we’ll soon talk about this in Lectures), or anytime you have a segmentation fault or other confusing program behavior. We’ll work the memory debugger in lab next week! Information about memory debuggers is
 available here:
-http://www.cs.rpi.edu/academics/courses/fall23/csci1200/memory_debugging.php
+http://www.cs.rpi.edu/academics/courses/spring25/csci1200/memory_debugging.php
 
 After today’s lab, you should be comfortable with the basics of command line debugging within your preferred
 development environment. Keep practicing with the debugger on your future homeworks, and be prepared

@@ -198,7 +198,7 @@ for ( i=0; i<n; ++i ){
 };
 ```
 
-This second approach also "nicely mimics the subscript notation used in the (original) for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by our mentor Eleanor Olson, :smile:.
+This second approach also "nicely mimics the subscript notation used in the (original) for loop above, which highlights that fundamentally array subscripts are just pointer arithmetic." - comments by a former mentor. 
 
 ## 5.9 Sorting an Array
 

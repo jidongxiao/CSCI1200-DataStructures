@@ -16,7 +16,7 @@ your accommodations for the test.
 - Bring to the exam room:  
   – Your Rensselaer photo ID card.  
   – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated.
-  – Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.-->
+  – Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.
 <!-- – Do not bring your own scratch paper. We will provide scratch paper.-->
 
 # Lecture 6 --- Pointer and Dynamic Memory

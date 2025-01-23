@@ -15,7 +15,7 @@ your accommodations for the test.
 <!-- - OPTIONAL: Prepare a 2 page, black & white, 8.5x11”, portrait orientation .pdf of notes you would like to have during the exam. This may be digitally prepared or handwritten and scanned or photographed. The file may be no bigger than 2MB. You will upload this file to Submitty (“Test 1 Notes Upload”) before Wednesday night @11:59pm. We will print this and attach it to your exam. Make sure you get credit for test case 2 and that you view the details to verify your sheet looks correct. You cannot bring your own cribsheet, you must submit one electronically. IMPORTANT: Using third party websites to make a PDF may generate an invalid PDFs that prints weird. Your word processor’s -> save as/export to PDF, or Google Docs -> Download -> PDF should be safe. -->
 - Bring to the exam room:  
   – Your Rensselaer photo ID card.  
-  – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated. 
+  – Pencil(s) & eraser (pens are ok, but not recommended). The exam will involve handwriting code on paper (and other short answer problem solving). Neat legible handwriting is appreciated.  
   – Computers, cell-phones, smart watches, calculators, music players, etc. are not permitted. Please do not bring your laptop, books, backpack, etc. to the exam room – leave everything in your dorm room. Unless you are coming directly from another class or sports/club meeting.
 <!-- – Do not bring your own scratch paper. We will provide scratch paper.-->
 

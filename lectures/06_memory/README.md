@@ -35,7 +35,7 @@ void func() {
 }
 ```
 
-- Static memory: variables allocated statically (with the keyword static), located at the data segment of the program's memory. They are are not eliminated when they go out of scope. They retain their values throughout the entire program execution, but are only accessible within the scope where they are defined. For example:
+- Static memory: include global variables and variables declared with the static keyword, located at the data segment of the program's memory. They are are not eliminated when they go out of scope. They retain their values throughout the entire program execution, but are only accessible within the scope where they are defined. For example:
 
 ```cpp
 static int counter;

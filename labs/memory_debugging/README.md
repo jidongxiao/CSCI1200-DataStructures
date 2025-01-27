@@ -116,7 +116,7 @@ Mismatched free() / delete / delete []
 
 **To receive credit for this checkpoint**, discuss your answers to these questions with a TA or mentor.
 
-## Checkpoint 4
+<!-- ## Checkpoint 4
 *remainder of the lab time*
 
 For this checkpoint, you team up with one or two other students from your lab section. Our TA or mentor will pick one problem from the practice packet for you two (or three) to work together as a group. You should not look at the posted solutions. Work as a group (e.g., pair programming!) to come up with a complete solution to the problem.
@@ -125,4 +125,4 @@ Once you have completed and proofread and triple-checked your answer, launch you
 
 Then, write a simple test case to exercise your solution. Compile and run the code. As time follows, fix bugs in your solution and improve and expand your test cases.
 
-**To complete this checkpoint**, When about 10 minutes remain in the lab, the TA and mentors will circulate through the room to finalize checkoffs. Show them your initial solution, and explain the typos and errors you found and debugged in working through your computer tested solution. Explain your testing & debugging process.
+**To complete this checkpoint**, When about 10 minutes remain in the lab, the TA and mentors will circulate through the room to finalize checkoffs. Show them your initial solution, and explain the typos and errors you found and debugged in working through your computer tested solution. Explain your testing & debugging process.-->

@@ -94,10 +94,10 @@ if (found) cout << "It is there!\n";
 
 ## 7.6 Best-Case, Average-Case and Worst-Case Analysis
 
-- For a given fixed size array, we might want to know:
-  – The fewest number of operations (best case) that might occur.
-  – The average number of operations (average case) that will occur.
-  – The maximum number of operations (worst case) that can occur.
+- For a given fixed size array, we might want to know:  
+  – The fewest number of operations (best case) that might occur.  
+  – The average number of operations (average case) that will occur.  
+  – The maximum number of operations (worst case) that can occur.  
 - The last is the most common. The first is rarely used.
 - On the previous algorithm, the best case is O(1), but the average case and worst case are both O(n).
 

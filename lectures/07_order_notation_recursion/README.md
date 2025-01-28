@@ -2,10 +2,10 @@
 
 - Algorithm Analysis, Formal Definition of Order Notation
 - Simple recursion, Visualization of recursion, Iteration vs. Recursion
-- “Rules” for writing recursive functions, Lots of examples
-- Lots of Examples!
+- “Rules” for writing recursive functions
+<!--- Lots of Examples!
 
-<!--  #Test 1
+  #Test 1
   - This **Thursday, 02/01/2024 from 6-7:50pm**
   - More info in Lecture 6 notes https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/lectures/06_memory
   - No office hours during exam slot and on Friday 02/02/2024-->
@@ -75,7 +75,7 @@ quadratic root.
 - O(n<sup>2</sup>), O(n<sup>3</sup>), O(n<sup>k</sup>), a.k.a. POLYNOMIAL. e.g., find closest pair of points.
 - O(2<sup>n</sup>), O(k<sup>n</sup>), a.k.a. EXPONENTIAL. e.g., Fibonacci, playing chess.
 
-## 7.6 Exercise: A Slightly Harder Example
+<!-- ## 7.6 Exercise: A Slightly Harder Example
 
  Here’s an algorithm to determine if the value stored in variable x is also in an array called foo. Can you analyze
 it? What did you do about the if statement? What did you assume about where the value stored in x occurs
@@ -90,8 +90,9 @@ while (!found && loc < n) {
 }
 if (found) cout << "It is there!\n";
 ```
+-->
 
-## 7.7 Best-Case, Average-Case and Worst-Case Analysis
+## 7.6 Best-Case, Average-Case and Worst-Case Analysis
 
 - For a given fixed size array, we might want to know:
   – The fewest number of operations (best case) that might occur.
@@ -100,7 +101,7 @@ if (found) cout << "It is there!\n";
 - The last is the most common. The first is rarely used.
 - On the previous algorithm, the best case is O(1), but the average case and worst case are both O(n).
 
-## 7.8 Approaching An Analysis Problem
+## 7.7 Approaching An Analysis Problem
 
 - Decide the important variable (or variables) that determine the “size” of the problem. For arrays and other
 “container classes” this will generally be the number of values stored.
@@ -111,7 +112,7 @@ of loop iterations.
 of comparisons.
 - Do the count and use order notation to describe the result.
 
-## 7.9 Exercise: Order Notation
+## 7.8 Exercise: Order Notation
 
 For each version below, give an order notation estimate of the number of operations as a function of n:
 
@@ -140,7 +141,7 @@ for (int j=i; j<n; ++j)
 ++count;
 ```
 
-## 7.10 Recursive Definitions of Factorials and Integer Exponentiation
+## 7.9 Recursive Definitions of Factorials and Integer Exponentiation
 
 - Factorial is defined for non-negative integers as:
 ![alt text](factorial_equation.png "factorial equation")
@@ -150,7 +151,7 @@ for (int j=i; j<n; ++j)
 
 These are both examples of recursive definitions.
 
-## 7.11 Recursive C++ Functions
+## 7.10 Recursive C++ Functions
 
 C++, like other modern programming languages, allows functions to call themselves. This gives a direct method of
 implementing recursive functions. Here are the recursive implementations of factorial and integer power:
@@ -178,7 +179,7 @@ int intpow(int n, int p) {
 }
 ```
 
-## 7.12 The Mechanism of Recursive Function Calls
+## 7.11 The Mechanism of Recursive Function Calls
 
 - For each recursive call (or any function call), a program creates an activation record to keep track of:
   – Completely separate instances of the parameters and local variables for the newly-called function.  
@@ -192,7 +193,7 @@ and local variables and make notes about the computation.
 ![alt_text](activation_records.png "chain of activation records")
 - This chain of activation records is stored in a special part of program memory called the stack
 
-## 7.13 Iteration vs. Recursion
+## 7.12 Iteration vs. Recursion
 
 - Each of the above functions could also have been written using a for or while loop, i.e.  iteratively. For example, here is an iterative
 version of factorial:
@@ -217,14 +218,15 @@ faster than their corresponding recursive functions. This is due to the overhead
 Compiler optimizations will sometimes (but not always!) reduce the performance hit by automatically eliminating
 the recursive function calls. This is called tail call optimization.
 
-## 7.14 Exercises
+<!-- ## 7.14 Exercises
 
 1. Draw a picture to illustrate the activation records for the function call
 cout << intpow(4, 4) << endl;
 2. Write an iterative version of intpow.
 3. What is the order notation for the two versions of intpow?
+-->
 
-## 7.15 Rules for Writing Recursive Functions
+## 7.14 Rules for Writing Recursive Functions
 
 Here is an outline of five steps that are useful in writing and debugging recursive functions. Note: You don’t have
 to do them in exactly this order...
@@ -237,7 +239,7 @@ recursive calls. It is also the hardest part!
 are you going to do with the result of the recursive call?)
 5. Assume the recursive calls work correctly, but make sure they are progressing toward the base case(s)!
 
-## 7.16 Location of the Recursive Call — Example: Printing the Contents of a Vector
+## 7.15 Location of the Recursive Call — Example: Printing the Contents of a Vector
 
  Here is a function to print the contents of a vector. Actually, it’s two functions: a driver function, and a true
 recursive function. It is common to have a driver function that just initializes the first recursive function call.
@@ -268,7 +270,7 @@ int main() {
  How can you change the second print vec function as little as possible so that this code prints the contents
 of the vector in reverse order?
 
-## 7.17 Fibonacci Optimization: Order Notation of Time vs. Space
+## 7.16 Fibonacci Optimization: Order Notation of Time vs. Space
 
 The Fibonacci sequence is defined:
 ![alt text](fibonacci_sequence.png "fibonacci sequence")

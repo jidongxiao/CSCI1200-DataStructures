@@ -181,7 +181,7 @@ int intpow(int n, int p) {
 
 ## 7.11 The Mechanism of Recursive Function Calls
 
-- For each recursive call (or any function call), a program creates an activation record to keep track of:
+- For each recursive call (or any function call), a program creates an activation record to keep track of:  
   – Completely separate instances of the parameters and local variables for the newly-called function.  
   – The location in the calling function code to return to when the newly-called function is complete. (Who
 asked for this function to be called? Who wants the answer?)  

@@ -5,10 +5,10 @@
 - “Rules” for writing recursive functions, Lots of examples
 - Lots of Examples!
 
-  #Test 1
+<!--  #Test 1
   - This **Thursday, 02/01/2024 from 6-7:50pm**
   - More info in Lecture 6 notes https://github.com/jidongxiao/CSCI1200-DataStructures/tree/master/lectures/06_memory
-  - No office hours during exam slot and on Friday 02/02/2024
+  - No office hours during exam slot and on Friday 02/02/2024-->
 
 ## 7.1 Algorithm Analysis
 

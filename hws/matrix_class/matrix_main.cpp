@@ -17,8 +17,6 @@
 
 void SimpleTest(); //Some basic tests
 void StudentTest(); //Write your own test cases here
-void ExtraCreditTest(); //Write this if you write resize()
-
 
 //Function to test a ton of matrices at once.
 void BatchTest(double start, double step, unsigned int rows, unsigned int cols,
@@ -43,11 +41,6 @@ int main(){
 	StudentTest();
 	std::cout << "Completed all student tests." << std::endl;
 
-	//Uncomment this if you write the resize() function.
-	/*
-	ExtraCreditTest();
-	std::cout << "Completed all student extra credit tests." << std::endl;
-	*/
 	return 0;
 }
 
@@ -209,12 +202,6 @@ void SimpleTest(){  //well behaved getrow/read after
 void StudentTest(){
 
 }
-
-//Write this if you write resize()
-void ExtraCreditTest(){
-
-}
-
 
 ////////////////Utility functions//////////////////////
 

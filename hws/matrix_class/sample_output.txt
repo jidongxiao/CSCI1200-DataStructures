@@ -1,0 +1,86 @@
+Empty matrix:
+0 x 0 matrix:
+[ ]
+
+Zeroed 3x4 matrix:
+3 x 4 matrix:
+[ 0 0 0 0
+  0 0 0 0
+  0 0 0 0 ]
+
+One after the other:
+0 x 0 matrix:
+[ ]
+
+3 x 4 matrix:
+[ 0 0 0 0
+  0 0 0 0
+  0 0 0 0 ]
+
+Adding m5 and m6
+
+4 x 4 matrix:
+[ 2 2 2 2
+  2 2 2 2
+  2 2 2 2
+  2 2 2 2 ]
+
+4 x 4 matrix:
+[ 12 12 12 12
+  12 12 12 12
+  12 7 12 12
+  12 12 12 11 ]
+
+The result
+
+4 x 4 matrix:
+[ 14 14 14 14
+  14 14 14 14
+  14 9 14 14
+  14 14 14 13 ]
+
+Attempting Gauss-Jordan reduced row echelon form.
+3 x 6 matrix:
+[ 1 2 1 1 0 0
+  2 3 -1 0 1 0
+  3 -2 -1 0 0 1 ]
+
+
+3 x 6 matrix:
+[ 1 0 0 0.25 0 0.25
+  -0 1 0 0.05 0.2 -0.15
+  0 0 1 0.65 -0.4 0.05 ]
+
+M11 to be quartered: 
+
+3 x 4 matrix:
+[ 1 2 3 4
+  5 6 7 8
+  9 10 11 12 ]
+
+UL: 
+
+2 x 2 matrix:
+[ 1 2
+  5 6 ]
+
+UR: 
+
+2 x 2 matrix:
+[ 3 4
+  7 8 ]
+
+LL: 
+
+2 x 2 matrix:
+[ 5 6
+  9 10 ]
+
+LR: 
+
+2 x 2 matrix:
+[ 7 8
+  11 12 ]
+
+Completed all simple tests.
+Completed all student tests.

@@ -213,3 +213,31 @@ You will need to submit your [matrix_main.cpp](matrix_main.cpp), Matrix.cpp, Mat
 Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template [README.txt](README.txt) file for notes you want the grader to read. Fill out the order notation section as well in the [README.txt](README.txt) file. You must do this assignment on your own, as described in the “Collaboration Policy & Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error messages, etc. with anyone, please list their names in your README.txt file.
 
 **Due Date**: 02/06/2025, Thursday, 10pm. 
+
+## Rubric
+
+20 pts
+
+ - README.txt Completed (3 pts)
+   - One of name, collaborators, or hours not filled in. (-1)
+   - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (5 pts)
+   - No credit (significantly incomplete implementation) (-5)
+   - No documentation for Matrix itself is provided (function documentation and section headings don't count). (-1)
+   - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
+   - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
+   - Improper uses or omissions of const and reference. (-1)
+   - Overly cramped, excessive whitespace, or poor indentation. (-1)
+   - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
+ - DATA REPRESENTATION (4 pts)
+   - No credit (significantly incomplete implementation). (-4)
+   - Uses STL data structures (lists, vectors, etc).  (-4)
+   - Member variables are public. (-2)
+ - ORDER NOTATION (Readme contains correct analysis of order notation, including proper notation and use of provided variables. ) (5 pts)
+ - ADDITIONAL TEST CASES (A wide variety of additional student-written test cases.) (4 pts)
+   - Does not test transpose.  (-1)
+   - Does not test multiply_by_coefficient. (-1)
+   - Does not test get_col.  (-1)
+   - Does not test corner cases of some kind (rows or cols = 0, quartering with odd dimensions, etc). (-1)
+   - No test cases, or else trivial/minimal ones that only test things covered in SimpleTests. (-4)

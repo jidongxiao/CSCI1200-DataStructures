@@ -119,9 +119,11 @@ For each version below, give an order notation estimate of the number of operati
 1
 ```cpp
 int count=0;
-for (int i=0; i<n; ++i)
-for (int j=0; j<n; ++j)
-++count;
+for (int i=0; i<n; ++i){
+	for (int j=0; j<n; ++j){
+		++count;
+	}
+}
 ```
 
 2.

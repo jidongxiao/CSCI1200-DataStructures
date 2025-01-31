@@ -129,18 +129,22 @@ for (int i=0; i<n; ++i){
 2.
 ```cpp 
 int count=0;
-for (int i=0; i<n; ++i)
-++count;
-for (int j=0; j<n; ++j)
-++count;
+for (int i=0; i<n; ++i){
+	++count;
+}
+for (int j=0; j<n; ++j){
+	++count;
+}
 ```
 
 3.
 ```cpp
 int count=0;
-for (int i=0; i<n; ++i)
-for (int j=i; j<n; ++j)
-++count;
+for (int i=0; i<n; ++i){
+	for (int j=i; j<n; ++j){
+		++count;
+	}
+}
 ```
 
 ## 7.9 Recursive Definitions of Factorials and Integer Exponentiation

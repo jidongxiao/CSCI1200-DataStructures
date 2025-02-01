@@ -155,9 +155,9 @@ Consider these two matrices:
 
 If we want to get the contents of an entire row or column, it’s annoying to have to extract the values one by
 one using get(), especially since our implementation is a “safe” accessor so we can’t use some of the coding
-shortcuts we normally use. To fix this, you will implement two more accessors, get row() and get col().
-Both functions take one unsigned int and return a double*. For get row() the argument is the number of
-row to retrieve, while for get col() the argument is the number of the column to retrieve. If the requested
+shortcuts we normally use. To fix this, you will implement two more accessors, get_row() and get_col().
+Both functions take one unsigned int and return a double\*. For get_row() the argument is the number of
+row to retrieve, while for get_col() the argument is the number of the column to retrieve. If the requested
 row/column is outside of the matrix bounds, the method should return a pointer set to NULL.
 The final method we expect you to implement, quarter(), is not a traditional matrix operation. The method
 takes no arguments and returns a Matrix* containing four new Matrix elements in order: an Upper Left

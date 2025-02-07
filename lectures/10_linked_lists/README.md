@@ -1,146 +1,11 @@
 # Lecture 10 --- Vector Iterators & Linked Lists
 
-<!--- Keep an eye for an update on Student Excuse Absence Policy which would go in effect from HW4
-     * Please remember incorporating the new rule may result in
-  		+ grading process gets delayed
-        	+ you will receive grades late
-    		+ will affect your grade inquiry time
-     		+ may affect when you receive the solutions or see the actual rubric
-     		+ if that HW was due before exam then be ready to receive feedback on that after exams
-     * More detailed info soon-->
-- Review of iterators
+- Iterator Implementation
 - Building our own basic linked lists:  
   – Stepping through a list  
   – Basic operations
 
 ## 10.1 Review: Iterators and Iterator Operations
-
-- An iterator type is defined by each STL container class. For example:
-
-```cpp
-std::vector<double>::iterator v_itr;
-std::list<std::string>::iterator l_itr;
-std::string::iterator s_itr;
-```
-
-- An iterator is assigned to a specific location in a container. For example:
-
-```cpp
-v_itr = vec.begin() + i; // i-th location in a vector
-l_itr = lst.begin(); // first entry in a list
-s_itr = str.begin(); // first char of a string
-```
-
-*Note*: We can add an integer to vector and string iterators, but not to list iterators.
-
-- The contents of the specific entry referred to by an iterator are accessed using the * dereference operator:
-In the first and third lines, *v itr and *l itr are l-values. In the second, *s_itr is an r-value.
-
-```cpp
-*v_itr = 3.14;
-cout << *s_itr << endl;
-*l_itr = "Hello";
-```
-
-- Stepping through a container, either forward and backward, is done using increment (++) and decrement (--)
-operators:
-
-```cpp
-++itr; itr++; --itr; itr--;
-```
-
-These operations move the iterator to the next and previous locations in the vector, list, or string. The
-operations do not change the contents of container!
-
-- Finally, we can change the container that a specific iterator is attached to as long as the types match.
-Thus, if v and w are both std::vector<double>, then the code:
-
-```cpp
-v_itr = v.begin();
-*v_itr = 3.14; // changes 1st entry in v
-v_itr = w.begin() + 2;
-*v_itr = 2.78; // changes 3rd entry in w
-```
-
-works fine because v_itr is a std::vector&lt;double&gt;::iterator, but if *a* is a std::vector&lt;std::string&gt; then
-
-```cpp
-v_itr = a.begin();
-```
-
-is a syntax error because of a type clash!
-
-## 10.2 Additional Iterator Operations for Vector (& String) Iterators
-
-- Initialization at a random spot in the vector:
-
-```cpp
-v_itr = v.begin() + i;
-```
-Jumping around inside the vector through addition and subtraction of location counts:
-
-```cpp
-v_itr = v_itr + 5;
-```
-moves p 5 locations further in the vector. These operations are constant time, O(1) for vectors.
-- These operations are not allowed for list iterators (and most other iterators, for that matter) because of the
-way the corresponding containers are built. These operations would be linear time, O(n), for lists, where n is
-the number of slots jumped forward/backward. Thus, they are not provided by STL for lists.
-- Students are often confused by the difference between iterators and indices for vectors. Consider the following
-declarations:
-
-```cpp
-std::vector<double> a(10, 2.5);
-std::vector<double>::iterator p = a.begin() + 5;
-unsigned int i=5;
-```
-
-- Iterator p refers to location 5 in vector a. The value stored there is directly accessed through the * operator:
-
-```cpp
-*p = 6.0;
-cout << *p << endl;
-```
-
-- The above code has changed the contents of vector a. Here’s the equivalent code using subscripting:
-
-```cpp
-a[i] = 6.0;
-cout << a[i] << endl;
-```
-
-- Here’s another common confusion:
-
-```cpp
-std::list<int> lst; lst.push_back(100); lst.push_back(200);
-lst.push_back(300); lst.push_back(400); lst.push_back(500);
-```
-
-```cpp
-std::list<int>::iterator itr,itr2,itr3;
-itr = lst.begin();// itr is pointing at the 100
-++itr; // itr is now pointing at 200
-*itr += 1; // 200 becomes 201
-// itr += 1; // does not compile! can't advance list iterator like this
-```
-```cpp
-itr = lst.end(); // itr is pointing "one past the last legal value" of lst
-itr--; // itr is now pointing at 500;
-itr2 = itr--; // itr is now pointing at 400, itr2 is still pointing at 500
-itr3 = --itr; // itr is now pointing at 300, itr3 is also pointing at 300
-```
-
-```cpp
-// dangerous: decrementing the begin iterator is "undefined behavior"
-// (similarly, incrementing the end iterator is also undefined)
-// it may seem to work, but break later on this machine or on another machine!
-itr = lst.begin();
-itr--; // dangerous!
-itr++;
-assert (*itr == 100); // might seem ok... but rewrite the code to avoid this!
-```
-
-### Exercise
 
 What is the output of this program?
 
@@ -169,6 +34,10 @@ int main(){
 	
 }
 ```
+
+## 10.2 Iterator Implementation
+
+
 
 ## 10.3 Working towards our own version of the STL list
 

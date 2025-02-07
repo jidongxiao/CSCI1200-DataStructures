@@ -81,8 +81,7 @@ next or previous element of any container.
 - Iterators can be compared using the == and != operators.
 - Iterators can be assigned, just like any other variable.
 - Vector iterators have several additional operations:
-  - Integer values may be added to them or subtracted from them. This leads to statements like
-enrolled.erase(enrolled.begin() + 5);
+  - Integer values may be added to them or subtracted from them.
 - Vector iterators may be compared using operators like <, <=, etc.
 - For most containers (other than vectors), these “random access” iterator operations are not legal and
 therefore prevented by the compiler. The reasons will become clear as we look at their implementations.

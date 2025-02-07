@@ -1,6 +1,6 @@
-# Lecture 10 --- Vector Iterators & Linked Lists
+# Lecture 10 --- Iterator Implementation & Linked Lists
 
-- Iterator Implementation
+- Iterator Implementation (in Vectors)
 - Building our own basic linked lists:  
   – Stepping through a list  
   – Basic operations
@@ -37,7 +37,7 @@ int main(){
 
 ## 10.2 Iterator Implementation
 
-
+Here we extend our implemention of vector so as to include iterators. Review the written code here: [vec.h](vec.h) and [vec_main.cpp](vec_main.cpp).
 
 ## 10.3 Working towards our own version of the STL list
 

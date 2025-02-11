@@ -1,4 +1,4 @@
-# Lab 6 — Reversing Data 8 Ways: STL Vectors vs. STL Lists vs. Homemade Linked Lists
+# Lab 4 — Reversing Data in Different Ways: STL Vectors vs. STL Lists vs. Homemade Linked Lists
 
 ## Background - Introduction to GIF Formats and the Concept of Frames
 
@@ -19,6 +19,12 @@ A GIF file is made up of a series of **frames**. Each frame is a static image th
 ## Lab Tasks
 
 In this lab, you will modify an existing C++ program. This program reverse a GIF file.
+
+Here are examples of reversing GIF.
+
+Example 1:
+
+[Original GIF](dog_good.gif) [Reversed GIF](dog_bad.gif)
 
 ## Checkpoint 1A: Reverse with STL Vector Swaps
 *estimate: TBD*

@@ -434,7 +434,8 @@ int main() {
     }
 
     // print the modified list
-    // range based for loop: all STL containers that provide begin() and end() member functions support range-based for loops (introduced in C++11).
+    // range based for loop. 
+    // all STL containers that provide begin() and end() member functions support range-based for loops (introduced in C++11).
     for (int num : numbers) {
         std::cout << num << " ";
     }

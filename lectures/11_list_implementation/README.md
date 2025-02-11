@@ -13,9 +13,6 @@
 | **Fast random access required**             | ✅ | ❌ |
 | **Memory efficiency is important**          | ✅ | ❌ |
 | **Iterators should remain valid**           | ❌ | ✅ |
-| **Heavy insertions/deletions at the end**   | ✅ | ✅ (but `std::vector` is better) |
-| **Cache locality and performance are important** | ✅ | ❌ |
-| **Large number of elements (better memory utilization)** | ✅ | ❌ |
 
 ## 11.1 Basic Linked Lists Mechanisms: Common Mistakes
 

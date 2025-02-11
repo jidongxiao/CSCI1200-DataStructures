@@ -5,6 +5,18 @@
 - Our own version of the STL list&lt;T&gt; class, named dslist, Implementing list iterators
 - Common mistakes, STL List w/ iterators vs. “homemade” linked list with Node objects & pointers
 
+## 11.0 When to Use `std::list` vs. `std::vector`
+
+| Use Case                                     | Prefer `std::vector` | Prefer `std::list` |
+|----------------------------------------------|----------------------|--------------------|
+| **Frequent insertions/removals at arbitrary positions** | ❌ | ✅ |
+| **Fast random access required**             | ✅ | ❌ |
+| **Memory efficiency is important**          | ✅ | ❌ |
+| **Iterators should remain valid**           | ❌ | ✅ |
+| **Heavy insertions/deletions at the end**   | ✅ | ✅ (but `std::vector` is better) |
+| **Cache locality and performance are important** | ✅ | ❌ |
+| **Large number of elements (better memory utilization)** | ✅ | ❌ |
+
 ## 11.1 Basic Linked Lists Mechanisms: Common Mistakes
 
 - Here is a summary of common mistakes. Read these carefully, and read them again when you have problem that

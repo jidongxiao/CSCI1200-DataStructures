@@ -42,6 +42,10 @@ Example 5:
 
 This is the [original GIF](seat_real.gif). And this is the [reversed GIF](seat_fake.gif).
 
+Example 6:
+
+This is the [original GIF](pool_real.gif). And this is the [reversed GIF](pool_fake.gif).
+
 ## Starter Code
 
 The starter code [main.cpp](main.cpp) defines a class named GifFrame to represents GIF frames. Each object of this class represents one frame.

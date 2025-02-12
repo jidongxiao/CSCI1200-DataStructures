@@ -290,7 +290,7 @@ int main() {
 	std::vector<GifFrame> reversedFrames = reverseFrames(frames);
 	
 	// write out the new GIF with the complete header
-	writeGif("reversed.gif", completeHeader, frames, loopExtension);
+	writeGif("reversed.gif", completeHeader, reversedFrames, loopExtension);
 
 	return 0;
 }

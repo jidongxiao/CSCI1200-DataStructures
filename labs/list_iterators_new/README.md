@@ -24,19 +24,19 @@ Here are examples of reversing GIF.
 
 Example 1:
 
-This is the [original GIF](dog_good.gif). And this is the [reversed GIF](dog_bad.gif)
+This is the [original GIF](dog_good.gif). And this is the [reversed GIF](dog_bad.gif).
 
 Example 2:
 
-This is the [original GIF](door_break.gif). And this is the [reversed GIF](door_restore.gif)
+This is the [original GIF](door_break.gif). And this is the [reversed GIF](door_restore.gif).
 
 Example 3:
 
-This is the [original GIF](jump_real.gif). And this is the [reversed GIF](jump_fake.gif)
+This is the [original GIF](jump_real.gif). And this is the [reversed GIF](jump_fake.gif).
 
 Example 4:
 
-This is the [original GIF](brick_real.gif). And this is the [reversed GIF](brick_fake.gif)
+This is the [original GIF](brick_real.gif). And this is the [reversed GIF](brick_fake.gif).
 
 ## Starter Code
 

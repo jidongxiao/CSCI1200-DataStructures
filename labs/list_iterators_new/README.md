@@ -52,7 +52,7 @@ This is the [original GIF](girl_real.gif). And this is the [reversed GIF](girl_f
 
 ## Starter Code
 
-The starter code [main.cpp](main.cpp) defines a class named GifFrame to represents GIF frames. Each object of this class represents one frame.
+The starter code [main.cpp](main.cpp) defines a class named GifFrame to represent GIF frames. Each object of this class represents one frame.
 
 ```cpp
 class GifFrame {

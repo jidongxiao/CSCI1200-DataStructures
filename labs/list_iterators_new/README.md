@@ -81,7 +81,7 @@ vector and the second half. As examples, the value at location 0 and the value a
 be swapped, and the value at location 1 and the value at location size()-2 must be swapped.
 Make sure your code works with even and odd length vectors. 
 
-**To complete this checkpoint**, show a TA your debugged functions to reverse STL vectors by element swapping.
+**To complete this checkpoint**, show a TA/mentor your debugged functions to reverse STL vectors by element swapping. TA/mentor will specify one original GIF image file, and you rename that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
 
 ## Checkpoint 2: Reverse with STL List Swaps
 *estimate: TBD*
@@ -113,13 +113,15 @@ determining when to stop (when you’ve reached the halfway point in the list). 
 counter variable to help you do this.
 
 For this checkpoint you should not use *erase*, or *insert*, or the *push* or *pop* functions.
-Note, you’ll probably need to add the keyword typename in front of your templated iterator types to unconfuse the compiler.
+<!-- Note, you’ll probably need to add the keyword typename in front of your templated iterator types to unconfuse the compiler.
 
 ```cpp
 typename std::list<T>::iterator itr = data.begin();
 ```
+-->
 
-**To complete this checkpoint**, show a TA your debugged functions to reverse STL lists by element swapping.
+**To complete this checkpoint**, show a TA/mentor your debugged functions to reverse STL lists by element swapping. TA/mentor will specify one original GIF image file, and you rena
+me that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
 
 ## Checkpoint 3: Reverse with STL List Using Insert/Erase/Push/Pop
 *estimate: TBD*
@@ -139,7 +141,8 @@ Note that these solutions are quite different than the algorithms that reverse a
 values. Test and debug your own code before helping your teammates. Discuss the similarities and differences between
 the solutions to each version of the reverse function.
 
-**To complete this checkpoint**, as a team, present your debugged solutions to a TA or mentor.
+**To complete this checkpoint**, as a team, present your debugged solutions to a TA or mentor. TA/mentor will specify one original GIF image file, and you rena
+me that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
 
 <!-- ## Checkpoint 3: Reversing a Homemade Linked List
 *estimate: TBD*

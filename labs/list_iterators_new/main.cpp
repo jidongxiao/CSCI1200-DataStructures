@@ -64,6 +64,7 @@ std::vector<uint8_t> extractGifHeader(const std::vector<uint8_t>& fileData) {
     return header;
 }
 
+// this function reverses a vector using a reverse iterator.
 std::vector<GifFrame> reverseFrames(std::vector<GifFrame>& originalFrames) {
     std::vector<GifFrame> reversedFrames;
 

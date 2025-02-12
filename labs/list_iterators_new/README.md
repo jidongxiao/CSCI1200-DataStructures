@@ -8,7 +8,7 @@ A **GIF** (Graphics Interchange Format) is a popular bitmap image format commonl
 
 ## GIF Frames and Animation
 
-A GIF image fileis composed of a sequence of **frames**. Each frame is a static image that, when displayed in sequence, creates the illusion of movement. The concept of frames in a GIF is similar to how traditional film or digital video works, where individual frames are shown at a rapid pace to simulate continuous motion.
+A GIF image file is composed of a sequence of **frames**. Each frame is a static image that, when displayed in sequence, creates the illusion of movement. The concept of frames in a GIF is similar to how traditional film or digital video works, where individual frames are shown at a rapid pace to simulate continuous motion.
 
 ### Key Concepts:
 

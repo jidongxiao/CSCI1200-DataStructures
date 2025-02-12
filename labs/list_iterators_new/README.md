@@ -8,7 +8,7 @@ A **GIF** (Graphics Interchange Format) is a popular bitmap image format commonl
 
 ## GIF Frames and Animation
 
-A GIF file is made up of a series of **frames**. Each frame is a static image that, when displayed in sequence, creates the illusion of movement. The concept of frames in a GIF is similar to how traditional film or digital video works, where individual frames are shown at a rapid pace to simulate continuous motion.
+A GIF image fileis composed of a sequence of **frames**. Each frame is a static image that, when displayed in sequence, creates the illusion of movement. The concept of frames in a GIF is similar to how traditional film or digital video works, where individual frames are shown at a rapid pace to simulate continuous motion.
 
 ### Key Concepts:
 
@@ -18,7 +18,7 @@ A GIF file is made up of a series of **frames**. Each frame is a static image th
 
 ## Lab Tasks
 
-In this lab, you will modify an existing C++ program. This program reverse a GIF file.
+In this lab, you will modify an existing C++ program. This program reverse a GIF image file.
 
 Here are examples of reversing GIF.
 
@@ -38,10 +38,37 @@ Example 4:
 
 This is the [original GIF](brick_real.gif). And this is the [reversed GIF](brick_fake.gif)
 
+## Starter Code
+
+The starter code [main.cpp](main.cpp) defines a class named GifFrame to represents GIF frames. Each object of this class represents one frame.
+
+```cpp
+class GifFrame {
+public:
+        std::vector<uint8_t> data;  // raw image data
+        int width, height;               // frame dimensions
+        int left, top;                    // position within the GIF
+        uint8_t disposalMethod = 0;       // add this field (0 = undefined, 1 = keep, etc.)
+        bool hasTransparency = false;      // flag for transparency
+        uint8_t transparentColorIndex = 0; // index of the transparent color in the global color table
+        uint16_t delayTime = 0;            // delay time before the next frame in hundredths of a second
+        // default constructor
+        GifFrame() : width(0), height(0), left(0), top(0), disposalMethod(0),
+                 hasTransparency(false), transparentColorIndex(0), delayTime(0) {}
+        // constructor to initialize the frame data
+        GifFrame(const std::vector<uint8_t>& frameData) : data(frameData), disposalMethod(0),
+                                                     hasTransparency(false), transparentColorIndex(0), delayTime(0) {}
+};
+```
+
+When given an input GIF image file, the starter code extracts all frames from this image file, and store these frames in a std::vector<GifFrame> named frames. This frames vector will then be passed to a function *reverseFrames* which reverses the vector. The *reverseFrames* function will return an std::vector<GifFrame> which contains the reversed frames. This reversed frames vector is then passed to a function writeGif(), which just writes all frames in a new GIF image file.
+
+In this lab, you will only be working on the *reverseFrames* function.
+
 ## Checkpoint 1A: Reverse with STL Vector Swaps
 *estimate: TBD*
 
-Read the starter code [main.cpp](main.cpp) and re-write the function *reverse* that reverses the contents of an STL vector of GIF. 
+Read the starter code [main.cpp](main.cpp) and re-write the function *reverseFrames* that reverses the contents of an STL vector of GIF. 
 
 For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list.
 The trick is to step through the vector one location at a time, swapping values between the first half of the

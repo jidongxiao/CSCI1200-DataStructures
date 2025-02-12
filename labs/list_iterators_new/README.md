@@ -46,6 +46,10 @@ Example 6:
 
 This is the [original GIF](pool_real.gif). And this is the [reversed GIF](pool_fake.gif).
 
+Example 7:
+
+This is the [original GIF](girl_real.gif). And this is the [reversed GIF](girl_fake.gif).
+
 ## Starter Code
 
 The starter code [main.cpp](main.cpp) defines a class named GifFrame to represents GIF frames. Each object of this class represents one frame.
@@ -128,8 +132,7 @@ typename std::list<T>::iterator itr = data.begin();
 ```
 -->
 
-**To complete this checkpoint**, show a TA/mentor your debugged functions to reverse STL lists by element swapping. TA/mentor will specify one original GIF image file, and you rena
-me that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
+**To complete this checkpoint**, show a TA/mentor your debugged functions to reverse STL lists by element swapping. TA/mentor will specify one original GIF image file, and you rename that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
 
 ## Checkpoint 3: Reverse with STL List Using Insert/Erase/Push/Pop
 *estimate: TBD*
@@ -149,8 +152,7 @@ Note that these solutions are quite different than the algorithms that reverse a
 values. Test and debug your own code before helping your teammates. Discuss the similarities and differences between
 the solutions to each version of the reverse function.
 
-**To complete this checkpoint**, as a team, present your debugged solutions to a TA or mentor. TA/mentor will specify one original GIF image file, and you rena
-me that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
+**To complete this checkpoint**, as a team, present your debugged solutions to a TA or mentor. TA/mentor will specify one original GIF image file, and you rename that file to *input.gif*. After that you run your program, and it should produce the reversed GIF, show the reversed GIF to the TA/mentor.
 
 <!-- ## Checkpoint 3: Reversing a Homemade Linked List
 *estimate: TBD*

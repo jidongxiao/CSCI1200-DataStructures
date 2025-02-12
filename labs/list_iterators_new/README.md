@@ -18,7 +18,7 @@ A GIF image fileis composed of a sequence of **frames**. Each frame is a static 
 
 ## Lab Tasks
 
-In this lab, you will modify an existing C++ program. This program reverse a GIF image file.
+In this lab, you will modify an existing C++ program. This program reverses a GIF image file.
 
 Here are examples of reversing GIF.
 
@@ -73,7 +73,7 @@ public:
 };
 ```
 
-When given an input GIF image file, the starter code extracts all frames from this image file, and store these frames in a std::vector<GifFrame> named frames. This frames vector will then be passed to a function *reverseFrames* which reverses the vector. The *reverseFrames* function will return an std::vector<GifFrame> which contains the reversed frames. This reversed frames vector is then passed to a function writeGif(), which just writes all frames in a new GIF image file.
+When given an input GIF image file, the starter code extracts all frames from this image file, and store these frames in an std::vector<GifFrame> named frames. This frames vector will then be passed to a function *reverseFrames* which reverses the vector. The *reverseFrames* function will return an std::vector<GifFrame> which contains the reversed frames. This reversed frames vector is then passed to a function writeGif(), which just writes all frames in a new GIF image file.
 
 In this lab, multiple copies of the starter code will be provided, but you will only be working on the *reverseFrames* function - you will be required to re-write this function in different ways.
 

@@ -65,6 +65,14 @@ When given an input GIF image file, the starter code extracts all frames from th
 
 In this lab, multiple copies of the starter code will be provided, but you will only be working on the *reverseFrames* function - you will be required to re-write this function in different ways.
 
+**Note**, the given program expects the name of the input file to be *input.gif*, and it will produce an output file named *reversed.gif*. You can compile and run the program like this:
+
+```console
+$ g++ main.cpp
+$ ./a.out
+GIF successfully written to reversed.gif
+```
+
 ## Checkpoint 1: Reverse with STL Vector Swaps
 *estimate: TBD*
 

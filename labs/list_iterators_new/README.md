@@ -65,7 +65,7 @@ When given an input GIF image file, the starter code extracts all frames from th
 
 In this lab, multiple copies of the starter code will be provided, but you will only be working on the *reverseFrames* function - you will be required to re-write this function in different ways.
 
-## Checkpoint 1A: Reverse with STL Vector Swaps
+## Checkpoint 1: Reverse with STL Vector Swaps
 *estimate: TBD*
 
 Complete the *reverseFrames* function in [main_1a.cpp](main_1a.cpp). For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list. The trick is to step through the vector one location at a time, swapping values between the first half of the
@@ -73,7 +73,9 @@ vector and the second half. As examples, the value at location 0 and the value a
 be swapped, and the value at location 1 and the value at location size()-2 must be swapped.
 Make sure your code works with even and odd length vectors. 
 
-## Checkpoint 1B: Reverse with STL List Swaps
+**To complete this checkpoint**, show a TA your debugged functions to reverse STL vectors by element swapping.
+
+## Checkpoint 2: Reverse with STL List Swaps
 *estimate: TBD*
 
 Complete the *reverseFrames* function in [main_1b.cpp](main_1b.cpp). For this checkpoint, now the *reverseFrames* function takes an std::list as its parameter, and your task is to reverse this list.
@@ -109,16 +111,14 @@ Note, you’ll probably need to add the keyword typename in front of your templa
 typename std::list<T>::iterator itr = data.begin();
 ```
 
-**To complete this checkpoint**, show a TA your debugged functions to reverse STL vectors and STL lists
-by element swapping. Be sure to ask your TA/mentors any questions you have about regular vs. reverse
-iterators for lists and vectors.
+**To complete this checkpoint**, show a TA your debugged functions to reverse STL lists by element swapping.
 
-## Checkpoint 2: Reverse with STL List Using Insert/Erase/Push/Pop
+## Checkpoint 3: Reverse with STL List Using Insert/Erase/Push/Pop
 *estimate: TBD*
 
 Form a team of 4. You may form a team of 2 or 3 only with approval from your graduate lab TA.
 
-Each student should make a copy of their solution file for Checkpoint 1B. And then, each student should
+Each student should make a copy of their solution file for Checkpoint 2. And then, each student should
 rewrite their STL list reverse function:
   - **STUDENT 1** Using only front(), pop_front(), and insert().  
   - **STUDENT 2** Using only back(), pop_back(), insert(), and iterator increment.  
@@ -128,14 +128,12 @@ Each of these solutions is allowed to use a for or while loop and a temporary va
 element, but should not use any auxiliary data structures (no array, no vector, no additional list, etc.)
 
 Note that these solutions are quite different than the algorithms that reverse a vector or list by swapping
-values. If the algorithm is paused and printed midway, the vector contents will be different than the algorithms
-for Checkpoint 1. (Go ahead, add more calls to the print function in the middle of your reverse function.) Test
-and debug your own code before helping your teammates. Discuss the similarities and differences between
+values. Test and debug your own code before helping your teammates. Discuss the similarities and differences between
 the solutions to each version of the reverse function.
 
 **To complete this checkpoint**, as a team, present your debugged solutions to a TA or mentor.
 
-## Checkpoint 3: Reversing a Homemade Linked List
+<!-- ## Checkpoint 3: Reversing a Homemade Linked List
 *estimate: TBD*
 
 This checkpoint is an individual checkpoint. (But you can ask your teammates questions if you get stuck.)
@@ -159,4 +157,4 @@ and one version should be recursive.
 **Note**: this reverse function takes a pointer as its argument, but we are passing this pointer by reference, because we want to modify this pointer. To understand the concept of passing a pointer by reference, you are recommended to read and run this [example program](reference_to_a_pointer.cpp).
 
 **To complete this checkpoint**, show a TA or mentor your diagram and your debugged function(s) to
-reverse a homemade singly-linked list.
+reverse a homemade singly-linked list.-->

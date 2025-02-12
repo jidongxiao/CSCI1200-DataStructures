@@ -68,7 +68,7 @@ In this lab, multiple copies of the starter code will be provided, but you will 
 ## Checkpoint 1: Reverse with STL Vector Swaps
 *estimate: TBD*
 
-Complete the *reverseFrames* function in [main_1a.cpp](main_1a.cpp). For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list. The trick is to step through the vector one location at a time, swapping values between the first half of the
+Complete the *reverseFrames* function in [main_cp1.cpp](main_cp1.cpp). For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list. The trick is to step through the vector one location at a time, swapping values between the first half of the
 vector and the second half. As examples, the value at location 0 and the value at location size()-1 must
 be swapped, and the value at location 1 and the value at location size()-2 must be swapped.
 Make sure your code works with even and odd length vectors. 
@@ -78,7 +78,7 @@ Make sure your code works with even and odd length vectors.
 ## Checkpoint 2: Reverse with STL List Swaps
 *estimate: TBD*
 
-Complete the *reverseFrames* function in [main_1b.cpp](main_1b.cpp). For this checkpoint, now the *reverseFrames* function takes an std::list as its parameter, and your task is to reverse this list.
+Complete the *reverseFrames* function in [main_cp2.cpp](main_cp2.cpp). For this checkpoint, now the *reverseFrames* function takes an std::list as its parameter, and your task is to reverse this list.
 
 You may want to use a straightforward concept we did not discuss in lecture: a reverse iterator. A reverse
 iterator is designed to step through a list from the back to the front. An example will make the main

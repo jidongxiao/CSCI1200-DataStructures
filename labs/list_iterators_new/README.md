@@ -1,4 +1,4 @@
-# Lab 4 — Reversing Data in Different Ways: STL Vectors vs. STL Lists vs. Homemade Linked Lists
+# Lab 4 — Reversing Data in Different Ways: STL Vectors vs. STL Lists
 
 ## Background - Introduction to GIF Formats and the Concept of Frames
 

@@ -40,7 +40,7 @@ This is the [original GIF](brick_real.gif). And this is the [reversed GIF](brick
 
 Example 5:
 
-This is the [original GIF](seat_real.gif). And this is the [reversed GIF](seat_fake.gif).
+This is the [original GIF](seat_real.gif). And this is the [reversed GIF](seat_fake.gif) - "I am sorry grandma, I want to take my seat back."
 
 Example 6:
 

@@ -63,15 +63,12 @@ public:
 
 When given an input GIF image file, the starter code extracts all frames from this image file, and store these frames in a std::vector<GifFrame> named frames. This frames vector will then be passed to a function *reverseFrames* which reverses the vector. The *reverseFrames* function will return an std::vector<GifFrame> which contains the reversed frames. This reversed frames vector is then passed to a function writeGif(), which just writes all frames in a new GIF image file.
 
-In this lab, you will only be working on the *reverseFrames* function.
+In this lab, multiple copies of the starter code will be provided, but you will only be working on the *reverseFrames* function - you will be required to re-write this function in different ways.
 
 ## Checkpoint 1A: Reverse with STL Vector Swaps
 *estimate: TBD*
 
-Read the starter code [main.cpp](main.cpp) and re-write the function *reverseFrames* that reverses the contents of an STL vector of GIF. 
-
-For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list.
-The trick is to step through the vector one location at a time, swapping values between the first half of the
+Complete the *reverseFrames* function in [main_1a.cpp](main_1a.cpp). For this checkpoint, use indexing/subscripting/[] on the vector, not iterators (or pointers). You may not use a second vector or array or list. The trick is to step through the vector one location at a time, swapping values between the first half of the
 vector and the second half. As examples, the value at location 0 and the value at location size()-1 must
 be swapped, and the value at location 1 and the value at location size()-2 must be swapped.
 Make sure your code works with even and odd length vectors. 
@@ -79,9 +76,7 @@ Make sure your code works with even and odd length vectors.
 ## Checkpoint 1B: Reverse with STL List Swaps
 *estimate: TBD*
 
-Copy your code from Checkpoint 1A to a new file. Then, convert this code to use STL Lists instead of STL
-vectors. Start by replacing ’vector’ with ’list’ everywhere. And you’ll need to replace your subscripting
-with iterators.
+Complete the *reverseFrames* function in [main_1b.cpp](main_1b.cpp). For this checkpoint, now the *reverseFrames* function takes an std::list as its parameter, and your task is to reverse this list.
 
 You may want to use a straightforward concept we did not discuss in lecture: a reverse iterator. A reverse
 iterator is designed to step through a list from the back to the front. An example will make the main

@@ -1,0 +1,64 @@
+Lucia 59
+Accountant
+University of California Southern
+
+Robert 59
+Economist
+University of California Peninsula
+
+Soo 59
+University of Alabama
+
+Mateo 62
+Radiologic Technologist
+University of California Western
+
+Diego 64
+Veterinary Technician
+
+Wei 58
+University of New Hampshire
+
+Mark 57
+Pharmacist
+University of Illinois at Chicago
+
+Charlotte 60
+Mental Health Counselor
+University of Colorado Colorado Springs
+
+Emma 64
+Social Worker
+University of New Mexico
+
+Jonathan 60
+Athlete
+University of Wyoming
+
+Elena 64
+Video Editor
+
+Isaac 61
+Digital Marketer
+University of California Northern Coast
+
+Mia 63
+Zoologist
+University of South Florida
+
+John 64
+Behavior Analyst
+University of California Hastings
+
+Matthew 57
+Indiana University Bloomington
+
+Isabella 64
+Game Artist
+
+Susan 64
+University of California Prairie
+
+Isaac 64
+Artist
+University of California Southern

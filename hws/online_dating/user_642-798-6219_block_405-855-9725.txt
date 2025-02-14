@@ -1,0 +1,617 @@
+profiles shown to Robert:
+
+Wei 52
+Architect
+
+Charles 61
+Artist
+University of Colorado Colorado Springs
+
+Gabriel 55
+Firefighter
+California Institute of Technology
+
+Seung 59
+Pathologist
+University of Tennessee Knoxville
+
+Seung 55
+Mechanical Engineer
+University of Missouri
+
+Richard 59
+Yale University
+
+Minho 51
+Pathologist
+University of North Florida
+
+Santiago 59
+University of Washington
+
+Michael 53
+Engineer
+University of Nebraska-Lincoln
+
+Luis 57
+Chef
+University of Arkansas
+
+Chen 54
+Dental Hygienist
+University of Hawaii at Manoa
+
+Samuel 59
+Athlete
+
+======
+
+profiles shown to Amy:
+
+Christopher 59
+Electrician
+University of California Central
+
+Yan 52
+Financial Planner
+University of California San Francisco
+
+Mary 40
+Designer
+University of California Canyon
+
+Maria 58
+Graphic Designer
+University of Chicago
+
+David 44
+
+Soo 43
+Mental Health Counselor
+University of Washington
+
+Lucia 43
+Radiologist
+University of California Prairie
+
+Angela 56
+Software Developer
+University of California Desert
+
+Liliana 52
+University of California Central Coast
+
+Ronald 48
+Engineer
+University of Minnesota Twin Cities
+
+Daniel 59
+
+Steven 58
+Pathologist
+University of Virginia
+
+Maria 58
+Neurologist
+University of Wyoming
+
+Daniel 46
+Librarian
+University of California Lakeside
+
+Benjamin 45
+University of California Irvine
+
+Dylan 45
+Neurologist
+
+Olivia 60
+Professor
+University of Nevada Las Vegas
+
+Charles 61
+Artist
+University of Colorado Colorado Springs
+
+Camila 56
+Yale University
+
+Karen 55
+Anesthesiologist
+University of Alabama
+
+Timothy 61
+UX/UI Designer
+
+Paul 44
+Veterinarian
+
+Brian 49
+Pathologist
+
+Maria 54
+Zoologist
+Rensselaer Polytechnic Institute
+
+Betty 58
+Physician Assistant
+University of Tennessee Knoxville
+
+Thomas 63
+UX/UI Designer
+University of West Florida
+
+Sofia 40
+Physicist
+
+Luis 49
+Designer
+University of California San Francisco
+
+Xin 45
+Human Resources Manager
+University of South Dakota
+
+Gabriel 55
+Firefighter
+California Institute of Technology
+
+Pedro 57
+University of California Bay Area
+
+Thomas 52
+Product Manager
+University of Pennsylvania
+
+Valentina 42
+Marketing Manager
+University of Oregon
+
+Minho 41
+Financial Planner
+University of Pennsylvania
+
+Isabella 57
+Chef
+
+Hui 58
+University of Pennsylvania
+
+Ella 40
+Human Resources Manager
+University of California Canyon
+
+Jackson 48
+Business Analyst
+
+Liliana 43
+Aerospace Engineer
+University of California Southern Islands
+
+Luna 49
+Professor
+
+Sofia 54
+Plumber
+University of California Northern
+
+Santiago 50
+Product Manager
+University of Massachusetts Amherst
+
+Betty 56
+University of California Shoreline
+
+Matthew 48
+Pediatrician
+
+Eun 61
+Accountant
+University of Connecticut
+
+Hazel 62
+Radiologist
+Stanford University
+
+Nancy 64
+Electrician
+
+Hazel 45
+Fashion Designer
+University of Chicago
+
+Wei 64
+Family Therapist
+University of California Irvine
+
+Seung 63
+Occupational Therapist
+University of Maryland College Park
+
+Melissa 51
+Pharmacist
+
+Nancy 58
+Financial Planner
+University of California Santa Barbara
+
+Seung 59
+Pathologist
+University of Tennessee Knoxville
+
+Laura 51
+Dental Hygienist
+University of Wisconsin-Madison
+
+Xiu 40
+University of South Carolina
+
+Hazel 57
+Interior Designer
+University of Connecticut
+
+Caleb 51
+Petroleum Engineer
+University of Wisconsin-Madison
+
+Oscar 63
+Environmental Lawyer
+Indiana University Bloomington
+
+Ruby 56
+University of California Shoreline
+
+Hyun 55
+Veterinarian
+University of California Valley
+
+Isla 51
+Plumber
+University of Colorado Boulder
+
+Jing 41
+Doctor
+Harvard University
+
+Diego 57
+Professor
+Harvard University
+
+Ying 55
+Petroleum Engineer
+University of Alabama
+
+Xiu 42
+Corporate Lawyer
+University of Alabama in Huntsville
+
+Ana 63
+Musician
+University of Connecticut
+
+Mateo 43
+Automotive Engineer
+University of Rhode Island
+
+Ji 48
+Registered Nurse
+University of California Eastern
+
+Rebecca 53
+Zoologist
+University of Tennessee Knoxville
+
+Jennifer 54
+Librarian
+University of West Florida
+
+Minho 42
+Marriage Therapist
+University of Texas at Austin
+
+Mia 44
+Plumber
+University of Louisiana at Lafayette
+
+Hector 43
+Phlebotomist
+University of Alabama in Huntsville
+
+Ming 43
+University of Central Florida
+
+Jake 43
+Philosopher
+University of Oregon
+
+Jin 53
+Materials Scientist
+University of Kentucky
+
+Ella 60
+Digital Marketer
+University of North Carolina at Chapel Hill
+
+Richard 40
+Dentist
+University of California Lakeside
+
+Hazel 45
+Economist
+University of California Berkeley
+
+Ling 43
+Mathematician
+University of California Irvine
+
+Grace 59
+Physical Therapist
+University of Connecticut
+
+Seung 55
+Mechanical Engineer
+University of Missouri
+
+Susan 45
+
+Wei 41
+Anesthesiologist
+University of Arkansas
+
+Hui 50
+Princeton University
+
+Edward 43
+University of Illinois at Chicago
+
+Susan 59
+Game Developer
+University of Pittsburgh
+
+Carlos 50
+Actor
+University of New Mexico
+
+Juan 48
+Economist
+University of California Northern Islands
+
+Kyle 64
+Civil Engineer
+University of Louisiana at Lafayette
+
+Liliana 62
+Aerospace Engineer
+University of Central Florida
+
+Soo 64
+Physician Assistant
+
+Yun 57
+University of California Lakeside
+
+Eun 63
+Translator
+
+Victoria 64
+University of Alabama
+
+Brandon 59
+Marketing Manager
+University of California Central Islands
+
+Benjamin 54
+Conservation Biologist
+University of Colorado Colorado Springs
+
+Soo 57
+University of Vermont
+
+Sharon 51
+Occupational Therapist
+University of Oregon
+
+Ana 64
+Dentist
+University of Alaska Fairbanks
+
+Robert 60
+Historian
+University of Hawaii at Manoa
+
+Sofia 46
+Musician
+University of California Irvine
+
+Nancy 60
+Registered Nurse
+University of Nevada Las Vegas
+
+Sofia 40
+Product Manager
+
+Hazel 48
+Industrial Designer
+Columbia University
+
+Isaac 45
+Financial Analyst
+
+Luis 40
+Radiologic Technologist
+Princeton University
+
+Charles 64
+Pathologist
+University of Alabama at Montgomery
+
+Jun 46
+Forensic Scientist
+
+Jonathan 40
+Biomedical Engineer
+University of Nevada Las Vegas
+
+Zoe 45
+University of Arkansas
+
+Minho 51
+Pathologist
+University of North Florida
+
+Hector 40
+Corporate Lawyer
+University of California Eastern Coast
+
+Jing 51
+Family Therapist
+University of Kentucky
+
+Linda 44
+Entrepreneur
+
+Benjamin 43
+University of California Northern Coast
+
+Hazel 53
+Professor
+University of Illinois Springfield
+
+Ming 45
+Dental Hygienist
+University of Vermont
+
+Maria 63
+Registered Nurse
+University of Illinois at Chicago
+
+Isabella 54
+University of California Central Coast
+
+Javier 45
+Product Manager
+University of Chicago
+
+Emma 51
+Web Developer
+University of Idaho
+
+Soo 43
+Registered Nurse
+
+Christopher 53
+Software Developer
+University of South Carolina
+
+Matthew 42
+Occupational Therapist
+
+Luna 62
+Radiation Therapist
+University of North Florida
+
+Charles 58
+Conservation Biologist
+University of Alabama at Birmingham
+
+Michelle 60
+Forensic Scientist
+University of Iowa
+
+Ling 60
+Anesthesiologist
+University of Maine
+
+Edward 49
+University of Montana
+
+Jonathan 56
+University of Nebraska-Lincoln
+
+Michael 53
+Engineer
+University of Nebraska-Lincoln
+
+Ruby 59
+Marketing Manager
+University of West Florida
+
+Ling 49
+University of South Florida
+
+Chloe 52
+Financial Planner
+University of Illinois at Urbana-Champaign
+
+Luis 57
+Chef
+University of Arkansas
+
+Gabriel 48
+University of California Eastern Islands
+
+Ming 41
+Chef
+
+Hannah 52
+Chef
+University of California Southern Islands
+
+Jin 53
+Content Writer
+Carnegie Mellon University
+
+Javier 53
+Pharmacist
+Massachusetts Institute of Technology
+
+Li 59
+Business Analyst
+University of California Southern
+
+Brian 64
+University of California Eastern Coast
+
+Violet 50
+School Counselor
+
+Ruby 40
+Software Developer
+University of Missouri
+
+Ming 62
+
+Chen 54
+Dental Hygienist
+University of Hawaii at Manoa
+
+Karen 48
+Environmental Activist
+University of Michigan
+
+Jin 51
+Rensselaer Polytechnic Institute
+
+Eun 51
+Firefighter
+University of Alaska Fairbanks
+
+Edward 49
+Web Developer
+
+Hyun 53
+Business Analyst
+
+Robert 55
+Web Developer
+University of Alabama
+
+Samuel 54
+Mechanical Technician
+Indiana University Bloomington
+
+Yan 42
+Chemical Engineer
+
+Samuel 59
+Athlete

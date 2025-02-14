@@ -1,0 +1,169 @@
+profiles shown to Lucia:
+
+Timothy 46
+Biomedical Engineer
+
+Jiang 55
+Veterinarian
+University of California Southern Coast
+
+Ronald 48
+University of California Merced
+
+Isaac 46
+Forensic Psychologist
+University of California Southern
+
+Soo 59
+University of Alabama
+
+Ming 55
+Chemical Engineer
+University of California Irvine
+
+Mateo 62
+Radiologic Technologist
+University of California Western
+
+Diego 64
+Veterinary Technician
+
+Sophia 54
+Economist
+University of California Canyon
+
+Wei 58
+University of New Hampshire
+
+Mark 57
+Pharmacist
+University of Illinois at Chicago
+
+Emma 64
+Social Worker
+University of New Mexico
+
+Angela 53
+Cardiologist
+University of Kentucky
+
+Jonathan 60
+Athlete
+University of Wyoming
+
+Elena 64
+Video Editor
+
+Isabella 55
+Architect
+Indiana University Bloomington
+
+Isaac 61
+Digital Marketer
+University of California Northern Coast
+
+Mia 63
+Zoologist
+University of South Florida
+
+Lucas 46
+Pilot
+University of New Hampshire
+
+Paul 51
+Economist
+University of Montana
+
+John 64
+Behavior Analyst
+University of California Hastings
+
+Emily 49
+Orthodontist
+
+Matthew 57
+Indiana University Bloomington
+
+Isabella 64
+Game Artist
+
+Maria 49
+
+Mark 55
+
+Jake 53
+Social Worker
+University of California Peninsula
+
+Luis 47
+Plumber
+University of Virginia
+
+Isaac 64
+Artist
+University of California Southern
+
+======
+
+profiles shown to Jing:
+
+Robert 59
+Economist
+University of California Peninsula
+
+Soo 59
+University of Alabama
+
+Mateo 62
+Radiologic Technologist
+University of California Western
+
+Diego 64
+Veterinary Technician
+
+Wei 58
+University of New Hampshire
+
+Mark 57
+Pharmacist
+University of Illinois at Chicago
+
+Charlotte 60
+Mental Health Counselor
+University of Colorado Colorado Springs
+
+Emma 64
+Social Worker
+University of New Mexico
+
+Jonathan 60
+Athlete
+University of Wyoming
+
+Elena 64
+Video Editor
+
+Isaac 61
+Digital Marketer
+University of California Northern Coast
+
+Mia 63
+Zoologist
+University of South Florida
+
+John 64
+Behavior Analyst
+University of California Hastings
+
+Matthew 57
+Indiana University Bloomington
+
+Isabella 64
+Game Artist
+
+Susan 64
+University of California Prairie
+
+Isaac 64
+Artist
+University of California Southern

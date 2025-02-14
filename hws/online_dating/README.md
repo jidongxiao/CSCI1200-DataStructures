@@ -297,7 +297,6 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
    - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines). (-1)
-   - Overly cramped. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
  - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (6 pts)

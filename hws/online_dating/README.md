@@ -67,7 +67,7 @@ Your program will support these commands:
 5. block someone.
 <!--6. delete account.-->
 
-More details about each of these four commands are given below. For all four commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all the expected output files contain an empty line at the end of file, to match with that, you just need to make sure to use *std::endl;* (or just *endl;* if you don't use *std::*) when printing the last line of a file.
+More details about each of these five commands are given below. For all five commands, *users.txt* represents the input file, and *output.txt* represents the output file, please do not hardcode the file names into your program, as the actual input/output file may have a different name. You should just use the *argv[]* array to retrieve the name of the input and the output file. Also note that all the expected output files contain an empty line at the end of file, to match with that, you just need to make sure to use *std::endl;* (or just *endl;* if you don't use *std::*) when printing the last line of a file.
 
 **Note**: for all the commands, you can assume the phone numbers (used in the commands) are valid and are corresponding to an existing account.
 

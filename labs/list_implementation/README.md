@@ -1,4 +1,4 @@
-# Lab 7 — List Implementation
+# Lab 5 — List Implementation
 
 ## Checkpoint 1
 *estimate: 20-30 minutes*

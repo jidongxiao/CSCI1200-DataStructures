@@ -6,7 +6,6 @@ Review Recursion vs. Iteration
 - “Rules” for writing recursive functions
 - Advanced Recursion — problems that cannot be easily solved using iteration (for or while loops):  
   – Merge sort  
-  – Non-linear maze search
 
 ## 12.1 Review: Iteration vs. Recursion
 
@@ -102,44 +101,14 @@ Count the number of pairwise comparisons that are required.
 - [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/). Solution: [p912_sortarray.cpp](../../leetcode/p912_sortarray.cpp)
 - [Leetcode problem 148: Sort List](https://leetcode.com/problems/sort-list/). Solution: [p148_sortlist.cpp](../../leetcode/p148_sortlist.cpp)
 
-## 12.7 Example: Word Search
+## 12.7 Merge Sort Run Time Complexity
 
-- Take a look at the following grid of characters.
-```console
-heanfuyaadfj
-crarneradfad
-chenenssartr
-kdfthileerdr
-chadufjavcze
-dfhoerpadlfc
-neicoetrtlkf
-paermpuohtrr
-diofetaycrhg
-daldruetryrt
-```
-- If you can start from any location of this grid, and go forward, backward, up and down. Can you find the word **computer** in this grid?  (**Note**: The same letter cell may not be used more than once.)
-- A sketch of the solution is as follows:
-  – The grid of letters is represented as vector&lt;vector&lt;char&gt;&gt; grid; Each vector&lt;char&gt; represents a row. We can treat this as a two-dimensional array.  
-  – A word to be sought, such as “computer” is read as a string.  
-  – A pair of nested for loops searches the grid for occurrences of the first letter in the string. Call such a location (r, c).  
-  - At each location where the first letter is found, a search of the second letter is initiated in the 4 neighboring locations of location (r, c).  
-  - Make this process recursive: at each location where the *ith* letter is found, a search of the *(i+1)th* letter is initiated in the 4 neighboring locations. 
-  - The search can stop when all letters of the string are found - this is the base case of the recursion.
-  - Question: how to make sure we do not use the same letter more than once on our success path?
+- Each time we divide the vector into two halves, the number of subproblems doubles, leading to a recursion tree structure.
+- At each level, the vector size reduces by half. The division continues until we reach base cases where each sub-vector contains only one element. 
+- The number of levels in the recursion tree corresponds to how many times we can divide n by 2 until we reach 1: log<sub>2</sub> n.
+- At each level of recursion, we need to merge two sorted halves into one sorted vector. Merging two halves of size n requires O(n) operations.  The same amount of merging work happens at each level of recursion.
+- Total Work Done: Since we have O(logn) levels in the recursion tree and each level requires O(n) merging work, the total time complexity is: O(nlogn).
 
-## 12.8 Exercise: Complete the implementation
-
-- [Leetcode problem 79: Word Search](https://leetcode.com/problems/word-search/). Solution: [p79_wordsearch.cpp](../../leetcode/p79_wordsearch.cpp).
-- [Leetcode problem 212: Word Search II](https://leetcode.com/problems/word-search-ii/). Solution: To be added. (it won't be added until we learn Trie).
-
-## 12.9 Summary of Nonlinear Word Search Recursion
-
-- Recursion starts at each location where the first letter is found.
-- Each recursive call attempts to find the next letter by searching around the current position. When it is found,
-a recursive call is made.
-- The current path is maintained at all steps of the recursion.
-- The “base case” occurs when the path is full or all positions around the current position have been tried.
-
-## 12.10 Leetcode Exercises
+## 12.8 Leetcode Exercises
 
 - [Leetcode problem 704: Binary Search](https://leetcode.com/problems/binary-search/). Solution: [p704_binarysearch.v1.cpp](../../leetcode/p704_binarysearch.v1.cpp) or [p704_binarysearch.v2.cpp](../../leetcode/p704_binarysearch.v2.cpp)

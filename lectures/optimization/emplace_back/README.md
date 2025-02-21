@@ -83,3 +83,89 @@ In this example, emplace_back constructs the MyClass object directly within the 
 
 For a visual explanation and further insights, consider watching the following video: [![C++ From Scratch: push_back vs. emplace_back](https://img.youtube.com/vi/BbPWrkgj1I4/0.jpg)](https://www.youtube.com/watch?v=BbPWrkgj1I4)
 
+## Benchmarks
+
+Compile and run these 6 programs to see the performance difference.
+
+[push_back.cpp](push_back.cpp) [push_back_move.cpp](push_back_move.cpp) [push_back_reserve.cpp](push_back_reserve.cpp) [emplace_back_slower.cpp](emplace_back_slower.cpp) [emplace_back_faster.cpp](emplace_back_faster.cpp) [emplace_back_fastest.cpp](emplace_back_fastest.cpp)
+
+```console
+$g++ push_back.cpp -o push_back
+$g++ push_back_move.cpp -o push_back_move
+$g++ push_back_reserve.cpp -o push_back_reserve
+$g++ emplace_back_slower.cpp -o emplace_back_slower
+$g++ emplace_back_faster.cpp -o emplace_back_faster
+$g++ emplace_back_fastest.cpp -o emplace_back_fastest
+
+$time ./push_back
+
+real	0m0.496s
+user	0m0.236s
+sys	0m0.260s
+
+$time ./push_back
+
+real	0m0.497s
+user	0m0.257s
+sys	0m0.240s
+
+$time ./push_back_move
+
+real	0m0.353s
+user	0m0.072s
+sys	0m0.280s
+
+$time ./push_back_move
+
+real	0m0.364s
+user	0m0.104s
+sys	0m0.260s
+
+$time ./push_back_reserve
+
+real	0m0.340s
+user	0m0.088s
+sys	0m0.252s
+
+$time ./push_back_reserve
+
+real	0m0.338s
+user	0m0.108s
+sys	0m0.231s
+
+$time ./emplace_back_slower 
+
+real	0m0.487s
+user	0m0.248s
+sys	0m0.239s
+
+$time ./emplace_back_slower 
+
+real	0m0.483s
+user	0m0.256s
+sys	0m0.228s
+
+$time ./emplace_back_faster
+
+real	0m0.360s
+user	0m0.096s
+sys	0m0.264s
+
+$time ./emplace_back_faster
+
+real	0m0.351s
+user	0m0.112s
+sys	0m0.239s
+
+$time ./emplace_back_fastest
+
+real	0m0.336s
+user	0m0.104s
+sys	0m0.232s
+
+$time ./emplace_back_fastest
+
+real	0m0.336s
+user	0m0.101s
+sys	0m0.235s
+```

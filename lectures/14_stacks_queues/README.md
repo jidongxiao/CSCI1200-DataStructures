@@ -1,6 +1,6 @@
 # Lecture 14 --- Stack and Queue
 
-## Test 2 Information
+<!--## Test 2 Information
 
 - Test 2 will be held Thursday, February 29th, 2024 from 6-7:50pm.
   - No make-ups will be given except for pre-approved absence or illness, and a written excuse from the Dean of Students or the Student Experience office or the RPI Health Center will be required.
@@ -17,7 +17,7 @@
 
 - Resources will be dedicated to test grading and thus no office hours on Friday in test weeks. (week of test 1, week of test 2, week of test 3)
 - Jidong's new office hours (effective after the spring break): Monday 2-4pm, Wednesday 1-3pm.
-- HW6 will be ready on Thursday night 10pm. Only 10 students passed all test cases last semester. Not just because it's hard, it's just that submitty will stop your program if it runs too long. In order to pass some of the tricky test cases, your program must be fast enough.
+- HW6 will be ready on Thursday night 10pm. Only 10 students passed all test cases last semester. Not just because it's hard, it's just that submitty will stop your program if it runs too long. In order to pass some of the tricky test cases, your program must be fast enough.-->
 
 ## Today’s Lecture
 

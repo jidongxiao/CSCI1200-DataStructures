@@ -5,13 +5,13 @@
 
 ## Installing `gprof`
 ```sh
-sudo apt-get install binutils
+$ sudo apt-get install binutils
 ```
 
 ## Compiling a C++ Program for Profiling
 To use `gprof`, compile your program with the `-pg` flag:
 ```sh
-g++ -pg -o my_program my_program.cpp
+$ g++ -pg -o my_program my_program.cpp
 ```
 
 ## Example C++ Program
@@ -39,16 +39,16 @@ int main() {
 ## Running and Profiling the Program
 1. Compile the program:
    ```sh
-   g++ -pg -o my_program my_program.cpp
+   $ g++ -pg -o my_program my_program.cpp
    ```
 2. Execute the program to generate `gmon.out`:
    ```sh
-   ./my_program
+   $ ./my_program
    ```
 3. Analyze the profiling data:
    ```sh
-   gprof my_program gmon.out > profile.txt
-   cat profile.txt
+   $ gprof my_program gmon.out > profile.txt
+   $ cat profile.txt
    ```
 
 ## Understanding the Output

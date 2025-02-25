@@ -1,4 +1,3 @@
-```markdown
 # C++ Profiling with `gprof`
 
 ## What is `gprof`?
@@ -63,4 +62,3 @@ int main() {
 
 ## Conclusion
 `gprof` is a powerful tool for detecting performance bottlenecks in C++ programs. By identifying expensive functions, developers can make targeted optimizations.
-```

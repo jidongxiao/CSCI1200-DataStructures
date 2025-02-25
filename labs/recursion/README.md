@@ -1,4 +1,4 @@
-# Lab 8 — Recursion
+# Lab 6 — Recursion
 
 This lab gives you practice in the use of recursion to solve problems. All three checkpoints addressed in
 this lab deal with finding and counting the number of paths between points on a rectilinear grid. A starting

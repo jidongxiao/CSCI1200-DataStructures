@@ -15,7 +15,7 @@ $ g++ -pg -o test test.cpp
 ```
 
 ## Example C++ Program
-Create a file `test.cpp` with the following code:
+Create a file [test.cpp](test.cpp) with the following code:
 ```cpp
 #include <iostream>
 

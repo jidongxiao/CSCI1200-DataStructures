@@ -203,6 +203,10 @@ int main() {
 
 You can compile and run this above [program](stack.cpp).
 
+### 14.1.3 Stack Implementation
+
+We have the stack implementation and test code here: [stack.h](stack.h), [stack_test.cpp](stack_test.cpp).
+
 ## 14.2 Additional STL Container Classes: Queues
 
 - A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.

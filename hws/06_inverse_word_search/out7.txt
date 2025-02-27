@@ -1,5 +1,0 @@
-1 solution(s)
-Board: 
-  tenet
-  alula
-  tenet

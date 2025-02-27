@@ -1,0 +1,401 @@
+100 solution(s)
+Board: 
+  amrak
+  squid
+  ayeti
+Board: 
+  amrak
+  squid
+  byeti
+Board: 
+  amrak
+  squid
+  cyeti
+Board: 
+  amrak
+  squid
+  dyeti
+Board: 
+  amrak
+  squid
+  eyeti
+Board: 
+  amrak
+  squid
+  fyeti
+Board: 
+  amrak
+  squid
+  gyeti
+Board: 
+  amrak
+  squid
+  hyeti
+Board: 
+  amrak
+  squid
+  jyeti
+Board: 
+  amrak
+  squid
+  kyeti
+Board: 
+  amrak
+  squid
+  lyeti
+Board: 
+  amrak
+  squid
+  myeti
+Board: 
+  amrak
+  squid
+  nyeti
+Board: 
+  amrak
+  squid
+  oyeti
+Board: 
+  amrak
+  squid
+  pyeti
+Board: 
+  amrak
+  squid
+  qyeti
+Board: 
+  amrak
+  squid
+  ryeti
+Board: 
+  amrak
+  squid
+  syeti
+Board: 
+  amrak
+  squid
+  tyeti
+Board: 
+  amrak
+  squid
+  uyeti
+Board: 
+  amrak
+  squid
+  vyeti
+Board: 
+  amrak
+  squid
+  wyeti
+Board: 
+  amrak
+  squid
+  xyeti
+Board: 
+  amrak
+  squid
+  yyeti
+Board: 
+  amrak
+  squid
+  zyeti
+Board: 
+  ayeti
+  squid
+  amrak
+Board: 
+  byeti
+  squid
+  amrak
+Board: 
+  cyeti
+  squid
+  amrak
+Board: 
+  dyeti
+  squid
+  amrak
+Board: 
+  eyeti
+  squid
+  amrak
+Board: 
+  fyeti
+  squid
+  amrak
+Board: 
+  gyeti
+  squid
+  amrak
+Board: 
+  hyeti
+  squid
+  amrak
+Board: 
+  jyeti
+  squid
+  amrak
+Board: 
+  kyeti
+  squid
+  amrak
+Board: 
+  lyeti
+  squid
+  amrak
+Board: 
+  myeti
+  squid
+  amrak
+Board: 
+  nyeti
+  squid
+  amrak
+Board: 
+  oyeti
+  squid
+  amrak
+Board: 
+  pyeti
+  squid
+  amrak
+Board: 
+  qyeti
+  squid
+  amrak
+Board: 
+  ryeti
+  squid
+  amrak
+Board: 
+  syeti
+  squid
+  amrak
+Board: 
+  tyeti
+  squid
+  amrak
+Board: 
+  uyeti
+  squid
+  amrak
+Board: 
+  vyeti
+  squid
+  amrak
+Board: 
+  wyeti
+  squid
+  amrak
+Board: 
+  xyeti
+  squid
+  amrak
+Board: 
+  yyeti
+  squid
+  amrak
+Board: 
+  zyeti
+  squid
+  amrak
+Board: 
+  karma
+  diuqs
+  iteya
+Board: 
+  karma
+  diuqs
+  iteyb
+Board: 
+  karma
+  diuqs
+  iteyc
+Board: 
+  karma
+  diuqs
+  iteyd
+Board: 
+  karma
+  diuqs
+  iteye
+Board: 
+  karma
+  diuqs
+  iteyf
+Board: 
+  karma
+  diuqs
+  iteyg
+Board: 
+  karma
+  diuqs
+  iteyh
+Board: 
+  karma
+  diuqs
+  iteyj
+Board: 
+  karma
+  diuqs
+  iteyk
+Board: 
+  karma
+  diuqs
+  iteyl
+Board: 
+  karma
+  diuqs
+  iteym
+Board: 
+  karma
+  diuqs
+  iteyn
+Board: 
+  karma
+  diuqs
+  iteyo
+Board: 
+  karma
+  diuqs
+  iteyp
+Board: 
+  karma
+  diuqs
+  iteyq
+Board: 
+  karma
+  diuqs
+  iteyr
+Board: 
+  karma
+  diuqs
+  iteys
+Board: 
+  karma
+  diuqs
+  iteyt
+Board: 
+  karma
+  diuqs
+  iteyu
+Board: 
+  karma
+  diuqs
+  iteyv
+Board: 
+  karma
+  diuqs
+  iteyw
+Board: 
+  karma
+  diuqs
+  iteyx
+Board: 
+  karma
+  diuqs
+  iteyy
+Board: 
+  karma
+  diuqs
+  iteyz
+Board: 
+  iteya
+  diuqs
+  karma
+Board: 
+  iteyb
+  diuqs
+  karma
+Board: 
+  iteyc
+  diuqs
+  karma
+Board: 
+  iteyd
+  diuqs
+  karma
+Board: 
+  iteye
+  diuqs
+  karma
+Board: 
+  iteyf
+  diuqs
+  karma
+Board: 
+  iteyg
+  diuqs
+  karma
+Board: 
+  iteyh
+  diuqs
+  karma
+Board: 
+  iteyj
+  diuqs
+  karma
+Board: 
+  iteyk
+  diuqs
+  karma
+Board: 
+  iteyl
+  diuqs
+  karma
+Board: 
+  iteym
+  diuqs
+  karma
+Board: 
+  iteyn
+  diuqs
+  karma
+Board: 
+  iteyo
+  diuqs
+  karma
+Board: 
+  iteyp
+  diuqs
+  karma
+Board: 
+  iteyq
+  diuqs
+  karma
+Board: 
+  iteyr
+  diuqs
+  karma
+Board: 
+  iteys
+  diuqs
+  karma
+Board: 
+  iteyt
+  diuqs
+  karma
+Board: 
+  iteyu
+  diuqs
+  karma
+Board: 
+  iteyv
+  diuqs
+  karma
+Board: 
+  iteyw
+  diuqs
+  karma
+Board: 
+  iteyx
+  diuqs
+  karma
+Board: 
+  iteyy
+  diuqs
+  karma
+Board: 
+  iteyz
+  diuqs
+  karma

@@ -1,0 +1,8 @@
+5 3
++ echo
++ baker
++ apt
++ toe
++ ore
++ eat
++ cap

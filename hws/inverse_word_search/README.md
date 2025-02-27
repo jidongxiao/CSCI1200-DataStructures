@@ -49,29 +49,18 @@ solution, your program should just output the first legal solution it finds (it 
 number of solutions, nor does it need to be the first solution shown in our output). If the puzzle is impossible
 your program should output “No solutions found”.
 
-**To implement this assignment, you must use recursion in your search.** First you should tackle the problem
-of finding and outputting one legal solution to the puzzle (if one exists).
+**To implement this assignment, you must use recursion in your search.** First you should tackle the problem of finding and outputting one legal solution to the puzzle (if one exists).
 
-## Algorithm Analysis
+<!-- ## Algorithm Analysis
 
-For larger, more complex examples, this is a really hard problem. Your program should be able to handle
-the small puzzles we have created in a reasonable amount of time. <!--You should make up your own test cases
-as well to understand this complexity. Include these test cases with your submission (they will be graded).
-Summarize the results of your testing, which test cases completed successfully and the approximate “wall
-clock time” for completion of each test.--> The UNIX/WSL time command can be prepended to your command
-line to estimate the running time:
+For larger, more complex examples, this is a really hard problem. Your program should be able to handle the small puzzles we have created in a reasonable amount of time. You should make up your own test cases as well to understand this complexity. Include these test cases with your submission (they will be graded).
+Summarize the results of your testing, which test cases completed successfully and the approximate “wall clock time” for completion of each test. The UNIX/WSL time command can be prepended to your command line to estimate the running time:
 
 ```console
 time inverse_word_search.exe puzzle1.txt out1.txt one_solution
 ```
 
-<!-- Once you have finished your implementation and testing, analyze the performance of your algorithm using
-order notation. What important variables control the complexity of a particular problem? The width &
-height of the grid (w and h), the number of required words (r), the number of forbidden words (f), the
-number of letters in each word (l), the number of solutions (s)? In your plain text README.txt file, write
-a concise paragraph (< 200 words) justifying your answer. Also include a simple table summarizing the
-running time and number of solutions found by your program on each of the provided examples. Note: It’s
-ok if your program can’t solve the biggest puzzles in a reasonable amount of time.-->
+Once you have finished your implementation and testing, analyze the performance of your algorithm using order notation. What important variables control the complexity of a particular problem? The width & height of the grid (w and h), the number of required words (r), the number of forbidden words (f), the number of letters in each word (l), the number of solutions (s)? In your plain text README.txt file, write a concise paragraph (< 200 words) justifying your answer. Also include a simple table summarizing the running time and number of solutions found by your program on each of the provided examples. Note: It’s ok if your program can’t solve the biggest puzzles in a reasonable amount of time.-->
 
 ## Program Requirements & Submission Details
 

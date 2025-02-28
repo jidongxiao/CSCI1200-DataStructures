@@ -170,9 +170,71 @@ up to, but not including, last.
   - size_type erase(const key_type& k) — erase the pair containing key k, returning either 0 or 1, depending
 on whether or not the key was in a pair in the map.
 
-## 15.10 Leetcode Exercises
+## 15.10 Leetcode Exercise
+
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+We have the solution below, and the cpp file is also here: [containsNearbyDuplicate.cpp](containsNearbyDuplicate.cpp)
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <map>
+
+bool containsNearbyDuplicate(std::vector<int>& nums, int k) {
+        int size = nums.size();
+        // create the map, map key is the value of the vector element, map value is the index of that element in the vector.
+	std::map<int,int> map1;
+        for(int i=0;i<size;i++){
+            // if already exists
+            if(map1.find(nums[i])!=map1.end()){
+                if(i-map1[nums[i]]<=k){
+                    return true;
+                }
+            }
+            map1[nums[i]]=i;
+        }
+        return false;
+}
+
+int main() {
+     std::vector<std::vector<int>> testCases = {
+        {1, 2, 3, 1},       // Expected: true (nums[0] == nums[3], abs(0-3) <= k)
+        {1, 0, 1, 1},       // Expected: true (nums[2] == nums[3], abs(2-3) <= k)
+        {1, 2, 3, 4, 5},    // Expected: false (no duplicates)
+        {1, 2, 3, 4, 1},    // Expected: true if k >= 4
+        {99, 99},           // Expected: true if k >= 1
+        {1, 2, 3, 4, 5, 6}, // Expected: false (no duplicates)
+    };
+
+    std::vector<int> kValues = {3, 1, 2, 4, 1, 2}; // Corresponding k values for test cases
+
+    for (size_t i = 0; i < testCases.size(); i++) {
+        std::cout << "Test Case " << i + 1 << ": ";
+        bool result = containsNearbyDuplicate(testCases[i], kValues[i]);
+        std::cout << (result ? "true" : "false") << std::endl;
+    }
+
+    return 0;
+}
+```
+
+When running the above program, we get:
+```console
+$ ./a.out 
+Test Case 1: true
+Test Case 2: true
+Test Case 3: false
+Test Case 4: true
+Test Case 5: true
+Test Case 6: false
+```
+
+You can also find the problem here:
+- [Leetcode problem 219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/). Solution: [p219_contains_duplicate_ii.cpp](../../leetcode/p219_contains_duplicate_ii.cpp).
+
+## 15.11 More Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum.cpp](../../leetcode/p1_twosum.cpp).
-- [Leetcode problem 219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/). Solution: [p219_contains_duplicate_ii.cpp](../../leetcode/p219_contains_duplicate_ii.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
 

@@ -12,7 +12,6 @@ Associative Containers (STL Maps)
 ## 15.1 STL Maps: Associative Containers
 
 - STL maps store pairs of “associated” values.
- We will see several examples today, in Lab 9, and in Lecture 16:
 - An association between a string, representing a word, and an int representing the number of times that
 word has been seen in an input file.
 - An association between a string, representing a word, and a vector that stores the line numbers from a
@@ -68,8 +67,7 @@ changed. It can only be erased (together with the associated value).
 ## 15.4 STL Pairs
 
 The mechanics of using std::pairs are relatively straightforward:
-- std::pairs are a templated struct with just two members, called first and second. Reminder: a struct
-is basically a wimpy class.
+- std::pairs are a templated struct with just two members, called first and second. struct in C++ is identical to class except that members are public by default, std::pair is implemented as a struct to allow direct access to its first and second members without requiring explicit getter functions.  
 - To work with pairs, you must #include &lt;utility&gt;. Note that the header file for maps (#include &lt;map&gt;)
 itself includes utility, so you don’t have to include utility explicitly when you use pairs with maps.
 - Here are simple examples of manipulating pairs:

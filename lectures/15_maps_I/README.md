@@ -49,9 +49,6 @@ constructor, and as the example shows there are other ways of constructing pairs
 The two statements at the end are commented out because they cause syntax errors:
 - In (a), the first entry of p3 is const, which means it can’t be changed.
 - In (b), the two pairs are different types! Make sure you understand this.
-- Returning to maps, each entry in the map is a pair object of type:
-std::pair&lt;const key_type, value_type&gt;
-- The const is needed to ensure that the keys aren’t changed! This is crucial because maps are sorted by keys!
 
 ## 15.2 STL Maps: Associative Containers
 
@@ -65,23 +62,20 @@ text file on which that string occurs.
  A particular instance of a map is defined (declared) with the syntax:
 
 ```cpp
-std::map&lt;key_type, value_type&gt; var_name
+std::map<key_type, value_type> var_name
 ```
 - In our first two examples above, key type is a string. In the first example, the value type is an int and in
 the second it is a std::vector&lt;int&gt;.
-- Entries in maps are pairs: std::pair&lt;const key_type, value_type&gt;, or just std::pair&lt;key_type, value_type&gt;.
+- Entries in maps are pairs: std::pair&lt;const key_type, value_type&gt;, the const is needed to ensure that the keys aren’t changed! This is crucial because maps are sorted by keys!
 - Map iterators refer to pairs.
 - Map search, insert and erase are all very fast: O(log n) time, where n is the number of pairs stored in the map.
 <!-- Note: The STL map type has similarities to the Python dictionary, Java HashMap, or a Perl hash, but the
 data structures are not the same. The organization, implementation, and performance is different. In a couple
 weeks we’ll see an STL data structure that is even more similar to the Python dictionary.-->
-- Map search, insert and erase are O(log n).
-First, let’s see how some of this works with a program to count the occurrences of each word in a file. We’ll look
-at more details and more examples later.
 
 ## 15.3 Counting Word Occurrences
 
-Here’s a simple and elegant solution to this problem using a map:
+First, let’s see how some of this works with a program to count the occurrences of each word in a file. Here’s a simple and elegant solution to this problem using a map:
 
 ```cpp
 #include <iostream>

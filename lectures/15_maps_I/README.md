@@ -174,7 +174,7 @@ on whether or not the key was in a pair in the map.
 
 Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
 
-We have the solution below, and the cpp file is also here: [containsNearbyDuplicate.cpp](containsNearbyDuplicate.cpp)
+We have the solution below.
 
 ```cpp
 #include <iostream>
@@ -230,7 +230,7 @@ Test Case 5: true
 Test Case 6: false
 ```
 
-You can also find the problem here:
+You can also find this problem on Leetcode.
 - [Leetcode problem 219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/). Solution: [p219_contains_duplicate_ii.cpp](../../leetcode/p219_contains_duplicate_ii.cpp).
 
 ## 15.11 More Leetcode Exercises

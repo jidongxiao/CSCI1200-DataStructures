@@ -1,0 +1,13 @@
+7 6
++ chore
++ anchor
++ horse 
++ melee 
++ wear 
++ beast 
++ oboe
++ bow
++ bottle 
++ beaches
++ laser
++ wobbler 

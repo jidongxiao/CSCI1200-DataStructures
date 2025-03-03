@@ -82,10 +82,10 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 3. Q: Do I have to implement a class or classes?  
    A: It's not a requirement. You can if you want to.
 
-4. Q: Which optimization flag does the Submitty compiler use?
+4. Q: Which optimization flag does the Submitty compiler use?  
    A: Submitty uses -O3 for this homework.
 
-5. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?
+5. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?  
    A: You can fill in any lower case letter there and make sure it doesn't introduce a forbidden word. A single letter gives you one solution; replacing it with another letter would give you another solution, and in total, this would lead to 26 potential solutions, since there are 26 lower case letters.
 
 6. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  

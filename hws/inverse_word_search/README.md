@@ -76,7 +76,19 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 1. Q: Am I allowed to use data structures not covered in this class?  
    A: Yes. For this homework, you can use whatever data structures you want to use; but last year, the student who topped the leaderboard with a very large margin, did not use any fancy data structures. The student used std::set, but did not use std::unordered_set or std::unordered_map, or any data structures which had not been covered in this class.
 
-2. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  
+2. Q: Can I use global variables for this homework?  
+   A: Yes, you can.
+
+3. Q: Do I have to implement a class or classes?  
+   A: It's not a requirement. You can if you want to.
+
+4. Q: Which optimization flag does the Submitty compiler use?
+   A: Submitty uses -O3 for this homework.
+
+5. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?
+   A: You can fill in any lower case letter there and make sure it doesn't introduce a forbidden word. A single letter gives you one solution; replacing it with another letter would give you another solution, and in total, this would lead to 26 potential solutions, since there are 26 lower case letters.
+
+6. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  
    A: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
 - Drop the lowest test score
 - Drop the lowest homework

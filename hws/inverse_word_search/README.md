@@ -73,11 +73,11 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 
 ## FAQs
 
-1. Q: Am I allowed to use data structures not covered in this class?
+1. Q: Am I allowed to use data structures not covered in this class?  
    A: Yes. For this homework, you can use whatever data structures you want to use; but last year, the student who topped the leaderboard with a very large margin, did not use any fancy data structures. The student used std::set, but did not use std::unordered_set or std::unordered_map, or any data structures which had not been covered in this class.
 
-2. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?
-   A: If by Thursday night 10pm (which is hte submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
+2. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  
+   A: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
 - Drop the lowest test score
 - Drop the lowest homework
 - Skip 1 future homework

@@ -85,10 +85,13 @@ You must do this assignment on your own, as described in the [Collaboration Poli
 4. Q: Which optimization flag does the Submitty compiler use?  
    A: Submitty uses -O3 for this homework.
 
-5. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?  
+5. Q: How many submissions can I make?  
+   A: 40. Submitty will deduct points once you submit more than 40 times.
+
+6. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?  
    A: You can fill in any lower case letter there and make sure it doesn't introduce a forbidden word. A single letter gives you one solution; replacing it with another letter would give you another solution, and in total, this would lead to 26 potential solutions, since there are 26 lower case letters.
 
-6. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  
+7. Q: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?  
    A: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
 - Drop the lowest test score
 - Drop the lowest homework

@@ -595,7 +595,7 @@ function case4() {
     resetAnimation("([])");
 }
 
-// Case 4: "({[{[()]}]})"
+// Case 5: "({[{[()]}]})"
 function case5() {
     resetAnimation("{[([])]}");
 }

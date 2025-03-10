@@ -259,9 +259,71 @@ int main() {
 
 You can compile and run this above [program](queue.cpp).
 
-## 14.3 Leetcode Exercises
+## 14.3 Stack Example Problem
+
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+- Open brackets must be closed by the same type of brackets.  
+- Open brackets must be closed in the correct order.  
+- Every close bracket has a corresponding open bracket of the same type.
+
+Example 1: Input: s = "()"    Output: true
+
+Example 2: Input: s = "()[]{}"    Output: true
+
+Example 3: Input: s = "(]"    Output: false
+
+Example 4: Input: s = "([])"    Output: true
+
+Constraints: 1 <= s.length <= 104; s consists of parentheses only '()[]{}'.
+
+We have the solution here:
+
+```cpp
+bool isValid(string s) {
+        std::stack<char> myStack;
+        int len = s.length();
+        char c;
+        for(int i=0;i<len;i++){
+            // push all the open brackets into the stack
+            if(s[i]=='(' || s[i]=='{' || s[i]=='['){
+                myStack.push(s[i]);
+            }else{
+                // if we encounter a close bracket first, it's already invalid.
+                if(myStack.empty()){
+                    return false;
+                }
+                c = myStack.top();
+                myStack.pop();
+                // for every close bracket we encounter, there must be a corresponding open bracket at the top of the stack.
+                if(s[i]==')' && c!='('){
+                    return false;
+                }
+                if(s[i]=='}' && c!='{'){
+                    return false;
+                }
+                if(s[i]==']' && c!='['){
+                    return false;
+                }
+            }
+        }
+        // if it's empty, we are good.
+        if(myStack.empty()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+```
+
+<!-- - [Leetcode problem 20: Valid Parentheses](https://leetcode.com/problems/valid-parentheses/). Solution: [p20_valid_parentheses.cpp](../../leetcode/p20_valid_parentheses.cpp) -->
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/stack/index.html) to see how this program works.
+
+## 14.4 More Leetcode Exercises
 
 - [Leetcode problem 225: Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/). Solution: [p225_stack_using_queues.cpp](../../leetcode/p225_stack_using_queues.cpp).
 - [Leetcode problem 232: Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/). Solution: [p232_queue_using_stacks.cpp](../../leetcode/p232_queue_using_stacks.cpp).
-- [Leetcode problem 20: Valid Parentheses](https://leetcode.com/problems/valid-parentheses/). Solution: [p20_valid_parentheses.cpp](../../leetcode/p20_valid_parentheses.cpp)
 - [Leetcode problem 71: Simplify Path](https://leetcode.com/problems/simplify-path/). Solution: [p71_simplify_path.cpp](../../leetcode/p71_simplify_path.cpp)

@@ -1,4 +1,4 @@
-// Author: Based on previous examples
+// Author: Mykolas Ruth
 // Create a stage for the animation
 var stage = new Konva.Stage({
     container: 'container',

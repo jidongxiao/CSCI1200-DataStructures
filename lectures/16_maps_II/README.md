@@ -1,6 +1,16 @@
 # Lecture 16 --- Associative Containers (Maps), Part 2
 
-## 16.1 More Complicated Values
+## 16.1 Map Erase Performance
+
+We learned from previous lecture that we can erase an element from a map via the erase function, and there are two formats:
+
+- void erase(iterator p) — erase the pair referred to by iterator p.
+
+- size_type erase(const key_type& k) — erase the pair containing key k, returning either 0 or 1, depending on whether or not the key was in a pair in the map.
+
+But there is a performance difference between these two. Read [this document](..//optimization/map_erase/README.md).
+
+## 16.2 More Complicated Values
 
 - Let’s look at the example:
 ```cpp
@@ -41,7 +51,7 @@ use of push back or through construction of the vector).
 - We can figure out the correct syntax for all of these by drawing pictures to visualize the contents of the map
 and the pairs stored in the map. We will do this during lecture, and you should do so all the time in practice.
 
-## 16.2 Typedefs
+## 16.3 Typedefs
 
 - One of the painful aspects of using maps is the syntax. For example, consider a constant iterator in a map
 associating strings and vectors of ints:
@@ -65,7 +75,7 @@ map_vect :: const_iterator p;
 
 The compiler makes the substitution for you.
 
-## 16.3 Standard Library Sets
+## 16.4 Standard Library Sets
 
 - STL sets are ordered containers storing unique “keys”. An ordering relation on the keys, which defaults to
 operator<, is necessary. Because STL sets are ordered, they are technically not traditional mathematical sets.
@@ -79,12 +89,12 @@ you shouldn't use [] to access elements in a set.
 #include <set>
 ```
 
-## 16.4 Leetcode Exercises (Maps)
+## 16.5 Leetcode Exercises (Maps)
 
 - [Leetcode problem 49: Group Anagrams](https://leetcode.com/problems/group-anagrams/). Solution: [p49_group_anagrams.cpp](../../leetcode/p49_group_anagrams.cpp).
 - [Leetcode problem 290: Word Pattern](https://leetcode.com/problems/word-pattern/). Solution: [p290_word_pattern.cpp](../../leetcode/p290_word_pattern.cpp).
 
-## 16.5 Leetcode Exercises (Sets)
+## 16.6 Leetcode Exercises (Sets)
 
 - [Leetcode problem 414: Third Maximum Number](https://leetcode.com/problems/third-maximum-number/). Solution: [p414_third_max_number.cpp](../../leetcode/p414_third_max_number.cpp).
 - [Leetcode problem 1207: Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/). Solution: [p1207_unique_number_occurrences.cpp](../../leetcode/p1207_unique_number_occurrences.cpp).

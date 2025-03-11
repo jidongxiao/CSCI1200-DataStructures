@@ -24,7 +24,7 @@ Compile and run these 2 programs to see the performance difference.
 
 [map_erase_slow.cpp](map_erase_slow.cpp) [map_erase_fast.cpp](map_erase_fast.cpp)
 
-Both programs just creates a map containing 1 millions integers, and then erase these 1 millions integers. As can be seen from the following results, erasing by iterators is much faster than erasing by key.
+Both programs just create a map containing 1 millions integers, and then erase these 1 millions integers. As can be seen from the following results, erasing by iterators is much faster than erasing by key.
 
 ```console
 $g++ map_erase_slow.cpp -o map_erase_slow

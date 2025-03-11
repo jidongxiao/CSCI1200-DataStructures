@@ -39,7 +39,6 @@ $time ./map_insert_copy
 real    0m0.507s
 user    0m0.247s
 sys     0m0.259s
-$
 
 $time ./map_insert_copy
 

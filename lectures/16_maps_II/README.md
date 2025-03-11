@@ -8,7 +8,7 @@ We learned from previous lecture that we can erase an element from a map via the
 
 - size_type erase(const key_type& k) — erase the pair containing key k, returning either 0 or 1, depending on whether or not the key was in a pair in the map.
 
-But there is a performance difference between these two. Read [this document](..//optimization/map_erase/README.md).
+But there is a performance difference between these two. Read [this document](..//optimization/map_erase/).
 
 ## 16.2 More Complicated Values
 

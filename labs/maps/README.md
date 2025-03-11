@@ -1,4 +1,4 @@
-# Lab 9 — Maps
+# Lab 7 — Maps
 
 This lab gives you practice initial practice in working with the STL associative container, maps. No downloads
 are needed until Checkpoint 3.

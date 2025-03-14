@@ -45,7 +45,7 @@ int main () {
 	lines.push_back(Line(Point(0, 0), Point(1, 1)));  // slope = 1
 	lines.push_back(Line(Point(0, 0), Point(2, 3)));  // slope = 1.5
 	lines.push_back(Line(Point(0, 0), Point(5, 2)));  // slope = 0.4
-	// lines.push_back(Line(Point(3, 2), Point(3, 5)));  // vertical line (should throw)
+	lines.push_back(Line(Point(3, 2), Point(3, 5)));  // vertical line (should throw)
 	try {
 		organize(lines);
 		// Print the sorted lines based on steepness

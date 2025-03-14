@@ -194,7 +194,7 @@ int main () {
         lines.push_back(Line(Point(0, 0), Point(1, 1)));  // slope = 1
         lines.push_back(Line(Point(0, 0), Point(2, 3)));  // slope = 1.5
         lines.push_back(Line(Point(0, 0), Point(5, 2)));  // slope = 0.4
-        // lines.push_back(Line(Point(3, 2), Point(3, 5)));  // vertical line (should throw)
+        lines.push_back(Line(Point(3, 2), Point(3, 5)));  // vertical line (should throw)
         try {
                 organize(lines);
                 // Print the sorted lines based on steepness
@@ -217,6 +217,7 @@ int main () {
 
 Specifically note the behavior if one of the lines has infinite slope (a vertical line).
 - Note also how the exception propagates out through several nested function calls.
+- Question: there are two catches in this program, the exception will be caught by which catch?
 - Exercise: Rewrite this code to have the same behavior but without exceptions. Try to preserve the overall
 structure of the code as much as possible. (Hmm... it’s messy!)
 

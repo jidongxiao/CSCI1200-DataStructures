@@ -150,6 +150,7 @@ Here’s code using exceptions to sort a collection of lines by slope:
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cmath> // for fabs() function
 
 class Point {
 public:

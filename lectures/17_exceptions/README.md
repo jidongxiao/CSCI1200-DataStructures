@@ -2,13 +2,12 @@
 
 ## Today’s Lecture
 
-- HW7 Discussion
 - Error handling strategies
 - Basic exception mechanisms: try/throw/catch
 - Functions & exceptions, constructors & exceptions
 - STL exceptions
 
-## 17.1 Error Handling Strategy A: Optimism (a.k.a. Na¨ıvet´e or Denial)
+## 17.1 Error Handling Strategy A: Optimism
 
 - Assume there are no errors. Command line arguments will always be proper, any specified files will always be available for read/write, the data in the files will be formatted correctly, numerical calculations will not attempt to divide by zero, etc.
 

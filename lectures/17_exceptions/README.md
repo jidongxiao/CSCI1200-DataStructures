@@ -271,6 +271,14 @@ catch (std::exception& e) {
 - It can also be useful to have the constructor for a custom class throw a descriptive exception if the arguments
 are invalid in some way.
 
-## 17.11 Leetcode Exercises
+## 17.11 The noexcept Specifier
+
+In C++, the noexcept specifier is used to indicate whether a function is guaranteed not to throw exceptions. It helps with performance optimizations, better error handling, and code safety.
+
+- Performance Optimization. The compiler can generate more efficient code if it knows a function won't throw exceptions.  For example: Functions marked noexcept can be inlined more aggressively.
+- Exception Safety in Move Operations. When writing move constructors or move assignment operators, marking them noexcept allows the Standard Library (like std::vector) to optimize performance. If a move constructor throws, std::vector will prefer copying instead of moving, which is slower. If it’s marked noexcept, std::vector will safely move objects without fallback to copying.
+- Preventing Unexpected Exceptions. If a function unexpectedly throws when it's marked noexcept, the program will terminate immediately (std::terminate() is called). This is useful for functions where failure must be fatal.
+
+## 17.12 Leetcode Exercises
 
 - [Leetcode problem 7: Reverse Integer](https://leetcode.com/problems/reverse-integer/). Solution: [p7_reverse_integers.cpp](../../leetcode/p7_reverse_integers.cpp).

@@ -121,10 +121,8 @@ Abort trap
 
 ## 17.7 Basic Exception Mechanisms: Functions
 
-If a function you are writing might throw an exception, you can specify the type of exception(s) in the prototype.
-
 ```cpp
-int my_func(int a, int b) throw(double,bool) {
+int my_func(int a, int b) {
 	if (a > b)
 		throw 20.3;
 	else
@@ -143,16 +141,16 @@ int main() {
 	}
 }
 ```
-- If you use the throw syntax in the prototype, and the function throws an exception of a type that you have
-not listed, the program will terminate immediately (it can’t be caught by any enclosing try statements).
-- If you don’t use the throw syntax in the prototype, the function may throw exceptions of any type, and they
-may be caught by an appropriate try/catch block.
 
 ## 17.8 Comparing Method B (explicit if tests) to Method D (exceptions)
 
 Here’s code using exceptions to sort a collection of lines by slope:
 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 class Point {
 public:
 	Point(double x_, double y_) : x(x_),y(y_) {}
@@ -164,7 +162,7 @@ public:
 	Point a,b;
 };
 
-double compute_slope(const Point &a, const Point &b) throw(int) {
+double compute_slope(const Point &a, const Point &b) {
 	double rise = b.y - a.y;
 	double run = b.x - a.x;
 	double epsilon = 0.00001;

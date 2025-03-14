@@ -1,0 +1,19 @@
+Matching documents: 
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: Clippers hit the road with questions about Kawhi Leonard and James Harden
+Already without Russell Westbrook, the Clipper
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: Kawhi Leonard, James Harden questionable vs. Bulls.
+Clippers list James Harden and Kawhi Leonard questionable vs. Bulls.
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: Russell Westbrook is out with a hand fracture, and Kawhi Leonard and James Harden are both questionable.
+Suddenly, a mid

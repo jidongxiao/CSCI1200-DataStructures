@@ -1,0 +1,20 @@
+Matching documents: 
+
+Title: Screen Rant
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file23.html
+Description: Tom Cruise's Age In Mission Impossible 7 Is A Shocking ...
+Snippet: Kendall Jenner and Devin Booker Are Reportedly 'Rekindling' Their Relationship Again
+TMZ reports that Kendall Jenner and
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: The Arizona Republic
+Devin Booker returns in win over Cavaliers, Suns still short-handed.
+BBNBA: Devin Booker drops 27 i
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: Kendall Jenner & Devin Booker Seeing Each Other Again, Nothing Official Yet.
+Keeping up With the Kardashians premiered o

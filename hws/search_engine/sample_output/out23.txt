@@ -1,0 +1,48 @@
+Matching documents: 
+
+Title: Apple
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file12.html
+Description: CNN: Breaking US & World News 12+ - App Store
+Snippet: CNN has correspondents and bureaus reporting from across the world to keep you
+Kobe Bryant played 20 seasons for the Lak
+
+Title: Twitter
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file11.html
+Description: CNN Breaking News (@cnnbrk) / X
+Snippet: Kobe Bryant mural near Lakers arena to be kept after landlord ordered for removal.
+	A mural of Kobe Bryant and his daugh
+
+Title: Ellis Island Foundation
+URL: html_files/subdir1/subdir2/subdir3/subdir4/file13.html
+Description: Liberty 135 | Statue of Liberty & Ellis Island
+Snippet: After a 20-year career with the Los Angeles Lakers, Bryant retired in 2016 with five NBA championship rings and four NBA
+
+Title: Apple Music
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file15.html
+Description: Lady Gaga
+Snippet: " And it began immediately when the Memphis Grizzlies traded him to the Lakers during the 2007-2008 season.
+
+He shared a
+
+Title: Wikipedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file16.html
+Description: Tom Cruise - Wikipedia
+Snippet: "
+The mural, painted by Louie "Sloe Motions" Palsino, features the late father and daughter looking at one another, with
+
+Title: Facebook
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file28.html
+Description: Boston University
+Snippet: Vanessa Bryant shared an emotional speech Thursday night outside the Lakers arena in a ceremony unveiling Kobe Bryant's 
+
+Title: StatueOfLibertyTickets.com
+URL: html_files/subdir1/subdir2/file6.html
+Description: Statue of Liberty Tickets, Ellis Island Tickets, Statue of Liberty...
+Snippet: but opinion leaves fans split as some claim NBA icon has 'zero idea'
+Ex-Heat guard Mario Chalmers also discussed the Lak
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: Kerr: 'No Doubt' Warriors Can Make NBA Playoff Push; Behind Lakers in West Standings.
+Jonathan Kuminga wants to be 'Warr

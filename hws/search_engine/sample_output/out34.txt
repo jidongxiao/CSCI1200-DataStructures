@@ -1,0 +1,21 @@
+Matching documents: 
+
+Title: Bleacher Report
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file17.html
+Description: Boston Celtics - NBA
+Snippet: Yorgos Lanthimos and Emma Stone’s Next Movie ‘Kinds of Kindness’ Sets Summer Release Date.
+
+“Kinds of Kindness,�
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: MOVIES
+The Impossible Position of Emma Stone’s Best Actress Oscars Speech
+In a moment many have fumbled, Stone was mor
+
+Title: Google Play
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file14.html
+Description: CNN Breaking US & World News - Apps on Google Play
+Snippet: Michelle Yeoh clears up confusing Oscar moment when Emma Stone seemed to ‘ignore’ her
+Stone, who won the best actres

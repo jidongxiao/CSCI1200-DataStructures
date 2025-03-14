@@ -1,0 +1,16 @@
+Matching documents: 
+
+Title: Bleacher Report
+URL: html_files/file1.html
+Description: Tom Brady - Tampa Bay Buccaneers Quarterback
+Snippet: The New York Jets did not make a call to Tom Brady after Aaron Rodgers was lost for the season to a torn Achilles, sourc
+
+Title: CBS Sports
+URL: html_files/subdir1/subdir2/subdir3/file9.html
+Description: Tom Brady on coming out of retirement again: 'I wouldn't be...
+Snippet: Checkout the latest stats for Tom Brady. Tom Brady on coming out of retirement again: 'I wouldn't be around by tonight'.
+
+Title: Wikipedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file16.html
+Description: Tom Cruise - Wikipedia
+Snippet: Tom Brady. Tom Brady Tears Up as He Talks About Decision to Leave the Patriots (Exclusive). View the profile of Tampa Ba

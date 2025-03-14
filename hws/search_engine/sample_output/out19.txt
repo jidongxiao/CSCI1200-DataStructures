@@ -1,0 +1,36 @@
+Matching documents: 
+
+Title: Boston.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/file24.html
+Description: Boston.com: Local breaking news, sports, weather, and things ...
+Snippet: Buy Maroon 5 tickets from the official Ticketmaster.com site. Find Maroon 5 tour schedule, concert details, reviews and 
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: Maroon 5 is an American pop rock band that originated in Los Angeles, California, United States. See Instagram photos an
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: Everything to Know About Adam Levine's Las Vegas Residency with Maroon 5. The former Coach of The Voice has been rocking
+
+Title: The New York Times
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file27.html
+Description: My Impossible Mission to Find Tom Cruise
+Snippet: Official online store of Maroon 5. Fans can purchase exclusive merchandise including t-shirts, sweatshirts, hats and mor
+
+Title: The Vogue
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/subdir10/file26.html
+Description: Maroon 5
+Snippet: Maroon 5 is an American pop rock band that originated in Los Angeles, California, United States. The group was formed in
+
+Title: Boston University
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/subdir9/file25.html
+Description: Boston University: Homepage
+Snippet: Maroon 5 is known for Love Actually (2003), He's Just Not That Into You (2009) and The Wedding Date (2005). More at IMDb
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: Welcome to the Maroon 5 official Youtube Channel. Head to our website for more info- www.maroon5.com · maroon5.lnk.to/M

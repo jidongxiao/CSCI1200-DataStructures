@@ -1,0 +1,12 @@
+Matching documents: 
+
+Title: Screen Rant
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file23.html
+Description: Tom Cruise's Age In Mission Impossible 7 Is A Shocking ...
+Snippet: Most Memorable Seasons of Keeping up With the Kardashians.
+Keeping up With The Kardashians entertained fans of the famou
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: Keeping up With the Kardashians premiered on October 14, 2007, in the United States on the E! cable network at 10:30/9:3

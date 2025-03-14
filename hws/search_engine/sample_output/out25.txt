@@ -1,0 +1,18 @@
+Matching documents: 
+
+Title: Expedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file20.html
+Description: Top Hotels in Troy, NY from $55
+Snippet: "Nicole, would you put Keith on the line, please?" she teased, pretending to speak with fellow country star Keith Urban 
+
+Title: Youtube
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file21.html
+Description: Maroon 5
+Snippet: Keith Urban, Jonas Brothers added to Illinois State Fair Grandstand lineup.
+
+Throughout his career he has won four Gramm
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: Reba McEntire and Keith Urban at the 50th Annual CMA Awards in November 2016. - Image Group LA/Disney General Entertainm

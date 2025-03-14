@@ -1,0 +1,24 @@
+Matching documents: 
+
+Title: Instagram
+URL: html_files/subdir1/subdir2/file5.html
+Description: Lady Gaga (@ladygaga) • Instagram photos and videos
+Snippet: “Everything Everywhere All at Once” is an absolutely mental sci-fi adventure that blends comedy, fantasy and heart t
+
+Title: ESPN
+URL: html_files/subdir1/subdir2/file4.html
+Description: Boston Celtics 2023-24 NBA Roster
+Snippet: Harrison Ford presents 'Everything Everywhere All at Once' with the Oscar for Best Picture WINNER
+    Yet “Everything 
+
+Title: StatueOfLibertyTickets.com
+URL: html_files/subdir1/subdir2/file6.html
+Description: Statue of Liberty Tickets, Ellis Island Tickets, Statue of Liberty...
+Snippet: There's a multiverse of roads not taken in 'Everything Everywhere All at Once'
+    Michelle Yeoh stars as a woman who su
+
+Title: The Kennedy Center
+URL: html_files/subdir1/subdir2/file7.html
+Description: Tom Hanks Biography
+Snippet: Everything Everywhere All at Once review – multiverse madness with meaning.
+Michelle Yeoh has fun playing a laundrette

@@ -1,0 +1,22 @@
+Matching documents: 
+
+Title: Screen Rant
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file23.html
+Description: Tom Cruise's Age In Mission Impossible 7 Is A Shocking ...
+Snippet: Kim Kardashian has always been the biggest name for the family, although Kourtney Kardashian, Khloe Kardashian, and Rob 
+
+Title: Wikipedia
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file16.html
+Description: Tom Cruise - Wikipedia
+Snippet: People Think That Kim Kardashian And A Bunch Of Other Celebs Look Totally Different In These Raw Pictures From The Oscar
+
+Title: Google Play
+URL: html_files/subdir1/subdir2/subdir3/subdir5/file14.html
+Description: CNN Breaking US & World News - Apps on Google Play
+Snippet: Kim Kardashian and Bianca Censori Seen Together in Public for First Time
+Kim Kardashian and Bianca Censori have made the
+
+Title: Maroon 5
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/subdir8/file22.html
+Description: Maroon 5: Home
+Snippet: It inspires conversation about justice (Kim), wellness (Kourtney), inner strength and empowerment (Khloe), business entr

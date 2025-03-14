@@ -1,0 +1,14 @@
+Matching documents: 
+
+Title: GRAMMY.com
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file19.html
+Description: Lady Gaga | Artist
+Snippet: Splash Brothers Curry, Thompson send Warriors past Kings, 102-101
+Klay Thompson hit a 17-footer with less than a second 
+
+Title: National Geographic Kids
+URL: html_files/subdir1/subdir2/subdir3/subdir5/subdir6/subdir7/file18.html
+Description: Statue of Liberty
+Snippet: Splash Brothers Make History in Warriors Win Over Nets.
+What we learned from the Spurs' win over the Warriors
+The short-

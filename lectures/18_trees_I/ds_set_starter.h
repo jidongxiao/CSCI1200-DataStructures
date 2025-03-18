@@ -34,7 +34,6 @@ public:
   // comparison operators are straightforward
   bool operator==(const tree_iterator& r) { return ptr_ == r.ptr_; }
   bool operator!=(const tree_iterator& r) { return ptr_ != r.ptr_; }
-  // increment & decrement will be discussed in Lecture 18 and Lab 11
 
 private:
   // representation
@@ -60,67 +59,21 @@ public:
   }
 
   typedef tree_iterator<T> iterator;
-
-  int size() const { return size_; }
-  bool operator==(const ds_set<T>& old) const { return (old.root_ == this->root_); }
-
-  // FIND, INSERT & ERASE
   iterator find(const T& key_value) { return find(key_value, root_); }
   std::pair< iterator, bool > insert(T const& key_value) { return insert(key_value, root_); }
-  int erase(T const& key_value) { return erase(key_value, root_); }
-  
-  // OUTPUT & PRINTING
-  friend std::ostream& operator<< (std::ostream& ostr, const ds_set<T>& s) {
-    s.print_in_order(ostr, s.root_);
-    return ostr;
-  }
-  void print_as_sideways_tree(std::ostream& ostr) const { print_as_sideways_tree(ostr, root_, 0); }
-
   // ITERATORS
   iterator begin() const { 
-
-
-
-
-
-
-
   }
+
   iterator end() const { return iterator(NULL); }
 
 private:
   // REPRESENTATION
   TreeNode<T>* root_;
   int size_;
-
-  // PRIVATE HELPER FUNCTIONS
-  TreeNode<T>*  copy_tree(TreeNode<T>* old_root) {  /* Implemented in Lab 9 */  }
-  void destroy_tree(TreeNode<T>* p) {  /* Implemented in Lecture 18 */  }
-
-  iterator find(const T& key_value, TreeNode<T>* p) {
-
-
-
-
-
-
-
-
-
-  }
-
-  std::pair<iterator,bool> insert(const T& key_value, TreeNode<T>*& p) {  /* Discussed in Lecture 18 */  }  
-  int erase(T const& key_value, TreeNode<T>* &p) {  /* Implemented in Lecture 19 */  }
-
-  void print_in_order(std::ostream& ostr, const TreeNode<T>* p) const {
-    if (p) {
-      print_in_order(ostr, p->left);
-      ostr << p->value << "\n";
-      print_in_order(ostr, p->right);
-    }
-  }
-
-  void print_as_sideways_tree(std::ostream& ostr, const TreeNode<T>* p, int depth) const {
+  iterator find(const T& key_value, TreeNode<T>* p) { /* to be implemented */ }
+  std::pair<iterator,bool> insert(const T& key_value, TreeNode<T>*& p) { /* to be implemented */ }
+  void destroy_tree(TreeNode<T>* p) { /* to be implemented */ }
 };
 
 #endif

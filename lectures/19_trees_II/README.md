@@ -1,6 +1,4 @@
 # Lecture 19 --- Trees, Part II
-## Announcements
-- Read the syllabus thoroughly for late days and extension policies -> https://www.cs.rpi.edu/academics/courses/spring24/csci1200/syllabus.php
   
 ## Review from Lecture 18
 

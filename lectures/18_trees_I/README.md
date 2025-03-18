@@ -9,7 +9,6 @@
 
 - Binary trees, binary search trees
 - Implementation of ds_set class using binary search trees
-- In-order, pre-order, and post-order traversal
 
 ## Overview: Lists vs Trees vs Graphs
 - Trees create a hierarchical organization of data, rather than the linear organization in linked lists (and arrays and vectors).
@@ -134,9 +133,7 @@ int count_odd (TreeNode<int>* int)
 
 ## 18.7 ds_set and Binary Search Tree Implementation
 
-- A partial implementation of a set using a binary search tree is provided in this [ds_set_starter.h](ds_set_starter.h). We will continue to study this implementation in Lab 10 & the next lecture.
-- The increment and decrement operations for iterators have been omitted from this implementation. Next week
-in lecture we will discuss a couple strategies for adding these operations.
+- A partial implementation of a set using a binary search tree is provided in this [ds_set_starter.h](ds_set_starter.h).
 - We will use this as the basis both for understanding an initial selection of tree algorithms and for thinking
 about how standard library sets really work.
 
@@ -145,9 +142,10 @@ about how standard library sets really work.
 - There is two auxiliary classes, TreeNode and tree_iterator. All three classes are templated.
 - The only member variables of the ds_set class are the root and the size (number of tree nodes).
 - The iterator class is declared internally, and is effectively a wrapper on the TreeNode pointers.
-  – Note that operator* returns a const reference because the keys can’t change.
+  
+  – Note that operator\* returns a const reference because the keys can't change.
 
-  – The increment and decrement operators are missing (we’ll fill this in next week in lecture!).
+  – The increment and decrement operators are missing (we'll fill this in next week in lecture!).
 
 - The main public member functions just call a private (and often recursive) member function (passing the root
 node) that does all of the work.

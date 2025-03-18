@@ -134,6 +134,7 @@ int count_odd (TreeNode<int>* int)
 ## 18.7 ds_set and Binary Search Tree Implementation
 
 - A partial implementation of a set using a binary search tree is provided in this [ds_set_starter.h](ds_set_starter.h).
+- A testing program is provided as well: [ds_set_main.cpp](ds_set_main.cpp).
 - We will use this as the basis both for understanding an initial selection of tree algorithms and for thinking
 about how standard library sets really work.
 

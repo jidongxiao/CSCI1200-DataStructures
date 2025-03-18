@@ -78,7 +78,6 @@ public:
 
   // ITERATORS
   iterator begin() const { 
-    // Implemented in Lecture 17
 
 
 
@@ -99,7 +98,6 @@ private:
   void destroy_tree(TreeNode<T>* p) {  /* Implemented in Lecture 18 */  }
 
   iterator find(const T& key_value, TreeNode<T>* p) {
-    // Implemented in Lecture 17
 
 
 
@@ -115,7 +113,6 @@ private:
   int erase(T const& key_value, TreeNode<T>* &p) {  /* Implemented in Lecture 19 */  }
 
   void print_in_order(std::ostream& ostr, const TreeNode<T>* p) const {
-    // Discussed in Lecture 18
     if (p) {
       print_in_order(ostr, p->left);
       ostr << p->value << "\n";
@@ -124,7 +121,6 @@ private:
   }
 
   void print_as_sideways_tree(std::ostream& ostr, const TreeNode<T>* p, int depth) const {
-    /* Discussed in Lecture 17 */  }
 };
 
 #endif

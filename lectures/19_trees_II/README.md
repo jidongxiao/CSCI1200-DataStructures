@@ -112,7 +112,9 @@ Exercise: What are the advantages & disadvantages of each method?
 - The efficiency of the main insert, find and erase algorithms depends on the height of the tree.
 - The best-case and average-case heights of a binary search tree storing n nodes are both O(log n). The worstcase, which often can happen in practice, is O(n).
 - Developing more sophisticated algorithms to avoid the worst-case behavior will be covered in Introduction to
-Algorithms. <!-- One elegant extension to the binary search tree is described below...
+Algorithms.
+
+<!-- One elegant extension to the binary search tree is described below...
 
 ## 19.6 B+ Trees
 
@@ -132,8 +134,7 @@ implementation).
 child must be < key0, the next child must have keys such that they are ≥key0 and < key1, and so on up to
 the rightmost child which has only keys ≥keyk−1.
 
-A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html
--->
+A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html -->
 
 ## 19.6 N-ary tree and General Tree
 

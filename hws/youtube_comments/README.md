@@ -301,6 +301,10 @@ Q1: Why sometimes the reply count does not match with the number of replies disp
 
 A1: On youtube, some inappropriate comments are not displayed but they still contribute to the reply count. And such comments are not included in our json files.
 
+Q2: Can I use the <nlohmann/json.hpp> to parse the json file?
+
+A2: It's not that we allow you or we don't allow you to use that json library, it's just that Submitty does not have this library.
+
 ## Rubric
 
 17 pts

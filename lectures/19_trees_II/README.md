@@ -107,6 +107,8 @@ Exercise: What are the advantages & disadvantages of each method?
 
 ## 19.5 Limitations of Our BST Implementation
 
+- An implementation of a set using a binary search tree is provided in this [ds_set.h](ds_set.h).
+- A testing program is provided as well: [ds_set_main.cpp](ds_set_main.cpp).
 - The efficiency of the main insert, find and erase algorithms depends on the height of the tree.
 - The best-case and average-case heights of a binary search tree storing n nodes are both O(log n). The worstcase, which often can happen in practice, is O(n).
 - Developing more sophisticated algorithms to avoid the worst-case behavior will be covered in Introduction to

@@ -1,0 +1,18 @@
+reply_to_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0 @user3 "That user has a right to complain."
+reply_to_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0 UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1 @user3 "I took the data structures course at RPI, and that was a nightmare."
+reply_to_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1 UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6 @user2 "Yeah, the office hours queues are always long!"
+reply_to_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6 UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6.8 @user5 "I took that course as well, but I didn't learn anything from that course. Worst course ever!"
+reply_to_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6.8 UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6.8.66 @user6 "I took that course too, the instructor is just incompetent."
+reply_to_video UgyE4XOXlV5boRKLpQl4AaABAC @user1 "test1, test2, test3, test4"
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1.6.8
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1
+like_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW.0.1
+like_comment UgyE4XOXlV5boRKLpQl4AaABAC
+like_comment UgyE4XOXlV5boRKLpQl4AaABAC
+display_comment UgyE4XOXlV5boRKLpQl4AaABAC
+display_comment UgyrMzZ7vep4ND8QBx14AaABAg.9rWA_HeKltk9sDMPrT6QNW

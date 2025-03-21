@@ -13,7 +13,7 @@
 
 ## 19.1 Warmup Exercise
 
-Write the ds set::destroy tree private helper function.
+Write the ds set::destroy tree private helper function, which can then be called by the destructor.
 
 ## 19.2 Insert
 

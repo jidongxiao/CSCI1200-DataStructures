@@ -3,9 +3,7 @@
 ## Review from Lecture 18
 
 - Binary Trees, Binary Search Trees, & Balanced Trees
-- STL set container class (like STL map, but without the pairs!)
 - Finding the smallest element in a BST.
-- Overview of the ds set implementation: begin and find. (leetcode 700)
 
 ## Today’s Lecture
 

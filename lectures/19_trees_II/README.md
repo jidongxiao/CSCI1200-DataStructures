@@ -10,7 +10,6 @@
 ## Today’s Lecture
 
 - Warmup / Review: destroy_tree
-- A very important ds set operation insert
 - In-order, pre-order, and post-order traversal
 - Finding the in-order successor of a binary tree node, tree iterator increment
 
@@ -113,7 +112,7 @@ Exercise: What are the advantages & disadvantages of each method?
 - The efficiency of the main insert, find and erase algorithms depends on the height of the tree.
 - The best-case and average-case heights of a binary search tree storing n nodes are both O(log n). The worstcase, which often can happen in practice, is O(n).
 - Developing more sophisticated algorithms to avoid the worst-case behavior will be covered in Introduction to
-Algorithms. One elegant extension to the binary search tree is described below...
+Algorithms. <!-- One elegant extension to the binary search tree is described below...
 
 ## 19.6 B+ Trees
 
@@ -134,3 +133,92 @@ child must be < key0, the next child must have keys such that they are ≥key0 a
 the rightmost child which has only keys ≥keyk−1.
 
 A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html
+-->
+
+## 19.6 N-ary tree and General Tree
+
+- A tree where each node can have many children (not limited to two) is generally called an n-ary tree, where n refers to the maximum number of children each node can have.
+
+- If there is no fixed limit on the number of children, it's often simply referred to as a general tree or multi-way tree.
+
+- We can define the tree nodes for a general tree like this:
+
+```cpp
+class Node {
+public:
+    int val;
+    std::vector<Node*> children;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+    }
+
+    Node(int _val, std::vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+```
+
+## 19.7 General Tree Pre-order Traversal
+
+The following code implements the pre-order traversal of a general tree.
+
+```cpp
+// make a helper function, since the original one doesn't take the vector as a parameter.
+void preorder(Node* root, std::vector<int>& result){
+    if(root == NULL){
+        return;
+    }
+    // visit the parent
+    result.push_back(root->val);
+
+    int size = root->children.size();
+    for(int i=0; i<size; ++i){
+        // traverse each subtree
+        preorder(root->children[i], result);
+    }
+}
+
+std::vector<int> preorder(Node* root) {
+    std::vector<int> result;
+    preorder(root, result);
+    return result;
+}
+```
+
+You can run [this program](general_tree_pre_order.cpp) to test the above functions.
+
+## 19.8 General Tree Post-order Traversal
+
+The following code implements the post-order traversal of a general tree.
+
+```cpp
+// make a helper function, since the original one doesn't take the vector as a parameter.
+void postorder(Node* root, std::vector<int>& result){
+        // base case
+        if(root==NULL){
+            return;
+        }
+
+        // children first
+        int size = (root->children).size();
+        for(int i=0; i<size; ++i){
+            // call the same function to traverse children[i]
+            postorder(root->children[i], result);
+        }
+
+        // then parent
+        result.push_back(root->val);
+    }
+
+std::vector<int> postorder(Node* root) {
+    std::vector<int> result;
+    postorder(root, result);
+    return result;
+}
+```
+
+You can run [this program](general_tree_post_order.cpp) to test the above functions.

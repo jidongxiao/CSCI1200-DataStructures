@@ -25,8 +25,10 @@ void preorder(Node* root, std::vector<int>& result){
     }
     result.push_back(root->val);
 
-    for(auto child : root->children){
-        preorder(child, result);
+    // general case
+    int size = (root->children).size();
+    for(int i=0; i<size; ++i){
+        preorder(root->children[i], result);
     }
 }
 

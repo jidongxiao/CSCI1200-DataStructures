@@ -139,7 +139,9 @@ A B+ tree visualization can be seen at: https://www.cs.usfca.edu/~galles/visuali
 
 - A tree where each node can have many children (not limited to two) is generally called an n-ary tree, where n refers to the maximum number of children each node can have.
 
-- If there is no fixed limit on the number of children, it's often simply referred to as a general tree or multi-way tree.
+- If there is no fixed limit on the number of children, it's often simply referred to as a general tree or multi-way tree. Here is an example:
+
+![alt text](general_tree.png "A general tree example")
 
 - We can define the tree nodes for a general tree like this:
 

@@ -96,6 +96,7 @@ easy to show that iterating through a tree storing n nodes requires O(n) operati
 
 Exercise: [method 1] Write a fragment of code that given a node, finds the in-order successor using parent pointers.
 Be sure to draw a picture to help you understand!
+
 ![alt text](ds_set_parent_ptrs.png "ds set parent ptrs")
 
 Exercise: [method 2] Write a fragment of code that given a tree iterator containing a pointer to the node and a

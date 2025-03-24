@@ -41,6 +41,7 @@ only one valid memory layout for this data as a ds_set? Why?
 ## 20.2 Second Approach of Operator++
 
 We can also implement operator++ for the ds_set iterator without using the parent pointers. To achieve this, we need a container of pointers representing path from root to node. The following diagram represents the idea, and the code is provided here: [ds_set_ptrs.h](ds_set_ptrs.h) and [ds_set_main.cpp](ds_set_main.cpp).
+
 ![alt text](ds_set_history.png "ds set history")
 
 ## 20.3 Depth-first vs. Breadth-first Search
@@ -187,6 +188,8 @@ Draw picture of each case!
   - The value in this node may be safely moved into the current node because of the tree ordering.
 
   - Then we recursively apply erase to remove that node — which is guaranteed to have at most one child.
+
+play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/delete_node/index.html) to understand how this works.
 
 Exercise: Write a recursive version of erase.
 &nbsp;

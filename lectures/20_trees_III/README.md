@@ -10,11 +10,9 @@ of pointers to the iterator.
 
 ## Today’s Lecture
 
-- Breadth-first and depth-first tree search
-- Increement/decrement operator
-- Tree height, longest-shortest paths, breadth-first search
+- Second approach of iterator increement/decrement operator
 - Last piece of ds_set: removing an item, erase
-- Erase with parent pointers, increment operation on iterators
+- Breadth-first and depth-first tree search
 
 ## 20.1 ds_set Warmup/Review Exercises
 
@@ -44,69 +42,7 @@ We can also implement operator++ for the ds_set iterator without using the paren
 
 ![alt text](ds_set_history.png "ds set history")
 
-## 20.3 Depth-first vs. Breadth-first Search
-
-- We should also discuss two other important tree traversal terms related to problem solving and searching.
-  - In a depth-first search, we greedily follow links down into the tree, and don’t backtrack until we have hit a leaf. When we hit a leaf we step back out, but only to the last decision point and then proceed to the next leaf. This search method will quickly investigate leaf nodes, but if it has made an “incorrect” branch decision early in the search, it will take a long time to work back to that point and go down the “right” branch.
-
-  - In a breadth-first search, the nodes are visited with priority based on their distance from the root, with nodes closer to the root visited first. In other words, we visit the nodes by level, first the root (level 0), then all children of the root (level 1), then all nodes 2 links from the root (level 2), etc. If there are multiple solution nodes, this search method will find the solution node with the shortest path to the root node.  However, the breadth-first search method is memory-intensive, because the implementation must store all nodes at the current level – and the worst case number of nodes on each level doubles as we progress down the tree!
-
-- Both depth-first and breadth-first will eventually visit all elements in the tree.
-- Note: The ordering of elements visited by depth-first and breadth-first is not fully specified.
-  - In-order, pre-order, and post-order are all examples of depth-first tree traversals. Note: A simple recursive tree function is usually a depth-first traversal.
-
-  - What is a breadth-first traversal of the elements in our sample binary search trees above?
-
-## 20.4 General-Purpose Breadth-First Search/Tree Traversal
-
-- Write an algorithm to print the nodes in the tree one tier at a time, that is, in a breadth-first manner.
-
-```cpp
-// the breadth-first traversal function using std::queue
-void breadth_first_traverse(Node* root) {
-    if (root == NULL) {
-        return;
-    }
-
-    std::queue<Node*> node_queue; // queue to store nodes for BFS traversal
-    node_queue.push(root);  // start by pushing the root node
-
-    int level = 0;
-
-    while (!node_queue.empty()) {
-        int level_size = node_queue.size();  // number of nodes at the current level
-        std::cout << "level " << level << ": ";
-
-        for (int i = 0; i < level_size; i++) {
-            Node* current_node = node_queue.front();  // get the front node
-            node_queue.pop();  // remove the node from the queue
-
-            std::cout << current_node->value << " ";  // print the value of the node
-
-            // push the children of the current node to the queue (if they exist)
-            if (current_node->left != NULL) {
-                node_queue.push(current_node->left);
-            }
-            if (current_node->right != NULL) {
-                node_queue.push(current_node->right);
-            }
-        }
-        // after we finish the for loop, the only pointers in the queue, are the pointers pointing to nodes of the next level.
-
-        std::cout << std::endl;
-        level++;
-    }
-}
-```
-
-- What is the best/average/worst-case running time of this algorithm? What is the best/average/worst-case
-memory usage of this algorithm? Give a specific example tree that illustrates each case.
-
-- Run [this bfs_main.cpp program](bfs_main.cpp) to test the above function.
-
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to understand how this works.
-
-## 20.5 Height and Height Calculation Algorithm
+<!-- ## 20.5 Height and Height Calculation Algorithm
 
 - The height of a node in a tree is the length of the longest path down the tree from that node to a leaf node. The height of a tree with only one node (the root node) is 1. The height of an empty tree (a tree with no nodes) is 0.
 
@@ -189,8 +125,9 @@ void shortest_path_breadth(Node* root)
 &nbsp;
 &nbsp;
 &nbsp;
+-->
 
-## 20.7 Erase
+## 20.3 Erase
 
 - First we need to find the node to remove. Once it is found,
 the actual removal is easy if the node has no children or only one child.
@@ -204,13 +141,46 @@ Draw picture of each case!
 
 Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/delete_node/index.html) to understand how this works.
 
-Exercise: Write a recursive version of erase.
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+- An erase function is provided here:
+
+```cpp
+void eraseHelper(const T& key, TreeNode<T>*& root){
+    if (root == NULL) return;
+    if (root->key == key) {
+        if (root->left == NULL && root->right == NULL){
+            // no child, just delete
+            delete root;
+            root = NULL;
+        } else if (root->left == NULL){
+            // doesn't have a left, let the right child take over
+            TreeNode<T>* temp = root;
+            root = root->right;
+            delete temp;
+        } else if (root->right == NULL){
+            // doesn't have a right, let the left child take over
+            TreeNode<T>* temp = root;
+            root = root->left;
+            delete temp;
+        } else {
+            // has both left and right
+            // let the leftmost node of the right subtree take over
+            TreeNode<T>* tmp = root->right;
+            while (tmp->left) {
+                tmp = tmp->left;
+            }
+            root->key = tmp->key;
+            // but then remove that leftmost node of the right subtree.
+            eraseHelper(tmp->key, root->right);
+        }
+    } else if (root->key > key) {
+        // search on the left subtree and erase
+        eraseHelper(key, root->left);
+    } else {
+        // search on the right subtree and erase
+        eraseHelper(key, root->right);
+    }
+}
+```
 
 Exercise: How does the order that nodes are deleted affect the tree structure? Starting with a mostly balanced
 tree, give an erase ordering that yields an unbalanced tree.
@@ -221,59 +191,7 @@ tree, give an erase ordering that yields an unbalanced tree.
 &nbsp;
 &nbsp;
 
-```cpp
-Code for function ERASE built in class so remember it has not been executed yet and may require some fixes here and there.
-
-int erase (T const& key_value, TreeNode* &p){
- if (p->value == key_value)
- {
-   if (p->left == NULL && p->right == NULL)
-    {
-      delete p;
-      p=NULL;
-      return 1;
-    }
-   else if (p->left == NULL)
-    {
-      TreeNode* tmp = p->right;
-      tmp->parent = p->parent;
-      delete p;
-      p=tmp;
-      return 1;
-    }
-    else if (p->right == NULL)
-    {
-      TreeNode* tmp = p->left;
-      tmp->parent = p->parent;
-      delete p;
-      p=tmp;
-      return 1;
-    }
-    else
-    { //reusing begin logic
-      TreeNode* tmp = p->left;
-      while(tmp -> right)
-          tmp = tmp->right;
-      
-      p->value = tmp->value;
-      return erase(p->value, tmp);
-    }
-}
-else if (p-> value < key_value)
-{
-  return erase(key_value, p->right);
-}
-else
-{
-  assert (p->value > key_value);
-  return erase (key_value, p->left);
-}
-return 0;
-}
-
-}
-```
-
+<!--
 ## 20.8 Erase (now with parent pointers)
 
 - If we choose to use parent pointers, we need to add to the Node representation, and re-implement several ds_set member functions.
@@ -286,4 +204,67 @@ return 0;
 &nbsp;
 &nbsp;
 &nbsp;
+-->
+
+## 20.4 Depth-first vs. Breadth-first Search
+
+- We should also discuss two other important tree traversal terms related to problem solving and searching.
+  - In a depth-first search, we greedily follow links down into the tree, and don’t backtrack until we have hit a leaf. When we hit a leaf we step back out, but only to the last decision point and then proceed to the next leaf. This search method will quickly investigate leaf nodes, but if it has made an “incorrect” branch decision early in the search, it will take a long time to work back to that point and go down the “right” branch.
+
+  - In a breadth-first search, the nodes are visited with priority based on their distance from the root, with nodes closer to the root visited first. In other words, we visit the nodes by level, first the root (level 0), then all children of the root (level 1), then all nodes 2 links from the root (level 2), etc. If there are multiple solution nodes, this search method will find the solution node with the shortest path to the root node.  However, the breadth-first search method is memory-intensive, because the implementation must store all nodes at the current level – and the worst case number of nodes on each level doubles as we progress down the tree!
+
+- Both depth-first and breadth-first will eventually visit all elements in the tree.
+- Note: The ordering of elements visited by depth-first and breadth-first is not fully specified.
+  - In-order, pre-order, and post-order are all examples of depth-first tree traversals. Note: A simple recursive tree function is usually a depth-first traversal.
+
+  - What is a breadth-first traversal of the elements in our sample binary search trees above?
+
+## 20.5 General-Purpose Breadth-First Search/Tree Traversal
+
+- Write an algorithm to print the nodes in the tree one tier at a time, that is, in a breadth-first manner.
+
+```cpp
+// the breadth-first traversal function using std::queue
+void breadth_first_traverse(Node* root) {
+    if (root == NULL) {
+        return;
+    }
+
+    std::queue<Node*> node_queue; // queue to store nodes for BFS traversal
+    node_queue.push(root);  // start by pushing the root node
+
+    int level = 0;
+
+    while (!node_queue.empty()) {
+        int level_size = node_queue.size();  // number of nodes at the current level
+        std::cout << "level " << level << ": ";
+
+        for (int i = 0; i < level_size; i++) {
+            Node* current_node = node_queue.front();  // get the front node
+            node_queue.pop();  // remove the node from the queue
+
+            std::cout << current_node->value << " ";  // print the value of the node
+
+            // push the children of the current node to the queue (if they exist)
+            if (current_node->left != NULL) {
+                node_queue.push(current_node->left);
+            }
+            if (current_node->right != NULL) {
+                node_queue.push(current_node->right);
+            }
+        }
+        // after we finish the for loop, the only pointers in the queue, are the pointers pointing to nodes of the next level.
+
+        std::cout << std::endl;
+        level++;
+    }
+}
+```
+
+- What is the best/average/worst-case running time of this algorithm? What is the best/average/worst-case
+memory usage of this algorithm? Give a specific example tree that illustrates each case.
+
+- Run [this bfs_main.cpp program](bfs_main.cpp) to test the above function.
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to understand how this works.
 

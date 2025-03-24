@@ -37,5 +37,17 @@ int main() {
     } else {
         std::cout << value << " is not found in the set." << std::endl;
     }
+
+    numbers.erase(10);
+    numbers.erase(20);
+    numbers.erase(36);
+    
+    // print the elements of the set
+    std::cout << "After erasing 10, 20 and 36, the elements in the set are:" << std::endl;
+    for(ds_set<int>::iterator itr = numbers.begin(); itr != numbers.end(); ++itr){
+        std::cout << *itr << " ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }

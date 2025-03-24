@@ -100,6 +100,9 @@ public:
 		}
 		return temp;
 	}
+	void erase(const T& key){
+		eraseHelper(key, root);
+	}
 	// ITERATORS
 	// return an iterator to the first (leftmost) node of the binary search tree, 
 	// which can be found by traversing to the leftmost node starting from the root.
@@ -140,6 +143,43 @@ private:
 			return insertHelper(key, node->left, ptrs);  // Traverse left
 		} else {
 			return insertHelper(key, node->right, ptrs);  // Traverse right
+		}
+	}
+	// must pass root by reference here because we might change it.
+	void eraseHelper(const T& key, TreeNode<T>*& root){
+		if (root == NULL) return;
+		if (root->key == key) {
+			if (root->left == NULL && root->right == NULL){
+				// no child, just delete
+				delete root;
+				root = NULL;
+			} else if (root->left == NULL){
+				// doesn't have a left, let the right child take over
+				TreeNode<T>* temp = root;
+				root = root->right;
+				delete temp;
+			} else if (root->right == NULL){
+				// doesn't have a right, let the left child take over
+				TreeNode<T>* temp = root;
+				root = root->left;
+				delete temp;
+			} else {
+				// has both left and right
+				// let the leftmost node of the right subtree take over
+				TreeNode<T>* tmp = root->right;
+				while (tmp->left) {
+					tmp = tmp->left;
+				}
+				root->key = tmp->key;
+				// but then remove that leftmost node of the right subtree.
+				eraseHelper(tmp->key, root->right);
+			}
+		} else if (root->key > key) {
+			// search on the left subtree and erase
+			eraseHelper(key, root->left);
+		} else {
+			// search on the right subtree and erase
+			eraseHelper(key, root->right);
 		}
 	}
 

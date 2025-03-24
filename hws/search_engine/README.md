@@ -128,7 +128,7 @@ Search Engines like Google will search all types of files on the Internet, but i
 
 The search engine you implement will not search anything on the Internet, as that requires extensive knowledge in computer networks and will need to include network libraries, which is way beyond the scope of this course. In this assignment, we limit our searches to a local folder, which is provided as [html_files](html_files).
 
-You are also not allowed to use file system libraries such as &lt;filesystem&gt; to access the HTML files, rather, you should follow the instructions given in the [other useful code](#other-useful-code) section to open HTML files and follow links within each HTML file to get to other HTML files.
+You are also not allowed to use file system libraries such as &lt;filesystem&gt; or &lt;dirent&gt;to access the HTML files, rather, you should follow the instructions given in the [other useful code](#other-useful-code) section to open HTML files and follow links within each HTML file to get to other HTML files.
 
 ## Supported Commands
 
@@ -401,7 +401,7 @@ A2: All 33 documents.
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
  - DATA REPRESENTATION (7 pts)
    - Uses data structures which have not been covered in this class. (-7)
-   - Uses filesystem library (i.e., #include &lt;filesystem&gt; ). (-7)
+   - Uses filesystem library (i.e., #include &lt;filesystem&gt; #include &lt;dirent&gt;). (-7)
    - Neither std::map nor std::set is used. (-7)
    - Paths to all 32 HTML files are manually specified within the program's code. (The paths should be found by the program during runtime) (-5)
  - RECURSION (3 pts)

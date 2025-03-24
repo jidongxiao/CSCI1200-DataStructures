@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ds_set.h"
+#include "ds_set_ptrs.h"
 
 int main() {
     // create a set of integers
@@ -37,6 +37,5 @@ int main() {
     } else {
         std::cout << value << " is not found in the set." << std::endl;
     }
-
     return 0;
 }

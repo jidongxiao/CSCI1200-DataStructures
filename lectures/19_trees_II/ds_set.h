@@ -23,14 +23,14 @@ class tree_iterator {
 public:
   tree_iterator() : ptr_(NULL) {}
   tree_iterator(TreeNode<T>* p) : ptr_(p) {}
-  tree_iterator(const tree_iterator& old) : ptr_(old.ptr_) {}
+  tree_iterator(const tree_iterator& other) : ptr_(other.ptr_) {}
   ~tree_iterator() {}
-  tree_iterator& operator=(const tree_iterator& old) { ptr_ = old.ptr_;  return *this; }
+  tree_iterator& operator=(const tree_iterator& other) { ptr_ = other.ptr_;  return *this; }
   // operator* gives constant access to the value at the pointer
   const T& operator*() const { return ptr_->key; }
   // comparison operators are straightforward
-  bool operator== (const tree_iterator& rgt) { return ptr_ == rgt.ptr_; }
-  bool operator!= (const tree_iterator& rgt) { return ptr_ != rgt.ptr_; }
+  bool operator== (const tree_iterator& other) { return ptr_ == other.ptr_; }
+  bool operator!= (const tree_iterator& other) { return ptr_ != other.ptr_; }
   // increment & decrement operators
   tree_iterator<T> & operator++() { 
     // if i have right subtree, find left most element of those
@@ -47,6 +47,7 @@ public:
       // go up one more time
       ptr_ = ptr_->parent;
     }
+    // when we return, ptr_ should point to the destination node.
     return *this;
   }
   tree_iterator<T> operator++(int) {  tree_iterator<T> temp(*this);  ++(*this);  return temp;  }

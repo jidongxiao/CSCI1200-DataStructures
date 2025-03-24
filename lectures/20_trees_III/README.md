@@ -62,8 +62,6 @@ We can also implement operator++ for the ds_set iterator without using the paren
 - Write an algorithm to print the nodes in the tree one tier at a time, that is, in a breadth-first manner.
 
   ```cpp
-  BFS code discussed in class
-
   void breadth_first_traverse(Node* root)
   {
     int level=0;
@@ -92,6 +90,10 @@ We can also implement operator++ for the ds_set iterator without using the paren
 
 - What is the best/average/worst-case running time of this algorithm? What is the best/average/worst-case
 memory usage of this algorithm? Give a specific example tree that illustrates each case.
+
+- Run [this bfs_main.cpp program](bfs_main.cpp) to test the above function.
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to understand how this works.
 
 ## 20.5 Height and Height Calculation Algorithm
 
@@ -189,7 +191,7 @@ Draw picture of each case!
 
   - Then we recursively apply erase to remove that node — which is guaranteed to have at most one child.
 
-play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/delete_node/index.html) to understand how this works.
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/delete_node/index.html) to understand how this works.
 
 Exercise: Write a recursive version of erase.
 &nbsp;

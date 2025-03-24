@@ -1,4 +1,4 @@
-# Lab 10 — Trees, Binary Trees, & Binary Search Trees
+# Lab 8 — Trees, Binary Trees, & Binary Search Trees
 
 ## Checkpoint 1
 

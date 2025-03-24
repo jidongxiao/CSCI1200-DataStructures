@@ -401,7 +401,7 @@ A2: All 33 documents.
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
  - DATA REPRESENTATION (7 pts)
    - Uses data structures which have not been covered in this class. (-7)
-   - Uses filesystem library (i.e., #include &lt;filesystem&gt; #include &lt;dirent&gt;). (-7)
+   - Uses filesystem library (i.e., #include &lt;filesystem&gt; or #include &lt;dirent&gt;). (-7)
    - Neither std::map nor std::set is used. (-7)
    - Paths to all 32 HTML files are manually specified within the program's code. (The paths should be found by the program during runtime) (-5)
  - RECURSION (3 pts)

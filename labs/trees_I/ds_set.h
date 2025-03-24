@@ -34,7 +34,6 @@ public:
   // comparions operators are straightforward
   bool operator== (const tree_iterator& rgt) { return ptr_ == rgt.ptr_; }
   bool operator!= (const tree_iterator& rgt) { return ptr_ != rgt.ptr_; }
-  // increment & decrement will be discussed in Lecture 19 and Lab 11
 
 private:
   // representation
@@ -93,7 +92,6 @@ private:
 
   // PRIVATE HELPER FUNCTIONS
   TreeNode<T>*  copy_tree(TreeNode<T>* old_root) {
-    // Implemented in Lab 10
 
 
 
@@ -106,7 +104,7 @@ private:
 
   }
 
-  void destroy_tree(TreeNode<T>* p) { /* Implemented in Lecture 18 */  }
+  void destroy_tree(TreeNode<T>* p) { }
 
   iterator find(const T& key_value, TreeNode<T>* p) {
     if (!p) return iterator(NULL);
@@ -132,7 +130,7 @@ private:
       return std::pair<iterator,bool>(iterator(p), false);
   }
   
-  int erase(T const& key_value, TreeNode<T>* &p) {  /* Implemented in Lecture 19 or 20 */  }
+  int erase(T const& key_value, TreeNode<T>* &p) { }
 
   void print_in_order(std::ostream& ostr, const TreeNode<T>* p) const {
     if (p) {

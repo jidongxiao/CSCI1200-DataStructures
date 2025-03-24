@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <queue>
 
 class Node {
 public:
@@ -11,33 +11,39 @@ public:
     Node(int val) : value(val), left(NULL), right(NULL) {}
 };
 
-// The breadth-first traversal function you provided
+// the breadth-first traversal function using std::queue
 void breadth_first_traverse(Node* root) {
-    int level = 0;
-    std::vector<Node*> current_level;
-    std::vector<Node*> next_level;
-
     if (root == NULL) {
         return;
     }
 
-    current_level.push_back(root);
+    std::queue<Node*> node_queue; // queue to store nodes for BFS traversal
+    node_queue.push(root);  // start by pushing the root node
 
-    while (current_level.size() != 0) {
-        std::cout << "level " << level << ":";
-        for (unsigned i = 0; i < current_level.size(); i++) {
-            if (current_level[i]->left != NULL) {
-                next_level.push_back(current_level[i]->left);
+    int level = 0;
+    
+    while (!node_queue.empty()) {
+        int level_size = node_queue.size();  // number of nodes at the current level
+        std::cout << "level " << level << ": ";
+
+        for (int i = 0; i < level_size; i++) {
+            Node* current_node = node_queue.front();  // get the front node
+            node_queue.pop();  // remove the node from the queue
+
+            std::cout << current_node->value << " ";  // print the value of the node
+
+            // push the children of the current node to the queue (if they exist)
+            if (current_node->left != NULL) {
+                node_queue.push(current_node->left);
             }
-            if (current_level[i]->right != NULL) {
-                next_level.push_back(current_level[i]->right);
+            if (current_node->right != NULL) {
+                node_queue.push(current_node->right);
             }
-            std::cout << " " << current_level[i]->value;
         }
-        current_level = next_level;
-        level++;
-        next_level.clear();
+	// after we finish the for loop, the only pointers in the queue, are the pointers pointing to nodes of the next level.
+
         std::cout << std::endl;
+        level++;
     }
 }
 

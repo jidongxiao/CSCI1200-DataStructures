@@ -386,10 +386,11 @@ function nextstep() {
 		line7.hide();
 		stage.find('#node_'+key).hide();
 		stage.find('#node_text_'+key).hide();
-		stage.find('#node_'+8).x(700);
-		stage.find('#node_'+8).y(300);
-		stage.find('#node_text_'+8).x(695);
-		stage.find('#node_text_'+8).y(290);
+		// move 7.5 to 7
+		stage.find('#node_'+7.5).x(700);
+		stage.find('#node_'+7.5).y(300);
+		stage.find('#node_text_'+7.5).x(695);
+		stage.find('#node_text_'+7.5).y(290);
 		hidden_7=1;
                 layer.draw();
 	}else if(key == 8){

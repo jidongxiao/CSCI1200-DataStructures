@@ -365,16 +365,26 @@ function nextstep() {
 		stage.find('#nullptr').show();
                 layer.draw();
 	}else if(key == 5){
-		// move 7.5 to 5
-		stage.find('#node_'+7.5).x(650);
-		stage.find('#node_'+7.5).y(100);
-		stage.find('#node_text_'+7.5).x(645);
-		stage.find('#node_text_'+7.5).y(90);
-		// hide 7.5 node, and show a NULL pointer.
-		stage.find('#nullptr').x(770);
-		stage.find('#nullptr').y(390);
-		stage.find('#nullptr').show();
-                layer.draw();
+		if(pc==1){
+			// highlight 7.5
+			stage.find('#node_'+7.5).fill("orange");
+			layer.draw();
+			pc = pc + 1;
+		}else if(pc==2)
+			// move 7.5 to 5
+			stage.find('#node_'+7.5).x(650);
+			stage.find('#node_'+7.5).y(100);
+			stage.find('#node_text_'+7.5).x(645);
+			stage.find('#node_text_'+7.5).y(90);
+                	layer.draw();
+			pc = pc + 1;
+		}else if(pc==3){
+			// and then hide 7.5 node, and show a NULL pointer.
+			stage.find('#nullptr').x(770);
+			stage.find('#nullptr').y(390);
+			stage.find('#nullptr').show();
+                	layer.draw();
+		}
 	}else if(key == 8){
 		line5.hide();
 		stage.find('#node_'+key).hide();

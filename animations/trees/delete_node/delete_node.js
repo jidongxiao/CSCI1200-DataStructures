@@ -370,7 +370,7 @@ function nextstep() {
 			stage.find('#node_'+7.5).fill("orange");
 			layer.draw();
 			pc = pc + 1;
-		}else if(pc==2)
+		}else if(pc==2){
 			// move 7.5 to 5
 			stage.find('#node_'+7.5).x(650);
 			stage.find('#node_'+7.5).y(100);
@@ -384,6 +384,7 @@ function nextstep() {
 			stage.find('#nullptr').y(390);
 			stage.find('#nullptr').show();
                 	layer.draw();
+			pc = pc + 1;
 		}
 	}else if(key == 8){
 		line5.hide();

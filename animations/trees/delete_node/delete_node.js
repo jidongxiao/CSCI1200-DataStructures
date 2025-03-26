@@ -382,6 +382,8 @@ function nextstep() {
 			pc = pc + 1;
 		}else if(pc==3){
 			// and then hide 7.5 node, and show a NULL pointer.
+			stage.find('#node_'+7.5).hide();
+			stage.find('#node_text_'+7.5).hide();
 			stage.find('#nullptr').x(770);
 			stage.find('#nullptr').y(390);
 			stage.find('#nullptr').show();

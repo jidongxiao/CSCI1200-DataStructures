@@ -366,27 +366,26 @@ function nextstep() {
                 layer.draw();
 	}else if(key == 5){
 		if(pc==1){
-			// highlight 7.5
-			stage.find('#node_'+7.5).fill("orange");
+			// highlight 7 (the left most node of the right subtree)
+			stage.find('#node_'+7).fill("orange");
 			layer.draw();
 			pc = pc + 1;
 		}else if(pc==2){
-			// update 5 to 7.5
-			stage.find('#node_text_'+5).text("7.5");
-			// move 7.5 to 5
-			//stage.find('#node_'+7.5).x(650);
-			//stage.find('#node_'+7.5).y(100);
-			//stage.find('#node_text_'+7.5).x(645);
-			//stage.find('#node_text_'+7.5).y(90);
+			// update 5 to 7
+			stage.find('#node_text_'+5).text("7");
                 	layer.draw();
 			pc = pc + 1;
 		}else if(pc==3){
-			// and then hide 7.5 node, and show a NULL pointer.
-			stage.find('#node_'+7.5).hide();
-			stage.find('#node_text_'+7.5).hide();
-			stage.find('#nullptr').x(770);
-			stage.find('#nullptr').y(390);
-			stage.find('#nullptr').show();
+			// and then delete 7 - let 7.5 take over
+			line7.hide();
+			stage.find('#node_'+7).hide();
+			stage.find('#node_text_'+7).hide();
+			// move 7.5 to 7
+			stage.find('#node_'+7.5).x(700);
+			stage.find('#node_'+7.5).y(300);
+			stage.find('#node_text_'+7.5).x(695);
+			stage.find('#node_text_'+7.5).y(290);
+			hidden_7=1;
                 	layer.draw();
 			pc = pc + 1;
 		}

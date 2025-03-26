@@ -372,7 +372,7 @@ function nextstep() {
 			pc = pc + 1;
 		}else if(pc==2){
 			// update 5 to 7.5
-			stage.find('#node_'+5).text("7.5");
+			stage.find('#node_text_'+5).text("7.5");
 			// move 7.5 to 5
 			//stage.find('#node_'+7.5).x(650);
 			//stage.find('#node_'+7.5).y(100);

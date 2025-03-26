@@ -371,8 +371,9 @@ function nextstep() {
 			layer.draw();
 			pc = pc + 1;
 		}else if(pc==2){
-			// update 5 to 7
+			// update 5 to 7, and restore color to normal
 			stage.find('#node_text_'+5).text("7");
+			stage.find('#node_'+5).fill("lightgray");
                 	layer.draw();
 			pc = pc + 1;
 		}else if(pc==3){

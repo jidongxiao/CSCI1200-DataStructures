@@ -365,19 +365,19 @@ function nextstep() {
 		stage.find('#nullptr').show();
                 layer.draw();
 	}else if(key == 5){
-	}else if(key == 6){
+	}else if(key == 8){
 		line5.hide();
 		stage.find('#node_'+key).hide();
 		stage.find('#node_text_'+key).hide();
-		// move 7 and 8
+		// move 7 and 7.5
 		stage.find('#node_'+7).x(800);
 		stage.find('#node_'+7).y(200);
 		stage.find('#node_text_'+7).x(795);
 		stage.find('#node_text_'+7).y(190);
-		stage.find('#node_'+8).x(950);
-		stage.find('#node_'+8).y(300);
-		stage.find('#node_text_'+8).x(945);
-		stage.find('#node_text_'+8).y(290);
+		stage.find('#node_'+7.5).x(950);
+		stage.find('#node_'+7.5).y(300);
+		stage.find('#node_text_'+7.5).x(945);
+		stage.find('#node_text_'+7.5).y(290);
 		line7.hide();
 		line8.show();
 		hidden_6=1;
@@ -393,7 +393,7 @@ function nextstep() {
 		stage.find('#node_text_'+7.5).y(290);
 		hidden_7=1;
                 layer.draw();
-	}else if(key == 8){
+	}else if(key == 7.5){
 		// hide this node, and show a NULL pointer.
 		stage.find('#node_'+key).hide();
 		stage.find('#node_text_'+key).hide();

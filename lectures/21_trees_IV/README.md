@@ -119,7 +119,7 @@ void preorderTraversal(TreeNode* root) {
 }
 ```
 
-You can test the above function using this program: [inorder_main.cpp](inorder_main.cpp).
+You can test the above function using this program: [preorder_main.cpp](preorder_main.cpp).
 
 For above test case, the testing program prints:
 
@@ -138,5 +138,72 @@ Preorder Traversal using Morris Traversal:
 
 ## 21.4 Morris Traversal - Post Order
 
+Post order is different, and we need to write some helper functions here.
+
 ```cpp
+// function to reverse the right-edge path of a subtree
+TreeNode* reverse(TreeNode* head) {
+    TreeNode* prev = nullptr;
+    TreeNode* next = nullptr;
+
+    while (head != nullptr) {
+        next = head->right;
+        head->right = prev;
+        prev = head;
+        head = next;
+    }
+    return prev;
+}
+
+// function to traverse and collect nodes along a reversed right edge
+void reverseTraverseRightEdge(TreeNode* head) {
+    TreeNode* tail = reverse(head);
+    TreeNode* current = tail;
+
+    while (current != nullptr) {
+        std::cout << current->val << " ";
+        current = current->right;
+    }
+    reverse(tail); // restore the original tree structure
+}
+
+// Morris Postorder Traversal
+void postorderTraversal(TreeNode* root) {
+    TreeNode* current = root;
+    TreeNode* rightmost;
+
+    while (current != nullptr) {
+        if (current->left != nullptr) {
+            rightmost = current->left;
+            while (rightmost->right != nullptr && rightmost->right != current) {
+                rightmost = rightmost->right;
+            }
+
+            if (rightmost->right == nullptr) {
+                rightmost->right = current;
+                current = current->left;
+            } else {
+                rightmost->right = nullptr;
+                reverseTraverseRightEdge(current->left);
+                current = current->right;
+            }
+        } else {
+            current = current->right;
+        }
+    }
+
+    reverseTraverseRightEdge(root); // traverse the final right edge
+    return;
+}
+```
+
+You can test the above function using this program: [postorder_main.cpp](postorder_main.cpp).
+
+For above test case, the testing program prints:
+
+```console
+$ g++ postorder_main.cpp
+$ ./a.out
+Postorder Traversal using Morris Traversal:
+4 6 7 5 2 9 8 3 1
 ```

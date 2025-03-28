@@ -2,9 +2,44 @@
 
 ## Today’s Lecture
 
-- Morris Traversal
+- Binary Tree In-order, Pre-order, Post-order Iterative Traversal
+- Binary Tree Morris Traversal
 
-## 21.1 Morris Traversal
+## 21.1 Binary Tree In-order, Pre-order, Post-order Iterative Traversal
+
+A common way to traverse a binary tree without recursion, is using an extra container, such as a stack or a queue. Here we will use a stack to perform an in-order traversal of a binary tree; and use a stack to perform a pre-order traversal of a binary tree; but we will need to use two stacks to perform a post-order traversal of a binary tree.
+
+We will use this binary tree as a test case:
+
+![alt text](binaryTree.png "Binary Tree Test Case")
+
+## 21.1.1 In-order Iteratively
+
+An in-order traversal program is provided here: [inorder_iterative.cpp](inorder_iterative.cpp).
+
+## 21.1.2 Pre-order Iteratively
+
+A pre-order traversal program is provided here: [preorder_iterative.cpp](preorder_iterative.cpp).
+
+## 21.1.3 Post-order Iteratively
+
+A post-order traversal program is provided here: [postorder_iterative.cpp](postorder_iterative.cpp).
+
+The best way to understand these programs is to walk through the code using the test case.
+
+## 21.2 Existing Binary Tree Traversals
+
+In-order, Pre-order, Post-Order recursively: Time Complexity: O(n), Space Complexity: best case: O(log n), balanced tree;  worst case: O(n), completely skewed tree. The space consumption is mostly because of the recursive call stack usage.
+
+In-order, Pre-order, Post-Order iteratively: Time Complexity: O(n); Space Complexity: best case: O(log n), worst case: O(n). The space consumption is mostly because of the stack usage.
+
+Level-order, iteratively: Time Complexity: O(n), Space Complexity: best case: O(1), for a skewed tree; worst case: O(n), if every node either has zero children, or exactly two children.
+
+Can we traverse a binary tree with an O(n) time complexity and O(1) space complexity?
+
+**Note**: when considering space complexity of the traverse, we do not count the memory space used by the tree itself; meaning that the space refers to the extra space, which is introduced by the traverse function.
+
+## 21.3 Morris Traversal
 
 Morris Traversal is a tree traversal algorithm that allows in-order, pre-order, and post-order traversal of a binary tree without using recursion or a stack/queue, achieving O(1) space complexity. It modifies the tree temporarily but restores it afterward.
 
@@ -16,7 +51,11 @@ Instead of using extra memory (like recursion stack or an explicit stack), Morri
 
 - Using these links to traverse back instead of a recursive call.
 
-## 21.2 Morris Traversal - In Order
+- In Morris Traversal: 
+  - for each node which has no left subtree, we visit this node once; 
+  - for each node which has a left subtree, we visit this node twice; and in between the first visit and the second visit of this node, the traverse of the entire left subtree occurs.
+
+## 21.4 Morris Traversal - In Order
 
 - Start from the root.
 
@@ -61,7 +100,6 @@ You can test the above function using this program: [inorder_main.cpp](inorder_m
 
 For this test case,
 
-![alt text](binaryTree.png "Binary Tree Test Case")
 
 The testing program prints:
 
@@ -72,7 +110,7 @@ Inorder Traversal using Morris Traversal:
 4 2 6 5 7 1 3 9 8
 ```
 
-## 21.3 Morris Traversal - Pre Order
+## 21.5 Morris Traversal - Pre Order
 
 To perform preorder traversal:
 
@@ -116,7 +154,7 @@ Preorder Traversal using Morris Traversal:
 1 2 4 5 6 7 3 8 9
 ```
 
-## 21.4 Morris Traversal - Post Order
+## 21.6 Morris Traversal - Post Order
 
 Post order is different, and we need to write some helper functions here.
 

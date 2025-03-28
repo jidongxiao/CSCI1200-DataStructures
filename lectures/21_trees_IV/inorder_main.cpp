@@ -22,12 +22,12 @@ void inorderTraversal(TreeNode* root) {
                     rightmost->right=current;
                     current=current->left;
                 }else{  /* second time */
-		    std::cout << current->val << " ";
+                    std::cout << current->val << " ";
                     rightmost->right=NULL;
                     current=current->right;
                 }
             }else{  /* nodes which do not have left child */
-		std::cout << current->val << " ";
+                std::cout << current->val << " ";
                 current=current->right;
             }
     }

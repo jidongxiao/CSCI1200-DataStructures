@@ -40,8 +40,7 @@ Instead of using extra memory (like recursion stack or an explicit stack), Morri
 - Repeat until you traverse the entire tree.
 
 ```cpp
-vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> result;
+void inorderTraversal(TreeNode* root) {
         TreeNode *current=root;
         TreeNode *rightmost;
         while(current!=NULL){
@@ -54,16 +53,16 @@ vector<int> inorderTraversal(TreeNode* root) {
                     rightmost->right=current;
                     current=current->left;
                 }else{  /* second time */
-                    result.push_back(current->val);
+                    std::cout << current->val << " ";
                     rightmost->right=NULL;
                     current=current->right;
                 }
             }else{  /* nodes which do not have left child */
-                result.push_back(current->val);
+                std::cout << current->val << " ";
                 current=current->right;
             }
     }
-    return result;   
+    return;
 }
 ```
 
@@ -71,7 +70,7 @@ You can test the above function using this program: [inorder_main.cpp](inorder_m
 
 For this test case,
 
-![alt text](binaryTree.png "Binary Tree example")
+![alt text](binaryTree.png "Binary Tree Test Case")
 
 The testing program prints:
 
@@ -85,9 +84,7 @@ Inorder Traversal using Morris Traversal:
 ## 21.3 Morris Traversal - Pre Order
 
 ```cpp
-vector<int> preorderTraversal(TreeNode* root) {
-      vector<int> result;
-      int index=0;
+void preorderTraversal(TreeNode* root) {
       TreeNode *current=root;
       TreeNode *rightmost;
       while(current != nullptr){
@@ -97,7 +94,7 @@ vector<int> preorderTraversal(TreeNode* root) {
                 rightmost=rightmost->right;
             }
             if(rightmost->right==nullptr){ /* first time */
-                result.push_back(current->val);
+                std::cout << current->val << " ";
                 rightmost->right=current;
                 current=current->left;
             }else{  /* second time */
@@ -105,12 +102,23 @@ vector<int> preorderTraversal(TreeNode* root) {
                 current=current->right;
             }
         }else{  /* nodes which do not have left child */
-            result.push_back(current->val);
+            std::cout << current->val << " ";
             current=current->right;
         }
     }
-    return result;
-    }
+    return;
+}
+```
+
+You can test the above function using this program: [inorder_main.cpp](inorder_main.cpp).
+
+For above test case, the testing program prints:
+
+```console
+$ g++ preorder_main.cpp
+$ ./a.out
+Preorder Traversal using Morris Traversal:
+1 2 4 5 6 7 3 8 9
 ```
 
 ## 21.4 Morris Traversal - Post Order

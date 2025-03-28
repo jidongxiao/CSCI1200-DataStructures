@@ -4,8 +4,6 @@
 
 - Test 3 will be held Thursday, April 3rd, 2025 from 6-7:50pm.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If on Tuesday evening you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
-- If you will miss an exam due to a scheduled event or unforeseen circumstance, you should email the DS instructors list (ds_instructors@cs.rpi.edu) as soon as possible as stated in the syllabus.
-- If you have a letter from Disability Services for Students and you have not already emailed it to ds_instructors@cs.rpi.edu, please do so by Tuesday 4:30pm. Shianne Hulbert will be in contact with you about your accommodations for the test.
 - Coverage: Maps, Sets, Trees, as well as concepts learned prior to test 2. Please remember Recursion and Big O notation goes hand in hand with all the topics taught after Test 2.
 - OPTIONAL: you are allowed to bring one physical piece of 8.5x11” paper, that’s two “sides”. We will check at the start of the exam that you do not have more than one piece of paper for your notes!
 - All students must bring their Rensselaer photo ID card.

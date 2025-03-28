@@ -9,7 +9,7 @@ public:
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-// pre order traverse a binary tree, iteratively.
+// post order traverse a binary tree, iteratively.
 void postorderTraversal(TreeNode* root) {
     if (root == nullptr) return;
 

@@ -80,8 +80,17 @@ $ ./a.out
 Inorder Traversal using Morris Traversal:
 4 2 6 5 7 1 3 9 8
 ```
+### Time and Space Complexity
+
+- Time Complexity: O(N) (each node is visited at most twice)
+
+- Space Complexity: O(1) (no extra space used except for modifying pointers)
 
 ## 21.3 Morris Traversal - Pre Order
+
+To perform preorder traversal:
+
+Print the node before going left instead of after restoring links.
 
 ```cpp
 void preorderTraversal(TreeNode* root) {
@@ -120,6 +129,12 @@ $ ./a.out
 Preorder Traversal using Morris Traversal:
 1 2 4 5 6 7 3 8 9
 ```
+
+### Time and Space Complexity
+
+- Time Complexity: O(N) (each node is visited at most twice)
+
+- Space Complexity: O(1) (no extra space used except for modifying pointers)
 
 ## 21.4 Morris Traversal - Post Order
 

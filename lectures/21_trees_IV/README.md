@@ -1,13 +1,4 @@
-
 # Lecture 21 --- Trees, Part IV
-
-Review from Lecture 20
-- Breadth-first and depth-first tree search
-- Increement/decrement operator
-- Tree height, longest-shortest paths, breadth-first search
-- Last piece of ds_set: removing an item, erase
-- Erase with parent pointers, increment operation on iterators
-- Limitations of our ds set implementatioN
 
 ## Today’s Lecture
 
@@ -15,7 +6,7 @@ Review from Lecture 20
 
 ## 21.1 Morris Traversal
 
-Morris Traversal is a tree traversal algorithm that allows inorder (and also preorder) traversal of a binary tree without using recursion or a stack, achieving O(1) space complexity. It modifies the tree temporarily but restores it afterward.
+Morris Traversal is a tree traversal algorithm that allows in-order, pre-order, and post-order traversal of a binary tree without using recursion or a stack/queue, achieving O(1) space complexity. It modifies the tree temporarily but restores it afterward.
 
 Instead of using extra memory (like recursion stack or an explicit stack), Morris Traversal utilizes threaded binary trees by:
 
@@ -80,11 +71,6 @@ $ ./a.out
 Inorder Traversal using Morris Traversal:
 4 2 6 5 7 1 3 9 8
 ```
-### Time and Space Complexity
-
-- Time Complexity: O(N) (each node is visited at most twice)
-
-- Space Complexity: O(1) (no extra space used except for modifying pointers)
 
 ## 21.3 Morris Traversal - Pre Order
 
@@ -129,12 +115,6 @@ $ ./a.out
 Preorder Traversal using Morris Traversal:
 1 2 4 5 6 7 3 8 9
 ```
-
-### Time and Space Complexity
-
-- Time Complexity: O(N) (each node is visited at most twice)
-
-- Space Complexity: O(1) (no extra space used except for modifying pointers)
 
 ## 21.4 Morris Traversal - Post Order
 
@@ -207,3 +187,9 @@ $ ./a.out
 Postorder Traversal using Morris Traversal:
 4 6 7 5 2 9 8 3 1
 ```
+
+## Time and Space Complexity in Morris Traversal (in-order, pre-order, post-order)
+
+- Time Complexity: O(N) (each node is visited at most twice)
+
+- Space Complexity: O(1) (no extra space used except for modifying pointers)

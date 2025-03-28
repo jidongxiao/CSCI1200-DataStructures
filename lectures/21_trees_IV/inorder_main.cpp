@@ -10,26 +10,26 @@ public:
 };
 
 void inorderTraversal(TreeNode* root) {
-        TreeNode *current=root;
-        TreeNode *rightmost;
-        while(current!=NULL){
-            if(current->left!=NULL){
-                rightmost=current->left;
-                while(rightmost->right!=NULL && rightmost->right!=current){
-                    rightmost=rightmost->right;
-                }
-                if(rightmost->right==NULL){ /* first time */
-                    rightmost->right=current;
-                    current=current->left;
-                }else{  /* second time */
-                    std::cout << current->val << " ";
-                    rightmost->right=NULL;
-                    current=current->right;
-                }
-            }else{  /* nodes which do not have left child */
+    TreeNode *current=root;
+    TreeNode *rightmost;
+    while(current!=NULL){
+        if(current->left!=NULL){
+            rightmost=current->left;
+            while(rightmost->right!=NULL && rightmost->right!=current){
+                rightmost=rightmost->right;
+            }
+            if(rightmost->right==NULL){ /* first time */
+                rightmost->right=current;
+                current=current->left;
+            }else{  /* second time */
                 std::cout << current->val << " ";
+                rightmost->right=NULL;
                 current=current->right;
             }
+        }else{  /* nodes which do not have left child */
+            std::cout << current->val << " ";
+            current=current->right;
+        }
     }
     return;
 }

@@ -10,9 +10,9 @@ public:
 };
 
 void preorderTraversal(TreeNode* root) {
-      TreeNode *current=root;
-      TreeNode *rightmost;
-      while(current != nullptr){
+    TreeNode *current=root;
+    TreeNode *rightmost;
+    while(current != nullptr){
         if(current->left != nullptr){
             rightmost=current->left;
             while(rightmost->right!=nullptr && rightmost->right!=current){

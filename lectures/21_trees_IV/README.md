@@ -32,26 +32,26 @@ Instead of using extra memory (like recursion stack or an explicit stack), Morri
 
 ```cpp
 void inorderTraversal(TreeNode* root) {
-        TreeNode *current=root;
-        TreeNode *rightmost;
-        while(current!=NULL){
-            if(current->left!=NULL){
-                rightmost=current->left;
-                while(rightmost->right!=NULL && rightmost->right!=current){
-                    rightmost=rightmost->right;
-                }
-                if(rightmost->right==NULL){ /* first time */
-                    rightmost->right=current;
-                    current=current->left;
-                }else{  /* second time */
-                    std::cout << current->val << " ";
-                    rightmost->right=NULL;
-                    current=current->right;
-                }
-            }else{  /* nodes which do not have left child */
+    TreeNode *current=root;
+    TreeNode *rightmost;
+    while(current!=NULL){
+        if(current->left!=NULL){
+            rightmost=current->left;
+            while(rightmost->right!=NULL && rightmost->right!=current){
+                rightmost=rightmost->right;
+            }
+            if(rightmost->right==NULL){ /* first time */
+                rightmost->right=current;
+                current=current->left;
+            }else{  /* second time */
                 std::cout << current->val << " ";
+                rightmost->right=NULL;
                 current=current->right;
             }
+        }else{  /* nodes which do not have left child */
+            std::cout << current->val << " ";
+            current=current->right;
+        }
     }
     return;
 }
@@ -80,19 +80,19 @@ Print the node before going left instead of after restoring links.
 
 ```cpp
 void preorderTraversal(TreeNode* root) {
-      TreeNode *current=root;
-      TreeNode *rightmost;
-      while(current != nullptr){
+    TreeNode *current=root;
+    TreeNode *rightmost;
+    while(current != nullptr){
         if(current->left != nullptr){
             rightmost=current->left;
             while(rightmost->right!=nullptr && rightmost->right!=current){
                 rightmost=rightmost->right;
             }
-            if(rightmost->right==nullptr){ /* first time */
+            if(rightmost->right==nullptr){ /* visiting the right most node for the first time */
                 std::cout << current->val << " ";
                 rightmost->right=current;
                 current=current->left;
-            }else{  /* second time */
+            }else{  /* visiting the right most node for the second time */
                 rightmost->right=nullptr;
                 current=current->right;
             }

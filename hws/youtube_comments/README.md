@@ -1,6 +1,6 @@
 # Homework 8 — Managing Youtube Comments
 
-In this assignment you will develop a program to manage youtube comments, let's call this program New York Comments. Please read the entire handout before starting to code the assignment.
+In this assignment you will develop a program to manage YouTube comments, let's call this program New York Comments. Please read the entire handout before starting to code the assignment.
 
 ## Learning Objectives
 
@@ -9,9 +9,9 @@ In this assignment you will develop a program to manage youtube comments, let's 
 
 ## Background
 
-A reddit user complained about this: [Why are YouTube comments not threaded like reddit comments? Why is there only one level of nestedness?](https://www.reddit.com/r/youtube/comments/8uei3n/why_are_youtube_comments_not_threaded_like_reddit/).
+A Reddit user complained about this: [Why are YouTube comments not threaded like Reddit comments? Why is there only one level of nestedness?](https://www.reddit.com/r/youtube/comments/8uei3n/why_are_youtube_comments_not_threaded_like_reddit/).
 
-The complaint is saying that on reddit you will get a nested comment chain like this:
+The complaint is saying that on Reddit you will get a nested comment chain like this:
 
 ```
 A: This video is fake
@@ -29,9 +29,9 @@ A: This video is fake
     C: How can you be so dumb?
 ```
 
-Now, is C replying to B or to A? In fact, on YouTube, even if C relies to B, you will still get something like this. The problem is, YouTube does manage their comments in trees, but they only allow the trees to have two levels: parent and children, but there are no grandchildren, and that's what this user refers to as "only one level of nestedness". In order to support multiple level of nestedness, we need to create trees with more than two levels, and that is what you do in this assignment, your goal is to write a program to make youtube display comments the better way, so users can see which comment is a reply to which comment.
+Now, is C replying to B or to A? In fact, on YouTube, even if C replies to B, you will still get something like this. The problem is, YouTube does manage their comments in trees, but they only allow the trees to have two levels: parent and children, but there are no grandchildren, and that's what this user refers to as "only one level of nestedness". In order to support multiple level of nestedness, we need to create trees with more than two levels, and that is what you do in this assignment, your goal is to write a program to make YouTube display comments the better way, so users can see which comment is a reply to which comment.
 
-If you are still not clear about this problem, try to reply to a comment on youtube, and make sure you reply to a comment which is already a reply to another comment.
+If you are still not clear about this problem, try to reply to a comment on YouTube, and make sure you reply to a comment which is already a reply to another comment.
 
 ## Supported Commands
 
@@ -44,11 +44,11 @@ nycomments.exe input1.json input2.txt output.txt
 Here:
 
 - *nycomments.exe* is the executable file name.
-- input1.json contains existing comments to a youtube video. In this README we will refer to this file as **the json file**.
+- input1.json contains existing comments to a YouTube video. In this README we will refer to this file as **the json file**.
 - input2.txt contains operations we want to perform. In this README we will refer to this file as **the second input file**, or just the **input2** file.
 - output.txt is where to print your output to.
 
-To summerize what your program does: your program reads all existing comments from **the json file**, store them in trees, and read the operations from **the second input file**, and then perform these operations, and every time there is a "display_comment" operation in **the second input file**, you program display the specified comment into output.txt. If there are multiple *display_comment* operations in **the second input file**, then your program will display all of them in *output.txt*, one by one.
+To summarize what your program does: your program reads all existing comments from **the json file**, store them in trees, and read the operations from **the second input file**, and then perform these operations, and every time there is a "display_comment" operation in **the second input file**, your program displays the specified comment into output.txt. If there are multiple *display_comment* operations in **the second input file**, then your program will display all of them in *output.txt*, one by one.
 
 ## Format of input1.json
 
@@ -60,9 +60,9 @@ input1.json represents the json files, it stores all existing comments. Each lin
 
 The line is enclosed with a pair of curly braces. And every line has these same fields:
 
-- *video_id*: youtube assign each video an id.
+- *video_id*: YouTube assigns each video an id.
 - author: username of the author.
-- *comment_id*: youtube assign each comment an id.
+- *comment_id*: YouTube assigns each comment an id.
 - *like_count*: how many likes this comment gets.
 - *reply_count*: how many comments are a reply to this comment.
 - *is_reply*: is this a reply to an existing comment? If not, then it's a comment to the video; in other words, every comment, is either a reply to an existing comment (*is_reply* will be true), or is a comment to the original video (*is_reply* will be false).
@@ -88,7 +88,7 @@ As can be seen from this above example, a comment which is a direct response to 
 
 see the *is_reply* field is true here.
 
-Our data set includes 6 json files, just to satisfy your curiosity, they include comments corresponding to the following 6 youtube videos:
+Our data set includes 6 json files, just to satisfy your curiosity, they include comments corresponding to the following 6 YouTube videos:
 
 - hold_me_closer.json is corresponding to this video titled [Elton John, Britney Spears - Hold Me Closer (Official Video)](https://www.youtube.com/watch?v=qExVlz3zb0k).
 
@@ -167,9 +167,9 @@ Here:
 
 **Definition of deleting a comment**:  in this assignment, the definition of "deleting a comment" means delete this current comment, as well as all its descendants. For example, if A is a comment, B is a reply to A, C is a reply to B, D is also a reply to B, E is a reply to D, F is a reply to E, then the operation of "deleting A" means deleting A, B, C, D, E, and F, i.e., deleting A, and all of its descendants.
 
-The following three pictures from youtube demonstrate the visual effect of this delete process.
+The following three pictures from YouTube demonstrate the visual effect of this delete process.
 
-- Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3". (Question: if "test2" is the parent of "test3", then why do "test2" and "test3" have the same indentation? Well, this is exactly the problem youtube has and it is exactly what we want to you solve in this assignment.)
+- Before delete, we have four comments: "test", "test2", "test3", "test4". "test" and "test4" are both comments to the video, thus they are siblings, and have no parents."test2" is a reply comment to "test", thus "test2" is the child of "test", and "test" is the parent of "test2". "test3" is a reply comment to "test2", thus "test3" is the child of "test2", and "test2" is the parent of "test3". (Question: if "test2" is the parent of "test3", then why do "test2" and "test3" have the same indentation? Well, this is exactly the problem YouTube has and it is exactly what we want to you solve in this assignment.)
 ![alt text](before_delete.png "before delete")
 
 - Now we want to delete "test". Based on our definition of delete, this should cause the deletion of "test", "test2", and "test3".
@@ -209,7 +209,7 @@ To summarize the rules, in this homework, no sorting is needed, but you need to 
 
 ### Indentation
 
-Just like youtube, we use indentations to display the tree structure of the comments. The following image is an example from youtube:
+Just like YouTube, we use indentations to display the tree structure of the comments. The following image is an example from YouTube:
 
 ![alt text](comments_indentation.png "comments indentation")
 
@@ -299,7 +299,7 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
 
 Q1: Why sometimes the reply count does not match with the number of replies displayed?
 
-A1: On youtube, some inappropriate comments are not displayed but they still contribute to the reply count. And such comments are not included in our json files.
+A1: On YouTube, some inappropriate comments are not displayed but they still contribute to the reply count. And such comments are not included in our json files.
 
 Q2: Can I use the <nlohmann/json.hpp> to parse the json file?
 

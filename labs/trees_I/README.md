@@ -8,15 +8,15 @@ Pair up with one other student in your lab section and complete the exercises be
 
 problem 1: Draw a binary tree with 4 levels with the integers 1-7 such that the sum of elements on every level of the tree is the same.
 
-problem 2: Create a exactly balanced binary search tree with 7 color words (order the colors alphabetically).
+problem 2: Create an exactly balanced binary search tree with 7 color words (order the colors alphabetically).
 
-problem 3: Arrange the following items of clothing in a tree with 3 levels such that the parent of every node is generally donned before the child when dressing in the morning: jacket, pants, shoes, shirt, undergarments, socks, and belt.
+problem 3: Arrange the following items of clothing in a tree with 3 levels such that the parent of every node is generally donned before the child when dressing in the morning and nodes at the same level could be donned in any order: jacket, pants, shoes, shirt, undergarments, socks, and belt.
 
 problem 4: Draw a binary search tree with the integers 1-7, where 3 has no parent and 5 has no children, and there are no other elements at the same level as 5.
 
 problem 5: What is the sum of the leaf nodes in a perfectly balanced binary search tree containing the powers of 2 less than 128?
 
-problem 6: Draw a exactly-balanced binary search tree containing the letters of the word: uncopyrightable
+problem 6: Draw an exactly-balanced binary search tree containing the letters of the word: uncopyrightable
 
 &nbsp;
 &nbsp;
@@ -28,7 +28,7 @@ problem 6: Draw a exactly-balanced binary search tree containing the letters of 
 
 What is the pre-order traversal of the tree above?
 
-problem 7: Now draw a exactly-balanced binary tree of characters such that a post-order traversal spells the word: uncopyrightable
+problem 7: Now draw an exactly-balanced binary tree of characters such that a post-order traversal spells the word: uncopyrightable
 
 
 &nbsp;

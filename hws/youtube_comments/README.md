@@ -123,7 +123,7 @@ Here:
 
 2. reply to a comment
 
-A line which starts with the string *reply_to_comment" means this line describes the operation of "reply to a comment". Here is an example:
+A line which starts with the string "reply_to_comment" means this line describes the operation of *reply to a comment*. Here is an example:
 
 ```console
 reply_to_comment Ugzsyj0jivPUQdfy_Y94AaABAg Ugzsyj0jivPUQdfy_Y94AaABAg.0 @user1 "Britney is back!"
@@ -141,7 +141,7 @@ This whole lines means that this user *user1* is making a comment with the conte
 
 3. like a comment
 
-A line which starts with the string *like_comment" means this line describes the operation of "like a comment". Here is an example:
+A line which starts with the string "like_comment" means this line describes the operation of *like a comment*. Here is an example:
 
 ```console
 like_comment Ugzsyj0jivPUQdfy_Y94AaABAg.0.1.5.8.888
@@ -180,7 +180,7 @@ The following three pictures from YouTube demonstrate the visual effect of this 
 
 5. display comment
 
-A line which starts with the string "display_comment" means this line describes the operation of "display a comment". Here is an example:
+A line which starts with the string "display_comment" means this line describes the operation of *display a comment*. Here is an example:
 
 ```console
 display_comment Ugw2rL586Lv-OZNS6E94AaABAH

@@ -158,7 +158,7 @@ despite the actual distribution of keys that are to be stored.
 satisfy the second.
 - Another example of a dangerous hash function on string keys is to add or multiply the ascii values of each char:
 ```cpp
-unsigned int hash(string const& k, unsigned int N) {
+unsigned int hash(const std::string& k, unsigned int N) {
 	unsigned int value = 0;
 	for (unsigned int i=0; i<k.size(); ++i) {
 		value += k[i]; // conversion to int is automatic
@@ -166,12 +166,16 @@ unsigned int hash(string const& k, unsigned int N) {
 	return value % N;
 }
 ```
-The problem is that different permutations of the same string result in the same hash table location.
+The problem is its high collision rate:
+
+1. Anagrams (e.g., "listen" and "silent") get the same hash.
+
+2. Many different strings can sum to the same value, leading to collisions. 
 
 - This can be improved through multiplications that involve the position and value of the key:
 
 ```cpp
-unsigned int hash(string const& k, unsigned int N) {
+unsigned int hash(const std::string& k, unsigned int N) {
 	unsigned int value = 0;
 	for (unsigned int i=0; i<k.size(); ++i) {
 		value = value*8 + k[i]; // conversion to int is automatic

@@ -159,9 +159,10 @@ satisfy the second.
 - Another example of a dangerous hash function on string keys is to add or multiply the ascii values of each char:
 ```cpp
 unsigned int hash(string const& k, unsigned int N) {
-unsigned int value = 0;
-for (unsigned int i=0; i<k.size(); ++i)
-	value += k[i]; // conversion to int is automatic
+	unsigned int value = 0;
+	for (unsigned int i=0; i<k.size(); ++i) {
+		value += k[i]; // conversion to int is automatic
+	}
 	return value % N;
 }
 ```

@@ -1,4 +1,4 @@
-# Lab 12 — Hash Tables
+# Lab 9 — Hash Tables
 
 <!--In this lab, you will first experiment with our hash table implementation of a set. The key differences between the ds_set class (based on a binary search tree) and the ds_hashset class (based on a hash table, of course), are the performance of insert/find/erase: O(log n) vs. O(1), and the order that the elements are traversed using iterators: the set was in order, while the hashset is in no apparent order.-->
 

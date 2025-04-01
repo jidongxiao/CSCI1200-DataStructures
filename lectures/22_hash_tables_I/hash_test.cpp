@@ -23,6 +23,7 @@ unsigned int betterHash(const std::string& k, unsigned int N) {
 }
 
 // a good hash function should distribute values evenly across N buckets.
+// note that function pointers are used here
 void testCollisions(unsigned int (*hashFunc)(const std::string&, unsigned int), 
                     const std::vector<std::string>& testStrings, unsigned int N) {
     std::unordered_map<unsigned int, int> bucketCounts;
@@ -53,6 +54,7 @@ std::vector<std::string> generateTestStrings(int count) {
     return testStrings;
 }
 
+// note that function pointers are used here
 void benchmark(unsigned int (*hashFunc)(const std::string&, unsigned int),
                const std::vector<std::string>& testStrings, unsigned int N) {
     clock_t start = clock();

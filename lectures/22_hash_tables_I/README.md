@@ -152,6 +152,7 @@ std::string identify(Node* phonebook[PHONEBOOK_SIZE], int number) {
 
 ## 22.9 What makes a Good Hash Function?
 
+- Deterministic – same input always produces the same hash.
 - Goals: fast O(1) computation and a random, uniform distribution of keys throughout the table,
 despite the actual distribution of keys that are to be stored.
 - For example, using: f(k) = abs(k)%N as our hash function satisfies the first requirement, but may not

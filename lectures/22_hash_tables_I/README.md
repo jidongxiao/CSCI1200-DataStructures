@@ -178,12 +178,26 @@ The problem is its high collision rate:
 unsigned int hash(const std::string& k, unsigned int N) {
 	unsigned int value = 0;
 	for (unsigned int i=0; i<k.size(); ++i) {
-		value = value*8 + k[i]; // conversion to int is automatic
+		value = value*31 + k[i]; // conversion to int is automatic
 	}
 	return value % N;
 }
 ```
 - The 2nd method is better, but can be improved further. The theory of good hash functions is quite involved and beyond the scope of this course.
+
+- You can run [this program](hash_test.cpp) which will show that the second hash function produces a lower collision rate:
+
+```console
+$ g++ -Wall -Wextra hash_test.cpp 
+$ ./a.out 
+Testing badHash (Summing ASCII values):
+Total Collisions: 4914
+Execution Time: 0.000142 seconds
+
+Testing betterHash (Multiplication by 31, a prime):
+Total Collisions: 4000
+Execution Time: 0.000148 seconds
+```
 
 ## 22.10 How do we Resolve Collisions? METHOD 1: Separate Chaining
 

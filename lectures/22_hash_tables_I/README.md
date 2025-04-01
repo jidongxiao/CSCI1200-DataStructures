@@ -63,8 +63,8 @@ std::string identify(const std::vector<std::string> &phonebook, int number) {
 }
 ```
 
-Exercise: What’s the memory usage for the vector-based Caller ID system?
-What’s the expected running time for identify, insert, and erase?
+Exercise: What's the memory complexity for the vector-based Caller ID system?
+What's the expected runtime complexity for identify, insert, and erase?
 
 ## 22.5 Caller ID with an STL Map
 
@@ -85,10 +85,10 @@ std::string identify(const std::map<int,std::string> &phonebook, int number) {
 }
 ```
 
-Exercise: What’s the memory usage for the map-based Caller ID system?
-What’s the expected running time for identify, add, and erase?
+Exercise: What's the memory complexity for the map-based Caller ID system?
+What's the expected runtime complexity for identify, add, and erase?
 
-## 22.6 Now let’s implement Caller ID with a Hash Table
+## 22.6 Now let's implement Caller ID with a Hash Table
 
 ![alt text](phonebook.png "phonebook")
 
@@ -138,19 +138,13 @@ std::string identify(Node* phonebook[PHONEBOOK_SIZE], int number) {
 }
 ```
 
-## 22.7 Exercise: Choosing a Hash Function
+## 22.7 Exercise: Hash Table Performance
 
-- What’s a good hash function for this application?
+- What's the memory complexity for the hash-table-based Caller ID system?
 
-- What’s a bad hash function for this application?
+- What's the expected runtime complexity for identify, insert, and erase?
 
-## 22.8 Exercise: Hash Table Performance
-
-- What’s the memory usage for the hash-table-based Caller ID system?
-
-- What’s the expected running time for identify, insert, and erase?
-
-## 22.9 What makes a Good Hash Function?
+## 22.8 What makes a Good Hash Function?
 
 - Deterministic – same input always produces the same hash.
 - Goals: fast O(1) computation and a random, uniform distribution of keys throughout the table,
@@ -200,12 +194,12 @@ Total Collisions: 4000
 Execution Time: 0.000148 seconds
 ```
 
-## 22.10 How do we Resolve Collisions? METHOD 1: Separate Chaining
+## 22.9 How do we Resolve Collisions? METHOD 1: Separate Chaining
 
 - Each table location stores a linked list of keys (and values) hashed to that location (as shown above in the phonebook hashtable). Thus, the hashing function really just selects which list to search or modify.
 - This works well when the number of items stored in each list is small, e.g., an average of 1. Other data structures, such as binary search trees, may be used in place of the list, but these have even greater overhead considering the (hopefully, very small) number of items stored per bin.
 
-## 22.11 How do we Resolve Collisions? METHOD 2: Open Addressing
+## 22.10 How do we Resolve Collisions? METHOD 2: Open Addressing
 
 - In open addressing, when the chosen table location already stores a key (or key-value pair), a different table location is sought in order to store the new value (or pair).
 - Here are three different open addressing variations to handle a collision during an insert operation:
@@ -233,7 +227,7 @@ More generally, the jth “probe” of the table is (i + c<sub>1</sub>j + c<sub>
 
   – Cost of computing new hash values.
 
-## 22.12 Hash Table in STL?
+## 22.11 Hash Table in STL?
 
 - The Standard Template Library standard and implementation of hash table have been slowly evolving over
 many years. Unfortunately, the names “hashset” and “hashmap” were spoiled by developers anticipating the
@@ -358,7 +352,7 @@ each key into the resized vector. Exercise: Write resize().
 - Any insert operation invalidates all ds_hashset iterators because the insert operation could cause a resize of
 the table. The erase function only invalidates an iterator that references the current object.-->
 
-## 22.13 Leetcode Exercises
+## 22.12 Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum_hash_table.cpp](../../leetcode/p1_twosum_hash_table.cpp).
 

@@ -185,7 +185,7 @@ unsigned int hash(const std::string& k, unsigned int N) {
 ```
 - The 2nd method is better, but can be improved further. The theory of good hash functions is quite involved and beyond the scope of this course.
 
-- You can run [this program](hash_test.cpp) which will show that the second hash function produces a lower collision rate:
+- You can run this program [hash_test.cpp](hash_test.cpp) which will show that the second hash function produces a lower collision rate:
 
 ```console
 $ g++ -Wall -Wextra hash_test.cpp 

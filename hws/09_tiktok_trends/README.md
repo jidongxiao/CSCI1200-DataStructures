@@ -1,4 +1,4 @@
-# Homework 10 — TikTok Trends
+# Homework 9 — TikTok Trends
 
 In this assignment you will develop a program to display the trends page like TikTok does, let's call this program New York Trends. Please read the entire handout before starting to code the assignment.
 
@@ -36,9 +36,9 @@ Here:
 - *nytrends.exe* is the executable file name.
 - input.json contains data collected from TikTok. In this README we will refer to this file as **the json file**.
 - output.txt is where to print your output to. In this README we will refer to this file as **the output file**.
-- this field will be either hashtag or sound. When this field is *hashtag*, your program should display the top 10 trending hashtags to the output file. When this field is *sound*, your program should display the top 10 trending sounds to the output file.
+- this field will be either hashtag or sound. When this field is *hashtag*, your program should display the top 20 trending hashtags to the output file. When this field is *sound*, your program should display the top 20 trending sounds to the output file.
 
-To summarize what your program does: your program reads data from **the json file**, analyze the data and find out the top 10 trending hashtags, or the top 10 trending sounds, and display them in the output file.
+To summarize what your program does: your program reads data from **the json file**, analyze the data and find out the top 20 trending hashtags, or the top 20 trending sounds, and display them in the output file.
 
 ## Format of input.json
 
@@ -191,9 +191,9 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 10 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+More specifically, you should print the top 20 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
-Definition of the top 10 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by comparing the hashtag names, i.e., apply the less than operator (<) to the two names - both are std::strings, the hashtag whose name is less than the name of the other hashtag should be the winner and should be displayed first.
+Definition of the top 20 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by comparing the hashtag names, i.e., apply the less than operator (<) to the two names - both are std::strings, the hashtag whose name is less than the name of the other hashtag should be the winner and should be displayed first.
 
 Example 1:
 
@@ -225,9 +225,9 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 10 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+More specifically, you should print the top 20 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
 
-Definition of the top 10 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by comparing the music id, i.e., apply the less than operator (<) to the two music ids - both are std::strings, the sound whose music id is less than the music id of the other sound should be the winner, and should be displayed first.
+Definition of the top 20 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by comparing the music id, i.e., apply the less than operator (<) to the two music ids - both are std::strings, the sound whose music id is less than the music id of the other sound should be the winner, and should be displayed first.
 
 Example 1:
 

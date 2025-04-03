@@ -321,7 +321,7 @@ a3: You can skip the final exam; we will apply the highest test score among your
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - IMPLEMENTATION AND CODING STYLE (9 pts)
+ - IMPLEMENTATION AND CODING STYLE (8 pts)
    - No credit (significantly incomplete implementation) (-9)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
@@ -331,7 +331,7 @@ a3: You can skip the final exam; we will apply the highest test score among your
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-1)
- - DATA REPRESENTATION (5 pts)
+ - DATA REPRESENTATION (6 pts)
    - No credit (significantly incomplete implementation). (-5)
    - Does not use std::priority_queue at all. (-5)
 <!--

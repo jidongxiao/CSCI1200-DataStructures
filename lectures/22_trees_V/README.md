@@ -1,6 +1,6 @@
 # Lecture 22 --- Trees, Part V plus bonus lecture on Problem Solving Techniques
 
-## Test 3 Information
+<!-- ## Test 3 Information
 
 - Test 3 will be held Thursday, April 4th, 2024 from 6-7:50pm.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If on Tuesday evening you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
@@ -17,6 +17,7 @@
 - Look at the size of the answer box. If your solution is going to take a lot more space than the box allows, we are probably looking for the solution to a simpler problem or a simpler solution to the problem.
 - Going in to the test, you should know what big topics will be covered on the test. As you skim through the problems, see if you can match up those big topics to each question. Even if you are stumped about how to solve the whole problem, or some of the details of the problem, make sure you demonstrate your understanding of the big topic that is covered in that question.
 - Re-read the problem statement carefully. Make sure you didn't miss anything.
+-->
 
 # Review from Lecture 21
 - Red Black tree

@@ -301,6 +301,19 @@ q1: For cases where a hashtag appears twice on a line does that count as two sep
 
 a1: Yes, a hashtag appears 2 times in one post will be counted as 2 times. This is the reason why some URLs appear twice in the output as the top 3 videos of some hashtag - as in that #foryou case in tiny1. (This is just to simplify your implementation).
 
+q2: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?
+
+a2: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
+- Drop the lowest test score
+- Drop 2 of the lowest homeworks
+- Skip 1 future homework
+
+   You will receive an email asking you about which option you want to choose, or if you want to propose a different option.
+
+q3: What if my program ranks higher than the instructor's program on leaderboard 6 and leaderboard 9?
+
+a3: You can skip the final exam; we will apply the highest test score among your test 1, 2, and 3, as your final exam score.
+
 ## Rubric
 
 17 pts

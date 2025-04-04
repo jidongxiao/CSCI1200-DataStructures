@@ -314,6 +314,10 @@ q3: What if my program ranks higher than the instructor's program on leaderboard
 
 a3: You can skip the final exam; we will apply the highest test score among your test 1, 2, and 3, as your final exam score.
 
+q4: How many submissions can I make?
+
+a4: 60. Submitty will deduct points once you submit more than 60 times.
+
 ## Rubric
 
 17 pts

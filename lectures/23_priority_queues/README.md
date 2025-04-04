@@ -161,7 +161,6 @@ int main() {
 5 4 3 3 1
 ```
 
-- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator.<!--; or use a lambda expression.-->
 - You can use std::priority_queue as a min heap via using std::greater, as can be seen in this [example](min_heap.cpp):
 
 ```cpp
@@ -193,7 +192,103 @@ int main() {
 1 3 3 4 5
 ```
 
-## 23.6 Leetcode Exercises
+## 23.6 Overloading operator()
+
+- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator.<!--; or use a lambda expression.-->
+- This is because std::priority_queue by default uses std::less &lt T &gt, which means it tries to use operator< on the objects. However, if your class does not define operator< or you need a custom sorting order, you must explicitly provide a comparator.
+
+### 23.6.1 Why Not Overload operator< Directly?
+
+- Overloading operator< means the class has a default order.
+
+- However, different uses of the class might need different orderings:
+
+  - One priority queue might sort ascending (min-heap).
+
+  - Another might sort descending (max-heap).
+
+  - A third might sort by a completely different property.
+
+- If we define operator<, we are locking in one specific ordering that affects all usages of the class.
+
+### 23.6.2 operator() Allows Custom Comparisons
+
+- Instead of modifying the class, we pass a comparator that defines how the priority queue orders elements.
+
+- Example:
+
+  - We can sort by viewCount in descending order.
+
+  - Another priority queue might sort by title lexicographically.
+
+  - Another might sort by uploadDate.
+
+By overloading operator(), we can create multiple comparators and use them flexibly.
+
+### 23.6.3 Example Code
+
+```cpp
+#include <iostream>
+#include <queue>
+#include <vector>
+
+class Video {
+public:
+    std::string title;
+    int viewCount;
+
+    Video(std::string t, int v) : title(t), viewCount(v) {}
+};
+
+// Comparator for sorting by viewCount (descending)
+// If Compare(a, b) returns true, it means a has a lower priority than b.
+// Thus here, this comparator function means a has a lower priority if it has a lower viewCount.
+// Therefore, the video with the highest viewCount stays on top of the heap, meaning this is a max heap.
+struct CompareByViews {
+    bool operator()(const Video& a, const Video& b) {
+        return a.viewCount < b.viewCount;
+    }
+};
+
+// Comparator for sorting by title (alphabetical order)
+// If Compare(a, b) returns true, it means a has lower priority than b.
+// Thus here, this comparator function means a has a lower priority if a's title goes after b's title.
+// Therefore, this is a min heap.
+struct CompareByTitle {
+    bool operator()(const Video& a, const Video& b) {
+        return a.title > b.title;  // Min-heap (A-Z)
+    }
+};
+
+int main() {
+    std::priority_queue<Video, std::vector<Video>, CompareByViews> pq_views;
+    std::priority_queue<Video, std::vector<Video>, CompareByTitle> pq_titles;
+
+    pq_views.push(Video("Video A", 500));
+    pq_views.push(Video("Video B", 1000));
+    pq_views.push(Video("Video C", 300));
+
+    pq_titles.push(Video("Video A", 500));
+    pq_titles.push(Video("Video B", 1000));
+    pq_titles.push(Video("Video C", 300));
+
+    std::cout << "Sorted by views:\n";
+    while (!pq_views.empty()) {
+        std::cout << pq_views.top().title << " (" << pq_views.top().viewCount << " views)\n";
+        pq_views.pop();
+    }
+
+    std::cout << "\nSorted by title:\n";
+    while (!pq_titles.empty()) {
+        std::cout << pq_titles.top().title << "\n";
+        pq_titles.pop();
+    }
+
+    return 0;
+}
+```
+
+## 23.7 Leetcode Exercises
 
 - [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/). Solution: [p215_kth_largest_element.cpp](../../leetcode/p215_kth_largest_element.cpp).
 - [Leetcode problem 373: Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/). Solution: [p373_k_pairs_smallest_sums.cpp](../../leetcode/p373_k_pairs_smallest_sums.cpp).

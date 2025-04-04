@@ -122,9 +122,7 @@ Lambda is new to the C++ language (part of C++11). But lambda is a core piece of
 
 ## 23.4 Exercise: Drawing Binary Heaps
 
-- Draw two different binary heaps with these values: 52 13 48 7 32 40 18 25 4
-
-- Draw several other trees with these values which are not binary heaps.
+- Draw two different binary heaps (Min Heap) with these values: 52 13 48 7 32 40 18 25 4
 
 ## 23.5 STL priority_queue
 

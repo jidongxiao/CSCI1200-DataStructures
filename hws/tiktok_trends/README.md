@@ -304,9 +304,9 @@ a1: Yes, a hashtag appears 2 times in one post will be counted as 2 times. This 
 q2: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?
 
 a2: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
-- Drop the lowest test score
-- Drop 2 of the lowest homeworks
-- Skip remaining homework and remaining labs
+- Drop the lowest test score - replace it with your highest test score.
+- Drop 2 of the lowest homeworks - replace them with your highest homework score.
+- Skip remaining homework and remaining labs (and receive full credits for them)
 
    You will receive an email asking you about which option you want to choose, or if you want to propose a different option.
 

@@ -195,7 +195,7 @@ int main() {
 ## 23.6 Overloading operator()
 
 - When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator.<!--; or use a lambda expression.-->
-- This is because std::priority_queue by default uses std::less &lt T &gt, which means it tries to use operator< on the objects. However, if your class does not define operator< or you need a custom sorting order, you must explicitly provide a comparator.
+- This is because std::priority_queue by default uses std::less &lt;T&gt;, which means it tries to use operator< on the objects. However, if your class does not define operator< or you need a custom sorting order, you must explicitly provide a comparator.
 
 ### 23.6.1 Why Not Overload operator< Directly?
 

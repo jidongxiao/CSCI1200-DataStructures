@@ -288,6 +288,22 @@ int main() {
 }
 ```
 
+This above program, which is also [here](video_test.cpp), will print the following:
+
+```console
+$ g++ video_test.cpp -o video_test
+$ ./video_test 
+Sorted by views:
+Video B (1000 views)
+Video A (500 views)
+Video C (300 views)
+
+Sorted by title:
+Video A
+Video B
+Video C
+```
+
 ## 23.7 Leetcode Exercises
 
 - [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/). Solution: [p215_kth_largest_element.cpp](../../leetcode/p215_kth_largest_element.cpp).

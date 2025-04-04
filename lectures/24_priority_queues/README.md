@@ -1,19 +1,4 @@
-# Lecture 24 --- Priority Queues
-
-<!--
-## Test 3 Information
-
-- Test 3 will be held Thursday, November 16th, 2023 from 6-7:50pm. (Rooms will be different this time, Carnegie 113, LOW 4050, LOW 3051, Ricketts 211, Sage 5101, Sage 5510. AE 216 for accommodations.)
-- Student’s assigned test room, row, and seat assignments will be re-randomized. If on Wednesday morning you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.
-- If you will miss an exam due to a scheduled event or unforeseen circumstance, you should email the DS instructors list (ds_instructors@cs.rpi.edu) as soon as possible. You will be required to share documentation of the event to qualify for a makeup. If you are unable to attend an exam due to illness, please notify us before the exam to request a makeup. Students will be allowed to request one illness-related makeup without documentation or a doctor's note. All following makeup requests will require documentation.
-- If you have a letter from Disability Services for Students and you have not already emailed it to
-ds_instructors@cs.rpi.edu, please do so by Tuesday 4:30pm. Shianne Hulbert will be in contact with
-you about your accommodations for the test.
-- Coverage: Lectures 1-22, Labs 1-12, HW 1-8.
-- OPTIONAL: you are allowed two physical pieces of 8.5x11” paper, that’s four “sides”. We will not collect these electronically and we will not pre-print them, you will have to bring these notes pages yourself if you want them. We will check at the start of the exam that you do not have more than two pieces of paper for your notes!
-- All students must bring their Rensselaer photo ID card.
-- Bring pencil(s) & eraser (pens are ok, but not recommended).
--->
+# Lecture 23 --- Priority Queues
 
 ## Today’s Lecture
 

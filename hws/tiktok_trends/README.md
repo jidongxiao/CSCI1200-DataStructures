@@ -191,7 +191,7 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 20 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+More specifically, you should print the top 20 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this hashtag have the same view count, pick the one which appears first in the input json file.
 
 Definition of the top 20 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by comparing the hashtag names, i.e., apply the less than operator (<) to the two names - both are std::strings, the hashtag whose name is less than the name of the other hashtag should be the winner and should be displayed first.
 
@@ -225,7 +225,7 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 20 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video.
+More specifically, you should print the top 20 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this sound have the same view count, pick the one which appears first in the input json file.
 
 Definition of the top 20 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by comparing the music id, i.e., apply the less than operator (<) to the two music ids - both are std::strings, the sound whose music id is less than the music id of the other sound should be the winner, and should be displayed first.
 

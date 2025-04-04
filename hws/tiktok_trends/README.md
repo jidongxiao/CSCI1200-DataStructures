@@ -282,14 +282,14 @@ In order to use this above code block, you need to include the regular expressio
 
 ## Program Requirements & Submission Details
 
-In this assignment, you are required to use std::priority_queue. There is no other requirement on what data structures you can use and what data structures you can not use.
+In this assignment, you are required to use std::priority_queue. There is no other requirement on what data structures you can use and what data structures you can not use; and there is no other requirements on what libraries you can use or can not use.
 
 <!--**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.-->
 
 Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 04/11/2025, Thursday, 10pm.
+**Due Date**: 04/10/2025, Thursday, 10pm.
 
 ## Instructor's Code
 

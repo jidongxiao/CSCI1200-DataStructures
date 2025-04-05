@@ -50,7 +50,7 @@ input.json represents the json file. It stores posts we collected from TikTok. E
 
 The line is enclosed with a pair of curly braces. And every line has these same fields:
 
-- *id*: TikTok assigns each post an id.
+- *id*: TikTok assigns each post an id, which is also known as the **video id**.
 - text: each post has its text content and its video/audio content. The text content is stored here. Keep in mind that on TikTok, a post can't just include text information, it must contain a video. Therefore, in the remainder of this section, when we say **the video** or **this video**, we mean the video which comes with this post. When users uses hash tags, these hash tags will appear in the text content, like in this above example, Taylor Swift used hash tags twice: *#tstheerastour* and *#swifttok*.
 - *createTime*: a timestamp indicating when this post was created. This is the timestamp in Unix epoch format. It represents the number of seconds that have passed since January 1, 1970 (the Unix epoch) until the specified date and time.
 - *createTimeISO*: still a timestamp indicating when this post was created. This is the same timestamp but presented in the ISO 8601 date and time format, which is more human friendly. Here, *"T"* is a separator indicating the beginning of the time portion; and *"Z"* indicates that the time is in Coordinated Universal Time (UTC).

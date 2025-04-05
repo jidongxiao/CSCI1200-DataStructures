@@ -211,10 +211,10 @@ used 88 times
 
 cover url: https://p16-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/c3fd887eebd64641953a0d98fdbcae70?x-expires=1700452800&x-signature=H%2FalVtW5d%2FSwmlpXE%2B3q4It4bjM%3D
 web video url: https://www.tiktok.com/@caerabooo/video/7242507137543425323
-cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/79ae4d425f0a4ae8b8d7a5e0f3f5b589_1650391089?x-expires=1700452800&x-signature=%2Bq7IPVVSaIrSJwmsewqaRqy36EU%3D
-web video url: https://www.tiktok.com/@ballsco/video/7088375668114836742
 cover url: https://p16-sign-useast2a.tiktokcdn.com/obj/tos-useast2a-p-0037-euttp/oIbM97K3KJ6GIgDTs0reRIfnE7CC1QjUfMeAFG?x-expires=1700452800&x-signature=IndBdLnhx05kmP13bMQIRPLIY5g%3D
 web video url: https://www.tiktok.com/@emanuelabarretta/video/7271721632329239841
+cover url: https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/79ae4d425f0a4ae8b8d7a5e0f3f5b589_1650391089?x-expires=1700452800&x-signature=%2Bq7IPVVSaIrSJwmsewqaRqy36EU%3D
+web video url: https://www.tiktok.com/@ballsco/video/7088375668114836742
 ========================
 ========================
 #fy

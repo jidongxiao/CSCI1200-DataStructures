@@ -120,6 +120,8 @@ Inorder Traversal using Morris Traversal:
 4 2 6 5 7 1 3 9 8
 ```
 
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/morris/morris_in_order.html) to understand how this works.
+
 ## 21.5 Morris Traversal - Pre Order
 
 To perform preorder traversal:

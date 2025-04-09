@@ -217,8 +217,10 @@ Sorted array:
 
 ## 24.10 Leetcode Exercises
 
+In addition to the above solution, there are also other variations of the heap sort:
+
 - [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/).  
   - Solution: [p912_heapsort_array.cpp](../../leetcode/p912_heapsort_array.cpp).  
-  - Solution 2: [p912_heapsort_array_heapify.cpp](../../leetcode/p912_heapsort_array_heapify.cpp).  
+  - Solution 2: - max heap: [p912_heapsort_array_heapify.cpp](../../leetcode/p912_heapsort_array_heapify.cpp).  
   - Solution 3: - min heap: [p912_heapsort_array_min_heap.cpp](../../leetcode/p912_heapsort_array_min_heap.cpp).  
   - Solution 4: - min heap, with functor: [p912_heapsort_array_functor.cpp](../../leetcode/p912_heapsort_array_functor.cpp).

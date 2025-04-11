@@ -308,15 +308,15 @@ a1: If by Thursday night 10pm (which is the submission deadline), your program o
 
    You will receive an email asking you about which option you want to choose, or if you want to propose a different option. You will be asked to describe your optimization techniques, and you must have at least one technique which is unique - not mentioned by 5 (or more than 5) other students.
 
-**Definition of Outperform:** The term outperform is defined as: Your program must either runs less amount of time than the instructor's code; or runs the same amount of time but consumes less memory than the instructor's code.
+**Definition of Outperform:** The term outperform is defined as: Your program must either runs less amount of time than the instructor's code; or runs the same amount of time but consumes less memory than the instructor's code. Same run time, same memory usage, but submitty shows you at a higher position will not counted as outperforming.
 
-q2: What if my program outperforms the instructor's program on two leaderboards (2 out ofthe 3: hw6, hw9, hw10)?
+q2: What if my program outperforms the instructor's program on two leaderboards (2 out of the 3: hw6, hw9, hw10)?
 
 a2: You can skip the final exam; we will apply the highest test score among your test 1, 2, and 3, as your final exam score. The "skip final" option is exclusive and can't be used with other options.
 
 q3: What if my program ranks higher than the instructor's program on all 3 leaderboards (3 out of the 3: hw6, hw9, hw10)?
 
-a3: You will receive an A for this course immediately if determined that you worked independently on these 3 homeworks and it is you - not someone else, who wrote the code and all 3 are your original work. The instructor reserves the right to not give you an A if the following red flags are noticed: 1. your test scores are consistently low and all the tests show that you are very unfamiliar with C++ and the lab TA/mentors conclude that your coding skills are clearly below class average. 2. when asked what optimization techniques you used, you could not name anything unique - a technique which is mentioned by at least 5 other students.
+a3: You will receive an A for this course immediately if determined that you worked independently on these 3 homeworks and it is you - not someone else, who wrote the code and all 3 are your original work. The instructor reserves the right to not give you an A if the following red flags are noticed: 1. your test scores are consistently low and all the tests show that you are very unfamiliar with C++ and the lab TA/mentors conclude that your coding skills are clearly below class average. 2. when asked what optimization techniques you used, you could not name anything unique - everything you say is mentioned by at least 5 other students.
 
 **Definition of work independently:** Doing your own research, asking chatgpt or other AI tools, are okay; collaborating with other students in this class, sharing your techniques with other students in this class, are not okay and are not considered as an independent, original work.
 

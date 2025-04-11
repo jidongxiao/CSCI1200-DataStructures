@@ -181,6 +181,7 @@ We develop this student_test.cpp program.
 
 #include <iostream>
 
+```cpp
 class A {
 public:
     A() {
@@ -209,3 +210,40 @@ int main() {
     std::cout << std::endl;
     return 0;
 }
+```
+
+## 25.8 What will be printed when running this program?
+
+```cpp
+#include <iostream>
+
+class A {
+public:
+    A() {
+        std::cout << "A";
+    }
+    ~A() {
+        std::cout << "A";
+    }
+};
+
+class B : public A {
+public:
+    B() {
+        std::cout << "B";
+    }
+    ~B() {
+        std::cout << "B";
+    }
+};
+
+int main() {
+    {
+        B* p = new B;
+        B b;
+        delete p;
+    }
+    std::cout << std::endl;
+    return 0;
+}
+```

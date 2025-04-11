@@ -157,6 +157,44 @@ public:
 };
 ```
 
+## 25.6 Name Hiding
+
+In C++, when a derived class defines a member function with the same name as one in its base class, the derived class's function hides all base class functions with that name, regardless of their signatures. This behavior is known as name hiding.
+
+```cpp
+#include <iostream>
+
+class A {
+public:
+    void func(int x) {
+        std::cout << "A::func(int): " <<  x << "\n";
+    }
+};
+
+class B : public A {
+public:
+    void func(double y) {
+        std::cout << "B::func(double): " << y << "\n";
+    }
+};
+
+int main() {
+    B b;
+    b.func(10);    // Calls B::func(double)
+    b.func(10.5);  // Calls B::func(double)
+    return 0;
+}
+```
+
+This above program [name_hiding.cpp](name_hiding.cpp) prints:
+
+```console
+$ g++ name_hiding.cpp
+$ ./a.out
+B::func(double): 10
+B::func(double): 10.5
+```
+
 ## 25.6 Example Programs:
 
 We develop this student_test.cpp program.

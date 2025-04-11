@@ -221,9 +221,9 @@ We develop this student_test.cpp program.
 
 ## 25.7 What will be printed when running this program?
 
+```cpp
 #include <iostream>
 
-```cpp
 class A {
 public:
     A() {

@@ -209,6 +209,8 @@ Sorted array:
 12 42 13 65 90 45 97 85 76 98
 ```
 
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/sort/index.html) to see how the push works.
+
 ## 24.9 Summary Notes about Vector-Based Priority Queues
 
 - Priority queues are conceptually similar to queues, but the order in which values / entries are removed (“popped”) depends on a priority.

@@ -209,8 +209,6 @@ Sorted array:
 12 42 13 65 90 45 97 85 76 98
 ```
 
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/sort/index.html) to see how the sort works.
-
 ## 24.9 Summary Notes about Vector-Based Priority Queues
 
 - Priority queues are conceptually similar to queues, but the order in which values / entries are removed (“popped”) depends on a priority.
@@ -224,5 +222,6 @@ In addition to the above solution, there are also other variations of the heap s
 - [Leetcode problem 912: Sort an Array](https://leetcode.com/problems/sort-an-array/).  
   - Solution: [p912_heapsort_array.cpp](../../leetcode/p912_heapsort_array.cpp).  
   - Solution 2: - max heap: [p912_heapsort_array_heapify.cpp](../../leetcode/p912_heapsort_array_heapify.cpp).  
+    - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/heap/sort/index.html) to see how this sort works.
   - Solution 3: - min heap: [p912_heapsort_array_min_heap.cpp](../../leetcode/p912_heapsort_array_min_heap.cpp).  
   - Solution 4: - min heap, with functor: [p912_heapsort_array_functor.cpp](../../leetcode/p912_heapsort_array_functor.cpp).

@@ -172,3 +172,40 @@ We develop this student_test.cpp program.
 ### version 3
 
 [student_test3.cpp](student_test3.cpp) In this version, the child class has its own member functions introduce() and sleep(); and because these functions need to access the parent class's member variables, so we changed the member variables from private to protected.
+
+### version 4
+
+[student_test4.cpp](student_test4.cpp) In this version, we added the destructor to both the child class and the parent class. This program shows that when the child class object is destroyed, first its own destructor gets called, and then its parent destructor gets called.
+
+## 25.7 What will be printed when running this program?
+
+#include <iostream>
+
+class A {
+public:
+    A() {
+        std::cout << "A";
+    }
+    ~A() {
+        std::cout << "A";
+    }
+};
+
+class B : public A {
+public:
+    B() {
+        std::cout << "B";
+    }
+    ~B() {
+        std::cout << "B";
+    }
+};
+
+int main() {
+    {
+        A a;
+        B b;
+    }
+    std::cout << std::endl;
+    return 0;
+}

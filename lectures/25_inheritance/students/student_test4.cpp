@@ -2,13 +2,17 @@
 #include <string>
 
 class Human {
-private:
+// change this to protect so that these variables can be accessed by the derived class.
+protected:
     std::string name;
     int age;
     int sleep_hours;
 
 public:
     Human(std::string n, int a, int s) : name(n), age(a), sleep_hours(s) {}
+    ~Human(){
+	    std::cout << "Human Destructor" << std::endl;
+    }
 
     void introduce() {
         std::cout << "Hello, I am " << name << ", and I am " << age << " years old.\n";
@@ -21,13 +25,18 @@ public:
 
 class Student : public Human {
 public:
-    /* in C++, when a derived class inherits from a base class,
-    * the base class's constructor must be called to initialize its members.
-    * This is because the base class may contain private or protected members
-    * that are not directly accessible by the derived class.
-    * Therefore, the derived class relies on the base class's constructor to properly initialize these members. */
-
     Student(std::string n, int a, int s) : Human(n, a, s) {}
+    ~Student(){
+	    std::cout << "Student Destructor" << std::endl;
+    }
+    
+    void introduce() {
+        std::cout << "Hello, I am " << name << ", and I am " << age << " years old. I’m majoring in 'How did I get here?' with a minor in 'It sounded easier when I signed up.'\n";
+    }
+
+    void sleep() {
+        std::cout << name << " is a college student who sleeps " << sleep_hours << " hours a night, and sleep 2 hours during boring lectures.\n";
+    }
 };
 
 int main() {

@@ -1,0 +1,142 @@
+<!-- AUTHOR: Chloe Lee -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heap Sort Visualization</title>
+  <script src="../../konva.js"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .code-block {
+      background-color: #e6e6e6;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .visualization-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .visualization-box {
+      background-color: #e6e6e6;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+      flex: 1;
+      min-height: 200px;
+      position: relative;
+    }
+    button.next-step {
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      margin: 0;
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #f0f0f0;
+      border: 1px solid #999;
+      border-radius: 3px;
+      cursor: pointer;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+    .array-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+    .array-element {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background-color: #ddd;
+      border: 2px solid #888;
+      border-radius: 5px;
+      margin: 0 2px;
+      font-weight: bold;
+    }
+    .array-index {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .highlight {
+      background-color: #ffcf4d;
+      border-color: #e8a800;
+    }
+    .swap {
+      background-color: #ff7675;
+      border-color: #d63031;
+    }
+    .done {
+      background-color: #81ecec;
+      border-color: #00cec9;
+    }
+    .description {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      height: 40px;
+    }
+    #code{
+      margin: 0; 
+      font-family: monospace;
+      font-size: 14px;
+    }
+    #treeCanvas{
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>Heap Sort Visualization</h1>
+      <p>This animation shows how the heap sort algorithm works by building a max heap and then extracting elements one by one. Click the "next step" button to run the animation.</p>
+    </div>
+
+    <!-- block of C++ code-->
+    <div class="code-block" id="code-block">
+      <pre id="code"></pre>
+    </div>
+
+    <div class="visualization-container">
+      <!-- array goes here -->
+      <div class="visualization-box">
+        <button id="arrayNextBtn" class="next-step">Next Step</button>
+        <div id="arrayContainer" class="array-container"></div>
+        <div id="arrayDescription" class="description"></div>
+      </div>
+      
+      <!-- heap tree goes here -->
+      <div class="visualization-box">
+        <button id="treeNextBtn" class="next-step">Next Step</button>
+        <canvas id="treeCanvas" width="500" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="heap-sort.js"></script>
+</body>
+</html>

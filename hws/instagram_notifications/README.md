@@ -324,6 +324,10 @@ q4: How many submissions can I make?
 
 a4: 60. Submitty will deduct points once you submit more than 60 times. **To make it a fair game, students who make more than 60 submissions are disqualified from the competition automatically and thus won't receive any rewards.**
 
+q5: Can I still compete on the leaderboard after the Thursday night 10pm deadline? 
+
+a5: No. The leaderboard will be closed shortly after the submission deadline, meaning that you won't even be able to see a rank after the deadline. Students who want to take a screenshot of their position on the leaderboard are encouraged to do so before the 10pm deadline.
+
 ## Rubric
 
 17 pts

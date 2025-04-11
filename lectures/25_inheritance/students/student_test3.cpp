@@ -24,6 +24,7 @@ class Student : public Human {
 public:
     Student(std::string n, int a, int s) : Human(n, a, s) {}
     
+    // note that the Student class never defines the name and age variables, but we can use them here, because of inheritance.
     void introduce() {
         std::cout << "Hello, I am " << name << ", and I am " << age << " years old. I’m majoring in 'How did I get here?' with a minor in 'It sounded easier when I signed up.'\n";
     }

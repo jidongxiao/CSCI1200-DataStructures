@@ -133,7 +133,7 @@ If no access specifier is provided:
 
 private members of the base class are never accessible directly in the derived class, regardless of the inheritance type.
 
-### 25.5 Constructors and Destructors
+## 25.5 Constructors and Destructors
 
 - Constructor Invocation: When a derived class object is created, the base class constructor is invoked first, followed by the derived class constructor.
 
@@ -156,3 +156,19 @@ public:
     }
 };
 ```
+
+## 25.6 Example Programs:
+
+We develop this student_test.cpp program.
+
+### version 1
+
+[student_test1.cpp](student_test1.cpp) In this version, there is only one class: class Human
+
+### version 2
+
+[student_test2.cpp](student_test2.cpp) In this version, there is the base class - Human, and the child class - Student, but the child class doesn't have its own member variables, and its only member function is the constructor.
+
+### version 3
+
+[student_test3.cpp](student_test3.cpp) In this version, the child class has its own member functions introduce() and sleep(); and because these functions need to access the parent class's member variables, so we changed the member variables from private to protected.

@@ -20,22 +20,22 @@ And there are many more. In this assignment, your program will support five type
 
 On Instagram, on the "Settings and privacy" page, users can choose to turn on or turn off each of these notifications, as shown in the following five screenshots:
 
-To turn on or off like notifications:
+To turn on or off like notifications:\
 ![alt text](images/instagram_likes.png "Instagram Likes")
 
-To turn on or off tag notifications:
+To turn on or off tag notifications:\
 ![alt text](images/instagram_tags.jpg "Instagram Tags")
 
-To turn on or off comment notifications:
+To turn on or off comment notifications:\
 ![alt text](images/instagram_comments.png "Instagram Comments")
 
-To turn on or off follow notifications:
+To turn on or off follow notifications:\
 ![alt text](images/instagram_follows.png "Instagram Follows")
 
-To turn on or off message request notifications:
+To turn on or off message request notifications:\
 ![alt text](images/instagram_message_requests.png "Instagram Message Requests")
 
-Users can also decide to pause all notifications:
+Users can also decide to pause all notifications:\
 ![alt text](images/instagram_pause_all.png "Instagram Pause All")
 
 ## Supported Commands

@@ -201,23 +201,23 @@ We develop this student_test.cpp program.
 
 ### version 1
 
-[student_test1.cpp](student_test1.cpp) In this version, there is only one class: class Human
+[students/student_test1.cpp](student_test1.cpp) In this version, there is only one class: class Human
 
 ### version 2
 
-[student_test2.cpp](student_test2.cpp) In this version, there is the base class - Human, and the child class - Student, but the child class doesn't have its own member variables, and its only member function is the constructor.
+[students/student_test2.cpp](student_test2.cpp) In this version, there is the base class - Human, and the child class - Student, but the child class doesn't have its own member variables, and its only member function is the constructor.
 
 ### version 3
 
-[student_test3.cpp](student_test3.cpp) In this version, the child class has its own member functions introduce() and sleep(); and because these functions need to access the parent class's member variables, so we changed the member variables from private to protected.
+[students/student_test3.cpp](student_test3.cpp) In this version, the child class has its own member functions introduce() and sleep(); and because these functions need to access the parent class's member variables, so we changed the member variables from private to protected.
 
 ### version 4
 
-[student_test4.cpp](student_test4.cpp) In this version, we added the destructor to both the child class and the parent class. This program shows that when the child class object is destroyed, first its own destructor gets called, and then its parent destructor gets called.
+[students/student_test4.cpp](student_test4.cpp) In this version, we added the destructor to both the child class and the parent class. This program shows that when the child class object is destroyed, first its own destructor gets called, and then its parent destructor gets called.
 
 ### version 5
 
-[student_test5.cpp](student_test5.cpp) In this version, we added the CSStudent class, and that introduces multilevel inheritance in the program.
+[students/student_test5.cpp](student_test5.cpp) In this version, we added the CSStudent class, and that introduces multilevel inheritance in the program.
 
 ## 25.7 What will be printed when running this program?
 

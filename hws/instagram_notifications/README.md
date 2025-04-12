@@ -308,7 +308,7 @@ a1: If by Thursday night 10pm (which is the submission deadline), your program o
 
    You will receive an email asking you about which option you want to choose, or if you want to propose a different option. You will be asked to describe your optimization techniques, and you must have at least one technique which is unique - not mentioned by 5 (or more than 5) other students.
 
-**Definition of Outperform:** The term outperform is defined as: Your program must either runs less amount of time than the instructor's code; or runs the same amount of time but consumes less memory than the instructor's code. Same run time, same memory usage, but submitty shows you at a higher position will not counted as outperforming.
+**Definition of Outperform:** The term outperform is defined as: Your program must either runs less amount of time than the instructor's code; or runs the same amount of time but consumes less memory than the instructor's code. Same run time, same memory usage, but submitty shows you at a higher position will not be counted as outperforming.
 
 q2: What if my program outperforms the instructor's program on two leaderboards (2 out of the 3: hw6, hw9, hw10)?
 

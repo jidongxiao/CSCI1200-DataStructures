@@ -238,6 +238,8 @@ Postorder Traversal using Morris Traversal:
 4 6 7 5 2 9 8 3 1
 ```
 
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/morris/morrisPostOrder.html) to understand how this works.
+
 ## Time and Space Complexity in Morris Traversal (in-order, pre-order, post-order)
 
 - Time Complexity: O(N) (each node is visited at most twice)

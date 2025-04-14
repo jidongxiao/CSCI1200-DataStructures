@@ -157,6 +157,14 @@ public:
 };
 ```
 
+### Common Pitfall:
+
+- Member initializer lists play an important role in inheritance in C++.
+
+- If you try to initialize the base class inside the constructor body (not the initializer list), it won’t work — the base class has already been default-constructed by that point! This is way, for the following two programs:
+
+[program1](constructor_test1.cpp) will compile; but [program2](constructor_test2.cpp) won't compile. 
+
 ## 25.6 Name Hiding
 
 In C++, when a derived class defines a member function with the same name as one in its base class, the derived class's function hides all base class functions with that name, regardless of their signatures. This behavior is known as name hiding.

@@ -14,7 +14,13 @@
 
 - The Diamond Problem occurs in multiple inheritance when two classes inherit from the same base class, and a fourth class inherits from both of those.
 
-<pre> \`\`\` Human / \ Student Worker \ / CSStudent \`\`\` </pre>
+```
+        Human
+        /  \
+   Student  Worker
+        \  /
+      CSStudent
+```
 
 - Both Student and Worker inherit from Human.
 

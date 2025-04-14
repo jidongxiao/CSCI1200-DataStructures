@@ -92,37 +92,7 @@ public:
 
 ## 26.3 Introduction to Polymorphism
 
-- Let’s consider a small class hierarchy version of polygonal objects:
-
-```cpp
-class Polygon {
-public:
-	Polygon() {}
-	virtual ~Polygon() {}
-	int NumVerts() { return verts.size(); }
-	virtual double Area() = 0;
-	virtual bool IsSquare() { return false; }
-protected:
-	vector<Point> verts;
-};
-class Triangle : public Polygon {
-public:
-	Triangle(Point pts[3]) {
-	for (int i = 0; i < 3; i++) verts.push_back(pts[i]); }
-		double Area();
-	};
-class Quadrilateral : public Polygon {
-public:
-	Quadrilateral(Point pts[4]) {
-		for (int i = 0; i < 4; i++) verts.push_back(pts[i]); }
-	double Area();
-	double LongerDiagonal();
-	bool IsSquare() { return (SidesEqual() && AnglesEqual()); }
-private:
-	bool SidesEqual();
-	bool AnglesEqual();
-};
-```
+Polymorphism means "many forms". In C++, it allows objects of different classes to be treated through a common interface — usually a base class pointer or reference.
 
 - Functions that are common, at least have a common interface, are in Polygon.
 - Some of these functions are marked virtual, which means that when they are redefined by a derived class, this new definition will be used, even for pointers to base class objects.

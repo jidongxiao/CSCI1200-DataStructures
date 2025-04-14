@@ -90,7 +90,7 @@ public:
 };
 ```
 
-## 26.2 Introduction to Polymorphism
+## 26.3 Introduction to Polymorphism
 
 - Let’s consider a small class hierarchy version of polygonal objects:
 
@@ -132,7 +132,7 @@ they must be redefined in a derived class.
   – Objects of abstract types may not be created — only pointers to these objects may be created.  
 - Functions that are specific to a particular object type are declared in the derived class prototype.
 
-## 26.3 A Polymorphic List of Polygon Objects
+## 26.4 A Polymorphic List of Polygon Objects
 
 - Now instead of two separate lists of polygon objects, we can create one “polymorphic” list:
 
@@ -153,7 +153,7 @@ polygons.push_back(t_ptr);
 
 Note: We’ve used the same pointer variable (p_ptr) to point to objects of two different types.
 
-## 26.4 Accessing Objects Through a Polymorphic List of Pointers
+## 26.5 Accessing Objects Through a Polymorphic List of Pointers
 
 - Let’s sum the areas of all the polygons:
 
@@ -192,7 +192,7 @@ for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i)
 }
 ```
 
-## 26.5 Exercise
+## 26.6 Exercise
 
 What is the output of the following [program](exercise.cpp)?
 
@@ -233,6 +233,6 @@ int main() {
 }
 ```
 
-## 26.6 Exercise
+## 26.7 Exercise
 
 What is the output of the following [program](virtual.cpp)?

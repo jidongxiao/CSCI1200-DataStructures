@@ -166,6 +166,8 @@ Preorder Traversal using Morris Traversal:
 1 2 4 5 6 7 3 8 9
 ```
 
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/morris/morris_pre_order.html) to understand how this works.
+
 ## 21.6 Morris Traversal - Post Order
 
 Post order is different, and we need to write some helper functions here.

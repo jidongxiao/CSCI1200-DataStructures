@@ -191,7 +191,7 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending hashtags, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 20 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this hashtag have the same view count, pick the one which appears first in the input json file. However, if both needs to be printed, meaning that both are in the top 3, then check the video id (as an std::string object); if a.videoId > b.videoId, then display video a first.
+More specifically, you should print the top 20 trending hashtags, and then for each hashtag, print 3 videos which use this hashtag in its post text. If a hashtag is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this hashtag have the same view count, then break the tie by comparing the video id (as an std::string object); if a.videoId > b.videoId, then display video a first.
 
 Definition of the top 20 trending hashtags: this should be the based on the usage of the hashtag - how many times in total each hashtag is used. When two hashtags are both used for the same amount of times, break the tie by the total view count of the videos associated with each hashtag. And if still a tie, break the tie by comparing the hashtag names, i.e., apply the less than operator (<) to the two names - both are std::strings, the hashtag whose name is less than the name of the other hashtag should be the winner and should be displayed first.
 
@@ -225,7 +225,7 @@ your program should produce an output similar to what TikTok does (of course we 
 
 this basically is the trending sounds, each is associated with some videos. In your output, these videos should be sorted in a descending order, based on how many views the video has received.
 
-More specifically, you should print the top 20 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this sound have the same view count, pick the one which appears first in the input json file. However, if both needs to be printed, meaning that both are in the top 3, then check the video id (as an std::string object); if a.videoId > b.videoId, then display video a first.
+More specifically, you should print the top 20 trending sounds, and then for each sound, print 3 videos which use this sound. If a sound is used in 100 videos, select the 3 (out of these 100) most viewed videos. Print the most viewed video first, and then print the next most viewed video, and then the third most viewed video. In the case where two videos both use this sound have the same view count, then break the tie by comparing the video id (as an std::string object); if a.videoId > b.videoId, then display video a first.
 
 Definition of the top 20 trending sounds: this should be the based on the total view count of the videos which use this sound. If there is a tie, break the tie by comparing the music id, i.e., apply the less than operator (<) to the two music ids - both are std::strings, the sound whose music id is less than the music id of the other sound should be the winner, and should be displayed first.
 
@@ -297,9 +297,9 @@ You can test (but not view) the instructor's code here: [instructor code](http:/
 
 ## FAQs
 
-q1: For cases where a hashtag appears twice on a line does that count as two separate URLs?
+q1: Some videos appear multiple times in the same json file, how shall we handle such cases?
 
-a1: Yes, a hashtag appears 2 times in one post will be counted as 2 times. This is the reason why some URLs appear twice in the output as the top 3 videos of some hashtag - as in that #foryou case in tiny1. (This is just to simplify your implementation).
+a1: If a video appears multiple times in the same json file, only the first occurrence should be considered, and this means that when parsing the json file, and if you find a duplicated video ID, then that line which contains the duplicated video ID should not be parsed at all.
 
 q2: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?
 

@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Morris Traversal In Order</title>
+        <script src="../../konva.js"></script>
+        
+    </head>
+
+    <body>
+        <button onclick="next_step()">next step</button>
+        <div id ="container"></div>
+        <script>
+            
+            //creating the background the animation exists on
+            var stage = new Konva.Stage({
+                container: 'container',
+                width: 1500,
+                height: 750,
+            });
+
+            var layer = new Konva.Layer();
+            stage.add(layer);
+
+            //Creates the node circle thing
+            function createNode(given_x, given_y, nodeNumber){
+                var outline = new Konva.Circle({
+                    x: given_x,
+                    y: given_y,
+                    id: 'node_'+nodeNumber,
+                    radius: 40, 
+                    fill: 'white',
+                    stroke: 'black',
+                    strokeWidth: 2,
+                    
+                });
+
+                layer.add(outline);
+
+                var nodeLabel = new Konva.Text({
+                    x: given_x-10,
+                    y: given_y-10,
+                    id: 'nodeText'+nodeNumber,
+                    text: nodeNumber,
+                    fontSize: 30,
+                    fill: 'black',
+                    
+                });
+
+                
+                layer.add(nodeLabel);
+
+            }
+
+            function connectNodes(x1, y1, x2, y2){
+                var line = new Konva.Line({
+                    points: [x1, y1, x2, y2],
+                    stroke: 'black',
+                    strokeWidth: 3
+                });
+                layer.add(line);
+                line.moveToBottom();
+            }
+
+            //Node 1
+            createNode(400, 250, '1');
+            //Node 2
+            createNode(200, 375, '2');
+            //Node 1->2
+            connectNodes(400, 250, 200, 375);
+            //Node 3
+            createNode(600, 375, '3');
+            //Node 1->3
+            connectNodes(400, 250, 600, 375);
+            //Node 4
+            createNode(100, 500, '4');
+            //Node 2->4
+            connectNodes(200, 375, 100, 500);
+            //Node 5
+            createNode(300, 500, '5');
+            //Node 2->5
+            connectNodes(200, 375, 300, 500);
+            //Node 6
+            createNode(200, 625, '6');
+            //Node 5->6
+            connectNodes(300, 500, 200, 625);
+            //Node 7
+            createNode(400, 625, '7');
+            //Node 5->7
+            connectNodes(300, 500, 400, 625);
+            //Node 8
+            createNode(700, 500, '8');
+            //Node 3->8
+            connectNodes(600, 375, 700, 500);
+            //Node 9
+            createNode(600, 625, '9');
+            //Node 8->9
+            connectNodes(700, 500, 600, 625);
+            layer.draw();
+
+            
+            //Making all the nodes for the flowchart
+
+            var start_from_root = new Konva.Rect({
+                x: 750,
+                y: 50,
+                width: 150,
+                height: 50,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(start_from_root);
+            var label1 = new Konva.Text({
+                x: 755,
+                y: 60,
+                text: 'Start from Root',
+                fontSize: 20,
+                fill: 'black'
+            });
+            layer.add(label1);
+
+            var is_current_null = new Konva.Rect({
+                x: 975,
+                y: 50,
+                width: 150,
+                height: 50,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(is_current_null);
+
+            var label12 = new Konva.Text({
+                x: 975,
+                y: 50,
+                text: 'Is current null?',
+                fontSize: 20,
+                width: 155,
+                padding: 10,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label12);
+
+            var arrow10 = new Konva.Arrow({
+                x: 900,
+                y: 75,
+                points:[0, 0, 70, 0],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+
+            });
+            layer.add(arrow10);
+
+            var end_rect = new Konva.Rect({
+                x: 1200,
+                y: 50,
+                width: 150,
+                height: 50,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(end_rect);
+
+            var label13 = new Konva.Text({
+                x: 1200,
+                y: 50,
+                text: 'End',
+                fontSize: 20,
+                width: 155,
+                padding: 10,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label13);
+
+            var arrow11 = new Konva.Arrow({
+                x: 1125,
+                y: 75,
+                points:[0, 0, 70, 0],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+
+            });
+            layer.add(arrow11);
+
+            var not_null_rect = new Konva.Rect({
+            x:1060,
+            y:105,
+            width: 40,
+            height: 30,
+            fill: 'white',
+            strokeWidth: 2
+            });
+            layer.add(not_null_rect);
+
+            var not_null = new Konva.Text({
+                x: 1000,
+                y: 100,
+                text: 'No',
+                fontSize: 20,
+                width: 155,
+                padding: 10,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(not_null);
+
+            var yes_null_rect = new Konva.Rect({
+            x:1130,
+            y:40,
+            width: 50,
+            height: 30,
+            fill: 'white',
+            strokeWidth: 2
+            });
+            layer.add(yes_null_rect);
+
+            var yes_null = new Konva.Text({
+                x: 1075,
+                y: 40,
+                text: 'Yes',
+                fontSize: 20,
+                width: 155,
+                padding: 10,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(yes_null);
+
+            
+
+
+
+
+            var left_subtree_null = new Konva.Rect({
+                x: 950,
+                y: 150,
+                width: 200,
+                height: 50,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(left_subtree_null);
+            var label2 = new Konva.Text({
+                x: 970,
+                y: 160,
+                text: 'Is left subtree null?',
+                fontSize: 20,
+                fill: 'black'
+            });
+            layer.add(label2);
+
+            var arrow1 = new Konva.Arrow({
+                x: 975,
+                y: 100,
+                points:[75, 0, 75, 45],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+
+            });
+            layer.add(arrow1);
+
+            var print_move_right = new Konva.Rect({
+                x: 800,
+                y: 275,
+                width: 200,
+                height: 100,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(print_move_right);
+
+            var label3 = new Konva.Text({
+                x: 800,
+                y: 275,
+                text: 'Print node and\nmove current right',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label3);
+
+            var yes_arrow = new Konva.Arrow({
+                x: 1010,
+                y: 200,
+                points:[0, 0, 0, 40, -100, 40, -100, 70],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+
+            });
+            layer.add(yes_arrow);
+
+            var arrow3 = new Konva.Arrow({
+                x: 800,
+                y: 325,
+                points:[0, 0, -30, 0, -30, -150, 175, -225],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+
+            });
+            layer.add(arrow3);
+
+            var find_inorder_predecessor = new Konva.Rect({
+                x: 1125, 
+                y: 275, 
+                width: 200,
+                height: 110,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(find_inorder_predecessor);
+
+            var label4 = new Konva.Text({
+                x: 1125,
+                y: 275,
+                text: 'Find inorder predecessor (rightmost node in left tree)',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label4);
+
+            var no_arrow = new Konva.Arrow({
+                x: 1090, 
+                y: 200, 
+                points: [0, 0, 0, 40, 125, 40, 125, 70],
+
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            layer.add(no_arrow);
+
+            var where_right = new Konva.Rect({
+                x: 1125, 
+                y: 450, 
+                width: 200,
+                height: 100,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(where_right);
+
+            var label5 = new Konva.Text({
+                x: 1125,
+                y: 450,
+                text: 'Where does predecessor\'s right child point?',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+
+            layer.add(label5);
+
+            var arrow5 = new Konva.Arrow({
+                x: 1225,
+                y: 385,
+                points: [0, 0, 0, 60],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+
+            layer.add(arrow5);
+
+            var set_null = new Konva.Rect({
+                x: 950, 
+                y: 600, 
+                width: 200,
+                height: 110,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(set_null);
+
+            var label6 = new Konva.Text({
+                x: 950,
+                y: 607,
+                text: 'set predecessor right child to null and move right',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label6);
+
+            var arrow6 = new Konva.Arrow({
+                x: 950,
+                y: 655,
+                points: [0, 0, -180, 0, -180, -325],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            layer.add(arrow6);
+
+            var current_arrow = new Konva.Arrow({
+                x: 1205,
+                y: 550,
+                points: [0, 0, 0, 100, -50, 100],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            layer.add(current_arrow);
+
+            var set_current = new Konva.Rect({
+                x: 1295, 
+                y: 600, 
+                width: 200,
+                height: 117,
+                fill: 'white',
+                stroke: 'black',
+                strokeWidth: 2
+            });
+            layer.add(set_current);
+
+            var label7 = new Konva.Text({
+                x: 1295,
+                y: 595,
+                text: 'set predecessor\'s right child to current, print current, and move left',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label7);
+
+            var null_arrow = new Konva.Arrow({
+                x: 1245,
+                y: 550,
+                points: [0, 0, 0, 100, 45, 100],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            layer.add(null_arrow);
+
+            var arrow9 = new Konva.Arrow({
+                x: 1395,
+                y: 600,
+                points: [0, 0, 0, -425, -265, -500],
+                fill: 'black',
+                stroke: 'black',
+                strokeWidth: 4
+            });
+            layer.add(arrow9);
+
+            var yes_rect = new Konva.Rect({
+                x: 940,
+                y: 210,
+                width: 40,
+                height: 25,
+                fill: 'white',
+
+            });
+            layer.add(yes_rect);
+            var label8 = new Konva.Text({
+                x: 860,
+                y: 200,
+                text: 'Yes',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label8);
+
+            var no_rect = new Konva.Rect({
+                x: 1130,
+                y: 210,
+                width: 40,
+                height: 25,
+                fill: 'white',
+
+            });
+            layer.add(no_rect);
+            var label9 = new Konva.Text({
+                x: 1050,
+                y: 200,
+                text: 'No',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            
+            layer.add(label9);
+
+            var current_rect = new Konva.Rect({
+                x: 1125,
+                y: 560,
+                width: 70,
+                height: 25,
+                fill: 'white',
+            });
+            layer.add(current_rect);
+            var label10 = new Konva.Text({
+                x: 1060,
+                y: 550,
+                text: 'current',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label10);
+
+            var null_rect = new Konva.Rect({
+                x: 1255,
+                y: 560,
+                width: 40,
+                height: 25,
+                fill: 'white',
+            });
+            layer.add(null_rect);
+            var label11 = new Konva.Text({
+                x: 1175,
+                y: 550,
+                text: 'null',
+                fontSize: 20,
+                width: 200,
+                padding: 15,
+                fill: 'black',
+                align: 'center'
+            });
+            layer.add(label11);
+
+
+            var otherCurrentRect = new Konva.Rect({
+                x: 100,
+                y: 100,
+                width: 65,
+                height: 20,
+                fill: 'yellow'
+            });
+            layer.add(otherCurrentRect);
+            var current = new Konva.Text({
+                x: 100,
+                y: 100,
+                text: 'current',
+                fontSize: 20,
+                fill:'black'
+            });
+            layer.add(current);
+
+            var predecessorRect = new Konva.Rect({
+                x: 100,
+                y: 150,
+                width: 110,
+                height: 20,
+                fill: 'lime'
+            });
+            layer.add(predecessorRect);
+            var predecessor = new Konva.Text({
+                x: 100,
+                y: 150,
+                text: 'predecessor',
+                fontSize: 20,
+                fill:'black'
+            });
+            layer.add(predecessor);
+
+
+            var console_text = new Konva.Text({
+                x: 300,
+                y: 0,
+                text: 'Console:\n',
+                fontSize: 20,
+                fill: 'black'
+            });
+            layer.add(console_text);
+
+            var node7to1 = new Konva.Arrow({
+                x: 400,
+                y: 585,
+                points: [0,0,0,-295],
+                stroke: 'lime',
+                fill: 'lime'
+            });
+            layer.add(node7to1);
+            node7to1.hide();
+
+            var node4to2 = new Konva.Arrow({
+                x: 100,
+                y: 500,
+                points: [0, -40, 0, -125, 55, -125],
+                stroke: 'lime',
+                fill: 'lime'
+            });
+            layer.add(node4to2);
+            node4to2.hide();
+            //connectNodes(200, 375, 100, 500);
+
+            var node6to5 = new Konva.Arrow({
+                x: 200,
+                y: 625,
+                points: [0, -40, 0, -125, 55, -125],
+                stroke: 'lime',
+                fill: 'lime'
+            });
+            layer.add(node6to5);
+            node6to5.hide();
+            //connectNodes(300, 500, 200, 625);
+
+            var node9to8 = new Konva.Arrow({
+                x: 600,
+                y: 625,
+                points: [0, -40, 0, -125, 55, -125],
+                stroke: 'lime',
+                fill: 'lime'
+            });
+            layer.add(node9to8);
+            node9to8.hide();
+            //connectNodes(700, 500, 600, 625);
+
+
+
+            
+            
+            
+            
+            var step = 0;
+
+            function next_step(){
+                step++;
+                switch (step){
+                    case 1:
+                        start_from_root.fill('yellow');
+                        stage.find('#node_1')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 2:
+                        start_from_root.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 3:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 4:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 5:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 6:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        stage.find('#node_2')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 7:
+                        stage.find('#node_2')[0].fill('white');
+                        stage.find('#node_5')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    
+                    case 8:
+                        stage.find('#node_5')[0].fill('white');
+                        stage.find('#node_7')[0].fill('lime');
+                        layer.draw();
+                        break;
+
+                    case 9:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 10:
+                        null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 11:
+                        where_right.fill('white');
+                        null_rect.fill('white');
+                        set_current.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 12:
+                        node7to1.show();
+                        console_text.text('Console:\n1');
+                        layer.draw();
+                        break;
+                    
+                    case 13:
+                        stage.find('#node_1')[0].fill('white');
+                        stage.find('#node_2')[0].fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 14:
+                        set_current.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 15:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 16:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 17:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 18:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        stage.find('#node_7')[0].fill('white');
+                        stage.find('#node_4')[0].fill('lime');
+                        layer.draw();
+                        break;
+
+                    case 19:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 20:
+                        null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 21:
+                        where_right.fill('white');
+                        null_rect.fill('white');
+                        set_current.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 22:
+                        node4to2.show();
+                        console_text.text('Console:\n1 2');
+                        layer.draw();
+                        break;
+
+                    case 23:
+                        stage.find('#node_2')[0].fill('white');
+                        stage.find('#node_4')[0].fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 24:
+                        set_current.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 25:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 26:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 27:
+                        yes_rect.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 28:
+                        left_subtree_null.fill('white');
+                        yes_rect.fill('white');
+                        print_move_right.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 29:
+                        console_text.text('Console:\n1 2 4');
+                        layer.draw();
+                        break;
+
+                    case 30:
+                        stage.find('#node_4')[0].fill('white');
+                        stage.find('#node_2')[0].fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 31:
+                        print_move_right.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 32:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 33:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 34:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 35:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 36:
+                        stage.find('#node_4')[0].fill('lime');
+                        layer.draw();
+                        break;
+
+                    case 37:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 38:
+                        current_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 39:
+                        where_right.fill('white');
+                        current_rect.fill('white');
+                        set_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 40:
+                        node4to2.hide();
+                        
+                        layer.draw();
+                        break;
+
+                    case 41:
+                        stage.find('#node_4')[0].fill('white');
+                        stage.find('#node_2')[0].fill('white');
+                        stage.find('#node_5')[0].fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 42:
+                        set_null.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 43:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 44:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+
+                    case 45:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 46:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        stage.find('#node_6')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 47:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 48:
+                        null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 49:
+                        where_right.fill('white');
+                        null_rect.fill('white');
+                        set_current.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 50:
+                        node6to5.show();
+                        console_text.text('Console:\n1 2 4 5');
+                        layer.draw();
+                        break;
+                    case 51:
+                        stage.find('#node_5')[0].fill('white');
+                        stage.find('#node_6')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 52:
+                        set_current.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 53:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 54:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 55:
+                        yes_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 56:
+                        left_subtree_null.fill('white');
+                        yes_rect.fill('white');
+                        print_move_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 57:
+                        console_text.text('Console:\n1 2 4 5 6');
+                        layer.draw();
+                        break;
+                    case 58:
+                        stage.find('#node_6')[0].fill('white');
+                        stage.find('#node_5')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 59:
+                        print_move_right.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 60:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 61:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 62:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 63:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 64:
+                        stage.find('#node_6')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 65:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 66:
+                        current_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 67:
+                        where_right.fill('white');
+                        current_rect.fill('white');
+                        set_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 68:
+                        node6to5.hide();
+                        
+                        layer.draw();
+                        break;
+                    case 69:
+                        stage.find('#node_6')[0].fill('white');
+                        stage.find('#node_5')[0].fill('white');
+                        stage.find('#node_7')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 70:
+                        set_null.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 71:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 72:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 73:
+                        yes_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 74:
+                        left_subtree_null.fill('white');
+                        yes_rect.fill('white');
+                        print_move_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 75:
+                        console_text.text('Console:\n1 2 4 5 6 7');
+                        layer.draw();
+                        break;
+                    case 76:
+                        stage.find('#node_7')[0].fill('white');
+                        stage.find('#node_1')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 77:
+                        print_move_right.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 78:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 79:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 80:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 81:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 82:
+                        stage.find('#node_2')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 83:
+                        stage.find('#node_2')[0].fill('white');
+                        stage.find('#node_5')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 84:
+                        stage.find('#node_5')[0].fill('white');
+                        stage.find('#node_7')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 85:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 86:
+                        current_rect.fill('yellow');
+                        layer.draw();
+                    case 87:
+                        where_right.fill('white');
+                        current_rect.fill('white');
+                        set_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 88:
+                        
+                        node7to1.hide();
+                        layer.draw();
+                        break;
+                    case 89:
+                        stage.find('#node_7')[0].fill('white');
+                        stage.find('#node_1')[0].fill('white');
+                        stage.find('#node_3')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 90:
+                        set_null.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 91:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 92:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 93:
+                        yes_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 94:
+                        left_subtree_null.fill('white');
+                        yes_rect.fill('white');
+                        print_move_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 95:
+                        console_text.text('Console:\n1 2 4 5 6 7 3');
+                        layer.draw();
+                        break;
+                    case 96:
+                        stage.find('#node_3')[0].fill('white');
+                        stage.find('#node_8')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 97:
+                        print_move_right.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 98:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 99:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 100:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 101:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 102:
+                        stage.find('#node_9')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 103:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 104:
+                        null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 105:
+                        where_right.fill('white');
+                        null_rect.fill('white');
+                        set_current.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 106:
+                        node9to8.show();
+                        console_text.text('Console:\n1 2 4 5 6 7 3 8');
+                        layer.draw();
+                        break;
+                    case 107:
+                        stage.find('#node_8')[0].fill('white');
+                        stage.find('#node_9')[0].fill('yellow');
+                        layer.draw();
+                        break;
+                    case 108:
+                        set_current.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 109:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 110:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 111:
+                        yes_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 112:
+                        left_subtree_null.fill('white');
+                        yes_rect.fill('white');
+                        layer.draw();
+                        break;
+                    case 113:
+                        print_move_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 114:
+                        console_text.text('Console:\n1 2 4 5 6 7 3 8 9');
+                        layer.draw();
+                        break;
+                    case 115:
+                        stage.find('#node_8')[0].fill('yellow');
+                        stage.find('#node_9')[0].fill('white');
+                        layer.draw();
+                        break;
+                    case 116:
+                        print_move_right.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 117:
+                        not_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 118:
+                        is_current_null.fill('white');
+                        not_null_rect.fill('white');
+                        left_subtree_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 119:
+                        no_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 120:
+                        left_subtree_null.fill('white');
+                        no_rect.fill('white');
+                        find_inorder_predecessor.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 121:
+                        stage.find('#node_9')[0].fill('lime');
+                        layer.draw();
+                        break;
+                    case 123:
+                        find_inorder_predecessor.fill('white');
+                        where_right.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 124:
+                        current_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 125:
+                        where_right.fill('white');
+                        current_rect.fill('white');
+                        set_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 126:
+                        
+                        layer.draw();
+                        break;
+                    case 127:
+                        node9to8.hide();
+                        stage.find('#node_8')[0].fill('white');
+                        stage.find('#node_9')[0].fill('white');
+                        layer.draw();
+                        break;
+                    case 128:
+                        set_null.fill('white');
+                        is_current_null.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 129:
+                        yes_null_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                    case 130:
+                        is_current_null.fill('white');
+                        yes_null_rect.fill('white');
+                        end_rect.fill('yellow');
+                        layer.draw();
+                        break;
+                        
+
+
+                }
+            };
+
+
+
+            
+        </script>
+
+    </body>
+
+
+
+</html>

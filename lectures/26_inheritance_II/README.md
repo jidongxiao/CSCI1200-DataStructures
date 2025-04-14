@@ -2,15 +2,91 @@
 
 ## 26.1 Multiple Inheritance
 
-- When sketching a class hierarchy for geometric objects, you may have wanted to specify relationships that were more complex... in particular some objects may wish to inherit from more than one base class.
-- This is called multiple inheritance and can make many implementation details significantly more hairy. Different programming languages offer different variations of multiple inheritance.
-- See [example 1](multiple_inheritance1.cpp) and [example 2](multiple_inheritance2.cpp).
+- Multiple inheritance allows a class to inherit from more than one base class.
 
-- And see [example 3](multiple_level_inheritance.cpp) for a multiple level inheritance example.
+- See [example 1](multiple_inheritance1.cpp) and [example 2](multiple_inheritance2.cpp).
 
   Note:
 
   ![alt text](Note_multipleInheritance.png "MultipleInheritance_note")
+
+## 26.2 The Diamond Problem
+
+- The Diamond Problem occurs in multiple inheritance when two classes inherit from the same base class, and a fourth class inherits from both of those.
+
+       Human
+        /  \
+   Student  Worker
+        \  /
+      CSStudent
+
+- Both Student and Worker inherit from Human.
+
+```cpp
+class Human {
+public:
+    void speak();
+};
+
+class Student : public Human {};
+class Worker : public Human {};
+
+class CSStudent : public Student, public Worker {};
+```
+
+- CSStudent inherits from both Student and Worker.
+
+- Compiler sees two Human base classes.
+
+- This leads to duplicate data and ambiguous member resolution.
+
+```cpp
+CSStudent cs;
+cs.speak(); // ❌ Ambiguous: which Human::speak()?
+```
+
+### Solution: Virtual Inheritance
+
+- Use the virtual keyword when inheriting the common base class.
+
+```cpp
+class Student : virtual public Human {};
+class Worker  : virtual public Human {};
+class CSStudent : public Student, public Worker {};
+CSStudent cs;
+cs.speak(); // ✅ No ambiguity
+```
+
+- How it works:
+
+  - Compiler ensures only one shared instance of Human.
+
+  - Student and Worker do not create their own copies of Human.
+
+  - Memory layout uses pointers behind the scenes to share the base.
+
+### Constructor Order with Virtual Inheritance
+
+When virtual inheritance is involved:
+
+Most derived class (e.g., CSStudent) is responsible for calling the base (Human) constructor.
+
+```cpp
+class Human {
+public:
+    Human(int age) {}
+};
+
+class Student : virtual public Human {
+public:
+    Student() : Human(0) {} // ❌ Not allowed to call Human(int) here
+};
+
+class CSStudent : public Student {
+public:
+    CSStudent() : Human(21), Student() {} // ✅ Human constructor called here
+};
+```
 
 ## 26.2 Introduction to Polymorphism
 

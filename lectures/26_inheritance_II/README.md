@@ -4,11 +4,45 @@
 
 - Multiple inheritance allows a class to inherit from more than one base class.
 
-- See [example 1](multiple_inheritance1.cpp) and [example 2](multiple_inheritance2.cpp).
+- The following [program](multiple_inheritance1.cpp) is an example:
 
-  Note:
+```cpp
+#include <iostream>
 
-  ![alt text](Note_multipleInheritance.png "MultipleInheritance_note")
+class B
+{
+public:
+	B(int b1):b(b1){}
+protected:
+	int b;
+};
+
+class C
+{
+public:
+	C(int c1):c(c1){}
+protected:
+	int c;
+};
+
+class D: public B, public C
+{
+public:
+	D(int b1, int c1):B(b1),C(c1),d(b1+c1){}
+
+	void print(){
+		std::cout << "d is " << d << std::endl;
+	}
+protected:
+	int d;
+};
+
+int main(){
+	D* dOjbect = new D(2,3);
+	dOjbect->print();
+	return 0;
+}
+```
 
 ## 26.2 The Diamond Problem
 
@@ -147,6 +181,44 @@ int main() {
 ```
 
 - Without virtual, Base::show() would be called, even though b points to a Derived.
+
+- The override keyword tells the compiler: "I intend to override a virtual function from the base class."
+
+- You don’t strictly need the override keyword here — the program will still work as expected because Base::show() is declared virtual, and Derived::show() has the same signature. But using override is highly recommended: when override is used, and if you make a mistake, like mismatching the function signature (even by accident), the compiler will catch it.
+
+### 26.3.3 Virtual Functions in Multi-level Inheritance
+
+- virtual functions are automatically inherited in C++, even if you don't repeat the virtual keyword in the derived class.
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    virtual void greet() {
+        std::cout << "Base greet\n";
+    }
+};
+
+class Mid : public Base {
+public:
+    void greet() { // still virtual, even without saying "virtual"
+        std::cout << "Mid greet\n";
+    }
+};
+
+class Derived : public Mid {
+public:
+    void greet() override {
+        std::cout << "Derived greet\n";
+    }
+};
+
+int main() {
+    Base* obj = new Derived();
+    obj->greet(); // ✅ prints "Derived greet"
+}
+```
 
 ## 26.4 Exercise
 
@@ -347,3 +419,59 @@ public:
 ```
 
 The numbers "0     8" mean that the virtual table pointer starts at offset 0 of the class, and it has 8 bytes; the numbers "8     4" means that the variable *age* starts at offset 8 and it has 4 bytes.
+
+## 26.7 Virtual Destructor 
+
+- If the destructor of the base class is not virtual, deleting an object through a base pointer results in undefined behavior — most likely, the derived class’s destructor won’t be called, which leads to resource leaks.
+
+### Example (Wrong: no virtual destructor)
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    ~Base() {
+        std::cout << "Base destructor\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    ~Derived() {
+        std::cout << "Derived destructor\n";
+    }
+};
+
+int main() {
+    Base* b = new Derived();
+    delete b; // ⚠️ Only Base destructor is called!
+}
+```
+
+- ❌ Derived's destructor is not called — this causes resource leaks if Derived manages any resources.
+
+### ✅ Example (Correct: virtual destructor)
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    virtual ~Base() {
+        std::cout << "Base destructor\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    ~Derived() override {
+        std::cout << "Derived destructor\n";
+    }
+};
+
+int main() {
+    Base* b = new Derived();
+    delete b; // ✅ Both destructors are called
+}
+```

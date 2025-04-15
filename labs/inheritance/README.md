@@ -1,4 +1,4 @@
-# Lab 12 — Multiple Inheritance & Exceptions
+# Lab 11 — Multiple Inheritance & Exceptions
 
 For this lab you will build a class inheritance structure to match the hierarchy of classic geometric shapes.
 The finished program will read lists of 2D point coordinates from a file and determine the shape described

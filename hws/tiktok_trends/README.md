@@ -320,13 +320,13 @@ a4: 60. Submitty will deduct points once you submit more than 60 times.
 
 ## Rubric
 
-17 pts
+15 pts
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - IMPLEMENTATION AND CODING STYLE (8 pts)
-   - No credit (significantly incomplete implementation) (-8)
+ - IMPLEMENTATION AND CODING STYLE (6 pts)
+   - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)

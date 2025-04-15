@@ -92,77 +92,63 @@ public:
 
 ## 26.3 Introduction to Polymorphism
 
-Polymorphism means "many forms". In C++, it allows objects of different classes to be treated through a common interface — usually a base class pointer or reference.
+- Polymorphism means "many forms". 
 
-- Functions that are common, at least have a common interface, are in Polygon.
-- Some of these functions are marked virtual, which means that when they are redefined by a derived class, this new definition will be used, even for pointers to base class objects.
-- Some of these virtual functions, those whose declarations are followed by = 0 are pure virtual, which means
-they must be redefined in a derived class.  
-  – Any class that has pure virtual functions is called “abstract”.  
-  – Objects of abstract types may not be created — only pointers to these objects may be created.  
-- Functions that are specific to a particular object type are declared in the derived class prototype.
+- Polymorphism allows one interface to be used for different data types or classes. In C++, it enables objects to be treated as instances of their base type while still calling derived class methods.
 
-## 26.4 A Polymorphic List of Polygon Objects
+- A function marked with the virtual keyword in the base class allows derived classes to override it. At runtime, the correct version of the function is called based on the object type.
 
-- Now instead of two separate lists of polygon objects, we can create one “polymorphic” list:
+- Virtual functions only come into play with pointers or references to the base class.
+
+### 26.3.1 Case 1: Direct Object (No Need for virtual)
 
 ```cpp
-std::list<Polygon*> polygons;
-```
+class Base {
+public:
+    void show() {
+        std::cout << "Base\n";
+    }
+};
 
-- Objects are constructed using new and inserted into the list:
+class Derived : public Base {
+public:
+    void show() {
+        std::cout << "Derived\n";
+    }
+};
 
-```cpp
-Polygon *p_ptr = new Triangle( .... );
-polygons.push_back(p_ptr);
-p_ptr = new Quadrilateral( ... );
-polygons.push_back(p_ptr);
-Triangle *t_ptr = new Triangle( .... );
-polygons.push_back(t_ptr);
-```
-
-Note: We’ve used the same pointer variable (p_ptr) to point to objects of two different types.
-
-## 26.5 Accessing Objects Through a Polymorphic List of Pointers
-
-- Let’s sum the areas of all the polygons:
-
-```cpp
-double area = 0;
-for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i){
-	area += (*i)->Area();
+int main() {
+    Derived d;
+    d.show(); // ✅ "Derived" is printed. No virtual needed.
 }
 ```
 
-Which Area function is called? If *i points to a Triangle object then the function defined in the Triangle
-class would be called. If *i points to a Quadrilateral object then Quadrilateral::Area will be called.
-
-- Here’s code to count the number of squares in the list:
+### 26.3.2 Case 2: Base Pointer or Reference (Needs virtual)
 
 ```cpp
-int count = 0;
-for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i){
-	count += (*i)->IsSquare();
+class Base {
+public:
+    virtual void show() {
+        std::cout << "Base\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    void show() override {
+        std::cout << "Derived\n";
+    }
+};
+
+int main() {
+    Base* b = new Derived();
+    b->show(); // ✅ "Derived" is printed because `show()` is virtual.
 }
 ```
 
-If Polygon::IsSquare had not been declared virtual then the function defined in Polygon would always be
-called! In general, given a pointer to type T we start at T and look “up” the hierarchy for the closest function
-definition (this can be done at compile time). If that function has been declared virtual, we will start this
-search instead at the actual type of the object (this requires additional work at runtime) in case it has been
-redefined in a derived class of type T.
+- Without virtual, Base::show() would be called, even though b points to a Derived.
 
-- To use a function in Quadrilateral that is not declared in Polygon, you must “cast” the pointer. The pointer
-*q will be NULL if *i is not a Quadrilateral object.
-
-```cpp
-for (std::list<Polygon*>::iterator i = polygons.begin(); i!=polygons.end(); ++i) {
-	Quadrilateral *q = dynamic_cast<Quadrilateral*> (*i);
-	if (q) std::cout << "diagonal: " << q->LongerDiagonal() << std::endl;
-}
-```
-
-## 26.6 Exercise
+## 26.4 Exercise
 
 What is the output of the following [program](exercise.cpp)?
 
@@ -203,11 +189,11 @@ int main() {
 }
 ```
 
-## 26.7 Exercise
+## 26.5 Exercise
 
 What is the output of the following [program](virtual.cpp)?
 
-## 26.8 Memory Usage of Virtual Functions
+## 26.6 Memory Usage of Virtual Functions
 
 Given the following [program](virtual2.cpp), what is the memory size of each class?
 
@@ -244,7 +230,7 @@ int main(){
 }
 ```
 
-### 26.8.1 Empty Class
+### 26.6.1 Empty Class
 
 - An empty C++ class takes one byte because the C++ standard requires that each distinct object has a unique address in memory.
 
@@ -259,7 +245,7 @@ std::cout << (&a == &b);  // This should be false!
 
 - To make sure that &a != &b, the compiler gives each object at least one byte of storage, even if the class doesn’t contain any data.
 
-### 26.8.2 Class CSStudent: Total size breakdown
+### 26.6.2 Class CSStudent: Total size breakdown
 
 - int age
 
@@ -277,7 +263,7 @@ Size: 4 bytes
 
   - Typical alignment for a class with a pointer is 8 bytes, so the 4-byte int is padded with 4 extra bytes.
 
-### 26.8.3 Static Dispatch vs Dynamic Dispatch
+### 26.6.3 Static Dispatch vs Dynamic Dispatch
 
 - When you call a non-virtual member function like print() in the CollegeStudent class, the compiler resolves the call at compile time. This is known as static dispatch or early binding.
 

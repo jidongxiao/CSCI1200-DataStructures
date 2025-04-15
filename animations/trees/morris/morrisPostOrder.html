@@ -5,33 +5,25 @@
   <title>Morris Post‑Order Traversal Animation & Code Display</title>
   <style>
     html, body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    h1 { text-align: center; margin-top: 20px; }
-    p { text-align: center; margin: 10px 0 30px; }
-    
-    .container {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+    h1 { text-align: center; margin-top: 10px; margin-bottom: 5px; }
+    p { text-align: center; margin: 5px 0 15px; }
     
     .visualization-container {
       display: flex;
       justify-content: space-between;
       max-width: 1200px;
       margin: 0 auto;
-      height: 80vh;
+      height: 88vh;
     }
     
     .code-container {
       background-color: #f0f0f0;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       width: 48%;
       overflow-y: auto;
-      height: 80vh;
-      font-size: 16px;
+      height: 88vh;
+      font-size: 15px;
     }
     
     pre {
@@ -54,16 +46,16 @@
     .tree-container {
       background-color: #f0f0f0;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       width: 48%;
-      height: 80vh;
+      height: 88vh;
       position: relative;
       display: flex;
       flex-direction: column;
     }
     
     #nextStep {
-      margin: 10px;
+      margin: 10px auto;
       padding: 8px 15px;
       font-size: 16px;
       width: fit-content;
@@ -72,31 +64,72 @@
       color: white;
       border: none;
       border-radius: 4px;
+      display: block;
     }
     
-    #nextStep:hover {
-      background-color: #45a049;
-    }
+    #nextStep:hover { background-color: #45a049; }
+    #nextStep:disabled { background-color: #cccccc; cursor: not-allowed; }
     
-    #nextStep:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
-    }
-    
-    #container {
-      flex-grow: 1;
-      width: 100%;
-    }
+    #container { flex-grow: 1; width: 100%; }
     
     .explanation {
-      margin-top: 15px;
-      font-size: 16px;
-      padding: 15px;
+      margin-top: 10px;
+      font-size: 14px;
+      padding: 10px;
       background-color: #e8e8e8;
       border-radius: 5px;
     }
+    
+    .color-key {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 5px;
+      padding: 8px;
+      background-color: #e8e8e8;
+      border-radius: 5px;
+    }
+    
+    .color-item {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      font-size: 13px;
+    }
+    
+    .color-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      margin-right: 4px;
+      border: 1px solid #888;
+    }
+    
+    .color-arrow {
+      position: relative;
+      width: 24px;
+      height: 3px;
+      margin-right: 4px;
+    }
+    
+    .color-arrow:after {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: -4px;
+      border-left: 6px solid;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+    
+    .dotted-line {
+      width: 24px;
+      height: 0;
+      border-top: 2px dashed #ff5722;
+      margin-right: 4px;
+    }
   </style>
-  <!-- Load Konva.js from CDN -->
+  <!-- Load Konva.js -->
   <script src="https://cdn.jsdelivr.net/npm/konva@8.3.13/konva.min.js"></script>
 </head>
 <body>
@@ -126,7 +159,7 @@
 <span class="line-number">18.</span>             current = current->right;
 <span class="line-number">19.</span>         }
 <span class="line-number">20.</span>     }
-<span class="line-number">21.</span>     reverseTraverseRightEdge(root); <span style="color:green">// traverse the final right edge</span>
+<span class="line-number">21.</span>     reverseTraverseRightEdge(root); <span style="color:green">// final right edge</span>
 <span class="line-number">22.</span>     <span style="color:blue">return</span>;
 <span class="line-number">23.</span> }
 <span class="line-number">24.</span> 
@@ -149,11 +182,43 @@
 <span class="line-number">41.</span>         std::cout << current->val << " ";
 <span class="line-number">42.</span>         current = current->right;
 <span class="line-number">43.</span>     }
-<span class="line-number">44.</span>     reverse(tail); <span style="color:green">// restore the original tree structure</span>
+<span class="line-number">44.</span>     reverse(tail); <span style="color:green">// restore structure</span>
 <span class="line-number">45.</span> }</code></pre>
     </div>
     <div class="tree-container">
+      <div class="color-key">
+        <div class="color-item">
+          <div class="color-box" style="background-color: #ffeb3b;"></div>
+          <span>Current Node</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box" style="background-color: #2196f3;"></div>
+          <span>Rightmost Node</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box" style="background-color: #4caf50;"></div>
+          <span>Visited Node</span>
+        </div>
+        <div class="color-item">
+          <div class="color-box" style="background-color: #03a9f4;"></div>
+          <span>Thread Created</span>
+        </div>
+        <div class="color-item">
+          <div class="color-arrow" style="background-color: #888;"></div>
+          <span>Tree Edge</span>
+        </div>
+        <div class="color-item">
+          <div class="dotted-line"></div>
+          <span>Thread Edge</span>
+        </div>
+        <div class="color-item">
+          <div class="color-arrow" style="background-color: #e91e63;"></div>
+          <span>Reversed Edge</span>
+        </div>
+      </div>
+      
       <button id="nextStep">Next Step</button>
+      
       <div id="container"></div>
       <div class="explanation" id="treeExplanation">
         Post-order traversal output: <span id="output"></span>
@@ -182,8 +247,8 @@
 
     // Update the explanation text.
     function updateExplanation(text) {
-      document.getElementById('treeExplanation').innerHTML = 
-        'Post-order traversal output: <span id="output">' + 
+      document.getElementById('treeExplanation').innerHTML =
+        'Post-order traversal output: <span id="output">' +
         document.getElementById('output').innerText + '</span><br>' + text;
     }
 
@@ -213,46 +278,93 @@
           fontFamily: 'Arial',
           fill: 'black'
         });
+        this.leftEdge = null;
+        this.rightEdge = null;
+        this.threadEdge = null;
+        this.reversedEdges = [];
       }
     }
 
     // Initialize Konva stage and layer.
     const stage = new Konva.Stage({ 
       container: 'container', 
-      width: document.querySelector('.tree-container').clientWidth - 40, 
-      height: document.querySelector('.tree-container').clientHeight - 140 
+      width: document.querySelector('.tree-container').clientWidth - 30, 
+      height: document.querySelector('.tree-container').clientHeight - 140
     });
     const layer = new Konva.Layer();
     stage.add(layer);
 
-    // Draw an edge between two nodes.
-    function drawEdge(parent, child, color = '#888') {
-      const line = new Konva.Line({
-        points: [parent.x, parent.y, child.x, child.y],
-        stroke: color,
-        strokeWidth: 2
-      });
-      layer.add(line);
-      return line;
+    // Calculate connection points for arrow drawing.
+    function calculateConnectionPoints(fromNode, toNode) {
+      const nodeRadius = 20;
+      const dx = toNode.x - fromNode.x;
+      const dy = toNode.y - fromNode.y;
+      const angle = Math.atan2(dy, dx);
+      return {
+        fromX: fromNode.x + nodeRadius * Math.cos(angle),
+        fromY: fromNode.y + nodeRadius * Math.sin(angle),
+        toX: toNode.x - nodeRadius * Math.cos(angle),
+        toY: toNode.y - nodeRadius * Math.sin(angle)
+      };
     }
 
-    // Highlight or unhighlight a node.
-    function highlightNode(node, color = '#8bc34a') {
-      if (node && node.shape) {
-        node.shape.to({ fill: color, duration: 0.25 });
+    // Create an arrow between two nodes.
+    function createArrow(fromNode, toNode, color = '#888', dashed = false) {
+      const points = calculateConnectionPoints(fromNode, toNode);
+      const arrow = new Konva.Arrow({
+        points: [points.fromX, points.fromY, points.toX, points.toY],
+        pointerLength: 10,
+        pointerWidth: 8,
+        fill: color,
+        stroke: color,
+        strokeWidth: dashed ? 1 : 2,
+        dashEnabled: dashed,
+        dash: dashed ? [5, 5] : null
+      });
+      layer.add(arrow);
+      return arrow;
+    }
+
+    // Draw an edge between two nodes.
+    function drawEdge(parent, child, isLeft = true) {
+      const arrow = createArrow(parent, child);
+      layer.add(arrow);
+      if (isLeft) { parent.leftEdge = arrow; } 
+      else { parent.rightEdge = arrow; }
+      arrow.moveToBottom();
+      return arrow;
+    }
+
+    // Create and remove thread edges.
+    function createThreadEdge(fromNode, toNode) {
+      if (fromNode.threadEdge) { fromNode.threadEdge.destroy(); }
+      const threadArrow = createArrow(fromNode, toNode, '#ff5722', true);
+      fromNode.threadEdge = threadArrow;
+      threadArrow.moveToTop();
+      layer.draw();
+      return threadArrow;
+    }
+    function removeThreadEdge(node) {
+      if (node && node.threadEdge) {
+        node.threadEdge.destroy();
+        node.threadEdge = null;
+        layer.draw();
       }
     }
+
+    // Highlight and unhighlight a node.
+    function highlightNode(node, color = '#8bc34a') {
+      if (node && node.shape) { node.shape.to({ fill: color, duration: 0.25 }); }
+    }
     function unhighlightNode(node, color = 'white') {
-      if (node && node.shape) {
-        node.shape.to({ fill: color, duration: 0.25 });
-      }
+      if (node && node.shape) { node.shape.to({ fill: color, duration: 0.25 }); }
     }
 
     // Calculate tree layout.
     const stageWidth = stage.width();
     const stageHeight = stage.height();
     const centerX = stageWidth / 2;
-    const topY = 50;
+    const topY = 40;
     const levelHeight = stageHeight / 4;
 
     // Build the 9-node binary tree.
@@ -281,15 +393,14 @@
       layer.add(n.label);
     });
 
-    const edges = [];
-    edges.push(drawEdge(node1, node2));
-    edges.push(drawEdge(node1, node3));
-    edges.push(drawEdge(node2, node4));
-    edges.push(drawEdge(node2, node5));
-    edges.push(drawEdge(node5, node6));
-    edges.push(drawEdge(node5, node7));
-    edges.push(drawEdge(node3, node8));
-    edges.push(drawEdge(node8, node9));
+    drawEdge(node1, node2, true);
+    drawEdge(node1, node3, false);
+    drawEdge(node2, node4, true);
+    drawEdge(node2, node5, false);
+    drawEdge(node5, node6, true);
+    drawEdge(node5, node7, false);
+    drawEdge(node3, node8, false);
+    drawEdge(node8, node9, true);
 
     nodes.forEach(n => {
       n.shape.moveToTop();
@@ -297,11 +408,81 @@
     });
     layer.draw();
 
-    // Reverse a chain of right pointers.
-    function reverseChain(head) {
+    // Visualize the reversal process.
+    async function visualizeReversal(head) {
+      const connections = [];
+      let current = head;
+      while (current !== null && current.right !== null) {
+        connections.push({ from: current, to: current.right });
+        current = current.right;
+      }
+      for (const conn of connections) {
+        if (conn.from.rightEdge) {
+          conn.from.rightEdge.destroy();
+          conn.from.rightEdge = null;
+        }
+      }
       let prev = null;
-      let curr = head;
-      let next;
+      current = head;
+      while (current !== null) {
+        const next = current.right;
+        if (prev !== null) {
+          const reversedEdge = createArrow(current, prev, '#e91e63');
+          current.reversedEdges.push(reversedEdge);
+          reversedEdge.moveToTop();
+        }
+        prev = current;
+        current = next;
+        layer.draw();
+        await waitForNext();
+      }
+      return prev;
+    }
+
+    // Restore the original tree structure.
+    async function visualizeRestore(head) {
+      nodes.forEach(node => {
+        if (node.reversedEdges) {
+          node.reversedEdges.forEach(edge => edge.destroy());
+          node.reversedEdges = [];
+        }
+      });
+      let current = head;
+      while (current !== null && current.right !== null) {
+        if (!current.rightEdge) {
+          current.rightEdge = createArrow(current, current.right, '#888');
+          current.rightEdge.moveToBottom();
+        }
+        current = current.right;
+      }
+      nodes.forEach(n => {
+        n.shape.moveToTop();
+        n.label.moveToTop();
+      });
+      layer.draw();
+    }
+
+    // Reverse a chain of right pointers.
+    async function reverseChain(head) {
+      updateExplanation("Visualizing the reversal of pointers");
+      await waitForNext();
+      const reversedHead = await visualizeReversal(head);
+      let prev = null, curr = head, next;
+      while (curr !== null) {
+        next = curr.right;
+        curr.right = prev;
+        prev = curr;
+        curr = next;
+      }
+      return prev;
+    }
+
+    // Restore the chain.
+    async function restoreChain(head) {
+      updateExplanation("Visualizing the restoration of original pointers");
+      await waitForNext();
+      await visualizeRestore(head);
+      let prev = null, curr = head, next;
       while (curr !== null) {
         next = curr.right;
         curr.right = prev;
@@ -314,19 +495,15 @@
     // Reverse traverse the right edge of a subtree.
     async function reverseTraverseRightEdge(head) {
       if (!head) return;
-      
       updateExplanation("Reversing the right edge starting from node " + head.val);
       await waitForNext();
-      
-      let tail = reverseChain(head);
+      let tail = await reverseChain(head);
       layer.draw();
-      
       updateExplanation("Visiting nodes along the reversed right edge");
       let cur = tail;
       while (cur !== null) {
         highlightNode(cur, '#4caf50');
         layer.draw();
-        
         appendOutput(cur.val + " ");
         updateExplanation("Visited node: " + cur.val);
         await waitForNext();
@@ -334,58 +511,50 @@
         layer.draw();
         cur = cur.right;
       }
-      
       updateExplanation("Restoring the original right edge");
       await waitForNext();
-      
-      reverseChain(tail);
+      await restoreChain(tail);
       layer.draw();
     }
 
     // Morris Post‑Order Traversal Animation.
     async function postorderTraversal(root) {
       let current = root;
-      
       while (current !== null) {
         highlightNode(current, '#ffeb3b');
         layer.draw();
-        
         if (current.left !== null) {
-          updateExplanation("Current: " + current.val + " - Has left child, finding rightmost node in left subtree");
+          updateExplanation("Current: " + current.val + " - Has left child, finding rightmost in left subtree");
           await waitForNext();
-          
           let rightmost = current.left;
           highlightNode(rightmost, '#2196f3');
           layer.draw();
-          
           while (rightmost.right !== null && rightmost.right !== current) {
-            updateExplanation("Moving to the right to find rightmost: " + rightmost.val);
+            updateExplanation("Moving to right: " + rightmost.val);
             await waitForNext();
-            
             unhighlightNode(rightmost, 'white');
             rightmost = rightmost.right;
             highlightNode(rightmost, '#2196f3');
             layer.draw();
           }
-          
           if (rightmost.right === null) {
             updateExplanation("Rightmost: " + rightmost.val + " - Creating thread to current: " + current.val);
             await waitForNext();
-            
+            createThreadEdge(rightmost, current);
             rightmost.right = current;
             highlightNode(rightmost, '#03a9f4');
             layer.draw();
-            
+            await waitForNext();
+            unhighlightNode(rightmost, 'white');
             unhighlightNode(current, 'white');
             current = current.left;
           } else {
-            updateExplanation("Thread detected at rightmost: " + rightmost.val + " - Processing subtree");
+            updateExplanation("Thread detected at rightmost: " + rightmost.val + " - Removing thread and processing subtree");
             await waitForNext();
-            
+            removeThreadEdge(rightmost);
             rightmost.right = null;
             unhighlightNode(rightmost, 'white');
             layer.draw();
-            
             await reverseTraverseRightEdge(current.left);
             unhighlightNode(current, 'white');
             current = current.right;
@@ -393,25 +562,25 @@
         } else {
           updateExplanation("Current: " + current.val + " - No left child, moving right");
           await waitForNext();
-          
           unhighlightNode(current, 'white');
           current = current.right;
         }
       }
-      
       updateExplanation("Processing final right edge");
       await waitForNext();
-      
       await reverseTraverseRightEdge(root);
       updateExplanation("Morris Post-Order Traversal complete");
-      
       await waitForNext();
       updateExplanation("Final post-order traversal result: " + document.getElementById('output').innerText);
+      nodes.forEach(n => {
+        n.shape.moveToTop();
+        n.label.moveToTop();
+      });
+      layer.draw();
     }
 
-    // Adjust stage on window resize.
     window.addEventListener('resize', function() {
-      stage.width(document.querySelector('.tree-container').clientWidth - 40);
+      stage.width(document.querySelector('.tree-container').clientWidth - 30);
       stage.height(document.querySelector('.tree-container').clientHeight - 140);
       layer.draw();
     });

@@ -360,4 +360,4 @@ public:
 };
 ```
 
-The comment /*     0     8 */ means that the virtual table pointer starts at offset 0 of the class, and it has 8 bytes; the comment /*     8     4 */ means the variable age starts at offset 8 and it has 4 bytes.
+The numbers "0     8" mean that the virtual table pointer starts at offset 0 of the class, and it has 8 bytes; the numbers "8     4" means that the variable *age* starts at offset 8 and it has 4 bytes.

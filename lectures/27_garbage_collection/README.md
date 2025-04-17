@@ -178,7 +178,7 @@ we can do? Yes, we can use Smart Pointers to gain some of the features of garbag
 
 - Smart pointers in C++ are objects that manage the lifetime of dynamically allocated memory, ensuring proper deallocation and preventing memory leaks.
 
-- Available since C++11 in the <memory> header.
+- Available since C++11 in the &lt;memory&gt; header.
 
 ## 27.13 Why Smart Pointers
 
@@ -202,7 +202,63 @@ Smart pointers automate memory management and ensure exception safety and owners
 
 ## 27.14 Types of Smart Pointers
 
-### 27.14.1 std::unique_ptr
+### 27.14.1 std::shared_ptr
+
+- Shared ownership — multiple smart pointers can own the same object.
+
+- Uses reference counting to track owners.
+
+- Object is deleted when the last owner is gone.
+
+- Use Cases: When multiple parts of a program need access to the same object.
+
+```cpp
+#include <memory>
+
+std::shared_ptr<int> p1 = std::make_shared<int>(20);
+std::shared_ptr<int> p2 = p1; // shared ownership
+```
+
+- Reference Count: Use use_count() to check how many shared_ptrs refer to the object:
+
+```cpp
+p1.use_count(); // e.g., 2
+```
+
+Below is an std::shared_ptr example program:
+
+```cpp
+#include <iostream>
+#include <memory>
+#include <string>
+
+class Pizza {
+public:
+    Pizza(const std::string& type) : type(type) {
+        std::cout << type << " pizza is served! 🍕\n";
+    }
+    ~Pizza() {
+        std::cout << type << " pizza is all gone! 😢\n";
+    }
+    std::string type;
+};
+
+void party() {
+    std::shared_ptr<Pizza> pizza = std::make_shared<Pizza>("Pepperoni");
+
+    std::shared_ptr<Pizza> alice = pizza;
+    std::shared_ptr<Pizza> bob = pizza;
+
+    std::cout << "Alice and Bob are enjoying the same " << pizza->type << " pizza! 🍴\n";
+    std::cout << "Pizza has " << pizza.use_count() << " fans right now.\n";
+}
+
+int main() {
+    party();  // All shared_ptrs go out of scope here
+}
+```
+
+### 27.14.2 std::unique_ptr
 
 - Exclusive ownership of a dynamically allocated object.
 
@@ -264,64 +320,8 @@ int main() {
 }
 ```
 
-### 27.14.2 std::shared_ptr
-
-- Shared ownership — multiple smart pointers can own the same object.
-
-- Uses reference counting to track owners.
-
-- Object is deleted when the last owner is gone.
-
-- Use Cases: When multiple parts of a program need access to the same object.
-
-```cpp
-#include <memory>
-
-std::shared_ptr<int> p1 = std::make_shared<int>(20);
-std::shared_ptr<int> p2 = p1; // shared ownership
-```
-
-- Reference Count: Use use_count() to check how many shared_ptrs refer to the object:
-
-```cpp
-p1.use_count(); // e.g., 2
-```
-
-Below is an std::shared_ptr example program:
-
-```cpp
-#include <iostream>
-#include <memory>
-#include <string>
-
-class Pizza {
-public:
-    Pizza(const std::string& type) : type(type) {
-        std::cout << type << " pizza is served! 🍕\n";
-    }
-    ~Pizza() {
-        std::cout << type << " pizza is all gone! 😢\n";
-    }
-    std::string type;
-};
-
-void party() {
-    std::shared_ptr<Pizza> pizza = std::make_shared<Pizza>("Pepperoni");
-
-    std::shared_ptr<Pizza> alice = pizza;
-    std::shared_ptr<Pizza> bob = pizza;
-
-    std::cout << "Alice and Bob are enjoying the same " << pizza->type << " pizza! 🍴\n";
-    std::cout << "Pizza has " << pizza.use_count() << " fans right now.\n";
-}
-
-int main() {
-    party();  // All shared_ptrs go out of scope here
-}
-```
-
 ### 27.14.3 other smart pointers
 
-- std::weak_ptr Use with shared_ptr. Memory is destroyed when no more shared_ptrs are pointing to object. So each time a weak_ptr is used you should first “lock” the data by creating a shared_ptr.
+- std::weak_ptr: Use with shared_ptr. Memory is destroyed when no more shared_ptrs are pointing to object. So each time a weak_ptr is used you should first “lock” the data by creating a shared_ptr.
 
-- std::scoped_ptr (Boost) “Remembers” to delete things when they go out of scope. Alternate to auto_ptr. Cannot be copied.
+- std::scoped_ptr: (Boost) “Remembers” to delete things when they go out of scope. Alternate to auto_ptr. Cannot be copied.

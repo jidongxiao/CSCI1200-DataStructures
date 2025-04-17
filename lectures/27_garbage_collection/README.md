@@ -168,126 +168,160 @@ stack:
 
 ## 27.11 Practical Garbage Collection Methodology in C++: Smart Pointers
 
-Garbage collection looks like an attractive option both when we are quickly drafting a prototype system and
+- Garbage collection looks like an attractive option both when we are quickly drafting a prototype system and
 also when we are developing big complex programs that process and rearrange lots of data.
- Unfortunately, general-purpose, invisible garbage collection isn’t something we can just tack onto C++, an
+- Unfortunately, general-purpose, invisible garbage collection isn’t something we can just tack onto C++, an
 enormous beast of a programming language (but that doesn’t stop people from trying!). So is there anything
 we can do? Yes, we can use Smart Pointers to gain some of the features of garbage collection.
- Some examples below are modified from these nice online references:
 
-[http://ootips.org/yonat/4dev/smart-pointers.html](http://ootips.org/yonat/4dev/smart-pointers.html)
+## 27.12 C++ Smart Pointers
 
-[http://www.codeproject.com/KB/stl/boostsmartptr.aspx](http://www.codeproject.com/KB/stl/boostsmartptr.aspx)
+- Smart pointers in C++ are objects that manage the lifetime of dynamically allocated memory, ensuring proper deallocation and preventing memory leaks.
 
-[http://en.wikipedia.org/wiki/Smart_pointer](http://en.wikipedia.org/wiki/Smart_pointer)
+- Available since C++11 in the <memory> header.
 
-[http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm](http://www.boost.org/doc/libs/1_48_0/libs/smart_ptr/smart_ptr.htm)
+## 27.13 Why Smart Pointers
 
-[http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/](http://www.acodersjourney.com/2016/05/top-10-dumb-mistakes-avoid-c-11-smart-pointers/)
-
-## 27.12 What’s a Smart Pointer?
-
-- The goal is to create a widget that works just like a regular pointer most of the time, except at the beginning
-and end of its lifetime. The syntax of how we construct smart pointers is a bit different and we don’t need to
-obsess about how & when it will get deleted (it happens automatically).
-- Here’s one flavor of a smart pointer (simplified from STL):
+- Traditional pointers require manual memory management:
 
 ```cpp
-template <class T>
-class auto_ptr {
+int* ptr = new int(5);
+// ...
+delete ptr;
+```
+
+If not handled correctly, traditional pointers can lead to:
+
+- Memory leaks
+
+- Dangling pointers
+
+- Double deletions
+
+Smart pointers automate memory management and ensure exception safety and ownership clarity.
+
+## 27.14 Types of Smart Pointers
+
+### 27.14.1 std::unique_ptr
+
+- Exclusive ownership of a dynamically allocated object.
+
+- Cannot be copied, only moved.
+
+- Deletes the object when it goes out of scope.
+
+- Use Cases: 
+
+  - When only one owner should exist.
+
+  - Performance-sensitive code (no reference count overhead).
+
+```cpp
+#include <memory>
+
+std::unique_ptr<int> ptr = std::make_unique<int>(10);
+```
+
+- Move Ownership:
+
+```cpp
+std::unique_ptr<int> ptr2 = std::move(ptr); // ptr is now null
+```
+
+Below is an std::unique_ptr example program:
+
+```cpp
+#include <iostream>
+#include <memory>
+#include <string>
+
+class Girlfriend {
 public:
-	explicit auto_ptr(T* p = NULL) : ptr(p) {} /* prevents cast/conversion */
-	~auto_ptr() { delete ptr; }
-	T& operator*() { return *ptr; }
-	T* operator->() { return ptr; } /* fakes being a pointer */
-private:
-	T* ptr;
+    Girlfriend(const std::string& name) : name(name) {
+        std::cout << name << " is now your loyal partner! 👧\n";
+    }
+    ~Girlfriend() {
+        std::cout << name << " has broken up with you. 😭\n";
+    }
+    std::string name;
 };
-```
 
-- And let’s start with some example code without smart pointers:
+void takeCareOfHer(std::unique_ptr<Girlfriend> g) {
+    std::cout << g->name << " is enjoying life with you!\n";
+}
 
-```cpp
-void foo() {
-	Polygon* p(new Polygon(/* stuff */));
-	p->DoSomething();
-	delete p;
+int main() {
+    std::unique_ptr<Girlfriend> myGirl = std::make_unique<Girlfriend>("Taylor");
+
+    // Uncommenting below would cause a compile error:
+    // std::unique_ptr<Girlfriend> copy = myGirl; // ❌ can't copy
+
+    takeCareOfHer(std::move(myGirl)); // Transfer ownership
+
+    if (!myGirl) {
+        std::cout << "You no longer have a girlfriend. 💔\n";
+    }
 }
 ```
-- Here’s how we can re-write the same example with our auto_ptr:
+
+### 27.14.2 std::shared_ptr
+
+- Shared ownership — multiple smart pointers can own the same object.
+
+- Uses reference counting to track owners.
+
+- Object is deleted when the last owner is gone.
+
+- Use Cases: When multiple parts of a program need access to the same object.
 
 ```cpp
-void foo() {
-	auto_ptr<Polygon> p(new Polygon(/* stuff */);
-	p->DoSomething();
+#include <memory>
+
+std::shared_ptr<int> p1 = std::make_shared<int>(20);
+std::shared_ptr<int> p2 = p1; // shared ownership
+```
+
+- Reference Count: Use use_count() to check how many shared_ptrs refer to the object:
+
+```cpp
+p1.use_count(); // e.g., 2
+```
+
+Below is an std::shared_ptr example program:
+
+```cpp
+#include <iostream>
+#include <memory>
+#include <string>
+
+class Pizza {
+public:
+    Pizza(const std::string& type) : type(type) {
+        std::cout << type << " pizza is served! 🍕\n";
+    }
+    ~Pizza() {
+        std::cout << type << " pizza is all gone! 😢\n";
+    }
+    std::string type;
+};
+
+void party() {
+    std::shared_ptr<Pizza> pizza = std::make_shared<Pizza>("Pepperoni");
+
+    std::shared_ptr<Pizza> alice = pizza;
+    std::shared_ptr<Pizza> bob = pizza;
+
+    std::cout << "Alice and Bob are enjoying the same " << pizza->type << " pizza! 🍴\n";
+    std::cout << "Pizza has " << pizza.use_count() << " fans right now.\n";
+}
+
+int main() {
+    party();  // All shared_ptrs go out of scope here
 }
 ```
 
-- We don’t have to call delete! There’s no memory leak or memory error in this code. Awesome!
+### 27.14.3 other smart pointers
 
-## 27.13 So, What are the Advantages of Smart Pointers?
+- std::weak_ptr Use with shared_ptr. Memory is destroyed when no more shared_ptrs are pointing to object. So each time a weak_ptr is used you should first “lock” the data by creating a shared_ptr.
 
-- With practice, smart pointers can result in code that is more concise and elegant with fewer errors. Why? ...
-- With thoughtful use, smart pointers make it easier to follow the principles of RAII and make code exception safe. In the auto_ptr example above, if DoSomething throws an exception, the memory for object p will be properly deallocated when we leave the scope of the foo function! This is not the case with the original version.
-- The STL shared_ptr flavor implements reference counting garbage collection. Awesome<sup>2</sup>!
-- They play nice with STL containers. Say you make an std::vector (or std::list, or std::map, etc.) of regular pointers to Polygon objects, Polygon* (especially handy if this is a polymorphic collection of objects!).
-You allocate them all with new, and when you are all finished you must remember to explicitly deallocate each
-of the objects.
-
-```cpp
-class Polygon { /*...*/ };
-class Triangle : public Polygon { /*...*/ };
-class Quad : public Polygon { /*...*/ };
-std::vector<Polygon*> polys;
-polys.push_back(new Triangle(/*...*/));
-polys.push_back(new Quad(/*...*/));
-for (unsigned int i = 0; i < polys.size(); i++) {
-	delete polys[i];
-}
-polys.clear();
-```
-
-In contrast, with smart pointers they will be deallocated automagically!
-
-```cpp
-std::vector<shared_ptr<Polygon> > polys;
-polys.push_back(shared_ptr<Polygon>(new Triangle(/*...*/)));
-polys.push_back(shared_ptr<Polygon>(new Quad(/*...*/)));
-polys.clear(); // cleanup is automatic!
-```
-
-## 27.14 Why are Smart Pointers Tricky?
-
-- Smart pointers do not alleviate the need to master pointers, basic memory allocation & deallocation, copy constructors, destructors, assignment operators, and reference variables.
-- You can still make mistakes in your smart pointer code that yield the same types of memory corruption,
-segmentation faults, and memory leaks as regular pointers.
-- There are several different flavors of smart pointers to choose from (developed for different uses, for common
-design patterns). You need to understand your application and the different pitfalls when you select the
-appropriate implementation.
-
-## 27.15 What are the Different Types of Smart Pointers?
-
-Like other parts of the C++ standard, these tools are still evolving. The different choices reflect different ownership
-semantics and different design patterns. There are some smart pointers in STL, and also some in Boost (a C++
-library that further extends the current STL). A quick overview:
-- auto_ptr
-When “copied” (copy constructor), the new object takes ownership and the old object is now empty. Deprecated
-in new C++ standard.
-- unique_ptr
-Cannot be copied (copy constructor not public). Can only be “moved” to transfer ownership. Explicit ownership
-transfer. Intended to replace auto_ptr. std::unique ptr has memory overhead only if you provide it with some
-non-trivial deleter. It has time overhead only during constructor (if it has to copy the provided deleter) and
-during destructor (to destroy the owned object).
-- scoped_ptr (Boost)
-“Remembers” to delete things when they go out of scope. Alternate to auto_ptr. Cannot be copied.
-- shared_ptr
-Reference counted ownership of pointer. Unfortunately, circular references are still a problem. Different subflavors based on where the counter is stored in memory relative to the object, e.g., intrusive_ptr, which
-is more memory efficient. std::unique ptr has memory overhead only if you provide it with some non-trivial
-deleter. It has time overhead in constructor (to create the reference counter), in destructor (to decrement
-the reference counter and possibly destroy the object) and in assignment operator (to increment the reference
-counter).
-- weak_ptr
-Use with shared_ptr. Memory is destroyed when no more shared_ptrs are pointing to object. So each time
-a weak_ptr is used you should first “lock” the data by creating a shared_ptr.
-- scoped_array and shared_array (Boost)
-
+- std::scoped_ptr (Boost) “Remembers” to delete things when they go out of scope. Alternate to auto_ptr. Cannot be copied.

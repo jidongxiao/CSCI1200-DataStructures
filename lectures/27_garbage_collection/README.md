@@ -260,7 +260,7 @@ int main() {
 
 #### Member Functions and Operators of std::shared_ptr
 
-- reset()	Releases ownership of the managed object. Can also assign a new object.
+- reset()	Releases ownership of the managed object.
 
 - use_count()	Returns the number of shared_ptrs sharing ownership of the object.
 

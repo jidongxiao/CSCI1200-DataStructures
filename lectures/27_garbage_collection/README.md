@@ -258,6 +258,22 @@ int main() {
 }
 ```
 
+#### Member Functions and Operators of std::shared_ptr
+
+- reset()	Releases ownership of the managed object. Can also assign a new object.
+
+- use_count()	Returns the number of shared_ptrs sharing ownership of the object.
+
+- unique()	Returns true if this shared_ptr is the only one owning the object (use_count() == 1).
+
+- get()	Returns the raw pointer to the managed object.
+
+- operator*()	Dereferences the pointer (*sp) to access the object.
+
+- operator->()	Accesses a member of the object (sp-&gt;member).
+
+- operator bool()	Checks whether the pointer is non-null (if (sp)).
+
 ### 27.14.2 std::unique_ptr
 
 - Exclusive ownership of a dynamically allocated object.

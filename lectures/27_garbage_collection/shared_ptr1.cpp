@@ -20,4 +20,9 @@ int main(){
 	// the shared_ptr itself is now empty (i.e., it holds nullptr).
 	age.reset();
 	std::cout << "the use count is : " << age.use_count() << std::endl;
+
+	// question: what happens if we print age here: 
+	// std::cout << "age is " << *age << std::endl;
+
+	return 0;
 }

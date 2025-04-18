@@ -344,7 +344,7 @@ int main() {
 
 ## 27.15 Exercise
 
-In the following program, the use count will be printed 3 times. What exact value will be printed each time?
+In the following [program](shared_ptr1.cpp), the use count will be printed 3 times. What exact value will be printed each time?
 
 ```cpp
 #include <iostream>
@@ -363,6 +363,10 @@ int main(){
                 std::cout << "the use count is : " << age.use_count() << std::endl;
         }
         std::cout << "the use count is : " << age.use_count() << std::endl;
+
+        if(age.unique()){
+                std::cout << "Congratulations! I am yours!" << std::endl;
+        }
 
         // give up my ownership, it decreases the reference count of the managed object by one.
         // if that shared pointer was the last owner (i.e., reference count becomes zero), the object is deleted.

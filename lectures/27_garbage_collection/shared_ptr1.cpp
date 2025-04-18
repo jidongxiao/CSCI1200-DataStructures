@@ -15,6 +15,10 @@ int main(){
 	}
 	std::cout << "the use count is : " << age.use_count() << std::endl;
 
+	if(age.unique()){
+		std::cout << "Congratulations! I am yours!" << std::endl;
+	}
+
 	// give up my ownership, it decreases the reference count of the managed object by one.
 	// if that shared pointer was the last owner (i.e., reference count becomes zero), the object is deleted. 
 	// the shared_ptr itself is now empty (i.e., it holds nullptr).
@@ -23,6 +27,6 @@ int main(){
 
 	// question: what happens if we print age here: 
 	// std::cout << "age is " << *age << std::endl;
-
+	
 	return 0;
 }

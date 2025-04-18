@@ -13,7 +13,7 @@ int main(){
 
 	std::unique_ptr<std::string> s2(std::move(s1));
 
-	// Question: which of the following line will trigger a seg fault?
+	// Question: which one of the following two lines will trigger a seg fault?
 	// std::cout << "s1:" << *s1 << std::endl;
 	// std::cout << "s2:" << *s2 << std::endl;
 

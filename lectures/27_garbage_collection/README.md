@@ -342,6 +342,8 @@ int main() {
 
 - std::scoped_ptr: (Boost) “Remembers” to delete things when they go out of scope. Alternate to auto_ptr. Cannot be copied.
 
+- std::auto_ptr: was C++98’s first smart pointer, but it's broken and removed now.
+
 ## 27.15 Exercise
 
 In the following [program](shared_ptr1.cpp), the use count will be printed 3 times. What exact value will be printed each time?

@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: #d3d3d3;
+    font-family: Arial;
+  }
+  #main-container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+  }
+  #tree-container {
+    flex: 3;
+    height: 600px;
+    border: 2px solid #333;
+    background-color: #d3d3d3;
+  }
+  #stack-container {
+    flex: 1;
+    height: 600px;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    margin-left: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  #stack-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #controls {
+    text-align: center;
+    margin-top: 10px;
+  }
+  #log, #final-seq, #status {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  #log {
+    height: 100px;
+    overflow-y: auto;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  .label {
+    font-weight: bold;
+  }

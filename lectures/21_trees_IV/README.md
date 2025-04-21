@@ -27,15 +27,19 @@ We will use this binary tree as a test case:
 
 An in-order traversal program is provided here: [inorder_iterative.cpp](inorder_iterative.cpp).
 
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/iterative/inorder/inorder.html) to understand how this works.
+
 ## 21.1.2 Pre-order Iteratively
 
 A pre-order traversal program is provided here: [preorder_iterative.cpp](preorder_iterative.cpp).
+
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/iterative/preorder/preorder.html) to understand how this works.
 
 ## 21.1.3 Post-order Iteratively
 
 A post-order traversal program is provided here: [postorder_iterative.cpp](postorder_iterative.cpp).
 
-The best way to understand these programs is to walk through the code using the test case.
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/iterative/postorder/postorder.html) to understand how this works.
 
 ## 21.2 Existing Binary Tree Traversals
 

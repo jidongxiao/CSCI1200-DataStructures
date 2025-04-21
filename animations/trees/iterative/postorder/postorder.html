@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Post-Order Traversal (Step-by-Step)</title>
+  <script src="konva.js"></script>
+  <link rel="stylesheet" href="postorder.css">
+</head>
+<body>
+  <div id="main-container">
+    <div id="tree-container"></div>
+    <div id="stack-container">
+      <div id="stack-title">Stack</div>
+      <div id="stack-visual"></div>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="stepBtn">Step</button>
+    <button id="resetBtn">Start Over</button>
+  </div>
+  <div id="status">
+    <span class="label">Now checking:</span> <span id="currentVal">None</span> |
+    <span class="label">Status:</span> <span id="reason">Ready</span>
+  </div>
+  <div id="log"><strong>Traversal Sequence:</strong> <span id="seq"></span></div>
+  <div id="final-seq"><strong>Final Sequence:</strong> 4 6 7 5 2 9 8 3 1</div>
+
+  <script src="postorder.js"></script>
+</body>
+</html>

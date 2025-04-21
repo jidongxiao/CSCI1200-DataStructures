@@ -338,6 +338,7 @@ a4: 60. Submitty will deduct points once you submit more than 60 times.
  - DATA REPRESENTATION (6 pts)
    - No credit (significantly incomplete implementation). (-6)
    - Does not use std::priority_queue at all. (-6)
+   - Uses std::priority_queue but does not use it in a meaningful way. (-5)
 <!--
    - Member variables are public. (-2)
  - Exceptions (2 pts)

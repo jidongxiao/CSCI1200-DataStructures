@@ -58,7 +58,7 @@ When the last person disconnects from a Balloon using a shared pointer, the Ball
 
 Re-compile & re-run with the memory debugger to confirm you have fixed the simple leaks. For the final
 piece of this checkpoint (marked CHECKPOINT 2C), you must also re-write the interconnected balloon
-example to use shared pointers. You will need to modify the Balloon class to use dsSharedPointer as well.
+example to use shared pointers. **You will need to modify the Balloon class to use dsSharedPointer as well.**
 
 **To complete this checkpoint**: Explain to your TA the code you needed to add and/or modify to correct
 the memory leaks in the provided code. Show your TA the result of the memory debugger on your finished

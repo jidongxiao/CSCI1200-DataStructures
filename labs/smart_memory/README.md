@@ -1,8 +1,11 @@
-# Lab 14 — Garbage Collection & Smart Pointers
+# Lab 12 — Heap Sort & Smart Pointers
+<!-- # Lab 14 — Garbage Collection & Smart Pointers -->
 
 ## Checkpoint 0
 
-If you haven’t done so already, please complete your course evaluation for Data Structures (your honest & anonymous feedback is very important!). Have the webpage receipt saying “completed” open in your browser to receive credit for Checkpoint 0.
+If you haven’t done so already, please complete your course evaluation for Data Structures (your honest & anonymous feedback is very important!). Have the webpage receipt saying "completed" open in your browser to receive credit for Checkpoint 0.
+
+<!--
 
 ## Checkpoint 1:
 
@@ -21,6 +24,14 @@ these 3 nodes are added and work through the Stop and Copy algorithm for this ex
 you are finished, uncomment the simulation and check your work.
 
 **To complete this checkpoint**: Show (and explain to) one of the TAs your box and pointer diagram.
+
+-->
+
+## Checkpoint 1:
+
+Two youtube videos will be provided when the lab starts. Both demonstrate the heap sort algorithm, please determine which one is better. There is only one of them whose runtime complexity is O(n logn), what is the run time complexity of the other one? 
+
+**To complete this checkpoint**, Answer the question and explain to the TA/mentor what the problem exists in the bad one.
 
 ## Checkpoint 2:
 
@@ -70,3 +81,4 @@ find std::set helpful. Once you have identified all of the nodes that are access
 you can call delete on each Node. Write additional test cases to confirm that your code is debugged.
 
 **To complete this checkpoint**: Show the TA cyclic memory diagram, your debugged implementation, and the memory debugger output to confirm that your code has no memory errors or leaks.
+-->

@@ -142,8 +142,8 @@ void heapify(std::vector<int>& nums, int n, int i){
         smallest = right;
     }
 
-    // after the above, smallest basically will either stay the same, or will be either left or right, depending on nums[left] is larger or nums[right] is larger. largest stays the same if it is already larger than its two children.
-    // if largest is changed, then we do need to swap.
+    // after the above, smallest basically will either stay the same, or will be either left or right, depending on nums[left] is smaller or nums[right] is smaller. smallest stays the same if it is already smallest than its two children.
+    // if smallest is changed, then we do need to swap.
     if(smallest != i){
         std::swap(nums[i], nums[smallest]);
         heapify(nums, n, smallest);

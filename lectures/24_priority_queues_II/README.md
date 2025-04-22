@@ -116,6 +116,10 @@ organized heap data, but incur a O(n log n) cost. Why?
 - The following is the sort algorithm with a main function to test it; the code makes a min heap.
 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
 /* The heapify function is designed to ensure that a subtree rooted at a given index i
  * in an array representation of a min heap maintains the heap property.
  * 
@@ -160,13 +164,17 @@ std::vector<int> sortArray(std::vector<int>& nums) {
         heapify(nums, n, i);
     }
 
-    // now the first one is the largest, swap it to the back
+    // now the first one is the smallest, swap it to the back
     // do this n-1 times.
-    for(int i=0; i<(n-1); i++){
+    for(int i=n-1; i>0; i--){
         // build the min heap again, with 0 being the root.
-        // but only consider n-1-i elements, as the others are already in the right place.
-        heapify(nums, n-1-i, 0);
+        // but only consider i elements, as the others are already in the right place.
+	std::swap(nums[0], nums[i]);     // move smallest to the end
+        heapify(nums, i, 0);
     }
+
+    // reverse to get ascending order
+    std::reverse(nums.begin(), nums.end());
 
     return nums;
 }
@@ -203,10 +211,10 @@ The above program prints the following:
 $ g++ heap_sort.cpp
 $ ./a.out
 Original array:
-42 12 13 65 98 45 97 85 76 90
+42 12 13 65 98 45 97 85 76 90 
 
 Sorted array:
-12 42 13 65 90 45 97 85 76 98
+12 13 42 45 65 76 85 90 97 98 
 ```
 
 ## 24.9 Summary Notes about Vector-Based Priority Queues

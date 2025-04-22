@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+/*base styling */
+body {
+  margin: 0;
+  background-color: #f7f8fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/*layout containers */
+#main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  gap: 20px;
+}
+
+#tree-container,
+#stack-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 16px;
+}
+
+#tree-container {
+  flex: 3;
+  height: 600px;
+}
+
+#stack-container {
+  flex: 1;
+  height: 600px;
+  box-sizing: border-box;
+}
+
+/*stack title */
+#stack-title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/*controls */
+#tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #555;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover {
+  color: #007bff;
+}
+
+.tab-btn.active,
+.tab-btn[style*="font-weight: bold"] {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #006ae6;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/*status & logs */
+#status,
+#log,
+#final-seq {
+  width: 90%;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+#log {
+  height: 120px;
+  overflow-y: auto;
+}
+
+.label {
+  font-weight: 500;
+  color: #666;
+}
+
+#currentVal {
+  color: #007bff;
+  font-weight: 500;
+}
+
+#reason {
+  color: #ff5722;
+  font-weight: 500;
+}
+
+#final-seq {
+  font-weight: 500;
+  color: #28a745;
+}

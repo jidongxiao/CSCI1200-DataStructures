@@ -1,4 +1,4 @@
-# Lecture 27 --- Final Exam Information
+# Lecture 28 --- Final Exam Information
 
 - Final Exam will be held Tuesday, April 29th, 2025 from 6:30-9:30pm.
 - Student’s assigned test room, row, and seat assignments will be re-randomized. If on Tuesday evening you still don’t have a seating assignment when you log onto Submitty, let us know via the ds_instructors list.

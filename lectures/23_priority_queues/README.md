@@ -159,6 +159,8 @@ int main() {
 5 4 3 3 1
 ```
 
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/priority_queue/max_heap/index.html) to see how this program works.
+
 - You can use std::priority_queue as a min heap via using std::greater, as can be seen in this [example](min_heap.cpp):
 
 ```cpp
@@ -189,6 +191,8 @@ int main() {
 ```console
 1 3 3 4 5
 ```
+
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/priority_queue/min_heap/index.html) to see how this program works.
 
 ## 23.6 Overloading operator()
 

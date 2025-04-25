@@ -1,0 +1,166 @@
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  h1 { 
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+  }
+  
+  p { 
+    text-align: center; 
+    margin: 5px 0 15px; 
+  }
+  
+  .visualization-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px; /* Increased from 1200px */
+    margin: 0 auto;
+    height: 88vh;
+  }
+  
+  .code-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 55%; /* Increased from 48% */
+    overflow-y: auto;
+    height: 87vh;
+    font-size: 15px;
+  }
+  
+  pre {
+    margin: 0;
+    background-color: #f0f0f0;
+    width: 100%;
+  }
+  
+  code {
+    font-family: Consolas, "Courier New", monospace;
+    white-space: pre;
+    display: inline-block;
+    min-width: 750px; /* Ensure code is wide enough for longest line */
+  }
+  
+  #codeDisplay {
+    width: 100%;
+  }
+  
+  .line-number {
+    color: #666;
+    display: inline-block;
+    min-width: 30px;
+  }
+  
+  .code-line {
+    display: block;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  /* Fix for line highlighting - make sure the entire line is highlighted */
+  .code-line.highlighted {
+    background-color: #ffeb3b;
+    width: 100%;
+    display: block;
+  }
+  
+  .tree-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 42%; /* Reduced from 48% to compensate for code container increase */
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #nextStep {
+    margin: 10px auto;
+    padding: 8px 15px;
+    font-size: 16px;
+    width: fit-content;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    display: block;
+  }
+  
+  #nextStep:hover { 
+    background-color: #45a049; 
+  }
+  
+  #nextStep:disabled { 
+    background-color: #cccccc; 
+    cursor: not-allowed; 
+  }
+  
+  #container { 
+    flex-grow: 1; 
+    width: 100%; 
+  }
+  
+  .explanation {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+  }
+  
+  .color-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+  }
+  
+  .color-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 13px;
+  }
+  
+  .color-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 4px;
+    border: 1px solid #888;
+  }
+  
+  .color-arrow {
+    position: relative;
+    width: 24px;
+    height: 3px;
+    margin-right: 4px;
+  }
+  
+  .color-arrow:after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: -4px;
+    border-left: 6px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }
+  
+  .dotted-line {
+    width: 24px;
+    height: 0;
+    border-top: 2px dashed #ff5722;
+    margin-right: 4px;
+  }

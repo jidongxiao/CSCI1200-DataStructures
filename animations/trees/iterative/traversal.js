@@ -1,10 +1,9 @@
-// In-Order / Pre-Order / Post-Order Traversal Visualization (combined)
 
-//canvas dimensions for tree visualization
+// Canvas dimensions
 const width = window.innerWidth * 0.9 * 0.75;
 const height = 600;
 
-//create the main stage and layer for the tree
+// Create Konva stage & layer
 const stage = new Konva.Stage({
   container: 'tree-container',
   width: width,
@@ -13,20 +12,20 @@ const stage = new Konva.Stage({
 const layer = new Konva.Layer();
 stage.add(layer);
 
-//adjusted positions: node 9 is left child of 8
+// Node positions (9 as left child of 8)
 const positions = {
-  1: { x: width / 2,       y: 80 },
-  2: { x: width / 2 - 200, y: 180 },
-  3: { x: width / 2 + 200, y: 180 },
-  4: { x: width / 2 - 300, y: 280 },
-  5: { x: width / 2 - 100, y: 280 },
-  6: { x: width / 2 - 150, y: 380 },
-  7: { x: width / 2 - 50,  y: 380 },
-  8: { x: width / 2 + 300, y: 280 },
-  9: { x: width / 2 + 250, y: 380 }  // left child of 8
+  1: { x: width/2,       y: 80 },
+  2: { x: width/2 -200,  y:180 },
+  3: { x: width/2 +200,  y:180 },
+  4: { x: width/2 -300,  y:280 },
+  5: { x: width/2 -100,  y:280 },
+  6: { x: width/2 -150,  y:380 },
+  7: { x: width/2 -50,   y:380 },
+  8: { x: width/2 +300,  y:280 },
+  9: { x: width/2 +250,  y:380 }
 };
 
-//tree structure
+// Tree data
 const tree = {
   val: 1,
   left: {
@@ -49,205 +48,185 @@ const tree = {
   }
 };
 
-//store node references for highlighting
+// Store node visuals
 const nodes = {};
 
-//recursive tree draw with shortened lines
-function drawTree(node, parent = null) {
-  if (!node) return;
-  const pos = positions[node.val];
-  if (parent) {
-    const p = positions[parent.val];
-    const dx = pos.x - p.x, dy = pos.y - p.y;
-    const dist = Math.sqrt(dx*dx + dy*dy);
-    const offX = (dx/dist)*20, offY = (dy/dist)*20;
-    layer.add(new Konva.Line({
-      points: [p.x + offX, p.y + offY, pos.x - offX, pos.y - offY],
-      stroke: 'black', strokeWidth: 2
-    }));
-  }
-  const circle = new Konva.Circle({ x: pos.x, y: pos.y, radius: 20, fill: 'white', stroke: 'black', strokeWidth: 2 });
-  const text = new Konva.Text({ x: pos.x - 5, y: pos.y - 8, text: node.val.toString(), fontSize: 16, fill: 'black' });
-  layer.add(circle);
-  layer.add(text);
-  nodes[node.val] = { circle, text };
-  drawTree(node.left, node);
-  drawTree(node.right, node);
+// Draw a single node
+function drawNode(x, y, label) {
+  const circle = new Konva.Circle({ x, y, radius: 20, fill: 'white', stroke: '#333', strokeWidth: 2 });
+  const text   = new Konva.Text({ x: x - 5, y: y - 8, text: label.toString(), fontSize: 16, fill: '#333' });
+  layer.add(circle, text);
+  nodes[label] = { circle, text };
 }
 
-//stack visualization setup
+// Draw edge between parent and child
+function drawEdge(parentVal, childVal) {
+  const p = positions[parentVal], c = positions[childVal];
+  const dx = c.x - p.x, dy = c.y - p.y;
+  const d = Math.hypot(dx, dy), ox = (dx/d) * 20, oy = (dy/d) * 20;
+  const line = new Konva.Line({ points:[p.x+ox,p.y+oy, c.x-ox,c.y-oy], stroke: '#333', strokeWidth: 2 });
+  layer.add(line);
+}
+
+// Make tree
+function renderTree(node, parent = null) {
+  if (!node) return;
+  drawNode(positions[node.val].x, positions[node.val].y, node.val);
+  if (parent) drawEdge(parent.val, node.val);
+  renderTree(node.left, node);
+  renderTree(node.right, node);
+}
+renderTree(tree);
+
+// Stack visualization
 const stackStage = new Konva.Stage({ container: 'stack-visual', width: 200, height: 500 });
 const stackLayer = new Konva.Layer();
 stackStage.add(stackLayer);
 let stackVisual = [];
-
 function pushStack(val) {
-  const box = new Konva.Rect({ x: 50, y: 400 - stackVisual.length * 30, width: 40, height: 25, fill: '#89CFF0', stroke: 'black' });
-  const label = new Konva.Text({ x: 60, y: 405 - stackVisual.length * 30, text: val.toString(), fontSize: 16, fill: 'black' });
-  stackLayer.add(box);
-  stackLayer.add(label);
-  stackVisual.push({ box, label });
+  const y = 400 - stackVisual.length * 30;
+  const box = new Konva.Rect({ x:50, y, width:40, height:25, fill:'#007bff', stroke:'#0056b3', cornerRadius:4 });
+  const txt = new Konva.Text({ x:58, y: y+4, text: val.toString(), fontSize:14, fill:'#fff' });
+  stackLayer.add(box, txt);
+  stackVisual.push({ box, txt });
   stackLayer.draw();
 }
-
 function popStack() {
-  const item = stackVisual.pop();
-  if (item) {
-    item.box.destroy();
-    item.label.destroy();
-    stackLayer.draw();
-  }
+  const it = stackVisual.pop();
+  if (it) { it.box.destroy(); it.txt.destroy(); stackLayer.draw(); }
 }
 
-function highlight(val, color = 'yellow') {
-  const n = nodes[val];
-  if (n) {
-    n.circle.fill(color);
-    layer.draw();
-  }
-}
-
-function resetHighlights() {
-  for (let v in nodes) {
-    nodes[v].circle.fill('white');
-  }
+// Highlight current node
+function highlight(val) {
+  for (const v in nodes) nodes[v].circle.fill('white');
+  if (val != null && nodes[val]) nodes[val].circle.fill('#ffc107');
   layer.draw();
 }
 
 function updateStatus(current, reason) {
-  document.getElementById('currentVal').innerText = current ?? 'None';
-  document.getElementById('reason').innerText = reason;
+  document.getElementById('currentVal').innerText = current != null ? current : 'None';
+  const reasonEl = document.getElementById('reason');
+  reasonEl.innerText = reason;
+  reasonEl.style.whiteSpace = 'normal';
+  reasonEl.style.display = 'inline-block';
+  reasonEl.style.maxWidth = '70%';
+  reasonEl.style.overflowWrap = 'break-word';
 }
+function logVisit(val) { document.getElementById('seq').innerText += ` ${val}`; }
 
-function logVisit(val) {
-  document.getElementById('seq').innerText += ` ${val}`;
-}
-
-//traversal state
+// Traversal state
 let current = tree;
+let lastVisited = null;
 const stack = [];
 let stepReady = true;
-let lastVisited = null;
 
-//final sequences for display
+// Final sequences for display
 const finalSeqs = {
-  'In-Order': '4 2 6 5 7 1 3 8 9',
+  'In-Order': '4 2 6 5 7 1 3 9 8',
   'Pre-Order': '1 2 4 5 6 7 3 8 9',
   'Post-Order': '4 6 7 5 2 9 8 3 1'
 };
 
-//create tabs dynamically
+// Tabs
 const modes = ['In-Order', 'Pre-Order', 'Post-Order'];
-let currentMode = modes[0];
+let currentMode = 'In-Order';
 const tabsDiv = document.createElement('div');
-tabsDiv.id = 'tabs';
-tabsDiv.style.textAlign = 'center';
-tabsDiv.style.margin = '10px';
-modes.forEach((mode) => {
+tabsDiv.id = 'tabs'; tabsDiv.style.textAlign = 'center'; tabsDiv.style.margin = '10px';
+modes.forEach(mode => {
   const btn = document.createElement('button');
-  btn.innerText = mode;
-  btn.className = 'tab-btn';
-  btn.style.margin = '0 5px';
+  btn.innerText = mode; btn.className = 'tab-btn';
   btn.onclick = () => {
     currentMode = mode;
-    document.querySelectorAll('.tab-btn').forEach((b) => (b.style.fontWeight = 'normal'));
-    btn.style.fontWeight = 'bold';
-    document.getElementById('final-seq').innerHTML = `<strong>Final Sequence (${mode}):</strong> ${finalSeqs[mode]}`;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Update final sequence display
+    finalSeqEl.innerHTML = `<strong>Final Sequence (${mode}):</strong> ${finalSeqs[mode]}`; 
     resetAll();
   };
-  if (mode === currentMode) btn.style.fontWeight = 'bold';
+  if (mode === currentMode) btn.classList.add('active');
   tabsDiv.appendChild(btn);
 });
-document.body.insertBefore(tabsDiv, document.getElementById('main-container'));
-document.getElementById('final-seq').innerHTML = `<strong>Final Sequence (${currentMode}):</strong> ${finalSeqs[currentMode]}`;
+document.body.insertBefore(tabsDiv, document.getElementById('controls'));
 
-//step functions for each traversal
+//Initialize final sequence display
+const finalSeqEl = document.getElementById('final-seq');
+finalSeqEl.innerHTML = `<strong>Final Sequence (${currentMode}):</strong> ${finalSeqs[currentMode]}`; 
+
+// Step functions
 function stepInOrder() {
   if (current) {
-    highlight(current.val, 'yellow');
-    updateStatus(current.val, `Push ${current.val} into stack`);
-    stack.push(current);
-    pushStack(current.val);
+    highlight(current.val);
+    updateStatus(current.val, `We have reached node ${current.val}. Push it onto the stack to remember it for later, then move to its left child to continue traversing the left subtree.`);
+    stack.push(current); pushStack(current.val);
     current = current.left;
     stepReady = true;
     return;
   }
-  if (stack.length > 0) {
-    const peek = stack[stack.length - 1];
-    updateStatus(peek.val, `Peek stack (current = ${peek.val})`);
-    current = stack.pop();
-    popStack();
-    updateStatus(current.val, `Visit ${current.val}`);
-    highlight(current.val, 'orange');
+  if (stack.length) {
+    current = stack.pop(); popStack();
+    highlight(current.val);
+    updateStatus(current.val, `Left subtree complete. Now visit node ${current.val} and output it in the in-order sequence, then move to its right child to explore its right subtree.`);
     logVisit(current.val);
-    setTimeout(() => {
-      resetHighlights();
-      current = current.right;
-      stepReady = true;
-    }, 500);
+    setTimeout(() => { current = current.right; stepReady = true; }, 500);
   } else {
-    updateStatus('None', 'Done');
+    highlight(null);
+    updateStatus(null, 'In-order traversal complete! All nodes have been visited.');
   }
 }
 
 function stepPreOrder() {
   if (current) {
-    updateStatus(current.val, `Visit ${current.val}`);
-    highlight(current.val, 'orange');
+    highlight(current.val);
+    updateStatus(current.val, `Output node ${current.val} as the next in pre-order sequence, then push it onto the stack so we can revisit its right subtree later, and move to its left child.`);
     logVisit(current.val);
-    updateStatus(current.val, `Push ${current.val} into stack`);
-    stack.push(current);
-    pushStack(current.val);
+    stack.push(current); pushStack(current.val);
     current = current.left;
     stepReady = true;
     return;
   }
-  if (stack.length > 0) {
-    const node = stack.pop();
-    popStack();
-    updateStatus(node.val, `Move to right of ${node.val}`);
-    current = node.right;
-    stepReady = true;
+  if (stack.length) {
+    current = stack.pop(); popStack();
+    highlight(current.val);
+    updateStatus(current.val, `Finished left subtree of node ${current.val}. Now proceed to explore its right subtree.`);
+    current = current.right;
   } else {
-    updateStatus('None', 'Done');
+    highlight(null);
+    updateStatus(null, 'Pre-order traversal complete! All nodes have been visited.');
   }
+  stepReady = true;
 }
 
 function stepPostOrder() {
   if (current) {
-    highlight(current.val, 'yellow');
-    updateStatus(current.val, `Push ${current.val} into stack`);
-    stack.push(current);
-    pushStack(current.val);
+    highlight(current.val);
+    updateStatus(current.val, `Push node ${current.val} onto the stack and move to its left child. In post-order, we process children before the node itself.`);
+    stack.push(current); pushStack(current.val);
     current = current.left;
     stepReady = true;
     return;
   }
-  if (stack.length > 0) {
+  if (stack.length) {
     const peek = stack[stack.length - 1];
     if (peek.right && lastVisited !== peek.right) {
-      updateStatus(peek.val, `Move to right of ${peek.val}`);
+      updateStatus(peek.val, `Left subtree of node ${peek.val} done. Now move to its right subtree to continue processing children first.`);
       current = peek.right;
       stepReady = true;
     } else {
-      const node = stack.pop();
-      popStack();
-      lastVisited = node;
-      updateStatus(node.val, `Visit ${node.val}`);
-      highlight(node.val, 'orange');
-      logVisit(node.val);
-      current = null;  // avoid re-visiting the same node
-      setTimeout(() => {
-        resetHighlights();
-        stepReady = true;
-      }, 500);
+      current = stack.pop(); popStack();
+      highlight(current.val);
+      updateStatus(current.val, `Both children of node ${current.val} have been visited. Now output node ${current.val} for post-order sequence.`);
+      logVisit(current.val);
+      lastVisited = current;
+      current = null;
+      stepReady = true;
     }
   } else {
-    updateStatus('None', 'Done');
+    highlight(null);
+    updateStatus(null, 'Post-order traversal complete! All nodes have been visited.');
   }
 }
 
-//bind the step button
+// Handles step function
 document.getElementById('stepBtn').onclick = () => {
   if (!stepReady) return;
   stepReady = false;
@@ -256,7 +235,8 @@ document.getElementById('stepBtn').onclick = () => {
   else if (currentMode === 'Post-Order') stepPostOrder();
 };
 
-//reset button and function
+// Clear/Reset
+document.getElementById('resetBtn').onclick = resetAll;
 function resetAll() {
   while (stackVisual.length) popStack();
   stack.length = 0;
@@ -264,12 +244,8 @@ function resetAll() {
   lastVisited = null;
   stepReady = true;
   document.getElementById('seq').innerText = '';
-  updateStatus('None', 'Ready');
-  resetHighlights();
+  updateStatus(null, 'Ready to begin traversal. Click "Step" to start.');
+  highlight(null);
 }
 
-document.getElementById('resetBtn').onclick = resetAll;
-
-//initial render of the tree
-drawTree(tree);
 layer.draw();

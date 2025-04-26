@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contains Nearby Duplicate Visualization</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load Konva.js -->
+  <script src="https://cdn.jsdelivr.net/npm/konva@8.3.13/konva.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Contains Nearby Duplicate Using std::map</h1>
+  <p>This visualization demonstrates the algorithm that checks if an array contains duplicates within distance k.</p>
+
+  <div class="visualization-container">
+    <div class="left-panel">
+      <div class="code-container">
+        <pre><code id="codeDisplay"></code></pre>
+      </div>
+      <div class="explanation-result-container">
+        <div class="explanation" id="explanation">
+          Select a test case and click "Next Step" to begin the animation.
+        </div>
+        <div class="result-container" id="resultContainer">
+          Result: <span id="result"></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="visualization-panel">
+      <div class="case-description" id="caseDescription"></div>
+      
+      <div class="top-controls">
+        <div class="test-case-btns">
+          <button class="test-btn active" data-testcase="0">Test Case 1</button>
+          <button class="test-btn" data-testcase="1">Test Case 2</button>
+          <button class="test-btn" data-testcase="2">Test Case 3</button>
+          <button class="test-btn" data-testcase="3">Test Case 4</button>
+          <button class="test-btn" data-testcase="4">Test Case 5</button>
+          <button class="test-btn" data-testcase="5">Test Case 6</button>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="nextStep">Next Step</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+      
+      <div class="visualization-area">
+        <div class="array-container" id="arrayContainer"></div>
+        <div class="map-container" id="mapContainer"></div>
+        
+        <div class="color-key">
+          <div class="color-key-label">Color Key:</div>
+          <div class="key-item">
+            <div class="key-color key-current"></div>
+            <div class="key-description">Current Element</div>
+          </div>
+          <div class="key-item">
+            <div class="key-color key-found"></div>
+            <div class="key-description">Previous Occurrence</div>
+          </div>
+          <div class="key-item">
+            <div class="key-color key-duplicate"></div>
+            <div class="key-description">Duplicate Within Distance k</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

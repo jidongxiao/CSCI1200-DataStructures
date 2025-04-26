@@ -233,6 +233,8 @@ Test Case 6: false
 You can also find this problem on Leetcode.
 - [Leetcode problem 219: Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/). Solution: [p219_contains_duplicate_ii.cpp](../../leetcode/p219_contains_duplicate_ii.cpp).
 
+- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/maps/example1.html) to understand how this program works.
+
 ## 15.11 More Leetcode Exercises
 
 - [Leetcode problem 1: Two Sum](https://leetcode.com/problems/two-sum/). Solution: [p1_twosum.cpp](../../leetcode/p1_twosum.cpp).

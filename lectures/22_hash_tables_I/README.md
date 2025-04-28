@@ -138,6 +138,8 @@ std::string identify(Node* phonebook[PHONEBOOK_SIZE], int number) {
 }
 ```
 
+Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/hash_tables/index.html) to understand how this works.
+
 ## 22.7 Exercise: Hash Table Performance
 
 - What's the memory complexity for the hash-table-based Caller ID system?

@@ -7,11 +7,10 @@ var stage = new Konva.Stage({
 var layer = new Konva.Layer();
 stage.add(layer);
 
-
 var heap = [];
 var nodeRadius = 25;
 var levelHeight = 80;
-var startX = 500;
+var startX = 1100;
 var startY = 50;
 var horizontalSpacing = 150;
 
@@ -32,14 +31,145 @@ var operations = [
     { type: 'pop' }
 ];
 
+var cppCode = [
+    "#include <iostream>",
+    "#include <queue>",
+    "#include <vector>",
+    "#include <functional>",
+    "",
+    "int main() {",
+    "    std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;",
+    "",
+    "    minHeap.push(3);",
+    "    minHeap.push(4);",
+    "    minHeap.push(3);",
+    "    minHeap.push(1);",
+    "    minHeap.push(5);",
+    "",
+    "    while (!minHeap.empty()) {",
+    "        std::cout << minHeap.top() << \" \";",
+    "        minHeap.pop();",
+    "    }",
+    "    std::cout << std::endl;",
+    "",
+    "    return 0;",
+    "}"
+];
+
+var codeBox = new Konva.Rect({
+    x: 20,
+    y: 60,
+    width: 500,
+    height: 550,
+    stroke: '#555',
+    strokeWidth: 5,
+    fill: '#ddd',
+    shadowColor: 'black',
+    shadowBlur: 10,
+    shadowOffsetX: 10,
+    shadowOffsetY: 10,
+    shadowOpacity: 0.2,
+    cornerRadius: 10,
+});
+layer.add(codeBox);
+
+var consoleBox = new Konva.Rect({
+    x: 550,
+    y: 60,
+    width: 200,
+    height: 350,
+    stroke: '#555',
+    strokeWidth: 5,
+    fill: '#ddd',
+    shadowColor: 'black',
+    shadowBlur: 10,
+    shadowOffsetX: 10,
+    shadowOffsetY: 10,
+    shadowOpacity: 0.2,
+    cornerRadius: 10,
+});
+layer.add(consoleBox);
+
+var consoleLabel = new Konva.Text({
+    x: 610,
+    y: 30,
+    text: "Console",
+    fontSize: 24,
+    fontFamily: 'Calibri',
+    fill: '#000',
+});
+layer.add(consoleLabel);
+
+var consoleOutputText = new Konva.Text({
+    x: 570,
+    y: 80,
+    text: "",
+    fontSize: 20,
+    fontFamily: 'Calibri',
+    fill: 'black',
+    width: 360,
+    wrap: 'word'
+});
+layer.add(consoleOutputText);
+
+var consoleContent = "";
+
+function makeCodeLine(x, y, text, id) {
+    return new Konva.Text({
+        x: x,
+        y: y,
+        text: text,
+        id: 'line' + id,
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#000000',
+        width: 460,
+        padding: 5,
+    });
+}
+
+for (let i = 0; i < cppCode.length; i++) {
+    let t = makeCodeLine(30, 70 + i * 25, cppCode[i], i + 1);
+    layer.add(t);
+}
+
+function makeBold(id) {
+    for (let i = 1; i <= cppCode.length; i++) {
+        let line = stage.findOne('#line' + i);
+        if (line) {
+            if (i === id) {
+                line.fontStyle('bold');
+            } else {
+                line.fontStyle('normal');
+            }
+        }
+    }
+}
+
+function renderCode(step) {
+    if (step >= 0 && step <= 4) {
+        makeBold(9 + step);
+    } else if (step >= 5 && step <= 10) {
+        makeBold(16);
+    } else {
+        makeBold(0);
+    }
+}
+
 function drawNode(x, y, value, color = '#ffffff') {
     var group = new Konva.Group({ x: x, y: y });
 
     var circle = new Konva.Circle({
         radius: nodeRadius,
         fill: color,
-        stroke: '#000000',
-        strokeWidth: 2
+        stroke: '#555',
+        strokeWidth: 5,
+        fill: '#ddd',
+        shadowColor: 'black',
+        shadowBlur: 10,
+        shadowOffsetX: 10,
+        shadowOffsetY: 10,
+        shadowOpacity: 0.2,
     });
 
     var text = new Konva.Text({
@@ -48,7 +178,7 @@ function drawNode(x, y, value, color = '#ffffff') {
         align: 'center',
         width: nodeRadius * 2,
         x: -nodeRadius,
-        y: -10
+        y: -7
     });
 
     group.add(circle);
@@ -62,7 +192,7 @@ function drawNode(x, y, value, color = '#ffffff') {
 function makeLine(x1, y1, x2, y2) {
     var line = new Konva.Line({
         points: [x1, y1, x2, y2],
-        stroke: 'black',
+        stroke: '#555',
         strokeWidth: 2,
         lineCap: 'round',
         lineJoin: 'round'
@@ -79,14 +209,12 @@ function makeTree() {
     animationLines = [];
 
     if (heap.length === 0) return;
-
     var positions = [];
 
     for (var i = 0; i < heap.length; i++) {
         var level = Math.floor(Math.log2(i + 1));
         var indexInLevel = i - (2 ** level - 1);
         var nodesInLevel = 2 ** level;
-
         var x = startX + (indexInLevel - (nodesInLevel - 1) / 2) * horizontalSpacing * (1.5 - level / 5);
         var y = startY + level * levelHeight;
 
@@ -98,7 +226,6 @@ function makeTree() {
             makeLine(parentPos.x, parentPos.y + nodeRadius, x, y - nodeRadius);
         }
     }
-
     layer.draw();
 }
 
@@ -114,7 +241,7 @@ function push(val) {
 }
 
 function pop() {
-    if (heap.length === 0) return null;
+    if (heap.length === 0) { return null; }
 
     var min = heap[0];
     heap[0] = heap[heap.length - 1];
@@ -138,52 +265,26 @@ function pop() {
     return min;
 }
 
-var cppCode = [
-    "#include <iostream>",
-    "#include <queue>",
-    "",
-    "int main() {",
-    "    std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;",
-    "",
-    "    minHeap.push(3);",
-    "    minHeap.push(4);",
-    "    minHeap.push(3);",
-    "    minHeap.push(1);",
-    "    minHeap.push(5);",
-    "",
-    "    while (!minHeap.empty()) {",
-    "        std::cout << minHeap.top() << \" \";",
-    "        minHeap.pop();",
-    "    }",
-    "    std::cout << std::endl;",
-    "",
-    "    return 0;",
-    "}"
-];
-
-function renderCode(step) {
-    var codeBlock = document.getElementById('codeBlock');
-    codeBlock.innerHTML = cppCode.map((line, i) => {
-        var bold = false;
-        if (step >= 0 && step <= 4) bold = i === 6 + step;
-        else if (step >= 5 && step <= 10) bold = i === 13 || i === 14;
-        return bold ? `<b>${line}</b>` : line;
-    }).join('\n');
-}
-
 function next() {
+    if (currentStep >= operations.length) {
+        alert("End of animation! Refresh the page if you want to re-run the animation.");
+        return;
+    }
+
     var op = operations[currentStep];
     if (op.type === 'push') {
         push(op.value);
     } else if (op.type === 'pop') {
-        pop();
+        let val = pop();
+        if (val !== null) {
+            consoleContent += val + ' ';
+            consoleOutputText.text(consoleContent);
+        }
     }
-
     renderCode(currentStep);
     makeTree();
     currentStep++;
 }
 
 document.getElementById('next').addEventListener('click', next);
-
 layer.draw();

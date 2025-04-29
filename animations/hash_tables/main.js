@@ -380,7 +380,7 @@ function highlightIdentifyPath(index, path)
 const mainCodeLines =
 [
     'int main(){',
-    '    Node *phonebook[PHONEBOOK_SIZE] = {nullptr};',
+    '    Node *phonebook[SIZE] = {nullptr};',
     '    add(phonebook, 5182764321, "dan");',
     '    add(phonebook, 6173551212, "fred");',
     '    add(phonebook, 5182761234, "alice");',
@@ -400,7 +400,7 @@ const funcCodeLines =
 [
     '#include <iostream>',
     '#include <string>',
-    'const int PHONEBOOK_SIZE = 10;',
+    'const int SIZE = 10;',
     'struct Node{',
     'public:',
     '    int number;',
@@ -409,9 +409,9 @@ const funcCodeLines =
     '    Node() : name(""), number(0), next(nullptr) {}',
     '};',
     'int hash_function(int number){',
-    '    return number % PHONEBOOK_SIZE;',
+    '    return number % SIZE;',
     '}',
-    'void add(Node *phonebook[PHONEBOOK_SIZE], int number, const std::string &name){',
+    'void add(Node *phonebook[SIZE], int number, std::string &name){',
     '    int index = hash_function(number);',
     '    Node *tmp = new Node;',
     '    tmp->name = name;',
@@ -419,7 +419,7 @@ const funcCodeLines =
     '    tmp->next = phonebook[index];',
     '    phonebook[index] = tmp;',
     '}',
-    'std::string identify(Node *phonebook[PHONEBOOK_SIZE], int number){',
+    'std::string identify(Node *phonebook[SIZE], int number){',
     '    int index = hash_function(number);',
     '    Node *curr = phonebook[index];',
     '    while (curr != nullptr){',

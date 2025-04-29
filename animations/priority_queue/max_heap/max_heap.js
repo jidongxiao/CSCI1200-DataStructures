@@ -10,7 +10,7 @@ stage.add(layer);
 var heap = [];
 var nodeRadius = 25;
 var levelHeight = 80;
-var startX = 100;
+var startX = 1100;
 var startY = 50;
 var horizontalSpacing = 150;
 

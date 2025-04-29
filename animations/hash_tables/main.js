@@ -645,7 +645,7 @@ function addNodeToMemory(index, name, number, chain = false, color = '#222')
     {
         arrow = new Konva.Arrow
         ({
-            points: [1700, y + 15, x, y + 15],
+            points: [1600, y + 15, x, y + 15],
             pointerLength: 10,
             pointerWidth: 10,
             fill: 'black',
@@ -655,7 +655,7 @@ function addNodeToMemory(index, name, number, chain = false, color = '#222')
     }
     else
     {
-        let prevX = 1725 + (memoryNodes[index].length - 1) * 150 + 100;
+        let prevX = 1625 + (memoryNodes[index].length - 1) * 150 + 100;
 
         arrow = new Konva.Arrow
         ({
@@ -688,7 +688,7 @@ function highlightMemoryBox(index, color)
 function highlightPersonBox(index, name, number, color)
 {
     let y = 60 + index * 50 + 10;
-    let x = 1725 + (memoryNodes[index].length - 1) * 150;
+    let x = 1625 + (memoryNodes[index].length - 1) * 150;
 
     // Draw node group (rectangle + text)
     let group = new Konva.Group();

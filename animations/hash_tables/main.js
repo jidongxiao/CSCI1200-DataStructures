@@ -539,7 +539,7 @@ var funcCodeBox = new Konva.Rect
 ({
     x: 850,
     y: 25,
-    width: 750,
+    width: 650,
     height: funcCodeLines.length * 24 + 30,
     fill: '#ddd',
     stroke: '#555',

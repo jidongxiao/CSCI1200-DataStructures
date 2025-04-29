@@ -49,11 +49,11 @@ function makeMemory(xstart, ystart, bufferSize, w, h)
     }	// end of for loop
 }
 
-makeMemory(1650,60,10,50,50);
+makeMemory(1550,60,10,50,50);
 
 var memoryText = new Konva.Text
 ({
-    x: 1625,
+    x: 1525,
     y: 25,
     id:"memory",
     text: "Memory",
@@ -539,7 +539,7 @@ var funcCodeBox = new Konva.Rect
 ({
     x: 850,
     y: 25,
-    width: 550,
+    width: 600,
     height: funcCodeLines.length * 24 + 30,
     fill: '#ddd',
     stroke: '#555',
@@ -595,7 +595,7 @@ function addNodeToMemory(index, name, number, chain = false, color = '#222')
 {
     if (!memoryNodes[index]) memoryNodes[index] = [];
     let y = 60 + index * 50 + 10;
-    let x = 1725 + memoryNodes[index].length * 150;
+    let x = 1625 + memoryNodes[index].length * 150;
 
     // Draw node group (rectangle + text)
     let group = new Konva.Group();

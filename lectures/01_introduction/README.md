@@ -287,7 +287,7 @@ object. There are several ways of constructing string objects:
 
 The STL streams std::cin & std::cout are used to read data from and write data to the "console". Often, we would rather read data from a file and/or write the output to a file. We can do this using the STL file stream library fstream. And here is an [example program](getline.cpp). Actually, this example program is the starting point to most of your homeworks. It shows how you can read information from a file, and write information into another file.
 
-# 1.16 String Concatenation
+## 1.16 String Concatenation
 
 The `+` operator can be used to concatenate `std::string` objects or a `std::string` with a C-style string.
 

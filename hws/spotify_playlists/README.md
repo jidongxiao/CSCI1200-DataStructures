@@ -130,7 +130,13 @@ If a move action or a remove action as defined in the **actions file** attempts 
 
 In cases where the same song appears more than once on the playlist, choose the first song (to move or remove) - i.e., search the playlist, starting from the top to the bottom, identify the first occurrence of this song, and use it (to move or remove).
 
-<!--## Instructor's Code
+## Removing current songs
+
+Question: "If a song is specified as currently playing, what happens if it is removed? Does the song before or after it start playing?"
+
+Answer: You decide; it won't be tested.
+
+<!-- ## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/). Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service. Also note that, it is not your job in this assignment to play musics, the instructor's C++ code here is just used as the backend to manage the playlist.
 -->

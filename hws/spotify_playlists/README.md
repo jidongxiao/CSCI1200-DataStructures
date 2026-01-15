@@ -136,6 +136,12 @@ Question: "If a song is specified as currently playing, what happens if it is re
 
 Answer: You decide; it won't be tested.
 
+## Other Assumptions
+
+Question: Can we assume the substring "current" will not be found in any other part of the spotify playlist that is not the indication of where the playlist is currently at?(i.e. it will not be part of a song title)
+
+Answer: Yes, you can assume that.
+
 <!-- ## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/). Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service. Also note that, it is not your job in this assignment to play musics, the instructor's C++ code here is just used as the backend to manage the playlist.

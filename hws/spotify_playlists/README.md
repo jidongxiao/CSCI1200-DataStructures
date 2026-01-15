@@ -130,135 +130,18 @@ If a move action or a remove action as defined in the **actions file** attempts 
 
 In cases where the same song appears more than once on the playlist, choose the first song (to move or remove) - i.e., search the playlist, starting from the top to the bottom, identify the first occurrence of this song, and use it (to move or remove).
 
-<!-- ### Command 1: add a music track to a playlist
-The first argument is the name of an input file which contains a playlist - in this README, we will refer to this file as the **playlist file**. The second argument is the name of another input file which contains all available music tracks - in this README, we will refer to this file as the **library file**. The third argument is the output file. The fourth argument is the action, which in this case is "add". The fifth argument is the title of the music track.
-
-```console
-./nyplaylists.exe playlist.txt library.txt output.txt add title
-```
-
-This command will add a music track (specified by the title) to the end of a playlist.
-
-For example, the following command will add the song Umbrella to the end of the playlist.
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add Umbrella
-```
-
-### Command 2: remove a music track from a playlist
-The first argument is the name of the **playlist file**. The second argument is the name of **library file**. The third argument is the output file. The fourth argument is the action, which in this case is "remove". The fifth argument is the title of the music track.
-
-```console
-./nyplaylists.exe playlist.txt library.txt output.txt remove title
-```
-
-For example, the following command will remove the song "Always Remember Us This Way" from the playlist.
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt remove Always Remember Us This Way
-```
-
-### Command 3: move a music track to a new position on the playlist
-The first argument is the name of **playlist file**. The second argument is the output file. The third argument is the action, which in this case is "move". The fourth argument is the title of the music track. The fifth argument is the new position - where this user wants the music track to be located on the playlist. Note that, unliked array indexing in C/C++, positioning in Spotify starts at 1, as opposed to 0. This can be seen in the above Spotify screenshot: the first position is position 1.
-
-```console
-./nyplaylists.exe playlist.txt output.txt move title [new_position]
-```
-
-For example, the following command will move the song "I Will Never Love Again - Film Version" to position 1.
-```console
-./nyplaylists.exe playlist_tiny1.txt output.txt move I Will Never Love Again - Film Version 1
-```
-
-### Command 4: skip to the next song in the current playlist
-The first argument is the name of **playlist file**. The second argument is the output file. The third argument is the action, which in this case is "next".
-
-```console
-./nyplaylists.exe playlist.txt output.txt next
-```
-
-This command will skip to the next song in the current playlist.
-
-### Command 5: skip to the previous song in the current playlist
-The first argument is the name of **playlist file**. The second argument is the output file. The third argument is the action, which in this case is "previous".
-
-```console
-./nyplaylists.exe playlist.txt output.txt previous
-```
-
-For all 5 commands, the output.txt contains the updated playlist. We have provided sample input & output files. Examples of using command line arguments can be found on the course webpage: [Programming Information](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/programming_information.php).
-
-## Handling Music Tracks with the Same Title
-
-In cases where multiple tracks may have the same title, choose the first track from the input file. This is NOT the natural behavior of Spotify, but this decision is just to simplify your implementation.
--->
-
-<!-- ## Known Issue on Submitty
-
-The Autograder on Submitty doesn't handle command line arguments correctly when the arguments are enclosed in double quotes. In fact, the autograder would add a backslash as an escape character in front of each double quote.
-
-e.g., For this command:
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add "Umbrella"
-```
-
-The autograder would actually run:
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt add \"Umbrella\"
-```
-
-And as a result, the autograder would pass the last argument as "Umbrella" (with the double quotes) to your program. Thus you need to remove the open double quote and the closing double quote in your program.
-
-Another example, for this command,
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move "I Will Never Love Again - Film Version" 1
-```
-
-The autograder would actually run:
-```console
-./nyplaylists.exe playlist_tiny1.txt library.txt output.txt move \"I Will Never Love Again - Film Version\" 1
-```
-
-This means the autograder would pass 14 arguments to your program. And these 14 arguments are:
-
-0. ./nyplaylists.exe
-1. playlist_tiny1.txt
-2. library.txt
-3. output.txt
-4. move
-5. "I
-6. Will
-7. Never
-8. Love
-9. Again
-10. \-
-11. Film
-12. Version"
-13. 1
-
-To deal with this problem, you need to remove double quotes from the arguments. And the std::string erase function can help you remove a double quote. And you can use the following code to do so, here we assume you have a std::string variable called tmpString, and if this tmpString contains a double quote, the following lines will remove that double quote.
-
-```cpp
-        size_t quotePos;
-        if( (quotePos = tmpString.find('"')) != std::string::npos ){
-                tmpString.erase(quotePos, 1); // remove the double quote character at the found position; here number 1 as the second argument means erasing 1 character.
-        }
-```
-
-You may need to include this double-quote-removal logic twice in your program so as to remove the openning double quote and then the closing double quote.
-
-Note that the above double-quote-removal logic wouldn't do anything if the argument doesn't contain a double quote. This means including the double-quote-removal logic in your code should not affect how you run your program locally on your own computer.
--->
-
-## Instructor's Code
+<!--## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/playlists/). Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service. Also note that, it is not your job in this assignment to play musics, the instructor's C++ code here is just used as the backend to manage the playlist.
+-->
 
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to use both std::string and std::vector. You are NOT allowed to use any data structures we have not learned so far.
 
-Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Complete the provided template [README.txt](./README.txt). You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. Prepare and submit your assignment as instructed on the course webpage. Please ask a TA if you need help preparing your assignment for submission.
+Use good coding style when you design and implement your program. Organize your program into functions: don't put all the code in main! Be sure to make up new test cases to fully debug your program and don't forget to comment your code! Complete the provided template [README.txt](./README.txt). You must do this assignment on your own. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. 
 
-**Due Date**: 01/16/2025, 10pm.
+**Due Date**: 01/22/2026, 10pm.
 
 ## Rubric
 

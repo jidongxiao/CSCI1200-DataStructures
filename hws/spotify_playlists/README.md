@@ -176,5 +176,4 @@ Use good coding style when you design and implement your program. Organize your 
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Lacks error checking (num of args, invalid file names, invalid command, etc.) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-   - Uses global variables. (-1)
    - Overly long lines, in excess of 100 or so characters. It's recommended to keep all lines short and put comments on their own lines. (-1)

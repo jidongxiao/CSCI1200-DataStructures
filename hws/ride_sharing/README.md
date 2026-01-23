@@ -355,7 +355,7 @@ Use good coding style when you design and implement your program. Organize your 
 don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
 You must do this assignment on your own. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. 
 
-**Due Date**: 01/29/2026, Thursday, 10pm.
+**Due Date**: 01/29/2026, Thursday, 11:59pm. (**Note that students have just voted to push it to midnight. So starting from HW2, our homework dues throughout the semester will always be 11:59pm**).
 
 ## Rubric
 

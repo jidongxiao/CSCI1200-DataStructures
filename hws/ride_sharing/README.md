@@ -6,7 +6,6 @@ In this assignment you will develop a simple ride sharing application called New
 
 - Practice implementing and working with C++ classes.
 - Practice using std::string, std::vector.
-<!--- Practice overloading operator<<, and understand why it is a bad idea to make it a member function.-->
 
 ## Specification
 
@@ -163,7 +162,7 @@ Replace *Rebecca* with the rider's first name, replace *Economy* with the rider'
 
 1.3 print an updated version of riders.txt into output2.txt.
 
-2. if a driver can not be found, your program should print the following message into the output0.txt file:
+2. if a driver can not be found (because all drivers are taken), your program should print the following message into the output0.txt file:
 ```console
 Ride requested for rider Isabella, looking for a Luxury vehicle.
 Pick Up Location: Williamsburg, Drop Off Location: Boerum_Hill.
@@ -340,17 +339,23 @@ A: It is a strict requirement. Do not pick a different vehicle type for the ride
 
 A: Same as Uber. One decimal place. Just trim it. For example, if the distance is 11.4571 miles, you should output 11.4 miles, instead of 11.5 miles.
 
+3. Q: What happens when a driver cancels on a rider the driver becomes immediately set to avaiable, if the rider searches for a new driver would it be possible to get the same driver?
+
+A: Your program should avoid picking that same driver.
+
+4. Q: In the request command, if the file is not updated due to certain reasons (such as an invalid phone number format or the inability to find a matching phone number), do we still need to copy the contents of driver.txt and rider.txt to output1.txt and output2.txt respectively?
+
+A: Yes.
+
 ## Program Requirements & Submission Details
 
 In this assignment, you are required to use a vector to store all drivers, and use a vector to store all riders. You are NOT allowed to use any data structures we have not learned so far, especially std::list. Your program should involve the definition of at least two classes that have their own .h and .cpp files, named appropriately.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
-to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your
-README.txt file. 
+don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
+You must do this assignment on your own. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file. 
 
-**Due Date**: 01/23/2025, Thursday, 10pm.
+**Due Date**: 01/29/2026, Thursday, 10pm.
 
 ## Rubric
 
@@ -371,14 +376,8 @@ README.txt file.
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
-   - Uses global variables. (-1)
-<!--   - Contains useless comments like commented-out code, terminal commands, or silly notes. (-1)-->
  - DATA REPRESENTATION (Must use vectors for the implementation.) (5 pts)
    - No credit (significantly incomplete implementation). (-5)
    - Does not use std::vector to store drivers or riders. (-5)
    - Uses std::list or data structures which have not been covered in this class. (-5)
    - Member variables are public. (-2)
-<!-- - OUTPUT OPERATOR OVERLOADING (2 pts)
-   - Does not overload the output (&lt;&lt;) operator. (-2)
-   - Incorrect syntax (wrong return type, wrong arguments). (-1)
--->

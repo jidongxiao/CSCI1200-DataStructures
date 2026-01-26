@@ -1,4 +1,4 @@
-# Lab 3 -- Testing, and Debugging
+# Lab 3 — Testing, and Debugging
 
 For this lab, you must use a terminal. Do not use IDEs for this lab.
 
@@ -276,26 +276,34 @@ input_d.txt
   
 ## Checkpoint 1
 
-1. Examine the provided files briefly. How are the files related or dependent upon each other? Hint: Look at the #include statements. Read through the comments from the developer about the purpose of each class and function.
-
-```plaintext
-  We have intentionally placed a number of bugs in the program that 
+1. Examine the provided files briefly. How are the files related or dependent upon each other? 
+Hint: Look at the #include statements. 
+Read through the comments from the developer about the purpose of each class and function.
+**Note**: We have intentionally placed a number of bugs in the program that 
   will cause problems when you attempt to compile and then run these programs.
   Even if you spot the problems, don’t fix them yet!
-```
 
 2. When you’re confident you understand what the original programmer was aiming to do, let’s compile
 and run the program. Take careful step-by-step notes about every command you run, and every line
 of the program you add or edit (and why you make that edit). Create a new README.txt file to
 organize your notes. You’ll need to show these to your TA/mentor to get checked off for today’s lab.
 3. What command line(s) are necessary to compile these files into an executable? Be sure to enable all
-recommended warnings for the Data Structures course by using the **-Wall -Wextra** flags. Also use the **-g** flag which will include source code line numbers and other useful information for the debugger.
-4. The program as provided may not compile without error. Perform the minimal edits to the source code files necessary to remove the compilation ERROR and produce an executable. **IMPORTANT: Do not fix any of the compilation WARNINGs yet.**
-5. Run the program with each of the provided input data files. Take notes on what appears to be working correctly and if anything looks buggy.
-6. Now let’s examine those compilation warnings a little more closely. Oftentimes programmers can get lazy and ignore compilation warnings because these warnings aren’t necessarily showstoppers that prevent us from testing and running our program on initial datasets. But some compilation warnings are actually very dangerous and can prevent the program from successfully handling all possible input
+recommended warnings for the Data Structures course by using the **-Wall -Wextra** flags. 
+Also use the **-g** flag which will include source code line numbers and other useful information for the debugger.
+4. The program as provided may not compile without error. 
+Perform the minimal edits to the source code files necessary to remove the compilation ERROR and produce an executable. 
+**IMPORTANT: Do not fix any of the compilation WARNINGs yet.**
+5. Run the program with each of the provided input data files.
+Take notes on what appears to be working correctly and if anything looks buggy.
+6. Now let’s examine those compilation warnings a little more closely.
+Oftentimes programmers can get lazy and ignore compilation warnings
+because these warnings aren’t necessarily showstoppers that prevent us from testing
+and running our program on initial datasets. 
+But some compilation warnings are actually very dangerous and can prevent the program from successfully handling all possible input
 datasets or even from running at all!
 
-Here’s a list of the categories for some of the more common compilation warnings we see in the Data Structures course. You should see all or most of these when you compile the provided code.
+Here’s a list of the categories for some of the more common compilation warnings we see in the Data Structures course. 
+You should see all or most of these when you compile the provided code.
 
   - warning: expression result unused / expression has no effect 
   - warning: control reaches / may reach end of non-void function 
@@ -307,7 +315,8 @@ reference to stack memory associated with a local variable returned
 
 7. Study the source code referenced by each specific compilation warning. Do you see the cause of the
 warning? Some or all of these warnings might be actual logic or math bugs that will cause the problem
-to crash or return bad data for some or all inputs. Do you see the problem? Do you know how to fix it? **IMPORTANT: Don’t fix the problems yet**. And don’t worry if you don’t see the error – just
+to crash or return bad data for some or all inputs. Do you see the problem? Do you know how to fix it?
+**IMPORTANT: Don’t fix the problems yet**. And don’t worry if you don’t see the error – just
 staring at the code is not the only debugging technique nor is it the most effective debugging technique
 for large programs!
 
@@ -320,11 +329,8 @@ and any logic or math bugs that you belive you have found (but not yet fixed!) i
 Now, we will practice using the debugger to find and fix errors. Today we’ll learn how to use the gcc/g++
 command line debugger, gdb from the GNU/Linux/Ubuntu or MacOSX terminal. NOTE: On Mac OSX, you
 are probably actually using the llvm/clang++ compiler, so you’ll use lldb instead of gdb in the instructions
-below. If you didn’t already install gdb/lldb, review the installation instructions on the course webpage.
-Many introductory gdb/lldb debugging tutorials can be found on-line; just type e.g., *gdb tutorial* into
-your favorite search engine. Here are a couple:
-http://www.unknownroad.com/rtfm/gdbtut/gdbtoc.html  
-http://www.cs.cmu.edu/~gilpin/tutorial/ 
+below. If you didn’t already install gdb/lldb, 
+review the installation instructions on the course webpage (see the Development Environment page).
 
 And here’s a handy table mapping gdb commands to lldb commands:
 
@@ -379,7 +385,8 @@ might occur. Finally, in order to actually start running the program under contr
 you will need to type *run* at the gdb command line.  
 
 4. Stepping through the program:
-You can step through the code using the commands *next* (move to the next line of code), *step* (enter the function), and *finish* (leave the function). 
+You can step through the code using the commands *next* (move to the next line of code), 
+*step* (enter the function), and *finish* (leave the function). 
 The command *continue* allows you to move to the next breakpoint.  
 
 5. Examining the content of variables:

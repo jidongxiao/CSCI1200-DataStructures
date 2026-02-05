@@ -61,10 +61,7 @@ position is valid, the function should also set arow,col to the value of the dou
 
 ## Overloaded Output Operator
 
-At some point, it is probably a good idea to write a method to do output for us. Unlike previous classes where
-we wrote a method to do the printing, we will instead rely on a non-member overload of the operator<<. We
-have practiced overloading other operators for calls to std::sort() before, and this will be similar. Outside
-of the Matrix class definition, but still in your .cpp and .h files, you should write the following operator:
+To easily handle printing matrix objects, you should overload the operator<<.
 
 ```cpp
 std::ostream& operator<< (std::ostream& out, const Matrix& m)
@@ -183,7 +180,7 @@ the condition is false, your command line should show the assertion that failed 
 
 We recommend using a memory debugging tool to find memory errors and memory leaks. Information on
 installation and use of the memory debuggers “Dr. Memory” (available for Linux/MacOSX/Windows) and
-“Valgrind” (available for Linux/OSX) is presented on the course webpage:
+“Valgrind” (available for Linux/OSX) is presented on this webpage:
 http://www.cs.rpi.edu/academics/courses/fall23/csci1200/memory_debugging.php
 
 The homework submission server will also run your code with Dr. Memory to search for memory problems.
@@ -212,7 +209,7 @@ You will need to submit your [matrix_main.cpp](matrix_main.cpp), Matrix.cpp, Mat
 
 Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template [README.txt](README.txt) file for notes you want the grader to read. Fill out the order notation section as well in the [README.txt](README.txt) file. You must do this assignment on your own, as described in the “Collaboration Policy & Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 02/06/2025, Thursday, 10pm. 
+**Due Date**: 02/12/2026, Thursday, 11:59pm. 
 
 ## Rubric
 
@@ -233,8 +230,6 @@ Be sure to write your own new test cases and don’t forget to comment your code
  - DATA REPRESENTATION (4 pts)
    - No credit (significantly incomplete implementation). (-4)
    - Uses STL data structures (lists, vectors, etc).  (-4)
-   - Member variables are public. (-2)
- - ORDER NOTATION (Readme contains correct analysis of order notation, including proper notation and use of provided variables. ) (5 pts)
  - ADDITIONAL TEST CASES (A wide variety of additional student-written test cases.) (4 pts)
    - Does not test transpose.  (-1)
    - Does not test multiply_by_coefficient. (-1)

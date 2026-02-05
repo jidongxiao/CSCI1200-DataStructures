@@ -1,3 +1,7 @@
+**Clarification**: Last week, a student asked why the homework deadline is Friday, and I gave an incorrect explanation. I mistakenly said that all homework deadlines were changed to Friday based on a student vote. In fact, the vote was only to extend the deadline time from 10 PM to midnight. I apologize for the confusion.
+
+All homework deadlines remain Thursday at midnight. The only exception was HW2, which was extended due to the heavy snow and university closure that canceled office hours that Monday. Going forward, the homework deadline will continue to be Thursday night at midnight.
+
 # Homework 3 — Dynamic Matrices
 
 In this assignment you will build a custom class named Matrix, which will mimic traditional matrices (the plural of matrix). You will not be expected to have intimate knowledge of matrices, but if you are curious you can read more about them online: https://en.wikipedia.org/wiki/Matrix_(mathematics).
@@ -219,7 +223,7 @@ Be sure to write your own new test cases and don’t forget to comment your code
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (5 pts)
+ - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
    - No credit (significantly incomplete implementation) (-5)
    - No documentation for Matrix itself is provided (function documentation and section headings don't count). (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
@@ -227,9 +231,9 @@ Be sure to write your own new test cases and don’t forget to comment your code
    - Improper uses or omissions of const and reference. (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
- - DATA REPRESENTATION (4 pts)
-   - No credit (significantly incomplete implementation). (-4)
-   - Uses STL data structures (lists, vectors, etc).  (-4)
+ - DATA REPRESENTATION (5 pts)
+   - No credit (significantly incomplete implementation). (-5)
+   - Uses STL data structures (lists, vectors, etc).  (-5)
  - ADDITIONAL TEST CASES (A wide variety of additional student-written test cases.) (4 pts)
    - Does not test transpose.  (-1)
    - Does not test multiply_by_coefficient. (-1)

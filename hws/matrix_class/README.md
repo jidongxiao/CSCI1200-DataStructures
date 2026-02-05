@@ -207,7 +207,7 @@ and newlines between our output and your output.
 
 You will need to submit your [matrix_main.cpp](matrix_main.cpp), Matrix.cpp, Matrix.h, and README.txt file. Be aware that Submitty will be using an instructor copy of [matrix_main.cpp](matrix_main.cpp) for most of the tests, so you must make sure your Matrix implementation can compile given the provided file. Also make sure to name your class implementation files with a capital letter since Linux is case sensitive.
 
-Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template [README.txt](README.txt) file for notes you want the grader to read. Fill out the order notation section as well in the [README.txt](README.txt) file. You must do this assignment on your own, as described in the “Collaboration Policy & Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error messages, etc. with anyone, please list their names in your README.txt file.
+Be sure to write your own new test cases and don’t forget to comment your code! Use the provided template [README.txt](README.txt) file for notes you want the grader to read. You must do this assignment on your own, as described in the “Collaboration Policy & Academic Integrity” handout. If you did discuss this assignment, problem solving techniques, or error messages, etc. with anyone, please list their names in your README.txt file.
 
 **Due Date**: 02/12/2026, Thursday, 11:59pm. 
 

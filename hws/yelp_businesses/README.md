@@ -198,8 +198,6 @@ For example, if the *line* is:
 
 Keep in mind that some of the fields may not exist. Revise these helper functions as needed to handle such cases. For example, the getPrice() function already has such a logic, if the RestaurantsPriceRange2 field does not exist, the getPrice() function would return -1.
 
-**Note**: These provided functions are not necessarily fast, if you aim to climb high on the leaderboard, you may want to revise these functions so as to improve the performance of your program.
-
 ## Other Useful Code
 
 ### print rating stars

@@ -1,7 +1,3 @@
-**Clarification**: Last week, a student asked why the homework deadline is Friday, and I gave an incorrect explanation. I mistakenly said that all homework deadlines were changed to Friday based on a student vote. In fact, the vote was only to extend the deadline time from 10 PM to midnight. I apologize for the confusion.
-
-All homework deadlines remain Thursday at midnight. The only exception was HW2, which was extended due to the heavy snow and university closure that canceled office hours that Monday. Going forward, the homework deadline will continue to be Thursday night at midnight.
-
 # Homework 3 — Dynamic Matrices
 
 In this assignment you will build a custom class named Matrix, which will mimic traditional matrices (the plural of matrix). You will not be expected to have intimate knowledge of matrices, but if you are curious you can read more about them online: https://en.wikipedia.org/wiki/Matrix_(mathematics).

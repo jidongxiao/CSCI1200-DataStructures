@@ -220,7 +220,7 @@ Be sure to write your own new test cases and don’t forget to comment your code
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
  - OVERALL CLASS DECLARATION & IMPLEMENTATION AND CODING STYLE (Good class design, split into a .h and .cpp file.  Functions > 1 line are in .cpp file.  Organized class implementation and reasonable comments throughout. Correct use of const/const& and of class method const. ) (8 pts)
-   - No credit (significantly incomplete implementation) (-5)
+   - No credit (significantly incomplete implementation) (-8)
    - No documentation for Matrix itself is provided (function documentation and section headings don't count). (-1)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)

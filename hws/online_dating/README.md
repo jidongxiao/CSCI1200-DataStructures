@@ -249,7 +249,7 @@ You can try to compile and run this tiny [program](provided_code/test.cpp) yours
 
 ## Program Requirements & Submission Details
 
-This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library. You are not allowed to define a List class or an iterator class. You are not allowed to use any data structures we have not learned so far.** 
+This assignment has some unique requirements: In this assignment, you are required to create and manipulate linked lists using nodes, **you are not allowed to use the std::list library. You are not allowed to define an iterator class. You are not allowed to use any data structures we have not learned so far.** 
 
 There is no requirement on whether your linked lists should be singly-linked lists, or doubly-linked lists. It is your design choice, but you must store all the users in a linked list, where each node of the linked list represents one user. For example, you can define your node like this if you decide to use doubly-linked lists:
 
@@ -276,12 +276,9 @@ public:
 
 **Note**: for this homework, it is okay to define member variables as public variables, and this is due to the unique nature of linked lists.
 
-Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
-to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+Use good coding style when you design and implement your program. Organize your program into functions: don't put all the code in main! Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 02/20/2025, Thursday, 10pm.
+**Due Date**: 02/27/2026, Friday, 11:59pm.
 
 ## Rubric
 
@@ -295,14 +292,12 @@ You must do this assignment on your own, as described in the [Collaboration Poli
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
-   - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
    - Poor choice of variable names: non-descriptive names (e.g. 'vec', 'str', 'var'), single-letter variable names (except single loop counter), etc. (-2)
  - DATA REPRESENTATION (Must create and use homemade linked lists for the implementation.) (6 pts)
    - No credit (significantly incomplete implementation). (-6)
    - Uses std::list, or data structures which have not been covered in this class. (-6)
-   - Defines/Uses a list class. (-5)
    - Defines/Uses an iterator class (okay to use iterators to iterate through other containers such as vectors). (-5)
    - Does not use homemade linked lists (which consist of a chain of nodes) to store all the users. (-5)
    <!--- Member variables are public. (-2)-->

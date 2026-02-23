@@ -107,8 +107,13 @@ delete <BNUM>
 
 6. Place another breakpoint at the first line of your recursive function. And then let the program run
 until it reaches the next breakpoint by typing:
+
+```console
 continue
+```
+
 When gdb pauses, it should inform you of the current program line number.
+
 7. Now let’s step into your recursive function to get a closer look at recursion. Let the program run until
 it enters the first recursive function call:
 
@@ -125,6 +130,7 @@ print y
 ```
 
 If you are using grid2.txt as your grid, these values should read x = 9 and y = 7.
+
 8. Let’s navigate within our recursive algorithm using step and next. NOTE: Though similar sounding,
 these are two different commands in gdb/lldb. step will enter into the details of a called function and
 allow you to walk through its code, while next will fully execute one line from the current function
@@ -142,10 +148,12 @@ print blocked_grid[x-1][y+1]
 ```
 Because gdb supports using basic math on these variables, we can also print the grid values above,
 below, to the left, and to the right of our current position.
+
 9. Use step and continue to go further and further into the recursion. Use backtrace to show the
 function calls currently on the call stack, including the specific line numbers. As you walk step by step
 through your algorithm and print data, do the variable values and sequence of locations and function
 calls match your expectations? Ask a TA or mentor if you have questions about this information.
+
 10. Finally, delete all of the breakpoints and then let the program finish without interruption.
 
 ```console

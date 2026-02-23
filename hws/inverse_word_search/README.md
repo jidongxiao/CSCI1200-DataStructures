@@ -84,11 +84,14 @@ Once you have finished your implementation and testing, analyze the performance 
 6. Q: If I fill in all the words in the grid and there are still some empty slots, what characters do I fill in the these extra spaces?  
    A: You can fill in any lower case letter there and make sure it doesn't introduce a forbidden word. A single letter gives you one solution; replacing it with another letter would give you another solution, and in total, this would lead to 26 potential solutions, since there are 26 lower case letters.
 
-7. Q: What bonus do I get if my program beats last year's best record as shown on the leaderboard?
-   A: If by the submission deadline, your program ranks higher than last year's best record as shown on the leaderboard, you have 3 options. You can choose one of these:
-- Skip all remaning homeworks and labs, and receive full credits for all of them.
+7. Q: What bonus do I get if my program beats last year's best record as shown on the leaderboard?  
+   A: If by the submission deadline, your program ranks higher than last year's best record holder as shown on the leaderboard, you have 3 options. You can choose one of these:
+- Skip all remaining homeworks and labs, and receive full credits for all of them.
 - Skip test 2 and test 3 and receive full credits. (This means you must beat the best record before Thursday March 12th, the test 2 time).
 - Skip final exam and receive full credits.
+
+8. Q: What if no student in this class beats last yaer's best record?  
+   A: If, by the submission deadline, no student in this class surpasses last year’s best record holder as shown on the leaderboard, the top three ranked students will be permitted to skip all remaining homework assignments and will receive full credit for them. In the event of a tie within the top three, each tied student will be required to explain and justify the originality of their implementation to confirm that their work was developed independently.
 
 <!--
 ## Rubric

@@ -90,12 +90,18 @@ Once you have finished your implementation and testing, analyze the performance 
 - Skip test 2 and test 3 and receive full credits. (This means you must beat the best record before Thursday March 12th, the test 2 time).
 - Skip final exam and receive full credits.
 
-8. Q: What if no student in this class beats last yaer's best record?  
+8. Q: What if no student in this class beats last year's best record?  
    A: If, by the submission deadline, no student in this class surpasses last year’s best record holder as shown on the leaderboard, the top three ranked students will be permitted to skip all remaining homework assignments and will receive full credit for them. In the event of a tie within the top three, each tied student will be required to explain and justify the originality of their implementation to confirm that their work was developed independently.
 
-<!--
+9. Q: May I hardcode my program?  
+   A: You may make reasonable assumptions about the test cases we use, and your program is only required to work correctly for those cases. However, hardcoding solutions which directly print the expected outputs to the output files without implementing the required logic—is strictly prohibited and will result in a zero for this assignment.
+
 ## Rubric
 
+This assignment will mostly be auto-graded. It will be manually graded only for the README.txt file and for the following items:
+  - Verification of the use of recursion. Please briefly describe in your README.txt where and how recursion is used in your code.
+  - Detection of hardcoded solutions which directly print the expected outputs to the output files without implementing the required logic.
+<!--
 20 pts
  - README.txt Completed (3 pts)
    - One of name, collaborators, or hours not filled in. (-1)

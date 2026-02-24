@@ -101,6 +101,21 @@ Once you have finished your implementation and testing, analyze the performance 
 This assignment will mostly be auto-graded. It will be manually graded only for the README.txt file and for the following items:
   - Verification of the use of recursion. Please briefly describe in your README.txt where and how recursion is used in your code.
   - Detection of hardcoded solutions which directly print the expected outputs to the output files without implementing the required logic.
+
+10 pts
+
+ - README.txt Completed (5 pts)
+   - One of name, collaborators, or hours not filled in. (-1)
+   - Two or more of name, collaborators, or hours not filled in. (-2)
+   - No reflection. (-1)
+   - No description of where or how recursion was used in the program. (-2)
+ - USES RECURSION (5 pts)
+   - Significantly incomplete implementation. (-5)
+   - Uses recursion but only trivially. (-3)
+   - Does not use any recursion. (-5)
+ - Hardcode check (-50 pts)
+   - Invalid submission, code directly prints the expected outputs to the output files without implementing the required logic. Removing all points for this assignment. (-50)
+
 <!--
 20 pts
  - README.txt Completed (3 pts)

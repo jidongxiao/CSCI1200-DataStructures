@@ -96,6 +96,9 @@ Once you have finished your implementation and testing, analyze the performance 
 9. Q: May I hardcode my program?  
    A: You may make reasonable assumptions about the test cases we use, and your program is only required to work correctly for those cases. However, hardcoding solutions which directly print the expected outputs to the output files without implementing the required logic—is strictly prohibited and will result in a zero for this assignment.
 
+10. Q: Can I use multiple threads?
+    A: Submitty does not support multiple threads. I wish it did.
+
 ## Rubric
 
 This assignment will mostly be auto-graded. It will be manually graded only for the README.txt file and for the following items:

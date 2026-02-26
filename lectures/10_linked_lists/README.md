@@ -70,8 +70,8 @@ int main() {
 	// set ll's ptr member variable to
 	// point to the same thing as variable q
 	ll->ptr = q;
-	cout << "1st value: " << ll->value << "\n"
-	<< "2nd value: " << ll->ptr->value << endl;
+	std::cout << "1st value: " << ll->value << "\n"
+	<< "2nd value: " << ll->ptr->value << std::endl;
 }
 ```
 

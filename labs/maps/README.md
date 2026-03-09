@@ -1,7 +1,6 @@
 # Lab 7 — Maps
 
-This lab gives you practice initial practice in working with the STL associative container, maps. No downloads
-are needed until Checkpoint 3.
+In this lab, you will practice working with the STL associative container std::map. 
 
 ## Checkpoint 1
 *estimate: 10-20 minutes*

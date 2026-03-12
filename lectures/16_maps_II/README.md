@@ -34,7 +34,7 @@ m[string("hello")].push_back(5);
 
 ```cpp
 p = m.find(string("hello"));
-p->second.size()
+p->second.size();
 ```
 
 Now, if you want to access (and change) the ith entry in this vector you can either using subscripting:

@@ -22,7 +22,7 @@ public:
     }
 
     // Get the top element of the stack
-    int top() {
+    T top() {
         if (!empty()) {
             return data.back();
         } else {

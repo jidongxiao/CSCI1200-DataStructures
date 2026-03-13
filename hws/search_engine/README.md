@@ -363,15 +363,10 @@ Make sure you still include the fstream library.
 In this assignment, you are required to use either std::map or std::set. You can use both if you want to. You are NOT allowed to use any data structures we have not learned so far, but feel free to use any data structures we have already learned, such as std::string, std::vector, std::list. In addition, **the web crawler component of your program must be recursive**.
 
 Use good coding style when you design and implement your program. Organize your program into functions:
-don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget
-to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
+You must do this assignment on your own, if you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 03/20/2025, Thursday, 10pm.
-
-## Instructor's Code
-
-You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/search/). This page allows you to view those intermediate results. Note that this site is hosted on RPI's network and you can visit this site only if you are on RPI's network: either on campus or using a VPN service.
+**Due Date**: 03/20/2026, Friday, 11:59pm.
 
 ## FAQs
 

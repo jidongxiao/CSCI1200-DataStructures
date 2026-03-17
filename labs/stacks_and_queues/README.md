@@ -1,75 +1,92 @@
 # Lab 11 — Stacks and Queues
 
-In this lab, you will find out the answer to this question: When the STL queue library/class is not available to you, can you make your own queue? More specifically, in this lab, you will implement queues in different ways, and then fix memory leaks in the provided program. Start by downloading the provided program [levelOrder.cpp](levelOrder.cpp). The provided program [levelOrder.cpp](levelOrder.cpp) traverses a binary tree by level order. It prints the following message to STDOUT:
+## Checkpoint 1: Implementing a Stack using Queues
 
-```console
-Level Order Traversal: 1 2 3 4 5 6 7
-Level Order Traversal: 1 2 3 4 5 6 7 8 9
-Level Order Traversal: 1 2 3 4 5 6 7 8
-```
+In this exercise, we will be implementing a stack using queues. You are given a starter program, MyStack.cpp.
 
-## Checkpoint 1:
+### The Scenario:
 
-*estimate: 30-40 minutes*
+Imagine the STL stack library is unavailable in your environment, but the STL queue library is. Your goal is to implement a Last-In-First-Out (LIFO) stack using a First-In-First-Out (FIFO) queue as the underlying storage.
 
-First, read the code of the provided program, and run the program to see its output. 
+### Your Tasks:
 
-- Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/trees/level_order/index.html) to see how level order traverse works.
+#### Implement the Logic: 
 
-The provided program includes the STL queue library with this line:
+Complete the Code: Fill in the missing logic in the MyStack class. You must implement push, pop, top, empty, and size.
 
-```cpp
-#include <queue>
-```
+#### Verify via Testing:
 
-Now, let us assume that the STL queue library is not available, but the STL stack library is avaiable, meaning that you are now not allowed to have this above line in the program, but you can have the following line in the program:
+Compile and run the program. The main function contains several assert statements. If your implementation is correct, the program should run to completion and print "All tests passed successfully!"
 
-```cpp
-#include <stack>
-```
+#### Visualize the Logic:
 
-Do not change the *main* function. Do not change the *levelOrderTraversal* function, except this line:
+Draw a step-by-step diagram showing the state of the internal queue after each push or pop operation in the main function.
 
-```cpp
-std::queue<TreeNode*> myQueue;
-```
+**To Complete This Checkpoint**: Show a TA or mentor the following:
 
-Can you still make the program work? i.e., still traversing a binary tree by level order, when the STL queue library is not available, but the STL stack library is available to you. You can implement your own classes or functions.
+- The completed code for your MyStack class.
+- The terminal output proving you passed all test cases.
+- Your diagram showing how the internal queue was changed after each push or pop operation in the main function.
 
-**To complete this checkpoint**: Show a TA your program, and your test results. Your program should still produce the same results as the original program. And you must be able to explain your program.
+## Checkpoint 2: Implementing a Queue using two Stacks
 
-## Checkpoint 2:
+In this exercise, we will be implementing a Queue using two stacks. You are given a starter program, MyQueue.cpp.
 
-*estimate: 30-40 minutes*
+### The Scenario:
 
-Now, let us assume that the STL queue library is not available, and the STL stack library is not avaiable, meaning that you are now not allowed to have either of following two lines in the program:
+Imagine you have access to the STL stack library, but the queue library is missing. To maintain FIFO order, you will use two stacks:
 
-```cpp
-#include <queue>
-#include <stack>
-```
+- s_in: To handle all incoming push operations.
+- s_out: To handle pop and front operations.
 
-However, you can include the STL list library like this:
+### Your Tasks:
 
-```cpp
-#include <list>
-```
+#### Implement the Logic: 
 
-Still, do not change the *main* function, and do not change the *levelOrderTraversal* function, except this line:
+Complete the Code: Fill in the missing logic in the MyQueue class. You must implement push, pop, front, empty, and size.
 
-```cpp
-std::queue<TreeNode*> myQueue;
-```
+#### Verify via Testing:
 
-Can you still make the program work? i.e., still traversing a binary tree by level order, when neither the STL queue library nor the STL stack library is available, but the STL list library is available to you. You can implement your own classes or functions.
+Compile and run the program. The main function contains several assert statements. If your implementation is correct, the program should run to completion and print "All queue tests passed successfully!"
 
-**To complete this checkpoint**: Show a TA your program, and your test results. Your program should still produce the same results as the original program. And you must
- be able to explain your program.
+#### Visualize the Logic:
 
-## Checkpoint 3:
+Draw a step-by-step diagram showing the state of the internal stacks after each push or pop operation in the main function.
 
-*estimate: 15-20 minutes*
+**To Complete This Checkpoint**: Show a TA or mentor the following:
 
-The provided program clearly has memory leaks. Fix the memory leaks.
+- The completed code for your MyQueue class.
+- The terminal output proving you passed all test cases.
+- Your diagram illustrating how the two stacks change after each push or pop operation in the main function.
 
-**To complete this checkpoint**: Show a TA your program, and your test results with either Valgrind or DrMemory.
+## Checkpoint 3: Implementing a Queue using a Single Stack (Recursion)
+
+In Checkpoint 2, you used two physical stacks to maintain FIFO order. In this exercise, you will achieve the same result using only one explicit stack. To do this, you will utilize recursion to act as a temporary "hidden" storage during your pop and front operations. You are given a starter program, MyQueue_onestack.cpp.
+
+### The Scenario:
+
+You are restricted to a single std::stack. To retrieve the oldest element (the one at the bottom), you must recursively "unwind" the stack, store the top elements in the function's local variables, and then "rewind" the stack by pushing them back once the bottom element is found.
+
+### Your Tasks:
+
+#### Implement the Logic:
+
+Complete the Code: Fill in the missing logic in the MyQueueRecursive class. You must implement push, pop, front, empty, and size.
+
+#### Verify via Testing:
+
+Compile and run the program. The main function will test your logic by pushing 10, 20, 30, popping, and then pushing 40. The program should print: "Recursive Queue logic works!"
+
+#### Visualize the Logic:
+
+Draw a Call Stack Diagram specifically for the first q.pop() operation. Your diagram should show:
+
+- The state of the std::stack at each recursive call.
+- The value of top_element being held in the local memory of each function call.
+- How the stack is rebuilt as the recursive calls return.
+
+**To Complete This Checkpoint**: Show a TA or mentor the following:
+
+- Your completed MyQueueRecursive class implementation.
+- The terminal output proving you passed all test cases.
+- Your diagram of the recursion process showing how the "front" element is retrieved.

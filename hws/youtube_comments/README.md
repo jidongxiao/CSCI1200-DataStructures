@@ -286,14 +286,14 @@ Of course you can change std::cout to a file stream so as to print the thumbs up
 
 In this assignment, you are required to maintain the comments in tree nodes, each comment should be stored in one tree node. **You must use recursion in your program in at least one of your functions.** There is no other requirement on what data structures you can use and what data structures you can not use.
 
-Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 03/27/2025, Thursday, 10pm.
+**Due Date**: 04/03/2026, Friday, 11:59pm. (Yes, you have two weeks to work on this homework)
 
-## Instructor's Code
+<!-- ## Instructor's Code
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/comments/). 
+-->
 
 ## FAQs
 
@@ -316,9 +316,7 @@ A2: It's not that we allow you or we don't allow you to use that json library, i
    - No credit (significantly incomplete implementation) (-6)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
-   - Missing include guards in the .h file. (Or does not declare them correctly) (-1)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
-   - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)

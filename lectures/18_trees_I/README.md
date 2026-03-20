@@ -60,11 +60,9 @@ storing string values.
 ## 18.3 Definition: Balanced Trees
 
 - The number of nodes on each subtree of each node in a
-“balanced” tree is approximately the same. In order to
-be an exactly balanced binary tree, what must be true
-about the number of nodes in the tree?
+“balanced” tree is approximately the same.
 - In order to claim the performance advantages of trees, we must assume and ensure that our data structure
-remains approximately balanced. (You’ll see much more of this in Intro to Algorithms!)
+remains approximately balanced.
 
 ## 18.4 Exercise
 
@@ -75,9 +73,6 @@ Consider the following values:
 
 2. Draw two different binary search trees with these values. Important note: This shows that the binary search
 tree structure for a given set of values is not unique!
-
-3. How many exactly balanced binary search trees exist with these numbers? How many exactly balanced
-binary trees exist with these numbers?
 
 ## 18.5 Beginning our implementation of ds_set: The Tree Node Class
 
@@ -101,7 +96,7 @@ public:
 ## 18.6 Exercises
 
 1. Write a templated function to find the smallest value stored in a binary search tree whose root node is pointed
-to by p.
+to by *root*.
 
 ```cpp
 template <class T> 
@@ -115,18 +110,18 @@ const T& find_smallest (TreeNode <T>* root)
 }
 ```
 
-3. Write a function to count the number of odd numbers stored in a binary tree (not necessarily a binary search
+2. Write a function to count the number of odd numbers stored in a binary tree (not necessarily a binary search
 tree) of integers. The function should accept a TreeNode<int> pointer as its sole argument and return an
 integer. Hint: think recursively!
 
 ```cpp
-int count_odd (TreeNode<int>* int)
+int count_odd (TreeNode<int>* root)
 {
-	if(node == nullptr)
+	if(root == nullptr)
 	{
 		return 0;
 	}
-	return abs(node->value % 2) + count_odd(node->left) + count_odd(node->right);
+	return abs(root->value % 2) + count_odd(root->left) + count_odd(root->right);
 }
 
 ```

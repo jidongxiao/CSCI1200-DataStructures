@@ -6,7 +6,7 @@ In this assignment you will develop a program to display the trends page like Ti
 
 - Practice using std::priority_queue.
 - Practice using std::unordered_map, std::unordered_set.
-<!--- Practice using C++ exceptions.-->
+- Practice using C++ exceptions.
 
 ## Background
 
@@ -284,39 +284,21 @@ In order to use this above code block, you need to include the regular expressio
 
 In this assignment, you are required to use std::priority_queue. There is no other requirement on what data structures you can use and what data structures you can not use; and there is no other requirements on what libraries you can use or can not use.
 
-<!--**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.-->
+**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.
 
-Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
+Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-**Due Date**: 04/10/2025, Thursday, 10pm.
+**Due Date**: 04/17/2026, Friday, 11:59pm.
 
-## Instructor's Code
+<!-- ## Instructor's Code
 
-You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/trends/).
+You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/trends/).-->
 
 ## FAQs
 
 q1: Some videos appear multiple times in the same json file, how shall we handle such cases?
 
 a1: If a video appears multiple times in the same json file, only the first occurrence should be considered, and this means that when parsing the json file, and if you find a duplicated video ID, then that line which contains the duplicated video ID should not be parsed at all.
-
-q2: What bonus do I get if my program ranks higher than the instructor's program on the leaderboard?
-
-a2: If by Thursday night 10pm (which is the submission deadline), your program ranks higher than the instructor's program, you have many options. You can choose one of these:
-- Drop the lowest test score - replace it with your highest test score.
-- Drop 2 of the lowest homeworks - replace them with your highest homework score.
-- Skip remaining homework and remaining labs (and receive full credits for them)
-
-   You will receive an email asking you about which option you want to choose, or if you want to propose a different option.
-
-q3: What if my program ranks higher than the instructor's program on leaderboard 6 and leaderboard 9?
-
-a3: You can skip the final exam; we will apply the highest test score among your test 1, 2, and 3, as your final exam score.
-
-q4: How many submissions can I make?
-
-a4: 60. Submitty will deduct points once you submit more than 60 times.
 
 ## Rubric
 
@@ -325,12 +307,11 @@ a4: 60. Submitty will deduct points once you submit more than 60 times.
    - One of name, collaborators, or hours not filled in. (-1)
    - Two or more of name, collaborators, or hours not filled in. (-2)
    - No reflection. (-1)
- - IMPLEMENTATION AND CODING STYLE (6 pts)
-   - No credit (significantly incomplete implementation) (-6)
+ - IMPLEMENTATION AND CODING STYLE (4 pts)
+   - No credit (significantly incomplete implementation) (-4)
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
-   - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines). (-1)
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes) (-1)
@@ -339,7 +320,5 @@ a4: 60. Submitty will deduct points once you submit more than 60 times.
    - No credit (significantly incomplete implementation). (-6)
    - Does not use std::priority_queue at all. (-6)
    - Uses std::priority_queue but does not use it in a meaningful way. (-5)
-<!--
-   - Member variables are public. (-2)
  - Exceptions (2 pts)
-   - Does not use try/throw/catch anywhere in the code. (-2) -->
+   - Does not use try/throw/catch anywhere in the code. (-2)

@@ -291,42 +291,9 @@ In this assignment, you can use any data structures we have learned in this cour
 
 **The only requirement is: you must define a class called Notification, and use this class as the base class to derive classes for various types of notifications.**
 
-<!--**You must use try/throw/catch to handle exceptions in your code**. You do not need to do so everywhere in your code. You will only lose points if you do not use it at all.-->
+Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
 
-Use good coding style when you design and implement your program. Organize your program into functions: don’t put all the code in main! Be sure to read the [Homework Policies](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/homework_policies.php) as you put the finishing touches on your solution. Be sure to make up new test cases to fully debug your program and don’t forget to comment your code! Use the provided template [README.txt](./README.txt) file for notes you want the grader to read.
-You must do this assignment on your own, as described in the [Collaboration Policy & Academic Integrity](https://www.cs.rpi.edu/academics/courses/spring25/csci1200/academic_integrity.php) page. If you did discuss the problem or error messages, etc. with anyone, please list their names in your README.txt file.
-
-**Due Date**: 04/17/2025, Thursday, 22:00pm.
-
-## FAQs
-
-q1: What bonus do I get if my program outperforms the instructor's program on the leaderboard?
-
-a1: If by Thursday night 10pm (which is the submission deadline), your program outperforms the instructor's program, you have many options. You can choose one of these:
-- Drop the lowest test score - replace it with your highest test score.
-- Drop 2 of the lowest homeworks - replace them with your highest homework score.
-
-   You will receive an email asking you about which option you want to choose, or if you want to propose a different option. You will be asked to describe your optimization techniques, and you must have at least one technique which is unique - not mentioned by 5 (or more than 5) other students.
-
-**Definition of Outperform:** The term outperform is defined as: Your program must either runs less amount of time than the instructor's code; or runs the same amount of time but consumes less memory than the instructor's code. Same run time, same memory usage, but submitty shows you at a higher position will not be counted as outperforming.
-
-q2: What if my program outperforms the instructor's program on two leaderboards (2 out of the 3: hw6, hw9, hw10)?
-
-a2: You can skip the final exam; we will apply the highest test score among your test 1, 2, and 3, as your final exam score. The "skip final" option is exclusive and can't be used with other options.
-
-q3: What if my program ranks higher than the instructor's program on all 3 leaderboards (3 out of the 3: hw6, hw9, hw10)?
-
-a3: You will receive an A for this course immediately if determined that you worked independently on these 3 homeworks and it is you - not someone else, who wrote the code and all 3 are your original work. The instructor reserves the right to not give you an A if the following red flags are noticed: 1. your test scores are consistently low and all the tests show that you are very unfamiliar with C++ and the lab TA/mentors conclude that your coding skills are clearly below class average. 2. when asked what optimization techniques you used, you could not name anything unique - everything you say is mentioned by at least 5 other students.
-
-**Definition of work independently:** Doing your own research, asking chatgpt or other AI tools, are okay; collaborating with other students in this class, sharing your techniques with other students in this class, are not okay and are not considered as an independent, original work.
-
-q4: How many submissions can I make?
-
-a4: 60. Submitty will deduct points once you submit more than 60 times. **To make it a fair game, students who make more than 60 submissions are disqualified from the competition automatically and thus won't receive any rewards.**
-
-q5: Can I still compete on the leaderboard after the Thursday night 10pm deadline? 
-
-a5: No. The leaderboard will be closed shortly after the submission deadline, meaning that you won't even be able to see a rank after the deadline. Students who want to take a screenshot of their position on the leaderboard are encouraged to do so before the 10pm deadline.
+**Due Date**: 04/24/2026, Friday, 11:59pm.
 
 ## Rubric
 
@@ -340,7 +307,6 @@ a5: No. The leaderboard will be closed shortly after the submission deadline, me
    - Putting almost everything in the main function. It's better to create separate functions for different tasks. (-2)
    - Function bodies containing more than one statement are placed in the .h file. (okay for templated classes) (-2)
    - Functions are not well documented or are poorly commented, in either the .h or the .cpp file. (-1)
-   - Improper uses or omissions of const and reference. (-1)
    - At least one function is excessively long (i.e., more than 200 lines).
    - Overly cramped, excessive whitespace, or poor indentation. (-1)
    - Poor file organization: Puts more than one class in a file (okay for very small helper classes). (-1)
@@ -351,6 +317,3 @@ a5: No. The leaderboard will be closed shortly after the submission deadline, me
    - One of the five derived Notification classes is missing. (-2)
    - Two of the five derived Notification classes are missing. (-4)
    - Three or more of the five derived Notification classes are missing. (-6)
-<!--   - Member variables are public. (-2)
--- - Exceptions (2 pts)
-   - Does not use try/throw/catch anywhere in the code. (-2)-->

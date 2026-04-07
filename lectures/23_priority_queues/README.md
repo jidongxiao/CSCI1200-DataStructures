@@ -1,136 +1,106 @@
-# Lecture 23 --- Priority Queues
+# Lecture — Priority Queues
+Instructor: Jidong Xiao, RPI
+
+---
+
+## 0. Exercise: Tree Traversals
+
+Given the in-order and pre-order traversals of a binary tree, determine the post-order traversal:
+
+- In-order: `D B E A F C`  
+- Pre-order: `A B D E C F`  
+
+Post-order: `__________`
+
+---
 
 ## Today’s Lecture
 
-<!--
-- Range Based for Loop
-- Using STL’s for_each
--->
+- Priority Queue
+- Binary Heap
+- STL priority_queue
 
-- Definition of a Binary Heap
-- What’s a Priority Queue?
-- A Priority Queue as a Heap
-- A Heap as a Vector
+## 1. Priority Queue
 
-<!--
-## 24.1 Range Based for Loop
+- A **priority queue** is a container used to manage elements with priorities.
+- Examples include:
+  - To-do lists  
+  - Scheduling (OS, job queues)  
+  - Packet routing in networks
 
-- Executes a for loop over a range.
+- Conceptually similar to a queue:
+  - Has a **top (front)** element  
+  - Elements are inserted at the “back”  
+  - But removal is based on **priority**, not arrival order  
 
-```cpp
-for ( range_declaration : range_expression ) 
-    loop_statement
-```
+- Each item has an associated **priority value**:
+  - In a **min-priority queue**, the smallest priority is removed first  
+  - In a **max-priority queue**, the largest priority is removed first  
 
-- Example 1: pring every element in an integer array.
+- The main operations:
+  - `push` (insert)  
+  - `pop` (remove highest-priority element)  
+  - `top` (access highest-priority element)  
 
-```cpp
-int a[] = { 0, 1, 2, 3, 4, 5 }; 
-for (int n : a) 
-	std::cout << n << ' '; 
-```
+- Note: The “back” of the queue is **not accessible** through the interface.
 
-- Example 2: print each character of a string.
+---
 
-```cpp
-std::string str = "The course instructor is terrible!"; 
-    for (char c : str) 
-        std::cout << c << ' '; 
-```
+## 2. Binary Heap
 
-- Example 3: iterating over a vector of integers.
+- A **binary heap** is a **data structure** commonly used to implement a priority queue.
 
-```cpp
-std::vector<int> vec1 = {1,2,3,4,5};
-for (int val : vec1 ) {
-	std :: cout << val << " ";
-}
-```
+- It is a **complete binary tree**:
+  - All levels are full except possibly the last  
+  - The last level is filled **from left to right**
 
-- Example 4: iterating over a vector&lt;vector&lt;int&gt;&gt;.
+- It satisfies the **heap property**:
+  - **Min-heap**: each node ≤ its children  
+  - **Max-heap**: each node ≥ its children  
 
-```cpp
-// suppose result is a vector<vector<int>>
-for (std::vector<int>& vec1 : result ) {
-	for (int val : vec1 ) {
-		std :: cout << val << " ";
-	}
-}
-```
+- Although drawn as a tree, a binary heap is:
+  - **Implemented using a vector (array)**  
+  - Efficient due to implicit indexing
 
-## 24.2 Using STL’s for_each
+---
 
-- First, here’s a tiny helper function:
-```cpp
-void float_print (float f) {
-	std::cout << f << std::endl;
-}
-```
-- Let’s make an STL vector of floats:
-```cpp
-std::vector<float> my_data;
-my_data.push_back(3.14);
-my_data.push_back(1.41);
-my_data.push_back(6.02);
-my_data.push_back(2.71);
-```
-- Now we can write a loop to print out all the data in our vector:
-```cpp
-std::vector<float>::iterator itr;
-for (itr = my_data.begin(); itr != my_data.end(); itr++) {
-	float_print(*itr);
-}
-```
-- Alternatively we can use it with STL’s for_each function to visit and print each element:
-```cpp
-std::for_each(my_data.begin(), my_data.end(), float_print);
-```
-- Wow! That’s a lot less to type. Can I stop using regular for and while loops altogether?
-- We can actually also do the same thing without creating & explicitly naming the float_print function. We create an anonymous function using lambda:
-```cpp
-std::for_each(my_data.begin(), my_data.end(), [](float f){ std::cout << f << std::end; });
-```
-Lambda is new to the C++ language (part of C++11). But lambda is a core piece of many classic, older programming languages including Lisp and Scheme. Python lambdas and Perl anonymous subroutines are similar. (In fact lambda dates back to the 1930’s, before the first computers were built!) You’ll learn more about lambda more in later courses like CSCI 4430 Programming Languages!
--->
+## 3. Relationship Between Priority Queue and Binary Heap
 
-## 23.1 Priority Queue
+- A **priority queue defines behavior** (what operations do)  
+- A **binary heap provides an efficient implementation** (how operations are done)
+- In practice: Most priority queues (including `std::priority_queue`) are implemented using **binary heaps**
 
-- Priority queues are used in prioritizing operations. Examples include a personal “to do” list, what order to do homework assignments, jobs on a shop floor, packet routing in a network, scheduling in an operating system, or events in a simulation.
-- Among the data structures we have studied, their interface is most similar to a queue, including the idea of a front or top and a tail or a back.
-- Each item is stored in a priority queue using an associated “priority” and therefore, the top item is the one with the lowest value of the priority score. The tail or back is never accessed through the public interface to a priority queue.
-- The main operations are insert or push, and pop (or delete_min).
+---
 
-## 23.2 Some Data Structure Options for Implementing a Priority Queue
+## 4. Why Binary Heaps Are Used
 
-- Vector or list, either sorted or unsorted
+Binary heaps provide efficient performance:
 
-  – At least one of the operations, push or pop, will cost linear time, at least if we think of the container as a linear structure.
-- Binary search trees
-  
-  – If we use the priority as a key, then we can use a combination of finding the minimum key and erase to implement pop. An ordinary binary-search-tree insert may be used to implement push.
-  
-  – This costs logarithmic time in the average case (and in the worst case as well if balancing is used).
-- The latter is the better solution, but we would like to improve upon it — for example, it might be more natural if the minimum priority value were stored at the root.
+| Operation | Time Complexity |
+|----------|----------------|
+| `push`   | O(log n)       |
+| `pop`    | O(log n)       |
+| `top`    | O(1)           |
 
-## 23.3 Definition: Binary Heaps
+- They offer a **good balance** between insertion and removal
+- More efficient than:
+  - Sorted arrays (slow insert)  
+  - Unsorted arrays (slow removal)  
 
-- A binary heap is a complete binary tree such that at each internal node, p, the value stored is less than the value stored at either of p’s children.
+---
 
-  – A complete binary tree is one that is completely filled, except perhaps at the lowest level, and at the lowest level all leaf nodes are as far to the left as possible.
-- Binary heaps will be drawn as binary trees, but implemented using vectors!
-- Alternatively, the heap could be organized such that the value stored at each internal node is greater than the values at its children.
-
-## 23.4 Exercise: Drawing Binary Heaps
+## 5. Exercise: Drawing Binary Heaps
 
 - Draw two different binary heaps (Min Heap) with these values: 52 13 48 7 32 40 18 25 4
 
-## 23.5 STL priority_queue
+## 6. STL priority_queue
 
-- The standard library (STL) priority_queue is implemented as a binary heap.
-- The STL priority_queue is a max heap.
-- You need to include &lt;queue&gt; in order to use the STL priority_queue. Below is a simple [example](max_heap.cpp):
+- The Standard Template Library (STL) priority_queue is implemented as a binary heap.
+- More specifically, the STL priority_queue is a max heap by default.
+- You need to include &lt;queue&gt; in order to use the STL priority_queue. Below is a simple example:
 
 ```cpp
+// max_heap.cpp
 #include <iostream>
 #include <queue>
 
@@ -161,9 +131,10 @@ int main() {
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/priority_queue/max_heap/index.html) to see how this program works.
 
-- You can use std::priority_queue as a min heap via using std::greater, as can be seen in this [example](min_heap.cpp):
+- You can use std::priority_queue as a min heap via using std::greater, as can be seen in this example:
 
 ```cpp
+// min_heap.cpp
 #include <iostream>
 #include <queue>
 
@@ -194,12 +165,40 @@ int main() {
 
 - Play this [animation](https://jidongxiao.github.io/CSCI1200-DataStructures/animations/priority_queue/min_heap/index.html) to see how this program works.
 
-## 23.6 Overloading operator()
+## 7. Overloading Operators for std::priority_queue
 
-- When using std::priority_queue to store class objects, oftentimes, you need to define a class and overload its function call operator.<!--; or use a lambda expression.-->
-- This is because std::priority_queue by default uses std::less &lt;T&gt;, which means it tries to use operator< on the objects. However, if your class does not define operator< or you need a custom sorting order, you must explicitly provide a comparator.
+- When using std::priority_queue to store custom class objects, you need to tell C++ how to compare them. Two common ways are:
+  - Overload operator< inside the class
+  - Provide a comparator (functor) by overloading operator()
+  
+### 7.1 Approach 1: Overloading operator<
 
-### 23.6.1 Why Not Overload operator< Directly?
+- You can define a default ordering directly inside the class.
+
+- if we have a container storing some Youtube videos or Tiktok videos, and we want to sort the videos by viewCount.
+
+```cpp
+class Video {
+public:
+    std::string title;
+    int viewCount;
+
+    Video(std::string t, int v) : title(t), viewCount(v) {}
+
+    // Default comparison (by viewCount)
+    bool operator<(const Video& other) const {
+        return viewCount < other.viewCount;
+    }
+};
+```
+
+- Then you can use:
+
+```cpp
+std::priority_queue<Video> pq;
+```
+
+### 7.2 Why operator< May Not Be Enough
 
 - Overloading operator< means the class has a default order.
 
@@ -213,11 +212,11 @@ int main() {
 
 - If we define operator<, we are locking in one specific ordering that affects all usages of the class.
 
-### 23.6.2 operator() Allows Custom Comparisons
+### 7.3 Approach 2: Overloading operator() (Custom Comparator)
 
 - Instead of modifying the class, we pass a comparator that defines how the priority queue orders elements.
 
-- Example:
+- Example, if we have a container storing some Youtube videos or Tiktok videos:
 
   - We can sort by viewCount in descending order.
 
@@ -227,9 +226,10 @@ int main() {
 
 By overloading operator(), we can create multiple comparators and use them flexibly.
 
-### 23.6.3 Example Code
+### 7.4 Example Code
 
 ```cpp
+// video_test.cpp
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -290,7 +290,7 @@ int main() {
 }
 ```
 
-This above program, which is also [here](video_test.cpp), will print the following:
+This above program, will print the following:
 
 ```console
 $ g++ video_test.cpp -o video_test
@@ -306,8 +306,11 @@ Video B
 Video C
 ```
 
-## 23.7 Leetcode Exercises
+## 7.5 Why operator() Is Powerful
 
-- [Leetcode problem 215: Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/). Solution: [p215_kth_largest_element.cpp](../../leetcode/p215_kth_largest_element.cpp).
-- [Leetcode problem 373: Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/). Solution: [p373_k_pairs_smallest_sums.cpp](../../leetcode/p373_k_pairs_smallest_sums.cpp).
-- [Leetcode problem 692:  Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/). Solution: [p692_top_k_frequent_words.cpp](../../leetcode/p692_top_k_frequent_words.cpp).
+- Allows multiple independent orderings
+- Keeps the class unchanged
+- Makes behavior explicit at usage site
+- This is the preferred approach when:
+  - You need different sorting criteria
+  - You want to keep the class generic and reusable

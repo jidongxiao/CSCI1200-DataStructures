@@ -294,12 +294,6 @@ Use good coding style when you design and implement your program. Organize your 
 
 You can test (but not view) the instructor's code here: [instructor code](http://ds.cs.rpi.edu/hws/trends/).-->
 
-## FAQs
-
-q1: Some videos appear multiple times in the same json file, how shall we handle such cases?
-
-a1: If a video appears multiple times in the same json file, only the first occurrence should be considered, and this means that when parsing the json file, and if you find a duplicated video ID, then that line which contains the duplicated video ID should not be parsed at all.
-
 ## Rubric
 
 15 pts

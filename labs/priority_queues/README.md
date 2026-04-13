@@ -215,7 +215,7 @@ Sorted array in tree representation:
 
 ## Checkpoint 3
 
-**To complete this checkpoint:** Stand in front of your lab section and give a brief (~1 minute) presentation answering the following question:
+**To complete this checkpoint:** Stand in front of your lab section, say your name, and give a brief (~1 minute) presentation answering the following question:
 
 > If you were creating this video, how would you improve it?
 

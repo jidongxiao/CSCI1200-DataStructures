@@ -1,430 +1,397 @@
-# Lecture 26 ---  C++ Inheritance and Polymorphism
+# Lecture 26 ---  C++ Inheritance and Polymorphism - Part III
 
-## 26.1 Multiple Inheritance
+---
 
-- Multiple inheritance allows a class to inherit from more than one base class.
+## Exercise: Name Hiding
 
-- The following [program](multiple_inheritance1.cpp) is an example:
+>**Question** Given this program, what will be printed?
 
 ```cpp
 #include <iostream>
 
-class B
-{
-public:
-	B(int b1):b(b1){}
-protected:
-	int b;
-};
-
-class C
-{
-public:
-	C(int c1):c(c1){}
-protected:
-	int c;
-};
-
-class D: public B, public C
-{
-public:
-	D(int b1, int c1):B(b1),C(c1),d(b1+c1){}
-
-	void print(){
-		std::cout << "d is " << d << std::endl;
-	}
-protected:
-	int d;
-};
-
-int main(){
-	D* dOjbect = new D(2,3);
-	dOjbect->print();
-	return 0;
-}
-```
-
-## 26.2 The Diamond Problem
-
-- The Diamond Problem occurs in multiple inheritance when two classes inherit from the same base class, and a fourth class inherits from both of those.
-
-```
-        Human
-        /  \
-   Student  Worker
-        \  /
-      CSStudent
-```
-
-- Both Student and Worker inherit from Human.
-
-```cpp
-class Human {
-public:
-    void speak();
-};
-
-class Student : public Human {};
-class Worker : public Human {};
-
-class CSStudent : public Student, public Worker {};
-```
-
-- CSStudent inherits from both Student and Worker.
-
-- Compiler sees two Human base classes.
-
-- This leads to duplicate data and ambiguous member resolution.
-
-```cpp
-CSStudent cs;
-cs.speak(); // ❌ Ambiguous: which Human::speak()?
-```
-
-### Solution: Virtual Inheritance
-
-- Use the virtual keyword when inheriting the common base class.
-
-```cpp
-class Student : virtual public Human {};
-class Worker  : virtual public Human {};
-class CSStudent : public Student, public Worker {};
-CSStudent cs;
-cs.speak(); // ✅ No ambiguity
-```
-
-- How it works:
-
-  - Compiler ensures only one shared instance of Human.
-
-  - Student and Worker do not create their own copies of Human.
-
-  - Memory layout uses pointers behind the scenes to share the base.
-
-### Constructor Order with Virtual Inheritance
-
-When virtual inheritance is involved:
-
-Most derived class (e.g., CSStudent) is responsible for calling the base (Human) constructor.
-
-```cpp
-class Human {
-public:
-    Human(int age) {}
-};
-
-class Student : virtual public Human {
-public:
-    Student() : Human(0) {} // ❌ Not allowed to call Human(int) here
-};
-
-class CSStudent : public Student {
-public:
-    CSStudent() : Human(21), Student() {} // ✅ Human constructor called here
-};
-```
-
-## 26.3 Introduction to Polymorphism
-
-- Polymorphism means "many forms". 
-
-- Polymorphism allows one interface to be used for different data types or classes. In C++, it enables objects to be treated as instances of their base type while still calling derived class methods.
-
-- A function marked with the virtual keyword in the base class allows derived classes to override it. At runtime, the correct version of the function is called based on the object type.
-
-- Virtual functions only come into play with pointers or references to the base class.
-
-### 26.3.1 Case 1: Direct Object (No Need for virtual)
-
-```cpp
 class Base {
 public:
-    void show() {
-        std::cout << "Base\n";
-    }
+    int value = 10;
 };
 
 class Derived : public Base {
 public:
-    void show() {
-        std::cout << "Derived\n";
+    double value = 3.14;
+
+    void printInt(int x) {
+        std::cout << x << std::endl;
+    }
+
+    void test() {
+        printInt(value);         
+        printInt(Base::value);
     }
 };
 
 int main() {
     Derived d;
-    d.show(); // ✅ "Derived" is printed. No virtual needed.
+    d.test();
+    return 0;
 }
 ```
 
-### 26.3.2 Case 2: Base Pointer or Reference (Needs virtual)
+---
+
+## Today’s Lecture
+
+- Virtual Functions
+- Polymorphism
+
+---
+
+## 1. Motivation: Why do we need virtual functions?
+
+### Problem: base pointer calls wrong function
 
 ```cpp
+#include <iostream>
+
 class Base {
 public:
-    virtual void show() {
+    void f() {
         std::cout << "Base\n";
     }
 };
 
 class Derived : public Base {
 public:
-    void show() override {
+    void f() {
         std::cout << "Derived\n";
     }
 };
 
 int main() {
-    Base* b = new Derived();
-    b->show(); // ✅ "Derived" is printed because `show()` is virtual.
+    Base* p = new Derived();
+    p->f();  // Base, not Derived, what if we want to call the derive version?
 }
 ```
 
-- Without virtual, Base::show() would be called, even though b points to a Derived.
+### Issue:
+
+- Function call is resolved using pointer type (Base*)
+- Not the actual object type (Derived)
+
+## 2. Solution: virtual functions
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    virtual void f() {
+        std::cout << "Base\n";
+    }
+};
+
+class Derived : public Base {
+public:
+    void f() override {
+        std::cout << "Derived\n";
+    }
+};
+
+int main() {
+    Base* p = new Derived();
+    p->f();  // same main function code, but now calling the Derived version.
+}
+```
+
+- Virtual functions enable **runtime polymorphism**, meaning:
+
+> The function that gets executed is determined by the actual object type at runtime, not the pointer type.
+
+- This is called: Runtime polymorphism. Polymorphism means: “One interface, multiple implementations.”
+
+  - In C++, it refers to the ability of the same function call to behave differently depending on the actual object type.
 
 - The override keyword tells the compiler: "I intend to override a virtual function from the base class."
 
-- You don’t strictly need the override keyword here — the program will still work as expected because Base::show() is declared virtual, and Derived::show() has the same signature. But using override is highly recommended: when override is used, and if you make a mistake, like mismatching the function signature (even by accident), the compiler will catch it.
-
-### 26.3.3 Virtual Functions in Multi-level Inheritance
-
-- virtual functions are automatically inherited in C++, even if you don't repeat the virtual keyword in the derived class.
+  - You don’t strictly need the override keyword here — the program will still work as expected because Base::f() is declared virtual, and Derived::f() has the same signature.
+  - But using override is highly recommended: when override is used, and if you make a mistake, like mismatching the function signature (even by accident), the compiler will catch it. 
+  - See the following example, where polymorphism silently broken due to a signature mismatch:
 
 ```cpp
 #include <iostream>
 
 class Base {
 public:
-    virtual void greet() {
-        std::cout << "Base greet\n";
+    virtual void f() {
+        std::cout << "Base::f" << std::endl;
     }
 };
 
-class Mid : public Base {
+class Derived : public Base {
 public:
-    void greet() { // still virtual, even without saying "virtual"
-        std::cout << "Mid greet\n";
-    }
-};
-
-class Derived : public Mid {
-public:
-    void greet() override {
-        std::cout << "Derived greet\n";
+    // This does NOT override Base::f because the signature is different
+    void f(int) {
+        std::cout << "Derived::f(int)" << std::endl;
     }
 };
 
 int main() {
-    Base* obj = new Derived();
-    obj->greet(); // ✅ prints "Derived greet"
+    Base* p = new Derived();
+
+    p->f();  // Calls Base::f, NOT Derived::f(int)
+
+    return 0;
 }
 ```
 
-## 26.4 Exercise
+- Using the keyword override, we can avoid bugs like this.
 
-What is the output of the following [program](exercise.cpp)?
+---
+
+## 3. How it works internally: vtable + vptr
+
+C++ implements virtual functions using two key hidden mechanisms:
+
+- **vtable (virtual table)**: a per-class table storing function pointers
+- **vptr (virtual pointer)**: a hidden pointer inside each object pointing to its class’s vtable
+
+### Conceptual model
+
+Each object with virtual functions contains a hidden vptr that points to its class vtable.
+
+The vtable stores function pointers for virtual functions, potentially pointing to overridden implementations in derived classes.
+
+### Function call process
+
+When a virtual function is called:
+
+1. The program follows the object’s vptr
+2. Accesses the corresponding vtable
+3. Looks up the correct function entry
+4. Invokes the function through the function pointer
+
+## 4. sizeof an empty class
+
+What is the size of an empty class?
 
 ```cpp
 #include <iostream>
 
-class Base {
-public:
-	Base() {}
-	virtual void A() { std::cout << "Base A "; }
-	void B() { std::cout << "Base B "; }
-};
-
-class One : public Base {
-public:
-	One() {}
-	void A() { std::cout << "One A "; }
-	void B() { std::cout << "One B "; }
-};
-class Two : public Base {
-public:
-	Two() {}
-	void A() { std::cout << "Two A "; }
-	void B() { std::cout << "Two B "; }
-};
-
-int main() {
-	Base* a[3];
-	a[0] = new Base;
-	a[1] = new One;
-	a[2] = new Two;
-	for (unsigned int i=0; i<3; ++i) {
-		a[i]->A();
-		a[i]->B();
-	}
-	std::cout << std::endl;
-	return 0;
-}
-```
-
-## 26.5 Exercise
-
-What is the output of the following [program](virtual.cpp)?
-
-## 26.6 Memory Usage of Virtual Functions
-
-Given the following [program](virtual2.cpp), what is the memory size of each class?
-
-```cpp
-#include <iostream>
-
-class Human {
-};
-
-class Student {
-        int age;
-};
-
-class CollegeStudent {
-        int age;
-        void print(){
-                std::cout << "I am a college student." << std::endl;
-        }
-};
-
-class CSStudent {
-        int age;
-        virtual void print(){
-                std::cout << "I am a CS student." << std::endl;
-        }
-};
-
-int main(){
-        std::cout << "memory size of Human class is: " << sizeof(Human) << std::endl;
-        std::cout << "memory size of Student class is: " << sizeof(Student) << std::endl;
-        std::cout << "memory size of College Student class is: " << sizeof(CollegeStudent) << std::endl;
-        std::cout << "memory size of CS Student class is: " << sizeof(CSStudent) << std::endl;
-        return 0;
-}
-```
-
-### 26.6.1 Empty Class
-
-- An empty C++ class takes one byte because the C++ standard requires that each distinct object has a unique address in memory.
-
-- If an empty class had size 0, then multiple instances of that class could end up having the same memory address, which would break basic assumptions in C++ like this:
-
-```cpp
 class Empty {};
 
-Empty a, b;
-std::cout << (&a == &b);  // This should be false!
+int main() {
+    Empty a;
+    Empty b;
+
+    std::cout << "sizeof(Empty): " << sizeof(Empty) << std::endl;
+
+    std::cout << "&a: " << &a << std::endl;
+    std::cout << "&b: " << &b << std::endl;
+
+    return 0;
+}
 ```
 
-- To make sure that &a != &b, the compiler gives each object at least one byte of storage, even if the class doesn’t contain any data.
+Typical result:
+- Empty class size is usually 1 byte, as shown in this above program.
 
-### 26.6.2 Class CSStudent: Total size breakdown
+### Reason
 
-- int age
+- Every distinct object must have a unique memory address
+- If size were zero, multiple objects would share the same address, which is invalid
 
-Size: 4 bytes
+---
 
-- Virtual function (print)
+## 5. What changes when virtual functions are added?
 
-  - This makes the class polymorphic, so the compiler adds a vptr (virtual table pointer, also know as vtable pointer).
+When a class has at least one virtual function:
 
-  - On a 64-bit machine, a pointer is 8 bytes.
+- The object gains a hidden vptr
+- This typically increases the size of the object by the size of a pointer
 
-- Padding/alignment
+On a typical 64-bit system:
+- Empty class: 1 byte
+- Class with data members: size depends on members
+- Class with virtual functions: +8 bytes (vptr overhead)
 
-  - The compiler aligns data to certain boundaries for performance.
-
-  - Typical alignment for a class with a pointer is 8 bytes, so the 4-byte int is padded with 4 extra bytes.
-
-### 26.6.3 Static Dispatch vs Dynamic Dispatch
-
-- When you call a non-virtual member function like print() in the CollegeStudent class, the compiler resolves the call at compile time. This is known as static dispatch or early binding.
+- Example code:
 
 ```cpp
-CollegeStudent alice;
-alice.print();
-```
+#include <iostream>
 
-Here's what happens under the hood:
+class Empty {};
 
-- At compile time, the compiler sees that alice is of type CollegeStudent.
-
-- It knows the exact location of CollegeStudent::print() in the compiled binary (it's in the .text segment).
-
-- So it generates a direct call to that specific memory address. Like *call 0x123456* where *0x123456* is the address of the print() function.
-
-- This is why the object doesn’t need to store any pointer to the function — the compiler already knows which function to call!
-
-- If print() were marked virtual, like in the CSStudent class, then the call would become runtime-resolved using a vtable. Then:
-
-  - The object now gets a hidden pointer to a vtable (a lookup table of function pointers).
-
-  - When you call print(), the program:
-
-  - Looks up the function pointer in the vtable.
-
-  - Calls the function via that pointer.
-
-  - This is called dynamic dispatch or late binding.
-
-Question: What if class CSStudent is defined as this, what would be the memory size of a CSStudent object?
-
-```cpp
-class CSStudent {
-        int age;
-        virtual void print(){
-                std::cout << "I am a CS student." << std::endl;
-        }
-        virtual void print2(){
-                std::cout << "I am still a CS student." << std::endl;
-        }
-        virtual void print3(){
-                std::cout << "I am still a CS student." << std::endl;
-        }
-};
-```
-
-To understand the problem, compile this [program](virtual3.cpp), and use the tool *pahole* to examine the memory information.
-
-```console
-$ g++ -g virtual3.cpp
-$ pahole a.out
-class CSStudent {
+class WithInt {
 public:
+    int x;
+};
 
-        void ~CSStudent(class CSStudent *, int);
+class WithVirtual {
+public:
+    virtual void f() {}
+};
 
-        void CSStudent(class CSStudent *, );
+int main() {
+    std::cout << "sizeof(Empty): " << sizeof(Empty) << std::endl;
+    std::cout << "sizeof(WithInt): " << sizeof(WithInt) << std::endl;
+    std::cout << "sizeof(WithVirtual): " << sizeof(WithVirtual) << std::endl;
 
-        void CSStudent(class CSStudent *, const class CSStudent  &);
+    return 0;
+}
+```
 
-        void CSStudent(class CSStudent *);
+- The empty class’s 1 byte exists only when nothing else needs to occupy that space; once real members exist, the 1-byte overhead will be discarded,
+because that one byte does not store any meaningful information.
 
-        int ()(void) * *           _vptr.CSStudent;      /*     0     8 */
-        int                        age;                  /*     8     4 */
-        virtual void print(class CSStudent *);
+---
 
-        virtual void print2(class CSStudent *);
+## 6. Virtual function impact on memory
 
-        virtual void print3(class CSStudent *);
+### Per object:
+- One hidden vptr (typically 8 bytes on 64-bit systems)
 
-        /* vtable has 3 entries: {
-           [0] = print((null)),
-           [1] = print2((null)),
-           [2] = print3((null)),
-        } */
-        /* size: 16, cachelines: 1, members: 2 */
-        /* padding: 4 */
-        /* last cacheline: 16 bytes */
+### Per class:
+- One shared vtable stored in static memory
+
+### Summary of overhead:
+- Runtime memory per object increases due to vptr
+- Static memory increases due to vtable
+
+```cpp
+#include <iostream>
+
+class OneVirtual {
+public:
+    virtual void f() {}
+};
+
+class ManyVirtuals {
+public:
+    virtual void f1() {}
+    virtual void f2() {}
+    virtual void f3() {}
+    virtual void f4() {}
+};
+
+int main() {
+    std::cout << "sizeof(OneVirtual): " << sizeof(OneVirtual) << std::endl;
+    std::cout << "sizeof(ManyVirtuals): " << sizeof(ManyVirtuals) << std::endl;
+
+    OneVirtual a;
+    ManyVirtuals b;
+
+    std::cout << "&a: " << &a << std::endl;
+    std::cout << "&b: " << &b << std::endl;
+
+    return 0;
+}
+```
+
+>**Question** Same size or different size? And why?
+
+---
+
+## 7. Pure virtual functions
+
+A pure virtual function is declared by assigning zero to a virtual function.
+
+Meaning:
+- The function has no implementation in the base class
+- Derived classes must provide an implementation
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    virtual void f() = 0;  // pure virtual function
+};
+
+class Derived : public Base {
+public:
+    void f() override {
+        std::cout << "Derived implementation\n";
+    }
 };
 ```
 
-The numbers "0     8" mean that the virtual table pointer starts at offset 0 of the class, and it has 8 bytes; the numbers "8     4" means that the variable *age* starts at offset 8 and it has 4 bytes.
+---
 
-## 26.7 Virtual Destructor 
+## 8. Abstract class
 
-- If the destructor of the base class is not virtual, deleting an object through a base pointer results in undefined behavior — most likely, the derived class’s destructor won’t be called, which leads to resource leaks.
+A class becomes abstract if it contains at least one pure virtual function.
 
-### Example (Wrong: no virtual destructor)
+### Properties of abstract classes:
+- Cannot be instantiated directly
+- Can only be used through pointers or references
+- Serve as interfaces or base contracts
+
+```cpp
+#include <iostream>
+
+class Base {
+public:
+    virtual void f() = 0;  // makes Base abstract
+};
+
+int main() {
+    // Base b;  ERROR: cannot instantiate abstract class
+
+    Base* p = nullptr;  // allowed (pointer/reference only)
+
+    std::cout << "Abstract class cannot be instantiated directly\n";
+}
+```
+
+---
+
+## 9. Abstract class example
+
+A common use case is defining a base “interface” class:
+
+- The base class defines a required behavior
+- Derived classes implement specific versions of that behavior
+
+```cpp
+#include <iostream>
+
+// Abstract base class
+class CollegeStudent {
+public:
+    virtual void major() = 0;
+};
+
+// CS student
+class CSStudent : public CollegeStudent {
+public:
+    void major() override {
+        std::cout << "CS student: debugging code at 3AM\n";
+    }
+};
+
+// Math student
+class MathStudent : public CollegeStudent {
+public:
+    void major() override {
+        std::cout << "Math student: proving 0.999... = 1\n";
+    }
+};
+
+int main() {
+    CollegeStudent* s1 = new CSStudent();
+    CollegeStudent* s2 = new MathStudent();
+
+    s1->major();
+    s2->major();
+
+    delete s1;
+    delete s2;
+
+    return 0;
+}
+```
+
+>**Question** Do we have memory leak here?
+
+>**Question** Do we have memory leak in the following program?
 
 ```cpp
 #include <iostream>
@@ -437,41 +404,119 @@ public:
 };
 
 class Derived : public Base {
+private:
+    int* data;
+
 public:
+    Derived() {
+        data = new int[100];  // heap allocation
+        std::cout << "Derived allocated memory\n";
+    }
+
     ~Derived() {
-        std::cout << "Derived destructor\n";
+        delete[] data;
+        std::cout << "Derived freed memory\n";
     }
 };
 
 int main() {
-    Base* b = new Derived();
-    delete b; // ⚠️ Only Base destructor is called!
+    Base* p = new Derived();
+
+    delete p;
+
+    return 0;
 }
 ```
 
-- ❌ Derived's destructor is not called — this causes resource leaks if Derived manages any resources.
+---
 
-### ✅ Example (Correct: virtual destructor)
+## 10. Virtual destructor
+
+When using polymorphism, destructors must be handled carefully.
+
+### Problem:
+- If a base-class destructor is not virtual
+- Deleting a derived object through a base pointer results in incomplete destruction
+- Derived destructor may not run, causing resource leaks
+
+### Fix:
+- Make the base-class destructor virtual
+- This ensures correct destructor chaining from derived to base
+- Re-write the Base class from the above program as this one:
 
 ```cpp
-#include <iostream>
-
 class Base {
 public:
     virtual ~Base() {
         std::cout << "Base destructor\n";
     }
 };
+```
 
-class Derived : public Base {
+---
+
+## 11. Important rule of thumb
+
+If a class has any virtual function, its destructor should be marked as virtual.
+
+Reason:
+- Such classes are intended to be used polymorphically
+- Polymorphic deletion must be safe
+
+---
+
+## 12. Summary mental model
+
+Virtual functions work by replacing direct function calls with:
+
+> pointer → vtable → function pointer → function call
+
+---
+
+## 13. Key takeaways
+
+- Virtual functions enable runtime polymorphism: allow C++ to decide which function to execute at runtime based on the actual object type rather than the static pointer type.
+- But a natural question is: why can’t the compiler just figure this out at compile time?
+  - For example, your friend Jessica might say: “You already wrote the code. The compiler sees both Base and Derived. Why can’t it just decide which function will be called?”
+  - Show her this program:
+
+```cpp
+#include <iostream>
+
+class Base {
 public:
-    ~Derived() override {
-        std::cout << "Derived destructor\n";
+    virtual void f() {
+        std::cout << "Base::f\n";
     }
 };
 
+class Derived : public Base {
+public:
+    void f() override {
+        std::cout << "Derived::f\n";
+    }
+};
+
+// Runtime decision: return different objects based on user input
+Base* getObjectFromUserInput() {
+    int x;
+    std::cout << "Enter 0 for Base, 1 for Derived: ";
+    std::cin >> x;
+
+    if (x == 0)
+        return new Base();
+    else
+        return new Derived();
+}
+
 int main() {
-    Base* b = new Derived();
-    delete b; // ✅ Both destructors are called
+    Base* p = getObjectFromUserInput();
+
+    std::cout << "Calling p->f()\n";
+    p->f();   // Compiler cannot know which version will run here
+
+    delete p;
+
+    return 0;
 }
 ```
